@@ -2,11 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+import Layout from "components/Layout";
+
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout className={styles.container}>
       <Head>
         <title>fran | UX Designer</title>
         <meta name="description" content="A UX Designer portfolio website" />
@@ -16,6 +18,7 @@ export default function Home() {
       <h2 className="display-2">Display 2</h2>
       <h3 className="display-3">Display 3</h3>
       <h4 className="display-4">Display 4</h4>
+      <h5 className="display-5">Display 5</h5>
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -36,6 +39,6 @@ export default function Home() {
       <Link href={"#"}>
         <a>This is a text with link.</a>
       </Link>
-    </div>
+    </Layout>
   );
 }
