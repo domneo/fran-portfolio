@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../styles/Home.module.scss";
 
@@ -28,6 +29,13 @@ export default function Home() {
         This is second paragraph text. This is paragraph text. This is paragraph
         text. This is paragraph text. This is paragraph text.
       </p>
+      <p>
+        <small>This is a line of small text.</small>
+      </p>
+      <p className="caption">This is a line of caption text.</p>
+      <Link href={"#"}>
+        <a>This is a text with link.</a>
+      </Link>
     </div>
   );
 }

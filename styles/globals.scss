@@ -23,7 +23,7 @@ body {
   font-family: "Inter", sans-serif;
   @include font-size(22px);
   line-height: 1.5;
-  background-color: $darkmode;
+  background-color: $black;
   color: $platinum;
 }
 
@@ -41,6 +41,7 @@ body {
   @include font-size(180px);
   font-weight: 500;
   line-height: 1.5;
+  letter-spacing: 0;
 }
 
 .display-2 {
@@ -51,11 +52,18 @@ body {
 
 .display-3 {
   @extend %display;
+  @include font-size(53px);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.display-4 {
+  @extend %display;
   @include font-size(49px);
   font-weight: 400;
 }
 
-.display-4 {
+.display-5 {
   @extend %display;
   @include font-size(39px);
   font-weight: 400;
@@ -80,7 +88,7 @@ h2 {
   @include font-size(53px);
   font-family: "Ogg", serif;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 h3 {
@@ -106,6 +114,7 @@ p {
   margin-bottom: 22px;
   @include font-size(22px);
   font-weight: 300;
+  line-height: 1.75;
 }
 
 b,
@@ -114,12 +123,13 @@ strong {
 }
 
 small {
-  @include font-size(75%);
+  @include font-size(18px);
 }
 
 a {
   color: $bone;
   text-decoration: none;
+  font-weight: 300;
 
   &:hover {
     color: $gainsboro;
