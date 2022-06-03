@@ -1,0 +1,61 @@
+.nav {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.menuItem {
+  padding: 0 0.5rem;
+}
+
+// Grid layout
+.nav {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: 1fr;
+  gap: 48px 48px;
+  grid-auto-flow: row;
+  grid-template-areas: "footerMenuLeft stars footerMenuRight";
+}
+.footerMenuLeft {
+  grid-area: footerMenuLeft;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footerStars {
+  grid-area: stars;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerMenuRight {
+  grid-area: footerMenuRight;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.stars {
+  width: 152px;
+  height: 21px;
+}
+
+.footerMenuRight {
+  .menu {
+    gap: 4rem;
+  }
+
+  .menuItem {
+    font-size: 16px;
+  }
+}
