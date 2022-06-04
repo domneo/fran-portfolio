@@ -68,7 +68,7 @@
     justify-content: center;
 
     @include media("sm") {
-      gap: 1.5rem;
+      gap: 3rem;
     }
 
     @include media("xl") {
@@ -88,7 +88,7 @@
     justify-content: center;
 
     @include media("sm") {
-      gap: 4rem;
+      gap: 3rem;
     }
 
     @include media("xl") {
