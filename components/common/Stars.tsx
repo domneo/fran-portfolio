@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 interface StarsProps {
   children?: React.ReactNode;
@@ -6,13 +6,16 @@ interface StarsProps {
 
 export const Stars = ({ children }: StarsProps) => {
   const resetColor = "#eaeae7";
-  const colorCycleMatrix = [
-    ["#d1d1bc", "#8c97ad", "#eded82", "#e6d3d3", "#a0b8a8"],
-    ["#eded82", "#e6d3d3", "#d1d1bc", "#a0b8a8", "#8c97ad"],
-    ["#e6d3d3", "#a0b8a8", "#8c97ad", "#eded82", "#d1d1bc"],
-    ["#a0b8a8", "#d1d1bc", "#e6d3d3", "#8c97ad", "#eded82"],
-    ["#8c97ad", "#eded82", "#a0b8a8", "#d1d1bc", "#e6d3d3"],
-  ];
+  const colorCycleMatrix = useMemo(
+    () => [
+      ["#d1d1bc", "#8c97ad", "#eded82", "#e6d3d3", "#a0b8a8"],
+      ["#eded82", "#e6d3d3", "#d1d1bc", "#a0b8a8", "#8c97ad"],
+      ["#e6d3d3", "#a0b8a8", "#8c97ad", "#eded82", "#d1d1bc"],
+      ["#a0b8a8", "#d1d1bc", "#e6d3d3", "#8c97ad", "#eded82"],
+      ["#8c97ad", "#eded82", "#a0b8a8", "#d1d1bc", "#e6d3d3"],
+    ],
+    []
+  );
   const [isAnimating, setIsAnimating] = useState(false);
   const [cycleIndex, setCycleIndex] = useState(0);
 
@@ -39,7 +42,7 @@ export const Stars = ({ children }: StarsProps) => {
       setDColor(resetColor);
       setEColor(resetColor);
     }
-  }, [isAnimating, cycleIndex]);
+  }, [isAnimating, cycleIndex, colorCycleMatrix]);
 
   return (
     <div
