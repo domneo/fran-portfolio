@@ -1,9 +1,76 @@
 @import "../styles/mixins";
 
 .container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
   padding: 1.5rem;
 
   @include media("md") {
     padding: 3rem;
   }
+}
+
+.linkItem {
+  display: flex;
+}
+
+.itemLink {
+  position: relative;
+  color: $platinum;
+  text-decoration: none;
+  transition: 0.3s color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    transition: 0.3s color;
+  }
+
+  &.worksHover {
+    &:hover,
+    &:focus {
+      color: $works;
+    }
+  }
+
+  &.aboutHover {
+    &:hover,
+    &:focus {
+      color: $about;
+    }
+  }
+
+  &.contactHover {
+    &:hover,
+    &:focus {
+      color: $contact;
+    }
+  }
+}
+
+.itemBlob {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+.blobWrapper {
+  width: clamp(150px, 22vw, 320px);
+  height: clamp(150px, 22vw, 320px);
+  padding-top: 0.5rem;
 }

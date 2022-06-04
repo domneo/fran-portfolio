@@ -13,6 +13,9 @@ interface Point {
 }
 
 export default class Blob extends Component {
+  props: {
+    isHovering: boolean;
+  };
   state: {
     d1: string;
     d2: string;
@@ -41,6 +44,14 @@ export default class Blob extends Component {
 
   componentDidMount = () => {
     this.animate();
+  };
+
+  componentDidUpdate = (prevProps) => {
+    const { isHovering } = this.props;
+    if (prevProps.isHovering !== isHovering) {
+      if (isHovering) this.animationStop();
+      if (!isHovering) this.animationStart();
+    }
   };
 
   createPoints = (numPoints) => {
@@ -130,15 +141,15 @@ export default class Blob extends Component {
     return this.simplex.noise2D(x, y);
   };
 
-  handleMouseOver = (toIntensity) => {
+  animationStop = () => {
     const { noiseIntensity } = this.state;
     let easeReq;
     let newIntensity = noiseIntensity;
 
     const easeIntensity = () => {
-      newIntensity -= 0.5;
+      newIntensity -= 0.3;
       this.setState({ noiseIntensity: newIntensity }, () => {
-        if (newIntensity <= toIntensity) {
+        if (newIntensity <= 0) {
           cancelAnimationFrame(easeReq);
         }
       });
@@ -148,15 +159,15 @@ export default class Blob extends Component {
     easeReq = requestAnimationFrame(easeIntensity);
   };
 
-  handleMouseLeave = (toIntensity) => {
+  animationStart = () => {
     const { noiseIntensity } = this.state;
     let easeReq;
     let newIntensity = noiseIntensity;
 
     const easeIntensity = () => {
-      newIntensity += 0.5;
+      newIntensity += 0.3;
       this.setState({ noiseIntensity: newIntensity }, () => {
-        if (newIntensity >= toIntensity) {
+        if (newIntensity >= 20) {
           cancelAnimationFrame(easeReq);
         }
       });
@@ -171,23 +182,9 @@ export default class Blob extends Component {
 
     return (
       <svg ref={this.requestRef} viewBox="0 0 215 215">
-        <path
-          d={d1}
-          stroke="#eaeae7"
-          strokeWidth={1}
-          fill="transparent"
-          onMouseOver={() => this.handleMouseOver(0)}
-          onMouseLeave={() => this.handleMouseLeave(20)}
-        />
+        <path d={d1} stroke="#eaeae7" strokeWidth={0.75} fill="transparent" />
         <g transform="translate(12,3)">
-          <path
-            d={d2}
-            stroke="#eaeae7"
-            strokeWidth={1}
-            fill="transparent"
-            onMouseOver={() => this.handleMouseOver(0)}
-            onMouseLeave={() => this.handleMouseLeave(20)}
-          />
+          <path d={d2} stroke="#eaeae7" strokeWidth={0.75} fill="transparent" />
         </g>
       </svg>
     );

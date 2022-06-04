@@ -38,7 +38,7 @@ body {
 
 .display-1 {
   @extend %display;
-  @include font-size(180px);
+  @include font-size(150px);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0;

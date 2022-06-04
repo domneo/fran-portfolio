@@ -1,11 +1,38 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import Layout from "components/Layout";
 import Blob from "components/common/Blob";
 
 import styles from "../styles/Home.module.scss";
+
+const LinkItem = ({ href, number, text, ...props }) => {
+  const [isHovering, setIsHovering] = useState(false);
+  const hoverClass = text.trim().toLowerCase() + "Hover";
+
+  return (
+    <div className={styles.linkItem} style={{ ...props.style }}>
+      <Link href={href}>
+        <a
+          className={`${styles.itemLink} ${styles[hoverClass]}`}
+          onMouseOver={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          <div className={styles.itemBlob}>
+            <div className={`${styles.blobWrapper} ${styles[hoverClass]}`}>
+              <Blob isHovering={isHovering} />
+            </div>
+          </div>
+          <div className={styles.itemContent}>
+            <span className="h5 px-2">{number}</span>
+            <h2 className="display-1">{text}</h2>
+          </div>
+        </a>
+      </Link>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
@@ -15,34 +42,19 @@ export default function Home() {
         <meta name="description" content="A UX Designer portfolio website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ width: "308px", height: "308px" }}>
-        <Blob />
-      </div>
-      <h1 className="display-1">Display 1</h1>
-      <h2 className="display-2">Display 2</h2>
-      <h3 className="display-3">Display 3</h3>
-      <h4 className="display-4">Display 4</h4>
-      <h5 className="display-5">Display 5</h5>
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <p>
-        This is first paragraph text. This is paragraph text. This is paragraph
-        text. This is paragraph text. This is paragraph text.
-      </p>
-      <p>
-        This is second paragraph text. This is paragraph text. This is paragraph
-        text. This is paragraph text. This is paragraph text.
-      </p>
-      <p>
-        <small>This is a line of small text.</small>
-      </p>
-      <p className="caption">This is a line of caption text.</p>
-      <Link href={"#"}>
-        <a>This is a text with link.</a>
-      </Link>
+      <LinkItem href="/works" number="1" text="Works" />
+      <LinkItem
+        href="/about"
+        number="2"
+        text="About"
+        style={{ marginLeft: "20%" }}
+      />
+      <LinkItem
+        href="/contact"
+        number="3"
+        text="Contact"
+        style={{ marginLeft: "40%" }}
+      />
     </Layout>
   );
 }
