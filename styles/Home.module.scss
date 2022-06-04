@@ -5,6 +5,7 @@
   max-width: 1480px;
   margin: 0 auto;
   padding: 1.5rem;
+  overflow: hidden;
 
   @include media("md") {
     padding: 3rem;

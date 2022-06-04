@@ -1,16 +1,27 @@
+@import "../styles/mixins";
+
 .nav {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include media("sm") {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .menu {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  flex-direction: column;
+  width: 100%;
+
+  @include media("sm") {
+    flex-direction: row;
+  }
 }
 
 .menuItem {
@@ -19,12 +30,14 @@
 
 // Grid layout
 .nav {
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  grid-template-rows: 1fr;
-  gap: 48px 48px;
-  grid-auto-flow: row;
-  grid-template-areas: "footerMenuLeft stars footerMenuRight";
+  @include media("xl") {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-rows: 1fr;
+    gap: 48px 48px;
+    grid-auto-flow: row;
+    grid-template-areas: "footerMenuLeft stars footerMenuRight";
+  }
 }
 .footerMenuLeft {
   grid-area: footerMenuLeft;
@@ -50,12 +63,41 @@
   height: 21px;
 }
 
+.footerMenuLeft {
+  .menu {
+    gap: 1rem;
+    justify-content: center;
+
+    @include media("sm") {
+      gap: 1.5rem;
+    }
+
+    @include media("xl") {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.footerStars {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .footerMenuRight {
   .menu {
-    gap: 4rem;
+    gap: 0.5rem;
+    justify-content: center;
+
+    @include media("sm") {
+      gap: 4rem;
+    }
+
+    @include media("xl") {
+      justify-content: flex-end;
+    }
   }
 
   .menuItem {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
