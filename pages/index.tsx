@@ -22,7 +22,7 @@ const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
       <Link href={href}>
         <a
           className={`${styles.itemLink} ${styles[hoverClass]}`}
-          onMouseOver={() => setIsHovering(true)}
+          onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
           <div className={styles.itemBlob}>
