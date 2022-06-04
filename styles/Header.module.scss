@@ -1,3 +1,5 @@
+@import "mixins";
+
 .nav {
   position: sticky;
   top: 0;
@@ -19,7 +21,7 @@
 }
 
 .menu {
-  display: flex;
+  display: none !important; // temporarily hide menu until design is ready
   align-items: center;
   justify-content: flex-end;
   gap: 1.5rem;
