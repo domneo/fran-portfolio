@@ -1,3 +1,4 @@
+// @ts-ignore
 import { spline } from "@georgedoescode/spline";
 import { createRef, RefObject } from "react";
 import React, { Component } from "react";
@@ -12,10 +13,12 @@ interface Point {
   noiseOffsetY: number;
 }
 
+interface BlobProps {
+  isHovering?: boolean;
+}
+
 export default class Blob extends Component {
-  props: {
-    isHovering: boolean;
-  };
+  props: BlobProps;
   state: {
     d1: string;
     d2: string;
@@ -27,7 +30,7 @@ export default class Blob extends Component {
   points2: Array<Point>;
   simplex: SimplexNoise;
 
-  constructor(props) {
+  constructor(props: BlobProps) {
     super(props);
     this.state = {
       d1: "",
@@ -36,6 +39,7 @@ export default class Blob extends Component {
       noiseStep: 0.0015,
       noiseIntensity: 20,
     };
+    this.props = props;
     this.requestRef = createRef();
     this.points1 = this.createPoints(6);
     this.points2 = this.createPoints(6);
@@ -46,7 +50,7 @@ export default class Blob extends Component {
     this.animate();
   };
 
-  componentDidUpdate = (prevProps) => {
+  componentDidUpdate = (prevProps: BlobProps) => {
     const { isHovering } = this.props;
     if (prevProps.isHovering !== isHovering) {
       if (isHovering) this.animationStop();
@@ -54,7 +58,7 @@ export default class Blob extends Component {
     }
   };
 
-  createPoints = (numPoints) => {
+  createPoints = (numPoints: number) => {
     const points = [];
     // used to equally space each point around the circle
     const angleStep = (Math.PI * 2) / numPoints;
@@ -92,7 +96,7 @@ export default class Blob extends Component {
       d2: spline(this.points2, 1.2, true),
     });
 
-    const animatePoints = (points) => {
+    const animatePoints = (points: Array<Point>) => {
       for (let i = 0; i < points.length; i++) {
         const point = points[i];
 
@@ -132,18 +136,24 @@ export default class Blob extends Component {
     requestAnimationFrame(this.animate);
   };
 
-  map = (n, start1, end1, start2, end2) => {
+  map = (
+    n: number,
+    start1: number,
+    end1: number,
+    start2: number,
+    end2: number
+  ) => {
     return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
   };
 
-  noise = (x, y) => {
+  noise = (x: number, y: number) => {
     // return a value at {x point in time} {y point in time}
     return this.simplex.noise2D(x, y);
   };
 
   animationStop = () => {
     const { noiseIntensity } = this.state;
-    let easeReq;
+    let easeReq = 0;
     let newIntensity = noiseIntensity;
 
     const easeIntensity = () => {
@@ -161,7 +171,7 @@ export default class Blob extends Component {
 
   animationStart = () => {
     const { noiseIntensity } = this.state;
-    let easeReq;
+    let easeReq = 0;
     let newIntensity = noiseIntensity;
 
     const easeIntensity = () => {

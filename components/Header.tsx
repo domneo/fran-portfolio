@@ -2,14 +2,17 @@ import Link from "next/link";
 
 import styles from "../styles/Header.module.scss";
 
-export const Header = () => (
+interface HeaderProps {
+  hideMenu?: boolean;
+}
+export const Header = ({ hideMenu }: HeaderProps) => (
   <header className={styles.nav}>
-    <div className={`${styles.logo} link`}>
+    <div className={`${styles.logo} link ${hideMenu ? "w-100" : ""}`}>
       <Link href="/">
         <a>FRAN</a>
       </Link>
     </div>
-    <nav className={styles.menu}>
+    <nav className={`${styles.menu} ${hideMenu ? "d-none" : "d-flex"}`}>
       <Link href="/works">
         <a className={styles.menuItem}>WORKS</a>
       </Link>

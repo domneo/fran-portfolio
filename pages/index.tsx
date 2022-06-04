@@ -7,7 +7,13 @@ import Blob from "components/common/Blob";
 
 import styles from "../styles/Home.module.scss";
 
-const LinkItem = ({ href, number, text, ...props }) => {
+interface LinkItemProps {
+  href: string;
+  number: string;
+  text: string;
+  [index: string]: any;
+}
+const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
   const [isHovering, setIsHovering] = useState(false);
   const hoverClass = text.trim().toLowerCase() + "Hover";
 
@@ -36,7 +42,7 @@ const LinkItem = ({ href, number, text, ...props }) => {
 
 export default function Home() {
   return (
-    <Layout className={styles.container}>
+    <Layout className={styles.container} hideMenu>
       <Head>
         <title>fran | UX Designer</title>
         <meta name="description" content="A UX Designer portfolio website" />
