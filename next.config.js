@@ -3,4 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-module.exports = nextConfig;
+const withTM = require("next-transpile-modules")(["@georgedoescode/spline"]); // pass the modules you would like to see transpiled
+
+module.exports = withTM(nextConfig);

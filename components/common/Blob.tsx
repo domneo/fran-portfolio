@@ -1,0 +1,195 @@
+import { spline } from "@georgedoescode/spline";
+import { createRef, RefObject } from "react";
+import React, { Component } from "react";
+import SimplexNoise from "simplex-noise";
+
+interface Point {
+  x: number;
+  y: number;
+  originX: number;
+  originY: number;
+  noiseOffsetX: number;
+  noiseOffsetY: number;
+}
+
+export default class Blob extends Component {
+  state: {
+    d1: string;
+    d2: string;
+    noiseStep: number;
+    noiseIntensity: number;
+  };
+  requestRef: RefObject<SVGSVGElement>;
+  points1: Array<Point>;
+  points2: Array<Point>;
+  simplex: SimplexNoise;
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      d1: "",
+      d2: "",
+      // how fast we progress through "time"
+      noiseStep: 0.0015,
+      noiseIntensity: 20,
+    };
+    this.requestRef = createRef();
+    this.points1 = this.createPoints(6);
+    this.points2 = this.createPoints(6);
+    this.simplex = new SimplexNoise();
+  }
+
+  componentDidMount = () => {
+    this.animate();
+  };
+
+  createPoints = (numPoints) => {
+    const points = [];
+    // used to equally space each point around the circle
+    const angleStep = (Math.PI * 2) / numPoints;
+    // the radius of the circle
+    const rad = 75;
+
+    for (let i = 1; i <= numPoints; i++) {
+      // x & y coordinates of the current point
+      const theta = i * angleStep;
+
+      const x = 100 + Math.cos(theta) * rad;
+      const y = 100 + Math.sin(theta) * rad;
+
+      // store the point
+      points.push({
+        x: x,
+        y: y,
+        /* we need to keep a reference to the point's original {x, y} coordinates 
+        for when we modulate the values later */
+        originX: x,
+        originY: y,
+        // more on this in a moment!
+        noiseOffsetX: Math.random() * 1000,
+        noiseOffsetY: Math.random() * 1000,
+      });
+    }
+
+    return points;
+  };
+
+  animate = () => {
+    const { noiseStep, noiseIntensity } = this.state;
+    this.setState({
+      d1: spline(this.points1, 1.2, true),
+      d2: spline(this.points2, 1.2, true),
+    });
+
+    const animatePoints = (points) => {
+      for (let i = 0; i < points.length; i++) {
+        const point = points[i];
+
+        // return a pseudo random value between -1 / 1 based on this point's current x, y positions in "time"
+        const nX = this.noise(point.noiseOffsetX, point.noiseOffsetX);
+        const nY = this.noise(point.noiseOffsetY, point.noiseOffsetY);
+        // map this noise value to a new value, somewhere between it's original location -20 and it's original location + 20
+        const x = this.map(
+          nX,
+          -1,
+          1,
+          point.originX - noiseIntensity,
+          point.originX + noiseIntensity
+        );
+        const y = this.map(
+          nY,
+          -1,
+          1,
+          point.originY - noiseIntensity,
+          point.originY + noiseIntensity
+        );
+
+        // update the point's current coordinates
+        point.x = x;
+        point.y = y;
+
+        // progress the point's x, y values through "time"
+        point.noiseOffsetX += noiseStep;
+        point.noiseOffsetY += noiseStep;
+      }
+    };
+
+    // for every point...
+    animatePoints(this.points1);
+    animatePoints(this.points2);
+
+    requestAnimationFrame(this.animate);
+  };
+
+  map = (n, start1, end1, start2, end2) => {
+    return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
+  };
+
+  noise = (x, y) => {
+    // return a value at {x point in time} {y point in time}
+    return this.simplex.noise2D(x, y);
+  };
+
+  handleMouseOver = (toIntensity) => {
+    const { noiseIntensity } = this.state;
+    let easeReq;
+    let newIntensity = noiseIntensity;
+
+    const easeIntensity = () => {
+      newIntensity -= 0.5;
+      this.setState({ noiseIntensity: newIntensity }, () => {
+        if (newIntensity <= toIntensity) {
+          cancelAnimationFrame(easeReq);
+        }
+      });
+      easeReq = requestAnimationFrame(easeIntensity);
+    };
+
+    easeReq = requestAnimationFrame(easeIntensity);
+  };
+
+  handleMouseLeave = (toIntensity) => {
+    const { noiseIntensity } = this.state;
+    let easeReq;
+    let newIntensity = noiseIntensity;
+
+    const easeIntensity = () => {
+      newIntensity += 0.5;
+      this.setState({ noiseIntensity: newIntensity }, () => {
+        if (newIntensity >= toIntensity) {
+          cancelAnimationFrame(easeReq);
+        }
+      });
+      easeReq = requestAnimationFrame(easeIntensity);
+    };
+
+    easeReq = requestAnimationFrame(easeIntensity);
+  };
+
+  render() {
+    const { d1, d2 } = this.state;
+
+    return (
+      <svg ref={this.requestRef} viewBox="0 0 215 215">
+        <path
+          d={d1}
+          stroke="#eaeae7"
+          strokeWidth={1}
+          fill="transparent"
+          onMouseOver={() => this.handleMouseOver(0)}
+          onMouseLeave={() => this.handleMouseLeave(20)}
+        />
+        <g transform="translate(12,3)">
+          <path
+            d={d2}
+            stroke="#eaeae7"
+            strokeWidth={1}
+            fill="transparent"
+            onMouseOver={() => this.handleMouseOver(0)}
+            onMouseLeave={() => this.handleMouseLeave(20)}
+          />
+        </g>
+      </svg>
+    );
+  }
+}

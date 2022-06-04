@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Layout from "components/Layout";
+import Blob from "components/common/Blob";
 
 import styles from "../styles/Home.module.scss";
 
@@ -14,6 +15,9 @@ export default function Home() {
         <meta name="description" content="A UX Designer portfolio website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div style={{ width: "308px", height: "308px" }}>
+        <Blob />
+      </div>
       <h1 className="display-1">Display 1</h1>
       <h2 className="display-2">Display 2</h2>
       <h3 className="display-3">Display 3</h3>
