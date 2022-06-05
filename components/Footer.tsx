@@ -1,8 +1,9 @@
 import Link from "next/link";
 
-import styles from "../styles/Footer.module.scss";
-import { BarrelLink } from "./common/BarrelLink";
-import { Stars } from "./common/Stars";
+import styles from "styles/Footer.module.scss";
+
+import { BarrelLink } from "components/common/BarrelLink";
+import { Stars } from "components/common/Stars";
 
 export const Footer = () => (
   <footer className={styles.nav}>

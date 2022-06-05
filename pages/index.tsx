@@ -2,10 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 
+import styles from "styles/Home.module.scss";
+
 import Layout from "components/Layout";
 import Blob from "components/common/Blob";
-
-import styles from "../styles/Home.module.scss";
 
 interface LinkItemProps {
   href: string;

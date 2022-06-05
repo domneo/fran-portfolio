@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+
+import styles from "styles/Home.module.scss";
 
 import Layout from "components/Layout";
 import Blob from "components/common/Blob";
-
-import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
