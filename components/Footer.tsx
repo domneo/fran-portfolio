@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import styles from "../styles/Footer.module.scss";
+import { BarrelLink } from "./common/BarrelLink";
 import { Stars } from "./common/Stars";
 
 export const Footer = () => (
@@ -12,15 +13,15 @@ export const Footer = () => (
     </div>
     <div className={styles.footerMenuLeft}>
       <nav className={styles.menu}>
-        <Link href="https://drive.google.com/file/d/1duXXtN5TqUb-7N13I96rup3lnkH0bhqk/view?usp=sharing">
-          <a className={styles.menuItem}>RESUME</a>
-        </Link>
-        <Link href="mailto:francinelim21@gmail.com">
-          <a className={styles.menuItem}>EMAIL</a>
-        </Link>
-        <Link href="https://www.linkedin.com/in/francine-lim/">
-          <a className={styles.menuItem}>LINKEDIN</a>
-        </Link>
+        <BarrelLink
+          text="RESUME"
+          link="https://drive.google.com/file/d/1duXXtN5TqUb-7N13I96rup3lnkH0bhqk/view?usp=sharing"
+        />
+        <BarrelLink text="EMAIL" link="mailto:francinelim21@gmail.com" />
+        <BarrelLink
+          text="LINKEDIN"
+          link="https://www.linkedin.com/in/francine-lim/"
+        />
       </nav>
     </div>
     <div className={styles.footerMenuRight}>
