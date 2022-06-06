@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <Layout>
       <h1>
-        <span className="display-1">What's up?</span>
-        <span className="display-4 text-bone">I'm Francine</span>
+        <span className="display-1">What&apos;s up?</span>
+        <span className="display-4 text-bone">I&apos;m Francine</span>
       </h1>
       <p className="h5 fw-light text-bone">
         As a night owl fuelled by coffee and tea, my dream is to live in a cave
@@ -19,20 +19,20 @@ export default function Home() {
         <s>&nbsp;I have a multi-disciplinary background&nbsp;</s>
       </p>
       <p>
-        Before embarking on my quest to become a UX designer, I've led previous
-        lives as a digital news producer and an educator in two lands -
+        Before embarking on my quest to become a UX designer, I&apos;ve led
+        previous lives as a digital news producer and an educator in two lands -
         Singapore and Japan respectively - just like how people live different
         lives in Dungeons &amp; Dragons.
       </p>
       <p>
         Living in two worlds has changed the way I view spaces and how people
-        interact in and with public places. I'm interested in exploring how UIUX
-        can transform digital and physical spaces to intentional ones that serve
-        people's needs.
+        interact in and with public places. I&apos;m interested in exploring how
+        UIUX can transform digital and physical spaces to intentional ones that
+        serve people&apos;s needs.
       </p>
       <p>
-        More recently, I've discovered the joys of data visualisation and how
-        information can be presented in interesting ways.
+        More recently, I&apos;ve discovered the joys of data visualisation and
+        how information can be presented in interesting ways.
       </p>
       <p>
         My love for games and solving problems has shaped my belief that a good
@@ -47,15 +47,15 @@ export default function Home() {
         into experiences - be they fun or invisible to the naked eye.
       </p>
       <p>
-        When I'm not hunched over creating 32 button variants or collaborating
-        with others to solve problems, I'll be trying to up my fitness game,
-        playing an *actual* game, or hunting for ceramics for my ever-growing
-        collection ☁️
+        When I&apos;m not hunched over creating 32 button variants or
+        collaborating with others to solve problems, I&apos;ll be trying to up
+        my fitness game, playing an *actual* game, or hunting for ceramics for
+        my ever-growing collection ☁️
       </p>
       <Stars />
       <h2 className="display-5 text-bone">
-        If you're looking to collaborate, come say hi! I'm happy to connect
-        about work or play
+        If you&apos;re looking to collaborate, come say hi! I&apos;m happy to
+        connect about work or play
       </h2>
       <div style={{ width: "280px" }}>
         <Blob />
