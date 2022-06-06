@@ -28,11 +28,15 @@ export const Footer = () => (
     <div className={styles.footerMenuRight}>
       <nav className={styles.menu}>
         <span className="caption">DESIGNED BY ME!</span>
-        <Link href="https://www.domneo.dev">
-          <a className={styles.menuItem} target="_blank">
-            BUILT BY DOMN
-          </a>
-        </Link>
+        <span className="caption">
+          BUILT BY{" "}
+          <Link href="https://www.domneo.dev">
+            <a className="caption" target="_blank">
+              DOMN
+            </a>
+          </Link>
+        </span>
+
         <span className="caption">©2022</span>
       </nav>
     </div>

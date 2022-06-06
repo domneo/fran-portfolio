@@ -138,10 +138,12 @@ small,
 a,
 .link {
   color: $bone;
-  text-decoration: none;
+  text-decoration: underline;
   letter-spacing: 0.03em;
+  transition: 0.3s font-weight;
 
   &:hover {
-    text-decoration: underline;
+    font-weight: 700;
+    transition: 0.3s font-weight;
   }
 }

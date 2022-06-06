@@ -15,10 +15,12 @@
   overflow: hidden;
   position: relative;
   color: $platinum;
+  text-decoration: none;
 
   &:hover,
   &:focus {
     text-decoration: none;
+    font-weight: 300;
 
     .charGroup {
       animation-name: scrollUp;
