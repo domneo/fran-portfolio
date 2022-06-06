@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import styles from "styles/Layout.module.scss";
 
 import { Footer } from "./Footer";
@@ -11,6 +13,11 @@ interface LayoutProps {
 const Layout = ({ hideMenu = false, children, ...props }: LayoutProps) => {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>fran | UX Designer</title>
+        <meta name="description" content="A UX Designer portfolio website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header hideMenu={hideMenu} />
       <main {...props}>{children}</main>
       <Footer />

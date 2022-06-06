@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -43,11 +42,6 @@ const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
 export default function Home() {
   return (
     <Layout className={styles.container} hideMenu>
-      <Head>
-        <title>fran | UX Designer</title>
-        <meta name="description" content="A UX Designer portfolio website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <LinkItem href="/works" number="1" text="Works" />
       <LinkItem
         href="/about"
