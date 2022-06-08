@@ -175,6 +175,14 @@ a,
   color: $gainsboro;
 }
 
+.spacer-sm {
+  padding-bottom: 3rem;
+}
+
+.spacer-lg {
+  padding-bottom: 5rem;
+}
+
 // Single container class with breakpoint max-widths
 .container,
 // 100% wide container at all breakpoints
@@ -237,3 +245,25 @@ a,
 // Common styles for small and large grid columns
 
 @include make-grid-columns();
+
+.contact-cta {
+  color: $white;
+  transition: 0.3s color;
+
+  &:hover,
+  &:focus {
+    color: $copperrose;
+    transition: 0.3s color;
+  }
+}
+
+.contact-cta-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
