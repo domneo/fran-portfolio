@@ -16,11 +16,43 @@ $coolgrey: #8c97ad;
 $cambridgeblue: #a0b8a8;
 $keylime: #eded82;
 
-$breakpoints: (
-  "xs": 400px,
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px,
-  "xxl": 1400px,
-) !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  max: 1800px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  max: 1728px,
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+$grid-row-columns: 6;
+
+$grid-spacer: 1.5rem;
+$gutters: (
+  0: 0,
+  1: $grid-spacer * 0.25,
+  2: $grid-spacer * 0.5,
+  3: $grid-spacer,
+  4: $grid-spacer * 1.5,
+  5: $grid-spacer * 3,
+);
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width;
