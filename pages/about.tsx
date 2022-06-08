@@ -54,7 +54,12 @@ export default function Home() {
         <div className="row justify-content-center spacer-lg">
           <div className="col-lg-10 d-flex">
             <div style={{ padding: "1rem 5rem" }}>
-              <Image src={"/images/downArrowLong.svg"} width={12} height={48} />
+              <Image
+                src={"/images/downArrowLong.svg"}
+                alt="scroll down"
+                width={12}
+                height={48}
+              />
             </div>
           </div>
         </div>
@@ -131,7 +136,12 @@ export default function Home() {
         <div className="row justify-content-center spacer-lg">
           <div className="col-lg-10 d-flex justify-content-end">
             <div style={{ padding: "1rem 5rem" }}>
-              <Image src={"/images/downArrowLong.svg"} width={12} height={48} />
+              <Image
+                src={"/images/downArrowLong.svg"}
+                alt="scroll down"
+                width={12}
+                height={48}
+              />
             </div>
           </div>
         </div>
