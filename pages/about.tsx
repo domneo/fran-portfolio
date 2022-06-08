@@ -13,9 +13,11 @@ export default function Home() {
       <div className="container">
         <div className="row spacer-lg">
           <div className="col">
-            <h1>
+            <h1 className="d-flex align-items-end">
               <span className="display-1">What&apos;s up?</span>
-              <span className="display-4 text-bone d-inline-block">
+              <span
+                className={`${styles.imFrancine} display-4 text-bone d-inline-block`}
+              >
                 I&apos;m Francine
               </span>
             </h1>
