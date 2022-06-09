@@ -7,7 +7,7 @@ import Layout from "components/Layout";
 import Blob from "components/common/Blob";
 import { Stars } from "components/common/Stars";
 
-export default function Home() {
+export default function About() {
   return (
     <Layout>
       <div className="container">

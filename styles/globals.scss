@@ -151,14 +151,32 @@ a,
   color: $bone;
   text-decoration: underline;
   letter-spacing: 0.03em;
+  border-radius: 0.25rem;
   transition: 0.3s font-weight;
 
-  &:hover {
+  &:hover,
+  &:focus {
     font-weight: 700;
     transition: 0.3s font-weight;
   }
+
+  &:focus-visible {
+    outline-style: dashed;
+    outline-color: $white;
+    outline-width: 2px;
+    outline-offset: 0.5rem;
+  }
 }
 
+.text-works {
+  color: $works;
+}
+.text-about {
+  color: $about;
+}
+.text-contact {
+  color: $contact;
+}
 .text-platinum {
   color: $platinum;
 }
