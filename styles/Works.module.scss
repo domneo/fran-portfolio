@@ -1,6 +1,7 @@
 @import "mixins";
 
 .link {
+  color: $platinum;
   text-decoration: none;
   transition: 0.3s color;
 
@@ -16,7 +17,7 @@
   position: sticky;
   top: 100px;
   width: 100%;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 200px);
 }
 
 @keyframes fadeIn {

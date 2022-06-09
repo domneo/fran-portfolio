@@ -135,7 +135,7 @@ export default function Works() {
     <Layout>
       <div className="container">
         <div className="row align-items-stretch justify-content-center">
-          <div className="col-lg-7 px-5 d-flex flex-column justify-content-center">
+          <div className="col-lg-7 px-5 py-5 my-5 d-flex flex-column justify-content-center">
             {data &&
               data.length > 0 &&
               data.map((item, index) => (
