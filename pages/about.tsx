@@ -11,7 +11,7 @@ export default function About() {
   return (
     <Layout>
       <div className="container">
-        <div className="row spacer-lg">
+        <div className="row spacer-md">
           <div className="col">
             <h1 className="d-flex align-items-end">
               <span className="display-1">What&apos;s up?</span>
@@ -23,7 +23,7 @@ export default function About() {
             </h1>
           </div>
         </div>
-        <div className="row align-items-center spacer-lg">
+        <div className="row align-items-center spacer-md">
           <div className="col-lg-7 offset-lg-1">
             <div className="row">
               <div
@@ -53,7 +53,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="row justify-content-center spacer-lg">
+        <div className="row justify-content-center spacer-md">
           <div className="col-lg-10 d-flex">
             <div style={{ padding: "1rem 5rem" }}>
               <Image
@@ -65,14 +65,14 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="row spacer-lg">
+        <div className="row spacer-md">
           <div className="col text-center">
             <p className="h5 fw-light">
               <s>&nbsp;I have a multi-disciplinary background&nbsp;</s>
             </p>
           </div>
         </div>
-        <div className="row justify-content-center spacer-lg">
+        <div className="row justify-content-center spacer-md">
           <div className="col-lg-10">
             <div className="row align-items-center">
               <div className="col-lg-4">
@@ -110,8 +110,8 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="spacer-lg"></div>
-        <div className="row spacer-lg">
+        <div className="spacer-md"></div>
+        <div className="row spacer-md">
           <div className="col">
             <p className="h2 text-bone">
               <span className={styles.keypointPrefixSpacer} />
@@ -124,8 +124,8 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="spacer-lg"></div>
-        <div className="row spacer-lg">
+        <div className="spacer-md"></div>
+        <div className="row spacer-md">
           <div className="col-lg-6 offset-lg-5">
             <p>
               When I&apos;m not hunched over creating 32 button variants or
@@ -135,7 +135,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="row justify-content-center spacer-lg">
+        <div className="row justify-content-center spacer-md">
           <div className="col-lg-10 d-flex justify-content-end">
             <div style={{ padding: "1rem 5rem" }}>
               <Image
@@ -147,13 +147,13 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="spacer-lg">
+        <div className="spacer-md">
           <Stars />
         </div>
-        <div className="spacer-lg"></div>
-        <div className="row justify-content-center spacer-lg">
+        <div className="spacer-md"></div>
+        <div className="row justify-content-center spacer-md">
           <div className="col-lg-8 text-center">
-            <h2 className="display-5 text-bone spacer-lg">
+            <h2 className="display-5 text-bone spacer-md">
               If you&apos;re looking to collaborate, come say hi!{" "}
               <span className="d-inline-block">
                 I&apos;m happy to connect about work or play
@@ -172,7 +172,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="spacer-lg"></div>
+        <div className="spacer-md"></div>
       </div>
     </Layout>
   );
