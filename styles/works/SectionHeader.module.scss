@@ -1,0 +1,8 @@
+@import "../mixins";
+
+.line {
+  width: 100%;
+  height: 1px;
+  margin-left: 1.5rem;
+  background: $bone;
+}

@@ -1,6 +1,7 @@
 import Layout from "components/Layout";
 import { Details } from "components/works/Details";
 import { Header } from "components/works/Header";
+import { SectionHeader } from "components/works/SectionHeader";
 
 export const meta = {
   image: "https://placekitten.com/1400/300",
@@ -36,7 +37,7 @@ export default function Compawnion() {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <Details details={meta.details} debut={meta.debut} />
-            {/* section header */}
+            <SectionHeader title="KICKOFF" />
             {/* titlecontent */}
             {/* highlight */}
             {/* section header */}
