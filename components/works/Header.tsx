@@ -14,6 +14,7 @@ export const Header = ({ image, title, subtitle }: HeaderProps) => {
       <div className={styles.heroImage}>
         <Image
           src={image}
+          alt={title}
           layout="fill"
           objectFit="cover"
           objectPosition={"center"}
