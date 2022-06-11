@@ -2,6 +2,7 @@ import Layout from "components/Layout";
 import { Details } from "components/works/Details";
 import { Header } from "components/works/Header";
 import { SectionHeader } from "components/works/SectionHeader";
+import { TitleContent } from "components/works/TitleContent";
 
 export const meta = {
   image: "https://placekitten.com/1400/300",
@@ -38,6 +39,31 @@ export default function Compawnion() {
           <div className="col-lg-10">
             <Details details={meta.details} debut={meta.debut} />
             <SectionHeader title="KICKOFF" />
+            <TitleContent spacer={"md"}>
+              <p>
+                While talking about our dreams and aspirations, my teammate and
+                I realised two things:
+              </p>
+              <ol>
+                <li>
+                  We wanted to create something near and dear to our hearts;
+                  and,
+                </li>
+                <li>
+                  What struck a chord between us was how we were both advocates
+                  for pet adoption and we wanted to eventually adopt a pet.
+                </li>
+              </ol>
+              <p>
+                So we toyed with the idea of creating an app that addressed
+                these overlapping factors.
+              </p>
+              <p className="mb-0">
+                For this first project, I worked collaboratively with my
+                teammate on all aspects of the app, from research to visuals and
+                the overall UX.{" "}
+              </p>
+            </TitleContent>
             {/* titlecontent */}
             {/* highlight */}
             {/* section header */}
