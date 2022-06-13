@@ -1,5 +1,5 @@
 export const FigmaEmbed = ({ src }: { src: string }) => (
-  <div className="spacer-md">
+  <section className="spacer-md">
     <iframe
       style={{
         border: "1px solid rgba(0, 0, 0, 0.1)",
@@ -9,5 +9,5 @@ export const FigmaEmbed = ({ src }: { src: string }) => (
       src={src}
       allowFullScreen
     />
-  </div>
+  </section>
 );

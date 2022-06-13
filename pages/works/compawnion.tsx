@@ -2,6 +2,7 @@ import Layout from "components/Layout";
 import { Details } from "components/works/Details";
 import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
+import { Highlight } from "components/works/Highlight";
 import { SectionHeader } from "components/works/SectionHeader";
 import { TitleContent } from "components/works/TitleContent";
 
@@ -66,8 +67,12 @@ export default function Compawnion() {
                 the overall UX.{" "}
               </p>
             </TitleContent>
-            {/* titlecontent */}
-            {/* highlight */}
+            <Highlight title="Opportunity" spacer="lg">
+              <p className="mb-0">
+                What if there was an app that could create pawsitive change and
+                find a forever home for a furiend?
+              </p>
+            </Highlight>
             {/* section header */}
             {/* image */}
             {/* section header */}
