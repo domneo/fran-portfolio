@@ -1,5 +1,6 @@
 import Layout from "components/Layout";
 import { Details } from "components/works/Details";
+import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { SectionHeader } from "components/works/SectionHeader";
 import { TitleContent } from "components/works/TitleContent";
@@ -38,6 +39,7 @@ export default function Compawnion() {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <Details details={meta.details} debut={meta.debut} />
+            {/* <FigmaEmbed src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791" /> */}
             <SectionHeader title="KICKOFF" />
             <TitleContent spacer={"md"}>
               <p>
