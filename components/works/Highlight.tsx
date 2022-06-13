@@ -10,20 +10,15 @@ interface HighlightProps {
 
 const Star = () => (
   <div className={styles.star}>
-    <Image
-      src="/images/opportunityStar.svg"
-      layout="fill"
-      objectFit="contain"
-      objectPosition={"center"}
-    />
+    <Image src="/images/opportunityStar.svg" width={276} height={234} />
   </div>
 );
 
 export const Highlight = ({ title, children, spacer }: HighlightProps) => (
   <section className={`row justify-content-center spacer-${spacer}`}>
-    <div className={`col text-center d-flex`}>
+    <div className={`col-10 text-center d-flex`}>
       <Star />
-      <div className="px-4">
+      <div className="d-flex flex-column justify-content-center align-items-center px-5">
         {title && <h2 className="display-3 text-bone">{title}</h2>}
         {children}
       </div>
