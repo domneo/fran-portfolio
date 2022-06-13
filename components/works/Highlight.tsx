@@ -8,29 +8,26 @@ interface HighlightProps {
   spacer?: "sm" | "md" | "lg";
 }
 
+const Star = () => (
+  <div className={styles.star}>
+    <Image
+      src="/images/opportunityStar.svg"
+      layout="fill"
+      objectFit="contain"
+      objectPosition={"center"}
+    />
+  </div>
+);
+
 export const Highlight = ({ title, children, spacer }: HighlightProps) => (
   <section className={`row justify-content-center spacer-${spacer}`}>
     <div className={`col text-center d-flex`}>
-      <div className={styles.star}>
-        <Image
-          src="/images/opportunityStar.svg"
-          layout="fill"
-          objectFit="contain"
-          objectPosition={"center"}
-        />
-      </div>
+      <Star />
       <div className="px-4">
         {title && <h2 className="display-3 text-bone">{title}</h2>}
         {children}
       </div>
-      <div className={styles.star}>
-        <Image
-          src="/images/opportunityStar.svg"
-          layout="fill"
-          objectFit="contain"
-          objectPosition={"center"}
-        />
-      </div>
+      <Star />
     </div>
   </section>
 );
