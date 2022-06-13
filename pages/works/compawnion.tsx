@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Layout from "components/Layout";
 import { Details } from "components/works/Details";
 import { FigmaEmbed } from "components/works/FigmaEmbed";
@@ -73,11 +75,26 @@ export default function Compawnion() {
                 find a forever home for a furiend?
               </p>
             </Highlight>
-            {/* section header */}
-            {/* image */}
-            {/* section header */}
-            {/* titlecontent */}
-            {/* titlecontent */}
+            <SectionHeader title="PROCESS" />
+            <TitleContent spacer="lg" fullwidth centralise>
+              <Image
+                src={"/images/designProcess.svg"}
+                width={1146}
+                height={296}
+              />
+            </TitleContent>
+            <SectionHeader title="EMPATHISE" />
+            <TitleContent spacer="lg">
+              <p>
+                While we had some idea of what pet adoption is like in
+                Singapore, there was still a gap between our understanding and
+                the larger landscape and what pet adopters have experienced.
+                Additionally, we also had to figure out if such an app was
+                actually needed in our sunny island and how could this app help
+                pet adopters.
+              </p>
+              <p className="mb-0">So off we went!</p>
+            </TitleContent>
             {/* carousel */}
             {/* titlecontent */}
             {/* carousel */}
