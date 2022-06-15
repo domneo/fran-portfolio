@@ -6,8 +6,10 @@ import { Details } from "components/works/Details";
 import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
+import { NumberedKeyPoint } from "components/works/NumberedKeyPoint";
 import { SectionHeader } from "components/works/SectionHeader";
 import { TitleContent } from "components/works/TitleContent";
+import { TwoColumnContent } from "components/works/TwoColumnContent";
 
 export const meta = {
   image: "https://placekitten.com/1400/300",
@@ -97,107 +99,164 @@ export default function Compawnion() {
               <p className="mb-0">So off we went!</p>
             </TitleContent>
             <TitleContent title="Secondary Research" centralise spacer="sm" />
-            <Carousel
-              slides={[
-                {
-                  title: "6 stages in the pet adoption process",
-                  content: (
-                    <ol>
-                      <li>Search for a pet</li>
-                      <li>Connect with a shelter/fosterer</li>
-                      <li>Meet the pet</li>
+            <Carousel spacer="lg">
+              <NumberedKeyPoint
+                number={1}
+                title="6 stages in the pet adoption process"
+                content={
+                  <ol>
+                    <li>Search for a pet</li>
+                    <li>Connect with a shelter/fosterer</li>
+                    <li>Meet the pet</li>
+                    <li>
+                      Home Evaluation and/or Trial Home Stay (dependent on the
+                      shelter/fosterer)
+                    </li>
+                    <li>Actual Adoption!</li>
+                    <li>Post-Adoption</li>
+                  </ol>
+                }
+              />
+              <NumberedKeyPoint
+                number={2}
+                title="Many active FB groups dedicated to pet adoptions and fostering in SG"
+                content={
+                  <ul>
+                    <li>
+                      At least 11 groups with an average of 26,300 members each
+                    </li>
+                    <li>
+                      At least 3 posts per day per group in the past week about
+                      adoption and adoption requests
+                    </li>
+                  </ul>
+                }
+              />
+              <NumberedKeyPoint
+                number={3}
+                title="Pet adoption making waves politically"
+                content={
+                  <ul>
+                    <li>
+                      SG government looking at introducing measures to encourage
+                      adoption
+                    </li>
+                  </ul>
+                }
+              />
+              <NumberedKeyPoint
+                number={4}
+                title="SG public interest in pet adoption one of the highest worldwide"
+                content={
+                  <ul>
+                    <li>
+                      SG's Relative Search Volume (RSV) for pet adoption search
+                      terms ranked 4th globally during the pandemic
+                    </li>
+                    <li>
+                      Public interest reflected as a fraction of total searches
+                      in a specific geographical region between December 2015 -
+                      2020
+                    </li>
+                  </ul>
+                }
+              />
+              <NumberedKeyPoint
+                number={5}
+                title="Adoption drives and manpower needs affected by safe-distancing measures"
+                content={
+                  <ul>
+                    <li>
+                      Adoption drives stopped due to COVID-19 circuit breakers
+                      and restrictions
+                    </li>
+                    <li>
+                      Shelters unwilling to have remote adoptions - face-to-face
+                      interaction crucial
+                    </li>
+                    <li>
+                      Shelters face a manpower crunch to care for the animals,
+                      organise adoption drives, and manage adoption requests
+                    </li>
+                  </ul>
+                }
+              />
+              <NumberedKeyPoint
+                number={6}
+                title="Overall increase in adoptions and fostering requests"
+                content={
+                  <ul>
+                    <li>
+                      3 shelters reported a 33% to 100% increase in the number
+                      of adoptions
+                    </li>
+                    <li>
+                      1 shelter reported a 11.6% drop in adoptions, but a
+                      tenfold increase in fostering applications
+                    </li>
+                  </ul>
+                }
+              />
+            </Carousel>
+            <TitleContent title="Primary Research" centralise spacer="sm">
+              <p>
+                Equipped with secondary research, we headed for a deep dive into{" "}
+                <strong>
+                  <em>who</em>
+                </strong>{" "}
+                pet adopters are. Here, we focused on open-ended questions to
+                draw upon the richness of their experiences - what their needs,
+                goals and motivations are, and what were their experiences like?
+              </p>
+              <p>
+                <strong>
+                  To uncover these perspectives, we interviewed 5 people - 3
+                  were actively searching to adopt and 2 have already adopted a
+                  pet.
+                </strong>
+              </p>
+            </TitleContent>
+            <Carousel spacer="lg">
+              <TwoColumnContent
+                column1={"image"}
+                column2={
+                  <>
+                    <p className="mb-3">01.</p>
+                    <h5 className="text-works mb-2">
+                      How successful the adopter is in searching for a suitable
+                      pet online is dependent on their ability to filter, sieve
+                      through, and compare information
+                    </h5>
+                    <ul className="mb-0">
                       <li>
-                        Home Evaluation and/or Trial Home Stay (dependent on the
-                        shelter/fosterer)
+                        Adoptors want to find and compare information quickly
+                        and efficiently
                       </li>
-                      <li>Actual Adoption!</li>
-                      <li>Post-Adoption</li>
-                    </ol>
-                  ),
-                },
-                {
-                  title:
-                    "Many active FB groups dedicated to pet adoptions and fostering in SG",
-                  content: (
-                    <ul>
                       <li>
-                        At least 11 groups with an average of 26,300 members
-                        each
+                        Pet descriptions do not follow a standardised format or
+                        contain all information (including photos and videos)
+                        adopters want
                       </li>
                       <li>
-                        At least 3 posts per day per group in the past week
-                        about adoption and adoption requests
+                        Adopters inclined to believe that pet descriptions are
+                        not fully transparent as they are written subjectively
                       </li>
                     </ul>
-                  ),
-                },
-                {
-                  title: "Pet adoption making waves politically",
-                  content: (
-                    <ul>
-                      <li>
-                        SG government looking at introducing measures to
-                        encourage adoption
-                      </li>
-                    </ul>
-                  ),
-                },
-                {
-                  title:
-                    "SG public interest in pet adoption one of the highest worldwide",
-                  content: (
-                    <ul>
-                      <li>
-                        SG's Relative Search Volume (RSV) for pet adoption
-                        search terms ranked 4th globally during the pandemic
-                      </li>
-                      <li>
-                        Public interest reflected as a fraction of total
-                        searches in a specific geographical region between
-                        December 2015 - 2020
-                      </li>
-                    </ul>
-                  ),
-                },
-                {
-                  title:
-                    "Adoption drives and manpower needs affected by safe-distancing measures",
-                  content: (
-                    <ul>
-                      <li>
-                        Adoption drives stopped due to COVID-19 circuit breakers
-                        and restrictions
-                      </li>
-                      <li>
-                        Shelters unwilling to have remote adoptions -
-                        face-to-face interaction crucial
-                      </li>
-                      <li>
-                        Shelters face a manpower crunch to care for the animals,
-                        organise adoption drives, and manage adoption requests
-                      </li>
-                    </ul>
-                  ),
-                },
-                {
-                  title: "Overall increase in adoptions and fostering requests",
-                  content: (
-                    <ul>
-                      <li>
-                        3 shelters reported a 33% to 100% increase in the number
-                        of adoptions
-                      </li>
-                      <li>
-                        1 shelter reported a 11.6% drop in adoptions, but a
-                        tenfold increase in fostering applications
-                      </li>
-                    </ul>
-                  ),
-                },
-              ]}
-              spacer="lg"
-            />
-            {/* titlecontent */}
+                  </>
+                }
+              />
+            </Carousel>
+            <TitleContent title="Persona" centralise spacer="lg">
+              <p>
+                All our interview insights and research eventually culminated
+                into...
+              </p>
+              <Image
+                src={"/images/compawnion-persona.png"}
+                width={2612}
+                height={866}
+              />
+            </TitleContent>
             {/* carousel */}
             {/* titlecontent */}
             {/* image */}

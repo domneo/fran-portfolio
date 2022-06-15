@@ -2,7 +2,6 @@ import { Component, useState } from "react";
 import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { v4 as uuidv4 } from "uuid";
 
 import styles from "styles/works/Carousel.module.scss";
 
@@ -30,13 +29,8 @@ const NextArrow = ({ onClick }: CustomArrowProps) => {
   return <CustomArrow className={styles.nextArrow} onClick={onClick} />;
 };
 
-interface CarouselSlide {
-  title: string;
-  content: React.ReactNode;
-}
-
 interface CarouselProps {
-  slides: Array<CarouselSlide>;
+  children?: React.ReactNode;
   spacer?: "sm" | "md" | "lg";
 }
 
@@ -49,7 +43,7 @@ export class Carousel extends Component {
   }
 
   render() {
-    const { slides, spacer } = this.props;
+    const { children, spacer } = this.props;
 
     const settings = {
       speed: 800,
@@ -78,16 +72,7 @@ export class Carousel extends Component {
 
     return (
       <section className={`spacer-${spacer}`}>
-        <Slider {...settings}>
-          {slides.map((slide, index) => (
-            <div key={uuidv4()} className={styles.slide}>
-              <p className={styles.slideNumber}>{index + 1}</p>
-              <h5 className="paragraph text-center mb-3">{slide.title}</h5>
-              <div className={styles.line} />
-              {slide.content}
-            </div>
-          ))}
-        </Slider>
+        <Slider {...settings}>{children}</Slider>
       </section>
     );
   }
