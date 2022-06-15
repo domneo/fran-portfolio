@@ -28,6 +28,13 @@
   font-display: swap;
 }
 
+*:focus-visible {
+  outline-style: dashed;
+  outline-color: $white;
+  outline-width: 2px;
+  outline-offset: 0.5rem;
+}
+
 body {
   font-family: "Inter", sans-serif;
   @include font-size(18px);
@@ -159,19 +166,16 @@ a,
     font-weight: 700;
     transition: 0.3s font-weight;
   }
-
-  &:focus-visible {
-    outline-style: dashed;
-    outline-color: $white;
-    outline-width: 2px;
-    outline-offset: 0.5rem;
-  }
 }
 
 ol,
 ul {
   margin-bottom: 1.75rem;
   padding-left: 1.75rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 
 .text-works {

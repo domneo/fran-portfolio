@@ -18,14 +18,16 @@
     "next-transpile-modules": "^9.0.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "rfs": "^9.0.6",
+    "react-slick": "^0.29.0",
     "simplex-noise": "^3.0.1",
+    "slick-carousel": "^1.8.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
     "@types/node": "^17.0.36",
     "@types/react": "^18.0.9",
+    "@types/react-slick": "^0.23.8",
     "@types/uuid": "^8.3.4",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",

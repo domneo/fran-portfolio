@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Layout from "components/Layout";
+import { Carousel } from "components/works/Carousel";
 import { Details } from "components/works/Details";
 import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
@@ -95,7 +96,107 @@ export default function Compawnion() {
               </p>
               <p className="mb-0">So off we went!</p>
             </TitleContent>
-            {/* carousel */}
+            <TitleContent title="Secondary Research" centralise spacer="sm" />
+            <Carousel
+              slides={[
+                {
+                  title: "6 stages in the pet adoption process",
+                  content: (
+                    <ol>
+                      <li>Search for a pet</li>
+                      <li>Connect with a shelter/fosterer</li>
+                      <li>Meet the pet</li>
+                      <li>
+                        Home Evaluation and/or Trial Home Stay (dependent on the
+                        shelter/fosterer)
+                      </li>
+                      <li>Actual Adoption!</li>
+                      <li>Post-Adoption</li>
+                    </ol>
+                  ),
+                },
+                {
+                  title:
+                    "Many active FB groups dedicated to pet adoptions and fostering in SG",
+                  content: (
+                    <ul>
+                      <li>
+                        At least 11 groups with an average of 26,300 members
+                        each
+                      </li>
+                      <li>
+                        At least 3 posts per day per group in the past week
+                        about adoption and adoption requests
+                      </li>
+                    </ul>
+                  ),
+                },
+                {
+                  title: "Pet adoption making waves politically",
+                  content: (
+                    <ul>
+                      <li>
+                        SG government looking at introducing measures to
+                        encourage adoption
+                      </li>
+                    </ul>
+                  ),
+                },
+                {
+                  title:
+                    "SG public interest in pet adoption one of the highest worldwide",
+                  content: (
+                    <ul>
+                      <li>
+                        SG's Relative Search Volume (RSV) for pet adoption
+                        search terms ranked 4th globally during the pandemic
+                      </li>
+                      <li>
+                        Public interest reflected as a fraction of total
+                        searches in a specific geographical region between
+                        December 2015 - 2020
+                      </li>
+                    </ul>
+                  ),
+                },
+                {
+                  title:
+                    "Adoption drives and manpower needs affected by safe-distancing measures",
+                  content: (
+                    <ul>
+                      <li>
+                        Adoption drives stopped due to COVID-19 circuit breakers
+                        and restrictions
+                      </li>
+                      <li>
+                        Shelters unwilling to have remote adoptions -
+                        face-to-face interaction crucial
+                      </li>
+                      <li>
+                        Shelters face a manpower crunch to care for the animals,
+                        organise adoption drives, and manage adoption requests
+                      </li>
+                    </ul>
+                  ),
+                },
+                {
+                  title: "Overall increase in adoptions and fostering requests",
+                  content: (
+                    <ul>
+                      <li>
+                        3 shelters reported a 33% to 100% increase in the number
+                        of adoptions
+                      </li>
+                      <li>
+                        1 shelter reported a 11.6% drop in adoptions, but a
+                        tenfold increase in fostering applications
+                      </li>
+                    </ul>
+                  ),
+                },
+              ]}
+              spacer="lg"
+            />
             {/* titlecontent */}
             {/* carousel */}
             {/* titlecontent */}

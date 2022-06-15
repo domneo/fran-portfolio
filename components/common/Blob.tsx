@@ -15,6 +15,7 @@ interface Point {
 
 interface BlobProps {
   isHovering?: boolean;
+  showArrow?: boolean;
 }
 
 export default class Blob extends Component {
@@ -188,6 +189,7 @@ export default class Blob extends Component {
   };
 
   render() {
+    const { showArrow } = this.props;
     const { d1, d2 } = this.state;
 
     return (
@@ -196,6 +198,13 @@ export default class Blob extends Component {
         <g transform="translate(12,3)">
           <path d={d2} stroke="#eaeae7" strokeWidth={0.75} fill="transparent" />
         </g>
+        {showArrow && (
+          <path
+            d="M108 112L108 93.3066L96.5731 102.653L108 112Z"
+            stroke="#EAEAE7"
+            strokeWidth={0.75}
+          />
+        )}
       </svg>
     );
   }
