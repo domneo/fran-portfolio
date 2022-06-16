@@ -29,26 +29,31 @@ const NextArrow = ({ onClick }: CustomArrowProps) => {
   return <CustomArrow className={styles.nextArrow} onClick={onClick} />;
 };
 
+const getSlidesToShowResponsive = (slidesToShow?: number) => {
+  if (slidesToShow === 3) return { xl: 2, lg: 1 };
+  if (slidesToShow === 2) return { xl: 2, lg: 1 };
+  if (slidesToShow === 1) return { xl: 1, lg: 1 };
+  return { xl: 1, lg: 1 };
+};
+
 interface CarouselProps {
   children?: React.ReactNode;
+  slidesToShow?: 1 | 2 | 3;
   spacer?: "sm" | "md" | "lg";
 }
 
-export class Carousel extends Component {
-  props: CarouselProps;
-
+export class Carousel extends Component<CarouselProps> {
   constructor(props: CarouselProps) {
     super(props);
-    this.props = props;
   }
 
   render() {
-    const { children, spacer } = this.props;
+    const { children, slidesToShow = 1, spacer } = this.props;
 
     const settings = {
       speed: 800,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToShow,
+      slidesToScroll: slidesToShow,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       // desktop-first
@@ -56,15 +61,15 @@ export class Carousel extends Component {
         {
           breakpoint: 1400,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: getSlidesToShowResponsive(slidesToShow).xl,
+            slidesToScroll: getSlidesToShowResponsive(slidesToShow).xl,
           },
         },
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: getSlidesToShowResponsive(slidesToShow).lg,
+            slidesToScroll: getSlidesToShowResponsive(slidesToShow).lg,
           },
         },
       ],

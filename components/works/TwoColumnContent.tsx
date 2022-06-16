@@ -10,9 +10,9 @@ export const TwoColumnContent = ({
   column2,
 }: TwoColumnContentProps) => {
   return (
-    <div className="row w-100">
-      <div className="col-lg-6">{column1}</div>
-      <div className="col-lg-6">{column2}</div>
+    <div className="row align-items-center">
+      <div className="col-xl-6">{column1}</div>
+      <div className="col-xl-6">{column2}</div>
     </div>
   );
 };

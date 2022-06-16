@@ -99,7 +99,7 @@ export default function Compawnion() {
               <p className="mb-0">So off we went!</p>
             </TitleContent>
             <TitleContent title="Secondary Research" centralise spacer="sm" />
-            <Carousel spacer="lg">
+            <Carousel slidesToShow={3} spacer="lg">
               <NumberedKeyPoint
                 number={1}
                 title="6 stages in the pet adoption process"
@@ -218,7 +218,13 @@ export default function Compawnion() {
             </TitleContent>
             <Carousel spacer="lg">
               <TwoColumnContent
-                column1={"image"}
+                column1={
+                  <Image
+                    src={"/images/compawnion-primaryResearch-1.jpg"}
+                    width={1168}
+                    height={596}
+                  />
+                }
                 column2={
                   <>
                     <p className="mb-3">01.</p>
@@ -240,6 +246,125 @@ export default function Compawnion() {
                       <li>
                         Adopters inclined to believe that pet descriptions are
                         not fully transparent as they are written subjectively
+                      </li>
+                    </ul>
+                  </>
+                }
+              />
+              <TwoColumnContent
+                column1={
+                  <Image
+                    src={"/images/compawnion-primaryResearch-2.jpg"}
+                    width={1168}
+                    height={416}
+                  />
+                }
+                column2={
+                  <>
+                    <p className="mb-3">02.</p>
+                    <h5 className="text-works mb-2">
+                      Pet adoption is heavily adopter-driven
+                    </h5>
+                    <ul className="mb-0">
+                      <li>
+                        Belief that pet adoption is ethical and motivating
+                      </li>
+                      <li>
+                        Adoption process starts when adopters have suitable life
+                        circumstances
+                      </li>
+                      <li>
+                        Adopters have pre-existing criteria for what pets they
+                        want to adopt
+                      </li>
+                      <li>Animal shelters are perceived as more trustworthy</li>
+                      <li>
+                        Lesser known shelters are omitted from the search
+                        process
+                      </li>
+                    </ul>
+                  </>
+                }
+              />
+              <TwoColumnContent
+                column1={
+                  <Image
+                    src={"/images/compawnion-primaryResearch-3.jpg"}
+                    width={1168}
+                    height={554}
+                  />
+                }
+                column2={
+                  <>
+                    <p className="mb-3">03.</p>
+                    <h5 className="text-works mb-2">
+                      Adopters value convenience, digitalisation, and
+                      streamlined processes
+                    </h5>
+                    <ul className="mb-0">
+                      <li>
+                        Prefer expending minimum effort in the administrative
+                        aspects of the adoption process
+                      </li>
+                      <li>Want soft copies of forms and documents</li>
+                      <li>
+                        Don't have a reliable way to keep track of pre- and
+                        post-adoption tasks
+                      </li>
+                    </ul>
+                  </>
+                }
+              />
+              <TwoColumnContent
+                column1={
+                  <Image
+                    src={"/images/compawnion-primaryResearch-4.jpg"}
+                    width={1168}
+                    height={386}
+                  />
+                }
+                column2={
+                  <>
+                    <p className="mb-3">04.</p>
+                    <h5 className="text-works mb-2">
+                      Misaligned expectations between adopters and shelters
+                    </h5>
+                    <ul className="mb-0">
+                      <li>
+                        Adopters expect shelters to provide them with actionable
+                        and pre-emptive information
+                      </li>
+                      <li>
+                        Shelters expect adopters to know what to prepare for the
+                        adoption process and do after the process is completed
+                      </li>
+                    </ul>
+                  </>
+                }
+              />
+              <TwoColumnContent
+                column1={
+                  <Image
+                    src={"/images/compawnion-primaryResearch-5.jpg"}
+                    width={782}
+                    height={840}
+                  />
+                }
+                column2={
+                  <>
+                    <p className="mb-3">05.</p>
+                    <h5 className="text-works mb-2">
+                      Positive face-to-face interaction between the pet,
+                      adopter, and environment is key to a successful adoption
+                    </h5>
+                    <ul className="mb-0">
+                      <li>
+                        Adopters must and want to have face-to-face interaction
+                        with pets before committing to the adoption
+                      </li>
+                      <li>
+                        Shelter staff actively observe the pet's behaviour at a
+                        trial home stay and evaluation
                       </li>
                     </ul>
                   </>

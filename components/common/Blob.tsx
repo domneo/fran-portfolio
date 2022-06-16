@@ -18,8 +18,14 @@ interface BlobProps {
   showArrow?: boolean;
 }
 
-export default class Blob extends Component {
-  props: BlobProps;
+interface BlobState {
+  d1: string;
+  d2: string;
+  noiseStep: number;
+  noiseIntensity: number;
+}
+
+export default class Blob extends Component<BlobProps, BlobState> {
   state: {
     d1: string;
     d2: string;
@@ -40,7 +46,6 @@ export default class Blob extends Component {
       noiseStep: 0.0015,
       noiseIntensity: 20,
     };
-    this.props = props;
     this.requestRef = createRef();
     this.points1 = this.createPoints(6);
     this.points2 = this.createPoints(6);
