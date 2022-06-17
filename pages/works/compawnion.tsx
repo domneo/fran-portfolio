@@ -3,6 +3,7 @@ import Image from "next/image";
 import Layout from "components/Layout";
 import { Carousel } from "components/works/Carousel";
 import { Details } from "components/works/Details";
+import { DropdownContent } from "components/works/DropdownContent";
 import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
@@ -285,11 +286,44 @@ export default function Compawnion() {
                 height={866}
               />
             </TitleContent>
-            {/* carousel */}
-            {/* titlecontent */}
-            {/* image */}
-            {/* section header */}
-            {/* titlecontent */}
+            <SectionHeader title="DEFINE" />
+            <TitleContent title="Defining the Problem" centralise spacer="lg">
+              <p className="mb-5">
+                Now that we could put a face to who we were designing for, it
+                was time to get down and dirty - we had to know exactly what we
+                were trying to solve. By charting a journey map, we can
+                visualise the highs and the lows of Pawline's journey to
+                becoming a pet slave owner.
+              </p>
+              <div className="mb-5">
+                <Image
+                  src={"/images/compawnion-define-1.png"}
+                  width={2006}
+                  height={1280}
+                />
+              </div>
+              <p>
+                Pawline's user journey painted a clear overview of where her
+                woes lay: the Search, Communicate, and the Post-Adoption stages.
+                She faced many problems, but we were but a team of two sprinting
+                towards a deadline. With map in hand, we looked for a north
+                star.
+              </p>
+              <DropdownContent title="💡 Learning point">
+                <p className="mb-0">
+                  Real life business goals would help align our goals and focus
+                  our priorities on how we can help Pawline.
+                </p>
+              </DropdownContent>
+              <p className="mb-0">
+                A commonality in the secondary research and user interviews was
+                that both adopters and shelters heavily emphasised the need to
+                interact with a potential pet first before adoption. This means
+                that while we cannot influence shelter evaluations, we could
+                affect the most change in the search process. This tied in with
+                one of Pawline's main goals - to find and meet a pet.
+              </p>
+            </TitleContent>
             {/* image */}
             {/* titlecontent */}
             {/* learningpoint */}
