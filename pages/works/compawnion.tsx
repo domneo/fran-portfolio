@@ -6,10 +6,10 @@ import { Details } from "components/works/Details";
 import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
+import { ImageContentColumns } from "components/works/ImageContentColumns";
 import { NumberedKeyPoint } from "components/works/NumberedKeyPoint";
 import { SectionHeader } from "components/works/SectionHeader";
 import { TitleContent } from "components/works/TitleContent";
-import { TwoColumnContent } from "components/works/TwoColumnContent";
 
 export const meta = {
   image: "https://placekitten.com/1400/300",
@@ -217,158 +217,61 @@ export default function Compawnion() {
               </p>
             </TitleContent>
             <Carousel spacer="lg">
-              <TwoColumnContent
-                column1={
-                  <Image
-                    src={"/images/compawnion-primaryResearch-1.jpg"}
-                    width={1168}
-                    height={596}
-                  />
+              <ImageContentColumns
+                image={"/images/compawnion-primaryResearch-1.jpg"}
+                number={"01."}
+                title={
+                  "How successful the adopter is in searching for a suitable pet online is dependent on their ability to filter, sieve through, and compare information"
                 }
-                column2={
-                  <>
-                    <p className="mb-3">01.</p>
-                    <h5 className="text-works mb-2">
-                      How successful the adopter is in searching for a suitable
-                      pet online is dependent on their ability to filter, sieve
-                      through, and compare information
-                    </h5>
-                    <ul className="mb-0">
-                      <li>
-                        Adoptors want to find and compare information quickly
-                        and efficiently
-                      </li>
-                      <li>
-                        Pet descriptions do not follow a standardised format or
-                        contain all information (including photos and videos)
-                        adopters want
-                      </li>
-                      <li>
-                        Adopters inclined to believe that pet descriptions are
-                        not fully transparent as they are written subjectively
-                      </li>
-                    </ul>
-                  </>
-                }
+                points={[
+                  "Adoptors want to find and compare information quickly and efficiently",
+                  "Pet descriptions do not follow a standardised format or contain all information (including photos and videos) adopters want",
+                  "Adopters inclined to believe that pet descriptions are not fully transparent as they are written subjectively",
+                ]}
               />
-              <TwoColumnContent
-                column1={
-                  <Image
-                    src={"/images/compawnion-primaryResearch-2.jpg"}
-                    width={1168}
-                    height={416}
-                  />
-                }
-                column2={
-                  <>
-                    <p className="mb-3">02.</p>
-                    <h5 className="text-works mb-2">
-                      Pet adoption is heavily adopter-driven
-                    </h5>
-                    <ul className="mb-0">
-                      <li>
-                        Belief that pet adoption is ethical and motivating
-                      </li>
-                      <li>
-                        Adoption process starts when adopters have suitable life
-                        circumstances
-                      </li>
-                      <li>
-                        Adopters have pre-existing criteria for what pets they
-                        want to adopt
-                      </li>
-                      <li>Animal shelters are perceived as more trustworthy</li>
-                      <li>
-                        Lesser known shelters are omitted from the search
-                        process
-                      </li>
-                    </ul>
-                  </>
-                }
+              <ImageContentColumns
+                image={"/images/compawnion-primaryResearch-2.jpg"}
+                number={"02."}
+                title={"Pet adoption is heavily adopter-driven"}
+                points={[
+                  "Belief that pet adoption is ethical and motivating",
+                  "Adoption process starts when adopters have suitable life circumstances",
+                  "Adopters have pre-existing criteria for what pets they want to adopt",
+                  "Animal shelters are perceived as more trustworthy",
+                  "Lesser known shelters are omitted from the search process",
+                ]}
               />
-              <TwoColumnContent
-                column1={
-                  <Image
-                    src={"/images/compawnion-primaryResearch-3.jpg"}
-                    width={1168}
-                    height={554}
-                  />
+              <ImageContentColumns
+                image={"/images/compawnion-primaryResearch-3.jpg"}
+                number={"03."}
+                title={
+                  "Adopters value convenience, digitalisation, and streamlined processes"
                 }
-                column2={
-                  <>
-                    <p className="mb-3">03.</p>
-                    <h5 className="text-works mb-2">
-                      Adopters value convenience, digitalisation, and
-                      streamlined processes
-                    </h5>
-                    <ul className="mb-0">
-                      <li>
-                        Prefer expending minimum effort in the administrative
-                        aspects of the adoption process
-                      </li>
-                      <li>Want soft copies of forms and documents</li>
-                      <li>
-                        Don't have a reliable way to keep track of pre- and
-                        post-adoption tasks
-                      </li>
-                    </ul>
-                  </>
-                }
+                points={[
+                  "Prefer expending minimum effort in the administrative aspects of the adoption process",
+                  "Want soft copies of forms and documents",
+                  "Don't have a reliable way to keep track of pre- and post-adoption tasks",
+                ]}
               />
-              <TwoColumnContent
-                column1={
-                  <Image
-                    src={"/images/compawnion-primaryResearch-4.jpg"}
-                    width={1168}
-                    height={386}
-                  />
-                }
-                column2={
-                  <>
-                    <p className="mb-3">04.</p>
-                    <h5 className="text-works mb-2">
-                      Misaligned expectations between adopters and shelters
-                    </h5>
-                    <ul className="mb-0">
-                      <li>
-                        Adopters expect shelters to provide them with actionable
-                        and pre-emptive information
-                      </li>
-                      <li>
-                        Shelters expect adopters to know what to prepare for the
-                        adoption process and do after the process is completed
-                      </li>
-                    </ul>
-                  </>
-                }
+              <ImageContentColumns
+                image={"/images/compawnion-primaryResearch-4.jpg"}
+                number={"04."}
+                title={"Misaligned expectations between adopters and shelters"}
+                points={[
+                  "Adopters expect shelters to provide them with actionable and pre-emptive information",
+                  "Shelters expect adopters to know what to prepare for the adoption process and do after the process is completed",
+                ]}
               />
-              <TwoColumnContent
-                column1={
-                  <Image
-                    src={"/images/compawnion-primaryResearch-5.jpg"}
-                    width={782}
-                    height={840}
-                  />
+              <ImageContentColumns
+                image={"/images/compawnion-primaryResearch-5.jpg"}
+                number={"05."}
+                title={
+                  "Positive face-to-face interaction between the pet, adopter, and environment is key to a successful adoption"
                 }
-                column2={
-                  <>
-                    <p className="mb-3">05.</p>
-                    <h5 className="text-works mb-2">
-                      Positive face-to-face interaction between the pet,
-                      adopter, and environment is key to a successful adoption
-                    </h5>
-                    <ul className="mb-0">
-                      <li>
-                        Adopters must and want to have face-to-face interaction
-                        with pets before committing to the adoption
-                      </li>
-                      <li>
-                        Shelter staff actively observe the pet's behaviour at a
-                        trial home stay and evaluation
-                      </li>
-                    </ul>
-                  </>
-                }
+                points={[
+                  "Adopters must and want to have face-to-face interaction with pets before committing to the adoption",
+                  "Shelter staff actively observe the pet's behaviour at a trial home stay and evaluation",
+                ]}
               />
             </Carousel>
             <TitleContent title="Persona" centralise spacer="lg">
