@@ -8,6 +8,7 @@ import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
 import { ImageContentColumns } from "components/works/ImageContentColumns";
+import { NarrowTitlePoints } from "components/works/NarrowTitlePoints";
 import { NumberedKeyPoint } from "components/works/NumberedKeyPoint";
 import { SectionHeader } from "components/works/SectionHeader";
 import { TitleContent } from "components/works/TitleContent";
@@ -331,6 +332,16 @@ export default function Compawnion() {
                 and make an informed decision before adopting a pet.
               </p>
             </Highlight>
+            <NarrowTitlePoints
+              title="How Might We Help Pawline"
+              points={[
+                "Search for pets that suit her criteria?",
+                "Quickly understand and compare large amounts of information about pets from different shelters?",
+                "Connect with shelters?",
+                "Keep track of what to do for the adoption process?",
+              ]}
+              spacer="lg"
+            />
           </div>
         </div>
       </div>
