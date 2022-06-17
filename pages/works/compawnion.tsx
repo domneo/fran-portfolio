@@ -342,6 +342,16 @@ export default function Compawnion() {
               ]}
               spacer="lg"
             />
+            <TitleContent title="User Flows" centralise>
+              <p>
+                Before we could create the app, we had to understand and
+                empathise with the decisions and paths Pawline might take to
+                achieve her goals on a more granular level. This would help
+                further guide us in designing the app's features and
+                functionalities. As such, we created user flows to represent
+                these pathways before identifying key issues to solve.
+              </p>
+            </TitleContent>
           </div>
         </div>
       </div>
