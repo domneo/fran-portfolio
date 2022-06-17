@@ -13,7 +13,7 @@ export const TitleContent = ({
   fullwidth = false,
   spacer,
 }: TitleContentProps) => (
-  <section className={`row justify-content-center spacer-${spacer}`}>
+  <section className={`row justify-content-center spacer-${spacer || ""}`}>
     <div
       className={`col${fullwidth ? "" : "-10"} ${
         centralise ? "text-center" : ""

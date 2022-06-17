@@ -9,6 +9,7 @@ import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
 import { ImageContentColumns } from "components/works/ImageContentColumns";
 import { NarrowTitlePoints } from "components/works/NarrowTitlePoints";
+import { NumberedContentImageColumns } from "components/works/NumberedContentImageColumns";
 import { NumberedKeyPoint } from "components/works/NumberedKeyPoint";
 import { SectionHeader } from "components/works/SectionHeader";
 import { TitleContent } from "components/works/TitleContent";
@@ -352,6 +353,56 @@ export default function Compawnion() {
                 these pathways before identifying key issues to solve.
               </p>
             </TitleContent>
+            <Carousel spacer="lg">
+              <NumberedContentImageColumns
+                number={"1"}
+                title={
+                  "Pet adoption is not linear and has a lot of unnecessary repeated actions"
+                }
+                points={[
+                  "Administrative processes and face-to-face interactions are broken up and repetitive",
+                  "If adopters have to repeat certain steps in the adoption process, they must start anew from a much earlier stage - tedious, frustrating for adopters",
+                ]}
+                image={"/images/compawnion-userFlows-1.png"}
+              />
+              <NumberedContentImageColumns
+                number={"2"}
+                title={"Search process is circular and time consuming"}
+                points={[
+                  <>
+                    Researching and searching for shelters and pets are heavily
+                    adopter-action driven
+                    <ul className="mt-1 mb-3">
+                      <li>
+                        14 user actions (blue squares); 4 user decisions (yellow
+                        diamonds)
+                      </li>
+                    </ul>
+                  </>,
+                  <>
+                    Adopters must repeat many steps to learn about shelters and
+                    get pet information
+                    <ul className="mt-1 mb-3">
+                      <li>
+                        Must put in even more effort to compare and remember
+                        what they find
+                      </li>
+                    </ul>
+                  </>,
+                ]}
+                image={"/images/compawnion-userFlows-2.png"}
+              />
+              <NumberedContentImageColumns
+                number={"3"}
+                title={
+                  "Administrative processes and face-to-face interactions are broken up and repetitive"
+                }
+                points={[
+                  "Processes are also repeated for each new shelter the adopter wants to interact with",
+                ]}
+                image={"/images/compawnion-userFlows-3.png"}
+              />
+            </Carousel>
           </div>
         </div>
       </div>

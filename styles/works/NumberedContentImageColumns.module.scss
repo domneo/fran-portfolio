@@ -1,0 +1,17 @@
+@import "../mixins";
+
+.number {
+  text-align: center;
+  margin: 0 auto 1rem;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 1.4;
+}
