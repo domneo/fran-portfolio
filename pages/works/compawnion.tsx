@@ -324,10 +324,13 @@ export default function Compawnion() {
                 one of Pawline's main goals - to find and meet a pet.
               </p>
             </TitleContent>
-            {/* image */}
-            {/* titlecontent */}
-            {/* learningpoint */}
-            {/* titlecontent */}
+            <Highlight title="Problem" spacer="sm">
+              <p className="mb-0">
+                Adopters need a way to easily search for pets and connect with
+                multiple shelters because they want to consider a wide selection
+                and make an informed decision before adopting a pet.
+              </p>
+            </Highlight>
           </div>
         </div>
       </div>
