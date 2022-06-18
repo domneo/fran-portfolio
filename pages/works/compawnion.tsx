@@ -47,7 +47,12 @@ export const meta = {
 export default function Compawnion() {
   return (
     <Layout>
-      <Header image={meta.image} title={meta.title} subtitle={meta.subtitle} />
+      <Header
+        image={meta.image}
+        number={"1"}
+        title={meta.title}
+        subtitle={meta.subtitle}
+      />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10">
