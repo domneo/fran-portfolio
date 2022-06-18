@@ -10,7 +10,12 @@ interface HighlightProps {
 
 const Star = () => (
   <div className={styles.star}>
-    <Image src="/images/opportunityStar.svg" width={276} height={234} />
+    <Image
+      src="/images/opportunityStar.svg"
+      alt="star"
+      width={276}
+      height={234}
+    />
   </div>
 );
 

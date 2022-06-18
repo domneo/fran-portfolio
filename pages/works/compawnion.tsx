@@ -97,6 +97,7 @@ export default function Compawnion() {
             <TitleContent spacer="lg" fullwidth centralise>
               <Image
                 src={"/images/designProcess.svg"}
+                alt="The design process"
                 width={1146}
                 height={296}
               />
@@ -165,8 +166,8 @@ export default function Compawnion() {
                 content={
                   <ul>
                     <li>
-                      SG's Relative Search Volume (RSV) for pet adoption search
-                      terms ranked 4th globally during the pandemic
+                      SG&apos;s Relative Search Volume (RSV) for pet adoption
+                      search terms ranked 4th globally during the pandemic
                     </li>
                     <li>
                       Public interest reflected as a fraction of total searches
@@ -265,7 +266,7 @@ export default function Compawnion() {
                 points={[
                   "Prefer expending minimum effort in the administrative aspects of the adoption process",
                   "Want soft copies of forms and documents",
-                  "Don't have a reliable way to keep track of pre- and post-adoption tasks",
+                  "Don&apos;t have a reliable way to keep track of pre- and post-adoption tasks",
                 ]}
               />
               <ImageContentColumns
@@ -285,7 +286,7 @@ export default function Compawnion() {
                 }
                 points={[
                   "Adopters must and want to have face-to-face interaction with pets before committing to the adoption",
-                  "Shelter staff actively observe the pet's behaviour at a trial home stay and evaluation",
+                  "Shelter staff actively observe the pet&apos;s behaviour at a trial home stay and evaluation",
                 ]}
               />
             </Carousel>
@@ -296,6 +297,7 @@ export default function Compawnion() {
               </p>
               <Image
                 src={"/images/compawnion-persona.png"}
+                alt="Persona"
                 width={2612}
                 height={866}
               />
@@ -306,22 +308,23 @@ export default function Compawnion() {
                 Now that we could put a face to who we were designing for, it
                 was time to get down and dirty - we had to know exactly what we
                 were trying to solve. By charting a journey map, we can
-                visualise the highs and the lows of Pawline's journey to
+                visualise the highs and the lows of Pawline&apos;s journey to
                 becoming a pet slave owner.
               </p>
               <div className="mb-5">
                 <Image
                   src={"/images/compawnion-define-1.png"}
+                  alt="User journey"
                   width={2006}
                   height={1280}
                 />
               </div>
               <p className="mb-5">
-                Pawline's user journey painted a clear overview of where her
-                woes lay: the Search, Communicate, and the Post-Adoption stages.
-                She faced many problems, but we were but a team of two sprinting
-                towards a deadline. With map in hand, we looked for a north
-                star.
+                Pawline&apos;s user journey painted a clear overview of where
+                her woes lay: the Search, Communicate, and the Post-Adoption
+                stages. She faced many problems, but we were but a team of two
+                sprinting towards a deadline. With map in hand, we looked for a
+                north star.
               </p>
               <DropdownContent title="💡 Learning point" spacer="sm">
                 <p className="mb-0">
@@ -335,7 +338,7 @@ export default function Compawnion() {
                 interact with a potential pet first before adoption. This means
                 that while we cannot influence shelter evaluations, we could
                 affect the most change in the search process. This tied in with
-                one of Pawline's main goals - to find and meet a pet.
+                one of Pawline&apos;s main goals - to find and meet a pet.
               </p>
             </TitleContent>
             <Highlight title="Problem" spacer="sm">
@@ -360,7 +363,7 @@ export default function Compawnion() {
                 Before we could create the app, we had to understand and
                 empathise with the decisions and paths Pawline might take to
                 achieve her goals on a more granular level. This would help
-                further guide us in designing the app's features and
+                further guide us in designing the app&apos;s features and
                 functionalities. As such, we created user flows to represent
                 these pathways before identifying key issues to solve.
               </p>
@@ -427,6 +430,7 @@ export default function Compawnion() {
               <div className="mb-5">
                 <Image
                   src={"/images/compawnion-wireframes-1.png"}
+                  alt="Wireframes"
                   width={1456}
                   height={866}
                 />
@@ -441,6 +445,7 @@ export default function Compawnion() {
               </DropdownContent>
               <Image
                 src={"/images/compawnion-wireframes-2.png"}
+                alt="Lo-fi prototype"
                 width={1582}
                 height={1732}
               />
@@ -454,12 +459,12 @@ export default function Compawnion() {
             <TitleContent title="Moving Forward" centralise spacer="md">
               <p>
                 Compawnion was my first foray into UIUX and suffice to say, it
-                hit a sweet spot where the skills I've picked up over the years
-                melded with my love of solving problems and trying to be more
-                creative. After the project, I learnt many things on hindsight
-                and was left with many more questions about UIUX - questions I
-                look forward to finding the answers to as I plunge deeper into
-                this new world.
+                hit a sweet spot where the skills I&apos;ve picked up over the
+                years melded with my love of solving problems and trying to be
+                more creative. After the project, I learnt many things on
+                hindsight and was left with many more questions about UIUX -
+                questions I look forward to finding the answers to as I plunge
+                deeper into this new world.
               </p>
             </TitleContent>
             <ThreeColumns
@@ -492,7 +497,7 @@ export default function Compawnion() {
                     apps may not seem immediately relevant
                   </p>
                   <p>
-                    As the GA course progressed, I've since learnt about
+                    As the GA course progressed, I&apos;ve since learnt about
                     competitive and comparative analysis and its role in the
                     UIUX process.
                   </p>
@@ -523,8 +528,8 @@ export default function Compawnion() {
               <Stars />
             </div>
             <ContactCTA spacer="lg">
-              If you're interested in working together or finding out more, feel
-              free to reach out ✨
+              If you&apos;re interested in working together or finding out more,
+              feel free to reach out ✨
             </ContactCTA>
           </div>
         </div>

@@ -35,6 +35,7 @@ export const NumberedContentImageColumns = ({
         <div className={styles.image}>
           <Image
             src={image}
+            alt={typeof title === "string" ? title : ""}
             layout="fill"
             objectFit="contain"
             objectPosition="center"
