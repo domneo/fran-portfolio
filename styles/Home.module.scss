@@ -18,7 +18,7 @@
 
 .itemLink {
   position: relative;
-  color: $platinum;
+  color: var(--platinum);
   text-decoration: none;
   transition: 0.3s color;
 
@@ -31,21 +31,21 @@
   &.worksHover {
     &:hover,
     &:focus {
-      color: $works;
+      color: var(--works);
     }
   }
 
   &.aboutHover {
     &:hover,
     &:focus {
-      color: $about;
+      color: var(--about);
     }
   }
 
   &.contactHover {
     &:hover,
     &:focus {
-      color: $contact;
+      color: var(--contact);
     }
   }
 }

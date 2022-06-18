@@ -1,6 +1,26 @@
 @import "mixins";
 @import "reset";
 
+:root {
+  --black: #111111;
+  --white: #f4f0f0;
+
+  --works: #aec2b4;
+  --about: #bdbd9e;
+  --contact: #c49797;
+
+  --platinum: #eaeae7;
+  --bone: #d1d1bc;
+  --copperrose: #a76262;
+  --aliceblue: #f0f8fc;
+  --gainsboro: #e0e0e0;
+
+  --mistyrose: #e6d3d3;
+  --coolgrey: #8c97ad;
+  --cambridgeblue: #a0b8a8;
+  --keylime: #eded82;
+}
+
 @font-face {
   font-family: "Ogg";
   src: url("/fonts/OggMedium.woff2") format("woff2"),
@@ -30,7 +50,7 @@
 
 *:focus-visible {
   outline-style: dashed;
-  outline-color: $white;
+  outline-color: var(--white);
   outline-width: 2px;
   outline-offset: 0.5rem;
 }
@@ -40,8 +60,9 @@ body {
   @include font-size(18px);
   font-weight: 300;
   line-height: 1.75;
-  background-color: $black;
-  color: $platinum;
+  background-color: var(--black);
+  color: var(--platinum);
+  transition: 0.8s background-color;
 }
 
 %display {
@@ -155,7 +176,7 @@ small,
 
 a,
 .link {
-  color: $bone;
+  color: var(--bone);
   text-decoration: underline;
   letter-spacing: 0.03em;
   border-radius: 0.25rem;
@@ -179,28 +200,28 @@ li {
 }
 
 .text-works {
-  color: $works;
+  color: var(--works);
 }
 .text-about {
-  color: $about;
+  color: var(--about);
 }
 .text-contact {
-  color: $contact;
+  color: var(--contact);
 }
 .text-platinum {
-  color: $platinum;
+  color: var(--platinum);
 }
 .text-bone {
-  color: $bone;
+  color: var(--bone);
 }
 .text-copperrose {
-  color: $copperrose;
+  color: var(--copperrose);
 }
 .text-aliceblue {
-  color: $aliceblue;
+  color: var(--aliceblue);
 }
 .text-gainsboro {
-  color: $gainsboro;
+  color: var(--gainsboro);
 }
 
 .spacer-sm {
@@ -279,12 +300,12 @@ li {
 @include make-grid-columns();
 
 .contact-cta {
-  color: $white;
+  color: var(--white);
   transition: 0.3s color;
 
   &:hover,
   &:focus {
-    color: $copperrose;
+    color: var(--copperrose);
     transition: 0.3s color;
   }
 }
