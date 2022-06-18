@@ -1,15 +1,88 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "styles/About.module.scss";
 
 import Layout from "components/Layout";
+import { ContactCTA } from "components/common/ContactCTA";
+import { IconDownArrowLong } from "components/common/IconDownArrowLong";
 import { Stars } from "components/common/Stars";
 
-import { ContactCTA } from "../components/common/ContactCTA";
-
 export default function About() {
+  const [isStrikethrough, setIsStrikethrough] = useState(false);
+  const [isInBGSection, setIsInBGSection] = useState(false);
+  const [isBGContentAnimating, setIsBGContentAnimating] = useState(false);
+  const [isBGContentAnimated, setIsBGContentAnimated] = useState(false);
+
+  // Register the ScrollTrigger Plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Target the div DOM element
+  const strikethroughTrigger = useRef<HTMLParagraphElement>(null);
+  const bgSectionTrigger = useRef<HTMLDivElement>(null);
+  const bgContentTrigger = useRef<HTMLDivElement>(null);
+
+  // Change the active state when scrolling into the viewport
+  useEffect(() => {
+    ScrollTrigger.create({
+      // markers: true,
+      id: "strikethrough",
+      trigger: strikethroughTrigger.current,
+      start: `top 60%`,
+      end: `bottom 60%`,
+      onEnter: () => setIsStrikethrough(true),
+      onLeaveBack: () => setIsStrikethrough(false),
+    });
+
+    ScrollTrigger.create({
+      // markers: true,
+      id: "bgSection",
+      trigger: bgSectionTrigger.current,
+      start: `top 50%`,
+      end: `bottom 60%`,
+      onEnter: () => setIsInBGSection(true),
+      onLeave: () => setIsInBGSection(false),
+      onEnterBack: () => setIsInBGSection(true),
+      onLeaveBack: () => setIsInBGSection(false),
+    });
+
+    ScrollTrigger.create({
+      // markers: true,
+      id: "bgContent",
+      trigger: bgContentTrigger.current,
+      start: `top 60%`,
+      end: `bottom 60%`,
+      onEnter: () => {
+        setIsBGContentAnimating(true);
+        setTimeout(() => {
+          setIsBGContentAnimated(true);
+        }, 800);
+      },
+      onLeaveBack: () => {
+        setIsBGContentAnimating(false);
+        setIsBGContentAnimated(false);
+      },
+    });
+
+    // Clean up ScrollTrigger instance on unmount
+    return () => {
+      ScrollTrigger.getById("strikethrough")?.kill();
+      ScrollTrigger.getById("bgSection")?.kill();
+      ScrollTrigger.getById("bgContent")?.kill();
+    };
+  }, []);
+
   return (
     <Layout>
+      <style jsx global>{`
+        body {
+          background-color: ${isInBGSection ? "#d1d1bc" : ""};
+          --platinum: ${isInBGSection ? "#111111" : "#eaeae7"};
+          --bone: ${isInBGSection ? "#111111" : "#d1d1bc"};
+        }
+      `}</style>
       <div className="container">
         <div className="row spacer-md">
           <div className="col">
@@ -55,57 +128,99 @@ export default function About() {
         </div>
         <div className="row justify-content-center spacer-md">
           <div className="col-lg-10 d-flex">
-            <div style={{ padding: "1rem 5rem" }}>
-              <Image
-                src={"/images/downArrowLong.svg"}
-                alt="scroll down"
-                width={12}
-                height={48}
-              />
+            <div style={{ padding: "1rem 5rem", color: "var(--platinum)" }}>
+              <IconDownArrowLong />
             </div>
           </div>
         </div>
-        <div className="row spacer-md">
-          <div className="col text-center">
-            <p className="h5 fw-light">
-              <s>&nbsp;I have a multi-disciplinary background&nbsp;</s>
-            </p>
-          </div>
-        </div>
-        <div className="row justify-content-center spacer-lg">
-          <div className="col-lg-10">
-            <div className="row align-items-center">
-              <div className="col-lg-4">
-                <Image
-                  src={"https://placekitten.com/490/600"}
-                  alt="kitten"
-                  width={490}
-                  height={600}
-                />
+        <div ref={bgSectionTrigger}>
+          <div className="row spacer-md">
+            <div className="col text-center">
+              <div
+                ref={strikethroughTrigger}
+                className="d-flex justify-content-center"
+              >
+                <div className="position-relative px-2">
+                  <p
+                    className={`${styles.strikethroughText} h5 fw-light ${
+                      isInBGSection ? styles.invert : ""
+                    }`}
+                  >
+                    I have a multi-disciplinary background
+                  </p>
+                  <div
+                    className={`${styles.strikethrough} ${
+                      isStrikethrough ? styles.active : ""
+                    } ${isInBGSection ? styles.invert : ""}`}
+                  />
+                </div>
               </div>
-              <div className="col-lg-6 offset-lg-1">
-                <p className="mb-5">
-                  Before embarking on my quest to become a UX designer,
-                  I&apos;ve led previous lives as a digital news producer and an
-                  educator in two lands - Singapore and Japan respectively -
-                  just like how people live different lives in Dungeons &amp;
-                  Dragons.
-                </p>
-                <p className="mb-5">
-                  Living in two worlds has changed the way I view spaces and how
-                  people interact in and with public places. I&apos;m interested
-                  in exploring how UIUX can transform digital and physical
-                  spaces to intentional ones that serve people&apos;s needs.
-                </p>
-                <p className="mb-5">
-                  More recently, I&apos;ve discovered the joys of data
-                  visualisation and how information can be presented in
-                  interesting ways.
-                </p>
-                <p className="mb-5">
-                  My love for games and solving problems has shaped my belief
-                  that a good user experience plays out like a good game.
-                </p>
+            </div>
+          </div>
+          <div className="row justify-content-center spacer-lg">
+            <div className="col-lg-10">
+              <div className="row align-items-center">
+                <div className="col-lg-4">
+                  <Image
+                    src={"https://placekitten.com/490/600"}
+                    alt="kitten"
+                    width={490}
+                    height={600}
+                  />
+                </div>
+                <div ref={bgContentTrigger} className="col-lg-6 offset-lg-1">
+                  <p
+                    className={`${styles.backgroundPara} ${
+                      isBGContentAnimating ? styles.animating : ""
+                    } ${isBGContentAnimated ? styles.animated : ""} ${
+                      isInBGSection ? styles.invert : ""
+                    } mb-5`}
+                    style={{ animationDelay: "0" }}
+                  >
+                    Before embarking on my quest to become a UX designer,
+                    I&apos;ve led previous lives as a digital news producer and
+                    an educator in two lands - Singapore and Japan respectively
+                    - just like how people live different lives in Dungeons
+                    &amp; Dragons.
+                  </p>
+                  <p
+                    className={`${styles.backgroundPara} ${
+                      isBGContentAnimating ? styles.animating : ""
+                    } ${isBGContentAnimated ? styles.animated : ""} ${
+                      isInBGSection ? styles.invert : ""
+                    } mb-5`}
+                    style={{ animationDelay: ".1s" }}
+                  >
+                    Living in two worlds has changed the way I view spaces and
+                    how people interact in and with public places. I&apos;m
+                    interested in exploring how UIUX can transform digital and
+                    physical spaces to intentional ones that serve people&apos;s
+                    needs.
+                  </p>
+                  <p
+                    className={`${styles.backgroundPara} ${
+                      isBGContentAnimating ? styles.animating : ""
+                    } ${isBGContentAnimated ? styles.animated : ""} ${
+                      isInBGSection ? styles.invert : ""
+                    } mb-5`}
+                    style={{ animationDelay: ".2s" }}
+                  >
+                    More recently, I&apos;ve discovered the joys of data
+                    visualisation and how information can be presented in
+                    interesting ways.
+                  </p>
+                  <p
+                    className={`${styles.backgroundPara} ${
+                      isBGContentAnimating ? styles.animating : ""
+                    } ${isBGContentAnimated ? styles.animated : ""} ${
+                      isInBGSection ? styles.invert : ""
+                    } mb-5`}
+                    style={{ animationDelay: ".3s" }}
+                  >
+                    My love for games and solving problems has shaped my belief
+                    that a good user experience plays out like a good game.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -135,13 +250,8 @@ export default function About() {
         </div>
         <div className="row justify-content-center spacer-md">
           <div className="col-lg-10 d-flex justify-content-end">
-            <div style={{ padding: "1rem 5rem" }}>
-              <Image
-                src={"/images/downArrowLong.svg"}
-                alt="scroll down"
-                width={12}
-                height={48}
-              />
+            <div style={{ padding: "1rem 5rem", color: "var(--platinum)" }}>
+              <IconDownArrowLong />
             </div>
           </div>
         </div>

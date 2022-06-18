@@ -5,6 +5,51 @@
   margin-left: -4.8%;
 }
 
+.strikethroughText {
+  transition: 0.8s all;
+}
+
+.strikethrough {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--platinum);
+  width: 0;
+  transition: 0.8s all;
+
+  &.active {
+    width: 100%;
+    transition: 0.8s all;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.backgroundPara {
+  opacity: 0;
+  transition: 0.8s all;
+  animation: none;
+
+  &.animating {
+    animation: fadeInUp 0.8s ease;
+  }
+
+  &.animated {
+    opacity: 1;
+  }
+}
+
 .keypointPrefixSpacer {
   display: inline-block;
   width: 40%;
