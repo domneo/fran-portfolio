@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 import Layout from "components/Layout";
+import { ContactCTA } from "components/common/ContactCTA";
+import { Stars } from "components/common/Stars";
 import { Carousel } from "components/works/Carousel";
 import { Details } from "components/works/Details";
 import { DropdownContent } from "components/works/DropdownContent";
@@ -8,10 +10,12 @@ import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
 import { ImageContentColumns } from "components/works/ImageContentColumns";
+import { KeyIssue } from "components/works/KeyIssue";
 import { NarrowTitlePoints } from "components/works/NarrowTitlePoints";
 import { NumberedContentImageColumns } from "components/works/NumberedContentImageColumns";
 import { NumberedKeyPoint } from "components/works/NumberedKeyPoint";
 import { SectionHeader } from "components/works/SectionHeader";
+import { ThreeColumns } from "components/works/ThreeColumns";
 import { TitleContent } from "components/works/TitleContent";
 
 export const meta = {
@@ -48,7 +52,10 @@ export default function Compawnion() {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <Details details={meta.details} debut={meta.debut} />
-            {/* <FigmaEmbed src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791" /> */}
+            <FigmaEmbed
+              src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791"
+              spacer="lg"
+            />
             <SectionHeader title="KICKOFF" />
             <TitleContent spacer={"md"}>
               <p>
@@ -304,14 +311,14 @@ export default function Compawnion() {
                   height={1280}
                 />
               </div>
-              <p>
+              <p className="mb-5">
                 Pawline's user journey painted a clear overview of where her
                 woes lay: the Search, Communicate, and the Post-Adoption stages.
                 She faced many problems, but we were but a team of two sprinting
                 towards a deadline. With map in hand, we looked for a north
                 star.
               </p>
-              <DropdownContent title="💡 Learning point">
+              <DropdownContent title="💡 Learning point" spacer="sm">
                 <p className="mb-0">
                   Real life business goals would help align our goals and focus
                   our priorities on how we can help Pawline.
@@ -403,6 +410,117 @@ export default function Compawnion() {
                 image={"/images/compawnion-userFlows-3.png"}
               />
             </Carousel>
+            <SectionHeader title="IDEATE" />
+            <TitleContent title="Wireframes" centralise spacer="lg">
+              <p className="mb-5">
+                With our understanding of the research, Pawline and her goals,
+                my teammate and I sketched low-fidelity wireframes. We decided
+                to work independently on creating our designs first before
+                reconvening to decide on the designs that would be brought to
+                life.
+              </p>
+              <div className="mb-5">
+                <Image
+                  src={"/images/compawnion-wireframes-1.png"}
+                  width={1456}
+                  height={866}
+                />
+              </div>
+              <DropdownContent title="💡 Learning point" spacer="sm">
+                <p className="mb-0">
+                  When my teammate and I embarked on this project, we had yet to
+                  learn about the joys (and fun!) of ideation workshops. In
+                  retrospect, we would have considered inviting users to join us
+                  in breathing life into Compawnion 😌
+                </p>
+              </DropdownContent>
+              <Image
+                src={"/images/compawnion-wireframes-2.png"}
+                width={1582}
+                height={1732}
+              />
+            </TitleContent>
+            <TitleContent title="Mid-fi Prototype" centralise spacer="sm" />
+            <FigmaEmbed
+              src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791"
+              spacer="lg"
+            />
+            <SectionHeader title="REFLECT" />
+            <TitleContent title="Moving Forward" centralise spacer="md">
+              <p>
+                Compawnion was my first foray into UIUX and suffice to say, it
+                hit a sweet spot where the skills I've picked up over the years
+                melded with my love of solving problems and trying to be more
+                creative. After the project, I learnt many things on hindsight
+                and was left with many more questions about UIUX - questions I
+                look forward to finding the answers to as I plunge deeper into
+                this new world.
+              </p>
+            </TitleContent>
+            <ThreeColumns
+              column1={
+                <KeyIssue caption="PROCESS" title="recency">
+                  <p>
+                    How long is too long ago? Was it important to include the
+                    perspectives of someone who adopted a long time ago?
+                  </p>
+                  <p>
+                    On hindsight, yes, since the research goals were to discover
+                    the needs and pain points of the pet adoption process.
+                  </p>
+                  <p>
+                    However, in other scenarios with product-centric questions,
+                    it may not be useful as the product may have changed
+                    significantly since.
+                  </p>
+                </KeyIssue>
+              }
+              column2={
+                <KeyIssue caption="CHANGE" title="(di)similarity">
+                  <p>
+                    During ideation, we should have considered a wider range of
+                    apps.
+                  </p>
+                  <p>
+                    In usability tests, users relied on their mental model of
+                    existing apps to make sense of Compawnion, even if these
+                    apps may not seem immediately relevant
+                  </p>
+                  <p>
+                    As the GA course progressed, I've since learnt about
+                    competitive and comparative analysis and its role in the
+                    UIUX process.
+                  </p>
+                </KeyIssue>
+              }
+              column3={
+                <KeyIssue caption="UPWARDS &amp; ONWARDS" title="progress">
+                  <ul>
+                    <li className="mb-4">
+                      Reiterate mid-fi prototype and transform Compawnion into a
+                      high-fidelity prototype
+                    </li>
+                    <li className="mb-4">
+                      Prioritise and differentiate features for an MVP and later
+                      versions to see how Compawnion may evolve
+                    </li>
+                    <li className="mb-4">
+                      Consider and design functionalities for pet shelters for
+                      an added challenge (posting pet profiles, interacting with
+                      adopters, confirm and track visits, etc.)
+                    </li>
+                  </ul>
+                </KeyIssue>
+              }
+              spacer="lg"
+            />
+            <div className="spacer-lg">
+              <Stars />
+            </div>
+            <ContactCTA spacer="lg">
+              If you're interested in working together or finding out more, feel
+              free to reach out ✨
+            </ContactCTA>
           </div>
         </div>
       </div>

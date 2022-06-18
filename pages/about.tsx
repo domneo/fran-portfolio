@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import styles from "styles/About.module.scss";
 
 import Layout from "components/Layout";
-import Blob from "components/common/Blob";
 import { Stars } from "components/common/Stars";
+
+import { ContactCTA } from "../components/common/ContactCTA";
 
 export default function About() {
   return (
@@ -151,27 +151,12 @@ export default function About() {
           <Stars />
         </div>
         <div className="spacer-md"></div>
-        <div className="row justify-content-center spacer-md">
-          <div className="col-lg-8 text-center">
-            <h2 className="display-5 text-bone spacer-md">
-              If you&apos;re looking to collaborate, come say hi!{" "}
-              <span className="d-inline-block">
-                I&apos;m happy to connect about work or play
-              </span>
-            </h2>
-            <div className="d-flex justify-content-center">
-              <Link href="mailto:francinelim21@gmail.com">
-                <a
-                  className="contact-cta d-block position-relative text-decoration-none"
-                  style={{ width: "280px" }}
-                >
-                  <Blob />
-                  <div className="contact-cta-text h5 fw-light">Contact</div>
-                </a>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <ContactCTA spacer="md">
+          If you&apos;re looking to collaborate, come say hi!{" "}
+          <span className="d-inline-block">
+            I&apos;m happy to connect about work or play
+          </span>
+        </ContactCTA>
         <div className="spacer-md"></div>
       </div>
     </Layout>

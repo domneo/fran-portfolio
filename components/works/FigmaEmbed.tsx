@@ -1,11 +1,16 @@
-export const FigmaEmbed = ({ src }: { src: string }) => (
-  <section className="spacer-md">
+interface FigmaEmbedProps {
+  src: string;
+  spacer?: "sm" | "md" | "lg";
+}
+
+export const FigmaEmbed = ({ src, spacer }: FigmaEmbedProps) => (
+  <section className={`spacer-${spacer || ""}`}>
     <iframe
       style={{
         border: "1px solid rgba(0, 0, 0, 0.1)",
       }}
       width="100%"
-      height="500"
+      height="700"
       src={src}
       allowFullScreen
     />
