@@ -72,7 +72,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="row justify-content-center spacer-md">
+        <div className="row justify-content-center spacer-lg">
           <div className="col-lg-10">
             <div className="row align-items-center">
               <div className="col-lg-4">
@@ -110,8 +110,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="spacer-md"></div>
-        <div className="row spacer-md">
+        <div className="row spacer-lg">
           <div className="col">
             <p className="h2 text-bone">
               <span className={styles.keypointPrefixSpacer} />
@@ -124,7 +123,6 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="spacer-md"></div>
         <div className="row spacer-md">
           <div className="col-lg-6 offset-lg-5">
             <p>
@@ -147,17 +145,15 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="spacer-md">
+        <div className="spacer-lg">
           <Stars />
         </div>
-        <div className="spacer-md"></div>
-        <ContactCTA spacer="md">
+        <ContactCTA spacer="lg">
           If you&apos;re looking to collaborate, come say hi!{" "}
           <span className="d-inline-block">
             I&apos;m happy to connect about work or play
           </span>
         </ContactCTA>
-        <div className="spacer-md"></div>
       </div>
     </Layout>
   );
