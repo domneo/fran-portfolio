@@ -19,7 +19,9 @@ const Layout = ({ hideMenu = false, children, ...props }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header hideMenu={hideMenu} />
-      <main {...props}>{children}</main>
+      <main className="overflow-hidden" {...props}>
+        {children}
+      </main>
       <Footer />
     </div>
   );
