@@ -6,11 +6,19 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 interface LayoutProps {
-  hideMenu?: boolean;
+  hideHeaderMenu?: boolean;
+  hideFooterMenu?: boolean;
+  centraliseFooter?: boolean;
   children: React.ReactNode;
   [index: string]: any;
 }
-const Layout = ({ hideMenu = false, children, ...props }: LayoutProps) => {
+const Layout = ({
+  hideHeaderMenu = false,
+  hideFooterMenu = false,
+  centraliseFooter = false,
+  children,
+  ...props
+}: LayoutProps) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,11 +26,14 @@ const Layout = ({ hideMenu = false, children, ...props }: LayoutProps) => {
         <meta name="description" content="A UX Designer portfolio website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header hideMenu={hideMenu} />
+      <Header hideHeaderMenu={hideHeaderMenu} />
       <main className="overflow-hidden" {...props}>
         {children}
       </main>
-      <Footer />
+      <Footer
+        hideFooterMenu={hideFooterMenu}
+        centraliseFooter={centraliseFooter}
+      />
     </div>
   );
 };

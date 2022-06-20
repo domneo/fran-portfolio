@@ -5,14 +5,25 @@ import styles from "styles/Footer.module.scss";
 import { BarrelLink } from "components/common/BarrelLink";
 import { Stars } from "components/common/Stars";
 
-export const Footer = () => (
-  <footer className={styles.nav}>
+interface FooterProps {
+  hideFooterMenu: boolean;
+  centraliseFooter: boolean;
+}
+
+export const Footer = ({ hideFooterMenu, centraliseFooter }: FooterProps) => (
+  <footer
+    className={`${styles.nav} ${centraliseFooter ? styles.centralised : ""}`}
+  >
     <div className={styles.footerStars}>
       <div className={styles.stars}>
         <Stars />
       </div>
     </div>
-    <div className={styles.footerMenuLeft}>
+    <div
+      className={`${styles.footerMenuLeft} ${
+        hideFooterMenu ? "d-none" : "d-flex"
+      }`}
+    >
       <nav className={styles.menu}>
         <BarrelLink
           text="RESUME"
@@ -26,7 +37,11 @@ export const Footer = () => (
       </nav>
     </div>
     <div className={styles.footerMenuRight}>
-      <nav className={styles.menu}>
+      <nav
+        className={`${styles.menu} ${
+          centraliseFooter ? styles.centralised : ""
+        }`}
+      >
         <span className="caption">DESIGNED BY ME!</span>
         <span className="caption">
           BUILT BY{" "}

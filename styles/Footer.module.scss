@@ -26,13 +26,15 @@
 
 // Grid layout
 .nav {
-  @include media("xl") {
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr;
-    grid-template-rows: 1fr;
-    gap: 48px 48px;
-    grid-auto-flow: row;
-    grid-template-areas: "footerMenuLeft stars footerMenuRight";
+  &:not(.centralised) {
+    @include media("xl") {
+      display: grid;
+      grid-template-columns: 1fr min-content 1fr;
+      grid-template-rows: 1fr;
+      gap: 48px 48px;
+      grid-auto-flow: row;
+      grid-template-areas: "footerMenuLeft stars footerMenuRight";
+    }
   }
 }
 .footerMenuLeft {
@@ -87,8 +89,10 @@
       gap: 3rem;
     }
 
-    @include media("xl") {
-      justify-content: flex-end;
+    &:not(.centralised) {
+      @include media("xl") {
+        justify-content: flex-end;
+      }
     }
   }
 }
