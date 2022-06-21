@@ -12,10 +12,10 @@ export const ThreeColumns = ({
   spacer,
 }: ThreeColumnsProps) => {
   return (
-    <section className={`row gx-5 spacer-${spacer || ""}`}>
+    <div className={`row gx-5 spacer-${spacer || ""}`}>
       <div className="col-lg-4">{column1}</div>
       <div className="col-lg-4">{column2}</div>
       <div className="col-lg-4">{column3}</div>
-    </section>
+    </div>
   );
 };

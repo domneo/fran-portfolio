@@ -29,7 +29,7 @@ export const ImageContentColumns = ({
           />
         </div>
       </div>
-      <div className="col-xl-6 d-flex align-items-center">
+      <div className="col-xl-6 d-flex align-items-center text-start">
         <div>
           {number && <p className="mb-3">{number}</p>}
           {title && <h5 className="text-works mb-2">{title}</h5>}

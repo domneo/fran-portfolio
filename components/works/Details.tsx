@@ -9,12 +9,12 @@ interface DetailType {
 
 interface DetailsProps {
   details: Array<DetailType>;
-  debut: boolean;
+  debut?: boolean;
 }
 
-export const Details = ({ details, debut }: DetailsProps) => {
+export const Details = ({ details, debut = false }: DetailsProps) => {
   return (
-    <section className={`spacer-md`}>
+    <div className={`spacer-md`}>
       {details && details.length > 0 && (
         <div className="row spacer-sm">
           <div className="col-lg-7 offset-lg-5">
@@ -32,6 +32,6 @@ export const Details = ({ details, debut }: DetailsProps) => {
         </div>
       )}
       {debut && <Stars>🐣 This was my debut UIUX project!</Stars>}
-    </section>
+    </div>
   );
 };

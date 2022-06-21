@@ -27,9 +27,7 @@ const Layout = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header hideHeaderMenu={hideHeaderMenu} />
-      <main className="overflow-hidden" {...props}>
-        {children}
-      </main>
+      <main {...props}>{children}</main>
       <Footer
         hideFooterMenu={hideFooterMenu}
         centraliseFooter={centraliseFooter}

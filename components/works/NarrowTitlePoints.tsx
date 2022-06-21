@@ -11,7 +11,7 @@ export const NarrowTitlePoints = ({
   points,
   spacer,
 }: NarrowTitlePointsProps) => (
-  <section className={`row justify-content-center spacer-${spacer || ""}`}>
+  <div className={`row justify-content-center spacer-${spacer || ""}`}>
     <div className={"col-lg-6"}>
       {title && <h3 className="display-5 text-bone text-center">{title}</h3>}
       {points && points.length && (
@@ -22,5 +22,5 @@ export const NarrowTitlePoints = ({
         </ul>
       )}
     </div>
-  </section>
+  </div>
 );

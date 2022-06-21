@@ -14,7 +14,7 @@ import { KeyIssue } from "components/works/KeyIssue";
 import { NarrowTitlePoints } from "components/works/NarrowTitlePoints";
 import { NumberedContentImageColumns } from "components/works/NumberedContentImageColumns";
 import { NumberedKeyPoint } from "components/works/NumberedKeyPoint";
-import { SectionHeader } from "components/works/SectionHeader";
+import { Section } from "components/works/Section";
 import { ThreeColumns } from "components/works/ThreeColumns";
 import { TitleContent } from "components/works/TitleContent";
 
@@ -61,7 +61,7 @@ export default function Compawnion() {
               src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791"
               spacer="lg"
             />
-            <SectionHeader title="KICKOFF" />
+            <Section title="KICKOFF" />
             <TitleContent spacer={"md"}>
               <p>
                 While talking about our dreams and aspirations, my teammate and
@@ -93,7 +93,7 @@ export default function Compawnion() {
                 find a forever home for a furiend?
               </p>
             </Highlight>
-            <SectionHeader title="PROCESS" />
+            <Section title="PROCESS" />
             <TitleContent spacer="lg" fullwidth centralise>
               <Image
                 src={"/images/designProcess.svg"}
@@ -102,7 +102,7 @@ export default function Compawnion() {
                 height={296}
               />
             </TitleContent>
-            <SectionHeader title="EMPATHISE" />
+            <Section title="EMPATHISE" />
             <TitleContent spacer="lg">
               <p>
                 While we had some idea of what pet adoption is like in
@@ -302,7 +302,7 @@ export default function Compawnion() {
                 height={866}
               />
             </TitleContent>
-            <SectionHeader title="DEFINE" />
+            <Section title="DEFINE" />
             <TitleContent title="Defining the Problem" centralise spacer="lg">
               <p className="mb-5">
                 Now that we could put a face to who we were designing for, it
@@ -418,7 +418,7 @@ export default function Compawnion() {
                 image={"/images/compawnion-userFlows-3.png"}
               />
             </Carousel>
-            <SectionHeader title="IDEATE" />
+            <Section title="IDEATE" />
             <TitleContent title="Wireframes" centralise spacer="lg">
               <p className="mb-5">
                 With our understanding of the research, Pawline and her goals,
@@ -455,7 +455,7 @@ export default function Compawnion() {
               src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791"
               spacer="lg"
             />
-            <SectionHeader title="REFLECT" />
+            <Section title="REFLECT" />
             <TitleContent title="Moving Forward" centralise spacer="md">
               <p>
                 Compawnion was my first foray into UIUX and suffice to say, it

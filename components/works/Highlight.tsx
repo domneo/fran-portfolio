@@ -20,7 +20,7 @@ const Star = () => (
 );
 
 export const Highlight = ({ title, children, spacer }: HighlightProps) => (
-  <section className={`row justify-content-center spacer-${spacer || ""}`}>
+  <div className={`row justify-content-center spacer-${spacer || ""}`}>
     <div className={`col-10 text-center d-flex`}>
       <Star />
       <div className="d-flex flex-column justify-content-center align-items-center px-5">
@@ -29,5 +29,5 @@ export const Highlight = ({ title, children, spacer }: HighlightProps) => (
       </div>
       <Star />
     </div>
-  </section>
+  </div>
 );
