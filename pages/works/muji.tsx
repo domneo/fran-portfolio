@@ -62,7 +62,7 @@ export default function Compawnion() {
           <div className="col-lg-10">
             <Details details={meta.details} />
             <FigmaEmbed
-              src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F2CTw3LMGDNk8EZdPh04xYk%2FMUJI_Redesigned%3Fpage-id%3D0%253A1%26node-id%3D103%253A5575%26viewport%3D199%252C404%252C0.11%26scaling%3Dscale-down%26starting-point-node-id%3D103%253A5575"
               spacer="lg"
             />
             <Section title="KICKOFF">
@@ -529,7 +529,7 @@ export default function Compawnion() {
                   width={1146}
                   height={296}
                 />
-                <Link href="">
+                <Link href="https://www.figma.com/proto/2CTw3LMGDNk8EZdPh04xYk/MUJI_Redesigned?page-id=0%3A1&node-id=103%3A5575&viewport=199%2C404%2C0.11&scaling=scale-down&starting-point-node-id=103%3A5575">
                   <a>Play with the prototype here</a>
                 </Link>
               </TitleContent>
@@ -636,14 +636,14 @@ export default function Compawnion() {
                 }
                 spacer="lg"
               />
-              <div className="spacer-lg">
-                <Stars />
-              </div>
-              <ContactCTA spacer="lg">
-                If you&apos;re interested in working together or finding out
-                more, feel free to reach out ✨
-              </ContactCTA>
             </Section>
+            <div className="spacer-lg">
+              <Stars />
+            </div>
+            <ContactCTA spacer="lg">
+              If you&apos;re interested in working together or finding out more,
+              feel free to reach out ✨
+            </ContactCTA>
           </div>
         </div>
       </div>
