@@ -13,7 +13,7 @@ export default function Home() {
         <Head>
           <title>fran | UX Designer</title>
           <meta name="description" content="A UX Designer portfolio website" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.svg" />
         </Head>
         <div style={{ width: "308px", height: "308px" }}>
           <Blob />
