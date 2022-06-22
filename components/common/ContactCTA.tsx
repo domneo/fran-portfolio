@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import Blob from "components/common/Blob";
 
 interface ContactCTAProps {
@@ -14,17 +12,16 @@ export const ContactCTA = ({ children, spacer }: ContactCTAProps) => (
         <h2 className="display-5 text-bone spacer-md">{children}</h2>
       )}
       <div className="d-flex justify-content-center">
-        <Link href={process.env.NEXT_PUBLIC_EMAIL || ""}>
-          <a
-            className="contact-cta d-block position-relative text-decoration-none"
-            style={{
-              width: "280px",
-            }}
-          >
-            <Blob />
-            <div className="contact-cta-text h5 fw-light">Contact</div>
-          </a>
-        </Link>
+        <a
+          href={process.env.NEXT_PUBLIC_EMAIL || ""}
+          className="contact-cta d-block position-relative text-decoration-none"
+          style={{
+            width: "280px",
+          }}
+        >
+          <Blob />
+          <div className="contact-cta-text h5 fw-light">Contact</div>
+        </a>
       </div>
     </div>
   </div>
