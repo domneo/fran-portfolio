@@ -13,7 +13,7 @@ export const ContactCTA = ({ children, spacer }: ContactCTAProps) => (
       )}
       <div className="d-flex justify-content-center">
         <a
-          href={process.env.NEXT_PUBLIC_EMAIL || ""}
+          href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
           className="contact-cta d-block position-relative text-decoration-none"
           style={{
             width: "280px",
