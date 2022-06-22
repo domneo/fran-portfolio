@@ -10,7 +10,15 @@
     font-weight: 300;
     color: var(--works);
     transition: 0.3s color;
+
+    .caption {
+      color: var(--white);
+    }
   }
+}
+
+.caption {
+  color: var(--works);
 }
 
 .imagesContainer {

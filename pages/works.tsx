@@ -159,7 +159,7 @@ export default function Works() {
                       <p className="mb-2">
                         <small>{item.description}</small>
                       </p>
-                      <p className="caption text-works mb-0">
+                      <p className={`caption mb-0 ${styles.caption}`}>
                         {item.concepts.map((concept, index) => (
                           <span key={concept} className="d-inline-block">
                             {index !== 0 && <span className="mx-1">•</span>}
