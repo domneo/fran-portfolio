@@ -28,11 +28,17 @@ export const Footer = ({ hideFooterMenu, centraliseFooter }: FooterProps) => (
         <BarrelLink
           text="RESUME"
           link="https://drive.google.com/file/d/1ePOpKzwSw1fCSWmxqsn7ctvhaUMTyfyC/view?usp=sharing"
+          target="_blank"
         />
-        <BarrelLink text="EMAIL" link="mailto:francinelim21@gmail.com" />
+        <BarrelLink
+          text="EMAIL"
+          link="mailto:francinelim21@gmail.com"
+          target="_blank"
+        />
         <BarrelLink
           text="LINKEDIN"
           link="https://www.linkedin.com/in/francine-lim/"
+          target="_blank"
         />
       </nav>
     </div>

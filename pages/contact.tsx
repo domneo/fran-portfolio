@@ -53,7 +53,7 @@ export default function Contact() {
   return (
     <Layout hideFooterMenu centraliseFooter>
       {/* <Arrows yesdogRef={yesdogRef} linksRef={linksRef} /> */}
-      <div className={styles.header}>
+      <div className={`overflow-hidden ${styles.header}`}>
         <div className="display-1">
           CONTACTCONTACTCONTACTCONTACT
           <h1 className="d-inline display-1 text-contact">CONTACT</h1>
@@ -91,19 +91,25 @@ export default function Contact() {
           <div className="col-lg-8 offset-lg-2">
             <div className="d-flex justify-content-between">
               <div ref={linksRef} className={styles.links}>
-                <Link href="https://drive.google.com/file/d/1ePOpKzwSw1fCSWmxqsn7ctvhaUMTyfyC/view?usp=sharing">
-                  <a>RESUME</a>
-                </Link>
-                <Link href="mailto:francinelim21@gmail.com">
-                  <a>EMAIL</a>
-                </Link>
-                <Link href="https://www.linkedin.com/in/francine-lim/">
-                  <a>LINKEDIN</a>
-                </Link>
+                <div>
+                  <Link href="https://drive.google.com/file/d/1ePOpKzwSw1fCSWmxqsn7ctvhaUMTyfyC/view?usp=sharing">
+                    <a target={"_blank"}>RESUME</a>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="mailto:francinelim21@gmail.com">
+                    <a target={"_blank"}>EMAIL</a>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="https://www.linkedin.com/in/francine-lim/">
+                    <a target={"_blank"}>LINKEDIN</a>
+                  </Link>
+                </div>
               </div>
               <div ref={yesdogRef} className={styles.yesthisisdog}>
                 <Image
-                  src={"/images/yesthisisdog.jpg"}
+                  src={"/images/yesthisisdog.gif"}
                   alt="HELLO. YES THIS IS DOG."
                   width={536}
                   height={396}
