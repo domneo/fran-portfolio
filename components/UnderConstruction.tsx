@@ -32,7 +32,7 @@ export const UnderConstruction = ({ children }: UnderConstructionProps) => {
               viewed on desktop &lt;:
             </p>
             <p className="caption">
-              If you're alright with that, go on ahead ✨
+              If you&apos;re alright with that, go on ahead ✨
             </p>
             <button
               className={styles.button}
