@@ -35,7 +35,7 @@ const data = [
       "Wireframing",
       "Prototyping",
     ],
-    image: "https://placekitten.com/730/923",
+    image: "/images/compawnion-hero.jpg",
   },
   {
     id: uuidv4(),
@@ -65,7 +65,7 @@ const data = [
       "Design System",
       "Prototyping",
     ],
-    image: "https://placekitten.com/730/922",
+    image: "/images/muji-hero.jpg",
   },
   // {
   //   id: uuidv4(),
