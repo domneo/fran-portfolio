@@ -143,7 +143,10 @@ export default function Works() {
                   <a
                     className={`${styles.link} d-flex align-items-center flex-column flex-md-row mb-3`}
                     style={{
-                      cursor: item.link ? "pointer" : "default",
+                      cursor: item.link ? "pointer" : "help",
+                    }}
+                    onClick={(event) => {
+                      if (!item.link) event.preventDefault();
                     }}
                     onMouseEnter={() => setFocusedItem(index + 1)}
                     onMouseLeave={() => setFocusedItem(0)}
