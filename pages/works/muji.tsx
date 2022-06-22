@@ -22,7 +22,7 @@ import { TitleContent } from "components/works/TitleContent";
 import { TwoColumns } from "components/works/TwoColumns";
 
 export const meta = {
-  image: "https://placekitten.com/1400/300",
+  image: "/images/muji-hero.jpg",
   title: "Muji",
   subtitle:
     "Transforming an e-catalog into a seamless 'MUJI' e-commerce experience for shoppers",
@@ -107,16 +107,18 @@ export default function Compawnion() {
                 fullwidth
                 centralise
               >
-                <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-1.jpg"}
-                  title={
-                    "In a convenience sampling of 26 MUJI shoppers, an overwhelming majority believed they could shop on MUJI's website"
-                  }
-                  points={[
-                    "23 / 26 people believed that the site supported e-commerce",
-                    "All respondents stated that the site is reminiscent of an e-commerce site",
-                  ]}
-                />
+                <div className="mt-5">
+                  <ImageContentColumns
+                    image={"/images/muji-store-interior.jpg"}
+                    title={
+                      "In a convenience sampling of 26 MUJI shoppers, an overwhelming majority believed they could shop on MUJI's website"
+                    }
+                    points={[
+                      "23 / 26 people believed that the site supported e-commerce",
+                      "All respondents stated that the site is reminiscent of an e-commerce site",
+                    ]}
+                  />
+                </div>
               </TitleContent>
               <TitleContent spacer="sm" centralise>
                 <p className="mb-0">
@@ -128,7 +130,7 @@ export default function Compawnion() {
               </TitleContent>
               <Carousel spacer="lg">
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-1.jpg"}
+                  image={"/images/muji-affinity-map_01.png"}
                   number="01."
                   title={"All consumers want to shop on MUJI's website"}
                   points={[
@@ -137,7 +139,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-1.jpg"}
+                  image={"/images/muji-affinity-map_02.png"}
                   number="02."
                   title={"Online catalogues are generally not useful"}
                   points={[
@@ -145,7 +147,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-1.jpg"}
+                  image={"/images/muji-affinity-map_03.png"}
                   number="03."
                   title={
                     "Brand websites should reflect consumers' preconceived impressions and experiences with its physical stores"
@@ -157,7 +159,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-1.jpg"}
+                  image={"/images/muji-affinity-map_04.png"}
                   number="04."
                   title={
                     "Shopping websites and point-of-sale affect consumer perceptions"
@@ -168,7 +170,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-1.jpg"}
+                  image={"/images/muji-affinity-map_05.png"}
                   number="05."
                   title={
                     "Preference for shopping websites to be uncluttered and straightforward - overall baseline expectation i MUJI"
@@ -196,6 +198,41 @@ export default function Compawnion() {
               </TitleContent>
               <Carousel spacer="lg">
                 <MultiImageNumberedContent
+                  topContent={
+                    <div className="row mb-5">
+                      <div className="col-lg-3 offset-lg-1 text-center">
+                        <div
+                          className="mx-auto mb-2"
+                          style={{ maxWidth: "214px" }}
+                        >
+                          <Image
+                            src="/images/muji-point-01_left.png"
+                            alt="Condensed IA"
+                            width={563}
+                            height={1053}
+                          />
+                        </div>
+                        <p className="caption mb-0">Condensed IA</p>
+                      </div>
+                      <div className="col-lg-6 text-center">
+                        <div
+                          className="mx-auto mb-2"
+                          style={{ maxWidth: "682px" }}
+                        >
+                          <Image
+                            src="/images/muji-point-01_right.gif"
+                            alt="How users can access the “Fashion” category and how every page is a “Filter”"
+                            width={1294}
+                            height={759}
+                          />
+                        </div>
+                        <p className="caption mb-0">
+                          How users can access the “Fashion” category and how
+                          every page is a “Filter”
+                        </p>
+                      </div>
+                    </div>
+                  }
                   number="1"
                   title="Navigating through the site is navigating through “Filterception”"
                   points={[
@@ -227,6 +264,42 @@ export default function Compawnion() {
                   ]}
                 />
                 <MultiImageNumberedContent
+                  topContent={
+                    <div className="row justify-content-center mb-5">
+                      <div className="col-lg-10 text-center">
+                        <div
+                          className="mx-auto mb-2"
+                          style={{ maxWidth: "484px" }}
+                        >
+                          <Image
+                            src="/images/muji-Point-02_top.png"
+                            alt="Landing Page Footer &gt; Element flow:→&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typeface: Helvetica"
+                            width={1094}
+                            height={474}
+                          />
+                        </div>
+                        <p className="caption">
+                          Landing Page Footer &gt; Element flow:
+                          →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typeface: Helvetica
+                        </p>
+                        <div
+                          className="mx-auto mb-2"
+                          style={{ maxWidth: "708px" }}
+                        >
+                          <Image
+                            src="/images/muji-Point-02_bottom.png"
+                            alt="Footer for all other pages &gt; Element flow:↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typeface: Meiryo"
+                            width={1476}
+                            height={271}
+                          />
+                        </div>
+                        <p className="caption mb-0">
+                          Footer for all other pages &gt; Element flow:
+                          ↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typeface: Meiryo
+                        </p>
+                      </div>
+                    </div>
+                  }
                   number="2"
                   title="Footer(s) did not follow convention or address user needs"
                   points={[
@@ -262,28 +335,36 @@ export default function Compawnion() {
                   ]}
                 />
               </Carousel>
-              <TitleContent title="Persona">
+              <TitleContent title="Persona" spacer="lg" centralise fullwidth>
                 <p>
                   All our interview insights and research eventually culminated
                   into...
                 </p>
                 <Image
-                  src={"/images/designProcess.svg"}
-                  alt="The design process"
-                  width={1146}
-                  height={296}
+                  src={"/images/muji-persona.png"}
+                  alt="MUJI Persona"
+                  width={1306}
+                  height={462}
                 />
               </TitleContent>
             </Section>
             <Section title="DEFINE">
               <TitleContent title="Defining the Problem" spacer="lg" centralise>
-                <p>
+                <p className="mb-5">
                   While synthesising the research gathered so far, I defined the
                   key problems that had to be resolved and started laying the
                   groundwork for solutions. This was done by laying out the most
                   immediate business and user goals for an overview and a clear
                   direction.
                 </p>
+                <div className="mx-auto mb-5" style={{ maxWidth: "852px" }}>
+                  <Image
+                    src={"/images/muji-venn-diagram.png"}
+                    alt={"MUJI venn diagram"}
+                    width={1187}
+                    height={1122}
+                  />
+                </div>
                 <p>
                   A huge overlap in the business and user goals - further
                   reinforced by the convenience sampling of MUJI customers - was
@@ -297,7 +378,7 @@ export default function Compawnion() {
                   </strong>
                 </p>
               </TitleContent>
-              <Highlight title="Problem" spacer="md">
+              <Highlight title="Problem" spacer="lg">
                 <p className="mb-0">
                   Consumers need a way to browse for products and make purchases
                   online on the MUJI website. They want convenience and direct
@@ -313,7 +394,7 @@ export default function Compawnion() {
                 ]}
                 spacer="lg"
               />
-              <TitleContent title="User Flows" spacer="sm">
+              <TitleContent title="User Flows" spacer="sm" centralise>
                 <p className="mb-0">
                   Now, with a problem in mind, I wanted to understand and
                   emphathise with Lee Tee's possible decisions and paths on a
@@ -332,7 +413,7 @@ export default function Compawnion() {
                     </>,
                     "The site's 'filter' navigation system meant that users had to navigate through filters to access certain pages",
                   ]}
-                  image="/images/compawnion-primaryResearch-1.jpg"
+                  image="/images/muji-user-flow_01.png"
                 />
                 <NumberedContentImageColumns
                   number="2"
@@ -351,7 +432,7 @@ export default function Compawnion() {
                       </ul>
                     </>,
                   ]}
-                  image="/images/compawnion-primaryResearch-1.jpg"
+                  image="/images/muji-user-flow_02.png"
                 />
                 <NumberedContentImageColumns
                   number="3"
@@ -369,90 +450,117 @@ export default function Compawnion() {
                     </>,
                     "Strays away from MUJI's principle of streamlining processes",
                   ]}
-                  image="/images/compawnion-primaryResearch-1.jpg"
+                  image="/images/muji-user-flow_03.png"
                 />
               </Carousel>
-              <TitleContent title="Creating a Checkout Feature" spacer="sm">
-                <p className="mb-0">
+              <TitleContent
+                title="Creating a Checkout Feature"
+                spacer="md"
+                centralise
+              >
+                <p className="mb-5">
                   Without an online checkout in place, MUJI SG would benefit
                   from a task analysis of the its competitors' checkout
                   processes. This allows me to not only deconstruct the checkout
                   process for insights, but also see if current processes are
                   addressing user needs.
                 </p>
-                <Carousel spacer="md">
-                  <div>
-                    <p>
-                      Task analysis: Checkout for users without an existing
-                      account
-                    </p>
-                    <p>
-                      The thick black line indicates where the process is
-                      stopped - users without an account cannot progress any
-                      further.
-                    </p>
+                <div className="row justify-content-center">
+                  <div className="col-lg-10">
+                    <Carousel>
+                      <div className="text-start">
+                        <p>
+                          Task analysis: Checkout for users without an existing
+                          account
+                        </p>
+                        <div className="mb-4">
+                          <Image
+                            src="/images/muji-task-analysis_01.png"
+                            width={1576}
+                            height={505}
+                          />
+                        </div>
+                        <p className="mb-0">
+                          The thick black line indicates where the process is
+                          stopped - users without an account cannot progress any
+                          further.
+                        </p>
+                      </div>
+                      <div className="text-start">
+                        <p>
+                          Task analysis: Checkout for a users with an existing
+                          account
+                        </p>
+                        <Image
+                          src="/images/muji-task-analysis_02.png"
+                          width={1576}
+                          height={505}
+                        />
+                      </div>
+                    </Carousel>
                   </div>
-                  <div>
-                    <p>
-                      Task analysis: Checkout for a users with an existing
-                      account
-                    </p>
-                  </div>
-                </Carousel>
+                </div>
               </TitleContent>
-              <TitleContent title="Insights" spacer="lg">
-                <TwoColumns
-                  column1={
-                    <NumberedKeyPoint
-                      title="Account creation at the start of the checkout process a barrier against users"
-                      content={
-                        <ul>
-                          <li>
-                            Shoppers are more likely to abandon carts if
-                            barriers are placed in the beginning - negatively
-                            affects both user and business
-                          </li>
-                          <li>
-                            Provide users the option to purchase without an
-                            account first, then the option to either login to an
-                            existing account or create a new one
-                          </li>
-                        </ul>
-                      }
-                    />
-                  }
-                  column2={
-                    <NumberedKeyPoint
-                      title="Provide in-store collection options"
-                      content={
-                        <ul>
-                          <li>
-                            Leverage on MUJI's strong in-store experiences for a
-                            win-win situation
-                          </li>
-                          <li>
-                            Relieves delivery logistics and costs while
-                            providing users (who already enjoy MUJI's
-                            aesthetics) in-store-only experiences that cannot be
-                            attained online
-                            <br />
-                          </li>
-                          <li>
-                            ⚠ I believe that in a real world scenario, this
-                            option will be affected by other aspects of the
-                            business. It wouldn't be something that a UX
-                            designer can request for and implement easily.
-                            Provide users the option to purchase without an
-                            account first, then the option to either login to an
-                            existing account or create a new one
-                          </li>
-                        </ul>
-                      }
-                    />
-                  }
-                />
+              <TitleContent title="Insights" spacer="lg" centralise fullwidth>
+                <div className="mt-5 text-start">
+                  <TwoColumns
+                    column1={
+                      <NumberedKeyPoint
+                        title="Account creation at the start of the checkout process a barrier against users"
+                        content={
+                          <ul>
+                            <li>
+                              Shoppers are more likely to abandon carts if
+                              barriers are placed in the beginning - negatively
+                              affects both user and business
+                            </li>
+                            <li>
+                              Provide users the option to purchase without an
+                              account first, then the option to either login to
+                              an existing account or create a new one
+                            </li>
+                          </ul>
+                        }
+                      />
+                    }
+                    column2={
+                      <NumberedKeyPoint
+                        title="Provide in-store collection options"
+                        content={
+                          <ul>
+                            <li>
+                              Leverage on MUJI's strong in-store experiences for
+                              a win-win situation
+                            </li>
+                            <li>
+                              Relieves delivery logistics and costs while
+                              providing users (who already enjoy MUJI's
+                              aesthetics) in-store-only experiences that cannot
+                              be attained online
+                              <br />
+                              <br />
+                            </li>
+                            <li>
+                              ⚠ I believe that in a real world scenario, this
+                              option will be affected by other aspects of the
+                              business. It wouldn't be something that a UX
+                              designer can request for and implement easily.
+                              Provide users the option to purchase without an
+                              account first, then the option to either login to
+                              an existing account or create a new one
+                            </li>
+                          </ul>
+                        }
+                      />
+                    }
+                  />
+                </div>
               </TitleContent>
-              <TitleContent title="Information Architecture" centralise>
+              <TitleContent
+                title="Information Architecture"
+                spacer="md"
+                centralise
+              >
                 <p className="mb-0">
                   As MUJI has a large inventory of items and categories arranged
                   in a way that was confusing for users, it had to be
@@ -465,6 +573,7 @@ export default function Compawnion() {
               </TitleContent>
               <TwoColumns
                 column1={
+                  // TODO
                   <Image
                     src={"/images/designProcess.svg"}
                     alt="The design process"
@@ -478,7 +587,7 @@ export default function Compawnion() {
                       What I found was that product organisation wasn't an
                       issue, but instead:
                     </p>
-                    <p className="text-works">
+                    <p className="text-works mb-0">
                       <strong>
                         Individual categories could be renamed to better reflect
                         its ontology.
@@ -486,8 +595,9 @@ export default function Compawnion() {
                     </p>
                   </div>
                 }
+                spacer="md"
               />
-              <TitleContent spacer="sm">
+              <TitleContent spacer="lg" centralise>
                 <p className="mb-5">
                   Where the card sort showed me how MUJI consumers expected to
                   see the products and pages organised and named, I also had to
@@ -497,45 +607,75 @@ export default function Compawnion() {
                   reorganised content and renamed categories on MUJI's website
                   and how the pages were related to each other.
                 </p>
-                <Carousel>
-                  <div>
-                    <p>
-                      Information Architecture: Elements reorganised and
-                      informed by user research and element analysis
-                    </p>
+                <div className="row justify-content-center">
+                  <div className="col-lg-10">
+                    <Carousel>
+                      <div className="text-start">
+                        <p>
+                          Information Architecture: Elements reorganised and
+                          informed by user research and element analysis
+                        </p>
+                        <Image
+                          src={"/images/muji-IA_01.png"}
+                          alt="Information Architecture"
+                          width={7808}
+                          height={4342}
+                        />
+                      </div>
+                      <div className="text-start">
+                        <p>
+                          Information Architecture: Original IA from MUJI SG
+                          with 2 different footers
+                        </p>
+                        {/* TODO */}
+                        <Image
+                          src={"/images/muji-IA_01.png"}
+                          alt="Information Architecture"
+                          width={7808}
+                          height={4342}
+                        />
+                      </div>
+                    </Carousel>
                   </div>
-                  <div>
-                    <p>
-                      Information Architecture: Original IA from MUJI SG with 2
-                      different footers
-                    </p>
-                  </div>
-                </Carousel>
+                </div>
               </TitleContent>
             </Section>
             <Section title="IDEATE">
-              <TitleContent title="Wireframes" spacer="lg">
-                <Image
-                  src={"/images/designProcess.svg"}
-                  alt="The design process"
-                  width={1146}
-                  height={296}
-                />
+              <TitleContent title="Wireframes" spacer="lg" centralise fullwidth>
+                <div className="my-4">
+                  <Image
+                    src={"/images/muji-wireframes.png"}
+                    alt="Wireframes"
+                    width={1306}
+                    height={600}
+                  />
+                </div>
               </TitleContent>
-              <TitleContent title="High Fidelity Prototype" spacer="lg">
-                <Image
-                  src={"/images/designProcess.svg"}
-                  alt="The design process"
-                  width={1146}
-                  height={296}
-                />
+              <TitleContent
+                title="High Fidelity Prototype"
+                spacer="lg"
+                centralise
+                fullwidth
+              >
+                <div className="my-4">
+                  <Image
+                    src={"/images/muji-hifi.png"}
+                    alt="High Fidelity Prototype"
+                    width={1335}
+                    height={866}
+                  />
+                </div>
                 <Link href="https://www.figma.com/proto/2CTw3LMGDNk8EZdPh04xYk/MUJI_Redesigned?page-id=0%3A1&node-id=103%3A5575&viewport=199%2C404%2C0.11&scaling=scale-down&starting-point-node-id=103%3A5575">
                   <a>Play with the prototype here</a>
                 </Link>
               </TitleContent>
             </Section>
             <Section title="TEST">
-              <TitleContent title="System Usability Scale" spacer="lg">
+              <TitleContent
+                title="System Usability Scale"
+                spacer="lg"
+                centralise
+              >
                 <p className="mb-5">
                   I recuited 6 participants to participate in the same usability
                   test as the first 4 participants. The only difference was that
@@ -546,16 +686,16 @@ export default function Compawnion() {
                   on the excel sheet was exhilarating!
                 </p>
                 <Image
-                  src={"/images/designProcess.svg"}
-                  alt="The design process"
-                  width={1146}
-                  height={296}
+                  src={"/images/muji-sus-scores.png"}
+                  alt="MUJI SUS scores"
+                  width={904}
+                  height={414}
                 />
               </TitleContent>
             </Section>
             <Section title="REFLECT">
-              <TitleContent title="Moving Forward" spacer="md">
-                <p className="mb-0">
+              <TitleContent title="Moving Forward" spacer="md" centralise>
+                <p>
                   While working on this project, I chanced upon design systems
                   and the beauty of using components and variations while
                   researching on UIUX interfaces. I <s>blindly</s> decided to
@@ -565,12 +705,13 @@ export default function Compawnion() {
                   creating future design systems
                 </p>
                 <DropdownContent title="👁 My first attempt at a design system">
-                  <p className="mb-0">
+                  <p>
                     It's not the best system or guide, but I am proud of what I
                     was able to accomplish in such a short time - learning about
                     a system and creating it in the same week, haha! Next time,
                     I'll be back with a <em>vengeance</em> 💪🏻
                   </p>
+                  {/* TODO */}
                   <Image
                     src={"/images/designProcess.svg"}
                     alt="The design process"

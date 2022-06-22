@@ -352,7 +352,7 @@ export default function Compawnion() {
                   meet a pet.
                 </p>
               </TitleContent>
-              <Highlight title="Problem" spacer="sm">
+              <Highlight title="Problem" spacer="lg">
                 <p className="mb-0">
                   Adopters need a way to easily search for pets and connect with
                   multiple shelters because they want to consider a wide
