@@ -40,19 +40,21 @@ export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
   return (
     <>
       <div ref={expandTrigger} />
-      <div
-        className={`${styles.heroImage} ${isExpanded ? styles.expanded : ""}`}
-      >
-        <div className={styles.number}>{number}</div>
-        <div className="position-relative w-100 h-100">
-          <Image
-            src={image}
-            alt={title}
-            layout="fill"
-            objectFit="cover"
-            objectPosition={"center"}
-            priority
-          />
+      <div className="overflow-hidden">
+        <div
+          className={`${styles.heroImage} ${isExpanded ? styles.expanded : ""}`}
+        >
+          <div className={styles.number}>{number}</div>
+          <div className="position-relative w-100 h-100">
+            <Image
+              src={image}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              objectPosition={"center"}
+              priority
+            />
+          </div>
         </div>
       </div>
       <div

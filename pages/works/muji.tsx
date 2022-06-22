@@ -53,7 +53,7 @@ export default function Compawnion() {
     <Layout>
       <Header
         image={meta.image}
-        number={"1"}
+        number={"2"}
         title={meta.title}
         subtitle={meta.subtitle}
       />
