@@ -20,7 +20,7 @@ import { ThreeColumns } from "components/works/ThreeColumns";
 import { TitleContent } from "components/works/TitleContent";
 
 export const meta = {
-  image: "https://placekitten.com/1400/300",
+  image: "/images/compawnion-hero.jpg",
   title: "Compawnion",
   subtitle:
     "Enabling adopters to search, compare, and connect with animal shelters",
@@ -241,7 +241,7 @@ export default function Compawnion() {
               </TitleContent>
               <Carousel spacer="lg">
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-1.jpg"}
+                  image={"/images/compawnion-affinity-map_01.png"}
                   number={"01."}
                   title={
                     "How successful the adopter is in searching for a suitable pet online is dependent on their ability to filter, sieve through, and compare information"
@@ -253,7 +253,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-2.jpg"}
+                  image={"/images/compawnion-affinity-map_02.png"}
                   number={"02."}
                   title={"Pet adoption is heavily adopter-driven"}
                   points={[
@@ -265,7 +265,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-3.jpg"}
+                  image={"/images/compawnion-affinity-map_03.png"}
                   number={"03."}
                   title={
                     "Adopters value convenience, digitalisation, and streamlined processes"
@@ -277,7 +277,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-4.jpg"}
+                  image={"/images/compawnion-affinity-map_04.png"}
                   number={"04."}
                   title={
                     "Misaligned expectations between adopters and shelters"
@@ -288,7 +288,7 @@ export default function Compawnion() {
                   ]}
                 />
                 <ImageContentColumns
-                  image={"/images/compawnion-primaryResearch-5.jpg"}
+                  image={"/images/compawnion-affinity-map_05.png"}
                   number={"05."}
                   title={
                     "Positive face-to-face interaction between the pet, adopter, and environment is key to a successful adoption"
@@ -307,8 +307,8 @@ export default function Compawnion() {
                 <Image
                   src={"/images/compawnion-persona.png"}
                   alt="Persona"
-                  width={2612}
-                  height={866}
+                  width={1306}
+                  height={433}
                 />
               </TitleContent>
             </Section>
@@ -323,7 +323,7 @@ export default function Compawnion() {
                 </p>
                 <div className="mb-5">
                   <Image
-                    src={"/images/compawnion-define-1.png"}
+                    src={"/images/compawnion-journey-map.png"}
                     alt="User journey"
                     width={2006}
                     height={1280}
@@ -389,7 +389,7 @@ export default function Compawnion() {
                     "Administrative processes and face-to-face interactions are broken up and repetitive",
                     "If adopters have to repeat certain steps in the adoption process, they must start anew from a much earlier stage - tedious, frustrating for adopters",
                   ]}
-                  image={"/images/compawnion-userFlows-1.png"}
+                  image={"/images/compawnion-userflow-01.png"}
                 />
                 <NumberedContentImageColumns
                   number={"2"}
@@ -416,7 +416,7 @@ export default function Compawnion() {
                       </ul>
                     </>,
                   ]}
-                  image={"/images/compawnion-userFlows-2.png"}
+                  image={"/images/compawnion-userflow-02.png"}
                 />
                 <NumberedContentImageColumns
                   number={"3"}
@@ -426,7 +426,7 @@ export default function Compawnion() {
                   points={[
                     "Processes are also repeated for each new shelter the adopter wants to interact with",
                   ]}
-                  image={"/images/compawnion-userFlows-3.png"}
+                  image={"/images/compawnion-userflow-03.png"}
                 />
               </Carousel>
             </Section>
@@ -439,14 +439,6 @@ export default function Compawnion() {
                   reconvening to decide on the designs that would be brought to
                   life.
                 </p>
-                <div className="mb-5">
-                  <Image
-                    src={"/images/compawnion-wireframes-1.png"}
-                    alt="Wireframes"
-                    width={1456}
-                    height={866}
-                  />
-                </div>
                 <DropdownContent title="💡 Learning point" spacer="sm">
                   <p className="mb-0">
                     When my teammate and I embarked on this project, we had yet
@@ -456,20 +448,27 @@ export default function Compawnion() {
                   </p>
                 </DropdownContent>
                 <Image
-                  src={"/images/compawnion-wireframes-2.png"}
-                  alt="Lo-fi prototype"
-                  width={1582}
-                  height={1732}
+                  src={"/images/compawnion-wireframes-01.png"}
+                  alt="Wireframes"
+                  width={2020}
+                  height={1200}
                 />
               </TitleContent>
-              <TitleContent title="Mid-fi Prototype" centralise spacer="sm" />
-              <FigmaEmbed
-                src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KPcY0DIdGvthFRsiXNq6T%2FUntitled%3Fnode-id%3D168%253A2174%26scaling%3Dmin-zoom%26page-id%3D5%253A3%26starting-point-node-id%3D204%253A2791"
-                spacer="lg"
-              />
-              <Link href="https://www.figma.com/proto/7UEFUo9gkJu8eEl6uzgAdJ/Compawnion-Mid-Fi-Prototype?page-id=56%3A5357&node-id=56%3A9953&viewport=179%2C-298%2C0.27&scaling=scale-down&starting-point-node-id=56%3A9525">
-                <a>Play with the prototype here</a>
-              </Link>
+            </Section>
+            <Section title="PROTOTYPE">
+              <TitleContent title="Mid-fi Prototype" centralise spacer="lg">
+                <div className="mt-5 mb-4">
+                  <Image
+                    src={"/images/compawnion-wireframes-02.png"}
+                    alt="Mid-fi prototype"
+                    width={1524}
+                    height={1336}
+                  />
+                </div>
+                <Link href="https://www.figma.com/proto/7UEFUo9gkJu8eEl6uzgAdJ/Compawnion-Mid-Fi-Prototype?page-id=56%3A5357&node-id=56%3A9953&viewport=179%2C-298%2C0.27&scaling=scale-down&starting-point-node-id=56%3A9525">
+                  <a target={"_blank"}>Play with the prototype here</a>
+                </Link>
+              </TitleContent>
             </Section>
             <Section title="REFLECT">
               <TitleContent title="Moving Forward" centralise spacer="md">
