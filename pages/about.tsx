@@ -118,12 +118,7 @@ export default function About() {
             </div>
           </div>
           <div className="col-lg-3">
-            <Image
-              src={"https://placekitten.com/400/500"}
-              alt="kitten"
-              width={400}
-              height={500}
-            />
+            <Image src={"/images/me.jpg"} alt="Me!" width={400} height={500} />
           </div>
         </div>
         <div className="row justify-content-center spacer-md">
@@ -161,11 +156,12 @@ export default function About() {
             <div className="col-lg-10">
               <div className="row align-items-center">
                 <div className="col-lg-4">
-                  <Image
-                    src={"https://placekitten.com/490/600"}
-                    alt="kitten"
-                    width={490}
-                    height={600}
+                  <video
+                    src="/images/me2.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    className="w-100"
                   />
                 </div>
                 <div ref={bgContentTrigger} className="col-lg-6 offset-lg-1">
