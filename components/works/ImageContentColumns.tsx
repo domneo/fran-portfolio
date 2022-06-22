@@ -1,7 +1,8 @@
-import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
 import styles from "styles/works/ImageContentColumns.module.scss";
+
+import { ImageZoom } from "components/common/ImageZoom";
 
 interface ImageContentColumnsProps {
   image: string;
@@ -19,15 +20,12 @@ export const ImageContentColumns = ({
   return (
     <div className="row align-items-stretch">
       <div className="col-xl-6 ps-4 pe-5">
-        <div className={styles.image}>
-          <Image
-            src={image}
-            alt={typeof title === "string" ? title : ""}
-            layout="fill"
-            objectFit="contain"
-            objectPosition="center"
-          />
-        </div>
+        <ImageZoom
+          image={image}
+          alt={typeof title === "string" ? title : ""}
+          width={2000}
+          height={1000}
+        />
       </div>
       <div className="col-xl-6 d-flex align-items-center text-start">
         <div>
