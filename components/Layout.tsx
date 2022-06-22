@@ -4,6 +4,7 @@ import styles from "styles/Layout.module.scss";
 
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { UnderConstruction } from "./UnderConstruction";
 
 interface LayoutProps {
   hideHeaderMenu?: boolean;
@@ -12,6 +13,7 @@ interface LayoutProps {
   children: React.ReactNode;
   [index: string]: any;
 }
+
 const Layout = ({
   hideHeaderMenu = false,
   hideFooterMenu = false,
@@ -27,7 +29,9 @@ const Layout = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header hideHeaderMenu={hideHeaderMenu} />
-      <main {...props}>{children}</main>
+      <main {...props}>
+        <UnderConstruction>{children}</UnderConstruction>
+      </main>
       <Footer
         hideFooterMenu={hideFooterMenu}
         centraliseFooter={centraliseFooter}

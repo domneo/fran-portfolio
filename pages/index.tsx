@@ -41,20 +41,22 @@ const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
 
 export default function Home() {
   return (
-    <Layout className={styles.container} hideHeaderMenu>
-      <LinkItem href="/works" number="1" text="Works" />
-      <LinkItem
-        href="/about"
-        number="2"
-        text="About"
-        style={{ marginLeft: "20%" }}
-      />
-      <LinkItem
-        href="/contact"
-        number="3"
-        text="Contact"
-        style={{ marginLeft: "40%" }}
-      />
+    <Layout hideHeaderMenu>
+      <div className={styles.container}>
+        <LinkItem href="/works" number="1" text="Works" />
+        <LinkItem
+          href="/about"
+          number="2"
+          text="About"
+          style={{ marginLeft: "20%" }}
+        />
+        <LinkItem
+          href="/contact"
+          number="3"
+          text="Contact"
+          style={{ marginLeft: "40%" }}
+        />
+      </div>
     </Layout>
   );
 }
