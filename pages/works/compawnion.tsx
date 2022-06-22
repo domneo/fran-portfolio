@@ -242,6 +242,8 @@ export default function Compawnion() {
               <Carousel spacer="lg">
                 <ImageContentColumns
                   image={"/images/compawnion-affinity-map_01.png"}
+                  imageWidth={3491}
+                  imageHeight={1785}
                   number={"01."}
                   title={
                     "How successful the adopter is in searching for a suitable pet online is dependent on their ability to filter, sieve through, and compare information"
@@ -254,6 +256,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/compawnion-affinity-map_02.png"}
+                  imageWidth={2980}
+                  imageHeight={1063}
                   number={"02."}
                   title={"Pet adoption is heavily adopter-driven"}
                   points={[
@@ -266,6 +270,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/compawnion-affinity-map_03.png"}
+                  imageWidth={2403}
+                  imageHeight={1140}
                   number={"03."}
                   title={
                     "Adopters value convenience, digitalisation, and streamlined processes"
@@ -278,6 +284,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/compawnion-affinity-map_04.png"}
+                  imageWidth={1349}
+                  imageHeight={447}
                   number={"04."}
                   title={
                     "Misaligned expectations between adopters and shelters"
@@ -289,6 +297,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/compawnion-affinity-map_05.png"}
+                  imageWidth={818}
+                  imageHeight={878}
                   number={"05."}
                   title={
                     "Positive face-to-face interaction between the pet, adopter, and environment is key to a successful adoption"

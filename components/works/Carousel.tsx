@@ -52,6 +52,7 @@ export class Carousel extends Component<CarouselProps> {
 
     const settings = {
       speed: 800,
+      draggable: false,
       slidesToShow,
       slidesToScroll: slidesToShow,
       nextArrow: <NextArrow />,

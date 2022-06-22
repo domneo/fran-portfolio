@@ -10,7 +10,7 @@ export const IconZoom = ({ onClick }: IconZoomProps) => {
   return (
     <button
       className="position-relative bg-transparent border-0 p-2 m-0"
-      style={{ cursor: "pointer" }}
+      style={{ borderRadius: "100%", cursor: "pointer" }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onFocus={() => setHover(true)}

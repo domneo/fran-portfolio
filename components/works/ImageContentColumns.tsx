@@ -6,6 +6,8 @@ import { ImageZoom } from "components/common/ImageZoom";
 
 interface ImageContentColumnsProps {
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   number?: string;
   title?: React.ReactNode;
   points?: Array<React.ReactNode>;
@@ -13,18 +15,20 @@ interface ImageContentColumnsProps {
 
 export const ImageContentColumns = ({
   image,
+  imageWidth,
+  imageHeight,
   number,
   title,
   points,
 }: ImageContentColumnsProps) => {
   return (
     <div className="row align-items-stretch">
-      <div className="col-xl-6 ps-4 pe-5">
+      <div className="col-xl-6 ps-4 pe-5 d-flex align-items-center">
         <ImageZoom
           image={image}
           alt={typeof title === "string" ? title : ""}
-          width={2000}
-          height={1000}
+          width={imageWidth}
+          height={imageHeight}
         />
       </div>
       <div className="col-xl-6 d-flex align-items-center text-start">

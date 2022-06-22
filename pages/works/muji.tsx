@@ -111,6 +111,8 @@ export default function Compawnion() {
                 <div className="mt-5">
                   <ImageContentColumns
                     image={"/images/muji-store-interior.jpg"}
+                    imageWidth={1500}
+                    imageHeight={1000}
                     title={
                       "In a convenience sampling of 26 MUJI shoppers, an overwhelming majority believed they could shop on MUJI&apos;s website"
                     }
@@ -132,6 +134,8 @@ export default function Compawnion() {
               <Carousel spacer="lg">
                 <ImageContentColumns
                   image={"/images/muji-affinity-map_01.png"}
+                  imageWidth={792}
+                  imageHeight={870}
                   number="01."
                   title={"All consumers want to shop on MUJI&apos;s website"}
                   points={[
@@ -141,6 +145,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/muji-affinity-map_02.png"}
+                  imageWidth={1378}
+                  imageHeight={393}
                   number="02."
                   title={"Online catalogues are generally not useful"}
                   points={[
@@ -149,6 +155,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/muji-affinity-map_03.png"}
+                  imageWidth={2523}
+                  imageHeight={1223}
                   number="03."
                   title={
                     "Brand websites should reflect consumers&apos; preconceived impressions and experiences with its physical stores"
@@ -161,6 +169,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/muji-affinity-map_04.png"}
+                  imageWidth={1592}
+                  imageHeight={1029}
                   number="04."
                   title={
                     "Shopping websites and point-of-sale affect consumer perceptions"
@@ -172,6 +182,8 @@ export default function Compawnion() {
                 />
                 <ImageContentColumns
                   image={"/images/muji-affinity-map_05.png"}
+                  imageWidth={3648}
+                  imageHeight={1165}
                   number="05."
                   title={
                     "Preference for shopping websites to be uncluttered and straightforward - overall baseline expectation i MUJI"
