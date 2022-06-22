@@ -14,7 +14,7 @@ export const ContactCTA = ({ children, spacer }: ContactCTAProps) => (
         <h2 className="display-5 text-bone spacer-md">{children}</h2>
       )}
       <div className="d-flex justify-content-center">
-        <Link href="mailto:francinelim21@gmail.com">
+        <Link href={process.env.NEXT_PUBLIC_EMAIL || ""}>
           <a
             className="contact-cta d-block position-relative text-decoration-none"
             style={{

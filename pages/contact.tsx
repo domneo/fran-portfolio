@@ -92,17 +92,17 @@ export default function Contact() {
             <div className="d-flex justify-content-between">
               <div ref={linksRef} className={styles.links}>
                 <div>
-                  <Link href="https://drive.google.com/file/d/1ePOpKzwSw1fCSWmxqsn7ctvhaUMTyfyC/view?usp=sharing">
+                  <Link href={process.env.NEXT_PUBLIC_RESUME || ""}>
                     <a target={"_blank"}>RESUME</a>
                   </Link>
                 </div>
                 <div>
-                  <Link href="mailto:francinelim21@gmail.com">
+                  <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
                     <a target={"_blank"}>EMAIL</a>
                   </Link>
                 </div>
                 <div>
-                  <Link href="https://www.linkedin.com/in/francine-lim/">
+                  <Link href={process.env.NEXT_PUBLIC_LINKEDIN || ""}>
                     <a target={"_blank"}>LINKEDIN</a>
                   </Link>
                 </div>

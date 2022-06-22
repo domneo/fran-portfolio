@@ -27,17 +27,17 @@ export const Footer = ({ hideFooterMenu, centraliseFooter }: FooterProps) => (
       <nav className={styles.menu}>
         <BarrelLink
           text="RESUME"
-          link="https://drive.google.com/file/d/1ePOpKzwSw1fCSWmxqsn7ctvhaUMTyfyC/view?usp=sharing"
+          link={process.env.NEXT_PUBLIC_RESUME || ""}
           target="_blank"
         />
         <BarrelLink
           text="EMAIL"
-          link="mailto:francinelim21@gmail.com"
+          link={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
           target="_blank"
         />
         <BarrelLink
           text="LINKEDIN"
-          link="https://www.linkedin.com/in/francine-lim/"
+          link={process.env.NEXT_PUBLIC_LINKEDIN || ""}
           target="_blank"
         />
       </nav>

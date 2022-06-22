@@ -673,7 +673,7 @@ export default function Compawnion() {
                     height={866}
                   />
                 </div>
-                <Link href="https://www.figma.com/proto/2CTw3LMGDNk8EZdPh04xYk/MUJI_Redesigned?page-id=0%3A1&node-id=103%3A5575&viewport=199%2C404%2C0.11&scaling=scale-down&starting-point-node-id=103%3A5575">
+                <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_MUJI || ""}>
                   <a>Play with the prototype here</a>
                 </Link>
               </TitleContent>

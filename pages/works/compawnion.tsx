@@ -465,7 +465,7 @@ export default function Compawnion() {
                     height={1336}
                   />
                 </div>
-                <Link href="https://www.figma.com/proto/7UEFUo9gkJu8eEl6uzgAdJ/Compawnion-Mid-Fi-Prototype?page-id=56%3A5357&node-id=56%3A9953&viewport=179%2C-298%2C0.27&scaling=scale-down&starting-point-node-id=56%3A9525">
+                <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_COMPAWNION || ""}>
                   <a target={"_blank"}>Play with the prototype here</a>
                 </Link>
               </TitleContent>
