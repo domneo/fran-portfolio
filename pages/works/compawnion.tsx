@@ -59,7 +59,7 @@ export default function Compawnion() {
           <div className="col-lg-10">
             <Details details={meta.details} debut={meta.debut} />
             <FigmaEmbed
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7UEFUo9gkJu8eEl6uzgAdJ%2FCompawnion-Mid-Fi-Prototype%3Fpage-id%3D56%253A5357%26node-id%3D56%253A9953%26viewport%3D179%252C-298%252C0.27%26scaling%3Dscale-down%26starting-point-node-id%3D56%253A9525"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7UEFUo9gkJu8eEl6uzgAdJ%2FCompawnion-Mid-Fi-Prototype%3Fpage-id%3D56%253A5357%26node-id%3D56%253A9525%26viewport%3D558%252C-163%252C0.2%26scaling%3Dscale-down%26starting-point-node-id%3D56%253A9525"
               spacer="lg"
             />
             <Section title="KICKOFF">
