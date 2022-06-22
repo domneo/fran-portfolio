@@ -25,7 +25,7 @@ export const meta = {
   image: "/images/muji-hero.jpg",
   title: "Muji",
   subtitle:
-    "Transforming an e-catalog into a seamless 'MUJI' e-commerce experience for shoppers",
+    "Transforming an e-catalog into a seamless &apos;MUJI&apos; e-commerce experience for shoppers",
   details: [
     {
       title: "Challenge",
@@ -69,13 +69,14 @@ export default function Compawnion() {
               <TitleContent spacer="sm">
                 <p>
                   If there was a brand that immutably embodies its values to its
-                  very core, you can bet your bottom dollar it's MUJI. The
+                  very core, you can bet your bottom dollar it&apos;s MUJI. The
                   company is so committed to its cause that it is literally
-                  named as such - MUJI is short for 'Mujirushi Ryohin', and it
-                  translates to 'no-brand quality goods'.
+                  named as such - MUJI is short for &apos;Mujirushi
+                  Ryohin&apos;, and it translates to &apos;no-brand quality
+                  goods&apos;.
                 </p>
                 <p className="mb-0">
-                  However, where MUJI's iconic brick and mortar stores are
+                  However, where MUJI&apos;s iconic brick and mortar stores are
                   beautifully and intentionally organised, its online experience
                   is that of a catalogue far disconnected from its offline
                   experience.
@@ -111,7 +112,7 @@ export default function Compawnion() {
                   <ImageContentColumns
                     image={"/images/muji-store-interior.jpg"}
                     title={
-                      "In a convenience sampling of 26 MUJI shoppers, an overwhelming majority believed they could shop on MUJI's website"
+                      "In a convenience sampling of 26 MUJI shoppers, an overwhelming majority believed they could shop on MUJI&apos;s website"
                     }
                     points={[
                       "23 / 26 people believed that the site supported e-commerce",
@@ -132,7 +133,7 @@ export default function Compawnion() {
                 <ImageContentColumns
                   image={"/images/muji-affinity-map_01.png"}
                   number="01."
-                  title={"All consumers want to shop on MUJI's website"}
+                  title={"All consumers want to shop on MUJI&apos;s website"}
                   points={[
                     "50% of interviewees were surprised that this feature did not already exist",
                     "Further validates the convenient sampling results",
@@ -150,12 +151,12 @@ export default function Compawnion() {
                   image={"/images/muji-affinity-map_03.png"}
                   number="03."
                   title={
-                    "Brand websites should reflect consumers' preconceived impressions and experiences with its physical stores"
+                    "Brand websites should reflect consumers&apos; preconceived impressions and experiences with its physical stores"
                   }
                   points={[
-                    "Disconnect in experience on MUJI's website and physical store",
+                    "Disconnect in experience on MUJI&apos;s website and physical store",
                     "Brand identity affects how consumers perceive a brand and what they expect to experience",
-                    "Experience and branding should also carry over into a brand's mobile and app counterparts",
+                    "Experience and branding should also carry over into a brand&apos;s mobile and app counterparts",
                   ]}
                 />
                 <ImageContentColumns
@@ -178,17 +179,17 @@ export default function Compawnion() {
                   points={[
                     "No advertisements or gamification elements",
                     "Be able to find products and compare information quickly and efficiently",
-                    "Given MUJI's reputation for minimalism and functionalism, consumers expect these concepts to be a given on its website as well",
+                    "Given MUJI&apos;s reputation for minimalism and functionalism, consumers expect these concepts to be a given on its website as well",
                   ]}
                 />
               </Carousel>
               <TitleContent title="Evaluating MUJI" spacer="sm" centralise>
                 <p>
-                  Because MUJI's current website is an e-catalogue, users were
-                  not able to replicate a full shopping experience on the
-                  website (i.e. they couldn't test a Checkout). As such, the
-                  usability tests revolved around Discovery - navigating through
-                  the site to find products.
+                  Because MUJI&apos;s current website is an e-catalogue, users
+                  were not able to replicate a full shopping experience on the
+                  website (i.e. they couldn&apos;t test a Checkout). As such,
+                  the usability tests revolved around Discovery - navigating
+                  through the site to find products.
                 </p>
                 <p className="mb-0">
                   This was where things got{" "}
@@ -256,8 +257,8 @@ export default function Compawnion() {
                       <ul className="mt-1 mb-3">
                         <li>
                           Main navigational elements (navigation bar, footer)
-                          and ontology (main and sub-categories) don't follow
-                          users' mental models
+                          and ontology (main and sub-categories) don&apos;t
+                          follow users&apos; mental models
                         </li>
                       </ul>
                     </>,
@@ -327,8 +328,9 @@ export default function Compawnion() {
                       and typeface
                       <ul className="mt-1 mb-3">
                         <li>
-                          MUJI's official brand book lists the brand typeface as
-                          Helvetica (English) and Yu Gothic (Japanese)
+                          MUJI&apos;s official brand book lists the brand
+                          typeface as Helvetica (English) and Yu Gothic
+                          (Japanese)
                         </li>
                       </ul>
                     </>,
@@ -382,8 +384,8 @@ export default function Compawnion() {
                 <p className="mb-0">
                   Consumers need a way to browse for products and make purchases
                   online on the MUJI website. They want convenience and direct
-                  access to all products without having to visit MUJI's physical
-                  stores or 3rd party online retailers.
+                  access to all products without having to visit MUJI&apos;s
+                  physical stores or 3rd party online retailers.
                 </p>
               </Highlight>
               <NarrowTitlePoints
@@ -397,8 +399,8 @@ export default function Compawnion() {
               <TitleContent title="User Flows" spacer="sm" centralise>
                 <p className="mb-0">
                   Now, with a problem in mind, I wanted to understand and
-                  emphathise with Lee Tee's possible decisions and paths on a
-                  more granular level. Discovery and Checkout user flows were
+                  emphathise with Lee Tee&apos;s possible decisions and paths on
+                  a more granular level. Discovery and Checkout user flows were
                   thus created to represent these pathways.
                 </p>
               </TitleContent>
@@ -409,9 +411,9 @@ export default function Compawnion() {
                   points={[
                     <>
                       <strong>3 / 4</strong> users were unable to discover
-                      products due to the 'filter' navigation system
+                      products due to the &apos;filter&apos; navigation system
                     </>,
-                    "The site's 'filter' navigation system meant that users had to navigate through filters to access certain pages",
+                    "The site&apos;s &apos;filter&apos; navigation system meant that users had to navigate through filters to access certain pages",
                   ]}
                   image="/images/muji-user-flow_01.png"
                 />
@@ -448,7 +450,7 @@ export default function Compawnion() {
                         <li>Be willing to visit a physical store</li>
                       </ul>
                     </>,
-                    "Strays away from MUJI's principle of streamlining processes",
+                    "Strays away from MUJI&apos;s principle of streamlining processes",
                   ]}
                   image="/images/muji-user-flow_03.png"
                 />
@@ -460,7 +462,7 @@ export default function Compawnion() {
               >
                 <p className="mb-5">
                   Without an online checkout in place, MUJI SG would benefit
-                  from a task analysis of the its competitors' checkout
+                  from a task analysis of the its competitors&apos; checkout
                   processes. This allows me to not only deconstruct the checkout
                   process for insights, but also see if current processes are
                   addressing user needs.
@@ -476,6 +478,8 @@ export default function Compawnion() {
                         <div className="mb-4">
                           <Image
                             src="/images/muji-task-analysis_01.png"
+                            alt="Task analysis: Checkout for users without an existing
+                            account"
                             width={1576}
                             height={505}
                           />
@@ -493,6 +497,8 @@ export default function Compawnion() {
                         </p>
                         <Image
                           src="/images/muji-task-analysis_02.png"
+                          alt="Task analysis: Checkout for a users with an existing
+                          account"
                           width={1576}
                           height={505}
                         />
@@ -529,12 +535,12 @@ export default function Compawnion() {
                         content={
                           <ul>
                             <li>
-                              Leverage on MUJI's strong in-store experiences for
-                              a win-win situation
+                              Leverage on MUJI&apos;s strong in-store
+                              experiences for a win-win situation
                             </li>
                             <li>
                               Relieves delivery logistics and costs while
-                              providing users (who already enjoy MUJI's
+                              providing users (who already enjoy MUJI&apos;s
                               aesthetics) in-store-only experiences that cannot
                               be attained online
                               <br />
@@ -543,7 +549,7 @@ export default function Compawnion() {
                             <li>
                               ⚠ I believe that in a real world scenario, this
                               option will be affected by other aspects of the
-                              business. It wouldn't be something that a UX
+                              business. It wouldn&apos;t be something that a UX
                               designer can request for and implement easily.
                               Provide users the option to purchase without an
                               account first, then the option to either login to
@@ -567,8 +573,8 @@ export default function Compawnion() {
                   reorganised and streamlined for a better navigational
                   experience. To find out what made sense to users, I conducted
                   an open card sort to understand how users believe products
-                  should be grouped and the nomenclature of MUJI SG's consumers
-                  through how they label these groups.
+                  should be grouped and the nomenclature of MUJI SG&apos;s
+                  consumers through how they label these groups.
                 </p>
               </TitleContent>
               <TwoColumns
@@ -583,7 +589,7 @@ export default function Compawnion() {
                 column2={
                   <div className="h-100 d-flex flex-column justify-content-center">
                     <p>
-                      What I found was that product organisation wasn't an
+                      What I found was that product organisation wasn&apos;t an
                       issue, but instead:
                     </p>
                     <p className="text-works mb-0">
@@ -603,8 +609,8 @@ export default function Compawnion() {
                   reconcile the structure with business realities - MUJI had to
                   keep abreast of its competitors. So, combining insights from
                   users and an element analysis, a new site map to showcase the
-                  reorganised content and renamed categories on MUJI's website
-                  and how the pages were related to each other.
+                  reorganised content and renamed categories on MUJI&apos;s
+                  website and how the pages were related to each other.
                 </p>
                 <div className="row justify-content-center">
                   <div className="col-lg-10">
@@ -682,8 +688,8 @@ export default function Compawnion() {
                   I recuited 6 participants to participate in the same usability
                   test as the first 4 participants. The only difference was that
                   they had to complete a Checkout Flow as well. Even with a
-                  higher participant number, my prototype's average was not only
-                  higher than the original site, but was{" "}
+                  higher participant number, my prototype&apos;s average was not
+                  only higher than the original site, but was{" "}
                   <strong>waay above average</strong>! Seeing the numbers appear
                   on the excel sheet was exhilarating!
                 </p>
@@ -708,10 +714,11 @@ export default function Compawnion() {
                 </p>
                 <DropdownContent title="👁 My first attempt at a design system">
                   <p>
-                    It's not the best system or guide, but I am proud of what I
-                    was able to accomplish in such a short time - learning about
-                    a system and creating it in the same week, haha! Next time,
-                    I'll be back with a <em>vengeance</em> 💪🏻
+                    It&apos;s not the best system or guide, but I am proud of
+                    what I was able to accomplish in such a short time -
+                    learning about a system and creating it in the same week,
+                    haha! Next time, I&apos;ll be back with a <em>vengeance</em>{" "}
+                    💪🏻
                   </p>
                   <Image
                     src={"/images/muji-first-design-system.png"}
