@@ -1,6 +1,32 @@
 @import "../mixins";
 
+.container {
+  overflow: hidden;
+
+  @include media("sm") {
+    width: 100vw;
+    margin-left: calc((0px - 100vw + 508px) / 2);
+  }
+
+  @include media("md") {
+    width: 100vw;
+    margin-left: calc((0px - 100vw + 688px) / 2);
+  }
+
+  @include media("lg") {
+    width: 100vw;
+    margin-left: calc((0px - 100vw + 769px) / 2);
+  }
+
+  @include media("xl") {
+    width: 100%;
+    margin-left: 0;
+    overflow: visible;
+  }
+}
+
 %customArrow {
+  display: none;
   background: transparent;
   border: none;
   margin: 0;
@@ -11,16 +37,22 @@
   height: 120px;
   border-radius: 100%;
   cursor: pointer;
+
+  @include media("sm") {
+    display: block;
+  }
 }
 
 .prevArrow {
   @extend %customArrow;
-  left: -140px;
+  left: 0;
+  margin-left: -120px;
   transform: translateY(-50%);
 }
 
 .nextArrow {
   @extend %customArrow;
-  right: -140px;
+  right: 0;
+  margin-right: -120px;
   transform: translateY(-50%) rotate(180deg);
 }

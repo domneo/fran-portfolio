@@ -6,7 +6,7 @@ interface TwoColumnsProps {
 
 export const TwoColumns = ({ column1, column2, spacer }: TwoColumnsProps) => {
   return (
-    <div className={`row gx-5 spacer-${spacer || ""}`}>
+    <div className={`row gx-lg-5 spacer-${spacer || ""}`}>
       <div className="col-lg-6">{column1}</div>
       <div className="col-lg-6">{column2}</div>
     </div>

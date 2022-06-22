@@ -77,7 +77,7 @@ export class Carousel extends Component<CarouselProps> {
     };
 
     return (
-      <div className={`spacer-${spacer || ""}`}>
+      <div className={`${styles.container} spacer-${spacer || ""}`}>
         <Slider {...settings}>{children}</Slider>
       </div>
     );
