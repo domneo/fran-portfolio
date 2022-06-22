@@ -25,7 +25,7 @@ export const ImageContentColumns = ({
     <div className="row align-items-stretch">
       <div className="col-xl-6 ps-4 pe-5 d-flex align-items-center">
         <ImageZoom
-          image={image}
+          src={image}
           alt={typeof title === "string" ? title : ""}
           width={imageWidth}
           height={imageHeight}

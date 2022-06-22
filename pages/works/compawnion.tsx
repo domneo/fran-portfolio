@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Layout from "components/Layout";
 import { ContactCTA } from "components/common/ContactCTA";
+import { ImageZoom } from "components/common/ImageZoom";
 import { Stars } from "components/common/Stars";
 import { Carousel } from "components/works/Carousel";
 import { Details } from "components/works/Details";
@@ -314,7 +315,7 @@ export default function Compawnion() {
                   All our interview insights and research eventually culminated
                   into...
                 </p>
-                <Image
+                <ImageZoom
                   src={"/images/compawnion-persona.png"}
                   alt="Persona"
                   width={1306}
@@ -332,7 +333,7 @@ export default function Compawnion() {
                   becoming a pet slave owner.
                 </p>
                 <div className="mb-5">
-                  <Image
+                  <ImageZoom
                     src={"/images/compawnion-journey-map.png"}
                     alt="User journey"
                     width={2006}
@@ -400,6 +401,8 @@ export default function Compawnion() {
                     "If adopters have to repeat certain steps in the adoption process, they must start anew from a much earlier stage - tedious, frustrating for adopters",
                   ]}
                   image={"/images/compawnion-userflow-01.png"}
+                  imageWidth={3840}
+                  imageHeight={950}
                 />
                 <NumberedContentImageColumns
                   number={"2"}
@@ -427,6 +430,8 @@ export default function Compawnion() {
                     </>,
                   ]}
                   image={"/images/compawnion-userflow-02.png"}
+                  imageWidth={4513}
+                  imageHeight={1653}
                 />
                 <NumberedContentImageColumns
                   number={"3"}
@@ -437,6 +442,8 @@ export default function Compawnion() {
                     "Processes are also repeated for each new shelter the adopter wants to interact with",
                   ]}
                   image={"/images/compawnion-userflow-03.png"}
+                  imageWidth={3167}
+                  imageHeight={2329}
                 />
               </Carousel>
             </Section>

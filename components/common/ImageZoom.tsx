@@ -8,19 +8,22 @@ import { IconZoom } from "./IconZoom";
 ReactModal.setAppElement("#__next");
 
 interface ImageZoomProps {
-  image: string;
+  src: string;
   alt: string;
   width: number;
   height: number;
 }
 
-export const ImageZoom = ({ image, alt, width, height }: ImageZoomProps) => {
+export const ImageZoom = ({ src, alt, width, height }: ImageZoomProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="position-relative w-100 h-100">
+    <div
+      className="position-relative w-100"
+      style={{ aspectRatio: (width / height).toString() }}
+    >
       <Image
-        src={image}
+        src={src}
         alt={alt}
         layout="fill"
         objectFit="contain"
@@ -41,10 +44,10 @@ export const ImageZoom = ({ image, alt, width, height }: ImageZoomProps) => {
         shouldReturnFocusAfterClose={true}
         closeTimeoutMS={500}
       >
-        <TransformWrapper centerOnInit maxScale={2}>
+        <TransformWrapper centerOnInit>
           <TransformComponent wrapperClass="w-100 h-100">
             <div style={{ padding: "5rem" }}>
-              <Image src={image} alt={alt} width={width} height={height} />
+              <Image src={src} alt={alt} width={width} height={height} />
             </div>
           </TransformComponent>
         </TransformWrapper>

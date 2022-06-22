@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Layout from "components/Layout";
 import { ContactCTA } from "components/common/ContactCTA";
+import { ImageZoom } from "components/common/ImageZoom";
 import { Stars } from "components/common/Stars";
 import { Carousel } from "components/works/Carousel";
 import { Details } from "components/works/Details";
@@ -218,7 +219,7 @@ export default function Compawnion() {
                           className="mx-auto mb-2"
                           style={{ maxWidth: "214px" }}
                         >
-                          <Image
+                          <ImageZoom
                             src="/images/muji-point-01_left.png"
                             alt="Condensed IA"
                             width={563}
@@ -227,12 +228,12 @@ export default function Compawnion() {
                         </div>
                         <p className="caption mb-0">Condensed IA</p>
                       </div>
-                      <div className="col-lg-6 text-center">
+                      <div className="col-lg-8 text-center">
                         <div
                           className="mx-auto mb-2"
                           style={{ maxWidth: "682px" }}
                         >
-                          <Image
+                          <ImageZoom
                             src="/images/muji-point-01_right.gif"
                             alt="How users can access the “Fashion” category and how every page is a “Filter”"
                             width={1294}
@@ -284,7 +285,7 @@ export default function Compawnion() {
                           className="mx-auto mb-2"
                           style={{ maxWidth: "484px" }}
                         >
-                          <Image
+                          <ImageZoom
                             src="/images/muji-Point-02_top.png"
                             alt="Landing Page Footer &gt; Element flow:→&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typeface: Helvetica"
                             width={1094}
@@ -299,7 +300,7 @@ export default function Compawnion() {
                           className="mx-auto mb-2"
                           style={{ maxWidth: "708px" }}
                         >
-                          <Image
+                          <ImageZoom
                             src="/images/muji-Point-02_bottom.png"
                             alt="Footer for all other pages &gt; Element flow:↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Typeface: Meiryo"
                             width={1476}
@@ -354,7 +355,7 @@ export default function Compawnion() {
                   All our interview insights and research eventually culminated
                   into...
                 </p>
-                <Image
+                <ImageZoom
                   src={"/images/muji-persona.png"}
                   alt="MUJI Persona"
                   width={1306}
@@ -372,7 +373,7 @@ export default function Compawnion() {
                   direction.
                 </p>
                 <div className="mx-auto mb-5" style={{ maxWidth: "852px" }}>
-                  <Image
+                  <ImageZoom
                     src={"/images/muji-venn-diagram.png"}
                     alt={"MUJI venn diagram"}
                     width={1187}
@@ -428,6 +429,8 @@ export default function Compawnion() {
                     "The site&apos;s &apos;filter&apos; navigation system meant that users had to navigate through filters to access certain pages",
                   ]}
                   image="/images/muji-user-flow_01.png"
+                  imageWidth={6394}
+                  imageHeight={1148}
                 />
                 <NumberedContentImageColumns
                   number="2"
@@ -447,6 +450,8 @@ export default function Compawnion() {
                     </>,
                   ]}
                   image="/images/muji-user-flow_02.png"
+                  imageWidth={2166}
+                  imageHeight={627}
                 />
                 <NumberedContentImageColumns
                   number="3"
@@ -465,6 +470,8 @@ export default function Compawnion() {
                     "Strays away from MUJI&apos;s principle of streamlining processes",
                   ]}
                   image="/images/muji-user-flow_03.png"
+                  imageWidth={2341}
+                  imageHeight={606}
                 />
               </Carousel>
               <TitleContent
@@ -482,13 +489,13 @@ export default function Compawnion() {
                 <div className="row justify-content-center">
                   <div className="col-lg-10">
                     <Carousel>
-                      <div className="text-start">
+                      <div className="px-2 text-start">
                         <p>
                           Task analysis: Checkout for users without an existing
                           account
                         </p>
                         <div className="mb-4">
-                          <Image
+                          <ImageZoom
                             src="/images/muji-task-analysis_01.png"
                             alt="Task analysis: Checkout for users without an existing
                             account"
@@ -502,12 +509,12 @@ export default function Compawnion() {
                           further.
                         </p>
                       </div>
-                      <div className="text-start">
+                      <div className="px-2 text-start">
                         <p>
                           Task analysis: Checkout for a users with an existing
                           account
                         </p>
-                        <Image
+                        <ImageZoom
                           src="/images/muji-task-analysis_02.png"
                           alt="Task analysis: Checkout for a users with an existing
                           account"
@@ -591,7 +598,7 @@ export default function Compawnion() {
               </TitleContent>
               <TwoColumns
                 column1={
-                  <Image
+                  <ImageZoom
                     src={"/images/muji-chart.png"}
                     alt="MUJI dendrogram chart"
                     width={1280}
@@ -627,13 +634,13 @@ export default function Compawnion() {
                 <div className="row justify-content-center">
                   <div className="col-lg-10">
                     <Carousel>
-                      <div className="text-start">
+                      <div className="px-2 text-start">
                         <p>
                           Information Architecture: Elements reorganised and
                           informed by user research and element analysis
                         </p>
                         <div className="mx-auto">
-                          <Image
+                          <ImageZoom
                             src={"/images/muji-IA_01.png"}
                             alt="Information Architecture"
                             width={7808}
@@ -641,13 +648,13 @@ export default function Compawnion() {
                           />
                         </div>
                       </div>
-                      <div className="text-start">
+                      <div className="px-2 text-start">
                         <p>
                           Information Architecture: Original IA from MUJI SG
                           with 2 different footers
                         </p>
                         <div className="mx-auto" style={{ maxWidth: "345px" }}>
-                          <Image
+                          <ImageZoom
                             src={"/images/muji-IA_02.png"}
                             alt="Information Architecture"
                             width={3840}
@@ -732,7 +739,7 @@ export default function Compawnion() {
                     haha! Next time, I&apos;ll be back with a <em>vengeance</em>{" "}
                     💪🏻
                   </p>
-                  <Image
+                  <ImageZoom
                     src={"/images/muji-first-design-system.png"}
                     alt="My first design system"
                     width={1122}
