@@ -91,7 +91,7 @@ export default function Contact() {
           <div className="col-lg-8 offset-lg-2">
             <div className="d-flex justify-content-between">
               <div ref={linksRef} className={styles.links}>
-                <Link href="https://drive.google.com/file/d/17OXO5I4MqhN4VPery277zxQT4yniQd1V/view?usp=sharing">
+                <Link href="https://drive.google.com/file/d/1ePOpKzwSw1fCSWmxqsn7ctvhaUMTyfyC/view?usp=sharing">
                   <a>RESUME</a>
                 </Link>
                 <Link href="mailto:francinelim21@gmail.com">
