@@ -573,12 +573,11 @@ export default function Compawnion() {
               </TitleContent>
               <TwoColumns
                 column1={
-                  // TODO
                   <Image
-                    src={"/images/designProcess.svg"}
-                    alt="The design process"
-                    width={1146}
-                    height={296}
+                    src={"/images/muji-chart.png"}
+                    alt="MUJI dendrogram chart"
+                    width={1280}
+                    height={460}
                   />
                 }
                 column2={
@@ -615,25 +614,28 @@ export default function Compawnion() {
                           Information Architecture: Elements reorganised and
                           informed by user research and element analysis
                         </p>
-                        <Image
-                          src={"/images/muji-IA_01.png"}
-                          alt="Information Architecture"
-                          width={7808}
-                          height={4342}
-                        />
+                        <div className="mx-auto">
+                          <Image
+                            src={"/images/muji-IA_01.png"}
+                            alt="Information Architecture"
+                            width={7808}
+                            height={4342}
+                          />
+                        </div>
                       </div>
                       <div className="text-start">
                         <p>
                           Information Architecture: Original IA from MUJI SG
                           with 2 different footers
                         </p>
-                        {/* TODO */}
-                        <Image
-                          src={"/images/muji-IA_01.png"}
-                          alt="Information Architecture"
-                          width={7808}
-                          height={4342}
-                        />
+                        <div className="mx-auto" style={{ maxWidth: "345px" }}>
+                          <Image
+                            src={"/images/muji-IA_02.png"}
+                            alt="Information Architecture"
+                            width={3840}
+                            height={5736}
+                          />
+                        </div>
                       </div>
                     </Carousel>
                   </div>
@@ -711,12 +713,11 @@ export default function Compawnion() {
                     a system and creating it in the same week, haha! Next time,
                     I'll be back with a <em>vengeance</em> 💪🏻
                   </p>
-                  {/* TODO */}
                   <Image
-                    src={"/images/designProcess.svg"}
-                    alt="The design process"
-                    width={1146}
-                    height={296}
+                    src={"/images/muji-first-design-system.png"}
+                    alt="My first design system"
+                    width={1122}
+                    height={906}
                   />
                 </DropdownContent>
               </TitleContent>
