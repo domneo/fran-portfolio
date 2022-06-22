@@ -141,7 +141,7 @@ export default function Works() {
               data.map((item, index) => (
                 <Link key={item.id} href={item.link}>
                   <a
-                    className={`${styles.link} d-flex align-items-center flex-column flex-md-row mb-3`}
+                    className={`${styles.link} d-flex align-items-center flex-column flex-md-row mb-5`}
                     style={{
                       cursor: item.link ? "pointer" : "help",
                     }}

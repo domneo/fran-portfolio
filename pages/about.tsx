@@ -121,7 +121,7 @@ export default function About() {
             <Image src={"/images/me.jpg"} alt="Me!" width={400} height={500} />
           </div>
         </div>
-        <div className="row justify-content-center spacer-md">
+        <div className="row justify-content-center spacer-lg">
           <div className="col-lg-10 d-flex">
             <div style={{ padding: "1rem 5rem", color: "var(--platinum)" }}>
               <IconDownArrowLong />
@@ -129,7 +129,7 @@ export default function About() {
           </div>
         </div>
         <div ref={bgSectionTrigger}>
-          <div className="row spacer-md">
+          <div className="row spacer-lg">
             <div className="col text-center">
               <div
                 ref={strikethroughTrigger}
