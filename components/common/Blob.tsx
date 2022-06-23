@@ -163,7 +163,7 @@ export default class Blob extends Component<BlobProps, BlobState> {
     let newIntensity = noiseIntensity;
 
     const easeIntensity = () => {
-      newIntensity -= 0.3;
+      newIntensity -= 1;
       this.setState({ noiseIntensity: newIntensity }, () => {
         if (newIntensity <= 0) {
           cancelAnimationFrame(easeReq);
