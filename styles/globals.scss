@@ -321,6 +321,22 @@ li {
   justify-content: center;
 }
 
+.slick-slider {
+  &:not(.slick-vertical) {
+    .slick-track {
+      display: flex !important;
+      align-items: stretch !important;
+    }
+    .slick-slide {
+      height: auto;
+
+      & > div {
+        height: 100%;
+      }
+    }
+  }
+}
+
 .ReactModal__Overlay {
   opacity: 0;
 }

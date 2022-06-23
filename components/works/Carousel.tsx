@@ -1,5 +1,5 @@
 import { Component, useState } from "react";
-import Slider, { CustomArrowProps } from "react-slick";
+import Slider, { CustomArrowProps, Settings } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
@@ -50,7 +50,7 @@ export class Carousel extends Component<CarouselProps> {
   render() {
     const { children, slidesToShow = 1, spacer } = this.props;
 
-    const settings = {
+    const settings: Settings = {
       speed: 800,
       draggable: false,
       slidesToShow,

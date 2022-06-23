@@ -22,7 +22,7 @@ export const NumberedContentImageColumns = ({
   points,
 }: NumberedContentImageColumnsProps) => {
   return (
-    <div className="row align-items-stretch">
+    <div className="row align-items-stretch h-100">
       <div className="col-xl-6 d-flex align-items-center">
         {number && <p className={`display-1 ${styles.number}`}>{number}</p>}
         <div>

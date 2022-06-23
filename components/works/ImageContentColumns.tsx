@@ -22,7 +22,7 @@ export const ImageContentColumns = ({
   points,
 }: ImageContentColumnsProps) => {
   return (
-    <div className="row align-items-stretch">
+    <div className="row align-items-stretch h-100">
       <div className="col-xl-6 ps-4 pe-5 d-flex align-items-center">
         <ImageZoom
           src={image}
