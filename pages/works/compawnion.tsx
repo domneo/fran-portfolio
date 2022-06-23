@@ -13,6 +13,7 @@ import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
 import { ImageContentColumns } from "components/works/ImageContentColumns";
 import { KeyIssue } from "components/works/KeyIssue";
+import { MultiImageNumberedContent } from "components/works/MultiImageNumberedContent";
 import { NarrowTitlePoints } from "components/works/NarrowTitlePoints";
 import { NumberedContentImageColumns } from "components/works/NumberedContentImageColumns";
 import { NumberedKeyPoint } from "components/works/NumberedKeyPoint";
@@ -240,7 +241,7 @@ export default function Compawnion() {
                   </strong>
                 </p>
               </TitleContent>
-              <Carousel spacer="lg">
+              <Carousel centerVertically spacer="lg">
                 <ImageContentColumns
                   image={"/images/compawnion-affinity-map_01.png"}
                   imageWidth={3491}
@@ -380,8 +381,8 @@ export default function Compawnion() {
                 ]}
                 spacer="lg"
               />
-              <TitleContent title="User Flows" centralise>
-                <p>
+              <TitleContent title="User Flows" centralise spacer="sm">
+                <p className="mb-0">
                   Before we could create the app, we had to understand and
                   empathise with the decisions and paths Pawline might take to
                   achieve her goals on a more granular level. This would help
@@ -390,8 +391,16 @@ export default function Compawnion() {
                   these pathways before identifying key issues to solve.
                 </p>
               </TitleContent>
-              <Carousel spacer="lg">
-                <NumberedContentImageColumns
+              <Carousel centerVertically spacer="lg">
+                <MultiImageNumberedContent
+                  topContent={
+                    <ImageZoom
+                      src={"/images/compawnion-userflow-01.png"}
+                      alt="Pet adoption is not linear and has a lot of unnecessary repeated actions"
+                      width={3840}
+                      height={950}
+                    />
+                  }
                   number={"1"}
                   title={
                     "Pet adoption is not linear and has a lot of unnecessary repeated actions"
@@ -400,11 +409,18 @@ export default function Compawnion() {
                     "Administrative processes and face-to-face interactions are broken up and repetitive",
                     "If adopters have to repeat certain steps in the adoption process, they must start anew from a much earlier stage - tedious, frustrating for adopters",
                   ]}
-                  image={"/images/compawnion-userflow-01.png"}
-                  imageWidth={3840}
-                  imageHeight={950}
                 />
-                <NumberedContentImageColumns
+                <MultiImageNumberedContent
+                  topContent={
+                    <div className="mx-auto" style={{ maxWidth: "1147px" }}>
+                      <ImageZoom
+                        src={"/images/compawnion-userflow-02.png"}
+                        alt="Search process is circular and time consuming"
+                        width={4513}
+                        height={1653}
+                      />
+                    </div>
+                  }
                   number={"2"}
                   title={"Search process is circular and time consuming"}
                   points={[
@@ -429,11 +445,18 @@ export default function Compawnion() {
                       </ul>
                     </>,
                   ]}
-                  image={"/images/compawnion-userflow-02.png"}
-                  imageWidth={4513}
-                  imageHeight={1653}
                 />
-                <NumberedContentImageColumns
+                <MultiImageNumberedContent
+                  topContent={
+                    <div className="mx-auto" style={{ maxWidth: "628px" }}>
+                      <ImageZoom
+                        src={"/images/compawnion-userflow-03.png"}
+                        alt="Administrative processes and face-to-face interactions are broken up and repetitive"
+                        width={3167}
+                        height={2329}
+                      />
+                    </div>
+                  }
                   number={"3"}
                   title={
                     "Administrative processes and face-to-face interactions are broken up and repetitive"
@@ -441,9 +464,6 @@ export default function Compawnion() {
                   points={[
                     "Processes are also repeated for each new shelter the adopter wants to interact with",
                   ]}
-                  image={"/images/compawnion-userflow-03.png"}
-                  imageWidth={3167}
-                  imageHeight={2329}
                 />
               </Carousel>
             </Section>
@@ -465,10 +485,10 @@ export default function Compawnion() {
                   </p>
                 </DropdownContent>
                 <Image
-                  src={"/images/compawnion-wireframes-01.png"}
-                  alt="Wireframes"
-                  width={2020}
-                  height={1200}
+                  src={"/images/compawnion-sketches.jpg"}
+                  alt="Sketches"
+                  width={2498}
+                  height={1488}
                 />
               </TitleContent>
             </Section>
@@ -476,10 +496,11 @@ export default function Compawnion() {
               <TitleContent title="Mid-fi Prototype" centralise spacer="lg">
                 <div className="mt-5 mb-4">
                   <Image
-                    src={"/images/compawnion-wireframes-02.png"}
+                    src={"/images/compawnion-midfi-withframe.png"}
                     alt="Mid-fi prototype"
-                    width={1524}
-                    height={1336}
+                    width={2870}
+                    height={1952}
+                    unoptimized
                   />
                 </div>
                 <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_COMPAWNION || ""}>
