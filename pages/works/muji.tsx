@@ -26,7 +26,7 @@ export const meta = {
   image: "/images/muji-hero.jpg",
   title: "Muji",
   subtitle:
-    "Transforming an e-catalog into a seamless &apos;MUJI&apos; e-commerce experience for shoppers",
+    "Transforming an e-catalog into a seamless ‘MUJI’ e-commerce experience for shoppers",
   details: [
     {
       title: "Challenge",
@@ -67,7 +67,7 @@ export default function Compawnion() {
               spacer="lg"
             />
             <Section title="KICKOFF">
-              <TitleContent spacer="sm">
+              <TitleContent spacer="md">
                 <p>
                   If there was a brand that immutably embodies its values to its
                   very core, you can bet your bottom dollar it&apos;s MUJI. The
@@ -115,7 +115,7 @@ export default function Compawnion() {
                     imageWidth={1500}
                     imageHeight={1000}
                     title={
-                      "In a convenience sampling of 26 MUJI shoppers, an overwhelming majority believed they could shop on MUJI&apos;s website"
+                      "In a convenience sampling of 26 MUJI shoppers, an overwhelming majority believed they could shop on MUJI's website"
                     }
                     points={[
                       "23 / 26 people believed that the site supported e-commerce",
@@ -138,7 +138,7 @@ export default function Compawnion() {
                   imageWidth={792}
                   imageHeight={870}
                   number="01."
-                  title={"All consumers want to shop on MUJI&apos;s website"}
+                  title={"All consumers want to shop on MUJI's website"}
                   points={[
                     "50% of interviewees were surprised that this feature did not already exist",
                     "Further validates the convenient sampling results",
@@ -160,12 +160,12 @@ export default function Compawnion() {
                   imageHeight={1223}
                   number="03."
                   title={
-                    "Brand websites should reflect consumers&apos; preconceived impressions and experiences with its physical stores"
+                    "Brand websites should reflect consumers' preconceived impressions and experiences with its physical stores"
                   }
                   points={[
-                    "Disconnect in experience on MUJI&apos;s website and physical store",
+                    "Disconnect in experience on MUJI's website and physical store",
                     "Brand identity affects how consumers perceive a brand and what they expect to experience",
-                    "Experience and branding should also carry over into a brand&apos;s mobile and app counterparts",
+                    "Experience and branding should also carry over into a brand's mobile and app counterparts",
                   ]}
                 />
                 <ImageContentColumns
@@ -192,7 +192,7 @@ export default function Compawnion() {
                   points={[
                     "No advertisements or gamification elements",
                     "Be able to find products and compare information quickly and efficiently",
-                    "Given MUJI&apos;s reputation for minimalism and functionalism, consumers expect these concepts to be a given on its website as well",
+                    "Given MUJI's reputation for minimalism and functionalism, consumers expect these concepts to be a given on its website as well",
                   ]}
                 />
               </Carousel>
@@ -355,11 +355,11 @@ export default function Compawnion() {
                   All our interview insights and research eventually culminated
                   into...
                 </p>
-                <ImageZoom
+                <Image
                   src={"/images/muji-persona.png"}
                   alt="MUJI Persona"
-                  width={1306}
-                  height={462}
+                  width={2612}
+                  height={988}
                 />
               </TitleContent>
             </Section>
@@ -426,7 +426,7 @@ export default function Compawnion() {
                       <strong>3 / 4</strong> users were unable to discover
                       products due to the &apos;filter&apos; navigation system
                     </>,
-                    "The site&apos;s &apos;filter&apos; navigation system meant that users had to navigate through filters to access certain pages",
+                    "The site's 'filter' navigation system meant that users had to navigate through filters to access certain pages",
                   ]}
                   image="/images/muji-user-flow_01.png"
                   imageWidth={6394}
@@ -467,7 +467,7 @@ export default function Compawnion() {
                         <li>Be willing to visit a physical store</li>
                       </ul>
                     </>,
-                    "Strays away from MUJI&apos;s principle of streamlining processes",
+                    "Strays away from MUJI's principle of streamlining processes",
                   ]}
                   image="/images/muji-user-flow_03.png"
                   imageWidth={2341}
@@ -479,7 +479,7 @@ export default function Compawnion() {
                 spacer="md"
                 centralise
               >
-                <p className="mb-5">
+                <p className="mb-0 spacer-md">
                   Without an online checkout in place, MUJI SG would benefit
                   from a task analysis of the its competitors&apos; checkout
                   processes. This allows me to not only deconstruct the checkout

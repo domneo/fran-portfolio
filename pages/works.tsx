@@ -27,7 +27,7 @@ const data = [
     link: "/works/compawnion",
     title: "Compawnion: adoption streamlined",
     description:
-      "Making information easily accessible while reducing the administrative side of pet adoption in Singapore",
+      "Making information easily accessible while reducing the administrative side of pet adoption in Singapore (🐣 My debut UIUX project!)",
     concepts: [
       "User interviews & Research",
       "Usability Tests",

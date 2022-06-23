@@ -221,6 +221,7 @@ export default function About() {
             </div>
           </div>
         </div>
+        <div className="spacer-lg" />
         <div className="row spacer-lg">
           <div className="col">
             <p className="h2 text-bone">

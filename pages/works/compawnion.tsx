@@ -64,7 +64,7 @@ export default function Compawnion() {
               spacer="lg"
             />
             <Section title="KICKOFF">
-              <TitleContent spacer={"md"}>
+              <TitleContent spacer={"lg"}>
                 <p>
                   While talking about our dreams and aspirations, my teammate
                   and I realised two things:
@@ -280,7 +280,7 @@ export default function Compawnion() {
                   points={[
                     "Prefer expending minimum effort in the administrative aspects of the adoption process",
                     "Want soft copies of forms and documents",
-                    "Don&apos;t have a reliable way to keep track of pre- and post-adoption tasks",
+                    "Don't have a reliable way to keep track of pre- and post-adoption tasks",
                   ]}
                 />
                 <ImageContentColumns
@@ -306,20 +306,20 @@ export default function Compawnion() {
                   }
                   points={[
                     "Adopters must and want to have face-to-face interaction with pets before committing to the adoption",
-                    "Shelter staff actively observe the pet&apos;s behaviour at a trial home stay and evaluation",
+                    "Shelter staff actively observe the pet's behaviour at a trial home stay and evaluation",
                   ]}
                 />
               </Carousel>
-              <TitleContent title="Persona" centralise spacer="lg">
+              <TitleContent title="Persona" centralise fullwidth spacer="lg">
                 <p>
                   All our interview insights and research eventually culminated
                   into...
                 </p>
-                <ImageZoom
+                <Image
                   src={"/images/compawnion-persona.png"}
                   alt="Persona"
-                  width={1306}
-                  height={433}
+                  width={2612}
+                  height={930}
                 />
               </TitleContent>
             </Section>

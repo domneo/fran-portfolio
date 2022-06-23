@@ -2,6 +2,7 @@ import { Component } from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { v4 as uuidv4 } from "uuid";
 
 interface MeToProps {
   lines: Array<string>;
@@ -36,7 +37,7 @@ export class MeTo extends Component<MeToProps> {
         </div>
         <Slider {...settings}>
           {lines.map((line) => (
-            <h3>{line}</h3>
+            <h3 key={uuidv4()}>{line}</h3>
           ))}
         </Slider>
       </>
