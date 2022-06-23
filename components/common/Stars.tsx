@@ -5,7 +5,7 @@ interface StarsProps {
 }
 
 export const Stars = ({ children }: StarsProps) => {
-  const resetColor = "#eaeae7";
+  const resetColor = "var(--platinum)";
   const colorCycleMatrix = useMemo(
     () => [
       ["#d1d1bc", "#8c97ad", "#eded82", "#e6d3d3", "#a0b8a8"],

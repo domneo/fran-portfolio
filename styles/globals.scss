@@ -302,12 +302,6 @@ li {
 .contact-cta {
   color: var(--white);
   transition: 0.3s color;
-
-  &:hover,
-  &:focus {
-    color: var(--copperrose);
-    transition: 0.3s color;
-  }
 }
 
 .contact-cta-text {

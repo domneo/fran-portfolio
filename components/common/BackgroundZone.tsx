@@ -64,6 +64,7 @@ export const BackgroundZone = ({
           {`
             body {
               background: ${isInView ? background : "var(--black)"};
+              --white: ${isInView ? "#111111" : "#f4f0f0"};
               --platinum: ${isInView ? "#111111" : "#eaeae7"};
               --bone: ${isInView ? "#111111" : "#d1d1bc"};
             }

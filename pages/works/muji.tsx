@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Layout from "components/Layout";
+import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
 import { ImageZoom } from "components/common/ImageZoom";
 import { Stars } from "components/common/Stars";
@@ -752,13 +753,15 @@ export default function Compawnion() {
                 spacer="lg"
               />
             </Section>
-            <div className="spacer-lg">
-              <Stars />
-            </div>
-            <ContactCTA spacer="lg">
-              If you&apos;re interested in working together or finding out more,
-              feel free to reach out ✨
-            </ContactCTA>
+            <BackgroundZone background="var(--contact)">
+              <div className="spacer-lg">
+                <Stars />
+              </div>
+              <ContactCTA spacer="lg">
+                If you&apos;re interested in working together or finding out
+                more, feel free to reach out ✨
+              </ContactCTA>
+            </BackgroundZone>
           </div>
         </div>
       </div>

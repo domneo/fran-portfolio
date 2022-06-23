@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "styles/About.module.scss";
 
 import Layout from "components/Layout";
+import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
 import { IconDownArrowLong } from "components/common/IconDownArrowLong";
 import { Stars } from "components/common/Stars";
@@ -252,15 +253,17 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="spacer-lg">
-          <Stars />
-        </div>
-        <ContactCTA spacer="lg">
-          If you&apos;re looking to collaborate, come say hi!{" "}
-          <span className="d-inline-block">
-            I&apos;m happy to connect about work or play
-          </span>
-        </ContactCTA>
+        <BackgroundZone background="var(--contact)">
+          <div className="spacer-lg">
+            <Stars />
+          </div>
+          <ContactCTA spacer="lg">
+            If you&apos;re looking to collaborate, come say hi!{" "}
+            <span className="d-inline-block">
+              I&apos;m happy to connect about work or play
+            </span>
+          </ContactCTA>
+        </BackgroundZone>
       </div>
     </Layout>
   );
