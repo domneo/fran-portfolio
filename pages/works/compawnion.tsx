@@ -330,7 +330,7 @@ export default function Compawnion() {
                   was time to get down and dirty - we had to know exactly what
                   we were trying to solve. By charting a journey map, we can
                   visualise the highs and the lows of Pawline&apos;s journey to
-                  becoming a pet slave owner.
+                  becoming a pet <s>slave</s> owner.
                 </p>
                 <div className="mb-5">
                   <ImageZoom
