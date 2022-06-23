@@ -136,8 +136,8 @@ export default function Compawnion() {
                           Singapore before being released to the region
                         </li>
                         <li>
-                          Global increase in MUJI's physical stores despite the
-                          COVID-19 pandemic
+                          Global increase in MUJI&apos;s physical stores despite
+                          the COVID-19 pandemic
                         </li>
                       </ul>
                     }
@@ -155,8 +155,8 @@ export default function Compawnion() {
                         </li>
                         <li>
                           As of 2022, Singapore-based users can only use the app
-                          to accumulate points from purchases at MUJI's physical
-                          stores
+                          to accumulate points from purchases at MUJI&apos;s
+                          physical stores
                         </li>
                       </ul>
                     }
@@ -655,7 +655,7 @@ export default function Compawnion() {
                 <p className="mb-0 spacer-md">
                   The only difference was that they had to complete a Checkout
                   Flow as well. Even with a higher participant number, my
-                  prototype's average was not only higher than the original
+                  prototype&apos;s average was not only higher than the original
                   site, but was <strong>waay above average</strong>!
                 </p>
                 <Image
