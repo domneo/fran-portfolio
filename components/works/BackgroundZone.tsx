@@ -19,12 +19,13 @@ export const BackgroundZone = ({
 
   // Target the div DOM element
   const refreshTrigger = useRef<HTMLDivElement>(null);
-  const refreshTriggerId = `refreshTrigger-${uuidv4()}`;
   const mainTrigger = useRef<HTMLDivElement>(null);
-  const mainTriggerId = `mainTrigger-${uuidv4()}`;
 
   // Change the active state when scrolling into the viewport
   useEffect(() => {
+    const refreshTriggerId = `refreshTrigger-${uuidv4()}`;
+    const mainTriggerId = `mainTrigger-${uuidv4()}`;
+
     ScrollTrigger.create({
       // markers: true,
       id: refreshTriggerId,
