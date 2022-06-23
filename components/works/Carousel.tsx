@@ -39,6 +39,7 @@ const getSlidesToShowResponsive = (slidesToShow?: number) => {
 interface CarouselProps {
   children?: React.ReactNode;
   slidesToShow?: 1 | 2 | 3;
+  centerVertically?: boolean;
   spacer?: "sm" | "md" | "lg";
 }
 
@@ -48,7 +49,12 @@ export class Carousel extends Component<CarouselProps> {
   }
 
   render() {
-    const { children, slidesToShow = 1, spacer } = this.props;
+    const {
+      children,
+      slidesToShow = 1,
+      centerVertically = false,
+      spacer,
+    } = this.props;
 
     const settings: Settings = {
       speed: 800,
@@ -77,7 +83,11 @@ export class Carousel extends Component<CarouselProps> {
     };
 
     return (
-      <div className={`${styles.container} spacer-${spacer || ""}`}>
+      <div
+        className={`${styles.container} ${
+          centerVertically ? "center-vertically" : ""
+        } spacer-${spacer || ""}`}
+      >
         <Slider {...settings}>{children}</Slider>
       </div>
     );

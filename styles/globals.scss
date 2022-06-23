@@ -337,6 +337,19 @@ li {
   }
 }
 
+.center-vertically {
+  .slick-slider {
+    &:not(.slick-vertical) {
+      .slick-slide {
+        & > div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
 .ReactModal__Overlay {
   opacity: 0;
 }

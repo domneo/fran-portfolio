@@ -16,8 +16,8 @@ export const MultiImageNumberedContent = ({
   points,
 }: MultiImageNumberedContentProps) => {
   return (
-    <div>
-      <div className="row">
+    <div className="container-fluid">
+      <div className="row mb-5">
         <div className="col">{topContent}</div>
       </div>
       <div className="row justify-content-center">

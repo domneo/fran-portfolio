@@ -28,6 +28,7 @@ export const ImageZoom = ({ src, alt, width, height }: ImageZoomProps) => {
         layout="fill"
         objectFit="contain"
         objectPosition="center"
+        quality={85}
       />
       <div className="position-absolute bottom-0 end-0">
         <IconZoom onClick={() => setModalOpen(true)} />
@@ -47,7 +48,13 @@ export const ImageZoom = ({ src, alt, width, height }: ImageZoomProps) => {
         <TransformWrapper centerOnInit>
           <TransformComponent wrapperClass="w-100 h-100">
             <div style={{ padding: "5rem" }}>
-              <Image src={src} alt={alt} width={width} height={height} />
+              <Image
+                src={src}
+                alt={alt}
+                width={width}
+                height={height}
+                unoptimized
+              />
             </div>
           </TransformComponent>
         </TransformWrapper>
