@@ -87,9 +87,9 @@ export default function Kickstarter() {
                   </p>
                   <p>
                     Traffic and revenue are key factors in determining
-                    Kickstarter's success - higher traffic could lead to higher
-                    conversion rates (projects backed), and an increase in
-                    revenue. Notably, Kickstarter gains revenue through a 5%
+                    Kickstarter&apos;s success - higher traffic could lead to
+                    higher conversion rates (projects backed), and an increase
+                    in revenue. Notably, Kickstarter gains revenue through a 5%
                     commission per project backing.
                   </p>
                 </div>
@@ -136,8 +136,8 @@ export default function Kickstarter() {
                 <p className="mb-0">
                   We also did a competitive analysis between Kickstarter and its
                   direct and indirect competitors to get a better understanding
-                  of the crowdfunding landscape and various companies' offerings
-                  for visitors.
+                  of the crowdfunding landscape and various companies&apos;
+                  offerings for visitors.
                 </p>
               </TitleContent>
               <div className="mx-auto spacer-md">
@@ -173,14 +173,14 @@ export default function Kickstarter() {
                 </Carousel>
                 <p className="mb-0">
                   <strong>
-                    Interestingly, despite Kickstarter's low backing rates, it
-                    was outperforming its competitors in terms of its features
-                    and elements.
+                    Interestingly, despite Kickstarter&apos;s low backing rates,
+                    it was outperforming its competitors in terms of its
+                    features and elements.
                   </strong>
                 </p>
                 <p className="mb-0">
                   So the next step was clear: we had to hear it straight from
-                  the horses' mouths (project backers themselves).
+                  the horses&apos; mouths (project backers themselves).
                 </p>
               </TitleContent>
               <TitleContent title="Primary Research" centralise fullwidth>
@@ -228,9 +228,9 @@ export default function Kickstarter() {
                           analysis research and user research
                         </li>
                         <li>
-                          Solutionising or developing problem statements weren't
-                          options as the problem spaces were too broad or
-                          assumptive
+                          Solutionising or developing problem statements
+                          weren&apos;t options as the problem spaces were too
+                          broad or assumptive
                         </li>
                       </ul>
                     }
