@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import removeWidows from "hooks/useRemoveWidows";
 import styles from "styles/works/DropdownContent.module.scss";
 
 interface DropdownContentProps {
@@ -34,7 +35,7 @@ export const DropdownContent = ({
             fill="currentColor"
           />
         </svg>
-        <strong className="px-2">{title}</strong>
+        <strong className="px-2">{removeWidows(title)}</strong>
       </button>
       <div
         className={styles.content}

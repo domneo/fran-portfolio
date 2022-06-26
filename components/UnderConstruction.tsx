@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import removeWidows from "hooks/useRemoveWidows";
 import styles from "styles/UnderConstruction.module.scss";
 
 import Blob from "components/common/Blob";
@@ -28,11 +29,12 @@ export const UnderConstruction = ({ children }: UnderConstructionProps) => {
             <p className="caption">
               Hellooooo!
               <br />
-              The mobile site is still under construction, so this site is best
-              viewed on desktop &lt;:
+              {removeWidows(
+                "The mobile site is still under construction, so this site is best viewed on desktop <:"
+              )}
             </p>
             <p className="caption">
-              If you&apos;re alright with that, go on ahead ✨
+              {removeWidows("If you're alright with that, go on ahead ✨")}
             </p>
             <button
               className={styles.button}

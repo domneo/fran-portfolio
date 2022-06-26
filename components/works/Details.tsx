@@ -1,3 +1,4 @@
+import removeWidows from "hooks/useRemoveWidows";
 import styles from "styles/works/Details.module.scss";
 
 import { Stars } from "components/common/Stars";
@@ -24,7 +25,7 @@ export const Details = ({ details, debut = false }: DetailsProps) => {
                   <h5 className="text-works">{detail.title}</h5>
                 </div>
                 <div className="col-9">
-                  <p className="mb-3">{detail.content}</p>
+                  <p className="mb-3">{removeWidows(detail.content)}</p>
                 </div>
               </div>
             ))}

@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+import removeWidows from "hooks/useRemoveWidows";
 import styles from "styles/works/Header.module.scss";
 
 interface HeaderProps {
@@ -63,7 +64,7 @@ export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
         } spacer-md`}
       >
         <h1 className="display-1">{title}</h1>
-        <h2 className="display-5 text-bone">{subtitle}</h2>
+        <h2 className="display-5 text-bone">{removeWidows(subtitle)}</h2>
       </div>
     </>
   );
