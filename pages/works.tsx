@@ -83,7 +83,7 @@ const data = [
         />
       </svg>
     ),
-    link: "",
+    link: "/works/kickstarter",
     title: "Kickstarter: Levelling up the Campaign",
     description:
       "Enhancing the project backing experience with new info-centric features dreamt up by backers for backers",
@@ -94,7 +94,7 @@ const data = [
       "Design System",
       "Prototyping",
     ],
-    image: "/images/ks-comingsoon.png",
+    image: "/images/ks-hero.jpg",
   },
   {
     id: uuidv4(),

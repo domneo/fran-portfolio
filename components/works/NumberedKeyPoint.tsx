@@ -14,7 +14,7 @@ export const NumberedKeyPoint = ({
   return (
     <div className={styles.container}>
       {number && <p className={styles.number}>{number}</p>}
-      <h5 className="paragraph text-center mb-3">{title}</h5>
+      <h5 className="paragraph text-center mb-4">{title}</h5>
       <div className={styles.line} />
       {content}
     </div>
