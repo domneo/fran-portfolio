@@ -449,7 +449,7 @@ export default function Kickstarter() {
               </Highlight>
             </Section>
             <Section title="IDEATE">
-              <TitleContent title="Design Studio" centralise spacer="md">
+              <TitleContent title="Design Studio" centralise spacer="lg">
                 <p>
                   To creatively address the problem spaces defined by the HMW
                   statements, we conducted a design studio that utilised the
@@ -457,45 +457,53 @@ export default function Kickstarter() {
                   seemingly unrelated environments and situations to spark new
                   and fresh ideas.
                 </p>
-                <p className="mb-0">
+                <p className="spacer-md">
                   Here, we mashed up 2 experiences – a buffet and an aquarium
                   visit – with Kickstarter to generate new ideas!
                 </p>
+                <Carousel centerVertically>
+                  <div className="container">
+                    <div className="mx-auto" style={{ maxWidth: "936px" }}>
+                      <ImageZoom
+                        src="/images/ks-ideation-1.png"
+                        alt="ideation"
+                        width={4500}
+                        height={1923}
+                      />
+                    </div>
+                  </div>
+                  <div className="container">
+                    <div className="mx-auto" style={{ maxWidth: "632px" }}>
+                      <ImageZoom
+                        src="/images/ks-ideation-2.jpg"
+                        alt="ideation"
+                        width={4442}
+                        height={2812}
+                      />
+                    </div>
+                  </div>
+                  <div className="container">
+                    <div className="mx-auto" style={{ maxWidth: "887px" }}>
+                      <ImageZoom
+                        src="/images/ks-ideation-3.png"
+                        alt="ideation"
+                        width={4043}
+                        height={1822}
+                      />
+                    </div>
+                  </div>
+                  <div className="container">
+                    <div className="mx-auto" style={{ maxWidth: "637px" }}>
+                      <ImageZoom
+                        src="/images/ks-ideation-4.jpg"
+                        alt="ideation"
+                        width={5508}
+                        height={3460}
+                      />
+                    </div>
+                  </div>
+                </Carousel>
               </TitleContent>
-              <Carousel spacer="lg">
-                <div style={{ maxWidth: "936px" }}>
-                  <ImageZoom
-                    src="/images/ks-ideation-1.png"
-                    alt="ideation"
-                    width={0}
-                    height={0}
-                  />
-                </div>
-                <div style={{ maxWidth: "632px" }}>
-                  <ImageZoom
-                    src="/images/ks-ideation-2.png"
-                    alt="ideation"
-                    width={0}
-                    height={0}
-                  />
-                </div>
-                <div style={{ maxWidth: "887px" }}>
-                  <ImageZoom
-                    src="/images/ks-ideation-3.png"
-                    alt="ideation"
-                    width={0}
-                    height={0}
-                  />
-                </div>
-                <div style={{ maxWidth: "637px" }}>
-                  <ImageZoom
-                    src="/images/ks-ideation-4.png"
-                    alt="ideation"
-                    width={0}
-                    height={0}
-                  />
-                </div>
-              </Carousel>
               <div className="text-center spacer-lg">
                 <h4 className="display-4 mb-5">Features</h4>
                 <p>
