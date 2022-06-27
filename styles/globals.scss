@@ -19,6 +19,8 @@
   --coolgrey: #8c97ad;
   --cambridgeblue: #a0b8a8;
   --keylime: #eded82;
+
+  --navajowhite: #fbdc9d;
 }
 
 @font-face {
@@ -374,6 +376,7 @@ li {
   transition: all 0.5s ease-out;
 }
 
+.features-modal-overlay,
 .image-modal-overlay {
   position: fixed;
   top: 0;
@@ -383,6 +386,7 @@ li {
   background: rgba(0, 0, 0, 0.7);
 }
 
+.features-modal-content,
 .image-modal-content {
   position: absolute;
   top: 3rem;
@@ -396,4 +400,9 @@ li {
   border-radius: 0;
   outline: none;
   padding: 0;
+  margin: 0 auto;
+}
+
+.features-modal-content {
+  max-width: 1144px;
 }

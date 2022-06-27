@@ -9,6 +9,7 @@ import { Stars } from "components/common/Stars";
 import { Carousel } from "components/works/Carousel";
 import { Details } from "components/works/Details";
 import { DropdownContent } from "components/works/DropdownContent";
+import { Features } from "components/works/Features";
 import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { Highlight } from "components/works/Highlight";
@@ -63,10 +64,44 @@ export default function Kickstarter() {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <Details details={meta.details} />
-            {/* <FigmaEmbed
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FnBeZP7ff4513KKcYF8Yl7K%2FP3-Web-Prototype%3Fpage-id%3D0%253A1%26node-id%3D5%253A17854%26viewport%3D869%252C131%252C0.06%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A17854"
-              spacer="lg"
-            /> */}
+            <section className="row spacer-md">
+              <div className="col-lg-6 text-center">
+                <Link
+                  href={process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_WEB || ""}
+                >
+                  <a target={"_blank"}>
+                    <Image
+                      src="/images/ks-intro-desktop.png"
+                      alt="Play with the desktop prototype here"
+                      width={1420}
+                      height={866}
+                    />
+                    <span className="mt-2">
+                      Play with the desktop prototype here
+                    </span>
+                  </a>
+                </Link>
+              </div>
+              <div className="col-lg-6 text-center">
+                <Link
+                  href={
+                    process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_MOBILE || ""
+                  }
+                >
+                  <a target={"_blank"}>
+                    <Image
+                      src="/images/ks-intro-mobile.png"
+                      alt="Play with the mobile prototype here"
+                      width={1420}
+                      height={866}
+                    />
+                    <span className="mt-2">
+                      Play with the mobile prototype here
+                    </span>
+                  </a>
+                </Link>
+              </div>
+            </section>
             <Section title="KICKOFF">
               <div className="row align-items-center spacer-md">
                 <div className="col-lg-6">
@@ -290,9 +325,9 @@ export default function Kickstarter() {
                   />
                 </div>
               </Carousel>
-              <Highlight title="Opportunity" spacer="lg">
+              {/* <Highlight title="Opportunity" spacer="lg">
                 <p>How can we</p>
-              </Highlight>
+              </Highlight> */}
               <TitleContent title="Persona" centralise>
                 <p className="mb-5">
                   With the (journey) map to get past the roadblock, we finally
@@ -511,6 +546,7 @@ export default function Kickstarter() {
                     Poke the blobs to learn more about each feature!
                   </strong>
                 </p>
+                <Features />
               </div>
             </Section>
             <Section title="PROTOTYPE">
@@ -520,10 +556,10 @@ export default function Kickstarter() {
                 spacer="lg"
               >
                 <Image
-                  src="/images/"
+                  src="/images/ks-midfi.png"
                   alt="Mid Fidelity Prototype"
-                  width={0}
-                  height={0}
+                  width={2612}
+                  height={1200}
                 />
               </TitleContent>
             </Section>
@@ -598,23 +634,46 @@ export default function Kickstarter() {
                   fidelity - was created.
                 </p>
               </TitleContent>
-              <Image
-                src="/images/"
-                alt="High Fidelity Prototype"
-                width={0}
-                height={0}
-              />
-              <div className="spacer-lg">
-                <Link
-                  href={process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER || ""}
-                >
-                  <a>
-                    <p className="text-center mb-0">
-                      Play with the prototype here
-                    </p>
-                  </a>
-                </Link>
-              </div>
+              <section className="row spacer-lg">
+                <div className="col-lg-6 text-center">
+                  <Link
+                    href={
+                      process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_WEB || ""
+                    }
+                  >
+                    <a target={"_blank"}>
+                      <Image
+                        src="/images/ks-final-desktop.png"
+                        alt="Play with the desktop prototype here"
+                        width={1436}
+                        height={920}
+                      />
+                      <span className="mt-2">
+                        Play with the desktop prototype here
+                      </span>
+                    </a>
+                  </Link>
+                </div>
+                <div className="col-lg-6 text-center">
+                  <Link
+                    href={
+                      process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_MOBILE || ""
+                    }
+                  >
+                    <a target={"_blank"}>
+                      <Image
+                        src="/images/ks-final-mobile.png"
+                        alt="Play with the mobile prototype here"
+                        width={1436}
+                        height={920}
+                      />
+                      <span className="mt-2">
+                        Play with the mobile prototype here
+                      </span>
+                    </a>
+                  </Link>
+                </div>
+              </section>
             </Section>
             <Section title="TEST">
               <TitleContent title="Impact" centralise spacer="lg">
