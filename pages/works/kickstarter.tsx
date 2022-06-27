@@ -249,9 +249,9 @@ export default function Kickstarter() {
                   spaces in the project backing experience, we charted a general
                   user journey map based off the insights we got from our
                   interviews. This helped visually display and capture the highs
-                  and the lows of Kickstarter's project backers. It was, really,
-                  a breath of fresh air that helped clear the fog we were going
-                  through.
+                  and the lows of Kickstarter&apos;s project backers. It was,
+                  really, a breath of fresh air that helped clear the fog we
+                  were going through.
                 </p>
                 <ImageZoom
                   src="/images/ks-journeymap.png"
@@ -335,7 +335,8 @@ export default function Kickstarter() {
                 />
                 <p className="caption mt-2 mb-0">
                   Full user flow of the Research &amp; Decision-Making Stage, as
-                  affected by a user's confidence in a project and its creator
+                  affected by a user&apos;s confidence in a project and its
+                  creator
                 </p>
               </TitleContent>
               <TitleContent title="Insights" centralise spacer="lg">
@@ -394,9 +395,9 @@ export default function Kickstarter() {
               <TitleContent centralise spacer="lg">
                 <p className="mb-0">
                   While it is up to users to decide if they are agreeable with a
-                  product's price and shipping (dependent on their own budget),
-                  we can instead help users to assess the legitimacy of the
-                  project. This would in turn reduce the decision making
+                  product&apos;s price and shipping (dependent on their own
+                  budget), we can instead help users to assess the legitimacy of
+                  the project. This would in turn reduce the decision making
                   process, enhance the legitimacy of creators and projects, and
                   subsequently increase the chances of a successful backing for
                   Kickstarter.

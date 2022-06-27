@@ -57,7 +57,7 @@ export const BackgroundZone = ({
       ScrollTrigger.getById(refreshTriggerId)?.kill();
       ScrollTrigger.getById(mainTriggerId)?.kill();
     };
-  }, []);
+  }, [onEnterOnly]);
 
   return (
     <div ref={refreshTrigger}>
