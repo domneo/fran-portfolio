@@ -753,7 +753,7 @@ export default function Compawnion() {
                 spacer="lg"
               />
             </Section>
-            <BackgroundZone background="var(--contact)">
+            <BackgroundZone background="var(--contact)" onEnterOnly>
               <div className="spacer-lg">
                 <Stars />
               </div>

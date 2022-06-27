@@ -6,11 +6,13 @@ import { v4 as uuidv4 } from "uuid";
 interface BackgroundZoneProps {
   children: React.ReactNode;
   background: string;
+  onEnterOnly?: boolean;
 }
 
 export const BackgroundZone = ({
   children,
   background,
+  onEnterOnly,
 }: BackgroundZoneProps) => {
   const [isInView, setIsInView] = useState(false);
 
@@ -43,7 +45,7 @@ export const BackgroundZone = ({
       id: mainTriggerId,
       trigger: mainTrigger.current,
       start: `top 60%`,
-      end: `bottom 60%`,
+      end: onEnterOnly ? "" : `bottom 60%`,
       onEnter: () => setIsInView(true),
       onLeave: () => setIsInView(false),
       onEnterBack: () => setIsInView(true),
