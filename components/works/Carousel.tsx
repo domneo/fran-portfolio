@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { Children, Component, useState } from "react";
 import Slider, { CustomArrowProps, Settings } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -40,7 +40,6 @@ interface CarouselProps {
   children?: React.ReactNode;
   slidesToShow?: 1 | 2 | 3;
   centerVertically?: boolean;
-  spacer?: "sm" | "md" | "lg";
 }
 
 export class Carousel extends Component<CarouselProps> {
@@ -49,12 +48,7 @@ export class Carousel extends Component<CarouselProps> {
   }
 
   render() {
-    const {
-      children,
-      slidesToShow = 1,
-      centerVertically = false,
-      spacer,
-    } = this.props;
+    const { children, slidesToShow = 1, centerVertically = false } = this.props;
 
     const settings: Settings = {
       speed: 800,
@@ -86,9 +80,13 @@ export class Carousel extends Component<CarouselProps> {
       <div
         className={`${styles.container} ${
           centerVertically ? "center-vertically" : ""
-        } spacer-${spacer || ""}`}
+        }`}
       >
-        <Slider {...settings}>{children}</Slider>
+        <Slider {...settings}>
+          {Children.map(children, (child) => (
+            <div className="px-2">{child}</div>
+          ))}
+        </Slider>
       </div>
     );
   }

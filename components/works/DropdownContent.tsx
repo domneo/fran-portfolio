@@ -5,19 +5,14 @@ import styles from "styles/works/DropdownContent.module.scss";
 
 interface DropdownContentProps {
   children: React.ReactNode;
-  title?: string;
-  spacer?: "sm" | "md" | "lg";
+  title: string;
 }
 
-export const DropdownContent = ({
-  children,
-  title,
-  spacer,
-}: DropdownContentProps) => {
+export const DropdownContent = ({ children, title }: DropdownContentProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`spacer-${spacer || ""}`}>
+    <div>
       <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
         <svg
           width="40"

@@ -201,6 +201,31 @@ li {
   margin-bottom: 0.5rem;
 }
 
+.bg-works {
+  background-color: var(--works);
+}
+.bg-about {
+  background-color: var(--about);
+}
+.bg-contact {
+  background-color: var(--contact);
+}
+.bg-platinum {
+  background-color: var(--platinum);
+}
+.bg-bone {
+  background-color: var(--bone);
+}
+.bg-copperrose {
+  background-color: var(--copperrose);
+}
+.bg-aliceblue {
+  background-color: var(--aliceblue);
+}
+.bg-gainsboro {
+  background-color: var(--gainsboro);
+}
+
 .text-works {
   color: var(--works);
 }
@@ -226,14 +251,15 @@ li {
   color: var(--gainsboro);
 }
 
+.spacer-xs {
+  padding-bottom: 1.5rem;
+}
 .spacer-sm {
   padding-bottom: 3rem;
 }
-
 .spacer-md {
   padding-bottom: 5rem;
 }
-
 .spacer-lg {
   padding-bottom: 10rem;
 }
