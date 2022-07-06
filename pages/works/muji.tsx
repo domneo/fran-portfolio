@@ -15,7 +15,7 @@ import { DropdownContent } from "components/works/DropdownContent";
 import { Header } from "components/works/Header";
 import { Heading } from "components/works/Heading";
 import { Highlight } from "components/works/Highlight";
-import { SectionHeader } from "components/works/SectionHeader";
+import { Section } from "components/works/Section";
 import { Spacer } from "components/works/Spacer";
 import { ThreeColumns } from "components/works/ThreeColumns";
 import { TwoColumns } from "components/works/TwoColumns";
@@ -63,10 +63,7 @@ export default function Muji() {
           <Details details={meta.details} />
         </Container>
       </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="KICKOFF" />
-        </Container>
+      <Section title="KICKOFF">
         <Container size="compact">
           <p>
             If there was a brand that immutably embodies its values to its very
@@ -93,11 +90,8 @@ export default function Muji() {
           </Highlight>
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="PROCESS" />
-        </Container>
+      </Section>
+      <Section title="PROCESS">
         <Container size="normal" centerElements>
           <Image
             src={"/images/designProcess.svg"}
@@ -107,11 +101,8 @@ export default function Muji() {
           />
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="EMPATHISE" />
-        </Container>
+      </Section>
+      <Section title="EMPATHISE">
         <Container size="compact">
           <p>
             Despite being a self-proclaimed MUJI fan, my knowledge about the
@@ -413,11 +404,8 @@ export default function Muji() {
           />
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="DEFINE" />
-        </Container>
+      </Section>
+      <Section title="DEFINE">
         <Container size="compact" centerText>
           <Heading centerText>Defining the Problem</Heading>
           <p>
@@ -732,11 +720,8 @@ export default function Muji() {
           </Carousel>
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="IDEATE" />
-        </Container>
+      </Section>
+      <Section title="IDEATE">
         <Container size="normal" centerElements>
           <Heading>Wireframes</Heading>
           <Spacer size="xs" />
@@ -765,11 +750,8 @@ export default function Muji() {
           </Link>
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="TEST" />
-        </Container>
+      </Section>
+      <Section title="TEST">
         <Container size="compact" centerText centerElements>
           <Heading>System Usability Scale</Heading>
           <p>
@@ -793,11 +775,8 @@ export default function Muji() {
           />
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="REFLECT" />
-        </Container>
+      </Section>
+      <Section title="REFLECT">
         <Container size="compact" centerText centerElements>
           <Heading>Moving Forward</Heading>
           <p>
@@ -886,7 +865,7 @@ export default function Muji() {
           </ThreeColumns>
         </Container>
         <Spacer size="lg" />
-      </section>
+      </Section>
       <section>
         <BackgroundZone background="var(--contact)" onEnterOnly>
           <Stars />

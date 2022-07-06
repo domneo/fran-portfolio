@@ -15,7 +15,7 @@ import { DropdownContent } from "components/works/DropdownContent";
 import { Header } from "components/works/Header";
 import { Heading } from "components/works/Heading";
 import { Highlight } from "components/works/Highlight";
-import { SectionHeader } from "components/works/SectionHeader";
+import { Section } from "components/works/Section";
 import { Spacer } from "components/works/Spacer";
 import { ThreeColumns } from "components/works/ThreeColumns";
 import { TwoColumns } from "components/works/TwoColumns";
@@ -62,10 +62,7 @@ export default function Compawnion() {
           <Details details={meta.details} debut={meta.debut} />
         </Container>
       </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="KICKOFF" />
-        </Container>
+      <Section title="KICKOFF">
         <Container size="compact">
           <p>
             While talking about our dreams and aspirations, my teammate and I
@@ -99,11 +96,8 @@ export default function Compawnion() {
           </Highlight>
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="PROCESS" />
-        </Container>
+      </Section>
+      <Section title="PROCESS">
         <Container size="normal" centerElements>
           <Image
             src={"/images/designProcess.svg"}
@@ -113,11 +107,8 @@ export default function Compawnion() {
           />
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="EMPATHISE" />
-        </Container>
+      </Section>
+      <Section title="EMPATHISE">
         <Container size="compact">
           <p>
             While we had some idea of what pet adoption is like in Singapore,
@@ -409,11 +400,8 @@ export default function Compawnion() {
           />
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="DEFINE" />
-        </Container>
+      </Section>
+      <Section title="DEFINE">
         <Container size="compact" centerElements centerText>
           <Heading centerText>Defining the Problem</Heading>
           <p>
@@ -583,11 +571,8 @@ export default function Compawnion() {
           </Carousel>
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="IDEATE" />
-        </Container>
+      </Section>
+      <Section title="IDEATE">
         <Container size="compact" centerText>
           <Heading centerText>Wireframes</Heading>
           <p>
@@ -613,11 +598,8 @@ export default function Compawnion() {
           />
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="PROTOTYPE" />
-        </Container>
+      </Section>
+      <Section title="PROTOTYPE">
         <Container size="compact" centerText centerElements>
           <Heading centerText>Mid-fi Prototype</Heading>
         </Container>
@@ -636,11 +618,8 @@ export default function Compawnion() {
           </Link>
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="REFLECT" />
-        </Container>
+      </Section>
+      <Section title="REFLECT">
         <Container size="compact" centerText>
           <Heading centerText>Moving Forward</Heading>
           <p>
@@ -715,7 +694,7 @@ export default function Compawnion() {
           </ThreeColumns>
         </Container>
         <Spacer size="lg" />
-      </section>
+      </Section>
       <section>
         <BackgroundZone background="var(--contact)" onEnterOnly>
           <Stars />
