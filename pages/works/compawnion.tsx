@@ -12,7 +12,6 @@ import { Carousel } from "components/works/Carousel";
 import { Container } from "components/works/Container";
 import { Details } from "components/works/Details";
 import { DropdownContent } from "components/works/DropdownContent";
-import { FigmaEmbed } from "components/works/FigmaEmbed";
 import { Header } from "components/works/Header";
 import { Heading } from "components/works/Heading";
 import { Highlight } from "components/works/Highlight";
@@ -62,12 +61,6 @@ export default function Compawnion() {
         <Container size="normal">
           <Details details={meta.details} debut={meta.debut} />
         </Container>
-      </section>
-      <section>
-        {/* <FigmaEmbed
-        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7UEFUo9gkJu8eEl6uzgAdJ%2FCompawnion-Mid-Fi-Prototype%3Fpage-id%3D56%253A5357%26node-id%3D56%253A9525%26viewport%3D558%252C-163%252C0.2%26scaling%3Dscale-down%26starting-point-node-id%3D56%253A9525"
-        spacer="lg"
-      /> */}
       </section>
       <section>
         <Container size="normal">
@@ -245,11 +238,6 @@ export default function Compawnion() {
           </Carousel>
         </Container>
         <Spacer size="lg" />
-      </section>
-      <section>
-        <Container size="normal">
-          <SectionHeader title="EMPATHISE" />
-        </Container>
         <Container size="compact" centerText>
           <p>
             Equipped with secondary research, we headed for a deep dive into
