@@ -3,7 +3,7 @@ import { useState } from "react";
 import ReactModal from "react-modal";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
-import { IconZoom } from "./IconZoom";
+import { IconZoomSimple } from "./IconZoomSimple";
 
 ReactModal.setAppElement("#__next");
 
@@ -22,17 +22,26 @@ export const ImageZoom = ({ src, alt, width, height }: ImageZoomProps) => {
       className="position-relative w-100"
       style={{ aspectRatio: (width / height).toString() }}
     >
-      <Image
-        src={src}
-        alt={alt}
-        layout="fill"
-        objectFit="contain"
-        objectPosition="center"
-        quality={85}
-      />
-      <div className="position-absolute bottom-0 end-0">
-        <IconZoom onClick={() => setModalOpen(true)} />
-      </div>
+      <button
+        className="position-absolute top-0 bottom-0 start-0 end-0 bg-transparent border-0 p-0 m-0"
+        style={{ cursor: "pointer" }}
+        onClick={() => setModalOpen(true)}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          layout="fill"
+          objectFit="contain"
+          objectPosition="center"
+          quality={85}
+        />
+        <div
+          className="position-absolute bg-black"
+          style={{ bottom: ".25rem", right: ".25rem", borderRadius: "100%" }}
+        >
+          <IconZoomSimple />
+        </div>
+      </button>
       <ReactModal
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}

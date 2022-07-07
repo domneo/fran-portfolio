@@ -21,28 +21,30 @@ interface Gutter {
   xl?: GutterSizes;
   xxl?: GutterSizes;
 }
-interface TwoColumnsProps {
+interface ThreeColumnsProps {
   children?: React.ReactNode;
   col1Props?: ColProps;
   col2Props?: ColProps;
+  col3Props?: ColProps;
   centerH?: boolean;
   centerV?: boolean;
   gutter?: Gutter;
 }
-export const TwoColumns = ({
+export const ThreeColumns = ({
   children,
   col1Props,
   col2Props,
+  col3Props,
   centerH,
   centerV,
   gutter,
-}: TwoColumnsProps) => {
+}: ThreeColumnsProps) => {
   const childrenArr = Children.toArray(children);
   const isGutterSet = gutter && Object.keys(gutter).length > 0;
   const rowClass = classNames("row", {
     "justify-content-center": centerH,
     "align-items-center": centerV,
-    "gx-lg-5": !isGutterSet, // Default gutter size
+    "gx-lg-4": !isGutterSet, // Default gutter size
     [`gx-${gutter?.xs}`]: gutter?.xs,
     [`gx-sm-${gutter?.sm}`]: gutter?.sm,
     [`gx-md-${gutter?.md}`]: gutter?.md,
@@ -52,7 +54,7 @@ export const TwoColumns = ({
   });
   const isCol1Set = col1Props && Object.keys(col1Props).length > 0;
   const col1Class = classNames("d-flex flex-column", {
-    "col-lg-6": !isCol1Set, // Default column size
+    "col-lg-4": !isCol1Set, // Default column size
     [`col-${col1Props?.xs}`]: col1Props?.xs,
     [`col-sm-${col1Props?.sm}`]: col1Props?.sm,
     [`col-md-${col1Props?.md}`]: col1Props?.md,
@@ -64,7 +66,7 @@ export const TwoColumns = ({
   });
   const isCol2Set = col2Props && Object.keys(col2Props).length > 0;
   const col2Class = classNames("d-flex flex-column", {
-    "col-lg-6": !isCol2Set, // Default column size
+    "col-lg-4": !isCol2Set, // Default column size
     [`col-${col2Props?.xs}`]: col2Props?.xs,
     [`col-sm-${col2Props?.sm}`]: col2Props?.sm,
     [`col-md-${col2Props?.md}`]: col2Props?.md,
@@ -74,10 +76,23 @@ export const TwoColumns = ({
     "align-items-center": col2Props?.centerH,
     "justify-content-center": col2Props?.centerV,
   });
+  const isCol3Set = col3Props && Object.keys(col3Props).length > 0;
+  const col3Class = classNames("d-flex flex-column", {
+    "col-lg-4": !isCol3Set, // Default column size
+    [`col-${col3Props?.xs}`]: col3Props?.xs,
+    [`col-sm-${col3Props?.sm}`]: col3Props?.sm,
+    [`col-md-${col3Props?.md}`]: col3Props?.md,
+    [`col-lg-${col3Props?.lg}`]: col3Props?.lg,
+    [`col-xl-${col3Props?.xl}`]: col3Props?.xl,
+    [`col-xxl-${col3Props?.xxl}`]: col3Props?.xxl,
+    "align-items-center": col3Props?.centerH,
+    "justify-content-center": col3Props?.centerV,
+  });
   return (
     <div className={rowClass}>
       <div className={col1Class}>{childrenArr[0]}</div>
       <div className={col2Class}>{childrenArr[1]}</div>
+      <div className={col3Class}>{childrenArr[2]}</div>
     </div>
   );
 };

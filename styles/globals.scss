@@ -156,8 +156,12 @@ h5,
 p,
 .paragraph {
   margin-top: 0;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   @include font-size(18px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 b,
@@ -179,7 +183,7 @@ small,
 
 a,
 .link {
-  color: var(--bone);
+  color: var(--platinum);
   text-decoration: underline;
   letter-spacing: 0.03em;
   border-radius: 0.25rem;
@@ -194,7 +198,7 @@ a,
 
 ol,
 ul {
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.5rem;
   padding-left: 1.75rem;
 }
 
@@ -202,6 +206,12 @@ li {
   margin-bottom: 0.5rem;
 }
 
+.bg-black {
+  background-color: var(--black) !important;
+}
+.bg-white {
+  background-color: var(--white) !important;
+}
 .bg-works {
   background-color: var(--works);
 }
@@ -227,6 +237,12 @@ li {
   background-color: var(--gainsboro);
 }
 
+.text-black {
+  color: var(--black) !important;
+}
+.text-white {
+  color: var(--white) !important;
+}
 .text-works {
   color: var(--works);
 }
@@ -424,7 +440,7 @@ li {
   background: var(--black);
   box-shadow: 0 0 1rem 0.5rem rgba(174, 194, 180, 0.2);
   overflow: auto;
-  border-radius: 0;
+  border-radius: 0.5rem;
   outline: none;
   padding: 0;
   margin: 0 auto;

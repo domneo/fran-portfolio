@@ -10,10 +10,9 @@ interface HeaderProps {
   image: string;
   number: string;
   title: string;
-  subtitle: string;
 }
 
-export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
+export const Header = ({ image, number, title }: HeaderProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Register the ScrollTrigger Plugin
@@ -61,10 +60,9 @@ export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
       <div
         className={`${styles.titleWrapper} ${
           isExpanded ? styles.expanded : ""
-        } spacer-md`}
+        }`}
       >
         <h1 className="display-1">{title}</h1>
-        <h2 className="display-5 text-bone">{removeWidows(subtitle)}</h2>
       </div>
     </>
   );
