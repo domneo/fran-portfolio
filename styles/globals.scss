@@ -156,13 +156,18 @@ h5,
 p,
 .paragraph {
   margin-top: 0;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   @include font-size(18px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 b,
 strong,
-.bold {
+.bold,
+.fw-bold {
   font-weight: 500;
 }
 
@@ -178,7 +183,7 @@ small,
 
 a,
 .link {
-  color: var(--bone);
+  color: var(--platinum);
   text-decoration: underline;
   letter-spacing: 0.03em;
   border-radius: 0.25rem;
@@ -193,14 +198,55 @@ a,
 
 ol,
 ul {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   padding-left: 1.75rem;
+
+  &:last-child {
+    margin-bottom: 0.5rem;
+  }
 }
 
 li {
   margin-bottom: 0.5rem;
 }
 
+.bg-black {
+  background-color: var(--black) !important;
+}
+.bg-white {
+  background-color: var(--white) !important;
+}
+.bg-works {
+  background-color: var(--works);
+}
+.bg-about {
+  background-color: var(--about);
+}
+.bg-contact {
+  background-color: var(--contact);
+}
+.bg-platinum {
+  background-color: var(--platinum);
+}
+.bg-bone {
+  background-color: var(--bone);
+}
+.bg-copperrose {
+  background-color: var(--copperrose);
+}
+.bg-aliceblue {
+  background-color: var(--aliceblue);
+}
+.bg-gainsboro {
+  background-color: var(--gainsboro);
+}
+
+.text-black {
+  color: var(--black) !important;
+}
+.text-white {
+  color: var(--white) !important;
+}
 .text-works {
   color: var(--works);
 }
@@ -226,14 +272,15 @@ li {
   color: var(--gainsboro);
 }
 
+.spacer-xs {
+  padding-bottom: 1.5rem;
+}
 .spacer-sm {
   padding-bottom: 3rem;
 }
-
 .spacer-md {
   padding-bottom: 5rem;
 }
-
 .spacer-lg {
   padding-bottom: 10rem;
 }
@@ -389,20 +436,30 @@ li {
 .features-modal-content,
 .image-modal-content {
   position: absolute;
-  top: 3rem;
-  bottom: 3rem;
   left: 3rem;
   right: 3rem;
   border: 2px solid var(--works);
   background: var(--black);
   box-shadow: 0 0 1rem 0.5rem rgba(174, 194, 180, 0.2);
   overflow: auto;
-  border-radius: 0;
+  border-radius: 0.5rem;
   outline: none;
   padding: 0;
   margin: 0 auto;
 }
 
 .features-modal-content {
+  top: 50%;
+  transform: translateY(-50%);
   max-width: 1144px;
+  max-height: calc(100vh - 6rem);
+
+  li {
+    font-size: 0.875rem;
+  }
+}
+
+.image-modal-content {
+  top: 3rem;
+  bottom: 3rem;
 }

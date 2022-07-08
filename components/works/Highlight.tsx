@@ -29,34 +29,24 @@ const Star = ({ style }: IconProps) => (
 );
 
 interface HighlightProps {
-  type?: "quote" | "star";
+  type: "quote" | "star";
   title?: string;
   children?: React.ReactNode;
-  spacer?: "sm" | "md" | "lg";
 }
 
-export const Highlight = ({
-  type = "star",
-  title,
-  children,
-  spacer,
-}: HighlightProps) => (
-  <div className={`row justify-content-center spacer-${spacer || ""}`}>
-    <div className={`col-10 text-center d-flex justify-content-between`}>
-      {type === "quote" && <Quote />}
-      {type === "star" && <Star />}
-      <div className="d-flex flex-column justify-content-center align-items-center px-2">
-        {title && <h2 className="display-3 text-bone">{title}</h2>}
-        {children}
-      </div>
-      {type === "quote" && (
-        <Quote
-          style={{ transform: "rotate(180deg)", alignItems: "flex-end" }}
-        />
-      )}
-      {type === "star" && (
-        <Star style={{ transform: "rotate(180deg)", alignItems: "flex-end" }} />
-      )}
+export const Highlight = ({ type, title, children }: HighlightProps) => (
+  <div className={`text-center d-flex justify-content-between`}>
+    {type === "quote" && <Quote />}
+    {type === "star" && <Star />}
+    <div className="d-flex flex-column justify-content-center align-items-center px-2">
+      {title && <h2 className="display-3 text-bone">{title}</h2>}
+      {children}
     </div>
+    {type === "quote" && (
+      <Quote style={{ transform: "rotate(180deg)", alignItems: "flex-end" }} />
+    )}
+    {type === "star" && (
+      <Star style={{ transform: "rotate(180deg)", alignItems: "flex-end" }} />
+    )}
   </div>
 );
