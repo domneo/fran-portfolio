@@ -6,9 +6,12 @@ import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
 import { ImageZoom } from "components/common/ImageZoom";
 import { Stars } from "components/common/Stars";
+import { CaptionTitleContent } from "components/works2/CaptionTitleContent";
 import { Carousel } from "components/works2/Carousel";
 import { Container } from "components/works2/Container";
 import { Details } from "components/works2/Details";
+import { DropdownContent } from "components/works2/DropdownContent";
+import { Features } from "components/works2/Features";
 import { Header } from "components/works2/Header";
 import { Heading } from "components/works2/Heading";
 import { IconContent } from "components/works2/IconContent";
@@ -403,7 +406,7 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>User research</Heading>
+            <Heading>User research &amp; interviews</Heading>
             <div></div>
             <div>
               <IconContent title="APPROACH">
@@ -551,6 +554,364 @@ export default function Kickstarter() {
             for an opportunity via a user journey map.
           </h5>
         </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="SYNTHESIZE" heading="USER JOURNEY MAP">
+        <Spacer size="lg" />
+        <Container size="normal">
+          <Carousel>
+            <ImageZoom
+              src="/images/ks-journeymap-zoom1.png"
+              alt="journey map"
+              width={2872}
+              height={1200}
+            />
+            <ImageZoom
+              src="/images/ks-journeymap-zoom2.png"
+              alt="journey map"
+              width={2872}
+              height={1200}
+            />
+          </Carousel>
+        </Container>
+        <Spacer size="md" />
+        <Container size="compact">
+          <DropdownContent title="👁 👄 👁  Full user journey map">
+            <ImageZoom
+              src="/images/ks-fulljourneymap.png"
+              alt="👁 👄 👁  Full user journey map"
+              width={5720}
+              height={1796}
+            />
+          </DropdownContent>
+        </Container>
+        <Spacer size="md" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading>UX problem space lies in the pre-backing stage</Heading>
+            <div></div>
+            <div>
+              <Paragraph>
+                A general user journey map based on insights from the user
+                interviews was charted for a bird’s eye view of the potential
+                problem spaces. The pre-backing stage (Research &amp;
+                Consideration) was the most affectable as the issues project
+                backers faced were within the Kickstarter platform itself.
+              </Paragraph>
+              <Paragraph>
+                It was, really, a breath of fresh air that helped clear the fog
+                we were going through.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="SYNTHESIZE" heading="PERSONA">
+        <Spacer size="lg" />
+        <Container size="normal">
+          <ImageZoom
+            src="/images/ks-persona.png"
+            alt="Persona"
+            width={2872}
+            height={1038}
+          />
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="SYNTHESIZE" heading="USER FLOWS">
+        <Spacer size="lg" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 5 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 6 }}
+          >
+            <Heading>
+              Confidence and trust underpin the relationship between the
+              backer’s decision making journey and Kickstarter’s backing rates
+            </Heading>
+            <div></div>
+            <div>
+              <Paragraph>
+                <em>
+                  “Is this project a scam? Am I agreeable with the product and
+                  shipping?”
+                </em>
+              </Paragraph>
+              <Paragraph>
+                All the research and consideration a potential backer undergoes
+                in the Research Stage culminates in an ultimatum at the
+                Decision-Making Stage. This marks a pivotal point where the
+                potential backer will decide on backing the project.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+        </Container>
+        <Spacer size="lg" />
+        <Container size="normal">
+          <TwoColumns col2Props={{ lg: 6, centerV: true }}>
+            <Image
+              src="/images/ks-userflow-zoom.png"
+              alt="user flow zoomed"
+              width={1460}
+              height={840}
+            />
+            <CaptionTitleContent
+              caption="THIS MEANS THAT..."
+              title="The lack of information is not the be-all and end-all reason that dissuades backers from backing a project"
+              showLine
+            >
+              <ul>
+                <li>
+                  User flow for backing a crowdfunded project unique
+                  <ul>
+                    <li>
+                      Even if a backer is not very confident about a project,
+                      they might still end up backing a project if it fulfils
+                      the ultimatum
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </CaptionTitleContent>
+          </TwoColumns>
+        </Container>
+        <Spacer size="md" />
+        <Container size="compact">
+          <DropdownContent title="👁 👄 👁  Full user flow">
+            <ImageZoom
+              src="/images/ks-userflow.png"
+              alt="👁 👄 👁  Full user flow"
+              width={2328}
+              height={1146}
+            />
+          </DropdownContent>
+        </Container>
+        <Spacer size="md" />
+        <Container size="compact" centerText>
+          <IconContent>
+            <Image
+              src={"/images/icon-idea.png"}
+              alt="icon-idea"
+              width={512}
+              height={512}
+            />
+            <Paragraph className="h5 fw-light">
+              Our research came full circle when we revisited our affinity map -
+              we realised that low user confidence stemmed from a{" "}
+              <strong>lack of information</strong> about projects and creators
+              and a <strong>lack of communication</strong> between creators and
+              backers.
+            </Paragraph>
+          </IconContent>
+        </Container>
+        <Spacer size="lg" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading>
+              Using a domino effect to increase conversion rates
+            </Heading>
+            <div></div>
+            <div>
+              <Paragraph>
+                While it is up to users to decide if they are agreeable with a
+                product’s price and shipping (dependent on their budget), we can
+                help users to assess the legitimacy of the project.
+              </Paragraph>
+              <Paragraph>
+                This in turn streamlines the decision making process, enhance
+                the legitimacy of creators and projects, and subsequently
+                increase the chances of a successful backing for Kickstarter.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="SYNTHESIZE" heading="PROBLEM STATEMENT">
+        <Spacer size="lg" />
+        <Container size="compact" centerText>
+          <Paragraph className="h5 fw-light mb-4">
+            Potential Kickstarter project backers determine their level of
+            confidence in a project by assessing its campaign and creator before
+            supporting it. However, these potential backers currently access
+            external sources for more information about campaigns and creators
+            to ensure their legitimacy.
+          </Paragraph>
+          <Paragraph className="h5 fw-light">
+            Without enough information on Kickstarter, potential backers are
+            unable to make informed decisions within the site, leading to higher
+            bounce rates and lower backing rates. This negatively affects
+            Kickstarter’s traffic volume and overall revenue.
+          </Paragraph>
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="SYNTHESIZE" heading="REFRAMING THE PROBLEM">
+        <Spacer size="lg" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading>How might we...</Heading>
+            <div></div>
+            <div>
+              <IconContent title="HELP POTENTIAL PROJECT BACKERS">
+                <Image
+                  src={"/images/icon-research.png"}
+                  alt="icon-research"
+                  width={512}
+                  height={512}
+                />
+                <ul>
+                  <li>
+                    Remove the need to do research from external websites?
+                  </li>
+                </ul>
+              </IconContent>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent title="ENABLE POTENTIAL PROJECT BACKERS">
+                <Image
+                  src={"/images/icon-fist.png"}
+                  alt="icon-fist"
+                  width={512}
+                  height={512}
+                />
+                <ul>
+                  <li>
+                    Easily access and quickly understand information?
+                    <ul>
+                      <li>
+                        (Can we reconfigure how information can be presented?)
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </IconContent>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent title="EMPOWER POTENTIAL PROJECT BACKERS TO">
+                <Image
+                  src={"/images/icon-brainstorming.png"}
+                  alt="icon-brainstorming"
+                  width={512}
+                  height={512}
+                />
+                <ul>
+                  <li>Assess the legitimacy of a project quickly?</li>
+                </ul>
+              </IconContent>
+            </div>
+          </ThreeColumns>
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="SYNTHESIZE" heading="SOLUTION">
+        <Spacer size="lg" />
+        <Container size="compact" centerText>
+          <Paragraph className="h5 fw-light mb-4">
+            Intergrating external information into Kickstarter provides
+            potential project backers a holistic understanding of a project’s
+            creator and campaign through the product details, audiovisual
+            storytelling, and community opinions. Presenting this information in
+            an accessible and easily understood manner allows them to better
+            assess a project’s legitimacy.
+          </Paragraph>
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="DESIGN" heading="DESIGN STUDIO">
+        <Spacer size="lg" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading>Ideating through a ‘Mash Up’ of experiences</Heading>
+            <div></div>
+            <div>
+              <Paragraph>
+                A design studio utilising the ‘Mash Up’ method allowed us to
+                creatively address the issues defined by the HMW statements.
+                This method combines seemingly unrelated environments and
+                situations to spark new and fresh ideas. Here, we mashed up 2
+                experiences – a buffet and an aquarium visit.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+          <Spacer size="md" />
+          <Carousel>
+            <ImageZoom
+              src="/images/ks-designstudio-1.png"
+              alt="design studio"
+              width={2872}
+              height={1200}
+            />
+            <ImageZoom
+              src="/images/ks-designstudio-2.png"
+              alt="design studio"
+              width={1800}
+              height={752}
+            />
+            <ImageZoom
+              src="/images/ks-designstudio-3.png"
+              alt="design studio"
+              width={2000}
+              height={836}
+            />
+            <ImageZoom
+              src="/images/ks-designstudio-4.png"
+              alt="design studio"
+              width={1800}
+              height={752}
+            />
+          </Carousel>
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="DESIGN" heading="FEATURE DEVELOPMENT">
+        <Spacer size="lg" />
+        <Container size="normal" centerText>
+          <Paragraph className="h5 fw-light">
+            Poke the blobs to learn more about how each feature addressed the
+            various HMWs
+          </Paragraph>
+          <Spacer size="md" />
+          <Features />
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="DELIVER" heading="IMPACT">
+        <Spacer size="lg" />
+        <Container size="normal"></Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="DELIVER" heading="HI-FI PROTOTYPES">
+        <Spacer size="lg" />
+        <Container size="normal">
+          {/* <Image src="/images/.png" alt="prototype" width={} height={} />
+          <Image src="/images/.png" alt="prototype" width={} height={} />
+          <Image src="/images/.png" alt="prototype" width={} height={} />
+          <Image src="/images/.png" alt="prototype" width={} height={} /> */}
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+      <Section title="REFLECT" heading="MOVING FORWARD">
+        <Spacer size="lg" />
+        <Container size="normal"></Container>
         <Spacer size="lg" />
       </Section>
       <section>

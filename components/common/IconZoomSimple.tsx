@@ -15,7 +15,7 @@ export const IconZoomSimple = () => {
       <path
         d="M25.502 28.4976V25.4976M25.502 25.4976V22.4976M25.502 25.4976H28.502M25.502 25.4976H22.502"
         stroke="var(--works)"
-        stroke-linecap="round"
+        strokeLinecap="round"
       />
     </svg>
   );
