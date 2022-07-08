@@ -52,7 +52,7 @@ export default function Compawnion() {
       <section>
         <Header
           image={meta.image}
-          number={"1"}
+          number={"3"}
           title={meta.title}
           subtitle={meta.subtitle}
         />
