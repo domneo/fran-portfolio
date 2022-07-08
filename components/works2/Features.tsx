@@ -4,6 +4,9 @@ import ReactModal from "react-modal";
 import styles from "styles/works/Features.module.scss";
 
 import { ImageZoom } from "components/common/ImageZoom";
+import { Spacer } from "components/common/Spacer";
+import { TwoColumns } from "components/common/TwoColumns";
+import { Container } from "components/works/Container";
 
 ReactModal.setAppElement("#__next");
 
@@ -22,8 +25,8 @@ export const Features = () => {
   return (
     <>
       <svg
-        width="1436"
-        height="837"
+        width="100%"
+        height="100%"
         viewBox="0 0 1436 837"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -220,9 +223,13 @@ export const Features = () => {
         setModalOpen={() => setModalsOpen({ ...modalsOpen, social: false })}
         title="Social Media Aggregator"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
+        <Container size="full">
+          <TwoColumns
+            col1Props={{ lg: 7, centerV: true }}
+            col2Props={{ lg: 5, centerV: true }}
+            gutter={{ lg: 3 }}
+          >
+            <div className="w-100 mx-auto" style={{ maxWidth: "620px" }}>
               <ImageZoom
                 src="/images/ks-prototype-sm-aggre.png"
                 alt="Social Media Aggregator"
@@ -230,28 +237,42 @@ export const Features = () => {
                 height={1121}
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Aggregates voices on external social media platforms for users
-                to get a more holistic view of the product
-              </li>
-              <li>
-                Aims to reduce the need for users to conduct external research
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Aggregates voices on external social media platforms for
+                  backers to get a more holistic view of the creator and product
+                </li>
+              </ul>
+              <Spacer size="md" />
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  Reduces the need for backers to conduct external research
+                  relating to reviews, comments, etc. from social media sources
+                </li>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
       <Modal
         modalOpen={modalsOpen.liveEvent}
         setModalOpen={() => setModalsOpen({ ...modalsOpen, liveEvent: false })}
         title="'Live' Event Section"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
+        <Container size="full">
+          <TwoColumns
+            col1Props={{ lg: 7, centerV: true }}
+            col2Props={{ lg: 5, centerV: true }}
+            gutter={{ lg: 3 }}
+          >
+            <div className="w-100 mx-auto" style={{ maxWidth: "620px" }}>
               <ImageZoom
                 src={"/images/ks-prototype-livevid.png"}
                 alt="'Live' Event Section"
@@ -259,36 +280,56 @@ export const Features = () => {
                 height={1111}
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Creators may host live events to engage with their community,
-                advertise and share more about their products
-                <ul>
-                  <li>May include a short description or event agenda</li>
-                  <li>
-                    Video content can include collaborating with other creators
-                    or backers - community building
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Users can access a creator&apos;s past live events Live chat for
-                users to communicate with each other and the creator
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Creators may host ‘live’ video events to promote their
+                  projects and win over potential backers
+                </li>
+                <li>Past ‘live’ events and videos can be accessed</li>
+                <li>
+                  ‘Live’ chat for viewers to communicate with each other and the
+                  creator
+                </li>
+              </ul>
+              <Spacer size="md" />
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  Increase community engagement and building
+                  <ul>
+                    <li>
+                      ‘Live’ video content may include cross-collaboration with
+                      other creators or backers
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Allows backers to learn more about the creators and campaigns
+                  through creator content
+                </li>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
       <Modal
         modalOpen={modalsOpen.community}
         setModalOpen={() => setModalsOpen({ ...modalsOpen, community: false })}
         title="Community Feature"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
+        <Container size="full">
+          <TwoColumns
+            col1Props={{ lg: 7, centerV: true }}
+            col2Props={{ lg: 5, centerV: true }}
+            gutter={{ lg: 3 }}
+          >
+            <div className="w-100 mx-auto" style={{ maxWidth: "620px" }}>
               <ImageZoom
                 src={"/images/ks-prototype-community.png"}
                 alt="Community Feature"
@@ -296,63 +337,94 @@ export const Features = () => {
                 height={1358}
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Functions like a forum with channels for specific topics for
-                users to interact with the creator and with each other
-              </li>
-              <li>Ability to search for content of interest</li>
-              <li>
-                More accurately reflects the &apos;Community&apos; tab found on
-                the product description page
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Forum with channels for specific topics for project backers to
+                  interact with the creator and with each other
+                </li>
+                <li>
+                  More accurately reflects the ‘Community’ tab found on the
+                  campaign page
+                </li>
+              </ul>
+              <Spacer size="md" />
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  Organic form of community building
+                  <ul>
+                    <li>
+                      Encourages backer-backer support and hype and
+                      backer-creator communication
+                    </li>
+                    <li>Builds upon the creator network</li>
+                  </ul>
+                </li>
+                <li>
+                  Ability to search for content / FAQ of interest that has
+                  already been answered by the creator
+                </li>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
       <Modal
         modalOpen={modalsOpen.banner}
         setModalOpen={() => setModalsOpen({ ...modalsOpen, banner: false })}
         title="Creator Banner"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
-              <ImageZoom
-                src={"/images/ks-prototype-creatorbanner.png"}
-                alt="Creator Banner"
-                width={1310}
-                height={870}
-              />
+        <Container size="full">
+          <ImageZoom
+            src={"/images/ks-prototype-creatorbanner.png"}
+            alt="Creator Banner"
+            width={1310}
+            height={870}
+          />
+          <Spacer size="xs" />
+          <TwoColumns>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Banner at the end of the campaign story that links to site of
+                  creator’s choosing
+                  <ul>
+                    <li>
+                      Lets creators reinforce and feature themselves or
+                      something noteworthy (beyond the standard Kickstarter
+                      info)
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Banner at the end of the campaign story that links to site of
-                creator&apos;s choosing
-                <ul>
-                  <li>Increased customisation for creators</li>
-                  <li>
-                    Lets creators reinforce and feature themselves or something
-                    noteworthy (beyond the basic Kickstarter information)
-                  </li>
-                </ul>
-              </li>
-              <li>
-                End the campaign on a positive note
-                <ul>
-                  <li>
-                    Current campaign story ends with a negative message of
-                    &apos;Report this project to Kickstarter&apos;
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  End the campaign on a positive note
+                  <ul>
+                    <li>
+                      Current campaign story ends with a negative message of
+                      ‘Report this project to Kickstarter’
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
       <Modal
         modalOpen={modalsOpen.businessCard}
@@ -361,9 +433,13 @@ export const Features = () => {
         }
         title="Creator 'Business Card'"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
+        <Container size="full">
+          <TwoColumns
+            col1Props={{ lg: 7, centerV: true }}
+            col2Props={{ lg: 5, centerV: true }}
+            gutter={{ lg: 3 }}
+          >
+            <div className="w-100 mx-auto" style={{ maxWidth: "620px" }}>
               <ImageZoom
                 src={"/images/ks-prototype-card.png"}
                 alt="Creator 'Business Card'"
@@ -371,78 +447,97 @@ export const Features = () => {
                 height={615}
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Users can launch an a card with key information about the
-                creator, including:
-                <ul>
-                  <li>
-                    The date they last logged in, social media platforms, etc.
-                  </li>
-                  <li>Past projects</li>
-                  <li>
-                    Forms of &apos;verification&apos; such as &apos;Backer
-                    Favourite&apos;
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Incentivise creators to engage frequently with their community
-              </li>
-              <li>
-                Let users gain a comprehensive snapshot overview of the creator
-                without having to go to the creator&apos;s profile page
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Launch a card with key info about the creator
+                  <ul>
+                    <li>Last login date, social media platforms, etc.</li>
+                    <li>Past projects</li>
+                    <li>Official forms of ‘verification’</li>
+                  </ul>
+                </li>
+              </ul>
+              <Spacer size="md" />
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  Provides a comprehensive snapshot and overview of the creator
+                  within the campaign page
+                </li>
+                <li>
+                  Incentivise creators to engage frequently with their community
+                </li>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
       <Modal
         modalOpen={modalsOpen.timeline}
         setModalOpen={() => setModalsOpen({ ...modalsOpen, timeline: false })}
         title="Project Timeline With Integrated Updates"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
-              <ImageZoom
-                src={"/images/ks-prototype-timeline.png"}
-                alt="Project Timeline With Integrated Updates"
-                width={998}
-                height={420}
-              />
+        <Container size="full">
+          <ImageZoom
+            src={"/images/ks-prototype-timeline.png"}
+            alt="Project Timeline With Integrated Updates"
+            width={998}
+            height={420}
+          />
+          <Spacer size="sm" />
+          <TwoColumns>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Overview of the project timeline and a snapshot of its current
+                  status before the campaign story
+                </li>
+                <li>
+                  Hover over timeline points for creator updates relevant to the
+                  project at that particular time
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Overview of the project timeline and its current status before
-                the campaign story
+            <div>
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  Provides a quick understanding of the project at one glance
+                </li>
                 <ul>
                   <li>
-                    Users can have a quick understanding of the project at one
-                    glance
+                    Update info no longer hidden in the campaign story or email
+                    updates
                   </li>
                 </ul>
-              </li>
-              <li>
-                Hover over points on the timeline to access creator updates
-                relevant to the project at that particular point
-              </li>
-            </ul>
-          </div>
-        </div>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
       <Modal
         modalOpen={modalsOpen.detailTab}
         setModalOpen={() => setModalsOpen({ ...modalsOpen, detailTab: false })}
         title="Product Detail Tab"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
+        <Container size="full">
+          <TwoColumns
+            col1Props={{ lg: 7, centerV: true }}
+            col2Props={{ lg: 5, centerV: true }}
+            gutter={{ lg: 3 }}
+          >
+            <div className="w-100 mx-auto" style={{ maxWidth: "620px" }}>
               <ImageZoom
                 src={"/images/ks-prototype-producttab.png"}
                 alt="Product Detail Tab"
@@ -450,30 +545,51 @@ export const Features = () => {
                 height={899}
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Creation of a Product Detail tab with a dedicated section
-                containing information about where the product is designed
-                and/or made and what climates they are suitable for
-              </li>
-              <li>
-                Users can have a better understanding of if the product is
-                suitable for the climate they live in
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Dedicated section containing info about where the product is
+                  designed and/or made and what climates they are suitable for
+                  <ul>
+                    <li>Creation of a Product Detail tab</li>
+                  </ul>
+                </li>
+              </ul>
+              <Spacer size="md" />
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  Allows backers to assess the usability and feasibility of the
+                  product
+                  <ul>
+                    <li>
+                      Is the product is suitable for the climate or lifestyle
+                      they have?
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
       <Modal
         modalOpen={modalsOpen.funFact}
         setModalOpen={() => setModalsOpen({ ...modalsOpen, funFact: false })}
         title="Fun Fact Overlay"
       >
-        <div className="row align-items-center flex-grow-1">
-          <div className="col-lg-7">
-            <div className="mx-auto" style={{ maxWidth: "620px" }}>
+        <Container size="full">
+          <TwoColumns
+            col1Props={{ lg: 7, centerV: true }}
+            col2Props={{ lg: 5, centerV: true }}
+            gutter={{ lg: 3 }}
+          >
+            <div className="w-100 mx-auto" style={{ maxWidth: "620px" }}>
               <ImageZoom
                 src={"/images/ks-prototype-dyk.png"}
                 alt="Fun Fact Overlay"
@@ -481,28 +597,39 @@ export const Features = () => {
                 height={385}
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            <ul>
-              <li>
-                Hover over highlighted words in the campaign story for fun
-                facts, additional information, or images customisable by the
-                creator
-              </li>
-              <li>
-                Adds another layer to the discovery / learning phase of the
-                project backing experience
-                <ul>
-                  <li>Up to creators to use as creatively as they want</li>
-                  <li>
-                    E.g. individual comic panels that tell a story, easter eggs,
-                    etc.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+            <div>
+              <p className="text-works mb-3">
+                <strong>FEATURE</strong>
+              </p>
+              <ul>
+                <li>
+                  Hover over highlighted words in the campaign story for fun
+                  facts, additional info, or images
+                </li>
+              </ul>
+              <Spacer size="md" />
+              <p className="text-works mb-3">
+                <strong>FUNCTION</strong>
+              </p>
+              <ul>
+                <li>
+                  Adds another layer to the discovery / learning phase of the
+                  project backing experience
+                </li>
+                <li>
+                  Increased creator customisation and autonomy in the campaign
+                  page
+                  <ul>
+                    <li>
+                      E.g. individual comic panels that tell a story, easter
+                      eggs, etc.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </TwoColumns>
+        </Container>
       </Modal>
     </>
   );
@@ -528,8 +655,8 @@ const Modal = ({ title, children, modalOpen, setModalOpen }: ModalProps) => (
     shouldReturnFocusAfterClose={true}
     closeTimeoutMS={500}
   >
-    <div className="container-fluid d-flex flex-column h-100 p-4">
-      <h5 className="display-5 mb-4">{title}</h5>
+    <div className="container-fluid d-flex flex-column p-4">
+      <h5 className="display-5 text-works mb-4">{title}</h5>
       {children}
     </div>
     <CloseButton setModalOpen={() => setModalOpen(false)} />

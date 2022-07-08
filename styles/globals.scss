@@ -198,8 +198,12 @@ a,
 
 ol,
 ul {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   padding-left: 1.75rem;
+
+  &:last-child {
+    margin-bottom: 0.5rem;
+  }
 }
 
 li {
@@ -432,8 +436,6 @@ li {
 .features-modal-content,
 .image-modal-content {
   position: absolute;
-  top: 3rem;
-  bottom: 3rem;
   left: 3rem;
   right: 3rem;
   border: 2px solid var(--works);
@@ -447,5 +449,17 @@ li {
 }
 
 .features-modal-content {
+  top: 50%;
+  transform: translateY(-50%);
   max-width: 1144px;
+  max-height: calc(100vh - 6rem);
+
+  li {
+    font-size: 0.875rem;
+  }
+}
+
+.image-modal-content {
+  top: 3rem;
+  bottom: 3rem;
 }

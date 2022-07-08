@@ -1,7 +1,6 @@
 import styles from "styles/works/Section.module.scss";
 
 import { Container } from "./Container";
-import { Spacer } from "./Spacer";
 
 interface SectionProps {
   title: string;

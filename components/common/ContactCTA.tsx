@@ -10,9 +10,9 @@ export const ContactCTA = ({ children }: ContactCTAProps) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className={`row justify-content-center`}>
-        <div className="col-lg-8 text-center">
+        <div className="col-lg-10 col-xl-8 col-xxl-5 text-center">
           {children && (
             <h2 className="display-5 text-bone spacer-md">{children}</h2>
           )}

@@ -4,8 +4,13 @@ import Link from "next/link";
 import Layout from "components/Layout";
 import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
+import { Heading } from "components/common/Heading";
 import { ImageZoom } from "components/common/ImageZoom";
+import { Paragraph } from "components/common/Paragraph";
+import { Spacer } from "components/common/Spacer";
 import { Stars } from "components/common/Stars";
+import { ThreeColumns } from "components/common/ThreeColumns";
+import { TwoColumns } from "components/common/TwoColumns";
 import { CaptionTitleContent } from "components/works2/CaptionTitleContent";
 import { Carousel } from "components/works2/Carousel";
 import { Container } from "components/works2/Container";
@@ -13,13 +18,8 @@ import { Details } from "components/works2/Details";
 import { DropdownContent } from "components/works2/DropdownContent";
 import { Features } from "components/works2/Features";
 import { Header } from "components/works2/Header";
-import { Heading } from "components/works2/Heading";
 import { IconContent } from "components/works2/IconContent";
-import { Paragraph } from "components/works2/Paragraph";
 import { Section } from "components/works2/Section";
-import { Spacer } from "components/works2/Spacer";
-import { ThreeColumns } from "components/works2/ThreeColumns";
-import { TwoColumns } from "components/works2/TwoColumns";
 
 export const meta = {
   image: "/images/ks-hero.jpg",
@@ -409,13 +409,7 @@ export default function Kickstarter() {
             <Heading>User research &amp; interviews</Heading>
             <div></div>
             <div>
-              <IconContent title="APPROACH">
-                <Image
-                  src={"/images/icon-chat.png"}
-                  alt="icon-chat"
-                  width={512}
-                  height={512}
-                />
+              <IconContent title="APPROACH" icon={"/images/icon-chat.png"}>
                 <ul>
                   <li>60-minute deep dive user interviews</li>
                   <li>Understand backers’ mental models and pain points</li>
@@ -423,13 +417,10 @@ export default function Kickstarter() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="16 PARTICIPANTS">
-                <Image
-                  src={"/images/icon-team.png"}
-                  alt="icon-team"
-                  width={512}
-                  height={512}
-                />
+              <IconContent
+                title="16 PARTICIPANTS"
+                icon={"/images/icon-team.png"}
+              >
                 <ul>
                   <li>
                     People who have backed projects or are currently backing
@@ -442,13 +433,10 @@ export default function Kickstarter() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="CONSTRAINTS">
-                <Image
-                  src={"/images/icon-depression.png"}
-                  alt="icon-depression"
-                  width={512}
-                  height={512}
-                />
+              <IconContent
+                title="CONSTRAINTS"
+                icon={"/images/icon-depression.png"}
+              >
                 <ul>
                   <li>
                     Team’s inability to recruit Kickstarter project creators in
@@ -502,13 +490,7 @@ export default function Kickstarter() {
           >
             <div>
               <p className="text-works">01.</p>
-              <IconContent>
-                <Image
-                  src={"/images/icon-corkboard.png"}
-                  alt="icon-corkboard"
-                  width={512}
-                  height={512}
-                />
+              <IconContent icon={"/images/icon-corkboard.png"}>
                 <p>
                   Too many data points from 16 users and overlapping issues
                   although the points were organised in a linear timeline
@@ -517,13 +499,7 @@ export default function Kickstarter() {
             </div>
             <div>
               <p className="text-works">02.</p>
-              <IconContent>
-                <Image
-                  src={"/images/icon-search.png"}
-                  alt="icon-search"
-                  width={512}
-                  height={512}
-                />
+              <IconContent icon={"/images/icon-search.png"}>
                 <p>
                   Hard to draw parallels between the competitive analysis
                   research and user research
@@ -532,13 +508,7 @@ export default function Kickstarter() {
             </div>
             <div>
               <p className="text-works">03.</p>
-              <IconContent>
-                <Image
-                  src={"/images/icon-dog.png"}
-                  alt="icon-dog"
-                  width={512}
-                  height={512}
-                />
+              <IconContent icon={"/images/icon-dog.png"}>
                 <p>
                   Solutionising or developing problem statements weren’t options
                   as the problem spaces were too broad or assumptive
@@ -694,13 +664,7 @@ export default function Kickstarter() {
         </Container>
         <Spacer size="md" />
         <Container size="compact" centerText>
-          <IconContent>
-            <Image
-              src={"/images/icon-idea.png"}
-              alt="icon-idea"
-              width={512}
-              height={512}
-            />
+          <IconContent icon={"/images/icon-idea.png"}>
             <Paragraph className="h5 fw-light">
               Our research came full circle when we revisited our affinity map -
               we realised that low user confidence stemmed from a{" "}
@@ -767,13 +731,10 @@ export default function Kickstarter() {
             <Heading>How might we...</Heading>
             <div></div>
             <div>
-              <IconContent title="HELP POTENTIAL PROJECT BACKERS">
-                <Image
-                  src={"/images/icon-research.png"}
-                  alt="icon-research"
-                  width={512}
-                  height={512}
-                />
+              <IconContent
+                title="HELP POTENTIAL PROJECT BACKERS"
+                icon={"/images/icon-research.png"}
+              >
                 <ul>
                   <li>
                     Remove the need to do research from external websites?
@@ -782,13 +743,10 @@ export default function Kickstarter() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="ENABLE POTENTIAL PROJECT BACKERS">
-                <Image
-                  src={"/images/icon-fist.png"}
-                  alt="icon-fist"
-                  width={512}
-                  height={512}
-                />
+              <IconContent
+                title="ENABLE POTENTIAL PROJECT BACKERS"
+                icon={"/images/icon-fist.png"}
+              >
                 <ul>
                   <li>
                     Easily access and quickly understand information?
@@ -802,13 +760,10 @@ export default function Kickstarter() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="EMPOWER POTENTIAL PROJECT BACKERS TO">
-                <Image
-                  src={"/images/icon-brainstorming.png"}
-                  alt="icon-brainstorming"
-                  width={512}
-                  height={512}
-                />
+              <IconContent
+                title="EMPOWER POTENTIAL PROJECT BACKERS TO"
+                icon={"/images/icon-brainstorming.png"}
+              >
                 <ul>
                   <li>Assess the legitimacy of a project quickly?</li>
                 </ul>
@@ -896,22 +851,237 @@ export default function Kickstarter() {
       </Section>
       <Section title="DELIVER" heading="IMPACT">
         <Spacer size="lg" />
-        <Container size="normal"></Container>
+        <Container size="normal">
+          <TwoColumns>
+            <IconContent title="APPROACH" icon={"/images/icon-clipboard.png"}>
+              <ul>
+                <li>2 rounds of 60-minute long usability tests</li>
+                <li>
+                  Same set of post-test surveys for an accurate indicator of
+                  success
+                </li>
+              </ul>
+            </IconContent>
+            <IconContent title="9 PARTICIPANTS" icon={"/images/icon-team.png"}>
+              <ul>
+                <li>
+                  Moderated ‘Think Aloud’ sessions either in-person or over Zoom
+                </li>
+                <li>
+                  Mix of current and potential project backers who are active
+                  Kickstarter users
+                </li>
+              </ul>
+            </IconContent>
+          </TwoColumns>
+          <Spacer size="md" />
+          <ThreeColumns
+            col1Props={{ lg: 5 }}
+            col2Props={{ lg: 2, centerV: true }}
+            col3Props={{ lg: 5 }}
+          >
+            <Image
+              src="/images/ks-score-before.png"
+              alt="scores before"
+              width={1136}
+              height={536}
+            />
+            <div className="mx-auto" style={{ width: "120px" }}>
+              <Image
+                src="/images/icon-exit.png"
+                alt="icon-exit"
+                width={512}
+                height={512}
+              />
+            </div>
+            <Image
+              src="/images/ks-score-after.png"
+              alt="scores after"
+              width={1136}
+              height={536}
+            />
+          </ThreeColumns>
+        </Container>
+        <Spacer size="md" />
+        <Container size="compact" centerText>
+          <DropdownContent title="4.4% increase in the confidence score only? 😳  (Learning point!)">
+            <p>
+              Before we embarked on the Kickstarter redesign, we had yet to
+              learn about concept or A/B testing. Had we known about it, I would
+              have suggested that we performed concept or A/B testing with
+              different variations of the features to understand:
+            </p>
+            <Container size="compact" className="text-start">
+              <ul>
+                <li>
+                  How and why users might prefer certain designs or interfaces
+                  over others
+                </li>
+                <li>
+                  How Kickstarter can be experienced in its entirety to fulfill
+                  user goals
+                </li>
+              </ul>
+            </Container>
+            <Spacer size="xs" />
+            <p>
+              This would have greatly helped us figure out{" "}
+              <strong>
+                if the features were actually addressing user needs
+              </strong>{" "}
+              as the features are compacted in the Project page only.
+            </p>
+          </DropdownContent>
+        </Container>
         <Spacer size="lg" />
       </Section>
       <Section title="DELIVER" heading="HI-FI PROTOTYPES">
         <Spacer size="lg" />
         <Container size="normal">
-          {/* <Image src="/images/.png" alt="prototype" width={} height={} />
-          <Image src="/images/.png" alt="prototype" width={} height={} />
-          <Image src="/images/.png" alt="prototype" width={} height={} />
-          <Image src="/images/.png" alt="prototype" width={} height={} /> */}
+          <Image
+            src="/images/ks-proto1.jpg"
+            alt="prototype"
+            width={2143}
+            height={2433}
+          />
+          <Spacer size="md" />
+          <Image
+            src="/images/ks-proto2.jpg"
+            alt="prototype"
+            width={2155}
+            height={1470}
+          />
+          <Spacer size="md" />
+          <Image
+            src="/images/ks-proto3.jpg"
+            alt="prototype"
+            width={2155}
+            height={2121}
+          />
+          <Spacer size="md" />
+          <Image
+            src="/images/ks-proto4.jpg"
+            alt="prototype"
+            width={1450}
+            height={2418}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
       <Section title="REFLECT" heading="MOVING FORWARD">
         <Spacer size="lg" />
-        <Container size="normal"></Container>
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <div>
+              <p>
+                <small>CHANGE</small>
+              </p>
+              <IconContent icon="/images/icon-test.png">
+                <Heading size="h4">limitations</Heading>
+              </IconContent>
+            </div>
+            <div></div>
+            <div>
+              <Paragraph>
+                Redesign and features are backer-focused due to limitations on
+                time and scope
+              </Paragraph>
+              <ul>
+                <li>
+                  The team-proposed redesign means that success is heavily
+                  dependent on creators to produce content and engage backers
+                </li>
+              </ul>
+              <Spacer size="xs" />
+              <Paragraph>
+                If this project was to be reiterated, creators need to be
+                included - they are Kickstarter users too!
+              </Paragraph>
+              <ul>
+                <li>
+                  A secondary persona to enrich and improve on the depth and
+                  direction of the redesign
+                </li>
+              </ul>
+            </div>
+          </ThreeColumns>
+          <Spacer size="md" />
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <div>
+              <p>
+                <small>UPWARDS &amp; ONWARDS</small>
+              </p>
+              <IconContent icon="/images/icon-gps.png">
+                <Heading size="h4">navigation</Heading>
+              </IconContent>
+            </div>
+            <div></div>
+            <div>
+              <Paragraph>
+                Navigation issues discovered during usability tests should be
+                addressed in the next iteration
+              </Paragraph>
+              <Spacer size="xs" />
+              <Paragraph>
+                Improving the information architecture was deprioritised
+              </Paragraph>
+              <ul>
+                <li>
+                  User journey map and interview insights revealed that
+                  potential backers visited project pages via direct links
+                </li>
+              </ul>
+            </div>
+          </ThreeColumns>
+          <Spacer size="md" />
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <div>
+              <p>
+                <small>UPWARDS &amp; ONWARDS</small>
+              </p>
+              <IconContent icon="/images/icon-success.png">
+                <Heading size="h4">scalability</Heading>
+              </IconContent>
+            </div>
+            <div></div>
+            <div>
+              <Paragraph>
+                Many features from the Ideation stage were deprioritised as the
+                focus was on the MVP
+              </Paragraph>
+              <ul>
+                <li>
+                  Those features were seen more viable in the future or
+                  long-term
+                </li>
+              </ul>
+              <Spacer size="xs" />
+              <Paragraph>
+                Example: Monthly campaigns for creators to pitch to potential
+                backers using similar tech to the ‘live’ event feature
+              </Paragraph>
+              <ul>
+                <li>Increase traffic and revenue for Kickstarter</li>
+                <li>
+                  Benefits creators and community; reinforces the Kickstarter
+                  ecosystem for backers and creators
+                </li>
+              </ul>
+            </div>
+          </ThreeColumns>
+        </Container>
         <Spacer size="lg" />
       </Section>
       <section>
