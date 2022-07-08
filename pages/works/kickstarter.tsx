@@ -63,9 +63,11 @@ export default function Kickstarter() {
             <div></div>
             <div>
               <Paragraph>
-                <strong>
-                  <u>Kickstarter</u>
-                </strong>{" "}
+                <a href="https://www.kickstarter.com/" target={"_blank"}>
+                  <strong>
+                    <u>Kickstarter</u>
+                  </strong>
+                </a>{" "}
                 is a global crowdfunding platform that empowers project creators
                 by connecting them with potential project backers, who in turn,
                 pledge funds to turn ideas into reality.
@@ -117,33 +119,37 @@ export default function Kickstarter() {
         <Container size="normal" centerText>
           <TwoColumns gutter={{ xs: 3 }}>
             <div>
-              <Image
-                src={"/images/ks-proto-desktop.png"}
-                alt="Play with the desktop prototype here"
-                width={1420}
-                height={1024}
-              />
-              <Spacer size="xs" />
               <Link
                 href={process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_WEB || "/"}
               >
-                <a>Play with the desktop prototype here</a>
+                <a target={"_blank"}>
+                  <Image
+                    src={"/images/ks-proto-desktop.png"}
+                    alt="Play with the desktop prototype here"
+                    width={1420}
+                    height={1024}
+                  />
+                  <Spacer size="xs" />
+                  Play with the desktop prototype here
+                </a>
               </Link>
             </div>
             <div>
-              <Image
-                src={"/images/ks-proto-mobile.png"}
-                alt="Play with the mobile prototype here"
-                width={1420}
-                height={1024}
-              />
-              <Spacer size="xs" />
               <Link
                 href={
                   process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_MOBILE || "/"
                 }
               >
-                <a>Play with the mobile prototype here</a>
+                <a target={"_blank"}>
+                  <Image
+                    src={"/images/ks-proto-mobile.png"}
+                    alt="Play with the mobile prototype here"
+                    width={1420}
+                    height={1024}
+                  />
+                  <Spacer size="xs" />
+                  Play with the mobile prototype here
+                </a>
               </Link>
             </div>
           </TwoColumns>
@@ -348,7 +354,7 @@ export default function Kickstarter() {
             </Paragraph>
           </ThreeColumns>
           <Spacer size="md" />
-          <ImageZoom
+          <Image
             src="/images/ks-statistics.png"
             alt="Kickstarter's Allocation of Crowdfunding Across All Genres"
             width={2872}
@@ -584,7 +590,7 @@ export default function Kickstarter() {
       <Section title="SYNTHESIZE" heading="PERSONA">
         <Spacer size="lg" />
         <Container size="normal">
-          <ImageZoom
+          <Image
             src="/images/ks-persona.png"
             alt="Persona"
             width={2872}
@@ -777,12 +783,12 @@ export default function Kickstarter() {
         <Spacer size="lg" />
         <Container size="compact" centerText>
           <Paragraph className="h5 fw-light mb-4">
-            Intergrating external information into Kickstarter provides
-            potential project backers a holistic understanding of a project’s
-            creator and campaign through the product details, audiovisual
-            storytelling, and community opinions. Presenting this information in
-            an accessible and easily understood manner allows them to better
-            assess a project’s legitimacy.
+            Integrating external information into Kickstarter provides potential
+            project backers a holistic understanding of a project’s creator and
+            campaign through the product details, audiovisual storytelling, and
+            community opinions. Presenting this information in an accessible and
+            easily understood manner allows them to better assess a project’s
+            legitimacy.
           </Paragraph>
         </Container>
         <Spacer size="lg" />
