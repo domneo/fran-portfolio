@@ -9,6 +9,7 @@ import Layout from "components/Layout";
 import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
 import { IconDownArrowLong } from "components/common/IconDownArrowLong";
+import { Spacer } from "components/common/Spacer";
 import { Stars } from "components/common/Stars";
 
 export default function About() {
@@ -253,17 +254,17 @@ export default function About() {
             </div>
           </div>
         </div>
-        <BackgroundZone background="var(--contact)">
-          <div className="spacer-lg">
+        <section>
+          <BackgroundZone background="var(--contact)" onEnterOnly>
             <Stars />
-          </div>
-          <ContactCTA spacer="lg">
-            If you&apos;re looking to collaborate, come say hi!{" "}
-            <span className="d-inline-block">
-              I&apos;m happy to connect about work or play
-            </span>
-          </ContactCTA>
-        </BackgroundZone>
+            <Spacer size="lg" />
+            <ContactCTA>
+              If you&apos;re interested in working together or finding out more,
+              feel free to reach out ✨
+            </ContactCTA>
+            <Spacer size="lg" />
+          </BackgroundZone>
+        </section>
       </div>
     </Layout>
   );
