@@ -63,7 +63,11 @@ export default function Kickstarter() {
             <div></div>
             <div>
               <Paragraph>
-                <a href="https://www.kickstarter.com/" target={"_blank"}>
+                <a
+                  href="https://www.kickstarter.com/"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
                   <strong>
                     <u>Kickstarter</u>
                   </strong>
