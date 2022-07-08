@@ -68,9 +68,7 @@ export default function Kickstarter() {
                   target={"_blank"}
                   rel="noreferrer"
                 >
-                  <strong>
-                    <u>Kickstarter</u>
-                  </strong>
+                  Kickstarter
                 </a>{" "}
                 is a global crowdfunding platform that empowers project creators
                 by connecting them with potential project backers, who in turn,
@@ -996,7 +994,7 @@ export default function Kickstarter() {
             </div>
             <div></div>
             <div>
-              <Paragraph>
+              <Paragraph className="mb-2">
                 Redesign and features are backer-focused due to limitations on
                 time and scope
               </Paragraph>
@@ -1007,7 +1005,7 @@ export default function Kickstarter() {
                 </li>
               </ul>
               <Spacer size="xs" />
-              <Paragraph>
+              <Paragraph className="mb-2">
                 If this project was to be reiterated, creators need to be
                 included - they are Kickstarter users too!
               </Paragraph>
@@ -1035,12 +1033,12 @@ export default function Kickstarter() {
             </div>
             <div></div>
             <div>
-              <Paragraph>
+              <Paragraph className="mb-2">
                 Navigation issues discovered during usability tests should be
                 addressed in the next iteration
               </Paragraph>
               <Spacer size="xs" />
-              <Paragraph>
+              <Paragraph className="mb-2">
                 Improving the information architecture was deprioritised
               </Paragraph>
               <ul>
@@ -1067,7 +1065,7 @@ export default function Kickstarter() {
             </div>
             <div></div>
             <div>
-              <Paragraph>
+              <Paragraph className="mb-2">
                 Many features from the Ideation stage were deprioritised as the
                 focus was on the MVP
               </Paragraph>
@@ -1078,7 +1076,7 @@ export default function Kickstarter() {
                 </li>
               </ul>
               <Spacer size="xs" />
-              <Paragraph>
+              <Paragraph className="mb-2">
                 Example: Monthly campaigns for creators to pitch to potential
                 backers using similar tech to the ‘live’ event feature
               </Paragraph>

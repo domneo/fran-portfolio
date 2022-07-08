@@ -381,12 +381,14 @@ export const Features = () => {
         title="Creator Banner"
       >
         <Container size="full">
-          <ImageZoom
-            src={"/images/ks-prototype-creatorbanner.png"}
-            alt="Creator Banner"
-            width={1310}
-            height={870}
-          />
+          <div className="w-100 mx-auto" style={{ maxWidth: "720px" }}>
+            <ImageZoom
+              src={"/images/ks-prototype-creatorbanner.png"}
+              alt="Creator Banner"
+              width={1310}
+              height={870}
+            />
+          </div>
           <Spacer size="xs" />
           <TwoColumns>
             <div>
