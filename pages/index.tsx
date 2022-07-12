@@ -17,7 +17,7 @@ const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
   const hoverClass = text.trim().toLowerCase() + "Hover";
 
   return (
-    <div className={styles.linkItem} style={{ ...props.style }}>
+    <div className={styles[`linkItem${number}`]}>
       <Link href={href}>
         <a
           className={`${styles.itemLink} ${styles[hoverClass]}`}
@@ -31,7 +31,7 @@ const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
           </div>
           <div className={styles.itemContent}>
             <span className="h5 px-2">{number}</span>
-            <h2 className="display-1">{text}</h2>
+            <h2 className={`${styles.itemText} display-1`}>{text}</h2>
           </div>
         </a>
       </Link>
@@ -44,18 +44,8 @@ export default function Home() {
     <Layout hideHeaderMenu>
       <div className={styles.container}>
         <LinkItem href="/works" number="1" text="Works" />
-        <LinkItem
-          href="/about"
-          number="2"
-          text="About"
-          style={{ marginLeft: "20%" }}
-        />
-        <LinkItem
-          href="/contact"
-          number="3"
-          text="Contact"
-          style={{ marginLeft: "40%" }}
-        />
+        <LinkItem href="/about" number="2" text="About" />
+        <LinkItem href="/contact" number="3" text="Contact" />
       </div>
     </Layout>
   );

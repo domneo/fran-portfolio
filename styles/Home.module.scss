@@ -3,8 +3,8 @@
 .container {
   width: 100%;
   max-width: 1480px;
-  margin: 0 auto;
-  padding: 1.5rem;
+  margin: 1rem auto 0;
+  padding: 1rem;
   overflow: hidden;
 
   @include media("md") {
@@ -12,8 +12,65 @@
   }
 }
 
-.linkItem {
+%linkItem {
   display: flex;
+  margin-bottom: 3rem;
+
+  @include media("lg") {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.linkItem1 {
+  @extend %linkItem;
+  margin-left: 0%;
+
+  @media (min-width: 400px) {
+    margin-left: 5%;
+  }
+
+  @include media("sm") {
+    margin-left: 5%;
+  }
+
+  @include media("lg") {
+    margin-left: 0%;
+  }
+}
+
+.linkItem2 {
+  @extend %linkItem;
+  margin-left: 7.5%;
+
+  @media (min-width: 400px) {
+    margin-left: 15%;
+  }
+
+  @include media("sm") {
+    margin-left: 20%;
+  }
+
+  @include media("lg") {
+    margin-left: 20%;
+  }
+}
+
+.linkItem3 {
+  @extend %linkItem;
+  margin-left: 15%;
+
+  @media (min-width: 400px) {
+    margin-left: 25%;
+  }
+
+  @include media("sm") {
+    margin-left: 35%;
+  }
+
+  @include media("lg") {
+    margin-left: 40%;
+  }
 }
 
 .itemLink {
@@ -65,9 +122,21 @@
 .itemContent {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
   z-index: 1;
+
+  @include media("lg") {
+    justify-content: center;
+  }
+}
+
+.itemText {
+  @include font-size(120px);
+
+  @include media("lg") {
+    @include font-size(150px);
+  }
 }
 
 .blobWrapper {
