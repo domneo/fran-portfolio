@@ -26,24 +26,10 @@ export const meta = {
   image: "/images/ks-hero.jpg",
   title: "Kickstarter",
   details: [
-    {
-      title: "Challenge",
-      content:
-        "(GA Project) Redesign Kickstarter's project backing experience to uplift traffic and revenue",
-    },
-    { title: "Role", content: "UIUX Designer, Design Lead (team of 4)" },
-    { title: "Platform", content: "Mobile responsive website" },
-    {
-      title: "Scope",
-      content:
-        "User Interviews & Research, User Interface & Experience Design, Usability Testing, Competitive Analysis & Research, Wireframing & Prototyping",
-    },
-    {
-      title: "Deliverables",
-      content:
-        "User Research, Persona(s), User Flows, Information Architecture, Competitive Analysis, Wireframes, Prototypes",
-    },
-    { title: "Time", content: "4 weeks (flex sprint)" },
+    { title: "ROLE", content: "UIUX Designer (Design Lead)" },
+    { title: "TIME", content: "2 months (flex)" },
+    { title: "PLATFORM", content: "Mobile-responsive website" },
+    { title: "INDUSTRY", content: "Crowdfunding" },
   ],
 };
 
@@ -69,7 +55,7 @@ export default function Kickstarter() {
                   target={"_blank"}
                   rel="noreferrer"
                 >
-                  Kickstarter
+                  <strong>Kickstarter</strong>
                 </a>{" "}
                 is a global crowdfunding platform that empowers project creators
                 by connecting them with potential project backers, who in turn,
@@ -86,14 +72,7 @@ export default function Kickstarter() {
                 information about the product.
               </Paragraph>
               <Spacer size="md" />
-              <Details
-                details={[
-                  { title: "ROLE", content: "UIUX Designer (Design Lead)" },
-                  { title: "TIME", content: "2 months (flex)" },
-                  { title: "PLATFORM", content: "Mobile-responsive website" },
-                  { title: "INDUSTRY", content: "Crowdfunding" },
-                ]}
-              />
+              <Details details={meta.details} />
             </div>
           </TwoColumns>
         </Container>
