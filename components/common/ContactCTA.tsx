@@ -12,7 +12,7 @@ export const ContactCTA = ({ children }: ContactCTAProps) => {
   return (
     <div className="container">
       <div className={`row justify-content-center`}>
-        <div className="col-lg-10 col-xl-8 col-xxl-5 text-center">
+        <div className="col-lg-10 col-xl-8 col-xxl-7 text-center">
           {children && (
             <h2 className="display-5 text-bone spacer-md">{children}</h2>
           )}

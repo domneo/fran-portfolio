@@ -6,6 +6,7 @@ import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
 import { Heading } from "components/common/Heading";
 import { ImageZoom } from "components/common/ImageZoom";
+import { Line } from "components/common/Line";
 import { Paragraph } from "components/common/Paragraph";
 import { Spacer } from "components/common/Spacer";
 import { Stars } from "components/common/Stars";
@@ -1018,6 +1019,15 @@ export default function Kickstarter() {
             </div>
           </ThreeColumns>
           <Spacer size="md" />
+          <TwoColumns
+            col1Props={{ lg: 5 }}
+            col2Props={{ lg: 7 }}
+            gutter={{ lg: 4 }}
+          >
+            <div />
+            <Line width="33.33%" />
+          </TwoColumns>
+          <Spacer size="md" />
           <ThreeColumns
             col1Props={{ lg: 4 }}
             col2Props={{ lg: 1 }}
@@ -1049,6 +1059,15 @@ export default function Kickstarter() {
               </ul>
             </div>
           </ThreeColumns>
+          <Spacer size="md" />
+          <TwoColumns
+            col1Props={{ lg: 5 }}
+            col2Props={{ lg: 7 }}
+            gutter={{ lg: 4 }}
+          >
+            <div />
+            <Line width="33.33%" />
+          </TwoColumns>
           <Spacer size="md" />
           <ThreeColumns
             col1Props={{ lg: 4 }}
