@@ -7,6 +7,7 @@ import { ContactCTA } from "components/common/ContactCTA";
 import { Heading } from "components/common/Heading";
 import { ImageZoom } from "components/common/ImageZoom";
 import { Line } from "components/common/Line";
+import { ListItem } from "components/common/ListItem";
 import { Paragraph } from "components/common/Paragraph";
 import { Spacer } from "components/common/Spacer";
 import { Stars } from "components/common/Stars";
@@ -128,15 +129,15 @@ export default function Muji() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Research</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">
+                <ListItem className="caption">
                   Understanding the Brand and Business
-                </li>
-                <li className="caption">Understanding the Users</li>
-                <li className="caption">Evaluating the Website</li>
+                </ListItem>
+                <ListItem className="caption">Understanding the Users</ListItem>
+                <ListItem className="caption">Evaluating the Website</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -163,16 +164,18 @@ export default function Muji() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Synthesize</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">User Journey Map</li>
-                <li className="caption">Persona Creation</li>
-                <li className="caption">User Flows</li>
-                <li className="caption">Problem Statement</li>
-                <li className="caption">Reframing the Problem (HMW)</li>
-                <li className="caption">Solution</li>
+                <ListItem className="caption">User Journey Map</ListItem>
+                <ListItem className="caption">Persona Creation</ListItem>
+                <ListItem className="caption">User Flows</ListItem>
+                <ListItem className="caption">Problem Statement</ListItem>
+                <ListItem className="caption">
+                  Reframing the Problem (HMW)
+                </ListItem>
+                <ListItem className="caption">Solution</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -198,19 +201,21 @@ export default function Muji() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Develop</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">
+                <ListItem className="caption">
                   Reworking the Information Architecture
-                </li>
-                <li className="caption">
+                </ListItem>
+                <ListItem className="caption">
                   Competitive &amp; Comparative Analysis
                   <ul>
-                    <li className="caption">Creating a Checkout Feature</li>
+                    <ListItem className="caption">
+                      Creating a Checkout Feature
+                    </ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
             </div>
             <div className="col">
@@ -237,12 +242,12 @@ export default function Muji() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Prototype &amp; Test</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">Lo-fi Prototype</li>
-                <li className="caption">Usability Test</li>
+                <ListItem className="caption">Lo-fi Prototype</ListItem>
+                <ListItem className="caption">Usability Test</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -268,13 +273,15 @@ export default function Muji() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Implement</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">Hi-fi Prototype</li>
-                <li className="caption">Impact</li>
-                <li className="caption">Reflect &amp; Further Steps</li>
+                <ListItem className="caption">Hi-fi Prototype</ListItem>
+                <ListItem className="caption">Impact</ListItem>
+                <ListItem className="caption">
+                  Reflect &amp; Further Steps
+                </ListItem>
               </ul>
             </div>
           </div>
@@ -359,8 +366,8 @@ export default function Muji() {
               <Paragraph></Paragraph>
               <Paragraph></Paragraph>
               <ul>
-                <li></li>
-                <li></li>
+                <ListItem></ListItem>
+                <ListItem></ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -376,8 +383,8 @@ export default function Muji() {
             <div>
               <Paragraph></Paragraph>
               <ul>
-                <li></li>
-                <li></li>
+                <ListItem></ListItem>
+                <ListItem></ListItem>
               </ul>
               <Paragraph></Paragraph>
             </div>
@@ -399,7 +406,7 @@ export default function Muji() {
       <Section title="SYNTHESIZE" heading="PROBLEM STATEMENT">
         <Spacer size="lg" />
         <Container size="normal" centerText>
-          <h5 className="fw-light"></h5>
+          <Heading className="fw-light"></Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -419,7 +426,7 @@ export default function Muji() {
                 icon={"/images/icon-chat.png"}
               >
                 <ul>
-                  <li></li>
+                  <ListItem></ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
@@ -429,7 +436,7 @@ export default function Muji() {
                 icon={"/images/icon-team.png"}
               >
                 <ul>
-                  <li></li>
+                  <ListItem></ListItem>
                 </ul>
               </IconContent>
             </div>
@@ -440,7 +447,7 @@ export default function Muji() {
       <Section title="SYNTHESIZE" heading="SOLUTION">
         <Spacer size="lg" />
         <Container size="normal" centerText>
-          <h5 className="fw-light"></h5>
+          <Heading className="fw-light"></Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -460,13 +467,13 @@ export default function Muji() {
             centerH
           >
             <div>
-              <p className="text-works">01.</p>
+              <Paragraph className="text-works">01.</Paragraph>
               <IconContent icon={"/images/icon-corkboard.png"}>
                 <Paragraph></Paragraph>
               </IconContent>
             </div>
             <div>
-              <p className="text-works">02.</p>
+              <Paragraph className="text-works">02.</Paragraph>
               <IconContent icon={"/images/icon-search.png"}>
                 <Paragraph></Paragraph>
               </IconContent>
@@ -489,8 +496,8 @@ export default function Muji() {
               <Paragraph></Paragraph>
               <Paragraph></Paragraph>
               <ul>
-                <li></li>
-                <li></li>
+                <ListItem></ListItem>
+                <ListItem></ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -508,8 +515,8 @@ export default function Muji() {
               <Paragraph></Paragraph>
               <Paragraph></Paragraph>
               <ul>
-                <li></li>
-                <li></li>
+                <ListItem></ListItem>
+                <ListItem></ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -535,11 +542,11 @@ export default function Muji() {
           <TwoColumns>
             <IconContent title="APPROACH" icon={"/images/icon-clipboard.png"}>
               <ul>
-                <li>2 rounds of 60-minute long usability tests</li>
-                <li>
+                <ListItem>2 rounds of 60-minute long usability tests</ListItem>
+                <ListItem>
                   Same set of post-test surveys for an accurate indicator of
                   success
-                </li>
+                </ListItem>
               </ul>
             </IconContent>
             <IconContent
@@ -547,18 +554,18 @@ export default function Muji() {
               icon={"/images/icon-team.png"}
             >
               <ul>
-                <li>
+                <ListItem>
                   Moderated ‘Think Aloud’ sessions either in-person or over Zoom
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   Current MUJI consumers who online shop at least twice a week
                   <ul>
-                    <li>
+                    <ListItem>
                       Must <strong>not</strong> have shopped online for MUJI
                       products before
-                    </li>
+                    </ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
             </IconContent>
           </TwoColumns>
@@ -578,8 +585,8 @@ export default function Muji() {
                 height={536}
               />
               <ul>
-                <li></li>
-                <li></li>
+                <ListItem></ListItem>
+                <ListItem></ListItem>
               </ul>
             </div>
             <div className="mx-auto" style={{ width: "120px" }}>
@@ -598,8 +605,8 @@ export default function Muji() {
                 height={536}
               />
               <ul>
-                <li></li>
-                <li></li>
+                <ListItem></ListItem>
+                <ListItem></ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -628,9 +635,9 @@ export default function Muji() {
             col3Props={{ lg: 7 }}
           >
             <div>
-              <p>
+              <Paragraph>
                 <small>PROCESS</small>
-              </p>
+              </Paragraph>
               <IconContent icon="/images/icon-test.png">
                 <Heading size="h4">perception</Heading>
               </IconContent>
@@ -639,7 +646,7 @@ export default function Muji() {
             <div>
               <Paragraph className="mb-2"></Paragraph>
               <ul>
-                <li></li>
+                <ListItem></ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -659,9 +666,9 @@ export default function Muji() {
             col3Props={{ lg: 7 }}
           >
             <div>
-              <p>
+              <Paragraph>
                 <small>CHANGE</small>
-              </p>
+              </Paragraph>
               <IconContent icon="/images/icon-gps.png">
                 <Heading size="h4">plan</Heading>
               </IconContent>
@@ -670,7 +677,7 @@ export default function Muji() {
             <div>
               <Paragraph className="mb-2"></Paragraph>
               <ul>
-                <li></li>
+                <ListItem></ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -690,9 +697,9 @@ export default function Muji() {
             col3Props={{ lg: 7 }}
           >
             <div>
-              <p>
+              <Paragraph>
                 <small>UPWARDS &amp; ONWARDS</small>
-              </p>
+              </Paragraph>
               <IconContent icon="/images/icon-success.png">
                 <Heading size="h4">progress</Heading>
               </IconContent>
@@ -701,7 +708,7 @@ export default function Muji() {
             <div>
               <Paragraph className="mb-2"></Paragraph>
               <ul>
-                <li></li>
+                <ListItem></ListItem>
               </ul>
             </div>
           </ThreeColumns>

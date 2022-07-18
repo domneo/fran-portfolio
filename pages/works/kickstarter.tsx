@@ -7,8 +7,10 @@ import { ContactCTA } from "components/common/ContactCTA";
 import { Heading } from "components/common/Heading";
 import { ImageZoom } from "components/common/ImageZoom";
 import { Line } from "components/common/Line";
+import { ListItem } from "components/common/ListItem";
 import { Paragraph } from "components/common/Paragraph";
 import { Spacer } from "components/common/Spacer";
+import { Span } from "components/common/Span";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
@@ -112,7 +114,7 @@ export default function Kickstarter() {
                     height={1024}
                   />
                   <Spacer size="xs" />
-                  Play with the desktop prototype here
+                  <Span>Play with the desktop prototype here</Span>
                 </a>
               </Link>
             </div>
@@ -130,7 +132,7 @@ export default function Kickstarter() {
                     height={1024}
                   />
                   <Spacer size="xs" />
-                  Play with the mobile prototype here
+                  <Span>Play with the mobile prototype here</Span>
                 </a>
               </Link>
             </div>
@@ -165,17 +167,17 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Research</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">
+                <ListItem className="caption">
                   Understanding the Brand, Business, and Landscape
-                </li>
-                <li className="caption">
+                </ListItem>
+                <ListItem className="caption">
                   Competitive &amp; Comparative Analysis
-                </li>
-                <li className="caption">Understanding the Users</li>
+                </ListItem>
+                <ListItem className="caption">Understanding the Users</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -202,16 +204,18 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Synthesize</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">User Journey Map</li>
-                <li className="caption">Persona Creation</li>
-                <li className="caption">User Flows</li>
-                <li className="caption">Problem Statement</li>
-                <li className="caption">Reframing the Problem (HMW)</li>
-                <li className="caption">Solution</li>
+                <ListItem className="caption">User Journey Map</ListItem>
+                <ListItem className="caption">Persona Creation</ListItem>
+                <ListItem className="caption">User Flows</ListItem>
+                <ListItem className="caption">Problem Statement</ListItem>
+                <ListItem className="caption">
+                  Reframing the Problem (HMW)
+                </ListItem>
+                <ListItem className="caption">Solution</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -237,13 +241,13 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Design</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">Design Studio</li>
-                <li className="caption">Sketches, Wireframing</li>
-                <li className="caption">Feature Development</li>
+                <ListItem className="caption">Design Studio</ListItem>
+                <ListItem className="caption">Sketches, Wireframing</ListItem>
+                <ListItem className="caption">Feature Development</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -270,12 +274,12 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Prototype &amp; Test</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">Mid-fi Prototypes</li>
-                <li className="caption">Usability Test</li>
+                <ListItem className="caption">Mid-fi Prototypes</ListItem>
+                <ListItem className="caption">Usability Test</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -301,13 +305,13 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <p>
+              <Paragraph>
                 <strong>Implement</strong>
-              </p>
+              </Paragraph>
               <ul>
-                <li className="caption">Hi-fi Prototype</li>
-                <li className="caption">Impact</li>
-                <li className="caption">MVP &amp; Further Steps</li>
+                <ListItem className="caption">Hi-fi Prototype</ListItem>
+                <ListItem className="caption">Impact</ListItem>
+                <ListItem className="caption">MVP &amp; Further Steps</ListItem>
               </ul>
             </div>
           </div>
@@ -399,8 +403,10 @@ export default function Kickstarter() {
             <div>
               <IconContent title="APPROACH" icon={"/images/icon-chat.png"}>
                 <ul>
-                  <li>60-minute deep dive user interviews</li>
-                  <li>Understand backers’ mental models and pain points</li>
+                  <ListItem>60-minute deep dive user interviews</ListItem>
+                  <ListItem>
+                    Understand backers’ mental models and pain points
+                  </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
@@ -410,13 +416,13 @@ export default function Kickstarter() {
                 icon={"/images/icon-team.png"}
               >
                 <ul>
-                  <li>
+                  <ListItem>
                     People who have backed projects or are currently backing
                     projects
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     People who want to back projects, but have not done so yet
-                  </li>
+                  </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
@@ -426,14 +432,14 @@ export default function Kickstarter() {
                 icon={"/images/icon-depression.png"}
               >
                 <ul>
-                  <li>
+                  <ListItem>
                     Team’s inability to recruit Kickstarter project creators in
                     the limited timeframe
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     Significantly affected the project direction - became
                     backer-only focused
-                  </li>
+                  </ListItem>
                 </ul>
               </IconContent>
             </div>
@@ -448,10 +454,10 @@ export default function Kickstarter() {
             height={1140}
           />
           <Spacer size="xs" />
-          <p className="caption">
+          <Paragraph className="caption">
             Affinity map of interviewee responses, organised according to the
             project backing experience timeline
-          </p>
+          </Paragraph>
         </Container>
         <Spacer size="lg" />
         <Container size="normal">
@@ -477,40 +483,40 @@ export default function Kickstarter() {
             centerH
           >
             <div>
-              <p className="text-works">01.</p>
+              <Paragraph className="text-works">01.</Paragraph>
               <IconContent icon={"/images/icon-corkboard.png"}>
-                <p>
+                <Paragraph>
                   Too many data points from 16 users and overlapping issues
                   although the points were organised in a linear timeline
-                </p>
+                </Paragraph>
               </IconContent>
             </div>
             <div>
-              <p className="text-works">02.</p>
+              <Paragraph className="text-works">02.</Paragraph>
               <IconContent icon={"/images/icon-search.png"}>
-                <p>
+                <Paragraph>
                   Hard to draw parallels between the competitive analysis
                   research and user research
-                </p>
+                </Paragraph>
               </IconContent>
             </div>
             <div>
-              <p className="text-works">03.</p>
+              <Paragraph className="text-works">03.</Paragraph>
               <IconContent icon={"/images/icon-dog.png"}>
-                <p>
+                <Paragraph>
                   Solutionising or developing problem statements weren’t options
                   as the problem spaces were too broad or assumptive
-                </p>
+                </Paragraph>
               </IconContent>
             </div>
           </ThreeColumns>
         </Container>
         <Spacer size="lg" />
         <Container size="normal" centerText>
-          <h5 className="fw-light">
+          <Heading className="fw-light">
             So we pulled the brakes and refocused our perspectives by looking
             for an opportunity via a user journey map.
-          </h5>
+          </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -625,16 +631,16 @@ export default function Kickstarter() {
               showLine
             >
               <ul>
-                <li>
+                <ListItem>
                   User flow for backing a crowdfunded project unique
                   <ul>
-                    <li>
+                    <ListItem>
                       Even if a backer is not very confident about a project,
                       they might still end up backing a project if it fulfils
                       the ultimatum
-                    </li>
+                    </ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
             </CaptionTitleContent>
           </TwoColumns>
@@ -724,9 +730,9 @@ export default function Kickstarter() {
                 icon={"/images/icon-research.png"}
               >
                 <ul>
-                  <li>
+                  <ListItem>
                     Remove the need to do research from external websites?
-                  </li>
+                  </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
@@ -736,14 +742,14 @@ export default function Kickstarter() {
                 icon={"/images/icon-fist.png"}
               >
                 <ul>
-                  <li>
+                  <ListItem>
                     Easily access and quickly understand information?
                     <ul>
-                      <li>
+                      <ListItem>
                         (Can we reconfigure how information can be presented?)
-                      </li>
+                      </ListItem>
                     </ul>
-                  </li>
+                  </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
@@ -753,7 +759,9 @@ export default function Kickstarter() {
                 icon={"/images/icon-brainstorming.png"}
               >
                 <ul>
-                  <li>Assess the legitimacy of a project quickly?</li>
+                  <ListItem>
+                    Assess the legitimacy of a project quickly?
+                  </ListItem>
                 </ul>
               </IconContent>
             </div>
@@ -843,22 +851,22 @@ export default function Kickstarter() {
           <TwoColumns>
             <IconContent title="APPROACH" icon={"/images/icon-clipboard.png"}>
               <ul>
-                <li>2 rounds of 60-minute long usability tests</li>
-                <li>
+                <ListItem>2 rounds of 60-minute long usability tests</ListItem>
+                <ListItem>
                   Same set of post-test surveys for an accurate indicator of
                   success
-                </li>
+                </ListItem>
               </ul>
             </IconContent>
             <IconContent title="9 PARTICIPANTS" icon={"/images/icon-team.png"}>
               <ul>
-                <li>
+                <ListItem>
                   Moderated ‘Think Aloud’ sessions either in-person or over Zoom
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   Mix of current and potential project backers who are active
                   Kickstarter users
-                </li>
+                </ListItem>
               </ul>
             </IconContent>
           </TwoColumns>
@@ -893,32 +901,32 @@ export default function Kickstarter() {
         <Spacer size="md" />
         <Container size="compact" centerText>
           <DropdownContent title="4.4% increase in the confidence score only? 😳  (Learning point!)">
-            <p>
+            <Paragraph>
               Before we embarked on the Kickstarter redesign, we had yet to
               learn about concept or A/B testing. Had we known about it, I would
               have suggested that we performed concept or A/B testing with
               different variations of the features to understand:
-            </p>
+            </Paragraph>
             <Container size="compact" className="text-start">
               <ul>
-                <li>
+                <ListItem>
                   How and why users might prefer certain designs or interfaces
                   over others
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   How Kickstarter can be experienced in its entirety to fulfill
                   user goals
-                </li>
+                </ListItem>
               </ul>
             </Container>
             <Spacer size="xs" />
-            <p>
+            <Paragraph>
               This would have greatly helped us figure out{" "}
               <strong>
                 if the features were actually addressing user needs
               </strong>{" "}
               as the features are compacted in the Project page only.
-            </p>
+            </Paragraph>
           </DropdownContent>
         </Container>
         <Spacer size="lg" />
@@ -965,9 +973,9 @@ export default function Kickstarter() {
             col3Props={{ lg: 7 }}
           >
             <div>
-              <p>
+              <Paragraph>
                 <small>CHANGE</small>
-              </p>
+              </Paragraph>
               <IconContent icon="/images/icon-test.png">
                 <Heading size="h4">limitations</Heading>
               </IconContent>
@@ -979,10 +987,10 @@ export default function Kickstarter() {
                 time and scope
               </Paragraph>
               <ul>
-                <li>
+                <ListItem>
                   The team-proposed redesign means that success is heavily
                   dependent on creators to produce content and engage backers
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="xs" />
               <Paragraph className="mb-2">
@@ -990,10 +998,10 @@ export default function Kickstarter() {
                 included - they are Kickstarter users too!
               </Paragraph>
               <ul>
-                <li>
+                <ListItem>
                   A secondary persona to enrich and improve on the depth and
                   direction of the redesign
-                </li>
+                </ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -1013,9 +1021,9 @@ export default function Kickstarter() {
             col3Props={{ lg: 7 }}
           >
             <div>
-              <p>
+              <Paragraph>
                 <small>UPWARDS &amp; ONWARDS</small>
-              </p>
+              </Paragraph>
               <IconContent icon="/images/icon-gps.png">
                 <Heading size="h4">navigation</Heading>
               </IconContent>
@@ -1031,10 +1039,10 @@ export default function Kickstarter() {
                 Improving the information architecture was deprioritised
               </Paragraph>
               <ul>
-                <li>
+                <ListItem>
                   User journey map and interview insights revealed that
                   potential backers visited project pages via direct links
-                </li>
+                </ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -1054,9 +1062,9 @@ export default function Kickstarter() {
             col3Props={{ lg: 7 }}
           >
             <div>
-              <p>
+              <Paragraph>
                 <small>UPWARDS &amp; ONWARDS</small>
-              </p>
+              </Paragraph>
               <IconContent icon="/images/icon-success.png">
                 <Heading size="h4">scalability</Heading>
               </IconContent>
@@ -1068,10 +1076,10 @@ export default function Kickstarter() {
                 focus was on the MVP
               </Paragraph>
               <ul>
-                <li>
+                <ListItem>
                   Those features were seen more viable in the future or
                   long-term
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="xs" />
               <Paragraph className="mb-2">
@@ -1079,11 +1087,13 @@ export default function Kickstarter() {
                 backers using similar tech to the ‘live’ event feature
               </Paragraph>
               <ul>
-                <li>Increase traffic and revenue for Kickstarter</li>
-                <li>
+                <ListItem>
+                  Increase traffic and revenue for Kickstarter
+                </ListItem>
+                <ListItem>
                   Benefits creators and community; reinforces the Kickstarter
                   ecosystem for backers and creators
-                </li>
+                </ListItem>
               </ul>
             </div>
           </ThreeColumns>
