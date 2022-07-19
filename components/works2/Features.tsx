@@ -3,7 +3,9 @@ import ReactModal from "react-modal";
 
 import styles from "styles/works/Features.module.scss";
 
+import { Heading } from "components/common/Heading";
 import { ImageZoom } from "components/common/ImageZoom";
+import { ListItem } from "components/common/ListItem";
 import { Spacer } from "components/common/Spacer";
 import { TwoColumns } from "components/common/TwoColumns";
 import { Container } from "components/works/Container";
@@ -238,24 +240,24 @@ export const Features = () => {
               />
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Aggregates voices on external social media platforms for
                   backers to get a more holistic view of the creator and product
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="md" />
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Reduces the need for backers to conduct external research
                   relating to reviews, comments, etc. from social media sources
-                </li>
+                </ListItem>
               </ul>
             </div>
           </TwoColumns>
@@ -281,38 +283,40 @@ export const Features = () => {
               />
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Creators may host ‘live’ video events to promote their
                   projects and win over potential backers
-                </li>
-                <li>Past ‘live’ events and videos can be accessed</li>
-                <li>
+                </ListItem>
+                <ListItem>
+                  Past ‘live’ events and videos can be accessed
+                </ListItem>
+                <ListItem>
                   ‘Live’ chat for viewers to communicate with each other and the
                   creator
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="md" />
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Increase community engagement and building
                   <ul>
-                    <li>
+                    <ListItem>
                       ‘Live’ video content may include cross-collaboration with
                       other creators or backers
-                    </li>
+                    </ListItem>
                   </ul>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   Allows backers to learn more about the creators and campaigns
                   through creator content
-                </li>
+                </ListItem>
               </ul>
             </div>
           </TwoColumns>
@@ -338,38 +342,38 @@ export const Features = () => {
               />
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Forum with channels for specific topics for project backers to
                   interact with the creator and with each other
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   More accurately reflects the ‘Community’ tab found on the
                   campaign page
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="md" />
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Organic form of community building
                   <ul>
-                    <li>
+                    <ListItem>
                       Encourages backer-backer support and hype and
                       backer-creator communication
-                    </li>
-                    <li>Builds upon the creator network</li>
+                    </ListItem>
+                    <ListItem>Builds upon the creator network</ListItem>
                   </ul>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   Ability to search for content / FAQ of interest that has
                   already been answered by the creator
-                </li>
+                </ListItem>
               </ul>
             </div>
           </TwoColumns>
@@ -392,37 +396,37 @@ export const Features = () => {
           <Spacer size="xs" />
           <TwoColumns>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Banner at the end of the campaign story that links to site of
                   creator’s choosing
                   <ul>
-                    <li>
+                    <ListItem>
                       Lets creators reinforce and feature themselves or
                       something noteworthy (beyond the standard Kickstarter
                       info)
-                    </li>
+                    </ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   End the campaign on a positive note
                   <ul>
-                    <li>
+                    <ListItem>
                       Current campaign story ends with a negative message of
                       ‘Report this project to Kickstarter’
-                    </li>
+                    </ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
             </div>
           </TwoColumns>
@@ -450,31 +454,33 @@ export const Features = () => {
               />
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Launch a card with key info about the creator
                   <ul>
-                    <li>Last login date, social media platforms, etc.</li>
-                    <li>Past projects</li>
-                    <li>Official forms of ‘verification’</li>
+                    <ListItem>
+                      Last login date, social media platforms, etc.
+                    </ListItem>
+                    <ListItem>Past projects</ListItem>
+                    <ListItem>Official forms of ‘verification’</ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="md" />
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Provides a comprehensive snapshot and overview of the creator
                   within the campaign page
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   Incentivise creators to engage frequently with their community
-                </li>
+                </ListItem>
               </ul>
             </div>
           </TwoColumns>
@@ -495,33 +501,33 @@ export const Features = () => {
           <Spacer size="sm" />
           <TwoColumns>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Overview of the project timeline and a snapshot of its current
                   status before the campaign story
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   Hover over timeline points for creator updates relevant to the
                   project at that particular time
-                </li>
+                </ListItem>
               </ul>
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Provides a quick understanding of the project at one glance
-                </li>
+                </ListItem>
                 <ul>
-                  <li>
+                  <ListItem>
                     Update info no longer hidden in the campaign story or email
                     updates
-                  </li>
+                  </ListItem>
                 </ul>
               </ul>
             </div>
@@ -548,33 +554,33 @@ export const Features = () => {
               />
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Dedicated section containing info about where the product is
                   designed and/or made and what climates they are suitable for
                   <ul>
-                    <li>Creation of a Product Detail tab</li>
+                    <ListItem>Creation of a Product Detail tab</ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="md" />
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Allows backers to assess the usability and feasibility of the
                   product
                   <ul>
-                    <li>
+                    <ListItem>
                       Is the product is suitable for the climate or lifestyle
                       they have?
-                    </li>
+                    </ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
             </div>
           </TwoColumns>
@@ -600,34 +606,34 @@ export const Features = () => {
               />
             </div>
             <div>
-              <p className="text-works mb-3">
-                <strong>FEATURE</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FEATURE
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Hover over highlighted words in the campaign story for fun
                   facts, additional info, or images
-                </li>
+                </ListItem>
               </ul>
               <Spacer size="md" />
-              <p className="text-works mb-3">
-                <strong>FUNCTION</strong>
-              </p>
+              <Heading level={5} className="paragraph text-works mb-3">
+                FUNCTION
+              </Heading>
               <ul>
-                <li>
+                <ListItem>
                   Adds another layer to the discovery / learning phase of the
                   project backing experience
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   Increased creator customisation and autonomy in the campaign
                   page
                   <ul>
-                    <li>
+                    <ListItem>
                       E.g. individual comic panels that tell a story, easter
                       eggs, etc.
-                    </li>
+                    </ListItem>
                   </ul>
-                </li>
+                </ListItem>
               </ul>
             </div>
           </TwoColumns>
@@ -658,7 +664,9 @@ const Modal = ({ title, children, modalOpen, setModalOpen }: ModalProps) => (
     closeTimeoutMS={500}
   >
     <div className="container-fluid d-flex flex-column p-4">
-      <h5 className="display-5 text-works mb-4">{title}</h5>
+      <Heading level={5} className="display-5 text-works mb-4">
+        {title}
+      </Heading>
       {children}
     </div>
     <CloseButton setModalOpen={() => setModalOpen(false)} />

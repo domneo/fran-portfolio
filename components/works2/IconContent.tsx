@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { Paragraph } from "components/common/Paragraph";
+
 interface IconContentProps {
   title?: string;
   icon?: string;
@@ -14,7 +16,9 @@ export const IconContent = ({ title, icon, children }: IconContentProps) => {
         </div>
       </div>
       <div>
-        {title && <p className="caption text-works mb-2">{title}</p>}
+        {title && (
+          <Paragraph className="caption text-works mb-2">{title}</Paragraph>
+        )}
         {children}
       </div>
     </div>

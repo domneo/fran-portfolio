@@ -88,7 +88,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>A better project backing experience</Heading>
+            <Heading level={3} className="display-5">
+              A better project backing experience
+            </Heading>
             <div></div>
             <Paragraph>
               The main focus of this project was to streamline the research
@@ -167,9 +169,9 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Paragraph>
-                <strong>Research</strong>
-              </Paragraph>
+              <Heading level={5} className="paragraph text-platinum">
+                Research
+              </Heading>
               <ul>
                 <ListItem className="caption">
                   Understanding the Brand, Business, and Landscape
@@ -204,9 +206,9 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Paragraph>
-                <strong>Synthesize</strong>
-              </Paragraph>
+              <Heading level={5} className="paragraph text-platinum">
+                Synthesize
+              </Heading>
               <ul>
                 <ListItem className="caption">User Journey Map</ListItem>
                 <ListItem className="caption">Persona Creation</ListItem>
@@ -241,9 +243,9 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Paragraph>
-                <strong>Design</strong>
-              </Paragraph>
+              <Heading level={5} className="paragraph text-platinum">
+                Design
+              </Heading>
               <ul>
                 <ListItem className="caption">Design Studio</ListItem>
                 <ListItem className="caption">Sketches, Wireframing</ListItem>
@@ -274,9 +276,9 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Paragraph>
-                <strong>Prototype &amp; Test</strong>
-              </Paragraph>
+              <Heading level={5} className="paragraph text-platinum">
+                Prototype &amp; Test
+              </Heading>
               <ul>
                 <ListItem className="caption">Mid-fi Prototypes</ListItem>
                 <ListItem className="caption">Usability Test</ListItem>
@@ -305,9 +307,9 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Paragraph>
-                <strong>Implement</strong>
-              </Paragraph>
+              <Heading level={5} className="paragraph text-platinum">
+                Implement
+              </Heading>
               <ul>
                 <ListItem className="caption">Hi-fi Prototype</ListItem>
                 <ListItem className="caption">Impact</ListItem>
@@ -329,7 +331,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>Success = increase project backing rates</Heading>
+            <Heading level={3} className="display-5">
+              Success = increase project backing rates
+            </Heading>
             <div></div>
             <Paragraph>
               Traffic and revenue are key factors in determining Kickstarter’s
@@ -377,7 +381,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>Kickstarter’s current offerings are not enough</Heading>
+            <Heading level={3} className="display-5">
+              Kickstarter’s current offerings are not enough
+            </Heading>
             <div></div>
             <Paragraph>
               Interestingly, despite Kickstarter’s low backing rates, it was{" "}
@@ -398,7 +404,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>User research &amp; interviews</Heading>
+            <Heading level={3} className="display-5">
+              User research &amp; interviews
+            </Heading>
             <div></div>
             <div>
               <IconContent title="APPROACH" icon={"/images/icon-chat.png"}>
@@ -466,7 +474,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>Roadblock?</Heading>
+            <Heading level={3} className="display-5">
+              Roadblock?
+            </Heading>
             <div></div>
             <Paragraph>
               At this point of the project, it seemed like we were stuck ): It
@@ -513,7 +523,7 @@ export default function Kickstarter() {
         </Container>
         <Spacer size="lg" />
         <Container size="normal" centerText>
-          <Heading className="fw-light">
+          <Heading level={4} className="h5 fw-light text-platinum">
             So we pulled the brakes and refocused our perspectives by looking
             for an opportunity via a user journey map.
           </Heading>
@@ -556,7 +566,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>UX problem space lies in the pre-backing stage</Heading>
+            <Heading level={3} className="display-5">
+              UX problem space lies in the pre-backing stage
+            </Heading>
             <div></div>
             <div>
               <Paragraph>
@@ -595,7 +607,7 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 6 }}
           >
-            <Heading>
+            <Heading level={3} className="display-5">
               Confidence and trust underpin the relationship between the
               backer’s decision making journey and Kickstarter’s backing rates
             </Heading>
@@ -659,13 +671,13 @@ export default function Kickstarter() {
         <Spacer size="md" />
         <Container size="compact" centerText>
           <IconContent icon={"/images/icon-idea.png"}>
-            <Paragraph className="h5 fw-light">
+            <Heading level={5} className="text-platinum fw-light">
               Our research came full circle when we revisited our affinity map -
               we realised that low user confidence stemmed from a{" "}
               <strong>lack of information</strong> about projects and creators
               and a <strong>lack of communication</strong> between creators and
               backers.
-            </Paragraph>
+            </Heading>
           </IconContent>
         </Container>
         <Spacer size="lg" />
@@ -675,7 +687,7 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>
+            <Heading level={3} className="display-5">
               Using a domino effect to increase conversion rates
             </Heading>
             <div></div>
@@ -698,19 +710,19 @@ export default function Kickstarter() {
       <Section title="SYNTHESIZE" heading="PROBLEM STATEMENT">
         <Spacer size="lg" />
         <Container size="compact" centerText>
-          <Paragraph className="h5 fw-light mb-4">
+          <Heading level={5} className="text-platinum fw-light mb-4">
             Potential Kickstarter project backers determine their level of
             confidence in a project by assessing its campaign and creator before
             supporting it. However, these potential backers currently access
             external sources for more information about campaigns and creators
             to ensure their legitimacy.
-          </Paragraph>
-          <Paragraph className="h5 fw-light">
+          </Heading>
+          <Heading level={5} className="text-platinum fw-light">
             Without enough information on Kickstarter, potential backers are
             unable to make informed decisions within the site, leading to higher
             bounce rates and lower backing rates. This negatively affects
             Kickstarter’s traffic volume and overall revenue.
-          </Paragraph>
+          </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -722,7 +734,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>How might we...</Heading>
+            <Heading level={3} className="display-5">
+              How might we...
+            </Heading>
             <div></div>
             <div>
               <IconContent
@@ -772,14 +786,14 @@ export default function Kickstarter() {
       <Section title="SYNTHESIZE" heading="SOLUTION">
         <Spacer size="lg" />
         <Container size="compact" centerText>
-          <Paragraph className="h5 fw-light mb-4">
+          <Heading level={5} className="text-platinum fw-light mb-4">
             Integrating external information into Kickstarter provides potential
             project backers a holistic understanding of a project’s creator and
             campaign through the product details, audiovisual storytelling, and
             community opinions. Presenting this information in an accessible and
             easily understood manner allows them to better assess a project’s
             legitimacy.
-          </Paragraph>
+          </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -791,7 +805,9 @@ export default function Kickstarter() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading>Ideating through a ‘Mash Up’ of experiences</Heading>
+            <Heading level={3} className="display-5">
+              Ideating through a ‘Mash Up’ of experiences
+            </Heading>
             <div></div>
             <div>
               <Paragraph>
@@ -836,10 +852,10 @@ export default function Kickstarter() {
       <Section title="DESIGN" heading="FEATURE DEVELOPMENT">
         <Spacer size="lg" />
         <Container size="normal" centerText>
-          <Paragraph className="h5 fw-light">
+          <Heading level={5} className="text-platinum fw-light">
             Poke the blobs to learn more about how each feature addressed the
             various HMWs
-          </Paragraph>
+          </Heading>
           <Spacer size="md" />
           <Features />
         </Container>
@@ -977,7 +993,9 @@ export default function Kickstarter() {
                 <small>CHANGE</small>
               </Paragraph>
               <IconContent icon="/images/icon-test.png">
-                <Heading size="h4">limitations</Heading>
+                <Heading level={3} className="display-4">
+                  limitations
+                </Heading>
               </IconContent>
             </div>
             <div></div>
@@ -1025,7 +1043,9 @@ export default function Kickstarter() {
                 <small>UPWARDS &amp; ONWARDS</small>
               </Paragraph>
               <IconContent icon="/images/icon-gps.png">
-                <Heading size="h4">navigation</Heading>
+                <Heading level={3} className="display-4">
+                  navigation
+                </Heading>
               </IconContent>
             </div>
             <div></div>
@@ -1066,7 +1086,9 @@ export default function Kickstarter() {
                 <small>UPWARDS &amp; ONWARDS</small>
               </Paragraph>
               <IconContent icon="/images/icon-success.png">
-                <Heading size="h4">scalability</Heading>
+                <Heading level={3} className="display-4">
+                  scalability
+                </Heading>
               </IconContent>
             </div>
             <div></div>
