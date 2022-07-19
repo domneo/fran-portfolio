@@ -17,7 +17,9 @@ export const IconContent = ({ title, icon, children }: IconContentProps) => {
       </div>
       <div>
         {title && (
-          <Paragraph className="caption text-works mb-2">{title}</Paragraph>
+          <Paragraph className="caption text-works mb-2">
+            <strong>{title}</strong>
+          </Paragraph>
         )}
         {children}
       </div>

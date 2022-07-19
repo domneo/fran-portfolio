@@ -13,19 +13,17 @@ import { Spacer } from "components/common/Spacer";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
-import { CaptionTitleContent } from "components/works2/CaptionTitleContent";
 import { Carousel } from "components/works2/Carousel";
 import { Container } from "components/works2/Container";
 import { Details } from "components/works2/Details";
 import { DropdownContent } from "components/works2/DropdownContent";
-import { Features } from "components/works2/Features";
 import { Header } from "components/works2/Header";
 import { IconContent } from "components/works2/IconContent";
 import { Section } from "components/works2/Section";
 
 export const meta = {
   image: "/images/muji-hero.jpg",
-  title: "Muji",
+  title: "MUJI",
   details: [
     { title: "MY ROLE", content: "UIUX Designer (one-woman show)" },
     { title: "TIME", content: "1 month (flex)" },
@@ -79,10 +77,24 @@ export default function Muji() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              Elevating the current user experience
+            </Heading>
             <div></div>
-            <Paragraph></Paragraph>
-            <Paragraph></Paragraph>
+            <div>
+              <Paragraph>
+                For a course project, we had to design an improved e-commerce
+                experience for a platform of our choice. I decided to revamp
+                MUJI’s site as the brand is very close to my heart - it was my
+                go-to for all things under the sun when I lived abroad in Japan.
+              </Paragraph>
+              <Paragraph>
+                This redesign not only streamlined the website’s navigation and
+                introduced e-commerce, but also reconnected the
+                <span className="mx-3">d i s c o n n e c t</span>
+                between how consumers experienced MUJI online and offline.
+              </Paragraph>
+            </div>
           </ThreeColumns>
         </Container>
         <Spacer size="md" />
@@ -90,10 +102,10 @@ export default function Muji() {
           <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_MUJI || "/"}>
             <a target={"_blank"}>
               <Image
-                src={"/images/muji-proto.png"}
-                alt="Play with the prototype here"
-                width={1420}
-                height={1024}
+                src="/images/muji-prototype.png"
+                alt="play with prototype"
+                width={2500}
+                height={891}
               />
               <Spacer size="xs" />
               Play with the prototype here
@@ -188,11 +200,11 @@ export default function Muji() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M91.9166 1.07675C119.783 -0.619044 129.564 26.2231 151.009 38.4194C176.808 53.0918 221.723 56.0959 228.098 78.527C234.666 101.636 204.038 121.344 179.258 137.807C154.818 154.044 126.116 169.061 91.9166 169C57.7831 168.939 20.3497 158.2 5.03586 137.495C-8.82309 118.757 16.8004 98.741 25.0003 78.527C29.8196 66.6463 33.3643 55.6495 42.5484 45.0197C56.82 28.5014 63.816 2.78678 91.9166 1.07675Z"
                     stroke="var(--works)"
-                    stroke-width="2"
+                    strokeWidth="2"
                   />
                   <path
                     d="M76.5739 91H72.7386V77.9091H76.804C78.0526 77.9091 79.12 78.169 80.0064 78.6889C80.897 79.2088 81.5788 79.9545 82.0518 80.9261C82.5249 81.8977 82.7614 83.0632 82.7614 84.4226C82.7614 85.7947 82.5185 86.973 82.0327 87.9574C81.5511 88.9375 80.848 89.6896 79.9233 90.2138C79.0028 90.7379 77.8864 91 76.5739 91ZM73.9339 89.9261H76.5036C77.6286 89.9261 78.5703 89.7045 79.3288 89.2614C80.0874 88.8182 80.6563 88.1854 81.0355 87.3629C81.4148 86.5405 81.6044 85.5604 81.6044 84.4226C81.6001 83.2933 81.4126 82.3217 81.0419 81.5078C80.6754 80.6939 80.13 80.0696 79.4055 79.6349C78.6854 79.2003 77.7947 78.983 76.7337 78.983H73.9339V89.9261ZM89.3915 91.2045C88.4753 91.2045 87.6827 90.9915 87.0137 90.5653C86.3446 90.1349 85.8269 89.5405 85.4604 88.782C85.0982 88.0192 84.9171 87.1413 84.9171 86.1484C84.9171 85.1598 85.0982 84.282 85.4604 83.5149C85.8269 82.7436 86.3319 82.1406 86.9753 81.706C87.623 81.267 88.3709 81.0476 89.2189 81.0476C89.7516 81.0476 90.2651 81.1456 90.7594 81.3416C91.2537 81.5334 91.6969 81.8295 92.089 82.2301C92.4853 82.6264 92.7985 83.1271 93.0286 83.7322C93.2587 84.3331 93.3738 85.0447 93.3738 85.8672V86.4297H85.7033V85.4261H92.2104C92.2104 84.7955 92.0826 84.2287 91.8269 83.7259C91.5755 83.2187 91.2239 82.8182 90.7722 82.5241C90.3248 82.2301 89.807 82.0831 89.2189 82.0831C88.5968 82.0831 88.0492 82.2493 87.5762 82.5817C87.1032 82.9141 86.7324 83.353 86.464 83.8984C86.1998 84.4439 86.0655 85.0405 86.0613 85.6882V86.2891C86.0613 87.0689 86.1955 87.7507 86.464 88.3345C86.7367 88.9141 87.1223 89.3636 87.6209 89.6832C88.1195 90.0028 88.7097 90.1626 89.3915 90.1626C89.856 90.1626 90.263 90.0902 90.6124 89.9453C90.9661 89.8004 91.2623 89.6065 91.5009 89.3636C91.7438 89.1165 91.927 88.8459 92.0506 88.5518L93.1309 88.9034C92.9817 89.3168 92.7367 89.6982 92.3958 90.0476C92.0591 90.397 91.6373 90.6783 91.1301 90.8913C90.6273 91.1001 90.0478 91.2045 89.3915 91.2045ZM103.182 81.1818L99.5964 91H98.3819L94.796 81.1818H96.0297L98.9444 89.4979H99.0339L101.949 81.1818H103.182ZM109.026 91.2045C108.11 91.2045 107.317 90.9915 106.648 90.5653C105.979 90.1349 105.462 89.5405 105.095 88.782C104.733 88.0192 104.552 87.1413 104.552 86.1484C104.552 85.1598 104.733 84.282 105.095 83.5149C105.462 82.7436 105.967 82.1406 106.61 81.706C107.258 81.267 108.006 81.0476 108.854 81.0476C109.386 81.0476 109.9 81.1456 110.394 81.3416C110.888 81.5334 111.332 81.8295 111.724 82.2301C112.12 82.6264 112.433 83.1271 112.663 83.7322C112.893 84.3331 113.009 85.0447 113.009 85.8672V86.4297H105.338V85.4261H111.845C111.845 84.7955 111.717 84.2287 111.462 83.7259C111.21 83.2187 110.859 82.8182 110.407 82.5241C109.96 82.2301 109.442 82.0831 108.854 82.0831C108.232 82.0831 107.684 82.2493 107.211 82.5817C106.738 82.9141 106.367 83.353 106.099 83.8984C105.835 84.4439 105.7 85.0405 105.696 85.6882V86.2891C105.696 87.0689 105.83 87.7507 106.099 88.3345C106.371 88.9141 106.757 89.3636 107.256 89.6832C107.754 90.0028 108.344 90.1626 109.026 90.1626C109.491 90.1626 109.898 90.0902 110.247 89.9453C110.601 89.8004 110.897 89.6065 111.136 89.3636C111.379 89.1165 111.562 88.8459 111.685 88.5518L112.766 88.9034C112.616 89.3168 112.371 89.6982 112.031 90.0476C111.694 90.397 111.272 90.6783 110.765 90.8913C110.262 91.1001 109.683 91.2045 109.026 91.2045ZM116.654 77.9091V91H115.516V77.9091H116.654ZM123.48 91.2045C122.632 91.2045 121.882 90.9893 121.23 90.5589C120.583 90.1286 120.075 89.5341 119.709 88.7756C119.343 88.0128 119.159 87.1328 119.159 86.1357C119.159 85.13 119.343 84.2457 119.709 83.483C120.075 82.7159 120.583 82.1193 121.23 81.6932C121.882 81.2628 122.632 81.0476 123.48 81.0476C124.328 81.0476 125.076 81.2628 125.724 81.6932C126.372 82.1236 126.879 82.7202 127.245 83.483C127.616 84.2457 127.801 85.13 127.801 86.1357C127.801 87.1328 127.618 88.0128 127.252 88.7756C126.885 89.5341 126.376 90.1286 125.724 90.5589C125.076 90.9893 124.328 91.2045 123.48 91.2045ZM123.48 90.1626C124.162 90.1626 124.74 89.9794 125.213 89.6129C125.686 89.2464 126.044 88.7585 126.286 88.1491C126.534 87.5398 126.657 86.8686 126.657 86.1357C126.657 85.4027 126.534 84.7294 126.286 84.1158C126.044 83.5021 125.686 83.0099 125.213 82.6392C124.74 82.2685 124.162 82.0831 123.48 82.0831C122.803 82.0831 122.225 82.2685 121.748 82.6392C121.275 83.0099 120.915 83.5021 120.668 84.1158C120.425 84.7294 120.303 85.4027 120.303 86.1357C120.303 86.8686 120.425 87.5398 120.668 88.1491C120.915 88.7585 121.275 89.2464 121.748 89.6129C122.221 89.9794 122.798 90.1626 123.48 90.1626ZM130.299 94.6818V81.1818H131.405V83.0547H131.539C131.675 82.7607 131.863 82.4602 132.102 82.1534C132.34 81.8423 132.656 81.5803 133.048 81.3672C133.444 81.1541 133.942 81.0476 134.543 81.0476C135.353 81.0476 136.06 81.2607 136.665 81.6868C137.275 82.1087 137.748 82.701 138.085 83.4638C138.425 84.2223 138.596 85.1065 138.596 86.1165C138.596 87.1307 138.425 88.0192 138.085 88.782C137.748 89.5447 137.275 90.1392 136.665 90.5653C136.06 90.9915 135.357 91.2045 134.556 91.2045C133.964 91.2045 133.467 91.098 133.067 90.8849C132.67 90.6719 132.349 90.4098 132.102 90.0987C131.859 89.7834 131.671 89.4766 131.539 89.1783H131.437V94.6818H130.299ZM131.424 86.0973C131.424 86.8899 131.541 87.593 131.776 88.2067C132.014 88.8161 132.355 89.2955 132.798 89.6449C133.246 89.9901 133.787 90.1626 134.422 90.1626C135.074 90.1626 135.624 89.9837 136.071 89.6257C136.523 89.2635 136.866 88.7756 137.1 88.1619C137.339 87.5483 137.458 86.8601 137.458 86.0973C137.458 85.343 137.341 84.6634 137.107 84.0582C136.876 83.4531 136.536 82.9737 136.084 82.62C135.632 82.2621 135.078 82.0831 134.422 82.0831C133.783 82.0831 133.239 82.2557 132.792 82.6009C132.344 82.9418 132.004 83.4148 131.769 84.0199C131.539 84.6207 131.424 85.3132 131.424 86.0973Z"
@@ -228,12 +240,12 @@ export default function Muji() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M107.511 24.9981C130.438 28.1971 154.396 20.0129 174.417 29.5755C200.369 41.9708 226.089 59.43 230.086 83.5433C234.417 109.669 223.458 141.115 195.07 154.17C168.181 166.537 138.403 138.357 107.511 139.918C71.7101 141.727 34.1979 183.588 8.24805 163.611C-17.4767 143.808 33.4795 112.219 34.2794 83.5433C35.0381 56.3438 -11.3396 26.1513 12.6166 6.99952C36.609 -12.1812 74.2256 20.3538 107.511 24.9981Z"
                     stroke="var(--works)"
-                    stroke-width="2"
-                    stroke-dasharray="3 5 7 9"
+                    strokeWidth="2"
+                    strokeDasharray="3 5 7 9"
                   />
                   <path
                     d="M76.7386 91V77.9091H80.9638C81.8928 77.9091 82.6683 78.0881 83.2905 78.446C83.9169 78.7997 84.3878 79.2812 84.7031 79.8906C85.0227 80.5 85.1825 81.1861 85.1825 81.9489C85.1825 82.7116 85.0249 83.3999 84.7095 84.0135C84.3942 84.6229 83.9254 85.1065 83.3033 85.4645C82.6811 85.8182 81.9077 85.995 80.983 85.995H77.6591V84.9212H80.951C81.6371 84.9212 82.206 84.7933 82.6577 84.5376C83.1094 84.2777 83.446 83.924 83.6676 83.4766C83.8935 83.0291 84.0064 82.5199 84.0064 81.9489C84.0064 81.3778 83.8935 80.8686 83.6676 80.4212C83.446 79.9737 83.1072 79.6222 82.6513 79.3665C82.1996 79.1108 81.6264 78.983 80.9318 78.983H77.9339V91H76.7386ZM87.7521 91V81.1818H88.858V82.6903H88.9411C89.1371 82.196 89.478 81.7976 89.9638 81.495C90.4538 81.1882 91.0078 81.0348 91.6257 81.0348C91.7195 81.0348 91.8239 81.0369 91.9389 81.0412C92.054 81.0455 92.1499 81.0497 92.2266 81.054V82.2109C92.1754 82.2024 92.0859 82.1896 91.9581 82.1726C91.8303 82.1555 91.6918 82.147 91.5426 82.147C91.0313 82.147 90.5753 82.2557 90.1747 82.473C89.7784 82.6861 89.4652 82.9822 89.2351 83.3615C89.005 83.7408 88.8899 84.1733 88.8899 84.6591V91H87.7521ZM97.6854 91.2045C96.8374 91.2045 96.0874 90.9893 95.4354 90.5589C94.7876 90.1286 94.2805 89.5341 93.9141 88.7756C93.5476 88.0128 93.3643 87.1328 93.3643 86.1357C93.3643 85.13 93.5476 84.2457 93.9141 83.483C94.2805 82.7159 94.7876 82.1193 95.4354 81.6932C96.0874 81.2628 96.8374 81.0476 97.6854 81.0476C98.5334 81.0476 99.2812 81.2628 99.929 81.6932C100.577 82.1236 101.084 82.7202 101.45 83.483C101.821 84.2457 102.006 85.13 102.006 86.1357C102.006 87.1328 101.823 88.0128 101.457 88.7756C101.09 89.5341 100.581 90.1286 99.929 90.5589C99.2812 90.9893 98.5334 91.2045 97.6854 91.2045ZM97.6854 90.1626C98.3672 90.1626 98.9446 89.9794 99.4176 89.6129C99.8906 89.2464 100.249 88.7585 100.491 88.1491C100.739 87.5398 100.862 86.8686 100.862 86.1357C100.862 85.4027 100.739 84.7294 100.491 84.1158C100.249 83.5021 99.8906 83.0099 99.4176 82.6392C98.9446 82.2685 98.3672 82.0831 97.6854 82.0831C97.0078 82.0831 96.4304 82.2685 95.9531 82.6392C95.4801 83.0099 95.12 83.5021 94.8729 84.1158C94.63 84.7294 94.5085 85.4027 94.5085 86.1357C94.5085 86.8686 94.63 87.5398 94.8729 88.1491C95.12 88.7585 95.4801 89.2464 95.9531 89.6129C96.4261 89.9794 97.0036 90.1626 97.6854 90.1626ZM108.371 81.1818V82.1726H103.686V81.1818H108.371ZM105.15 78.8295H106.294V88.4368C106.294 88.8459 106.364 89.1676 106.505 89.402C106.645 89.6321 106.829 89.7962 107.055 89.8942C107.28 89.9879 107.521 90.0348 107.777 90.0348C107.926 90.0348 108.054 90.0263 108.16 90.0092C108.267 89.9879 108.361 89.9666 108.442 89.9453L108.684 90.9744C108.574 91.017 108.437 91.0554 108.275 91.0895C108.113 91.1278 107.913 91.147 107.675 91.147C107.257 91.147 106.854 91.0554 106.466 90.8722C106.083 90.6889 105.768 90.4162 105.52 90.054C105.273 89.6918 105.15 89.2422 105.15 88.7053V78.8295ZM114.666 91.2045C113.818 91.2045 113.068 90.9893 112.416 90.5589C111.768 90.1286 111.261 89.5341 110.895 88.7756C110.528 88.0128 110.345 87.1328 110.345 86.1357C110.345 85.13 110.528 84.2457 110.895 83.483C111.261 82.7159 111.768 82.1193 112.416 81.6932C113.068 81.2628 113.818 81.0476 114.666 81.0476C115.514 81.0476 116.262 81.2628 116.909 81.6932C117.557 82.1236 118.064 82.7202 118.431 83.483C118.801 84.2457 118.987 85.13 118.987 86.1357C118.987 87.1328 118.804 88.0128 118.437 88.7756C118.071 89.5341 117.561 90.1286 116.909 90.5589C116.262 90.9893 115.514 91.2045 114.666 91.2045ZM114.666 90.1626C115.348 90.1626 115.925 89.9794 116.398 89.6129C116.871 89.2464 117.229 88.7585 117.472 88.1491C117.719 87.5398 117.843 86.8686 117.843 86.1357C117.843 85.4027 117.719 84.7294 117.472 84.1158C117.229 83.5021 116.871 83.0099 116.398 82.6392C115.925 82.2685 115.348 82.0831 114.666 82.0831C113.988 82.0831 113.411 82.2685 112.934 82.6392C112.461 83.0099 112.1 83.5021 111.853 84.1158C111.61 84.7294 111.489 85.4027 111.489 86.1357C111.489 86.8686 111.61 87.5398 111.853 88.1491C112.1 88.7585 112.461 89.2464 112.934 89.6129C113.407 89.9794 113.984 90.1626 114.666 90.1626ZM125.352 81.1818V82.1726H120.666V81.1818H125.352ZM122.13 78.8295H123.274V88.4368C123.274 88.8459 123.345 89.1676 123.485 89.402C123.626 89.6321 123.809 89.7962 124.035 89.8942C124.261 89.9879 124.502 90.0348 124.757 90.0348C124.906 90.0348 125.034 90.0263 125.141 90.0092C125.247 89.9879 125.341 89.9666 125.422 89.9453L125.665 90.9744C125.554 91.017 125.418 91.0554 125.256 91.0895C125.094 91.1278 124.894 91.147 124.655 91.147C124.237 91.147 123.835 91.0554 123.447 90.8722C123.063 90.6889 122.748 90.4162 122.501 90.054C122.254 89.6918 122.13 89.2422 122.13 88.7053V78.8295ZM128.728 94.6818C128.502 94.6818 128.292 94.6605 128.096 94.6179C127.9 94.5753 127.744 94.5284 127.629 94.4773L127.936 93.4737C128.324 93.593 128.669 93.6357 128.971 93.6016C129.274 93.5717 129.542 93.4354 129.777 93.1925C130.011 92.9538 130.22 92.5874 130.403 92.093L130.761 91.0959L127.15 81.1818H128.383L131.298 89.4979H131.387L134.302 81.1818H135.536L131.381 92.5533C131.206 93.0263 130.991 93.4205 130.735 93.7358C130.48 94.0554 130.184 94.2919 129.847 94.4453C129.515 94.603 129.142 94.6818 128.728 94.6818ZM137.762 94.6818V81.1818H138.868V83.0547H139.002C139.138 82.7607 139.326 82.4602 139.564 82.1534C139.803 81.8423 140.118 81.5803 140.51 81.3672C140.907 81.1541 141.405 81.0476 142.006 81.0476C142.816 81.0476 143.523 81.2607 144.128 81.6868C144.738 82.1087 145.211 82.701 145.547 83.4638C145.888 84.2223 146.059 85.1065 146.059 86.1165C146.059 87.1307 145.888 88.0192 145.547 88.782C145.211 89.5447 144.738 90.1392 144.128 90.5653C143.523 90.9915 142.82 91.2045 142.019 91.2045C141.427 91.2045 140.93 91.098 140.53 90.8849C140.133 90.6719 139.812 90.4098 139.564 90.0987C139.322 89.7834 139.134 89.4766 139.002 89.1783H138.9V94.6818H137.762ZM138.887 86.0973C138.887 86.8899 139.004 87.593 139.238 88.2067C139.477 88.8161 139.818 89.2955 140.261 89.6449C140.709 89.9901 141.25 90.1626 141.885 90.1626C142.537 90.1626 143.086 89.9837 143.534 89.6257C143.986 89.2635 144.329 88.7756 144.563 88.1619C144.802 87.5483 144.921 86.8601 144.921 86.0973C144.921 85.343 144.804 84.6634 144.569 84.0582C144.339 83.4531 143.998 82.9737 143.547 82.62C143.095 82.2621 142.541 82.0831 141.885 82.0831C141.246 82.0831 140.702 82.2557 140.255 82.6009C139.807 82.9418 139.466 83.4148 139.232 84.0199C139.002 84.6207 138.887 85.3132 138.887 86.0973ZM152.524 91.2045C151.608 91.2045 150.816 90.9915 150.146 90.5653C149.477 90.1349 148.96 89.5405 148.593 88.782C148.231 88.0192 148.05 87.1413 148.05 86.1484C148.05 85.1598 148.231 84.282 148.593 83.5149C148.96 82.7436 149.465 82.1406 150.108 81.706C150.756 81.267 151.504 81.0476 152.352 81.0476C152.884 81.0476 153.398 81.1456 153.892 81.3416C154.387 81.5334 154.83 81.8295 155.222 82.2301C155.618 82.6264 155.931 83.1271 156.161 83.7322C156.392 84.3331 156.507 85.0447 156.507 85.8672V86.4297H148.836V85.4261H155.343C155.343 84.7955 155.215 84.2287 154.96 83.7259C154.708 83.2187 154.357 82.8182 153.905 82.5241C153.458 82.2301 152.94 82.0831 152.352 82.0831C151.73 82.0831 151.182 82.2493 150.709 82.5817C150.236 82.9141 149.865 83.353 149.597 83.8984C149.333 84.4439 149.198 85.0405 149.194 85.6882V86.2891C149.194 87.0689 149.328 87.7507 149.597 88.3345C149.869 88.9141 150.255 89.3636 150.754 89.6832C151.252 90.0028 151.843 90.1626 152.524 90.1626C152.989 90.1626 153.396 90.0902 153.745 89.9453C154.099 89.8004 154.395 89.6065 154.634 89.3636C154.877 89.1165 155.06 88.8459 155.183 88.5518L156.264 88.9034C156.115 89.3168 155.869 89.6982 155.529 90.0476C155.192 90.397 154.77 90.6783 154.263 90.8913C153.76 91.1001 153.181 91.2045 152.524 91.2045Z"
@@ -292,18 +304,187 @@ export default function Muji() {
         title="RESEARCH"
         heading="UNDERSTANDING THE BRAND &amp; BUSINESS"
       >
+        <Spacer size="lg" />
         <Container size="normal">
-          <Spacer size="lg" />
-
-          <Spacer size="lg" />
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading level={3} className="display-5">
+              MUJI seems to follow value-centric expansion and development
+            </Heading>
+            <div></div>
+            <div>
+              <IconContent
+                title="BRAND DEVELOPMENT GUIDED BY THREE MAIN PRINCIPLES"
+                icon={"/images/icon-star.png"}
+              >
+                <ol>
+                  <ListItem>Selection of materials</ListItem>
+                  <ListItem>Streamlining of processes</ListItem>
+                  <ListItem>Simplification of packages</ListItem>
+                </ol>
+              </IconContent>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent
+                title="SINGAPORE A HUB &amp; TEST-BED FOR JAPAN-ONLY CONCEPTS"
+                icon={"/images/icon-vpn.png"}
+              >
+                <ul>
+                  <ListItem>
+                    Concepts piloted and developed here before regional and
+                    international release
+                  </ListItem>
+                </ul>
+              </IconContent>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent
+                title="SEEKING TO INCREASE ONLINE PRESENCE AND CAPABILITIES"
+                icon={"/images/icon-device.png"}
+              >
+                <ul>
+                  <ListItem>
+                    Shopping through the website and phone app in MUJI’s
+                    foreseeable future
+                    <ul>
+                      <ListItem>Already a reality in Japan</ListItem>
+                    </ul>
+                  </ListItem>
+                </ul>
+              </IconContent>
+            </div>
+          </ThreeColumns>
         </Container>
+        <Spacer size="lg" />
       </Section>
       <Section title="RESEARCH" heading="UNDERSTANDING THE USERS">
+        <Spacer size="lg" />
         <Container size="normal">
-          <Spacer size="lg" />
-
-          <Spacer size="lg" />
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading level={3} className="display-5">
+              Convenience sampling to quickly understand consumer perceptions
+            </Heading>
+            <div></div>
+            <div>
+              <Paragraph>
+                As MUJI SG does not presently (re: 2022) provide online shopping
+                options, it was important to quickly gain a general overview of
+                consumers’ perceptions of the website and how feasible direct
+                MUJI e-commerce is for consumers. This was done through{" "}
+                <strong>convenience sampling</strong> at one of MUJI’s physical
+                stores.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+          <Spacer size="md" />
+          <TwoColumns>
+            <IconContent title="APPROACH" icon={"/images/icon-hi.png"}>
+              <ul>
+                <ListItem>Convenience sampling at a MUJI store</ListItem>
+                <ListItem>
+                  Validate assumptions about the current website
+                </ListItem>
+              </ul>
+            </IconContent>
+            <IconContent title="26 PARTICIPANTS" icon={"/images/icon-team.png"}>
+              <ul>
+                <ListItem>
+                  People who are shopping or browsing in a physical MUJI store
+                </ListItem>
+              </ul>
+            </IconContent>
+          </TwoColumns>
+          <Spacer size="md" />
+          <Image
+            src="/images/muji-convenience-sampling.png"
+            alt="convenience sampling banner"
+            width={2872}
+            height={698}
+          />
         </Container>
+        <Spacer size="lg" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading level={3} className="display-5">
+              Empathise on a deeper level via deep dive interviews
+            </Heading>
+            <div></div>
+            <div>
+              <Paragraph className="mb-2">
+                It was surprising to find out convenience sampling interviewees
+                (who were also online shoppers):
+              </Paragraph>
+              <ol>
+                <ListItem>
+                  Believed they could shop through MUJI SG’s website
+                </ListItem>
+                <ListItem>
+                  Believed direct MUJI e-commerce was available, yet still chose
+                  to shop offline
+                </ListItem>
+              </ol>
+              <Paragraph>
+                To uncover why this was happening, I conducted deep dive
+                interviews and usability tests with MUJI consumers who were also
+                regular online shoppers.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+          <Spacer size="md" />
+          <TwoColumns>
+            <IconContent title="APPROACH" icon={"/images/icon-chat.png"}>
+              <ul>
+                <ListItem>
+                  60-minute deep dive user interviews and usability tests
+                </ListItem>
+                <ListItem>
+                  Understand online shoppers’ mental models and pain points
+                </ListItem>
+                <ListItem>
+                  Understand shortcomings of the MUJI SG website
+                </ListItem>
+              </ul>
+            </IconContent>
+            <IconContent title="4 PARTICIPANTS" icon={"/images/icon-team.png"}>
+              <ul>
+                <ListItem>
+                  People who have purchased items from MUJI before
+                </ListItem>
+                <ListItem>
+                  People who shop online at least twice a week
+                </ListItem>
+              </ul>
+            </IconContent>
+          </TwoColumns>
+          <Spacer size="md" />
+          <Image
+            src="/images/muji-affinity-map-insights.jpg"
+            alt="affinity map high level insights"
+            width={1800}
+            height={1169}
+          />
+          <Spacer size="md" />
+          <DropdownContent title="👁 👄 👁  Full affinity map">
+            <ImageZoom
+              src="/images/muji-full-affinity-map.png"
+              alt="full affinity map"
+              width={2872}
+              height={1200}
+            />
+          </DropdownContent>
+        </Container>
+        <Spacer size="lg" />
       </Section>
       <Section title="RESEARCH" heading="EVALUATING THE WEBSITE">
         <Spacer size="lg" />
@@ -313,100 +494,230 @@ export default function Muji() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              Preliminary Usability Tests to identify usability issues
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                Preliminary usability tests were also performed with the same 4
+                interviewees who participated in the deep dive interviews.
+                Findings from these tests would help me refine and redesign the
+                MUJI SG website to better suit user needs beyond creating an
+                e-commerce feature.
+              </Paragraph>
             </div>
           </ThreeColumns>
           <Spacer size="md" />
-          <Image src="/images/" alt="1" width={1} height={1} />
-          <Spacer size="sm" />
-          <Image src="/images/" alt="1" width={1} height={1} />
-          <Spacer size="sm" />
-          <Image src="/images/" alt="1" width={1} height={1} />
+          <Image
+            src="/images/muji-usability-test-1.png"
+            alt="website usability &amp; heuristic evaluation - filterception"
+            width={2872}
+            height={2064}
+          />
+          <Spacer size="md" />
+          <div className="row align-items-center">
+            <div className="col-lg-5">
+              <div className="row align-items-center mb-5">
+                <div className="col-lg-10 pe-0">
+                  <div
+                    className="p-3"
+                    style={{ border: "2px solid var(--contact)" }}
+                  >
+                    <Heading level={5} className="paragraph text-platinum mb-2">
+                      <strong>
+                        Heuristic Violation: Consistency &amp; Standards
+                      </strong>
+                    </Heading>
+                    <ul>
+                      <ListItem>
+                        External inconsistency: Strays from established
+                        conventions in an industry or on the web at large
+                      </ListItem>
+                      <ListItem>
+                        Like other e-commerce sites, e-catalogues, etc.,
+                        tertiary levels should be easily accessible
+                      </ListItem>
+                    </ul>
+                  </div>
+                </div>
+                <div className="col-lg-2 px-0">
+                  <div
+                    className="bg-contact"
+                    style={{ width: "100%", height: "2px" }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-7 ps-0">
+              <Image
+                src="/images/muji-point-01_right.gif"
+                alt="website usability &amp; heuristic evaluation - filterception"
+                width={1294}
+                height={759}
+              />
+            </div>
+          </div>
+          <Spacer size="md" />
+          <Image
+            src="/images/muji-usability-test-2.png"
+            alt="website usability &amp; heuristic evaluation - footer"
+            width={2872}
+            height={2092}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
       <Section title="SYNTHESIZE" heading="PERSONA">
         <Spacer size="lg" />
-        <Container size="compact" centerElements>
-          <Image src="/images/" alt="1" width={1} height={1} />
+        <Container size="normal" centerElements>
+          <Image
+            src="/images/muji-persona.png"
+            alt="persona"
+            width={2872}
+            height={988}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
       <Section title="SYNTHESIZE" heading="USER FLOWS">
         <Spacer size="lg" />
         <Container size="normal">
-          <Image src="/images/" alt="1" width={1} height={1} />
+          <ImageZoom
+            src="/images/muji-userflow-1.png"
+            alt="user flow - complex discovery flow"
+            width={2872}
+            height={866}
+          />
           <Spacer size="md" />
           <ThreeColumns
             col1Props={{ lg: 4 }}
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              Existing Discovery Flow unnecessarily complex
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                3 / 4 users were unable to discover products due to the ‘filter’
+                navigation system
+              </Paragraph>
+              <Paragraph>
+                <strong>
+                  Heuristic Violation: Consistency &amp; Standards
+                </strong>
+                <br />
+                The site’s ‘filter’ navigation system forces users to navigate
+                through filters to access certain pages
+              </Paragraph>
             </div>
           </ThreeColumns>
           <Spacer size="lg" />
-          <Image src="/images/" alt="1" width={1} height={1} />
+          <ImageZoom
+            src="/images/muji-userflow-2.png"
+            alt="user flow - unintuitive categories"
+            width={2872}
+            height={866}
+          />
           <Spacer size="md" />
           <ThreeColumns
             col1Props={{ lg: 4 }}
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              Viewing all products in an overarching category unintuitive and
+              complex
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
-              <Paragraph></Paragraph>
-              <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
-              </ul>
+              <Paragraph>
+                Overarching category pages can be accessed if users noticed that
+                search bar terms can be removed or manipulated the URL
+              </Paragraph>
+              <Paragraph>
+                Users have pre-conceived expectations of how a site should work
+                <br />
+                All users wanted and expected to be able to access overarching
+                category pages when discovering new products since they could do
+                so on other websites
+              </Paragraph>
             </div>
           </ThreeColumns>
-          <Image src="/images/" alt="1" width={1} height={1} />
+          <Spacer size="lg" />
+          <ImageZoom
+            src="/images/muji-userflow-3.png"
+            alt="user flow - offline shopping"
+            width={2872}
+            height={866}
+          />
           <Spacer size="md" />
           <ThreeColumns
             col1Props={{ lg: 5 }}
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 6 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              Buying from MUJI dependent on user awareness and willingness to
+              put in additional effort
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph className="mb-2">
+                No existing checkout means consumers must either:
+              </Paragraph>
               <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
+                <ListItem>
+                  Find / be aware of an e-commerce site that sells MUJI
+                  products; or,
+                </ListItem>
+                <ListItem>Be willing to visit a physical store</ListItem>
               </ul>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                Strays away from MUJI’s principle of streamlining processes
+              </Paragraph>
             </div>
           </ThreeColumns>
         </Container>
         <Spacer size="md" />
-        <Container size="compact" centerText>
-          <DropdownContent title="👁 👄 👁  Full user flow"></DropdownContent>
+        <Container size="normal" centerText>
+          <DropdownContent title="👁 👄 👁  Full user flow">
+            <ImageZoom
+              src="/images/muji-full-userflow.png"
+              alt="full user flow"
+              width={2872}
+              height={672}
+            />
+          </DropdownContent>
         </Container>
         <Spacer size="lg" />
       </Section>
       <Section title="SYNTHESIZE" heading="PROBLEM SPACE">
         <Spacer size="lg" />
         <Container size="compact" centerElements>
-          <Image src="/images/" alt="1" width={1} height={1} />
+          <Image
+            src="/images/muji-goals.png"
+            alt="goal venn diagram"
+            width={2374}
+            height={2244}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
       <Section title="SYNTHESIZE" heading="PROBLEM STATEMENT">
         <Spacer size="lg" />
-        <Container size="normal" centerText>
-          <Heading className="fw-light"></Heading>
+        <Container size="compact" centerText>
+          <Heading level={5} className="text-platinum fw-light">
+            Online shoppers want convenience and direct access to all products
+            without having to visit MUJI’s physical stores or 3rd party online
+            retailers. However, they are unable to efficiently browse for
+            products and make purchases directly from MUJI SG. They are confused
+            by the existing navigation system as they spend time understanding
+            how the website works instead of searching for products. They also
+            assume that direct e-commerce is possible.
+          </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -418,25 +729,30 @@ export default function Muji() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              How might we...
+            </Heading>
             <div></div>
             <div>
               <IconContent
                 title="HELP CONSUMERS"
-                icon={"/images/icon-chat.png"}
+                icon={"/images/icon-research.png"}
               >
                 <ul>
-                  <ListItem></ListItem>
+                  <ListItem>
+                    Efficiently navigate and browse for products on the MUJI
+                    website?
+                  </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
               <IconContent
                 title="ENABLE CONSUMERS"
-                icon={"/images/icon-team.png"}
+                icon={"/images/icon-online-shopping2.png"}
               >
                 <ul>
-                  <ListItem></ListItem>
+                  <ListItem>Make purchases through the MUJI website?</ListItem>
                 </ul>
               </IconContent>
             </div>
@@ -446,8 +762,13 @@ export default function Muji() {
       </Section>
       <Section title="SYNTHESIZE" heading="SOLUTION">
         <Spacer size="lg" />
-        <Container size="normal" centerText>
-          <Heading className="fw-light"></Heading>
+        <Container size="compact" centerText>
+          <Heading level={5} className="text-platinum fw-light">
+            Reorganising MUJI SG’s information architecture to suit online
+            shopper’s mental models and integrating an e-commerce feature will
+            allow online shoppers a direct access to all of MUJI’s products in a
+            more accessible and efficient manner.
+          </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -455,27 +776,66 @@ export default function Muji() {
         <Spacer size="lg" />
         <Container size="normal">
           <Carousel>
-            <ImageZoom src="/images/" alt="1" width={1} height={1} />
-            <ImageZoom src="/images/" alt="1" width={1} height={1} />
-            <ImageZoom src="/images/" alt="1" width={1} height={1} />
+            <ImageZoom
+              src="/images/muji-companalysis-1.png"
+              alt="competitor analysis - overall"
+              width={2872}
+              height={1120}
+            />
+            <ImageZoom
+              src="/images/muji-companalysis-2.png"
+              alt="competitor analysis - task analysis no account"
+              width={2872}
+              height={1120}
+            />
+            <ImageZoom
+              src="/images/muji-companalysis-3.png"
+              alt="competitor analysis - task analysis with account"
+              width={2872}
+              height={1120}
+            />
           </Carousel>
           <Spacer size="md" />
           <TwoColumns
-            col1Props={{ xs: 12, md: 10, lg: 6, xxl: 4 }}
-            col2Props={{ xs: 12, md: 10, lg: 6, xxl: 4 }}
+            col1Props={{ xs: 12, md: 10, lg: 8, xl: 6 }}
+            col2Props={{ xs: 12, md: 10, lg: 8, xl: 6 }}
             gutter={{ xs: 3, lg: 4, xl: 5 }}
             centerH
           >
             <div>
               <Paragraph className="text-works">01.</Paragraph>
               <IconContent icon={"/images/icon-corkboard.png"}>
-                <Paragraph></Paragraph>
+                <Heading level={5} className="paragraph text-platinum">
+                  Account creation at the start of the checkout process a
+                  barrier against users
+                </Heading>
+                <ul>
+                  <ListItem>
+                    Shoppers more likely to abandon carts if barriers are placed
+                    in the beginning - negatively affects both user and business
+                  </ListItem>
+                </ul>
               </IconContent>
             </div>
             <div>
               <Paragraph className="text-works">02.</Paragraph>
               <IconContent icon={"/images/icon-search.png"}>
-                <Paragraph></Paragraph>
+                <Heading level={5} className="paragraph text-platinum mb-0">
+                  Leverage on strong in-store experiences for a win-win
+                  situation
+                </Heading>
+                <ul>
+                  <ListItem>
+                    In-store collection relieves delivery logistics and costs
+                    while providing consumers (who enjoy MUJI’s aesthetics)
+                    in-store experiences that cannot be attained online
+                  </ListItem>
+                </ul>
+                <Paragraph>
+                  ⚠ In a real world scenario, this option will be affected by
+                  other aspects of the business; not something that can be
+                  implemented easily.
+                </Paragraph>
               </IconContent>
             </div>
           </TwoColumns>
@@ -490,47 +850,86 @@ export default function Muji() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              Card sorting to understand mental models &amp; nomenclature
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                A As MUJI has a large inventory of items and categories arranged
+                in a way that was confusing for users, it had to be reorganised
+                and streamlined for a better navigational experience.
+              </Paragraph>
+              <Paragraph className="mb-2">
+                To find out what made sense to users, I conducted an{" "}
+                <strong>open card sort with 4 users</strong> to understand:
+              </Paragraph>
               <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
+                <ListItem>
+                  How they believe products should be grouped, and;
+                </ListItem>
+                <ListItem>
+                  The nomenclature of MUJI SG’s consumers through how they label
+                  these groups
+                </ListItem>
               </ul>
             </div>
           </ThreeColumns>
           <Spacer size="md" />
-          <Image src="/images/" alt="1" width={1} height={1} />
+          <Image
+            src="/images/muji-dendrogram.png"
+            alt="card sorting dendrogram"
+            width={2872}
+            height={1176}
+          />
           <Spacer size="lg" />
           <ThreeColumns
             col1Props={{ lg: 4 }}
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading></Heading>
+            <Heading level={3} className="display-5">
+              Reinventing the existing structure
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
-              <Paragraph></Paragraph>
-              <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
-              </ul>
+              <Paragraph>
+                By combining insights from users and an element analysis, I
+                could reconcile a new structure with business realities - MUJI
+                had to keep abreast of its competitiors. This allowed me to
+                create a new site map to showcase the reorganised content and
+                renamed categories on MUJI’s website and how the pages were
+                related to each other.
+              </Paragraph>
             </div>
           </ThreeColumns>
           <Spacer size="md" />
           <Carousel>
             <div>
-              <ImageZoom src="/images/" alt="1" width={1} height={1} />
+              <ImageZoom
+                src="/images/muji-ia-1.png"
+                alt="information architecture - reorganised"
+                width={2872}
+                height={1150}
+              />
               <Spacer size="xs" />
-              <Paragraph className="caption"></Paragraph>
+              <Paragraph className="caption text-center">
+                Information Architecture: Elements reorganised and informed by
+                user research and element analysis
+              </Paragraph>
             </div>
             <div>
-              <ImageZoom src="/images/" alt="1" width={1} height={1} />
+              <Image
+                src="/images/muji-ia-2.png"
+                alt="information architecture - original"
+                width={2872}
+                height={1150}
+              />
               <Spacer size="xs" />
-              <Paragraph className="caption"></Paragraph>
+              <Paragraph className="caption text-center">
+                Information Architecture: Original IA from MUJI SG with 2
+                different footers
+              </Paragraph>
             </div>
           </Carousel>
         </Container>
@@ -569,44 +968,47 @@ export default function Muji() {
               </ul>
             </IconContent>
           </TwoColumns>
-          <Spacer size="md" />
         </Container>
-        <Container size="narrow">
+        <Spacer size="md" />
+        <Container size="compact" className="px-lg-5">
           <ThreeColumns
             col1Props={{ lg: 4 }}
-            col2Props={{ lg: 4, centerV: true }}
+            col2Props={{ lg: 3, centerV: true }}
             col3Props={{ lg: 4 }}
+            centerH
           >
             <div>
               <Image
-                src="/images/ks-score-before.png"
-                alt="scores before"
-                width={1136}
+                src="/images/muji-sus-muji.png"
+                alt="sus score - muji"
+                width={536}
                 height={536}
               />
+              <Spacer size="xs" />
               <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
+                <ListItem>4 participants</ListItem>
+                <ListItem>Discovery Flow only</ListItem>
               </ul>
             </div>
             <div className="mx-auto" style={{ width: "120px" }}>
               <Image
-                src="/images/icon-exit.png"
-                alt="icon-exit"
+                src="/images/icon-vs.png"
+                alt="icon-vs"
                 width={512}
                 height={512}
               />
             </div>
             <div>
               <Image
-                src="/images/ks-score-after.png"
-                alt="scores after"
-                width={1136}
+                src="/images/muji-sus-prototype.png"
+                alt="sus score - prototype"
+                width={536}
                 height={536}
               />
+              <Spacer size="xs" />
               <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
+                <ListItem>6 participants</ListItem>
+                <ListItem>Discovery &amp; Check Out Flow</ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -616,13 +1018,36 @@ export default function Muji() {
       <Section title="DELIVER" heading="HI-FI PROTOTYPES">
         <Spacer size="lg" />
         <Container size="compact" centerText>
-          <DropdownContent title="👁 👄 👁  My first attempt at a design system"></DropdownContent>
+          <DropdownContent title="👁 👄 👁  My first attempt at a design system">
+            <Paragraph>
+              It’s not the best system or guide, but I am proud of what I was
+              able to accomplish in such a short time - learning about design
+              system and creating it from scratch in the same week, haha! Next
+              time, I’ll be back with a <em>vengeance</em> 💪🏻
+            </Paragraph>
+            <ImageZoom
+              src="/images/muji-first-design-system.jpg"
+              alt="full design system"
+              width={1122}
+              height={906}
+            />
+          </DropdownContent>
         </Container>
         <Spacer size="lg" />
         <Container size="normal">
-          <Image src="/images/" alt="prototype" width={1} height={1} />
+          <Image
+            src="/images/muji-hifi-1.jpg"
+            alt="hifi prototype 1"
+            width={2300}
+            height={6706}
+          />
           <Spacer size="md" />
-          <Image src="/images/" alt="prototype" width={1} height={1} />
+          <Image
+            src="/images/muji-hifi-2.jpg"
+            alt="hifi prototype 2"
+            width={2872}
+            height={3839}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -638,15 +1063,28 @@ export default function Muji() {
               <Paragraph>
                 <small>PROCESS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-test.png">
-                <Heading size="h4">perception</Heading>
+              <IconContent icon="/images/icon-view.png">
+                <Heading level={4} className="display-4">
+                  perception
+                </Heading>
               </IconContent>
             </div>
             <div></div>
             <div>
-              <Paragraph className="mb-2"></Paragraph>
+              <Paragraph className="mb-4">
+                Users have preconceived impressions and beliefs on what brand
+                identities and experiences should be like - brands and
+                businesses could play to those strengths
+              </Paragraph>
+              <Paragraph className="mb-2">
+                Brand identities and experiences are self-affirming and mutually
+                reinforcing
+              </Paragraph>
               <ul>
-                <ListItem></ListItem>
+                <ListItem>
+                  Offline and online experiences should ideally reflect each
+                  other and transitioning between them should be seamless
+                </ListItem>
               </ul>
             </div>
           </ThreeColumns>
@@ -669,16 +1107,29 @@ export default function Muji() {
               <Paragraph>
                 <small>CHANGE</small>
               </Paragraph>
-              <IconContent icon="/images/icon-gps.png">
-                <Heading size="h4">plan</Heading>
+              <IconContent icon="/images/icon-workflow.png">
+                <Heading level={4} className="display-4">
+                  plan
+                </Heading>
               </IconContent>
             </div>
             <div></div>
             <div>
-              <Paragraph className="mb-2"></Paragraph>
+              <Paragraph className="mb-2">
+                Minimalism is a strategy - restrictions in visual design means
+                more has to be done with less
+              </Paragraph>
               <ul>
-                <ListItem></ListItem>
+                <ListItem>
+                  Easy for minimalist elements to be subsumed/mistaken as other
+                  elements
+                </ListItem>
               </ul>
+              <Paragraph>
+                A proper design system and guide should have been created before
+                building a prototype as elements will look different in relation
+                to other elements
+              </Paragraph>
             </div>
           </ThreeColumns>
           <Spacer size="md" />
@@ -700,15 +1151,25 @@ export default function Muji() {
               <Paragraph>
                 <small>UPWARDS &amp; ONWARDS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-success.png">
-                <Heading size="h4">progress</Heading>
+              <IconContent icon="/images/icon-job-promotion.png">
+                <Heading level={4} className="display-4">
+                  progress
+                </Heading>
               </IconContent>
             </div>
             <div></div>
             <div>
-              <Paragraph className="mb-2"></Paragraph>
               <ul>
-                <ListItem></ListItem>
+                <ListItem>
+                  Reiterate the high-fidelity prototype and close the loop - for
+                  users to create an account after checking out
+                </ListItem>
+              </ul>
+              <ul>
+                <ListItem>
+                  Design the checkout process for users with an existing MUJI SG
+                  account
+                </ListItem>
               </ul>
             </div>
           </ThreeColumns>
