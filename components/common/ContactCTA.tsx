@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import removeWidows from "hooks/useRemoveWidows";
+
 import Blob from "components/common/Blob";
 
 interface ContactCTAProps {
@@ -12,9 +14,11 @@ export const ContactCTA = ({ children }: ContactCTAProps) => {
   return (
     <div className="container">
       <div className={`row justify-content-center`}>
-        <div className="col-lg-10 col-xl-8 col-xxl-5 text-center">
+        <div className="col-lg-10 col-xl-8 col-xxl-7 text-center">
           {children && (
-            <h2 className="display-5 text-bone spacer-md">{children}</h2>
+            <h2 className="display-5 text-bone spacer-md">
+              {removeWidows(children)}
+            </h2>
           )}
           <div className="d-flex justify-content-center">
             <a

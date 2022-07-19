@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import removeWidows from "hooks/useRemoveWidows";
 import styles from "styles/works/Header.module.scss";
 
+import { Heading } from "components/common/Heading";
+
 interface HeaderProps {
   image: string;
   number: string;
@@ -62,7 +64,9 @@ export const Header = ({ image, number, title }: HeaderProps) => {
           isExpanded ? styles.expanded : ""
         }`}
       >
-        <h1 className="display-1">{title}</h1>
+        <Heading level={1} className="display-1">
+          {title}
+        </Heading>
       </div>
     </>
   );
