@@ -155,7 +155,7 @@ export default function Works() {
                   >
                     <div className="flex-shrink-0">{item.number}</div>
                     <div>
-                      <h5 className="mb-2">{item.title}</h5>
+                      <h5 className="text-platinum mb-2">{item.title}</h5>
                       <p className="mb-2">
                         <small>{item.description}</small>
                       </p>

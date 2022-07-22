@@ -88,21 +88,27 @@
   &.worksHover {
     &:hover,
     &:focus {
-      color: var(--works);
+      .itemText {
+        color: var(--works);
+      }
     }
   }
 
   &.aboutHover {
     &:hover,
     &:focus {
-      color: var(--about);
+      .itemText {
+        color: var(--about);
+      }
     }
   }
 
   &.contactHover {
     &:hover,
     &:focus {
-      color: var(--contact);
+      .itemText {
+        color: var(--contact);
+      }
     }
   }
 }
@@ -132,6 +138,7 @@
 }
 
 .itemText {
+  color: var(--platinum);
   @include font-size(120px);
 
   @include media("lg") {
