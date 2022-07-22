@@ -64,7 +64,7 @@ export const Header = ({ image, number, title }: HeaderProps) => {
           isExpanded ? styles.expanded : ""
         }`}
       >
-        <Heading level={1} className="display-1">
+        <Heading level={1} className="display-1 text-platinum">
           {title}
         </Heading>
       </div>
