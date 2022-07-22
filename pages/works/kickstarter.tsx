@@ -28,7 +28,7 @@ export const meta = {
   image: "/images/ks-hero.jpg",
   title: "Kickstarter",
   details: [
-    { title: "ROLE", content: "UIUX Designer (Design Lead)" },
+    { title: "ROLE", content: "UIUX Designer, Design Lead (Team of 4)" },
     { title: "TIME", content: "2 months (flex)" },
     { title: "PLATFORM", content: "Mobile-responsive website" },
     { title: "INDUSTRY", content: "Crowdfunding" },
@@ -389,7 +389,7 @@ export default function Kickstarter() {
               Interestingly, despite Kickstarter’s low backing rates, it was{" "}
               <strong>outperforming its competitors</strong> in terms of its
               features and elements. So the next step was clear: we had to
-              uncover <em>why</em> Kickstarter’s issues by talking to the
+              uncover <em>what</em> Kickstarter’s issues were by talking to the
               project backers themselves.
             </Paragraph>
           </ThreeColumns>
