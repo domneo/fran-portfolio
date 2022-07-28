@@ -52,6 +52,10 @@ export default function Compawnion() {
           >
             <div></div>
             <div>
+              <div className="d-flex">
+                <Stars>🐣 This was my debut UIUX project!</Stars>
+              </div>
+              <Spacer size="md" />
               <Paragraph>
                 <strong>Compawnion</strong> is my team’s answer for a course
                 project that required us to create an app to solve a problem
