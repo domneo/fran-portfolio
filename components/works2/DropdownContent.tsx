@@ -12,7 +12,7 @@ export const DropdownContent = ({ children, title }: DropdownContentProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="w-100">
       <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
         <svg
           width="40"

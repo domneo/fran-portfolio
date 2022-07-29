@@ -28,7 +28,7 @@ export const meta = {
   image: "/images/ks-hero.jpg",
   title: "Kickstarter",
   details: [
-    { title: "ROLE", content: "UIUX Designer, Design Lead (Team of 4)" },
+    { title: "MY ROLE", content: "UIUX Designer, Design Lead (Team of 4)" },
     { title: "TIME", content: "2 months (flex)" },
     { title: "PLATFORM", content: "Mobile-responsive website" },
     { title: "INDUSTRY", content: "Crowdfunding" },
