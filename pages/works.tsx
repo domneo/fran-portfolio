@@ -54,9 +54,9 @@ const data = [
       </svg>
     ),
     link: "/works/muji",
-    title: "MUJI: e-commerce > e-catalog",
+    title: "MUJI: e-commerce > e-catalogue",
     description:
-      "Moving from an e-catalog into an e-commerce site and streamlining the overall navigation experience with a revamped information architecture",
+      "Moving from an e-catalogue into an e-commerce site and streamlining the overall navigation experience with a revamped information architecture",
     concepts: [
       "User interviews & Research",
       "Competitive Analysis",
