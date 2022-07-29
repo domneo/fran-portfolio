@@ -30,7 +30,7 @@ export const meta = {
   title: "Compawnion",
   details: [
     { title: "MY ROLE", content: "UIUX Designer (team of two)" },
-    { title: "TIME", content: "1 month (flex)" },
+    { title: "TIME", content: "4 weeks (flex)" },
     { title: "PLATFORM", content: "Mobile App" },
     { title: "INDUSTRY", content: "Pet Adoption" },
   ],
@@ -78,10 +78,24 @@ export default function Compawnion() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading level={3} className="display-5"></Heading>
+            <Heading level={3} className="display-5">
+              Streamlining the adoption process
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                For my first UIUX course project, my teammate and I worked
+                collaboratively on all aspects of the app, from research to the
+                overall UIUX. Following the project brief, we focused our
+                efforts on serving the primary user only - potential pet
+                adopters.
+              </Paragraph>
+              <Paragraph>
+                This project aimed to streamline the search and administrative
+                processes potential adopters experience. This was achieved by a
+                mobile app that utilises a seamless interconnected search,
+                compare, connect, and schedule system.
+              </Paragraph>
             </div>
           </ThreeColumns>
         </Container>
@@ -130,12 +144,9 @@ export default function Compawnion() {
               </div>
               <Spacer size="sm" />
               <Paragraph>
-                <strong>Research</strong>
+                <strong>Research &amp; Empathize</strong>
               </Paragraph>
               <ul>
-                <ListItem className="caption">
-                  Research &amp; Empathize
-                </ListItem>
                 <ListItem className="caption">
                   Understanding the Current Landscape
                 </ListItem>
@@ -194,7 +205,7 @@ export default function Compawnion() {
                     clipRule="evenodd"
                     d="M91.9166 1.07675C119.783 -0.619044 129.564 26.2231 151.009 38.4194C176.808 53.0918 221.723 56.0959 228.098 78.527C234.666 101.636 204.038 121.344 179.258 137.807C154.818 154.044 126.116 169.061 91.9166 169C57.7831 168.939 20.3497 158.2 5.03586 137.495C-8.82309 118.757 16.8004 98.741 25.0003 78.527C29.8196 66.6463 33.3643 55.6495 42.5484 45.0197C56.82 28.5014 63.816 2.78678 91.9166 1.07675Z"
                     stroke="var(--works)"
-                    stroke-width="2"
+                    strokeWidth="2"
                   />
                   <path
                     d="M73.9339 77.9091V91H72.7386V77.9091H73.9339ZM80.7127 91.2045C79.9073 91.2045 79.2021 90.9915 78.5969 90.5653C77.9918 90.1392 77.5188 89.5447 77.1779 88.782C76.8413 88.0192 76.6729 87.1307 76.6729 86.1165C76.6729 85.1065 76.8413 84.2223 77.1779 83.4638C77.5188 82.701 77.994 82.1087 78.6033 81.6868C79.2127 81.2607 79.9222 81.0476 80.7319 81.0476C81.3285 81.0476 81.8249 81.1541 82.2212 81.3672C82.6175 81.576 82.935 81.8359 83.1737 82.147C83.4123 82.4581 83.5977 82.7607 83.7298 83.0547H83.832V77.9091H84.9762V91H83.864V89.1783H83.7298C83.5977 89.4766 83.4102 89.7834 83.1673 90.0987C82.9244 90.4098 82.6026 90.6719 82.2021 90.8849C81.8058 91.098 81.3093 91.2045 80.7127 91.2045ZM80.8469 90.1626C81.4819 90.1626 82.0231 89.9901 82.4705 89.6449C82.918 89.2955 83.2589 88.8161 83.4933 88.2067C83.7319 87.593 83.8512 86.8899 83.8512 86.0973C83.8512 85.3132 83.734 84.6207 83.4996 84.0199C83.2653 83.4148 82.9244 82.9418 82.4769 82.6009C82.0295 82.2557 81.4862 82.0831 80.8469 82.0831C80.1907 82.0831 79.6367 82.2621 79.185 82.62C78.7376 82.9737 78.3967 83.4531 78.1623 84.0582C77.9322 84.6634 77.8171 85.343 77.8171 86.0973C77.8171 86.8601 77.9343 87.5483 78.1687 88.1619C78.4031 88.7756 78.744 89.2635 79.1914 89.6257C79.6431 89.9837 80.195 90.1626 80.8469 90.1626ZM92.1864 91.2045C91.2702 91.2045 90.4776 90.9915 89.8086 90.5653C89.1396 90.1349 88.6218 89.5405 88.2553 88.782C87.8931 88.0192 87.712 87.1413 87.712 86.1484C87.712 85.1598 87.8931 84.282 88.2553 83.5149C88.6218 82.7436 89.1268 82.1406 89.7702 81.706C90.418 81.267 91.1658 81.0476 92.0138 81.0476C92.5465 81.0476 93.06 81.1456 93.5543 81.3416C94.0487 81.5334 94.4918 81.8295 94.8839 82.2301C95.2802 82.6264 95.5934 83.1271 95.8235 83.7322C96.0536 84.3331 96.1687 85.0447 96.1687 85.8672V86.4297H88.4982V85.4261H95.0053C95.0053 84.7955 94.8775 84.2287 94.6218 83.7259C94.3704 83.2187 94.0188 82.8182 93.5671 82.5241C93.1197 82.2301 92.6019 82.0831 92.0138 82.0831C91.3917 82.0831 90.8441 82.2493 90.3711 82.5817C89.8981 82.9141 89.5273 83.353 89.2589 83.8984C88.9947 84.4439 88.8604 85.0405 88.8562 85.6882V86.2891C88.8562 87.0689 88.9904 87.7507 89.2589 88.3345C89.5316 88.9141 89.9173 89.3636 90.4158 89.6832C90.9144 90.0028 91.5046 90.1626 92.1864 90.1626C92.6509 90.1626 93.0579 90.0902 93.4073 89.9453C93.761 89.8004 94.0572 89.6065 94.2958 89.3636C94.5387 89.1165 94.7219 88.8459 94.8455 88.5518L95.9258 88.9034C95.7766 89.3168 95.5316 89.6982 95.1907 90.0476C94.854 90.397 94.4322 90.6783 93.9251 90.8913C93.4222 91.1001 92.8427 91.2045 92.1864 91.2045ZM101.418 91.2237C100.826 91.2237 100.285 91.1087 99.7946 90.8786C99.3045 90.6442 98.9146 90.3075 98.6248 89.8686C98.335 89.4254 98.1902 88.8885 98.1902 88.2578C98.1902 87.772 98.2818 87.3629 98.465 87.0305C98.6483 86.6982 98.9082 86.4254 99.2449 86.2124C99.5815 85.9993 99.9799 85.831 100.44 85.7074C100.9 85.5838 101.407 85.4879 101.961 85.4197C102.511 85.3516 102.976 85.2919 103.355 85.2408C103.738 85.1896 104.03 85.1087 104.231 84.9979C104.431 84.8871 104.531 84.7081 104.531 84.4609V84.2308C104.531 83.5618 104.331 83.0355 103.93 82.652C103.534 82.2642 102.963 82.0703 102.217 82.0703C101.51 82.0703 100.932 82.2259 100.485 82.5369C100.042 82.848 99.7306 83.2145 99.5517 83.6364L98.4714 83.2464C98.693 82.7095 98.9998 82.2812 99.3919 81.9616C99.7839 81.6378 100.223 81.4055 100.709 81.2649C101.194 81.12 101.687 81.0476 102.185 81.0476C102.56 81.0476 102.95 81.0966 103.355 81.1946C103.764 81.2926 104.143 81.4631 104.493 81.706C104.842 81.9446 105.126 82.2791 105.343 82.7095C105.56 83.1357 105.669 83.6768 105.669 84.3331V91H104.531V89.4467H104.461C104.324 89.7365 104.122 90.0178 103.854 90.2905C103.585 90.5632 103.248 90.7869 102.844 90.9616C102.439 91.1364 101.964 91.2237 101.418 91.2237ZM101.572 90.1818C102.177 90.1818 102.701 90.0476 103.144 89.7791C103.587 89.5107 103.928 89.1548 104.167 88.7116C104.41 88.2642 104.531 87.772 104.531 87.2351V85.8161C104.446 85.897 104.303 85.9695 104.103 86.0334C103.907 86.0973 103.679 86.1548 103.419 86.206C103.163 86.2528 102.907 86.2933 102.652 86.3274C102.396 86.3615 102.166 86.3913 101.961 86.4169C101.407 86.4851 100.934 86.5916 100.542 86.7365C100.15 86.8814 99.85 87.0817 99.6412 87.3374C99.4324 87.5888 99.3279 87.9126 99.3279 88.3089C99.3279 88.9055 99.541 89.3679 99.9672 89.696C100.393 90.0199 100.928 90.1818 101.572 90.1818ZM112.563 81.1818V82.1726H107.877V81.1818H112.563ZM109.341 78.8295H110.485V88.4368C110.485 88.8459 110.556 89.1676 110.696 89.402C110.837 89.6321 111.02 89.7962 111.246 89.8942C111.472 89.9879 111.713 90.0348 111.968 90.0348C112.117 90.0348 112.245 90.0263 112.352 90.0092C112.458 89.9879 112.552 89.9666 112.633 89.9453L112.876 90.9744C112.765 91.017 112.629 91.0554 112.467 91.0895C112.305 91.1278 112.105 91.147 111.866 91.147C111.448 91.147 111.046 91.0554 110.658 90.8722C110.274 90.6889 109.959 90.4162 109.712 90.054C109.465 89.6918 109.341 89.2422 109.341 88.7053V78.8295ZM119.011 91.2045C118.094 91.2045 117.302 90.9915 116.633 90.5653C115.964 90.1349 115.446 89.5405 115.08 88.782C114.717 88.0192 114.536 87.1413 114.536 86.1484C114.536 85.1598 114.717 84.282 115.08 83.5149C115.446 82.7436 115.951 82.1406 116.594 81.706C117.242 81.267 117.99 81.0476 118.838 81.0476C119.371 81.0476 119.884 81.1456 120.379 81.3416C120.873 81.5334 121.316 81.8295 121.708 82.2301C122.104 82.6264 122.418 83.1271 122.648 83.7322C122.878 84.3331 122.993 85.0447 122.993 85.8672V86.4297H115.322V85.4261H121.83C121.83 84.7955 121.702 84.2287 121.446 83.7259C121.195 83.2187 120.843 82.8182 120.391 82.5241C119.944 82.2301 119.426 82.0831 118.838 82.0831C118.216 82.0831 117.668 82.2493 117.195 82.5817C116.722 82.9141 116.352 83.353 116.083 83.8984C115.819 84.4439 115.685 85.0405 115.68 85.6882V86.2891C115.68 87.0689 115.815 87.7507 116.083 88.3345C116.356 88.9141 116.741 89.3636 117.24 89.6832C117.739 90.0028 118.329 90.1626 119.011 90.1626C119.475 90.1626 119.882 90.0902 120.232 89.9453C120.585 89.8004 120.881 89.6065 121.12 89.3636C121.363 89.1165 121.546 88.8459 121.67 88.5518L122.75 88.9034C122.601 89.3168 122.356 89.6982 122.015 90.0476C121.678 90.397 121.256 90.6783 120.749 90.8913C120.246 91.1001 119.667 91.2045 119.011 91.2045Z"
@@ -296,16 +307,19 @@ export default function Compawnion() {
         <Spacer size="lg" />
         <Container size="normal" centerElements>
           <TwoColumns>
-            <IconContent title="APPROACH" icon={"/images/icon-.png"}>
+            <IconContent title="APPROACH" icon={"/images/icon-chat.png"}>
               <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
+                <ListItem>60-minute deep dive user interviews</ListItem>
+                <ListItem>
+                  Understand adoptors and potential adopters’ experiences,
+                  needs, goals, motivations, and pain points
+                </ListItem>
               </ul>
             </IconContent>
-            <IconContent title="5 PARTICIPANTS" icon={"/images/icon-.png"}>
+            <IconContent title="5 PARTICIPANTS" icon={"/images/icon-team.png"}>
               <ul>
-                <ListItem></ListItem>
-                <ListItem></ListItem>
+                <ListItem>People who are searching for a pet to adopt</ListItem>
+                <ListItem>People who have already adopted</ListItem>
               </ul>
             </IconContent>
           </TwoColumns>
@@ -341,21 +355,36 @@ export default function Compawnion() {
           />
           <Spacer size="md" />
           <ThreeColumns
-            col1Props={{ lg: 5 }}
+            col1Props={{ lg: 4 }}
             col2Props={{ lg: 1 }}
-            col3Props={{ lg: 6 }}
+            col3Props={{ lg: 7 }}
           >
-            <Heading level={3} className="display-5"></Heading>
+            <Heading level={3} className="display-5">
+              UX can affect the biggest change in the search process
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                A commonality in the secondary research and user interviews was
+                that both adopters and shelters heavily emphasised the need to
+                interact with a potential pet first before adoption.
+              </Paragraph>
+              <Paragraph>
+                This means that while we cannot influence shelter evaluations,
+                we could affect the most change in the search process. It also
+                ties in with one of Pawline’s main goals - to find and meet a
+                pet.
+              </Paragraph>
             </div>
           </ThreeColumns>
         </Container>
         <Spacer size="md" />
         <Container size="normal" centerText>
           <DropdownContent title="💡 Learning point">
-            <Paragraph></Paragraph>
+            <Paragraph>
+              Real life business goals would help align our goals and focus our
+              priorities on how we can help Pawline.
+            </Paragraph>
           </DropdownContent>
         </Container>
         <Spacer size="lg" />
@@ -375,12 +404,34 @@ export default function Compawnion() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading level={3} className="display-5"></Heading>
+            <Heading level={3} className="display-5">
+              The pet adoption process is not linear
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph className="mb-2">
+                Administrative processes in the adoption process and
+                face-to-face interactions with the pet are broken up and
+                repetitive
+              </Paragraph>
+              <ul>
+                <ListItem>
+                  Potential for administrative processes (info/data entry,
+                  searches, communication and scheduling, etc.) to be
+                  streamlined and standardised
+                </ListItem>
+              </ul>
             </div>
           </ThreeColumns>
+          <Spacer size="md" />
+          <DropdownContent title="See how Compawnion can improve the user flow">
+            <ImageZoom
+              src="/images/compawnion-.png"
+              alt=""
+              width={1}
+              height={1}
+            />
+          </DropdownContent>
           <Spacer size="lg" />
           <ImageZoom
             src="/images/compawnion-.png"
@@ -394,10 +445,31 @@ export default function Compawnion() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
-            <Heading level={3} className="display-5"></Heading>
+            <Heading level={3} className="display-5">
+              Search process circular and time consuming
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph className="mb-2">
+                Adopters must repeat many steps to learn about shelters and get
+                pet info
+              </Paragraph>
+              <ul>
+                <ListItem>
+                  Adoptors must put in even more effort to compare and remember
+                  what they find
+                </ListItem>
+              </ul>
+              <Paragraph className="mb-2">
+                Researching and searching for shelters and pets are heavily
+                adopter-action driven
+              </Paragraph>
+              <ul>
+                <ListItem>
+                  14 user actions (blue squares); 4 user decisions (yellow
+                  diamonds)
+                </ListItem>
+              </ul>
             </div>
           </ThreeColumns>
           <Spacer size="lg" />
@@ -413,10 +485,21 @@ export default function Compawnion() {
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 6 }}
           >
-            <Heading level={3} className="display-5"></Heading>
+            <Heading level={3} className="display-5">
+              Admin processes and interactions broken up and repetitive
+            </Heading>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph className="mb-2">
+                Similar processes are also repeated for each new shelter the
+                adopter wants to interact with
+              </Paragraph>
+              <ul>
+                <ListItem>
+                  Frustrating and time consuming for adopters to undergo the
+                  same/similar admin processes
+                </ListItem>
+              </ul>
             </div>
           </ThreeColumns>
         </Container>
@@ -436,7 +519,15 @@ export default function Compawnion() {
       <Section title="SYNTHESIZE" heading="PROBLEM STATEMENT">
         <Spacer size="lg" />
         <Container size="compact" centerText>
-          <Heading level={5} className="text-platinum fw-light"></Heading>
+          <Heading level={5} className="text-platinum fw-light">
+            Adopters want to easily search for pets and connect with multiple
+            shelters because they want to consider a wide selection and make an
+            informed decision before adopting a pet. However, they are
+            frustrated by the information they find as it is subjectively
+            written in a non-standardised format by different shelters and
+            fosterers. Adopters also face repetitive administrative processes
+            when connecting with different shelters.
+          </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -453,30 +544,46 @@ export default function Compawnion() {
             </Heading>
             <div></div>
             <div>
-              <IconContent title="" icon={"/images/icon-.png"}>
+              <IconContent
+                title="HELP ADOPTERS"
+                icon={"/images/icon-research.png"}
+              >
                 <ul>
-                  <ListItem></ListItem>
+                  <ListItem>Search for pets that suit their criteria?</ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="" icon={"/images/icon-.png"}>
+              <IconContent
+                title="ENABLE ADOPTERS"
+                icon={"/images/icon-dog.png"}
+              >
                 <ul>
-                  <ListItem></ListItem>
+                  <ListItem>
+                    To quickly understand and compare large amounts of
+                    information about pets from different shelters?
+                  </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="" icon={"/images/icon-.png"}>
+              <IconContent title="ENABLE ADOPTERS" icon={"/images/icon-.png"}>
                 <ul>
-                  <ListItem></ListItem>
+                  <ListItem>
+                    To connect with different shelters in a streamlined way?
+                  </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="" icon={"/images/icon-.png"}>
+              <IconContent
+                title="HELP ADOPTERS"
+                icon={"/images/icon-clipboard.png"}
+              >
                 <ul>
-                  <ListItem></ListItem>
+                  <ListItem>
+                    Keep track of what to do during the adoption process?
+                  </ListItem>
                 </ul>
               </IconContent>
             </div>
@@ -493,6 +600,24 @@ export default function Compawnion() {
       </Section>
       <Section title="DELIVER" heading="LO-FI, MID-FI PROTOTYPES">
         <Spacer size="lg" />
+        <Container size="compact" centerText>
+          <DropdownContent title="💡 Ideation Learning point">
+            <Paragraph>
+              With our understanding of the research, Pawline and her goals, my
+              teammate and I sketched low-fidelity wireframes. We decided to
+              work independently on creating our designs first before
+              reconvening to decide on the designs that would be brought to
+              life.
+            </Paragraph>
+            <Paragraph>
+              This is because when we embarked on this project, we had yet to
+              learn about the joys (and fun!) of ideation workshops. In
+              retrospect, we would have considered inviting users to join us in
+              breathing life into Compawnion 😌
+            </Paragraph>
+          </DropdownContent>
+        </Container>
+        <Spacer size="md" />
         <Container size="normal">
           <Image src="/images/compawnion-.jpg" alt="" width={1} height={1} />
         </Container>
@@ -510,7 +635,7 @@ export default function Compawnion() {
               <Paragraph>
                 <small>OVERVIEW</small>
               </Paragraph>
-              <IconContent icon="/images/icon-.png">
+              <IconContent icon="/images/icon-brainstorming.png">
                 <Heading level={4} className="display-4">
                   uiux?
                 </Heading>
@@ -518,7 +643,18 @@ export default function Compawnion() {
             </div>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                Compawnion was my first foray into UIUX and suffice to say, it
+                hit a sweet spot where the skills I’ve picked up over the years
+                melded with my love of solving problems and trying to be more
+                creative.
+              </Paragraph>
+              <Paragraph>
+                After the project, I learnt many things on hindsight and was
+                left with many more questions about UIUX - questions I look
+                forward to finding the answers to as I plunge deeper into this
+                new world.
+              </Paragraph>
             </div>
           </ThreeColumns>
           <Spacer size="md" />
@@ -548,7 +684,17 @@ export default function Compawnion() {
             </div>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                Two questions that we thought about were: How long is too long
+                ago? Was it important to include the perspectives of someone who
+                adopted a long time ago?
+              </Paragraph>
+              <Paragraph>
+                On hindsight, yes, since the research goals were to discover the
+                needs and pain points of the pet adoption process. However, in
+                other scenarios with product-centric questions, it may not be
+                useful as the product may have changed significantly since.
+              </Paragraph>
             </div>
           </ThreeColumns>
           <Spacer size="md" />
@@ -570,7 +716,7 @@ export default function Compawnion() {
               <Paragraph>
                 <small>CHANGE</small>
               </Paragraph>
-              <IconContent icon="/images/icon-.png">
+              <IconContent icon="/images/icon-thinking.png">
                 <Heading level={4} className="display-4">
                   (dis)similarity
                 </Heading>
@@ -578,7 +724,17 @@ export default function Compawnion() {
             </div>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <Paragraph>
+                During ideation, we should have considered a wider range of
+                apps. This is because in usability tests, users relied on their
+                mental model of existing apps to make sense of Compawnion, even
+                if these apps may not seem immediately relevant
+              </Paragraph>
+              <Paragraph>
+                <strong>[Learning point!]</strong> As the GA course progressed,
+                I’ve since learnt about competitive and comparative analysis and
+                its role in the UIUX process.
+              </Paragraph>
             </div>
           </ThreeColumns>
           <Spacer size="md" />
@@ -600,7 +756,7 @@ export default function Compawnion() {
               <Paragraph>
                 <small>UPWARDS &amp; ONWARDS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-.png">
+              <IconContent icon="/images/icon-job-promotion.png">
                 <Heading level={4} className="display-4">
                   progress
                 </Heading>
@@ -608,7 +764,21 @@ export default function Compawnion() {
             </div>
             <div></div>
             <div>
-              <Paragraph></Paragraph>
+              <ul>
+                <ListItem className="mb-4">
+                  Reiterate mid-fi prototype and transform Compawnion into a
+                  high-fidelity prototype
+                </ListItem>
+                <ListItem className="mb-4">
+                  Prioritise and differentiate features for an MVP and later
+                  versions to see how Compawnion may evolve
+                </ListItem>
+                <ListItem className="mb-4">
+                  Consider and design functionalities for pet shelters for an
+                  added challenge (posting pet profiles, interacting with
+                  adopters, confirm and track visits, etc.)
+                </ListItem>
+              </ul>
             </div>
           </ThreeColumns>
         </Container>
