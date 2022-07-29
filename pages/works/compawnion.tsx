@@ -106,8 +106,8 @@ export default function Compawnion() {
               <Image
                 src="/images/compawnion-prototype.png"
                 alt="play with prototype"
-                width={1}
-                height={1}
+                width={2872}
+                height={1024}
               />
               <Spacer size="xs" />
               Play with the prototype here
@@ -296,7 +296,12 @@ export default function Compawnion() {
       >
         <Spacer size="lg" />
         <Container size="normal" centerElements>
-          <Image src="/images/compawnion-.png" alt="" width={1} height={1} />
+          <Image
+            src="/images/compawnion-venndiagram.png"
+            alt="understanding the landscape"
+            width={2868}
+            height={2046}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -324,14 +329,19 @@ export default function Compawnion() {
             </IconContent>
           </TwoColumns>
           <Spacer size="md" />
-          <Image src="/images/compawnion-.png" alt="" width={1} height={1} />
+          <Image
+            src="/images/compawnion-affinitymap-insights.png"
+            alt="affinity map high level insights"
+            width={2872}
+            height={4198}
+          />
           <Spacer size="md" />
           <DropdownContent title="👁 👄 👁  Full affinity map">
             <ImageZoom
-              src="/images/compawnion-.png"
-              alt=""
-              width={1}
-              height={1}
+              src="/images/compawnion-affinitymap-full.png"
+              alt="full affinity map"
+              width={5871}
+              height={2453}
             />
           </DropdownContent>
         </Container>
@@ -340,7 +350,12 @@ export default function Compawnion() {
       <Section title="SYNTHESIZE" heading="PERSONA">
         <Spacer size="lg" />
         <Container size="normal" centerElements>
-          <Image src="/images/compawnion-.png" alt="" width={1} height={1} />
+          <Image
+            src="/images/compawnion-persona.png"
+            alt="persona"
+            width={2872}
+            height={986}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -348,10 +363,10 @@ export default function Compawnion() {
         <Spacer size="lg" />
         <Container size="normal">
           <ImageZoom
-            src="/images/compawnion-.png"
-            alt=""
-            width={1}
-            height={1}
+            src="/images/compawnion-journeymap.png"
+            alt="user journey map"
+            width={2872}
+            height={1600}
           />
           <Spacer size="md" />
           <ThreeColumns
@@ -392,11 +407,11 @@ export default function Compawnion() {
       <Section title="SYNTHESIZE" heading="USER FLOWS">
         <Spacer size="lg" />
         <Container size="normal">
-          <ImageZoom
-            src="/images/compawnion-.png"
-            alt=""
-            width={1}
-            height={1}
+          <Image
+            src="/images/compawnion-userflow-1.png"
+            alt="user flow - not linear user flow"
+            width={2872}
+            height={1110}
           />
           <Spacer size="md" />
           <ThreeColumns
@@ -425,19 +440,19 @@ export default function Compawnion() {
           </ThreeColumns>
           <Spacer size="md" />
           <DropdownContent title="See how Compawnion can improve the user flow">
-            <ImageZoom
-              src="/images/compawnion-.png"
-              alt=""
-              width={1}
-              height={1}
+            <Image
+              src="/images/compawnion-userflow-1a.png"
+              alt="user flow - compawnion makes things better"
+              width={2872}
+              height={672}
             />
           </DropdownContent>
           <Spacer size="lg" />
           <ImageZoom
-            src="/images/compawnion-.png"
-            alt=""
-            width={1}
-            height={1}
+            src="/images/compawnion-userflow-2.png"
+            alt="user flow - search process circular"
+            width={2872}
+            height={866}
           />
           <Spacer size="md" />
           <ThreeColumns
@@ -474,10 +489,10 @@ export default function Compawnion() {
           </ThreeColumns>
           <Spacer size="lg" />
           <ImageZoom
-            src="/images/compawnion-.png"
-            alt=""
-            width={1}
-            height={1}
+            src="/images/compawnion-userflow-3.png"
+            alt="user flow - broken up interactions"
+            width={2872}
+            height={866}
           />
           <Spacer size="md" />
           <ThreeColumns
@@ -507,10 +522,10 @@ export default function Compawnion() {
         <Container size="normal" centerText>
           <DropdownContent title="👁 👄 👁  Full user flow">
             <ImageZoom
-              src="/images/compawnion-.png"
-              alt=""
-              width={1}
-              height={1}
+              src="/images/compawnion-userflow-full.png"
+              alt="full user flow"
+              width={4558}
+              height={1171}
             />
           </DropdownContent>
         </Container>
@@ -567,7 +582,10 @@ export default function Compawnion() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="ENABLE ADOPTERS" icon={"/images/icon-.png"}>
+              <IconContent
+                title="ENABLE ADOPTERS"
+                icon={"/images/icon-pet-shop.png"}
+              >
                 <ul>
                   <ListItem>
                     To connect with different shelters in a streamlined way?
@@ -619,7 +637,12 @@ export default function Compawnion() {
         </Container>
         <Spacer size="md" />
         <Container size="normal">
-          <Image src="/images/compawnion-.jpg" alt="" width={1} height={1} />
+          <Image
+            src="/images/compawnion-midfi.jpg"
+            alt="midfi prototype"
+            width={2000}
+            height={6143}
+          />
         </Container>
         <Spacer size="lg" />
       </Section>
@@ -676,7 +699,7 @@ export default function Compawnion() {
               <Paragraph>
                 <small>PROCESS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-.png">
+              <IconContent icon="/images/icon-calendar.png">
                 <Heading level={4} className="display-4">
                   recency
                 </Heading>
