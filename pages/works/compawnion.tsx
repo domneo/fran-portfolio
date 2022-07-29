@@ -612,7 +612,12 @@ export default function Compawnion() {
       <Section title="SYNTHESIZE" heading="SOLUTION">
         <Spacer size="lg" />
         <Container size="compact" centerText>
-          <Heading level={5} className="text-platinum fw-light"></Heading>
+          <Heading level={5} className="text-platinum fw-light">
+            Pet adopters need a way to (i) search and compare pets across
+            multiple pet shelters, (ii) communicate and schedule appointments
+            with these pet shelters, and (iii) keep track of what they need to
+            do more efficiently find and return home with their fur-ever friend.
+          </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
