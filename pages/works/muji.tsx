@@ -259,7 +259,8 @@ export default function Muji() {
               </Paragraph>
               <ul>
                 <ListItem className="caption">Lo-fi Prototype</ListItem>
-                <ListItem className="caption">Usability Test</ListItem>
+                <ListItem className="caption">Usability Tests</ListItem>
+                <ListItem className="caption">Post-Interview Surveys</ListItem>
               </ul>
             </div>
             <div className="col">
