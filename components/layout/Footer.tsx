@@ -6,11 +6,11 @@ import { BarrelLink } from "components/common/BarrelLink";
 import { Stars } from "components/common/Stars";
 
 interface FooterProps {
-  hideFooterMenu: boolean;
+  showFooterMenu: boolean;
   centraliseFooter: boolean;
 }
 
-export const Footer = ({ hideFooterMenu, centraliseFooter }: FooterProps) => (
+export const Footer = ({ showFooterMenu, centraliseFooter }: FooterProps) => (
   <footer
     className={`${styles.nav} ${centraliseFooter ? styles.centralised : ""}`}
   >
@@ -21,7 +21,7 @@ export const Footer = ({ hideFooterMenu, centraliseFooter }: FooterProps) => (
     </div>
     <div
       className={`${styles.footerMenuLeft} ${
-        hideFooterMenu ? "d-none" : "d-flex"
+        showFooterMenu ? "d-flex" : "d-none"
       }`}
     >
       <nav className={styles.menu}>

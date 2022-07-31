@@ -41,7 +41,7 @@ const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
 
 export default function Home() {
   return (
-    <Layout hideHeaderMenu>
+    <Layout showHeaderMenu={false}>
       <div className={styles.container}>
         <LinkItem href="/works" number="1" text="Works" />
         <LinkItem href="/about" number="2" text="About" />

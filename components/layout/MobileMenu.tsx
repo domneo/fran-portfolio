@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 
 import styles from "styles/MobileMenu.module.scss";
 
-import { BarrelLink } from "./common/BarrelLink";
-import Blob from "./common/Blob";
-import { Stars } from "./common/Stars";
+import { BarrelLink } from "../common/BarrelLink";
+import Blob from "../common/Blob";
+import { Stars } from "../common/Stars";
 
 export const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

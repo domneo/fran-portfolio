@@ -2,21 +2,21 @@ import Head from "next/head";
 
 import styles from "styles/Layout.module.scss";
 
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-import { UnderConstruction } from "./UnderConstruction";
+import { Footer } from "./layout/Footer";
+import { Header } from "./layout/Header";
+import { UnderConstruction } from "./layout/UnderConstruction";
 
 interface LayoutProps {
-  hideHeaderMenu?: boolean;
-  hideFooterMenu?: boolean;
+  showHeaderMenu?: boolean;
+  showFooterMenu?: boolean;
   centraliseFooter?: boolean;
   children: React.ReactNode;
   [index: string]: any;
 }
 
 const Layout = ({
-  hideHeaderMenu = false,
-  hideFooterMenu = false,
+  showHeaderMenu = true,
+  showFooterMenu = true,
   centraliseFooter = false,
   children,
   ...props
@@ -31,12 +31,12 @@ const Layout = ({
         />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Header hideHeaderMenu={hideHeaderMenu} />
+      <Header showHeaderMenu={showHeaderMenu} />
       <main {...props}>
         <UnderConstruction>{children}</UnderConstruction>
       </main>
       <Footer
-        hideFooterMenu={hideFooterMenu}
+        showFooterMenu={showFooterMenu}
         centraliseFooter={centraliseFooter}
       />
     </div>
