@@ -77,7 +77,7 @@ export default function About() {
   }, []);
 
   return (
-    <Layout>
+    <Layout showQuickActions={false}>
       <style jsx global>{`
         body {
           background-color: ${isInBGSection ? "#d1d1bc" : ""};

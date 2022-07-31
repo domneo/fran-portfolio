@@ -4,11 +4,13 @@ import styles from "styles/Layout.module.scss";
 
 import { Footer } from "./layout/Footer";
 import { Header } from "./layout/Header";
+import { QuickActions } from "./layout/QuickActions";
 import { UnderConstruction } from "./layout/UnderConstruction";
 
 interface LayoutProps {
   showHeaderMenu?: boolean;
   showFooterMenu?: boolean;
+  showQuickActions?: boolean;
   centraliseFooter?: boolean;
   children: React.ReactNode;
   [index: string]: any;
@@ -17,6 +19,7 @@ interface LayoutProps {
 const Layout = ({
   showHeaderMenu = true,
   showFooterMenu = true,
+  showQuickActions = true,
   centraliseFooter = false,
   children,
   ...props
@@ -39,6 +42,7 @@ const Layout = ({
         showFooterMenu={showFooterMenu}
         centraliseFooter={centraliseFooter}
       />
+      {showQuickActions && <QuickActions />}
     </div>
   );
 };
