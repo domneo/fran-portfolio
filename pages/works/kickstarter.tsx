@@ -281,7 +281,8 @@ export default function Kickstarter() {
               </Heading>
               <ul>
                 <ListItem className="caption">Mid-fi Prototypes</ListItem>
-                <ListItem className="caption">Usability Test</ListItem>
+                <ListItem className="caption">Usability Tests</ListItem>
+                <ListItem className="caption">Post-Interview Surveys</ListItem>
               </ul>
             </div>
             <div className="col">
