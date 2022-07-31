@@ -15,8 +15,10 @@ interface Point {
 
 interface BlobProps {
   isHovering?: boolean;
+  lineCount?: 1 | 2;
   showArrow?: boolean;
   color?: string;
+  strokeWidth?: number;
 }
 
 interface BlobState {
@@ -195,20 +197,37 @@ export default class Blob extends Component<BlobProps, BlobState> {
   };
 
   render() {
-    const { showArrow, color = "var(--platinum)" } = this.props;
+    const {
+      lineCount = 2,
+      showArrow,
+      color = "var(--platinum)",
+      strokeWidth = 0.75,
+    } = this.props;
     const { d1, d2 } = this.state;
 
     return (
       <svg ref={this.requestRef} viewBox="0 0 215 215">
-        <path d={d1} stroke={color} strokeWidth={0.75} fill="transparent" />
-        <g transform="translate(12,3)">
-          <path d={d2} stroke={color} strokeWidth={0.75} fill="transparent" />
-        </g>
+        <path
+          d={d1}
+          stroke={color}
+          strokeWidth={strokeWidth}
+          fill="transparent"
+        />
+        {lineCount >= 2 && (
+          <g transform="translate(12,3)">
+            <path
+              d={d2}
+              stroke={color}
+              strokeWidth={strokeWidth}
+              fill="transparent"
+            />
+          </g>
+        )}
         {showArrow && (
           <path
             d="M108 112L108 93.3066L96.5731 102.653L108 112Z"
             stroke={color}
-            strokeWidth={0.75}
+            strokeWidth={strokeWidth}
           />
         )}
       </svg>

@@ -65,6 +65,10 @@ body {
   background-color: var(--black);
   color: var(--platinum);
   transition: 0.8s background-color;
+
+  &.scroll-lock {
+    overflow: hidden;
+  }
 }
 
 %display {
