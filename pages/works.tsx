@@ -132,7 +132,7 @@ export default function Works() {
   const [focusedItem, setFocusedItem] = useState(0);
 
   return (
-    <Layout>
+    <Layout showQuickActions={false}>
       <div className="container">
         <div className="row align-items-stretch justify-content-center">
           <div className="col-lg-7 px-5 py-5 my-5 d-flex flex-column justify-content-center">

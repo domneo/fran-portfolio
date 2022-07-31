@@ -13,7 +13,7 @@ export default function Contact() {
   const linksRef = useRef<HTMLDivElement>(null);
 
   return (
-    <Layout hideFooterMenu centraliseFooter>
+    <Layout showQuickActions={false} showFooterMenu={false} centraliseFooter>
       {/* <Arrows yesdogRef={yesdogRef} linksRef={linksRef} /> */}
       <div className={`overflow-hidden ${styles.header}`}>
         <div className="display-1">

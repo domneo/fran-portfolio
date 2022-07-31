@@ -1174,9 +1174,9 @@ export default function Muji() {
             </div>
           </ThreeColumns>
         </Container>
-        <Spacer size="lg" />
       </Section>
       <section>
+        <Spacer size="lg" />
         <BackgroundZone background="var(--contact)" onEnterOnly>
           <Stars />
           <Spacer size="lg" />
