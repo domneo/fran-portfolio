@@ -377,7 +377,10 @@ export default function Symplicured() {
               </p>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="FIRST-TIME PARENT" icon={"/images/icon-.png"}>
+              <IconContent
+                title="FIRST-TIME PARENT"
+                icon={"/images/icon-family.png"}
+              >
                 <p>
                   I am a young parent who search on behalf of my child. I worry
                   about their wellbeing as they can’t express their discomfort.
@@ -387,7 +390,7 @@ export default function Symplicured() {
               <Spacer size="sm" />
               <IconContent
                 title="YOUNG ADULT WITH ELDERLY PARENT"
-                icon={"/images/icon-.png"}
+                icon={"/images/icon-fatherson.png"}
               >
                 <p>
                   I am a caregiver who search on behalf of my elderly parent.
@@ -397,7 +400,7 @@ export default function Symplicured() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="WORRY WART" icon={"/images/icon-.png"}>
+              <IconContent title="WORRY WART" icon={"/images/icon-worried.png"}>
                 <p>
                   I am an adult who is very worried about my health and possibly
                   having an underlying medical condition. I regularly assess my
@@ -406,7 +409,7 @@ export default function Symplicured() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="TEENAGER" icon={"/images/icon-.png"}>
+              <IconContent title="TEENAGER" icon={"/images/icon-teenager.png"}>
                 <p>
                   I am a young adolescent who searches for puberty- and
                   sexuality-related information online. I mainly search for
@@ -660,7 +663,10 @@ export default function Symplicured() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="ENABLE PATIENTS" icon={"/images/icon-.png"}>
+              <IconContent
+                title="ENABLE PATIENTS"
+                icon={"/images/icon-brainstorming.png"}
+              >
                 <ul>
                   <ListItem>
                     understand medical jargon or simplify medical jargon such
@@ -670,7 +676,10 @@ export default function Symplicured() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="HELP PATIENTS" icon={"/images/icon-.png"}>
+              <IconContent
+                title="HELP PATIENTS"
+                icon={"/images/icon-womanheart.png"}
+              >
                 <ul>
                   <ListItem>
                     feel that the symptom checking questionnaire is relatable
@@ -680,7 +689,10 @@ export default function Symplicured() {
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent title="HELP PATIENTS" icon={"/images/icon-.png"}>
+              <IconContent
+                title="HELP PATIENTS"
+                icon={"/images/icon-fistbump.png"}
+              >
                 <ul>
                   <ListItem>
                     feel that the website is reliable and credible?
@@ -946,7 +958,7 @@ export default function Symplicured() {
               <Paragraph>
                 <small>PROCESS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-.png">
+              <IconContent icon="/images/icon-plant.png">
                 <Heading level={4} className="display-4">
                   growth
                 </Heading>
@@ -1050,7 +1062,7 @@ export default function Symplicured() {
               <Paragraph>
                 <small>UPWARDS &amp; ONWARDS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-.png">
+              <IconContent icon="/images/icon-job-promotion.png">
                 <Heading level={4} className="display-4">
                   progress
                 </Heading>
