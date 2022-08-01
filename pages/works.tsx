@@ -124,7 +124,7 @@ const data = [
       "Design System",
       "Prototyping",
     ],
-    image: "/images/sy-comingsoon.png",
+    image: "/images/symplicured-hero.jpg",
   },
 ];
 

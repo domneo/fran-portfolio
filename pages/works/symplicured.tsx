@@ -111,8 +111,8 @@ export default function Symplicured() {
               <Image
                 src="/images/symplicured-prototype.png"
                 alt="play with prototype"
-                width={1}
-                height={1}
+                width={2872}
+                height={1024}
               />
               <Spacer size="xs" />
               Play with the prototype here
@@ -448,7 +448,14 @@ export default function Symplicured() {
         </Container>
         <Spacer size="md" />
         <Container size="compact">
-          <Image src="/images/symplicured-.png" alt="" width={1} height={1} />
+          <div className="mx-auto" style={{ maxWidth: "394px" }}>
+            <Image
+              src="/images/symplicured-diagram-mother-baby.png"
+              alt="diagram of mother observing baby and using symptom checker"
+              width={788}
+              height={605}
+            />
+          </div>
           <Spacer size="md" />
           <Heading level={5} className="text-platinum fw-light" centerText>
             By empowering caregivers who use symptom checkers on behalf of their
@@ -465,8 +472,8 @@ export default function Symplicured() {
           <Image
             src="/images/symplicured-persona.png"
             alt="persona"
-            width={1}
-            height={1}
+            width={2872}
+            height={1089}
           />
         </Container>
         <Spacer size="lg" />
@@ -477,25 +484,25 @@ export default function Symplicured() {
         <Container size="normal">
           <Carousel>
             <ImageZoom
-              src="/images/symplicured-.png"
-              alt=""
-              width={1}
-              height={1}
+              src="/images/symplicured-journeymap-1.png"
+              alt="user flow - usability issues"
+              width={2872}
+              height={1200}
             />
             <ImageZoom
-              src="/images/symplicured-.png"
-              alt=""
-              width={1}
-              height={1}
+              src="/images/symplicured-journeymap-2.png"
+              alt="user flow - credibility"
+              width={2872}
+              height={1200}
             />
           </Carousel>
           <Spacer size="md" />
           <DropdownContent title="👁 👄 👁  Full user journey map">
             <ImageZoom
-              src="/images/symplicured-.png"
-              alt=""
-              width={1}
-              height={1}
+              src="/images/symplicured-journeymap-full.png"
+              alt="full user journey map"
+              width={7318}
+              height={1828}
             />
           </DropdownContent>
           <Spacer size="md" />
@@ -520,9 +527,14 @@ export default function Symplicured() {
         </Container>
         <Spacer size="md" />
         <Container size="compact">
-          <Image src="/images/symplicured-.png" alt="" width={1} height={1} />
+          <Image
+            src="/images/symplicured-venndiagram-credibility.png"
+            alt="venn diagram - issues with credibility"
+            width={2374}
+            height={2285}
+          />
         </Container>
-        <Spacer size="xs" />
+        <Spacer size="sm" />
         <Container size="normal">
           <Paragraph className="caption text-end text-coolgrey mb-0">
             ** The client was interested in employing image recognition
@@ -530,12 +542,6 @@ export default function Symplicured() {
             feasibility with users first.
           </Paragraph>
         </Container>
-        <Spacer size="lg" />
-      </Section>
-
-      <Section title="SYNTHESIZE" heading="USER FLOWS">
-        <Spacer size="lg" />
-        <Container size="normal"></Container>
         <Spacer size="lg" />
       </Section>
 
@@ -716,6 +722,12 @@ export default function Symplicured() {
             them be aware of what they can do to manage their symptoms.
             <br />
             <br />
+            Furthermore, incorporating key information about the company and the
+            site’s contributors, as well as providing more health-related
+            information will help digital patients better determine the
+            reliability and credibility of the website.
+            <br />
+            <br />
             We know this to be true when there is an increase in the website’s
             overall usability and user satisfaction, a higher conversion rate,
             and percentage of users completing the search process.
@@ -879,10 +891,10 @@ export default function Symplicured() {
           >
             <div>
               <Image
-                src="/images/symplicured-.png"
-                alt=""
-                width={1}
-                height={1}
+                src="/images/symplicured-score-before.png"
+                alt="system usability test and NPS score"
+                width={1136}
+                height={537}
               />
             </div>
             <div className="mx-auto">
@@ -901,10 +913,10 @@ export default function Symplicured() {
             </div>
             <div>
               <Image
-                src="/images/symplicured-.png"
-                alt=""
-                width={1}
-                height={1}
+                src="/images/symplicured-score-after.png"
+                alt="system usability test and NPS score"
+                width={1136}
+                height={537}
               />
             </div>
           </ThreeColumns>
@@ -917,30 +929,30 @@ export default function Symplicured() {
         <Container size="normal">
           <Image
             src="/images/symplicured-hifi-1.jpg"
-            alt="hifi prototype 1"
-            width={1}
-            height={1}
+            alt="hi-fi design system"
+            width={2154}
+            height={2663}
           />
           <Spacer size="md" />
           <Image
             src="/images/symplicured-hifi-2.jpg"
-            alt="hifi prototype 2"
-            width={1}
-            height={1}
+            alt="hi-fi prototype screens"
+            width={2154}
+            height={2200}
           />
           <Spacer size="md" />
           <Image
             src="/images/symplicured-hifi-3.jpg"
-            alt="hifi prototype 3"
-            width={1}
-            height={1}
+            alt="hi-fi prototype screens"
+            width={2154}
+            height={3307}
           />
           <Spacer size="md" />
           <Image
             src="/images/symplicured-hifi-4.jpg"
-            alt="hifi prototype 4"
-            width={1}
-            height={1}
+            alt="hi-fi prototype screens"
+            width={2000}
+            height={4966}
           />
         </Container>
         <Spacer size="lg" />
