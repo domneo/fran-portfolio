@@ -4,6 +4,7 @@ import Link from "next/link";
 import Layout from "components/Layout";
 import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
+import { GridColumns } from "components/common/GridColumns";
 import { Heading } from "components/common/Heading";
 import { ImageZoom } from "components/common/ImageZoom";
 import { Line } from "components/common/Line";
@@ -25,21 +26,21 @@ import { IconContent } from "components/works2/IconContent";
 import { Section } from "components/works2/Section";
 
 export const meta = {
-  image: "/images/ks-hero.jpg",
-  title: "Kickstarter",
+  image: "/images/symplicured-hero.jpg",
+  title: "Symplicured",
   details: [
     { title: "MY ROLE", content: "UIUX Designer, Design Lead (Team of 4)" },
-    { title: "TIME", content: "2 months (flex)" },
-    { title: "PLATFORM", content: "Mobile-responsive website" },
-    { title: "INDUSTRY", content: "Crowdfunding" },
+    { title: "TIME", content: "3 months (flex)" },
+    { title: "PLATFORM", content: "Website" },
+    { title: "INDUSTRY", content: "Healthcare" },
   ],
 };
 
-export default function Kickstarter() {
+export default function Symplicured() {
   return (
     <Layout>
       <section>
-        <Header image={meta.image} number={"3"} title={meta.title} />
+        <Header image={meta.image} number={"1"} title={meta.title} />
         <Spacer size="lg" />
       </section>
       <section>
@@ -53,25 +54,16 @@ export default function Kickstarter() {
             <div>
               <Paragraph>
                 <a
-                  href="https://www.kickstarter.com/"
+                  href="https://www.symplicured.com/"
                   target={"_blank"}
                   rel="noreferrer"
                 >
-                  <strong>Kickstarter</strong>
+                  <strong>Symplicured</strong>
                 </a>{" "}
-                is a global crowdfunding platform that empowers project creators
-                by connecting them with potential project backers, who in turn,
-                pledge funds to turn ideas into reality.
-              </Paragraph>
-              <Paragraph>
-                Project creators start a product campaign on Kickstarter and use
-                it as a <strong>platform for fundraising</strong>. Individuals
-                who are interested in the project would pledge funds to the
-                campaign and become project backers. When the campaign period
-                ends, creators use Kickstarter as a{" "}
-                <strong>platform for communication</strong> to inform and update
-                backers on the development, delivery and other relevant
-                information about the product.
+                is a healthcare startup that provides an online symptom search
+                engine for the Asian market. It enables patients to search,
+                answer validated medical questionnaires, and get probable
+                diagnoses with actionable results.
               </Paragraph>
               <Spacer size="md" />
               <Details details={meta.details} />
@@ -80,6 +72,7 @@ export default function Kickstarter() {
         </Container>
         <Spacer size="lg" />
       </section>
+
       <Section title="OVERVIEW">
         <Spacer size="lg" />
         <Container size="normal">
@@ -89,59 +82,46 @@ export default function Kickstarter() {
             col3Props={{ lg: 7 }}
           >
             <Heading level={3} className="display-5">
-              A better project backing experience
+              <span className="text-wrap">
+                A better symptom check &amp; diagnosis experience
+              </span>
             </Heading>
             <div></div>
-            <Paragraph>
-              The main focus of this project was to streamline the research
-              process potential project backers undergo by integrating new
-              info-centric features. This all-in-one solution aims to increase
-              backer confidence and trust in the project creator and campaign,
-              and reduce visitor bounce rate to improve traffic and revenue.
-            </Paragraph>
+            <div>
+              <Paragraph>
+                This pro-bono project involved a multi-faceted approach to
+                reduce the website’s high dropoff rates and low conversion rates
+                through an overall website revamp and the introduction of a new
+                feature - a glossary - to further reduce bounce rates and retain
+                visitors.
+              </Paragraph>
+              <Paragraph>
+                Ultimately, the client was satisfied with the revamp as it was
+                collaboratively produced to build confidence, reliability, and
+                relatability in the brand, the people behind it, and its
+                content.
+              </Paragraph>
+            </div>
           </ThreeColumns>
         </Container>
-        <Spacer size="lg" />
+        <Spacer size="md" />
         <Container size="normal" centerText>
-          <TwoColumns gutter={{ xs: 3 }}>
-            <div>
-              <Link
-                href={process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_WEB || "/"}
-              >
-                <a target={"_blank"}>
-                  <Image
-                    src={"/images/ks-proto-desktop.png"}
-                    alt="Play with the desktop prototype here"
-                    width={1420}
-                    height={1024}
-                  />
-                  <Spacer size="xs" />
-                  <Span>Play with the desktop prototype here</Span>
-                </a>
-              </Link>
-            </div>
-            <div>
-              <Link
-                href={
-                  process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_MOBILE || "/"
-                }
-              >
-                <a target={"_blank"}>
-                  <Image
-                    src={"/images/ks-proto-mobile.png"}
-                    alt="Play with the mobile prototype here"
-                    width={1420}
-                    height={1024}
-                  />
-                  <Spacer size="xs" />
-                  <Span>Play with the mobile prototype here</Span>
-                </a>
-              </Link>
-            </div>
-          </TwoColumns>
+          <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_SYMPLICURED || "/"}>
+            <a target={"_blank"}>
+              <Image
+                src="/images/symplicured-prototype.png"
+                alt="play with prototype"
+                width={2872}
+                height={1024}
+              />
+              <Spacer size="xs" />
+              Play with the prototype here
+            </a>
+          </Link>
         </Container>
         <Spacer size="lg" />
       </Section>
+
       <Section title="PROCESS">
         <Spacer size="lg" />
         <Container size="normal">
@@ -169,17 +149,20 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Heading level={5} className="paragraph text-platinum">
-                Research
-              </Heading>
+              <Paragraph>
+                <strong>Research &amp; Empathize</strong>
+              </Paragraph>
               <ul>
+                <ListItem className="caption">Background</ListItem>
+                <ListItem className="caption">Competitive Analysis</ListItem>
+                <ListItem className="caption">Screening Users</ListItem>
+                <ListItem className="caption">User Interviews</ListItem>
                 <ListItem className="caption">
-                  Understanding the Brand, Business, and Landscape
+                  Evalutating the Current Service
+                  <ul>
+                    <ListItem className="caption">Usability Tests</ListItem>
+                  </ul>
                 </ListItem>
-                <ListItem className="caption">
-                  Competitive &amp; Comparative Analysis
-                </ListItem>
-                <ListItem className="caption">Understanding the Users</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -206,18 +189,17 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Heading level={5} className="paragraph text-platinum">
-                Synthesize
-              </Heading>
+              <Paragraph>
+                <strong>Synthesize</strong>
+              </Paragraph>
               <ul>
-                <ListItem className="caption">User Journey Map</ListItem>
                 <ListItem className="caption">Persona Creation</ListItem>
-                <ListItem className="caption">User Flows</ListItem>
-                <ListItem className="caption">Problem Statement</ListItem>
+                <ListItem className="caption">User Journey Map</ListItem>
+                <ListItem className="caption">Problem</ListItem>
                 <ListItem className="caption">
                   Reframing the Problem (HMW)
                 </ListItem>
-                <ListItem className="caption">Solution</ListItem>
+                <ListItem className="caption">Solutionizing</ListItem>
               </ul>
             </div>
             <div className="col">
@@ -243,11 +225,11 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Heading level={5} className="paragraph text-platinum">
-                Design
-              </Heading>
+              <Paragraph>
+                <strong>Design</strong>
+              </Paragraph>
               <ul>
-                <ListItem className="caption">Design Studio</ListItem>
+                <ListItem className="caption">Design Workshop </ListItem>
                 <ListItem className="caption">Sketches, Wireframing</ListItem>
                 <ListItem className="caption">Feature Development</ListItem>
               </ul>
@@ -276,11 +258,13 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Heading level={5} className="paragraph text-platinum">
-                Prototype &amp; Test
-              </Heading>
+              <Paragraph>
+                <strong>Prototype &amp; Test</strong>
+              </Paragraph>
               <ul>
                 <ListItem className="caption">Mid-fi Prototypes</ListItem>
+                <ListItem className="caption">Concept Tests</ListItem>
+                <ListItem className="caption">A/B Tests</ListItem>
                 <ListItem className="caption">Usability Tests</ListItem>
                 <ListItem className="caption">Post-Interview Surveys</ListItem>
               </ul>
@@ -308,9 +292,9 @@ export default function Kickstarter() {
                 </svg>
               </div>
               <Spacer size="sm" />
-              <Heading level={5} className="paragraph text-platinum">
-                Implement
-              </Heading>
+              <Paragraph>
+                <strong>Implement</strong>
+              </Paragraph>
               <ul>
                 <ListItem className="caption">Hi-fi Prototype</ListItem>
                 <ListItem className="caption">Impact</ListItem>
@@ -321,10 +305,8 @@ export default function Kickstarter() {
         </Container>
         <Spacer size="lg" />
       </Section>
-      <Section
-        title="RESEARCH"
-        heading="UNDERSTANDING THE BRAND, BUSINESS &amp; LANDSCAPE"
-      >
+
+      <Section title="RESEARCH &amp; EMPATHIZE" heading="BACKGROUND">
         <Spacer size="lg" />
         <Container size="normal">
           <ThreeColumns
@@ -333,400 +315,334 @@ export default function Kickstarter() {
             col3Props={{ lg: 7 }}
           >
             <Heading level={3} className="display-5">
-              Success = increase project backing rates
-            </Heading>
-            <div></div>
-            <Paragraph>
-              Traffic and revenue are key factors in determining Kickstarter’s
-              success - higher traffic could lead to higher conversion rates
-              (projects backed), and an increase in revenue. Notably,
-              Kickstarter gains revenue through a 5% commission per project
-              backing.
-            </Paragraph>
-          </ThreeColumns>
-          <Spacer size="md" />
-          <Image
-            src="/images/ks-statistics.png"
-            alt="Kickstarter's Allocation of Crowdfunding Across All Genres"
-            width={2872}
-            height={1600}
-          />
-        </Container>
-        <Spacer size="lg" />
-      </Section>
-      <Section
-        title="RESEARCH"
-        heading="COMPETITIVE &amp; COMPARATIVE ANALYSIS"
-      >
-        <Spacer size="lg" />
-        <Container size="normal">
-          <Carousel>
-            <ImageZoom
-              src="/images/ks-comanalysis-1.png"
-              alt="Feature Analysis"
-              width={2872}
-              height={1200}
-            />
-            <ImageZoom
-              src="/images/ks-comanalysis-2.png"
-              alt="Element Analysis"
-              width={2872}
-              height={1200}
-            />
-          </Carousel>
-        </Container>
-        <Spacer size="lg" />
-        <Container size="normal">
-          <ThreeColumns
-            col1Props={{ lg: 4 }}
-            col2Props={{ lg: 1 }}
-            col3Props={{ lg: 7 }}
-          >
-            <Heading level={3} className="display-5">
-              Kickstarter’s current offerings are not enough
-            </Heading>
-            <div></div>
-            <Paragraph>
-              Interestingly, despite Kickstarter’s low backing rates, it was{" "}
-              <strong>outperforming its competitors</strong> in terms of its
-              features and elements. So the next step was clear: we had to
-              uncover <em>what</em> Kickstarter’s issues were by talking to the
-              project backers themselves.
-            </Paragraph>
-          </ThreeColumns>
-        </Container>
-        <Spacer size="lg" />
-      </Section>
-      <Section title="RESEARCH" heading="UNDERSTANDING THE USERS">
-        <Spacer size="lg" />
-        <Container size="normal">
-          <ThreeColumns
-            col1Props={{ lg: 4 }}
-            col2Props={{ lg: 1 }}
-            col3Props={{ lg: 7 }}
-          >
-            <Heading level={3} className="display-5">
-              User research &amp; interviews
+              Kick off goals: Test &amp; Optimise
             </Heading>
             <div></div>
             <div>
-              <IconContent title="APPROACH" icon={"/images/icon-chat.png"}>
-                <ul>
-                  <ListItem>60-minute deep dive user interviews</ListItem>
-                  <ListItem>
-                    Understand backers’ mental models and pain points
-                  </ListItem>
-                </ul>
+              <Paragraph>
+                An inital meeting with the client presented us with 3 main goals
+                that was geared towards optimising the overall symptom checker
+                experience for Singaporean users.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+        </Container>
+        <Spacer size="md" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 4 }}
+            col3Props={{ lg: 4 }}
+          >
+            <div>
+              <Paragraph className="text-works mb-3">01.</Paragraph>
+              <Paragraph>
+                Optimise the landing page to increase conversion rates
+              </Paragraph>
+            </div>
+            <div>
+              <Paragraph className="text-works mb-3">02.</Paragraph>
+              <Paragraph>
+                Determine user preference in the symptom checker input and
+                questionnaire experience:
+              </Paragraph>
+              <ul>
+                <ListItem>Text-based</ListItem>
+                <ListItem>Image-based</ListItem>
+              </ul>
+            </div>
+            <div>
+              <Paragraph className="text-works mb-3">03.</Paragraph>
+              <Paragraph>
+                Identify MVP concepts for launch in the Singapore market
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+        </Container>
+        <Spacer size="lg" />
+        <Container size="normal">
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <Heading level={3} className="display-5">
+              Preliminary Personas
+            </Heading>
+            <div></div>
+            <div>
+              <p>
+                Symplicured provided the team with 4 main user groups its health
+                symptom checker serves:
+              </p>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent
+                title="FIRST-TIME PARENT"
+                icon={"/images/icon-family.png"}
+              >
+                <p>
+                  I am a young parent who search on behalf of my child. I worry
+                  about their wellbeing as they can’t express their discomfort.
+                </p>
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
               <IconContent
-                title="16 PARTICIPANTS"
-                icon={"/images/icon-team.png"}
+                title="YOUNG ADULT WITH ELDERLY PARENT"
+                icon={"/images/icon-fatherson.png"}
               >
-                <ul>
-                  <ListItem>
-                    People who have backed projects or are currently backing
-                    projects
-                  </ListItem>
-                  <ListItem>
-                    People who want to back projects, but have not done so yet
-                  </ListItem>
-                </ul>
+                <p>
+                  I am a caregiver who search on behalf of my elderly parent.
+                  They are not tech-savvy and are unable to always visit the
+                  doctor.
+                </p>
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
-              <IconContent
-                title="CONSTRAINTS"
-                icon={"/images/icon-depression.png"}
-              >
-                <ul>
-                  <ListItem>
-                    Team’s inability to recruit Kickstarter project creators in
-                    the limited timeframe
-                  </ListItem>
-                  <ListItem>
-                    Significantly affected the project direction - became
-                    backer-only focused
-                  </ListItem>
-                </ul>
+              <IconContent title="WORRY WART" icon={"/images/icon-worried.png"}>
+                <p>
+                  I am an adult who is very worried about my health and possibly
+                  having an underlying medical condition. I regularly assess my
+                  health using symptom checkers and information I find online.
+                </p>
+              </IconContent>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent title="TEENAGER" icon={"/images/icon-teenager.png"}>
+                <p>
+                  I am a young adolescent who searches for puberty- and
+                  sexuality-related information online. I mainly search for
+                  myself.
+                </p>
               </IconContent>
             </div>
           </ThreeColumns>
-        </Container>
-        <Spacer size="lg" />
-        <Container size="normal" centerElements centerText>
-          <ImageZoom
-            src="/images/ks-affinitymap.png"
-            alt="affinity map"
-            width={2872}
-            height={1140}
-          />
-          <Spacer size="xs" />
-          <Paragraph className="caption">
-            Affinity map of interviewee responses, organised according to the
-            project backing experience timeline
-          </Paragraph>
-        </Container>
-        <Spacer size="lg" />
-        <Container size="normal">
+          <Spacer size="lg" />
           <ThreeColumns
             col1Props={{ lg: 4 }}
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
             <Heading level={3} className="display-5">
-              Roadblock?
+              Strategic decision to focus on the bottom line
             </Heading>
             <div></div>
-            <Paragraph>
-              At this point of the project, it seemed like we were stuck ): It
-              was hard to find key takeaways from the user interviews due to
-              overwhelming amount of insights we received.
-            </Paragraph>
-          </ThreeColumns>
-          <Spacer size="md" />
-          <ThreeColumns
-            col1Props={{ xs: 12, md: 10, lg: 8, xxl: 4 }}
-            col2Props={{ xs: 12, md: 10, lg: 8, xxl: 4 }}
-            col3Props={{ xs: 12, md: 10, lg: 8, xxl: 4 }}
-            gutter={{ xs: 3, lg: 4, xl: 5 }}
-            centerH
-          >
             <div>
-              <Paragraph className="text-works">01.</Paragraph>
-              <IconContent icon={"/images/icon-corkboard.png"}>
-                <Paragraph>
-                  Too many data points from 16 users and overlapping issues
-                  although the points were organised in a linear timeline
-                </Paragraph>
-              </IconContent>
-            </div>
-            <div>
-              <Paragraph className="text-works">02.</Paragraph>
-              <IconContent icon={"/images/icon-search.png"}>
-                <Paragraph>
-                  Hard to draw parallels between the competitive analysis
-                  research and user research
-                </Paragraph>
-              </IconContent>
-            </div>
-            <div>
-              <Paragraph className="text-works">03.</Paragraph>
-              <IconContent icon={"/images/icon-dog.png"}>
-                <Paragraph>
-                  Solutionising or developing problem statements weren’t options
-                  as the problem spaces were too broad or assumptive
-                </Paragraph>
-              </IconContent>
+              <Paragraph>
+                Due to the limited time and the large target user base, a
+                strategic design decision was made to focus the UI efforts on
+                the target user group which faced the most difficulty - people
+                who were using symptom checkers on behalf of others.
+              </Paragraph>
+              <Paragraph>
+                Caregivers are using the symptom checkers on behalf of their
+                dependents (who may not be able to express themselves). So{" "}
+                <strong>
+                  there is an added difficulty when reporting their dependent’s
+                  medical issues as a 3rd party to a symptom checker.
+                </strong>
+              </Paragraph>
             </div>
           </ThreeColumns>
         </Container>
-        <Spacer size="lg" />
-        <Container size="normal" centerText>
-          <Heading level={4} className="h5 fw-light text-platinum">
-            So we pulled the brakes and refocused our perspectives by looking
-            for an opportunity via a user journey map.
+        <Spacer size="md" />
+        <Container size="compact">
+          <div className="mx-auto" style={{ maxWidth: "394px" }}>
+            <Image
+              src="/images/symplicured-diagram-mother-baby.png"
+              alt="diagram of mother observing baby and using symptom checker"
+              width={788}
+              height={605}
+            />
+          </div>
+          <Spacer size="md" />
+          <Heading level={5} className="text-platinum fw-light" centerText>
+            By empowering caregivers who use symptom checkers on behalf of their
+            dependents with an easier and better experience, we would also
+            inevitably enhance the experience for all digital patients.
           </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
+
+      <Section title="SYNTHESIZE" heading="PERSONA">
+        <Spacer size="lg" />
+        <Container size="normal" centerElements>
+          <Image
+            src="/images/symplicured-persona.png"
+            alt="persona"
+            width={2872}
+            height={1089}
+          />
+        </Container>
+        <Spacer size="lg" />
+      </Section>
+
       <Section title="SYNTHESIZE" heading="USER JOURNEY MAP">
         <Spacer size="lg" />
         <Container size="normal">
           <Carousel>
             <ImageZoom
-              src="/images/ks-journeymap-zoom1.png"
-              alt="journey map"
+              src="/images/symplicured-journeymap-1.png"
+              alt="user flow - usability issues"
               width={2872}
               height={1200}
             />
             <ImageZoom
-              src="/images/ks-journeymap-zoom2.png"
-              alt="journey map"
+              src="/images/symplicured-journeymap-2.png"
+              alt="user flow - credibility"
               width={2872}
               height={1200}
             />
           </Carousel>
-        </Container>
-        <Spacer size="md" />
-        <Container size="compact">
+          <Spacer size="md" />
           <DropdownContent title="👁 👄 👁  Full user journey map">
             <ImageZoom
-              src="/images/ks-fulljourneymap.png"
-              alt="👁 👄 👁  Full user journey map"
-              width={5720}
-              height={1796}
+              src="/images/symplicured-journeymap-full.png"
+              alt="full user journey map"
+              width={7318}
+              height={1828}
             />
           </DropdownContent>
-        </Container>
-        <Spacer size="md" />
-        <Container size="normal">
+          <Spacer size="md" />
           <ThreeColumns
             col1Props={{ lg: 4 }}
             col2Props={{ lg: 1 }}
             col3Props={{ lg: 7 }}
           >
             <Heading level={3} className="display-5">
-              UX problem space lies in the pre-backing stage
+              Credibility: A new problem space
             </Heading>
             <div></div>
             <div>
               <Paragraph>
-                A general user journey map based on insights from the user
-                interviews was charted for a bird’s eye view of the potential
-                problem spaces. The pre-backing stage (Research &amp;
-                Consideration) was the most affectable as the issues project
-                backers faced were within the Kickstarter platform itself.
-              </Paragraph>
-              <Paragraph>
-                It was, really, a breath of fresh air that helped clear the fog
-                we were going through.
+                After speaking to the users and performing usability tests on
+                the website, we uncovered a problem space that wasn’t initially
+                identified by the client or the team - user perceptions of how
+                credible the website and service was.
               </Paragraph>
             </div>
           </ThreeColumns>
-        </Container>
-        <Spacer size="lg" />
-      </Section>
-      <Section title="SYNTHESIZE" heading="PERSONA">
-        <Spacer size="lg" />
-        <Container size="normal">
-          <Image
-            src="/images/ks-persona.png"
-            alt="Persona"
-            width={2872}
-            height={1038}
-          />
-        </Container>
-        <Spacer size="lg" />
-      </Section>
-      <Section title="SYNTHESIZE" heading="USER FLOWS">
-        <Spacer size="lg" />
-        <Container size="normal">
-          <ThreeColumns
-            col1Props={{ lg: 5 }}
-            col2Props={{ lg: 1 }}
-            col3Props={{ lg: 6 }}
-          >
-            <Heading level={3} className="display-5">
-              Confidence and trust underpin the relationship between the
-              backer’s decision making journey and Kickstarter’s backing rates
-            </Heading>
-            <div></div>
-            <div>
-              <Paragraph>
-                <em>
-                  “Is this project a scam? Am I agreeable with the product and
-                  shipping?”
-                </em>
-              </Paragraph>
-              <Paragraph>
-                All the research and consideration a potential backer undergoes
-                in the Research Stage culminates in an ultimatum at the
-                Decision-Making Stage. This marks a pivotal point where the
-                potential backer will decide on backing the project.
-              </Paragraph>
-            </div>
-          </ThreeColumns>
-        </Container>
-        <Spacer size="lg" />
-        <Container size="normal">
-          <TwoColumns col2Props={{ lg: 6, centerV: true }}>
-            <Image
-              src="/images/ks-userflow-zoom.png"
-              alt="user flow zoomed"
-              width={1460}
-              height={840}
-            />
-            <CaptionTitleContent
-              caption="THIS MEANS THAT..."
-              title="The lack of information is not the be-all and end-all reason that dissuades backers from backing a project"
-              showLine
-            >
-              <ul>
-                <ListItem>
-                  User flow for backing a crowdfunded project unique
-                  <ul>
-                    <ListItem>
-                      Even if a backer is not very confident about a project,
-                      they might still end up backing a project if it fulfils
-                      the ultimatum
-                    </ListItem>
-                  </ul>
-                </ListItem>
-              </ul>
-            </CaptionTitleContent>
-          </TwoColumns>
         </Container>
         <Spacer size="md" />
         <Container size="compact">
-          <DropdownContent title="👁 👄 👁  Full user flow">
-            <ImageZoom
-              src="/images/ks-userflow.png"
-              alt="👁 👄 👁  Full user flow"
-              width={2328}
-              height={1146}
-            />
-          </DropdownContent>
+          <Image
+            src="/images/symplicured-venndiagram-credibility.png"
+            alt="venn diagram - issues with credibility"
+            width={2374}
+            height={2285}
+          />
         </Container>
-        <Spacer size="md" />
-        <Container size="compact" centerText>
-          <IconContent icon={"/images/icon-idea.png"}>
-            <Heading level={5} className="text-platinum fw-light">
-              Our research came full circle when we revisited our affinity map -
-              we realised that low user confidence stemmed from a{" "}
-              <strong>lack of information</strong> about projects and creators
-              and a <strong>lack of communication</strong> between creators and
-              backers.
-            </Heading>
-          </IconContent>
-        </Container>
-        <Spacer size="lg" />
+        <Spacer size="sm" />
         <Container size="normal">
-          <ThreeColumns
-            col1Props={{ lg: 4 }}
-            col2Props={{ lg: 1 }}
-            col3Props={{ lg: 7 }}
-          >
-            <Heading level={3} className="display-5">
-              Using a domino effect to increase conversion rates
-            </Heading>
-            <div></div>
-            <div>
-              <Paragraph>
-                While it is up to users to decide if they are agreeable with a
-                product’s price and shipping (dependent on their budget), we can
-                help users to assess the legitimacy of the project.
-              </Paragraph>
-              <Paragraph>
-                This in turn streamlines the decision making process, enhance
-                the legitimacy of creators and projects, and subsequently
-                increase the chances of a successful backing for Kickstarter.
-              </Paragraph>
-            </div>
-          </ThreeColumns>
+          <Paragraph className="caption text-end text-coolgrey mb-0">
+            ** The client was interested in employing image recognition
+            technology in an image-assisted search and wanted us to find out its
+            feasibility with users first.
+          </Paragraph>
         </Container>
         <Spacer size="lg" />
       </Section>
+
       <Section title="SYNTHESIZE" heading="PROBLEM STATEMENT">
         <Spacer size="lg" />
         <Container size="compact" centerText>
-          <Heading level={5} className="text-platinum fw-light mb-4">
-            Potential Kickstarter project backers determine their level of
-            confidence in a project by assessing its campaign and creator before
-            supporting it. However, these potential backers currently access
-            external sources for more information about campaigns and creators
-            to ensure their legitimacy.
-          </Heading>
           <Heading level={5} className="text-platinum fw-light">
-            Without enough information on Kickstarter, potential backers are
-            unable to make informed decisions within the site, leading to higher
-            bounce rates and lower backing rates. This negatively affects
-            Kickstarter’s traffic volume and overall revenue.
+            Patients use the online symptom checker to quickly identify and
+            understand their current and/or underlying health conditions and be
+            aware of how they can manage their situation.
+          </Heading>
+        </Container>
+        <Spacer size="lg" />
+        <Container size="normal">
+          <TwoColumns col1Props={{ lg: 3 }} col2Props={{ lg: 9 }} centerV>
+            <div className="py-4">
+              <Heading
+                level={5}
+                className="paragraph text-works mb-0 text-lg-center fw-light"
+              >
+                ISSUE 01.
+              </Heading>
+            </div>
+            <div>
+              <Paragraph className="h5 fw-light text-platinum">
+                However, patients are unable to begin the search process using
+                keywords of their choice or find suitable keywords to describe
+                their symptoms. This process is worsened by preset search terms
+                that use medical jargon that they may not understand.
+              </Paragraph>
+            </div>
+          </TwoColumns>
+          <Spacer size="md" />
+          <TwoColumns col1Props={{ lg: 3 }} col2Props={{ lg: 9 }} centerV>
+            <div className="py-4">
+              <Heading
+                level={5}
+                className="paragraph text-works mb-0 text-lg-center fw-light"
+              >
+                ISSUE 02.
+              </Heading>
+            </div>
+            <div>
+              <Paragraph className="h5 fw-light text-platinum">
+                In the symptom checker questionnaire, patients are confused by
+                the questions due to unclear content, and feel that the
+                questions are not directed at trying to understand their
+                symptoms.
+              </Paragraph>
+            </div>
+          </TwoColumns>
+          <Spacer size="md" />
+          <TwoColumns col1Props={{ lg: 3 }} col2Props={{ lg: 9 }} centerV>
+            <div className="py-4">
+              <Heading
+                level={5}
+                className="paragraph text-works mb-0 text-lg-center fw-light"
+              >
+                ISSUE 03.
+              </Heading>
+            </div>
+            <div>
+              <Paragraph className="h5 fw-light text-platinum">
+                Additionally, patients encounter medical jargon they do not
+                understand throughout the symptom checking experience - from the
+                search input, to the questionnaire, and to the diagnosis.
+              </Paragraph>
+            </div>
+          </TwoColumns>
+          <Spacer size="md" />
+          <TwoColumns col1Props={{ lg: 3 }} col2Props={{ lg: 9 }} centerV>
+            <div className="py-4">
+              <Heading
+                level={5}
+                className="paragraph text-works mb-0 text-lg-center fw-light"
+              >
+                ISSUE 04.
+              </Heading>
+            </div>
+            <div>
+              <Paragraph className="h5 fw-light text-platinum">
+                Patients perceive the website as less reliable and credible
+                because they are unable to find information about website’s
+                contributors. They are also faced with an incomplete diagnosis
+                upon completing the symptom checker questionnaire.
+              </Paragraph>
+            </div>
+          </TwoColumns>
+        </Container>
+        <Spacer size="lg" />
+        <Container size="compact" centerText>
+          <Heading level={5} className="text-platinum fw-light">
+            Overall, these problems negatively affect Symplicured, with{" "}
+            <strong>low conversion rates</strong> on the landing page, and{" "}
+            <strong>high drop-off rates</strong> at various stages of the online
+            symptom checking process.
           </Heading>
         </Container>
         <Spacer size="lg" />
       </Section>
+
       <Section title="SYNTHESIZE" heading="REFRAMING THE PROBLEM">
         <Spacer size="lg" />
         <Container size="normal">
@@ -741,41 +657,51 @@ export default function Kickstarter() {
             <div></div>
             <div>
               <IconContent
-                title="HELP POTENTIAL PROJECT BACKERS"
+                title="HELP PATIENTS"
                 icon={"/images/icon-research.png"}
               >
                 <ul>
                   <ListItem>
-                    Remove the need to do research from external websites?
+                    initiate and complete the search process easily to identify
+                    symptoms quickly?
                   </ListItem>
                 </ul>
               </IconContent>
               <Spacer size="xs" />
               <Spacer size="sm" />
               <IconContent
-                title="ENABLE POTENTIAL PROJECT BACKERS"
-                icon={"/images/icon-fist.png"}
-              >
-                <ul>
-                  <ListItem>
-                    Easily access and quickly understand information?
-                    <ul>
-                      <ListItem>
-                        (Can we reconfigure how information can be presented?)
-                      </ListItem>
-                    </ul>
-                  </ListItem>
-                </ul>
-              </IconContent>
-              <Spacer size="xs" />
-              <Spacer size="sm" />
-              <IconContent
-                title="EMPOWER POTENTIAL PROJECT BACKERS TO"
+                title="ENABLE PATIENTS"
                 icon={"/images/icon-brainstorming.png"}
               >
                 <ul>
                   <ListItem>
-                    Assess the legitimacy of a project quickly?
+                    understand medical jargon or simplify medical jargon such
+                    that they can understand the content in one glance?
+                  </ListItem>
+                </ul>
+              </IconContent>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent
+                title="HELP PATIENTS"
+                icon={"/images/icon-womanheart.png"}
+              >
+                <ul>
+                  <ListItem>
+                    feel that the symptom checking questionnaire is relatable
+                    and personable to them?
+                  </ListItem>
+                </ul>
+              </IconContent>
+              <Spacer size="xs" />
+              <Spacer size="sm" />
+              <IconContent
+                title="HELP PATIENTS"
+                icon={"/images/icon-fistbump.png"}
+              >
+                <ul>
+                  <ListItem>
+                    feel that the website is reliable and credible?
                   </ListItem>
                 </ul>
               </IconContent>
@@ -784,203 +710,254 @@ export default function Kickstarter() {
         </Container>
         <Spacer size="lg" />
       </Section>
+
       <Section title="SYNTHESIZE" heading="SOLUTION">
         <Spacer size="lg" />
         <Container size="compact" centerText>
-          <Heading level={5} className="text-platinum fw-light mb-4">
-            Integrating external information into Kickstarter provides potential
-            project backers a holistic understanding of a project’s creator and
-            campaign through the product details, audiovisual storytelling, and
-            community opinions. Presenting this information in an accessible and
-            easily understood manner allows them to better assess a project’s
-            legitimacy.
-          </Heading>
-        </Container>
-        <Spacer size="lg" />
-      </Section>
-      <Section title="DESIGN" heading="DESIGN STUDIO">
-        <Spacer size="lg" />
-        <Container size="normal">
-          <ThreeColumns
-            col1Props={{ lg: 4 }}
-            col2Props={{ lg: 1 }}
-            col3Props={{ lg: 7 }}
-          >
-            <Heading level={3} className="display-5">
-              Ideating through a ‘Mash Up’ of experiences
-            </Heading>
-            <div></div>
-            <div>
-              <Paragraph>
-                A design studio utilising the ‘Mash Up’ method allowed us to
-                creatively address the issues defined by the HMW statements.
-                This method combines seemingly unrelated environments and
-                situations to spark new and fresh ideas. Here, we mashed up 2
-                experiences – a buffet and an aquarium visit.
-              </Paragraph>
-            </div>
-          </ThreeColumns>
-          <Spacer size="md" />
-          <Carousel>
-            <ImageZoom
-              src="/images/ks-designstudio-1.png"
-              alt="design studio"
-              width={2872}
-              height={1200}
-            />
-            <ImageZoom
-              src="/images/ks-designstudio-2.png"
-              alt="design studio"
-              width={1800}
-              height={752}
-            />
-            <ImageZoom
-              src="/images/ks-designstudio-3.png"
-              alt="design studio"
-              width={2000}
-              height={836}
-            />
-            <ImageZoom
-              src="/images/ks-designstudio-4.png"
-              alt="design studio"
-              width={1800}
-              height={752}
-            />
-          </Carousel>
-        </Container>
-        <Spacer size="lg" />
-      </Section>
-      <Section title="DESIGN" heading="FEATURE DEVELOPMENT">
-        <Spacer size="lg" />
-        <Container size="normal" centerText>
           <Heading level={5} className="text-platinum fw-light">
-            Poke the blobs to learn more about how each feature addressed the
-            various HMWs
+            By allowing digital patients multiple ways to input their symptoms
+            based on current observations and integrating visual aids into the
+            website, we will empower them to quickly narrow down their condition
+            to reach an accurate and personalised diagnosis. This will also help
+            them be aware of what they can do to manage their symptoms.
+            <br />
+            <br />
+            Furthermore, incorporating key information about the company and the
+            site’s contributors, as well as providing more health-related
+            information will help digital patients better determine the
+            reliability and credibility of the website.
+            <br />
+            <br />
+            We know this to be true when there is an increase in the website’s
+            overall usability and user satisfaction, a higher conversion rate,
+            and percentage of users completing the search process.
           </Heading>
-          <Spacer size="md" />
-          <Features />
         </Container>
         <Spacer size="lg" />
       </Section>
+
       <Section title="DELIVER" heading="IMPACT">
         <Spacer size="lg" />
         <Container size="normal">
           <TwoColumns>
-            <IconContent title="APPROACH" icon={"/images/icon-clipboard.png"}>
+            <IconContent title="14 PARTICIPANTS" icon={"/images/icon-team.png"}>
               <ul>
-                <ListItem>2 rounds of 60-minute long usability tests</ListItem>
                 <ListItem>
-                  Same set of post-test surveys for an accurate indicator of
-                  success
+                  People who have used symptom checker sites
+                  <ul>
+                    <ListItem>For themselves</ListItem>
+                    <ListItem>On behalf of someone else</ListItem>
+                  </ul>
+                </ListItem>
+                <ListItem>
+                  At least one participant from the healthcare industry
                 </ListItem>
               </ul>
             </IconContent>
-            <IconContent title="9 PARTICIPANTS" icon={"/images/icon-team.png"}>
+            <IconContent title="APPROACH" icon={"/images/icon-clipboard.png"}>
               <ul>
+                <ListItem>60-minutes moderated interviews and tests</ListItem>
                 <ListItem>
-                  Moderated ‘Think Aloud’ sessions either in-person or over Zoom
-                </ListItem>
-                <ListItem>
-                  Mix of current and potential project backers who are active
-                  Kickstarter users
+                  Post-test surveys for an accurate indicator of sucess
+                  <ul>
+                    <ListItem>System Usability Scale</ListItem>
+                    <ListItem>Net Promoter Score</ListItem>
+                  </ul>
                 </ListItem>
               </ul>
             </IconContent>
           </TwoColumns>
-          <Spacer size="md" />
+        </Container>
+        <Spacer size="lg" />
+        <Container size="normal" centerElements>
+          <div className="d-flex flex-column flex-lg-row align-items-center">
+            <div className="p-4 p-md-3 p-xl-4 position-relative">
+              <svg
+                width="100%"
+                height="100%"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="bottom-0 end-0 position-absolute start-0 top-0"
+              >
+                <rect
+                  width="100%"
+                  height="100%"
+                  stroke="var(--platinum)"
+                  strokeOpacity="0.6"
+                  strokeDasharray="32 32"
+                ></rect>
+              </svg>
+              <Paragraph className="caption text-works fw-bold mb-3">
+                ROUND 1
+              </Paragraph>
+              <ul>
+                <ListItem>Deep dive interviews</ListItem>
+                <ListItem>Usability testing: Symplicured site</ListItem>
+                <ListItem>Post-test surveys</ListItem>
+              </ul>
+            </div>
+            <div className="flex-shrink-0 py-5 p-lg-3 p-xl-4 p-xxl-5">
+              <svg
+                width="25"
+                height="13"
+                viewBox="0 0 25 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M-6.55866e-08 6.51563L24 6.51563M24 6.51563L19.3684 1.03125M24 6.51563L19.3684 12.0156"
+                  stroke="var(--platinum)"
+                />
+              </svg>
+            </div>
+            <div className="p-4 p-md-3 p-xl-4 position-relative">
+              <svg
+                width="100%"
+                height="100%"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="bottom-0 end-0 position-absolute start-0 top-0"
+              >
+                <rect
+                  width="100%"
+                  height="100%"
+                  stroke="var(--platinum)"
+                  strokeOpacity="0.6"
+                  strokeDasharray="32 32"
+                ></rect>
+              </svg>
+              <Paragraph className="caption text-works fw-bold mb-3">
+                ROUND 2
+              </Paragraph>
+              <ul>
+                <ListItem>
+                  Concept Testing: Search and questionnaire
+                  <ul>
+                    <ListItem>Image-based</ListItem>
+                    <ListItem>Text-based</ListItem>
+                  </ul>
+                </ListItem>
+                <ListItem>Post-test surveys</ListItem>
+              </ul>
+            </div>
+            <div className="flex-shrink-0 py-5 p-lg-3 p-xl-4 p-xxl-5">
+              <svg
+                width="25"
+                height="13"
+                viewBox="0 0 25 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M-6.55866e-08 6.51563L24 6.51563M24 6.51563L19.3684 1.03125M24 6.51563L19.3684 12.0156"
+                  stroke="var(--platinum)"
+                />
+              </svg>
+            </div>
+            <div className="p-4 p-md-3 p-xl-4 position-relative">
+              <svg
+                width="100%"
+                height="100%"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="bottom-0 end-0 position-absolute start-0 top-0"
+              >
+                <rect
+                  width="100%"
+                  height="100%"
+                  stroke="var(--platinum)"
+                  strokeOpacity="0.6"
+                  strokeDasharray="32 32"
+                ></rect>
+              </svg>
+              <Paragraph className="caption text-works fw-bold mb-3">
+                ROUND 3
+              </Paragraph>
+              <ul>
+                <ListItem>A/B Testing: Landing page</ListItem>
+                <ListItem>Usability Testing: Overall prototype</ListItem>
+                <ListItem>Post-test surveys</ListItem>
+              </ul>
+            </div>
+          </div>
+        </Container>
+        <Spacer size="lg" />
+        <Container size="normal">
           <ThreeColumns
             col1Props={{ lg: 5 }}
             col2Props={{ lg: 2, centerV: true }}
             col3Props={{ lg: 5 }}
+            centerH
           >
-            <Image
-              src="/images/ks-score-before.png"
-              alt="scores before"
-              width={1136}
-              height={536}
-            />
-            <div className="mx-auto" style={{ width: "120px" }}>
+            <div>
               <Image
-                src="/images/icon-exit.png"
-                alt="icon-exit"
-                width={512}
-                height={512}
+                src="/images/symplicured-score-before.png"
+                alt="system usability test and NPS score"
+                width={1136}
+                height={537}
               />
             </div>
-            <Image
-              src="/images/ks-score-after.png"
-              alt="scores after"
-              width={1136}
-              height={536}
-            />
+            <div className="mx-auto">
+              <svg
+                width="25"
+                height="13"
+                viewBox="0 0 25 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M-6.55866e-08 6.51563L24 6.51563M24 6.51563L19.3684 1.03125M24 6.51563L19.3684 12.0156"
+                  stroke="var(--platinum)"
+                />
+              </svg>
+            </div>
+            <div>
+              <Image
+                src="/images/symplicured-score-after.png"
+                alt="system usability test and NPS score"
+                width={1136}
+                height={537}
+              />
+            </div>
           </ThreeColumns>
-        </Container>
-        <Spacer size="md" />
-        <Container size="compact" centerText>
-          <DropdownContent title="4.4% increase in the confidence score only? 😳  (Learning point!)">
-            <Paragraph>
-              Before we embarked on the Kickstarter redesign, we had yet to
-              learn about concept or A/B testing. Had we known about it, I would
-              have suggested that we performed concept or A/B testing with
-              different variations of the features to understand:
-            </Paragraph>
-            <Container size="compact" className="text-start">
-              <ul>
-                <ListItem>
-                  How and why users might prefer certain designs or interfaces
-                  over others
-                </ListItem>
-                <ListItem>
-                  How Kickstarter can be experienced in its entirety to fulfill
-                  user goals
-                </ListItem>
-              </ul>
-            </Container>
-            <Spacer size="xs" />
-            <Paragraph>
-              This would have greatly helped us figure out{" "}
-              <strong>
-                if the features were actually addressing user needs
-              </strong>{" "}
-              as the features are compacted in the Project page only.
-            </Paragraph>
-          </DropdownContent>
         </Container>
         <Spacer size="lg" />
       </Section>
+
       <Section title="DELIVER" heading="HI-FI PROTOTYPES">
         <Spacer size="lg" />
         <Container size="normal">
           <Image
-            src="/images/ks-proto1.jpg"
-            alt="prototype"
-            width={2143}
-            height={2433}
+            src="/images/symplicured-hifi-1.jpg"
+            alt="hi-fi design system"
+            width={2154}
+            height={2663}
           />
           <Spacer size="md" />
           <Image
-            src="/images/ks-proto2.jpg"
-            alt="prototype"
-            width={2155}
-            height={1470}
+            src="/images/symplicured-hifi-2.jpg"
+            alt="hi-fi prototype screens"
+            width={2154}
+            height={2200}
           />
           <Spacer size="md" />
           <Image
-            src="/images/ks-proto3.jpg"
-            alt="prototype"
-            width={2155}
-            height={2121}
+            src="/images/symplicured-hifi-3.jpg"
+            alt="hi-fi prototype screens"
+            width={2154}
+            height={3307}
           />
           <Spacer size="md" />
           <Image
-            src="/images/ks-proto4.jpg"
-            alt="prototype"
-            width={1450}
-            height={2418}
+            src="/images/symplicured-hifi-4.jpg"
+            alt="hi-fi prototype screens"
+            width={2000}
+            height={4966}
           />
         </Container>
         <Spacer size="lg" />
       </Section>
+
       <Section title="REFLECT" heading="MOVING FORWARD">
         <Spacer size="lg" />
         <Container size="normal">
@@ -991,35 +968,89 @@ export default function Kickstarter() {
           >
             <div>
               <Paragraph>
-                <small>CHANGE</small>
+                <small>PROCESS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-test.png">
-                <Heading level={3} className="display-4">
-                  limitations
+              <IconContent icon="/images/icon-plant.png">
+                <Heading level={4} className="display-4">
+                  growth
                 </Heading>
               </IconContent>
             </div>
             <div></div>
             <div>
-              <Paragraph className="mb-2">
-                Redesign and features are backer-focused due to limitations on
-                time and scope
+              <Paragraph className="mb-4">
+                What initially began as a straightforward project soon became a
+                huge undertaking due to a problem space that was uncovered after
+                deep dive interviews with digital patients.
+              </Paragraph>
+              <Paragraph className="mb-4">
+                In the process, I was able to perform other testing methologies
+                (A/B Tests, Concept Tests) on top of the usual usability tests
+                with the team in a reiterative design cycle.
+              </Paragraph>
+              <Paragraph className="mb-4">
+                In the end, we produced a hi-fi prototype that not only
+                satisfied the client, but is something that we are very proud
+                of.
+              </Paragraph>
+            </div>
+          </ThreeColumns>
+          <Spacer size="md" />
+          <TwoColumns
+            col1Props={{ lg: 5 }}
+            col2Props={{ lg: 7 }}
+            gutter={{ lg: 4 }}
+          >
+            <div />
+            <Line width="33.33%" />
+          </TwoColumns>
+          <Spacer size="md" />
+          <ThreeColumns
+            col1Props={{ lg: 4 }}
+            col2Props={{ lg: 1 }}
+            col3Props={{ lg: 7 }}
+          >
+            <div>
+              <Paragraph>
+                <small>PROCESS</small>
+              </Paragraph>
+              <IconContent icon="/images/icon-view.png">
+                <Heading level={4} className="display-4">
+                  perception
+                </Heading>
+              </IconContent>
+            </div>
+            <div></div>
+            <div>
+              <Paragraph className="mb-4">
+                What type of information and how that information is presented
+                to users makes a huge difference in boosting a site’s
+                credibility, and consequently, user conversion and retention
               </Paragraph>
               <ul>
-                <ListItem>
-                  The team-proposed redesign means that success is heavily
-                  dependent on creators to produce content and engage backers
+                <ListItem className="mb-4">
+                  Usability and A/B tests with users showed that while
+                  transparency was important in establishing trust, we had to be
+                  aware of what and how information is presented
+                  <ul>
+                    <ListItem>
+                      Example: On the landing page, testimonials and brand
+                      affiliations have to be placed intentionally or it will
+                      backfire
+                    </ListItem>
+                  </ul>
                 </ListItem>
-              </ul>
-              <Spacer size="xs" />
-              <Paragraph className="mb-2">
-                If this project was to be reiterated, creators need to be
-                included - they are Kickstarter users too!
-              </Paragraph>
-              <ul>
-                <ListItem>
-                  A secondary persona to enrich and improve on the depth and
-                  direction of the redesign
+                <ListItem className="mb-4">
+                  Design and layout changes should serve a clear purpose and
+                  help it stand out from a company’s competitors
+                  <ul>
+                    <ListItem>
+                      Example: On the diagnosis page, in 2 usability tests,
+                      users appreciated the upfront comparison of other
+                      potential diagnoses and thought it was “refreshing” that a
+                      symptom checker provided this easy-to-understand format
+                    </ListItem>
+                  </ul>
                 </ListItem>
               </ul>
             </div>
@@ -1043,85 +1074,35 @@ export default function Kickstarter() {
               <Paragraph>
                 <small>UPWARDS &amp; ONWARDS</small>
               </Paragraph>
-              <IconContent icon="/images/icon-gps.png">
-                <Heading level={3} className="display-4">
-                  navigation
+              <IconContent icon="/images/icon-job-promotion.png">
+                <Heading level={4} className="display-4">
+                  progress
                 </Heading>
               </IconContent>
             </div>
             <div></div>
             <div>
-              <Paragraph className="mb-2">
-                Navigation issues discovered during usability tests should be
-                addressed in the next iteration
+              <Paragraph className="mb-4">
+                Not everything can be solved with UIUX, but there is a huge
+                capacity for change and progress.
               </Paragraph>
-              <Spacer size="xs" />
-              <Paragraph className="mb-2">
-                Improving the information architecture was deprioritised
+              <Paragraph className="mb-4">
+                In this project, there were other aspects of a symptom checker
+                service that was beyond our capabilities, but it was up to us to
+                identify these areas for further action.
               </Paragraph>
-              <ul>
-                <ListItem>
-                  User journey map and interview insights revealed that
-                  potential backers visited project pages via direct links
-                </ListItem>
-              </ul>
-            </div>
-          </ThreeColumns>
-          <Spacer size="md" />
-          <TwoColumns
-            col1Props={{ lg: 5 }}
-            col2Props={{ lg: 7 }}
-            gutter={{ lg: 4 }}
-          >
-            <div />
-            <Line width="33.33%" />
-          </TwoColumns>
-          <Spacer size="md" />
-          <ThreeColumns
-            col1Props={{ lg: 4 }}
-            col2Props={{ lg: 1 }}
-            col3Props={{ lg: 7 }}
-          >
-            <div>
-              <Paragraph>
-                <small>UPWARDS &amp; ONWARDS</small>
+              <Paragraph className="mb-4">
+                So as my last project with GA draws to a close, I learned about
+                how the different roles people play are interconnected within a
+                company with UIUX. And on a lighter, brighter note, the
+                potential that I have as a UIUX designer to practice UIUX to
+                support and create human-centric solutions.
               </Paragraph>
-              <IconContent icon="/images/icon-success.png">
-                <Heading level={3} className="display-4">
-                  scalability
-                </Heading>
-              </IconContent>
-            </div>
-            <div></div>
-            <div>
-              <Paragraph className="mb-2">
-                Many features from the Ideation stage were deprioritised as the
-                focus was on the MVP
-              </Paragraph>
-              <ul>
-                <ListItem>
-                  Those features were seen more viable in the future or
-                  long-term
-                </ListItem>
-              </ul>
-              <Spacer size="xs" />
-              <Paragraph className="mb-2">
-                Example: Monthly campaigns for creators to pitch to potential
-                backers using similar tech to the ‘live’ event feature
-              </Paragraph>
-              <ul>
-                <ListItem>
-                  Increase traffic and revenue for Kickstarter
-                </ListItem>
-                <ListItem>
-                  Benefits creators and community; reinforces the Kickstarter
-                  ecosystem for backers and creators
-                </ListItem>
-              </ul>
             </div>
           </ThreeColumns>
         </Container>
       </Section>
+
       <section>
         <Spacer size="lg" />
         <BackgroundZone background="var(--contact)" onEnterOnly>

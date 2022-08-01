@@ -40,7 +40,7 @@ export default function Compawnion() {
   return (
     <Layout>
       <section>
-        <Header image={meta.image} number={"3"} title={meta.title} />
+        <Header image={meta.image} number={"4"} title={meta.title} />
         <Spacer size="lg" />
       </section>
       <section>
