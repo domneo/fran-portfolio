@@ -24,18 +24,19 @@ const data = [
         />
       </svg>
     ),
-    link: "/works/kickstarter",
-    title: "Kickstarter: Levelling up the Campaign",
+    link: "/works/symplicured",
+    title: "Symplicured: Symptoms, checked.",
     description:
-      "Enhancing the project backing experience with new info-centric features dreamt up by backers for backers",
+      "Revitalising the traditional online health symptom checker experience and diagnosis process",
     concepts: [
       "User interviews & Research",
+      "Competitive Analysis",
       "Usability Tests",
-      "Wireframing",
+      "Sketches",
       "Design System",
       "Prototyping",
     ],
-    image: "/images/ks-hero.jpg",
+    image: "/images/symplicured-hero.jpg",
   },
   {
     id: uuidv4(),
@@ -83,18 +84,18 @@ const data = [
         />
       </svg>
     ),
-    link: "/works/compawnion",
-    title: "Compawnion: adoption streamlined",
+    link: "/works/kickstarter",
+    title: "Kickstarter: Levelling up the Campaign",
     description:
-      "Making information easily accessible while reducing the administrative side of pet adoption in Singapore (🐣 My debut UIUX project!)",
+      "Enhancing the project backing experience with new info-centric features dreamt up by backers for backers",
     concepts: [
       "User interviews & Research",
       "Usability Tests",
-      "Sketches",
       "Wireframing",
+      "Design System",
       "Prototyping",
     ],
-    image: "/images/compawnion-hero.jpg",
+    image: "/images/ks-hero.jpg",
   },
   {
     id: uuidv4(),
@@ -112,19 +113,18 @@ const data = [
         />
       </svg>
     ),
-    link: "",
-    title: "Symplicured: Symptoms, checked.",
+    link: "/works/compawnion",
+    title: "Compawnion: adoption streamlined",
     description:
-      "Revitalising the traditional online health symptom checker experience and diagnosis process",
+      "Making information easily accessible while reducing the administrative side of pet adoption in Singapore (🐣 My debut UIUX project!)",
     concepts: [
       "User interviews & Research",
-      "Competitive Analysis",
       "Usability Tests",
       "Sketches",
-      "Design System",
+      "Wireframing",
       "Prototyping",
     ],
-    image: "/images/symplicured-hero.jpg",
+    image: "/images/compawnion-hero.jpg",
   },
 ];
 
