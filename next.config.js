@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ["placekitten.com"],
+  env: {
+    PASSWORD_PROTECT: true,
   },
   experimental: {
     images: {
