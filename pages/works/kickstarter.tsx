@@ -39,7 +39,7 @@ export default function Kickstarter() {
   return (
     <Layout>
       <section>
-        <Header image={meta.image} number={"3"} title={meta.title} />
+        <Header image={meta.image} number={"6"} title={meta.title} />
         <Spacer size="lg" />
       </section>
       <section>

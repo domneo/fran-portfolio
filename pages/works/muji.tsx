@@ -36,7 +36,7 @@ export default function Muji() {
   return (
     <Layout>
       <section>
-        <Header image={meta.image} number={"2"} title={meta.title} />
+        <Header image={meta.image} number={"5"} title={meta.title} />
         <Spacer size="lg" />
       </section>
       <section>

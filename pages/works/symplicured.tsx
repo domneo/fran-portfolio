@@ -40,7 +40,7 @@ export default function Symplicured() {
   return (
     <Layout>
       <section>
-        <Header image={meta.image} number={"1"} title={meta.title} />
+        <Header image={meta.image} number={"4"} title={meta.title} />
         <Spacer size="lg" />
       </section>
       <section>
