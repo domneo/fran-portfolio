@@ -40,9 +40,7 @@ export default function Home() {
           <small>This is a line of small text.</small>
         </p>
         <p className="caption">This is a line of caption text.</p>
-        <Link href={"#"}>
-          <a>This is a text with link.</a>
-        </Link>
+        <Link href={"#"}>This is a text with link.</Link>
       </div>
     </Layout>
   );

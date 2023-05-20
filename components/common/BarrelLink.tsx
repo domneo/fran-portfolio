@@ -13,19 +13,17 @@ export const BarrelLink = ({ text, link, target }: BarrelLinkProps) => {
   const charArr = text.split("");
 
   return (
-    <Link href={link}>
-      <a target={target || ""} className={styles.link}>
-        {charArr.map((char, i) => (
-          <div
-            key={uuidv4()}
-            className={styles.charGroup}
-            style={{ animationDelay: `${0.05 * i}s` }}
-          >
-            <span>{char}</span>
-            <span>{char}</span>
-          </div>
-        ))}
-      </a>
+    <Link href={link} target={target || ""} className={styles.link}>
+      {charArr.map((char, i) => (
+        <div
+          key={uuidv4()}
+          className={styles.charGroup}
+          style={{ animationDelay: `${0.05 * i}s` }}
+        >
+          <span>{char}</span>
+          <span>{char}</span>
+        </div>
+      ))}
     </Link>
   );
 };

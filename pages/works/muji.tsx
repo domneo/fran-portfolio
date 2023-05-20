@@ -99,17 +99,18 @@ export default function Muji() {
         </Container>
         <Spacer size="md" />
         <Container size="normal" centerText>
-          <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_MUJI || "/"}>
-            <a target={"_blank"}>
-              <Image
-                src="/images/muji-prototype.png"
-                alt="play with prototype"
-                width={2500}
-                height={891}
-              />
-              <Spacer size="xs" />
-              Play with the prototype here
-            </a>
+          <Link
+            href={process.env.NEXT_PUBLIC_PROTOTYPE_MUJI || "/"}
+            target={"_blank"}
+          >
+            <Image
+              src="/images/muji-prototype.png"
+              alt="play with prototype"
+              width={2500}
+              height={891}
+            />
+            <Spacer size="xs" />
+            Play with the prototype here
           </Link>
         </Container>
         <Spacer size="lg" />

@@ -107,17 +107,16 @@ export default function Kickstarter() {
             <div>
               <Link
                 href={process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_WEB || "/"}
+                target={"_blank"}
               >
-                <a target={"_blank"}>
-                  <Image
-                    src={"/images/ks-proto-desktop.png"}
-                    alt="Play with the desktop prototype here"
-                    width={1420}
-                    height={1024}
-                  />
-                  <Spacer size="xs" />
-                  <Span>Play with the desktop prototype here</Span>
-                </a>
+                <Image
+                  src={"/images/ks-proto-desktop.png"}
+                  alt="Play with the desktop prototype here"
+                  width={1420}
+                  height={1024}
+                />
+                <Spacer size="xs" />
+                <Span>Play with the desktop prototype here</Span>
               </Link>
             </div>
             <div>
@@ -125,17 +124,16 @@ export default function Kickstarter() {
                 href={
                   process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_MOBILE || "/"
                 }
+                target={"_blank"}
               >
-                <a target={"_blank"}>
-                  <Image
-                    src={"/images/ks-proto-mobile.png"}
-                    alt="Play with the mobile prototype here"
-                    width={1420}
-                    height={1024}
-                  />
-                  <Spacer size="xs" />
-                  <Span>Play with the mobile prototype here</Span>
-                </a>
+                <Image
+                  src={"/images/ks-proto-mobile.png"}
+                  alt="Play with the mobile prototype here"
+                  width={1420}
+                  height={1024}
+                />
+                <Spacer size="xs" />
+                <Span>Play with the mobile prototype here</Span>
               </Link>
             </div>
           </TwoColumns>

@@ -51,10 +51,12 @@ export const Footer = ({ showFooterMenu, centraliseFooter }: FooterProps) => (
         <span className="caption">DESIGNED BY ME!</span>
         <span className="caption">
           BUILT BY{" "}
-          <Link href="https://www.domneo.dev">
-            <a className="caption" target="_blank">
-              DOMN
-            </a>
+          <Link
+            href="https://www.domneo.dev"
+            className="caption"
+            target="_blank"
+          >
+            DOMN
           </Link>
         </span>
 
