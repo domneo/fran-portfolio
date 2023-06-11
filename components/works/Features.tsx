@@ -8,7 +8,7 @@ import { ImageZoom } from "components/common/ImageZoom";
 import { ListItem } from "components/common/ListItem";
 import { Spacer } from "components/common/Spacer";
 import { TwoColumns } from "components/common/TwoColumns";
-import { Container } from "components/works2/Container";
+import { Container } from "components/works/Container";
 
 ReactModal.setAppElement("#__next");
 

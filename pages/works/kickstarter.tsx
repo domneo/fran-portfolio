@@ -14,15 +14,15 @@ import { Span } from "components/common/Span";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
-import { CaptionTitleContent } from "components/works2/CaptionTitleContent";
-import { Carousel } from "components/works2/Carousel";
-import { Container } from "components/works2/Container";
-import { Details } from "components/works2/Details";
-import { DropdownContent } from "components/works2/DropdownContent";
-import { Features } from "components/works2/Features";
-import { Header } from "components/works2/Header";
-import { IconContent } from "components/works2/IconContent";
-import { Section } from "components/works2/Section";
+import { CaptionTitleContent } from "components/works/CaptionTitleContent";
+import { Carousel } from "components/works/Carousel";
+import { Container } from "components/works/Container";
+import { Details } from "components/works/Details";
+import { DropdownContent } from "components/works/DropdownContent";
+import { Features } from "components/works/Features";
+import { Header } from "components/works/Header";
+import { IconContent } from "components/works/IconContent";
+import { Section } from "components/works/Section";
 
 const meta = {
   image: "/images/ks-hero.jpg",
