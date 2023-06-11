@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { useState } from "react";
-import ReactModal from "react-modal";
+import Modal from "react-modal";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 import { IconZoomSimple } from "./IconZoomSimple";
 
-ReactModal.setAppElement("#__next");
+Modal.setAppElement("#__next");
 
 interface ImageZoomProps {
   src: string;
@@ -30,9 +30,8 @@ export const ImageZoom = ({ src, alt, width, height }: ImageZoomProps) => {
         <Image
           src={src}
           alt={alt}
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center"
+          fill
+          style={{ objectFit: "contain", objectPosition: "center" }}
           quality={85}
         />
         <div
@@ -42,7 +41,7 @@ export const ImageZoom = ({ src, alt, width, height }: ImageZoomProps) => {
           <IconZoomSimple />
         </div>
       </button>
-      <ReactModal
+      <Modal
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}
         overlayClassName="image-modal-overlay"
@@ -62,13 +61,14 @@ export const ImageZoom = ({ src, alt, width, height }: ImageZoomProps) => {
                 alt={alt}
                 width={width}
                 height={height}
+                style={{ height: "auto" }}
                 unoptimized
               />
             </div>
           </TransformComponent>
         </TransformWrapper>
         <CloseButton setModalOpen={setModalOpen} />
-      </ReactModal>
+      </Modal>
     </div>
   );
 };

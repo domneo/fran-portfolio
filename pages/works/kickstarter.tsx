@@ -24,7 +24,7 @@ import { Header } from "components/works2/Header";
 import { IconContent } from "components/works2/IconContent";
 import { Section } from "components/works2/Section";
 
-export const meta = {
+const meta = {
   image: "/images/ks-hero.jpg",
   title: "Kickstarter",
   details: [
@@ -114,6 +114,7 @@ export default function Kickstarter() {
                   alt="Play with the desktop prototype here"
                   width={1420}
                   height={1024}
+                  style={{ height: "auto" }}
                 />
                 <Spacer size="xs" />
                 <Span>Play with the desktop prototype here</Span>
@@ -131,6 +132,7 @@ export default function Kickstarter() {
                   alt="Play with the mobile prototype here"
                   width={1420}
                   height={1024}
+                  style={{ height: "auto" }}
                 />
                 <Spacer size="xs" />
                 <Span>Play with the mobile prototype here</Span>
@@ -348,6 +350,7 @@ export default function Kickstarter() {
             alt="Kickstarter's Allocation of Crowdfunding Across All Genres"
             width={2872}
             height={1600}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -594,6 +597,7 @@ export default function Kickstarter() {
             alt="Persona"
             width={2872}
             height={1038}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -635,6 +639,7 @@ export default function Kickstarter() {
               alt="user flow zoomed"
               width={1460}
               height={840}
+              style={{ height: "auto" }}
             />
             <CaptionTitleContent
               caption="THIS MEANS THAT..."
@@ -896,6 +901,7 @@ export default function Kickstarter() {
               alt="scores before"
               width={1136}
               height={536}
+              style={{ height: "auto" }}
             />
             <div className="mx-auto" style={{ width: "120px" }}>
               <Image
@@ -903,6 +909,7 @@ export default function Kickstarter() {
                 alt="icon-exit"
                 width={512}
                 height={512}
+                style={{ height: "auto" }}
               />
             </div>
             <Image
@@ -910,6 +917,7 @@ export default function Kickstarter() {
               alt="scores after"
               width={1136}
               height={536}
+              style={{ height: "auto" }}
             />
           </ThreeColumns>
         </Container>
@@ -954,6 +962,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={2143}
             height={2433}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -961,6 +970,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={2155}
             height={1470}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -968,6 +978,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={2155}
             height={2121}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -975,6 +986,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={1450}
             height={2418}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />

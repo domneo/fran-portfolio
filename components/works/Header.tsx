@@ -50,9 +50,8 @@ export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
             <Image
               src={image}
               alt={title}
-              layout="fill"
-              objectFit="cover"
-              objectPosition={"center"}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
               priority
             />
           </div>

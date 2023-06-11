@@ -72,6 +72,7 @@ export default function Contact() {
                   alt="HELLO. YES THIS IS DOG."
                   width={536}
                   height={396}
+                  style={{ height: "auto" }}
                 />
               </div>
             </div>

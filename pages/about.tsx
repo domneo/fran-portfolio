@@ -120,7 +120,13 @@ export default function About() {
             </div>
           </div>
           <div className="col-lg-3">
-            <Image src={"/images/me.jpg"} alt="Me!" width={400} height={500} />
+            <Image
+              src={"/images/me.jpg"}
+              alt="Me!"
+              width={400}
+              height={500}
+              style={{ height: "auto" }}
+            />
           </div>
         </div>
         <div className="row justify-content-center spacer-lg">

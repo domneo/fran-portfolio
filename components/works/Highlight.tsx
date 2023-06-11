@@ -13,6 +13,7 @@ const Quote = ({ style }: IconProps) => (
       alt="quote"
       width={276}
       height={234}
+      style={{ height: "auto" }}
     />
   </div>
 );
@@ -24,6 +25,7 @@ const Star = ({ style }: IconProps) => (
       alt="star"
       width={255}
       height={235}
+      style={{ height: "auto" }}
     />
   </div>
 );

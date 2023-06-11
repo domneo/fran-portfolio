@@ -12,7 +12,13 @@ export const IconContent = ({ title, icon, children }: IconContentProps) => {
     <div className="d-flex" style={{ gap: "3rem" }}>
       <div className="flex-shrink-0">
         <div style={{ maxWidth: "80px" }}>
-          <Image src={icon || ""} alt="icon" width={512} height={512} />
+          <Image
+            src={icon || ""}
+            alt="icon"
+            width={512}
+            height={512}
+            style={{ height: "auto" }}
+          />
         </div>
       </div>
       <div>

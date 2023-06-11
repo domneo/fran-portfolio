@@ -276,9 +276,9 @@ export default function Works() {
                       <Image
                         src={item.image}
                         alt={item.title}
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition={"center"}
+                        fill
+                        sizes={"(min-width: 992px) 80vw, 180vw"}
+                        style={{ objectFit: "cover", objectPosition: "center" }}
                         priority
                       />
                       {item.comingSoon && (

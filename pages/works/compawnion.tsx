@@ -25,7 +25,7 @@ import { Header } from "components/works2/Header";
 import { IconContent } from "components/works2/IconContent";
 import { Section } from "components/works2/Section";
 
-export const meta = {
+const meta = {
   image: "/images/compawnion-hero.jpg",
   title: "Compawnion",
   details: [
@@ -110,6 +110,7 @@ export default function Compawnion() {
               alt="play with prototype"
               width={2872}
               height={1024}
+              style={{ height: "auto" }}
             />
             <Spacer size="xs" />
             Play with the prototype here
@@ -302,6 +303,7 @@ export default function Compawnion() {
             alt="understanding the landscape"
             width={2868}
             height={2046}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -335,6 +337,7 @@ export default function Compawnion() {
             alt="affinity map high level insights"
             width={2872}
             height={4198}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <DropdownContent title="👁 👄 👁  Full affinity map">
@@ -356,6 +359,7 @@ export default function Compawnion() {
             alt="persona"
             width={2872}
             height={986}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -413,6 +417,7 @@ export default function Compawnion() {
             alt="user flow - not linear user flow"
             width={2872}
             height={1110}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <ThreeColumns
@@ -446,6 +451,7 @@ export default function Compawnion() {
               alt="user flow - compawnion makes things better"
               width={2872}
               height={672}
+              style={{ height: "auto" }}
             />
           </DropdownContent>
           <Spacer size="lg" />
@@ -648,6 +654,7 @@ export default function Compawnion() {
             alt="midfi prototype"
             width={2000}
             height={6143}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
