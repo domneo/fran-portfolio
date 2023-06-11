@@ -229,36 +229,36 @@ export default function Works() {
             {data &&
               data.length > 0 &&
               data.map((item, index) => (
-                <Link key={item.id} href={item.link ?? ""}>
-                  <a
-                    className={`${styles.link} d-flex align-items-center flex-column flex-md-row mb-5`}
-                    style={{
-                      cursor: item.link ? "pointer" : "help",
-                    }}
-                    onClick={(event) => {
-                      if (!item.link) event.preventDefault();
-                    }}
-                    onMouseEnter={() => setFocusedItem(index + 1)}
-                    onMouseLeave={() => setFocusedItem(0)}
-                    onFocus={() => setFocusedItem(index + 1)}
-                    onBlur={() => setFocusedItem(0)}
-                  >
-                    <div className="flex-shrink-0">{item.number}</div>
-                    <div>
-                      <h5 className="text-platinum mb-2">{item.title}</h5>
-                      <p className="mb-2">
-                        <small>{item.description}</small>
-                      </p>
-                      <p className={`caption mb-0 ${styles.caption}`}>
-                        {item.concepts.map((concept, index) => (
-                          <span key={concept} className="d-inline-block">
-                            {index !== 0 && <span className="mx-1">•</span>}
-                            {concept}
-                          </span>
-                        ))}
-                      </p>
-                    </div>
-                  </a>
+                <Link
+                  key={item.id}
+                  href={item.link ?? ""}
+                  className={`${styles.link} d-flex align-items-center flex-column flex-md-row mb-5`}
+                  style={{
+                    cursor: item.link ? "pointer" : "help",
+                  }}
+                  onClick={(event) => {
+                    if (!item.link) event.preventDefault();
+                  }}
+                  onMouseEnter={() => setFocusedItem(index + 1)}
+                  onMouseLeave={() => setFocusedItem(0)}
+                  onFocus={() => setFocusedItem(index + 1)}
+                  onBlur={() => setFocusedItem(0)}
+                >
+                  <div className="flex-shrink-0">{item.number}</div>
+                  <div>
+                    <h5 className="text-platinum mb-2">{item.title}</h5>
+                    <p className="mb-2">
+                      <small>{item.description}</small>
+                    </p>
+                    <p className={`caption mb-0 ${styles.caption}`}>
+                      {item.concepts.map((concept, index) => (
+                        <span key={concept} className="d-inline-block">
+                          {index !== 0 && <span className="mx-1">•</span>}
+                          {concept}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
                 </Link>
               ))}
           </div>
@@ -276,9 +276,9 @@ export default function Works() {
                       <Image
                         src={item.image}
                         alt={item.title}
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition={"center"}
+                        fill
+                        sizes={"(min-width: 992px) 80vw, 180vw"}
+                        style={{ objectFit: "cover", objectPosition: "center" }}
                         priority
                       />
                       {item.comingSoon && (

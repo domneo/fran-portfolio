@@ -14,17 +14,17 @@ import { Span } from "components/common/Span";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
-import { CaptionTitleContent } from "components/works2/CaptionTitleContent";
-import { Carousel } from "components/works2/Carousel";
-import { Container } from "components/works2/Container";
-import { Details } from "components/works2/Details";
-import { DropdownContent } from "components/works2/DropdownContent";
-import { Features } from "components/works2/Features";
-import { Header } from "components/works2/Header";
-import { IconContent } from "components/works2/IconContent";
-import { Section } from "components/works2/Section";
+import { CaptionTitleContent } from "components/works/CaptionTitleContent";
+import { Carousel } from "components/works/Carousel";
+import { Container } from "components/works/Container";
+import { Details } from "components/works/Details";
+import { DropdownContent } from "components/works/DropdownContent";
+import { Features } from "components/works/Features";
+import { Header } from "components/works/Header";
+import { IconContent } from "components/works/IconContent";
+import { Section } from "components/works/Section";
 
-export const meta = {
+const meta = {
   image: "/images/ks-hero.jpg",
   title: "Kickstarter",
   details: [
@@ -107,17 +107,17 @@ export default function Kickstarter() {
             <div>
               <Link
                 href={process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_WEB || "/"}
+                target={"_blank"}
               >
-                <a target={"_blank"}>
-                  <Image
-                    src={"/images/ks-proto-desktop.png"}
-                    alt="Play with the desktop prototype here"
-                    width={1420}
-                    height={1024}
-                  />
-                  <Spacer size="xs" />
-                  <Span>Play with the desktop prototype here</Span>
-                </a>
+                <Image
+                  src={"/images/ks-proto-desktop.png"}
+                  alt="Play with the desktop prototype here"
+                  width={1420}
+                  height={1024}
+                  style={{ height: "auto" }}
+                />
+                <Spacer size="xs" />
+                <Span>Play with the desktop prototype here</Span>
               </Link>
             </div>
             <div>
@@ -125,17 +125,17 @@ export default function Kickstarter() {
                 href={
                   process.env.NEXT_PUBLIC_PROTOTYPE_KICKSTARTER_MOBILE || "/"
                 }
+                target={"_blank"}
               >
-                <a target={"_blank"}>
-                  <Image
-                    src={"/images/ks-proto-mobile.png"}
-                    alt="Play with the mobile prototype here"
-                    width={1420}
-                    height={1024}
-                  />
-                  <Spacer size="xs" />
-                  <Span>Play with the mobile prototype here</Span>
-                </a>
+                <Image
+                  src={"/images/ks-proto-mobile.png"}
+                  alt="Play with the mobile prototype here"
+                  width={1420}
+                  height={1024}
+                  style={{ height: "auto" }}
+                />
+                <Spacer size="xs" />
+                <Span>Play with the mobile prototype here</Span>
               </Link>
             </div>
           </TwoColumns>
@@ -350,6 +350,7 @@ export default function Kickstarter() {
             alt="Kickstarter's Allocation of Crowdfunding Across All Genres"
             width={2872}
             height={1600}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -596,6 +597,7 @@ export default function Kickstarter() {
             alt="Persona"
             width={2872}
             height={1038}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -637,6 +639,7 @@ export default function Kickstarter() {
               alt="user flow zoomed"
               width={1460}
               height={840}
+              style={{ height: "auto" }}
             />
             <CaptionTitleContent
               caption="THIS MEANS THAT..."
@@ -898,6 +901,7 @@ export default function Kickstarter() {
               alt="scores before"
               width={1136}
               height={536}
+              style={{ height: "auto" }}
             />
             <div className="mx-auto" style={{ width: "120px" }}>
               <Image
@@ -905,6 +909,7 @@ export default function Kickstarter() {
                 alt="icon-exit"
                 width={512}
                 height={512}
+                style={{ height: "auto" }}
               />
             </div>
             <Image
@@ -912,6 +917,7 @@ export default function Kickstarter() {
               alt="scores after"
               width={1136}
               height={536}
+              style={{ height: "auto" }}
             />
           </ThreeColumns>
         </Container>
@@ -956,6 +962,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={2143}
             height={2433}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -963,6 +970,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={2155}
             height={1470}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -970,6 +978,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={2155}
             height={2121}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -977,6 +986,7 @@ export default function Kickstarter() {
             alt="prototype"
             width={1450}
             height={2418}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />

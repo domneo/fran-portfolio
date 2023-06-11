@@ -15,17 +15,17 @@ import { Span } from "components/common/Span";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
-import { CaptionTitleContent } from "components/works2/CaptionTitleContent";
-import { Carousel } from "components/works2/Carousel";
-import { Container } from "components/works2/Container";
-import { Details } from "components/works2/Details";
-import { DropdownContent } from "components/works2/DropdownContent";
-import { Features } from "components/works2/Features";
-import { Header } from "components/works2/Header";
-import { IconContent } from "components/works2/IconContent";
-import { Section } from "components/works2/Section";
+import { CaptionTitleContent } from "components/works/CaptionTitleContent";
+import { Carousel } from "components/works/Carousel";
+import { Container } from "components/works/Container";
+import { Details } from "components/works/Details";
+import { DropdownContent } from "components/works/DropdownContent";
+import { Features } from "components/works/Features";
+import { Header } from "components/works/Header";
+import { IconContent } from "components/works/IconContent";
+import { Section } from "components/works/Section";
 
-export const meta = {
+const meta = {
   image: "/images/symplicured-hero.jpg",
   title: "Symplicured",
   details: [
@@ -90,10 +90,10 @@ export default function Symplicured() {
             <div>
               <Paragraph>
                 This pro-bono project involved a multi-faceted approach to
-                reduce the website’s high dropoff rates and low conversion rates
-                through an overall website revamp and the introduction of a new
-                feature - a glossary - to further reduce bounce rates and retain
-                visitors.
+                reduce the website&apos;s high dropoff rates and low conversion
+                rates through an overall website revamp and the introduction of
+                a new feature - a glossary - to further reduce bounce rates and
+                retain visitors.
               </Paragraph>
               <Paragraph>
                 Ultimately, the client was satisfied with the revamp as it was
@@ -106,17 +106,19 @@ export default function Symplicured() {
         </Container>
         <Spacer size="md" />
         <Container size="normal" centerText>
-          <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_SYMPLICURED || "/"}>
-            <a target={"_blank"}>
-              <Image
-                src="/images/symplicured-prototype.png"
-                alt="play with prototype"
-                width={2872}
-                height={1024}
-              />
-              <Spacer size="xs" />
-              Play with the prototype here
-            </a>
+          <Link
+            href={process.env.NEXT_PUBLIC_PROTOTYPE_SYMPLICURED || "/"}
+            target={"_blank"}
+          >
+            <Image
+              src="/images/symplicured-prototype.png"
+              alt="play with prototype"
+              width={2872}
+              height={1024}
+              style={{ height: "auto" }}
+            />
+            <Spacer size="xs" />
+            Play with the prototype here
           </Link>
         </Container>
         <Spacer size="lg" />
@@ -454,6 +456,7 @@ export default function Symplicured() {
               alt="diagram of mother observing baby and using symptom checker"
               width={788}
               height={605}
+              style={{ height: "auto" }}
             />
           </div>
           <Spacer size="md" />
@@ -474,6 +477,7 @@ export default function Symplicured() {
             alt="persona"
             width={2872}
             height={1089}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -532,6 +536,7 @@ export default function Symplicured() {
             alt="venn diagram - issues with credibility"
             width={2374}
             height={2285}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="sm" />
@@ -895,6 +900,7 @@ export default function Symplicured() {
                 alt="system usability test and NPS score"
                 width={1136}
                 height={537}
+                style={{ height: "auto" }}
               />
             </div>
             <div className="mx-auto">
@@ -917,6 +923,7 @@ export default function Symplicured() {
                 alt="system usability test and NPS score"
                 width={1136}
                 height={537}
+                style={{ height: "auto" }}
               />
             </div>
           </ThreeColumns>
@@ -932,6 +939,7 @@ export default function Symplicured() {
             alt="hi-fi design system"
             width={2154}
             height={2663}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -939,6 +947,7 @@ export default function Symplicured() {
             alt="hi-fi prototype screens"
             width={2154}
             height={2200}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -946,6 +955,7 @@ export default function Symplicured() {
             alt="hi-fi prototype screens"
             width={2154}
             height={3307}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -953,6 +963,7 @@ export default function Symplicured() {
             alt="hi-fi prototype screens"
             width={2000}
             height={4966}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />

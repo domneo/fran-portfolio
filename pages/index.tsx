@@ -18,22 +18,21 @@ const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
 
   return (
     <div className={styles[`linkItem${number}`]}>
-      <Link href={href}>
-        <a
-          className={`${styles.itemLink} ${styles[hoverClass]}`}
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
-        >
-          <div className={styles.itemBlob}>
-            <div className={`${styles.blobWrapper} ${styles[hoverClass]}`}>
-              <Blob isHovering={isHovering} />
-            </div>
+      <Link
+        href={href}
+        className={`${styles.itemLink} ${styles[hoverClass]}`}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <div className={styles.itemBlob}>
+          <div className={`${styles.blobWrapper} ${styles[hoverClass]}`}>
+            <Blob isHovering={isHovering} />
           </div>
-          <div className={styles.itemContent}>
-            <span className="h5 px-2">{number}</span>
-            <h2 className={`${styles.itemText} display-1`}>{text}</h2>
-          </div>
-        </a>
+        </div>
+        <div className={styles.itemContent}>
+          <span className="h5 px-2">{number}</span>
+          <h2 className={`${styles.itemText} display-1`}>{text}</h2>
+        </div>
       </Link>
     </div>
   );

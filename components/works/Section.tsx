@@ -1,14 +1,16 @@
 import styles from "styles/works/Section.module.scss";
 
+import { Heading } from "components/common/Heading";
+
 import { Container } from "./Container";
-import { Spacer } from "./Spacer";
 
 interface SectionProps {
   title: string;
+  heading?: string;
   children?: React.ReactNode;
 }
 
-export const Section = ({ title, children }: SectionProps) => {
+export const Section = ({ title, heading, children }: SectionProps) => {
   return (
     <section>
       <div className={styles.header}>
@@ -28,7 +30,9 @@ export const Section = ({ title, children }: SectionProps) => {
                     fill="var(--platinum)"
                   />
                 </svg>
-                <h5 className="mx-4 text-bone">{title}</h5>
+                <Heading level={5} className="mx-4 text-bone">
+                  {title}
+                </Heading>
                 <svg
                   width="89"
                   height="20"
@@ -56,10 +60,16 @@ export const Section = ({ title, children }: SectionProps) => {
               </div>
               <div className={styles.line} />
             </div>
+            {heading && (
+              <div className="col-lg-7">
+                <Heading level={2} className="h5 text-bone text-end">
+                  {heading}
+                </Heading>
+              </div>
+            )}
           </div>
         </Container>
       </div>
-      <Spacer size="sm" />
       {children}
     </section>
   );
