@@ -13,7 +13,7 @@ export default function Home() {
         <Head>
           <title>fran | UX Designer</title>
           <meta name="description" content="A UX Designer portfolio website" />
-          <link rel="icon" href="/favicon.svg" />
+          <link rel="icon" href="/images/favicon.svg" />
         </Head>
         <div style={{ width: "308px", height: "308px" }}>
           <Blob />
@@ -40,9 +40,7 @@ export default function Home() {
           <small>This is a line of small text.</small>
         </p>
         <p className="caption">This is a line of caption text.</p>
-        <Link href={"#"}>
-          <a>This is a text with link.</a>
-        </Link>
+        <Link href={"#"}>This is a text with link.</Link>
       </div>
     </Layout>
   );

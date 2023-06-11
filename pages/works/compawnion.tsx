@@ -15,17 +15,17 @@ import { Span } from "components/common/Span";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
-import { CaptionTitleContent } from "components/works2/CaptionTitleContent";
-import { Carousel } from "components/works2/Carousel";
-import { Container } from "components/works2/Container";
-import { Details } from "components/works2/Details";
-import { DropdownContent } from "components/works2/DropdownContent";
-import { Features } from "components/works2/Features";
-import { Header } from "components/works2/Header";
-import { IconContent } from "components/works2/IconContent";
-import { Section } from "components/works2/Section";
+import { CaptionTitleContent } from "components/works/CaptionTitleContent";
+import { Carousel } from "components/works/Carousel";
+import { Container } from "components/works/Container";
+import { Details } from "components/works/Details";
+import { DropdownContent } from "components/works/DropdownContent";
+import { Features } from "components/works/Features";
+import { Header } from "components/works/Header";
+import { IconContent } from "components/works/IconContent";
+import { Section } from "components/works/Section";
 
-export const meta = {
+const meta = {
   image: "/images/compawnion-hero.jpg",
   title: "Compawnion",
   details: [
@@ -101,17 +101,19 @@ export default function Compawnion() {
         </Container>
         <Spacer size="md" />
         <Container size="normal" centerText>
-          <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_COMPAWNION || "/"}>
-            <a target={"_blank"}>
-              <Image
-                src="/images/compawnion-prototype.png"
-                alt="play with prototype"
-                width={2872}
-                height={1024}
-              />
-              <Spacer size="xs" />
-              Play with the prototype here
-            </a>
+          <Link
+            href={process.env.NEXT_PUBLIC_PROTOTYPE_COMPAWNION || "/"}
+            target={"_blank"}
+          >
+            <Image
+              src="/images/compawnion-prototype.png"
+              alt="play with prototype"
+              width={2872}
+              height={1024}
+              style={{ height: "auto" }}
+            />
+            <Spacer size="xs" />
+            Play with the prototype here
           </Link>
         </Container>
         <Spacer size="lg" />
@@ -301,6 +303,7 @@ export default function Compawnion() {
             alt="understanding the landscape"
             width={2868}
             height={2046}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -334,6 +337,7 @@ export default function Compawnion() {
             alt="affinity map high level insights"
             width={2872}
             height={4198}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <DropdownContent title="👁 👄 👁  Full affinity map">
@@ -355,6 +359,7 @@ export default function Compawnion() {
             alt="persona"
             width={2872}
             height={986}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -412,6 +417,7 @@ export default function Compawnion() {
             alt="user flow - not linear user flow"
             width={2872}
             height={1110}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <ThreeColumns
@@ -445,6 +451,7 @@ export default function Compawnion() {
               alt="user flow - compawnion makes things better"
               width={2872}
               height={672}
+              style={{ height: "auto" }}
             />
           </DropdownContent>
           <Spacer size="lg" />
@@ -647,6 +654,7 @@ export default function Compawnion() {
             alt="midfi prototype"
             width={2000}
             height={6143}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />

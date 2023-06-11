@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 
 import styles from "styles/works/Carousel.module.scss";
 
-import Blob from "components/common/Blob";
+import { Arrow } from "components/common/Arrow";
 
 const CustomArrow = ({ className, onClick }: CustomArrowProps) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -16,7 +16,7 @@ const CustomArrow = ({ className, onClick }: CustomArrowProps) => {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <Blob isHovering={isHovering} showArrow />
+      <Arrow isHovering={isHovering} />
     </button>
   );
 };

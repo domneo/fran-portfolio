@@ -12,7 +12,7 @@ export const DropdownContent = ({ children, title }: DropdownContentProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="w-100">
       <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
         <svg
           width="40"
@@ -39,7 +39,7 @@ export const DropdownContent = ({ children, title }: DropdownContentProps) => {
           height: isOpen ? "auto" : 0,
         }}
       >
-        <div className="mt-2">{children}</div>
+        <div className="mt-3">{children}</div>
       </div>
     </div>
   );

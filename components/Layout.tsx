@@ -32,7 +32,7 @@ const Layout = ({
           name="description"
           content="Former educator and producer who enjoys problem solving, learning about people and creating experiences to meet their needs. Meticulous and driven in creating intentional and user-centric designs and interfaces for seamless experiences."
         />
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/images/favicon.svg" />
       </Head>
       <Header showHeaderMenu={showHeaderMenu} />
       <main {...props}>

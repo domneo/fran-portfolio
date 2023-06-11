@@ -1,7 +1,7 @@
-import removeWidows from "hooks/useRemoveWidows";
-import styles from "styles/works/Details.module.scss";
+import { v4 as uuidv4 } from "uuid";
 
-import { Stars } from "components/common/Stars";
+import { Heading } from "components/common/Heading";
+import { Paragraph } from "components/common/Paragraph";
 
 interface DetailType {
   title: string;
@@ -15,24 +15,15 @@ interface DetailsProps {
 
 export const Details = ({ details, debut = false }: DetailsProps) => {
   return (
-    <div className={`spacer-md`}>
-      {details && details.length > 0 && (
-        <div className="row spacer-sm">
-          <div className="col-lg-7 offset-lg-5">
-            {details.map((detail) => (
-              <div key={detail.title} className="row">
-                <div className="col-3">
-                  <h5 className="text-works">{detail.title}</h5>
-                </div>
-                <div className="col-9">
-                  <p className="mb-3">{removeWidows(detail.content)}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className="row">
+      {details.map((detail) => (
+        <div key={uuidv4()} className="col">
+          <Heading level={5} className="paragraph caption text-works mb-2">
+            {detail.title}
+          </Heading>
+          <Paragraph>{detail.content}</Paragraph>
         </div>
-      )}
-      {debut && <Stars>🐣 This was my debut UIUX project!</Stars>}
+      ))}
     </div>
   );
 };

@@ -6,14 +6,15 @@ import { useEffect, useRef, useState } from "react";
 import removeWidows from "hooks/useRemoveWidows";
 import styles from "styles/works/Header.module.scss";
 
+import { Heading } from "components/common/Heading";
+
 interface HeaderProps {
   image: string;
   number: string;
   title: string;
-  subtitle: string;
 }
 
-export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
+export const Header = ({ image, number, title }: HeaderProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Register the ScrollTrigger Plugin
@@ -50,9 +51,8 @@ export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
             <Image
               src={image}
               alt={title}
-              layout="fill"
-              objectFit="cover"
-              objectPosition={"center"}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
               priority
             />
           </div>
@@ -61,10 +61,11 @@ export const Header = ({ image, number, title, subtitle }: HeaderProps) => {
       <div
         className={`${styles.titleWrapper} ${
           isExpanded ? styles.expanded : ""
-        } spacer-md`}
+        }`}
       >
-        <h1 className="display-1">{title}</h1>
-        <h2 className="display-5 text-bone">{removeWidows(subtitle)}</h2>
+        <Heading level={1} className="display-1 text-platinum">
+          {title}
+        </Heading>
       </div>
     </>
   );

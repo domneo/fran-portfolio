@@ -52,7 +52,7 @@ export const Arrows = ({ yesdogRef, linksRef }: ArrowsProps) => {
     setCurvePoint1({ x: curvePoint1.x, y: curvePoint1.y });
     setCurvePoint2({ x: curvePoint2.x, y: curvePoint2.y });
     setArrowEnd({ x: arrowEndP.x, y: arrowEndP.y });
-  }, []);
+  }, [linksRef, yesdogRef]);
 
   return (
     <svg

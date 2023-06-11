@@ -2,7 +2,7 @@
 import { spline } from "@georgedoescode/spline";
 import { createRef, RefObject } from "react";
 import React, { Component } from "react";
-import SimplexNoise from "simplex-noise";
+import { createNoise2D, type NoiseFunction2D } from "simplex-noise";
 
 interface Point {
   x: number;
@@ -38,7 +38,7 @@ export default class Blob extends Component<BlobProps, BlobState> {
   requestRef: RefObject<SVGSVGElement>;
   points1: Array<Point>;
   points2: Array<Point>;
-  simplex: SimplexNoise;
+  noise2D: NoiseFunction2D;
 
   constructor(props: BlobProps) {
     super(props);
@@ -52,7 +52,7 @@ export default class Blob extends Component<BlobProps, BlobState> {
     this.requestRef = createRef();
     this.points1 = this.createPoints(6);
     this.points2 = this.createPoints(6);
-    this.simplex = new SimplexNoise();
+    this.noise2D = createNoise2D();
   }
 
   componentDidMount = () => {
@@ -157,7 +157,7 @@ export default class Blob extends Component<BlobProps, BlobState> {
 
   noise = (x: number, y: number) => {
     // return a value at {x point in time} {y point in time}
-    return this.simplex.noise2D(x, y);
+    return this.noise2D(x, y);
   };
 
   animationStop = () => {

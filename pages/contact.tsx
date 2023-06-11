@@ -42,18 +42,27 @@ export default function Contact() {
             <div className="d-flex justify-content-between">
               <div ref={linksRef} className={styles.links}>
                 <div>
-                  <Link href={process.env.NEXT_PUBLIC_RESUME || ""}>
-                    <a target={"_blank"}>RESUME</a>
+                  <Link
+                    href={process.env.NEXT_PUBLIC_RESUME || ""}
+                    target={"_blank"}
+                  >
+                    RESUME
                   </Link>
                 </div>
                 <div>
-                  <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-                    <a target={"_blank"}>EMAIL</a>
+                  <Link
+                    href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                    target={"_blank"}
+                  >
+                    EMAIL
                   </Link>
                 </div>
                 <div>
-                  <Link href={process.env.NEXT_PUBLIC_LINKEDIN || ""}>
-                    <a target={"_blank"}>LINKEDIN</a>
+                  <Link
+                    href={process.env.NEXT_PUBLIC_LINKEDIN || ""}
+                    target={"_blank"}
+                  >
+                    LINKEDIN
                   </Link>
                 </div>
               </div>
@@ -63,6 +72,7 @@ export default function Contact() {
                   alt="HELLO. YES THIS IS DOG."
                   width={536}
                   height={396}
+                  style={{ height: "auto" }}
                 />
               </div>
             </div>

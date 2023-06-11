@@ -13,15 +13,15 @@ import { Spacer } from "components/common/Spacer";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
-import { Carousel } from "components/works2/Carousel";
-import { Container } from "components/works2/Container";
-import { Details } from "components/works2/Details";
-import { DropdownContent } from "components/works2/DropdownContent";
-import { Header } from "components/works2/Header";
-import { IconContent } from "components/works2/IconContent";
-import { Section } from "components/works2/Section";
+import { Carousel } from "components/works/Carousel";
+import { Container } from "components/works/Container";
+import { Details } from "components/works/Details";
+import { DropdownContent } from "components/works/DropdownContent";
+import { Header } from "components/works/Header";
+import { IconContent } from "components/works/IconContent";
+import { Section } from "components/works/Section";
 
-export const meta = {
+const meta = {
   image: "/images/muji-hero.jpg",
   title: "MUJI",
   details: [
@@ -99,17 +99,19 @@ export default function Muji() {
         </Container>
         <Spacer size="md" />
         <Container size="normal" centerText>
-          <Link href={process.env.NEXT_PUBLIC_PROTOTYPE_MUJI || "/"}>
-            <a target={"_blank"}>
-              <Image
-                src="/images/muji-prototype.png"
-                alt="play with prototype"
-                width={2500}
-                height={891}
-              />
-              <Spacer size="xs" />
-              Play with the prototype here
-            </a>
+          <Link
+            href={process.env.NEXT_PUBLIC_PROTOTYPE_MUJI || "/"}
+            target={"_blank"}
+          >
+            <Image
+              src="/images/muji-prototype.png"
+              alt="play with prototype"
+              width={2500}
+              height={891}
+              style={{ height: "auto" }}
+            />
+            <Spacer size="xs" />
+            Play with the prototype here
           </Link>
         </Container>
         <Spacer size="lg" />
@@ -408,6 +410,7 @@ export default function Muji() {
             alt="convenience sampling banner"
             width={2872}
             height={698}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -474,6 +477,7 @@ export default function Muji() {
             alt="affinity map high level insights"
             width={1800}
             height={1169}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <DropdownContent title="👁 👄 👁  Full affinity map">
@@ -515,6 +519,7 @@ export default function Muji() {
             alt="website usability &amp; heuristic evaluation - filterception"
             width={2872}
             height={2064}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <div className="row align-items-center">
@@ -556,6 +561,7 @@ export default function Muji() {
                 alt="website usability &amp; heuristic evaluation - filterception"
                 width={1294}
                 height={759}
+                style={{ height: "auto" }}
               />
             </div>
           </div>
@@ -565,6 +571,7 @@ export default function Muji() {
             alt="website usability &amp; heuristic evaluation - footer"
             width={2872}
             height={2092}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -577,6 +584,7 @@ export default function Muji() {
             alt="persona"
             width={2872}
             height={988}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -703,6 +711,7 @@ export default function Muji() {
             alt="goal venn diagram"
             width={2374}
             height={2244}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
@@ -882,6 +891,7 @@ export default function Muji() {
             alt="card sorting dendrogram"
             width={2872}
             height={1176}
+            style={{ height: "auto" }}
           />
           <Spacer size="lg" />
           <ThreeColumns
@@ -925,6 +935,7 @@ export default function Muji() {
                 alt="information architecture - original"
                 width={2872}
                 height={1150}
+                style={{ height: "auto" }}
               />
               <Spacer size="xs" />
               <Paragraph className="caption text-center">
@@ -984,6 +995,7 @@ export default function Muji() {
                 alt="sus score - muji"
                 width={536}
                 height={536}
+                style={{ height: "auto" }}
               />
               <Spacer size="xs" />
               <ul>
@@ -997,6 +1009,7 @@ export default function Muji() {
                 alt="icon-vs"
                 width={512}
                 height={512}
+                style={{ height: "auto" }}
               />
             </div>
             <div>
@@ -1005,6 +1018,7 @@ export default function Muji() {
                 alt="sus score - prototype"
                 width={536}
                 height={536}
+                style={{ height: "auto" }}
               />
               <Spacer size="xs" />
               <ul>
@@ -1041,6 +1055,7 @@ export default function Muji() {
             alt="hifi prototype 1"
             width={2300}
             height={6706}
+            style={{ height: "auto" }}
           />
           <Spacer size="md" />
           <Image
@@ -1048,6 +1063,7 @@ export default function Muji() {
             alt="hifi prototype 2"
             width={2872}
             height={3839}
+            style={{ height: "auto" }}
           />
         </Container>
         <Spacer size="lg" />
