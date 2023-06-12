@@ -1,7 +1,73 @@
-import { defineConfig } from "tinacms";
+import { Template, defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+
+const twoColumnBlock: Template = {
+  name: "twoColumn",
+  label: "Two Column Content",
+  fields: [
+    {
+      type: "rich-text",
+      name: "col1",
+      label: "Column 1",
+    },
+    {
+      type: "rich-text",
+      name: "col2",
+      label: "Column 2",
+    },
+  ],
+};
+const threeColumnBlock: Template = {
+  name: "threeColumn",
+  label: "Three Column Content",
+  fields: [
+    {
+      type: "rich-text",
+      name: "col1",
+      label: "Column 1",
+    },
+    {
+      type: "rich-text",
+      name: "col2",
+      label: "Column 2",
+    },
+    {
+      type: "rich-text",
+      name: "col3",
+      label: "Column 3",
+    },
+  ],
+};
+const section: Template = {
+  name: "section",
+  label: "Section",
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+    },
+    {
+      type: "string",
+      name: "heading",
+      label: "Heading",
+    },
+    {
+      type: "object",
+      list: true,
+      name: "blocks",
+      label: "Content",
+      templates: [twoColumnBlock, threeColumnBlock],
+    },
+  ],
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
+};
 
 export default defineConfig({
   branch,
@@ -144,10 +210,11 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            required: true,
+            type: "object",
+            list: true,
+            name: "sections",
+            label: "Sections",
+            templates: [section],
           },
         ],
         ui: {
