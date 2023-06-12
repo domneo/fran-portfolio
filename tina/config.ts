@@ -21,9 +21,9 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "homepage",
-        label: "Homepage",
-        path: "content/homepage",
+        name: "home",
+        label: "Home",
+        path: "content/home",
         fields: [
           {
             type: "string",
@@ -53,12 +53,107 @@ export default defineConfig({
           },
         ],
         ui: {
-          router: ({ document }) => {
+          router: () => {
             // navigate to the home page
-            if (document._sys.filename === "content") {
-              return "/";
-            }
-            return undefined;
+            return "/";
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+      },
+      {
+        name: "works",
+        label: "Works",
+        path: "content/works",
+        fields: [
+          {
+            type: "number",
+            name: "index",
+            label: "Index",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+            required: true,
+          },
+          {
+            type: "object",
+            name: "skills",
+            label: "Skills",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "name",
+                label: "Name",
+                required: true,
+              },
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.name };
+              },
+            },
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "Image",
+            required: true,
+          },
+        ],
+        ui: {
+          router: () => {
+            return "/works";
+          },
+        },
+      },
+      {
+        name: "works_posts",
+        label: "Works Posts",
+        path: "content/works_posts",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "subtitle",
+            label: "Subtitle",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "summary",
+            label: "Summary",
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            required: true,
+          },
+        ],
+        ui: {
+          router: ({ document }) => {
+            // navigate to the post that was clicked
+            return `/works/${document._sys.filename}`;
           },
         },
       },

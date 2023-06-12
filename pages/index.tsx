@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps = async () => {
   let query = {};
   let variables = { relativePath: `content.md` };
   try {
-    const res = await client.queries.homepage(variables);
+    const res = await client.queries.home(variables);
     query = res.query;
     data = res.data;
     variables = res.variables;
@@ -29,16 +29,14 @@ export default function Home({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { data: tinaData } = useTina({ query, variables, data });
-  const { header, about } = tinaData.homepage;
+  const { header, about } = tinaData.home;
 
   return (
     <Layout showHeaderMenu={false} showQuickActions={false}>
       <div className={styles.container}>
-        {header && <h1>{header}</h1>}
-        {about.image && (
-          <video src={about.image} autoPlay muted loop className="w-100" />
-        )}
-        {about.body && <TinaMarkdown content={about.body} />}
+        <h1>{header}</h1>
+        <video src={about.image} autoPlay muted loop className="w-100" />
+        <TinaMarkdown content={about.body} />
       </div>
     </Layout>
   );
