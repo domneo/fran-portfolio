@@ -1,50 +1,44 @@
-import Link from "next/link";
-import { useState } from "react";
-
-import styles from "styles/Home.module.scss";
-
 import Layout from "components/Layout";
-import Blob from "components/common/Blob";
+import { type GetStaticProps, type InferGetStaticPropsType } from "next";
+import styles from "styles/Home.module.scss";
+import client from "tina/__generated__/client";
+import { useTina } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
-interface LinkItemProps {
-  href: string;
-  number: string;
-  text: string;
-  [index: string]: any;
-}
-const LinkItem = ({ href, number, text, ...props }: LinkItemProps) => {
-  const [isHovering, setIsHovering] = useState(false);
-  const hoverClass = text.trim().toLowerCase() + "Hover";
+export const getStaticProps: GetStaticProps = async () => {
+  let data = {};
+  let query = {};
+  let variables = { relativePath: `content.md` };
+  try {
+    const res = await client.queries.homepage(variables);
+    query = res.query;
+    data = res.data;
+    variables = res.variables;
+  } catch {
+    // swallow errors related to document creation
+  }
 
-  return (
-    <div className={styles[`linkItem${number}`]}>
-      <Link
-        href={href}
-        className={`${styles.itemLink} ${styles[hoverClass]}`}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
-        <div className={styles.itemBlob}>
-          <div className={`${styles.blobWrapper} ${styles[hoverClass]}`}>
-            <Blob isHovering={isHovering} />
-          </div>
-        </div>
-        <div className={styles.itemContent}>
-          <span className="h5 px-2">{number}</span>
-          <h2 className={`${styles.itemText} display-1`}>{text}</h2>
-        </div>
-      </Link>
-    </div>
-  );
+  return {
+    props: { variables, data, query },
+  };
 };
 
-export default function Home() {
+export default function Home({
+  query,
+  variables,
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { data: tinaData } = useTina({ query, variables, data });
+  const { header, about } = tinaData.homepage;
+
   return (
     <Layout showHeaderMenu={false} showQuickActions={false}>
       <div className={styles.container}>
-        <LinkItem href="/works" number="1" text="Works" />
-        <LinkItem href="/about" number="2" text="About" />
-        <LinkItem href="/contact" number="3" text="Contact" />
+        {header && <h1>{header}</h1>}
+        {about.image && (
+          <video src={about.image} autoPlay muted loop className="w-100" />
+        )}
+        {about.body && <TinaMarkdown content={about.body} />}
       </div>
     </Layout>
   );

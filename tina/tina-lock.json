@@ -28,23 +28,24 @@
             "fields": [
               {
                 "type": "image",
-                "name": "aboutImage",
+                "name": "image",
                 "label": "Image",
                 "required": true,
-                "namespace": ["homepage", "about", "aboutImage"]
+                "namespace": ["homepage", "about", "image"]
               },
               {
                 "type": "rich-text",
-                "name": "aboutBody",
+                "name": "body",
                 "label": "Body",
                 "required": true,
-                "namespace": ["homepage", "about", "aboutBody"],
+                "namespace": ["homepage", "about", "body"],
                 "parser": { "type": "markdown" }
               }
             ],
             "namespace": ["homepage", "about"]
           }
         ],
+        "ui": {},
         "namespace": ["homepage"]
       }
     ],
@@ -887,7 +888,7 @@
         "fields": [
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "aboutImage" },
+            "name": { "kind": "Name", "value": "image" },
             "arguments": [],
             "type": {
               "kind": "NonNullType",
@@ -899,7 +900,7 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "aboutBody" },
+            "name": { "kind": "Name", "value": "body" },
             "arguments": [],
             "type": {
               "kind": "NonNullType",
@@ -1100,7 +1101,7 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "aboutImage" },
+            "name": { "kind": "Name", "value": "image" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "ImageFilter" }
@@ -1108,7 +1109,7 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "aboutBody" },
+            "name": { "kind": "Name", "value": "body" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "RichTextFilter" }
@@ -1500,7 +1501,7 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "aboutImage" },
+            "name": { "kind": "Name", "value": "image" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
@@ -1508,7 +1509,7 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "aboutBody" },
+            "name": { "kind": "Name", "value": "body" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "JSON" }

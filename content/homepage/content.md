@@ -4,8 +4,8 @@ header: >-
   to create experiences as seamless as when you order kopi from your seasoned
   kopitiam aunty.
 about:
-  aboutImage: /images/me2.mp4
-  aboutBody: >
+  image: /images/me2.mp4
+  body: >
     As a self-starter with a proven ability to learn and create, I’ve gone from
     teaching myself Figma to being the creator and current lead of the Fortress
     Design System at Castlery. I am also leading the UXUI effort at my place of

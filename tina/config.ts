@@ -39,19 +39,28 @@ export default defineConfig({
             fields: [
               {
                 type: "image",
-                name: "aboutImage",
+                name: "image",
                 label: "Image",
                 required: true,
               },
               {
                 type: "rich-text",
-                name: "aboutBody",
+                name: "body",
                 label: "Body",
                 required: true,
               },
             ],
           },
         ],
+        ui: {
+          router: ({ document }) => {
+            // navigate to the home page
+            if (document._sys.filename === "content") {
+              return "/";
+            }
+            return undefined;
+          },
+        },
       },
     ],
   },
