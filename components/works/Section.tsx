@@ -5,8 +5,8 @@ import { Heading } from "components/common/Heading";
 import { Container } from "./Container";
 
 interface SectionProps {
-  title: string;
-  heading?: string;
+  title?: string | null;
+  heading?: string | null;
   children?: React.ReactNode;
 }
 
