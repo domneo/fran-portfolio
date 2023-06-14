@@ -18,7 +18,6 @@ export const Header = ({ showHeaderMenu }: HeaderProps) => (
       }`}
     >
       <BarrelLink text="WORKS" link="/works" />
-      <BarrelLink text="ABOUT" link="/about" />
       <BarrelLink text="CONTACT" link="/contact" />
     </nav>
     <MobileMenu />
