@@ -12,6 +12,7 @@
         "name": "home",
         "label": "Home",
         "path": "content/home",
+        "format": "mdx",
         "fields": [
           {
             "type": "string",
@@ -38,8 +39,30 @@
                 "name": "body",
                 "label": "Body",
                 "required": true,
+                "templates": [
+                  {
+                    "name": "ParagraphLight",
+                    "label": "Paragraph (Light)",
+                    "fields": [
+                      {
+                        "type": "rich-text",
+                        "name": "content",
+                        "label": "Content",
+                        "namespace": [
+                          "home",
+                          "about",
+                          "body",
+                          "ParagraphLight",
+                          "content"
+                        ],
+                        "parser": { "type": "mdx" }
+                      }
+                    ],
+                    "namespace": ["home", "about", "body", "ParagraphLight"]
+                  }
+                ],
                 "namespace": ["home", "about", "body"],
-                "parser": { "type": "markdown" }
+                "parser": { "type": "mdx" }
               }
             ],
             "namespace": ["home", "about"]
@@ -1541,6 +1564,40 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "HomeAboutBodyParagraphLightFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "HomeAboutBodyFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "ParagraphLight" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "HomeAboutBodyParagraphLightFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "HomeAboutFilter" },
         "fields": [
           {
@@ -1556,7 +1613,7 @@
             "name": { "kind": "Name", "value": "body" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "HomeAboutBodyFilter" }
             }
           }
         ]

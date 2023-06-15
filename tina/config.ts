@@ -90,6 +90,7 @@ export default defineConfig({
         name: "home",
         label: "Home",
         path: "content/home",
+        format: "mdx",
         fields: [
           {
             type: "string",
@@ -114,6 +115,19 @@ export default defineConfig({
                 name: "body",
                 label: "Body",
                 required: true,
+                templates: [
+                  {
+                    name: "ParagraphLight",
+                    label: "Paragraph (Light)",
+                    fields: [
+                      {
+                        type: "rich-text",
+                        name: "content",
+                        label: "Content",
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           },

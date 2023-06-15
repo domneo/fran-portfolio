@@ -1,153 +1,55 @@
 @import "mixins";
 
-.container {
-  width: 100%;
-  max-width: 1480px;
-  margin: 1rem auto 0;
-  padding: 1rem;
-  overflow: hidden;
-
-  @include media("md") {
-    padding: 3rem;
+.section {
+  margin: 2rem auto;
+}
+@include media("sm") {
+  .section {
+    margin: 3rem auto;
+  }
+}
+@include media("md") {
+  .section {
+    margin: 4rem auto;
+  }
+}
+@include media("lg") {
+  .section {
+    margin: 5rem auto;
+  }
+}
+@include media("xl") {
+  .section {
+    margin: 6rem auto;
+  }
+}
+@include media("xxl") {
+  .section {
+    margin: 7rem auto;
   }
 }
 
-%linkItem {
-  display: flex;
-  margin-bottom: 3rem;
-
-  @include media("lg") {
-    margin-top: 0;
-    margin-bottom: 0;
+.aboutBody {
+  padding-top: 2rem;
+}
+@include media("md") {
+  .aboutBody {
+    padding-top: 3rem;
   }
 }
-
-.linkItem1 {
-  @extend %linkItem;
-  margin-left: 0%;
-
-  @media (min-width: 400px) {
-    margin-left: 5%;
-  }
-
-  @include media("sm") {
-    margin-left: 5%;
-  }
-
-  @include media("lg") {
-    margin-left: 0%;
+@include media("lg") {
+  .aboutBody {
+    padding-top: 0rem;
+    padding-left: 3rem;
   }
 }
-
-.linkItem2 {
-  @extend %linkItem;
-  margin-left: 7.5%;
-
-  @media (min-width: 400px) {
-    margin-left: 15%;
-  }
-
-  @include media("sm") {
-    margin-left: 20%;
-  }
-
-  @include media("lg") {
-    margin-left: 20%;
+@include media("xl") {
+  .aboutBody {
+    padding-left: 4rem;
   }
 }
-
-.linkItem3 {
-  @extend %linkItem;
-  margin-left: 15%;
-
-  @media (min-width: 400px) {
-    margin-left: 25%;
+@include media("xxl") {
+  .aboutBody {
+    padding-left: 5rem;
   }
-
-  @include media("sm") {
-    margin-left: 35%;
-  }
-
-  @include media("lg") {
-    margin-left: 40%;
-  }
-}
-
-.itemLink {
-  position: relative;
-  color: var(--platinum);
-  text-decoration: none;
-  transition: 0.3s color;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    transition: 0.3s color;
-  }
-
-  &.worksHover {
-    &:hover,
-    &:focus {
-      .itemText {
-        color: var(--works);
-      }
-    }
-  }
-
-  &.aboutHover {
-    &:hover,
-    &:focus {
-      .itemText {
-        color: var(--about);
-      }
-    }
-  }
-
-  &.contactHover {
-    &:hover,
-    &:focus {
-      .itemText {
-        color: var(--contact);
-      }
-    }
-  }
-}
-
-.itemBlob {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.itemContent {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  z-index: 1;
-
-  @include media("lg") {
-    justify-content: center;
-  }
-}
-
-.itemText {
-  color: var(--platinum);
-  @include font-size(120px);
-
-  @include media("lg") {
-    @include font-size(150px);
-  }
-}
-
-.blobWrapper {
-  width: clamp(150px, 22vw, 320px);
-  height: clamp(150px, 22vw, 320px);
-  padding-top: 0.5rem;
 }

@@ -151,9 +151,14 @@ small,
 a,
 .link {
   color: var(--rosetaupe);
-  text-decoration: underline;
+  text-decoration: none;
   border-radius: 0.25rem;
   transition: 0.3s font-weight;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 ol,
