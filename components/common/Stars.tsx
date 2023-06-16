@@ -1,29 +1,29 @@
 import { useEffect, useMemo, useState } from "react";
 
 interface StarsProps {
+  resetColor?: string;
   children?: React.ReactNode;
 }
-
-export const Stars = ({ children }: StarsProps) => {
-  const resetColor = "var(--platinum)";
+export const Stars = ({ resetColor = "black", children }: StarsProps) => {
+  const _resetColor = `var(--${resetColor})`;
   const colorCycleMatrix = useMemo(
     () => [
-      ["#d1d1bc", "#8c97ad", "#eded82", "#e6d3d3", "#a0b8a8"],
-      ["#eded82", "#e6d3d3", "#d1d1bc", "#a0b8a8", "#8c97ad"],
-      ["#e6d3d3", "#a0b8a8", "#8c97ad", "#eded82", "#d1d1bc"],
-      ["#a0b8a8", "#d1d1bc", "#e6d3d3", "#8c97ad", "#eded82"],
-      ["#8c97ad", "#eded82", "#a0b8a8", "#d1d1bc", "#e6d3d3"],
+      ["#8c97ad", "#eded82", "#333333", "#e6d3d3", "#a0b8a8"],
+      ["#e6d3d3", "#333333", "#eded82", "#a0b8a8", "#8c97ad"],
+      ["#a0b8a8", "#8c97ad", "#e6d3d3", "#eded82", "#333333"],
+      ["#333333", "#e6d3d3", "#a0b8a8", "#8c97ad", "#eded82"],
+      ["#eded82", "#a0b8a8", "#8c97ad", "#333333", "#e6d3d3"],
     ],
     []
   );
   const [isAnimating, setIsAnimating] = useState(false);
   const [cycleIndex, setCycleIndex] = useState(0);
 
-  const [aColor, setAColor] = useState(resetColor);
-  const [bColor, setBColor] = useState(resetColor);
-  const [cColor, setCColor] = useState(resetColor);
-  const [dColor, setDColor] = useState(resetColor);
-  const [eColor, setEColor] = useState(resetColor);
+  const [aColor, setAColor] = useState(_resetColor);
+  const [bColor, setBColor] = useState(_resetColor);
+  const [cColor, setCColor] = useState(_resetColor);
+  const [dColor, setDColor] = useState(_resetColor);
+  const [eColor, setEColor] = useState(_resetColor);
 
   useEffect(() => {
     if (isAnimating) {
@@ -36,11 +36,11 @@ export const Stars = ({ children }: StarsProps) => {
         setCycleIndex(cycleIndex < 4 ? cycleIndex + 1 : 0);
       }, 120);
     } else {
-      setAColor(resetColor);
-      setBColor(resetColor);
-      setCColor(resetColor);
-      setDColor(resetColor);
-      setEColor(resetColor);
+      setAColor(_resetColor);
+      setBColor(_resetColor);
+      setCColor(_resetColor);
+      setDColor(_resetColor);
+      setEColor(_resetColor);
     }
   }, [isAnimating, cycleIndex, colorCycleMatrix]);
 

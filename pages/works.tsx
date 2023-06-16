@@ -1,11 +1,13 @@
+import Layout from "components/Layout";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-
 import styles from "styles/Works.module.scss";
-
-import Layout from "components/Layout";
+import client from "tina/__generated__/client";
+import { GlobalQuery } from "tina/__generated__/types";
+import { useTina } from "tinacms/dist/react";
+import { v4 as uuidv4 } from "uuid";
 
 const data = [
   {
@@ -218,11 +220,28 @@ const data = [
   },
 ];
 
-export default function Works() {
+export const getStaticProps: GetStaticProps = async () => {
+  let global;
+
+  try {
+    global = await client.queries.global({ relativePath: `content.mdx` });
+  } catch {
+    // swallow errors related to document creation
+  }
+
+  return {
+    props: { global },
+  };
+};
+
+export default function Works({
+  global,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { data: globalData } = useTina<GlobalQuery>(global);
   const [focusedItem, setFocusedItem] = useState(0);
 
   return (
-    <Layout showQuickActions={false}>
+    <Layout data={globalData} showQuickActions={false}>
       <div className="container">
         <div className="row align-items-stretch justify-content-center">
           <div className="col-lg-7 px-5 py-5 my-5 d-flex flex-column justify-content-center">

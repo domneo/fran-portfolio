@@ -5,6 +5,7 @@ import Link from "next/link";
 import reactStringReplace from "react-string-replace";
 import styles from "styles/Home.module.scss";
 import client from "tina/__generated__/client";
+import { GlobalQuery, HomeQuery } from "tina/__generated__/types";
 import { useTina } from "tinacms/dist/react";
 import { TinaMarkdown, TinaMarkdownContent } from "tinacms/dist/rich-text";
 
@@ -19,35 +20,36 @@ const components = {
   ),
 };
 export const getStaticProps: GetStaticProps = async () => {
-  let data = {};
-  let query = {};
-  let variables = { relativePath: `content.mdx` };
+  let home;
+  let global;
+
   try {
-    const res = await client.queries.home(variables);
-    query = res.query;
-    data = res.data;
-    variables = res.variables;
+    home = await client.queries.home({ relativePath: `content.mdx` });
+    global = await client.queries.global({ relativePath: `content.mdx` });
   } catch {
     // swallow errors related to document creation
   }
 
   return {
-    props: { variables, data, query },
+    props: { home, global },
   };
 };
 
 export default function Home({
-  query,
-  variables,
-  data,
+  home,
+  global,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { data: tinaData } = useTina({ query, variables, data });
-  const { header, about } = tinaData.home;
+  const { data: homeData } = useTina<HomeQuery>(home);
+  const { data: globalData } = useTina<GlobalQuery>(global);
+  const { header, about } = homeData.home;
 
   // Add special classes to specific words in header
   let replacedHeader;
   replacedHeader = reactStringReplace(header, /\b(invisible)\b/g, (match) => (
-    <span key={window.crypto.randomUUID()} className="extralight">
+    <span
+      key={window.crypto.randomUUID()}
+      className={`${styles.invisible} extralight`}
+    >
       {match}
     </span>
   ));
@@ -66,7 +68,7 @@ export default function Home({
   );
 
   return (
-    <Layout showQuickActions={false}>
+    <Layout data={globalData} showQuickActions={false}>
       <section className={styles.section}>
         <div className="container">
           <div className="row justify-content-center">
@@ -80,10 +82,10 @@ export default function Home({
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="px-0 col-lg-5 col-xl-4 px-sm-3">
-              <video src={about.image} autoPlay muted loop className="w-100" />
+              <video src={about?.image} autoPlay muted loop className="w-100" />
             </div>
             <div className={`col-lg-7 col-xl-6 ${styles.aboutBody}`}>
-              <TinaMarkdown content={about.body} components={components} />
+              <TinaMarkdown content={about?.body} components={components} />
             </div>
           </div>
         </div>

@@ -29,6 +29,11 @@
   }
 }
 
+.invisible::selection {
+  color: #333332;
+  background-color: var(--black);
+}
+
 .aboutBody {
   padding-top: 2rem;
 }

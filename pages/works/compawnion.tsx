@@ -1,29 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import Layout from "components/Layout";
 import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
-import { GridColumns } from "components/common/GridColumns";
 import { Heading } from "components/common/Heading";
 import { ImageZoom } from "components/common/ImageZoom";
 import { Line } from "components/common/Line";
 import { ListItem } from "components/common/ListItem";
 import { Paragraph } from "components/common/Paragraph";
 import { Spacer } from "components/common/Spacer";
-import { Span } from "components/common/Span";
 import { Stars } from "components/common/Stars";
 import { ThreeColumns } from "components/common/ThreeColumns";
 import { TwoColumns } from "components/common/TwoColumns";
-import { CaptionTitleContent } from "components/works/CaptionTitleContent";
-import { Carousel } from "components/works/Carousel";
 import { Container } from "components/works/Container";
 import { Details } from "components/works/Details";
 import { DropdownContent } from "components/works/DropdownContent";
-import { Features } from "components/works/Features";
 import { Header } from "components/works/Header";
 import { IconContent } from "components/works/IconContent";
 import { Section } from "components/works/Section";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import client from "tina/__generated__/client";
+import { GlobalQuery } from "tina/__generated__/types";
+import { useTina } from "tinacms/dist/react";
 
 const meta = {
   image: "/images/compawnion-hero.jpg",
@@ -36,9 +34,27 @@ const meta = {
   ],
 };
 
-export default function Compawnion() {
+export const getStaticProps: GetStaticProps = async () => {
+  let global;
+
+  try {
+    global = await client.queries.global({ relativePath: `content.mdx` });
+  } catch {
+    // swallow errors related to document creation
+  }
+
+  return {
+    props: { global },
+  };
+};
+
+export default function Compawnion({
+  global,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { data: globalData } = useTina<GlobalQuery>(global);
+
   return (
-    <Layout>
+    <Layout data={globalData}>
       <section>
         <Header image={meta.image} number={"7"} title={meta.title} />
         <Spacer size="lg" />

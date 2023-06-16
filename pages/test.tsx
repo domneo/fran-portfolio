@@ -1,20 +1,44 @@
-import Head from "next/head";
-import Link from "next/link";
-
-import styles from "styles/Home.module.scss";
-
 import Layout from "components/Layout";
 import Blob from "components/common/Blob";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import styles from "styles/Home.module.scss";
+import client from "tina/__generated__/client";
+import { GlobalQuery } from "tina/__generated__/types";
+import { useTina } from "tinacms/dist/react";
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async () => {
+  let global;
+
+  try {
+    global = await client.queries.global({ relativePath: `content.mdx` });
+  } catch {
+    // swallow errors related to document creation
+  }
+
+  return {
+    props: { global },
+  };
+};
+
+export default function Test({
+  global,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { data: globalData } = useTina<GlobalQuery>(global);
+
   return (
-    <Layout>
+    <Layout data={globalData}>
       <div className={styles.container}>
         <Head>
           <title>fran | UX Designer</title>
           <meta name="description" content="A UX Designer portfolio website" />
           <link rel="icon" href="/images/favicon.svg" />
         </Head>
+
+        <div className="w-25 h-25">
+          <Blob color="var(--black)" />
+        </div>
 
         <h1 className="extralight">Heading 1 Extra Light</h1>
         <h1>Heading 1 Regular</h1>

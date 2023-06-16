@@ -1,25 +1,36 @@
-import styles from "styles/Header.module.scss";
-
 import { BarrelLink } from "components/common/BarrelLink";
-
+import { Stars } from "components/common/Stars";
+import styles from "styles/Header.module.scss";
+import {
+  GlobalFooterCredits,
+  GlobalMenu,
+  Maybe,
+} from "tina/__generated__/types";
 import { MobileMenu } from "./MobileMenu";
 
 interface HeaderProps {
-  showHeaderMenu?: boolean;
+  menu?: Maybe<Array<Maybe<GlobalMenu>>>;
+  footerCredits?: Maybe<Array<Maybe<GlobalFooterCredits>>>;
 }
-export const Header = ({ showHeaderMenu }: HeaderProps) => (
+export const Header = ({ menu, footerCredits }: HeaderProps) => (
   <header className={styles.nav}>
-    <div className={`${styles.logo} ${showHeaderMenu ? "" : "w-100"}`}>
+    <div className={styles.stars}>
+      <Stars />
+    </div>
+    <div className={styles.spacer} />
+    <div className={styles.logo}>
       <BarrelLink text="FRAN" link="/" />
     </div>
-    <nav
-      className={`${styles.menu} ${
-        showHeaderMenu ? "d-none d-sm-flex" : "d-none"
-      }`}
-    >
-      <BarrelLink text="WORKS" link="/works" />
-      <BarrelLink text="CONTACT" link="/contact" />
+    <nav className={`${styles.menu} d-none d-sm-flex`}>
+      {menu?.map((menuItem) => (
+        <BarrelLink
+          key={window.crypto.randomUUID()}
+          text={menuItem?.name.toUpperCase() || ""}
+          link={menuItem?.url || ""}
+          target={menuItem?.openInNewWindow ? "_blank" : "_self"}
+        />
+      ))}
     </nav>
-    <MobileMenu />
+    <MobileMenu menu={menu} footerCredits={footerCredits} />
   </header>
 );

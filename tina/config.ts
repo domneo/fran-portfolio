@@ -87,6 +87,119 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "global",
+        label: "Global",
+        path: "content/global",
+        format: "mdx",
+        fields: [
+          {
+            type: "string",
+            name: "siteTitle",
+            label: "Site Title",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "siteDescription",
+            label: "Site Description",
+            required: true,
+          },
+          {
+            type: "object",
+            name: "menu",
+            label: "Menu",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "name",
+                label: "Name",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "url",
+                label: "URL/Path",
+              },
+              {
+                type: "boolean",
+                name: "openInNewWindow",
+                label: "Open in new window",
+              },
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.name };
+              },
+            },
+          },
+          {
+            type: "object",
+            name: "contactLinks",
+            label: "Contact Links",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "name",
+                label: "Name",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "url",
+                label: "URL/Path",
+              },
+              {
+                type: "boolean",
+                name: "openInNewWindow",
+                label: "Open in new window",
+              },
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.name };
+              },
+            },
+          },
+          {
+            type: "object",
+            name: "footerCredits",
+            label: "Footer Credits",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "name",
+                label: "Name",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "url",
+                label: "URL/Path",
+              },
+              {
+                type: "boolean",
+                name: "openInNewWindow",
+                label: "Open in new window",
+              },
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.name };
+              },
+            },
+          },
+        ],
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+      },
+      {
         name: "home",
         label: "Home",
         path: "content/home",

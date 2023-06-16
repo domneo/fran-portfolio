@@ -200,7 +200,7 @@ export default class Blob extends Component<BlobProps, BlobState> {
     const {
       lineCount = 2,
       showArrow,
-      color = "var(--platinum)",
+      color = "var(--white)",
       strokeWidth = 0.75,
     } = this.props;
     const { d1, d2 } = this.state;

@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import Layout from "components/Layout";
 import { BackgroundZone } from "components/common/BackgroundZone";
 import { ContactCTA } from "components/common/ContactCTA";
@@ -20,6 +17,12 @@ import { DropdownContent } from "components/works/DropdownContent";
 import { Header } from "components/works/Header";
 import { IconContent } from "components/works/IconContent";
 import { Section } from "components/works/Section";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import client from "tina/__generated__/client";
+import { GlobalQuery } from "tina/__generated__/types";
+import { useTina } from "tinacms/dist/react";
 
 const meta = {
   image: "/images/muji-hero.jpg",
@@ -32,9 +35,27 @@ const meta = {
   ],
 };
 
-export default function Muji() {
+export const getStaticProps: GetStaticProps = async () => {
+  let global;
+
+  try {
+    global = await client.queries.global({ relativePath: `content.mdx` });
+  } catch {
+    // swallow errors related to document creation
+  }
+
+  return {
+    props: { global },
+  };
+};
+
+export default function Muji({
+  global,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { data: globalData } = useTina<GlobalQuery>(global);
+
   return (
-    <Layout>
+    <Layout data={globalData}>
       <section>
         <Header image={meta.image} number={"5"} title={meta.title} />
         <Spacer size="lg" />

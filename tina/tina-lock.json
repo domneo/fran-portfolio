@@ -9,6 +9,117 @@
     "meta": { "flags": ["experimentalData"] },
     "collections": [
       {
+        "name": "global",
+        "label": "Global",
+        "path": "content/global",
+        "format": "mdx",
+        "fields": [
+          {
+            "type": "string",
+            "name": "siteTitle",
+            "label": "Site Title",
+            "required": true,
+            "namespace": ["global", "siteTitle"]
+          },
+          {
+            "type": "string",
+            "name": "siteDescription",
+            "label": "Site Description",
+            "required": true,
+            "namespace": ["global", "siteDescription"]
+          },
+          {
+            "type": "object",
+            "name": "menu",
+            "label": "Menu",
+            "list": true,
+            "fields": [
+              {
+                "type": "string",
+                "name": "name",
+                "label": "Name",
+                "required": true,
+                "namespace": ["global", "menu", "name"]
+              },
+              {
+                "type": "string",
+                "name": "url",
+                "label": "URL/Path",
+                "namespace": ["global", "menu", "url"]
+              },
+              {
+                "type": "boolean",
+                "name": "openInNewWindow",
+                "label": "Open in new window",
+                "namespace": ["global", "menu", "openInNewWindow"]
+              }
+            ],
+            "ui": {},
+            "namespace": ["global", "menu"]
+          },
+          {
+            "type": "object",
+            "name": "contactLinks",
+            "label": "Contact Links",
+            "list": true,
+            "fields": [
+              {
+                "type": "string",
+                "name": "name",
+                "label": "Name",
+                "required": true,
+                "namespace": ["global", "contactLinks", "name"]
+              },
+              {
+                "type": "string",
+                "name": "url",
+                "label": "URL/Path",
+                "namespace": ["global", "contactLinks", "url"]
+              },
+              {
+                "type": "boolean",
+                "name": "openInNewWindow",
+                "label": "Open in new window",
+                "namespace": ["global", "contactLinks", "openInNewWindow"]
+              }
+            ],
+            "ui": {},
+            "namespace": ["global", "contactLinks"]
+          },
+          {
+            "type": "object",
+            "name": "footerCredits",
+            "label": "Footer Credits",
+            "list": true,
+            "fields": [
+              {
+                "type": "string",
+                "name": "name",
+                "label": "Name",
+                "required": true,
+                "namespace": ["global", "footerCredits", "name"]
+              },
+              {
+                "type": "string",
+                "name": "url",
+                "label": "URL/Path",
+                "namespace": ["global", "footerCredits", "url"]
+              },
+              {
+                "type": "boolean",
+                "name": "openInNewWindow",
+                "label": "Open in new window",
+                "namespace": ["global", "footerCredits", "openInNewWindow"]
+              }
+            ],
+            "ui": {},
+            "namespace": ["global", "footerCredits"]
+          }
+        ],
+        "ui": { "allowedActions": { "create": false, "delete": false } },
+        "namespace": ["global"]
+      },
+      {
         "name": "home",
         "label": "Home",
         "path": "content/home",
@@ -305,7 +416,7 @@
     "DocumentConnection": {
       "type": "DocumentConnection",
       "resolveType": "multiCollectionDocumentList",
-      "collections": ["home", "works", "works_posts"]
+      "collections": ["global", "home", "works", "works_posts"]
     },
     "Node": { "type": "Node", "resolveType": "nodeDocument" },
     "DocumentNode": {
@@ -313,6 +424,18 @@
       "resolveType": "multiCollectionDocument",
       "createDocument": "create",
       "updateDocument": "update"
+    },
+    "Global": {
+      "type": "Global",
+      "resolveType": "collectionDocument",
+      "collection": "global",
+      "createGlobal": "create",
+      "updateGlobal": "update"
+    },
+    "GlobalConnection": {
+      "type": "GlobalConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "global"
     },
     "Home": {
       "type": "Home",
@@ -815,6 +938,88 @@
           },
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "global" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Global" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "globalConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "GlobalFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "GlobalConnection" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "home" },
             "arguments": [
               {
@@ -1065,6 +1270,14 @@
         "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "DocumentFilter" },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "global" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "GlobalFilter" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "home" },
@@ -1338,6 +1551,10 @@
         "name": { "kind": "Name", "value": "DocumentNode" },
         "directives": [],
         "types": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Global" }
+          },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Home" } },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Works" } },
           {
@@ -1345,6 +1562,507 @@
             "name": { "kind": "Name", "value": "Works_posts" }
           },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Folder" } }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "GlobalMenu" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "GlobalContactLinks" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "GlobalFooterCredits" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Global" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "siteTitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "siteDescription" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "menu" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "GlobalMenu" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "contactLinks" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "GlobalContactLinks" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "footerCredits" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "GlobalFooterCredits" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "StringFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "startsWith" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "eq" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "exists" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "in" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BooleanFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "eq" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "exists" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalMenuFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BooleanFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalContactLinksFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BooleanFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalFooterCreditsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BooleanFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "siteTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "siteDescription" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "menu" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "GlobalMenuFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "contactLinks" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "GlobalContactLinksFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "footerCredits" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "GlobalFooterCreditsFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "GlobalConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Global" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "GlobalConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "GlobalConnectionEdges" }
+              }
+            }
+          }
         ]
       },
       {
@@ -1445,47 +2163,6 @@
               "type": {
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "JSON" }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "StringFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "startsWith" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "eq" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "exists" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Boolean" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "in" },
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
               }
             }
           }
@@ -2719,6 +3396,76 @@
           },
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateGlobal" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "GlobalMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Global" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createGlobal" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "GlobalMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Global" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "updateHome" },
             "arguments": [
               {
@@ -2935,6 +3682,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "global" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "GlobalMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "home" },
             "type": {
               "kind": "NamedType",
@@ -2973,6 +3728,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "global" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "GlobalMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "home" },
             "type": {
               "kind": "NamedType",
@@ -2993,6 +3756,157 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "Works_postsMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalMenuMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalContactLinksMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalFooterCreditsMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "openInNewWindow" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "GlobalMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "siteTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "siteDescription" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "menu" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "GlobalMenuMutation" }
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "contactLinks" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "GlobalContactLinksMutation"
+                }
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "footerCredits" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "GlobalFooterCreditsMutation"
+                }
+              }
             }
           }
         ]
