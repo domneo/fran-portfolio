@@ -389,6 +389,137 @@ export default defineConfig({
           },
         },
       },
+      {
+        name: "caseStudies",
+        label: "Case Studies",
+        path: "content/caseStudies",
+        format: "mdx",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "object",
+            name: "postList",
+            label: "Post List",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "url",
+                label: "URL/Path",
+              },
+              {
+                type: "number",
+                name: "index",
+                label: "Index",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+                required: true,
+              },
+              {
+                type: "object",
+                name: "skills",
+                label: "Skills",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "name",
+                    label: "Name",
+                    required: true,
+                  },
+                ],
+                ui: {
+                  itemProps: (item) => {
+                    return { label: item?.name };
+                  },
+                },
+              },
+              {
+                type: "image",
+                name: "image",
+                label: "Image",
+                required: true,
+              },
+              {
+                type: "boolean",
+                name: "comingSoon",
+                label: "Coming soon",
+              },
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.title };
+              },
+            },
+          },
+        ],
+        ui: {
+          router: ({ document }) => {
+            if (document._sys.filename === "caseStudies") {
+              return "/case-studies";
+            }
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+      },
+      {
+        name: "caseStudies_posts",
+        label: "Case Studies Posts",
+        path: "content/caseStudies_posts",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "subtitle",
+            label: "Subtitle",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "summary",
+            label: "Summary",
+            required: true,
+          },
+          {
+            type: "object",
+            list: true,
+            name: "sections",
+            label: "Sections",
+            templates: [section],
+          },
+        ],
+        ui: {
+          router: ({ document }) => {
+            // navigate to the post that was clicked
+            return `/case-studies/${document._sys.filename}`;
+          },
+        },
+      },
     ],
   },
 });

@@ -339,7 +339,7 @@
                             "name": "col1",
                             "label": "Column 1",
                             "namespace": [
-                              "works_posts",
+                              "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -352,7 +352,7 @@
                             "name": "col2",
                             "label": "Column 2",
                             "namespace": [
-                              "works_posts",
+                              "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -362,7 +362,7 @@
                           }
                         ],
                         "namespace": [
-                          "works_posts",
+                          "caseStudies_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -378,7 +378,7 @@
                             "name": "col1",
                             "label": "Column 1",
                             "namespace": [
-                              "works_posts",
+                              "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -391,7 +391,7 @@
                             "name": "col2",
                             "label": "Column 2",
                             "namespace": [
-                              "works_posts",
+                              "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -404,7 +404,7 @@
                             "name": "col3",
                             "label": "Column 3",
                             "namespace": [
-                              "works_posts",
+                              "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -414,7 +414,7 @@
                           }
                         ],
                         "namespace": [
-                          "works_posts",
+                          "caseStudies_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -439,6 +439,266 @@
         ],
         "ui": {},
         "namespace": ["works_posts"]
+      },
+      {
+        "name": "caseStudies",
+        "label": "Case Studies",
+        "path": "content/caseStudies",
+        "format": "mdx",
+        "fields": [
+          {
+            "type": "string",
+            "name": "title",
+            "label": "Title",
+            "isTitle": true,
+            "required": true,
+            "namespace": ["caseStudies", "title"]
+          },
+          {
+            "type": "object",
+            "name": "postList",
+            "label": "Post List",
+            "list": true,
+            "fields": [
+              {
+                "type": "string",
+                "name": "url",
+                "label": "URL/Path",
+                "namespace": ["caseStudies", "postList", "url"]
+              },
+              {
+                "type": "number",
+                "name": "index",
+                "label": "Index",
+                "required": true,
+                "namespace": ["caseStudies", "postList", "index"]
+              },
+              {
+                "type": "string",
+                "name": "title",
+                "label": "Title",
+                "required": true,
+                "namespace": ["caseStudies", "postList", "title"]
+              },
+              {
+                "type": "string",
+                "name": "description",
+                "label": "Description",
+                "required": true,
+                "namespace": ["caseStudies", "postList", "description"]
+              },
+              {
+                "type": "object",
+                "name": "skills",
+                "label": "Skills",
+                "list": true,
+                "fields": [
+                  {
+                    "type": "string",
+                    "name": "name",
+                    "label": "Name",
+                    "required": true,
+                    "namespace": ["caseStudies", "postList", "skills", "name"]
+                  }
+                ],
+                "ui": {},
+                "namespace": ["caseStudies", "postList", "skills"]
+              },
+              {
+                "type": "image",
+                "name": "image",
+                "label": "Image",
+                "required": true,
+                "namespace": ["caseStudies", "postList", "image"]
+              },
+              {
+                "type": "boolean",
+                "name": "comingSoon",
+                "label": "Coming soon",
+                "namespace": ["caseStudies", "postList", "comingSoon"]
+              }
+            ],
+            "ui": {},
+            "namespace": ["caseStudies", "postList"]
+          }
+        ],
+        "ui": { "allowedActions": { "create": false, "delete": false } },
+        "namespace": ["caseStudies"]
+      },
+      {
+        "name": "caseStudies_posts",
+        "label": "Case Studies Posts",
+        "path": "content/caseStudies_posts",
+        "fields": [
+          {
+            "type": "string",
+            "name": "title",
+            "label": "Title",
+            "isTitle": true,
+            "required": true,
+            "namespace": ["caseStudies_posts", "title"]
+          },
+          {
+            "type": "string",
+            "name": "subtitle",
+            "label": "Subtitle",
+            "required": true,
+            "namespace": ["caseStudies_posts", "subtitle"]
+          },
+          {
+            "type": "string",
+            "name": "summary",
+            "label": "Summary",
+            "required": true,
+            "namespace": ["caseStudies_posts", "summary"]
+          },
+          {
+            "type": "object",
+            "list": true,
+            "name": "sections",
+            "label": "Sections",
+            "templates": [
+              {
+                "name": "section",
+                "label": "Section",
+                "fields": [
+                  {
+                    "type": "string",
+                    "name": "title",
+                    "label": "Title",
+                    "namespace": [
+                      "caseStudies_posts",
+                      "sections",
+                      "section",
+                      "title"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "name": "heading",
+                    "label": "Heading",
+                    "namespace": [
+                      "caseStudies_posts",
+                      "sections",
+                      "section",
+                      "heading"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "list": true,
+                    "name": "blocks",
+                    "label": "Content",
+                    "templates": [
+                      {
+                        "name": "twoColumn",
+                        "label": "Two Column Content",
+                        "fields": [
+                          {
+                            "type": "rich-text",
+                            "name": "col1",
+                            "label": "Column 1",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "twoColumn",
+                              "col1"
+                            ]
+                          },
+                          {
+                            "type": "rich-text",
+                            "name": "col2",
+                            "label": "Column 2",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "twoColumn",
+                              "col2"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "twoColumn"
+                        ]
+                      },
+                      {
+                        "name": "threeColumn",
+                        "label": "Three Column Content",
+                        "fields": [
+                          {
+                            "type": "rich-text",
+                            "name": "col1",
+                            "label": "Column 1",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "threeColumn",
+                              "col1"
+                            ]
+                          },
+                          {
+                            "type": "rich-text",
+                            "name": "col2",
+                            "label": "Column 2",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "threeColumn",
+                              "col2"
+                            ]
+                          },
+                          {
+                            "type": "rich-text",
+                            "name": "col3",
+                            "label": "Column 3",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "threeColumn",
+                              "col3"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "threeColumn"
+                        ]
+                      }
+                    ],
+                    "namespace": [
+                      "caseStudies_posts",
+                      "sections",
+                      "section",
+                      "blocks"
+                    ]
+                  }
+                ],
+                "ui": {},
+                "namespace": ["caseStudies_posts", "sections", "section"]
+              }
+            ],
+            "namespace": ["caseStudies_posts", "sections"]
+          }
+        ],
+        "ui": {},
+        "namespace": ["caseStudies_posts"]
       }
     ],
     "config": {
@@ -449,7 +709,14 @@
     "DocumentConnection": {
       "type": "DocumentConnection",
       "resolveType": "multiCollectionDocumentList",
-      "collections": ["global", "home", "works", "works_posts"]
+      "collections": [
+        "global",
+        "home",
+        "works",
+        "works_posts",
+        "caseStudies",
+        "caseStudies_posts"
+      ]
     },
     "Node": { "type": "Node", "resolveType": "nodeDocument" },
     "DocumentNode": {
@@ -498,8 +765,8 @@
       "type": "Works_postsSectionsSectionBlocks",
       "resolveType": "unionData",
       "typeMap": {
-        "twoColumn": "Works_postsSectionsSectionBlocksTwoColumn",
-        "threeColumn": "Works_postsSectionsSectionBlocksThreeColumn"
+        "twoColumn": "CaseStudies_postsSectionsSectionBlocksTwoColumn",
+        "threeColumn": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
       }
     },
     "Works_postsSections": {
@@ -518,6 +785,43 @@
       "type": "Works_postsConnection",
       "resolveType": "collectionDocumentList",
       "collection": "works_posts"
+    },
+    "CaseStudies": {
+      "type": "CaseStudies",
+      "resolveType": "collectionDocument",
+      "collection": "caseStudies",
+      "createCaseStudies": "create",
+      "updateCaseStudies": "update"
+    },
+    "CaseStudiesConnection": {
+      "type": "CaseStudiesConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "caseStudies"
+    },
+    "CaseStudies_postsSectionsSectionBlocks": {
+      "type": "CaseStudies_postsSectionsSectionBlocks",
+      "resolveType": "unionData",
+      "typeMap": {
+        "twoColumn": "CaseStudies_postsSectionsSectionBlocksTwoColumn",
+        "threeColumn": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
+      }
+    },
+    "CaseStudies_postsSections": {
+      "type": "CaseStudies_postsSections",
+      "resolveType": "unionData",
+      "typeMap": { "section": "CaseStudies_postsSectionsSection" }
+    },
+    "CaseStudies_posts": {
+      "type": "CaseStudies_posts",
+      "resolveType": "collectionDocument",
+      "collection": "caseStudies_posts",
+      "createCaseStudies_posts": "create",
+      "updateCaseStudies_posts": "update"
+    },
+    "CaseStudies_postsConnection": {
+      "type": "CaseStudies_postsConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "caseStudies_posts"
     }
   },
   "graphql": {
@@ -1296,6 +1600,173 @@
                 "name": { "kind": "Name", "value": "Works_postsConnection" }
               }
             }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caseStudies" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudies" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caseStudiesConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "CaseStudiesFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudiesConnection" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caseStudies_posts" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudies_posts" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caseStudies_postsConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "CaseStudies_postsFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsConnection"
+                }
+              }
+            }
           }
         ]
       },
@@ -1333,6 +1804,22 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "Works_postsFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caseStudies" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudiesFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caseStudies_posts" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudies_postsFilter" }
             }
           }
         ]
@@ -1593,6 +2080,14 @@
           {
             "kind": "NamedType",
             "name": { "kind": "Name", "value": "Works_posts" }
+          },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "CaseStudies" }
+          },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "CaseStudies_posts" }
           },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Folder" } }
         ]
@@ -2855,7 +3350,7 @@
         "directives": [],
         "name": {
           "kind": "Name",
-          "value": "Works_postsSectionsSectionBlocksTwoColumn"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
         },
         "fields": [
           {
@@ -2884,7 +3379,7 @@
         "directives": [],
         "name": {
           "kind": "Name",
-          "value": "Works_postsSectionsSectionBlocksThreeColumn"
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
         },
         "fields": [
           {
@@ -2925,14 +3420,14 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "Works_postsSectionsSectionBlocksTwoColumn"
+              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
             }
           },
           {
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "Works_postsSectionsSectionBlocksThreeColumn"
+              "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
             }
           }
         ]
@@ -3091,7 +3586,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "Works_postsSectionsSectionBlocksTwoColumnFilter"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnFilter"
         },
         "fields": [
           {
@@ -3116,7 +3611,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "Works_postsSectionsSectionBlocksThreeColumnFilter"
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnFilter"
         },
         "fields": [
           {
@@ -3159,7 +3654,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "Works_postsSectionsSectionBlocksTwoColumnFilter"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnFilter"
               }
             }
           },
@@ -3170,7 +3665,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "Works_postsSectionsSectionBlocksThreeColumnFilter"
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnFilter"
               }
             }
           }
@@ -3339,6 +3834,751 @@
                 "name": {
                   "kind": "Name",
                   "value": "Works_postsConnectionEdges"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesPostListSkills" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesPostList" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "index" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "skills" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudiesPostListSkills" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudies" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudiesPostList" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesPostListSkillsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesPostListFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "index" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "NumberFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "skills" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudiesPostListSkillsFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BooleanFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudiesPostListFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudies" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudiesConnectionEdges"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "UnionTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocks"
+        },
+        "directives": [],
+        "types": [
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudies_postsSectionsSection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "heading" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "blocks" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsSectionsSectionBlocks"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "UnionTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudies_postsSections" },
+        "directives": [],
+        "types": [
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSection"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudies_posts" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "subtitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "summary" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "sections" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudies_postsSections" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "twoColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "threeColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "heading" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "blocks" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudies_postsSectionsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "section" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudies_postsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "subtitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "summary" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "sections" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudies_postsConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudies_posts" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudies_postsConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsConnectionEdges"
                 }
               }
             }
@@ -3794,6 +5034,152 @@
                 "name": { "kind": "Name", "value": "Works_posts" }
               }
             }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateCaseStudies" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "CaseStudiesMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudies" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createCaseStudies" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "CaseStudiesMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudies" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateCaseStudies_posts" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": {
+                      "kind": "Name",
+                      "value": "CaseStudies_postsMutation"
+                    }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudies_posts" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createCaseStudies_posts" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": {
+                      "kind": "Name",
+                      "value": "CaseStudies_postsMutation"
+                    }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudies_posts" }
+              }
+            }
           }
         ]
       },
@@ -3831,6 +5217,22 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "Works_postsMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caseStudies" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudiesMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caseStudies_posts" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudies_postsMutation" }
             }
           },
           {
@@ -3877,6 +5279,22 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "Works_postsMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caseStudies" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudiesMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caseStudies_posts" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudies_postsMutation" }
             }
           }
         ]
@@ -4187,7 +5605,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "Works_postsSectionsSectionBlocksTwoColumnMutation"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnMutation"
         },
         "fields": [
           {
@@ -4212,7 +5630,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "Works_postsSectionsSectionBlocksThreeColumnMutation"
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnMutation"
         },
         "fields": [
           {
@@ -4255,7 +5673,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "Works_postsSectionsSectionBlocksTwoColumnMutation"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnMutation"
               }
             }
           },
@@ -4266,7 +5684,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "Works_postsSectionsSectionBlocksThreeColumnMutation"
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnMutation"
               }
             }
           }
@@ -4366,6 +5784,253 @@
                 "name": {
                   "kind": "Name",
                   "value": "Works_postsSectionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudiesPostListSkillsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesPostListMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "index" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Float" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "skills" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudiesPostListSkillsMutation"
+                }
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudiesPostListMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "twoColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "threeColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnMutation"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "heading" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "blocks" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsSectionsSectionBlocksMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "section" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionMutation"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudies_postsMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "subtitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "summary" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "sections" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsSectionsMutation"
                 }
               }
             }
