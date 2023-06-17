@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps = async () => {
   let global;
 
   try {
-    global = await client.queries.global({ relativePath: `content.mdx` });
+    global = await client.queries.global({ relativePath: `global.mdx` });
   } catch {
     // swallow errors related to document creation
   }

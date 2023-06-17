@@ -116,7 +116,10 @@
             "namespace": ["global", "footerCredits"]
           }
         ],
-        "ui": { "allowedActions": { "create": false, "delete": false } },
+        "ui": {
+          "allowedActions": { "create": false, "delete": false },
+          "global": true
+        },
         "namespace": ["global"]
       },
       {
@@ -186,14 +189,8 @@
         "name": "works",
         "label": "Works",
         "path": "content/works",
+        "format": "mdx",
         "fields": [
-          {
-            "type": "number",
-            "name": "index",
-            "label": "Index",
-            "required": true,
-            "namespace": ["works", "index"]
-          },
           {
             "type": "string",
             "name": "title",
@@ -203,38 +200,74 @@
             "namespace": ["works", "title"]
           },
           {
-            "type": "string",
-            "name": "description",
-            "label": "Description",
-            "required": true,
-            "namespace": ["works", "description"]
-          },
-          {
             "type": "object",
-            "name": "skills",
-            "label": "Skills",
+            "name": "postList",
+            "label": "Post List",
             "list": true,
             "fields": [
               {
                 "type": "string",
-                "name": "name",
-                "label": "Name",
+                "name": "url",
+                "label": "URL/Path",
+                "namespace": ["works", "postList", "url"]
+              },
+              {
+                "type": "number",
+                "name": "index",
+                "label": "Index",
                 "required": true,
-                "namespace": ["works", "skills", "name"]
+                "namespace": ["works", "postList", "index"]
+              },
+              {
+                "type": "string",
+                "name": "title",
+                "label": "Title",
+                "required": true,
+                "namespace": ["works", "postList", "title"]
+              },
+              {
+                "type": "string",
+                "name": "description",
+                "label": "Description",
+                "required": true,
+                "namespace": ["works", "postList", "description"]
+              },
+              {
+                "type": "object",
+                "name": "skills",
+                "label": "Skills",
+                "list": true,
+                "fields": [
+                  {
+                    "type": "string",
+                    "name": "name",
+                    "label": "Name",
+                    "required": true,
+                    "namespace": ["works", "postList", "skills", "name"]
+                  }
+                ],
+                "ui": {},
+                "namespace": ["works", "postList", "skills"]
+              },
+              {
+                "type": "image",
+                "name": "image",
+                "label": "Image",
+                "required": true,
+                "namespace": ["works", "postList", "image"]
+              },
+              {
+                "type": "boolean",
+                "name": "comingSoon",
+                "label": "Coming soon",
+                "namespace": ["works", "postList", "comingSoon"]
               }
             ],
             "ui": {},
-            "namespace": ["works", "skills"]
-          },
-          {
-            "type": "image",
-            "name": "image",
-            "label": "Image",
-            "required": true,
-            "namespace": ["works", "image"]
+            "namespace": ["works", "postList"]
           }
         ],
-        "ui": {},
+        "ui": { "allowedActions": { "create": false, "delete": false } },
         "namespace": ["works"]
       },
       {
@@ -2399,7 +2432,7 @@
         "kind": "ObjectTypeDefinition",
         "interfaces": [],
         "directives": [],
-        "name": { "kind": "Name", "value": "WorksSkills" },
+        "name": { "kind": "Name", "value": "WorksPostListSkills" },
         "fields": [
           {
             "kind": "FieldDefinition",
@@ -2417,16 +2450,19 @@
       },
       {
         "kind": "ObjectTypeDefinition",
-        "interfaces": [
-          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Document" }
-          }
-        ],
+        "interfaces": [],
         "directives": [],
-        "name": { "kind": "Name", "value": "Works" },
+        "name": { "kind": "Name", "value": "WorksPostList" },
         "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
           {
             "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "index" },
@@ -2471,7 +2507,7 @@
               "kind": "ListType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "WorksSkills" }
+                "name": { "kind": "Name", "value": "WorksPostListSkills" }
               }
             }
           },
@@ -2484,6 +2520,53 @@
               "type": {
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Works" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "WorksPostList" }
               }
             }
           },
@@ -2592,7 +2675,7 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "WorksSkillsFilter" },
+        "name": { "kind": "Name", "value": "WorksPostListSkillsFilter" },
         "fields": [
           {
             "kind": "InputValueDefinition",
@@ -2606,8 +2689,16 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "WorksFilter" },
+        "name": { "kind": "Name", "value": "WorksPostListFilter" },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "index" },
@@ -2637,7 +2728,7 @@
             "name": { "kind": "Name", "value": "skills" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "WorksSkillsFilter" }
+              "name": { "kind": "Name", "value": "WorksPostListSkillsFilter" }
             }
           },
           {
@@ -2646,6 +2737,36 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BooleanFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "WorksFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "WorksPostListFilter" }
             }
           }
         ]
@@ -3957,7 +4078,7 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "WorksSkillsMutation" },
+        "name": { "kind": "Name", "value": "WorksPostListSkillsMutation" },
         "fields": [
           {
             "kind": "InputValueDefinition",
@@ -3971,8 +4092,16 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "WorksMutation" },
+        "name": { "kind": "Name", "value": "WorksPostListMutation" },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "index" },
@@ -4004,7 +4133,10 @@
               "kind": "ListType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "WorksSkillsMutation" }
+                "name": {
+                  "kind": "Name",
+                  "value": "WorksPostListSkillsMutation"
+                }
               }
             }
           },
@@ -4014,6 +4146,39 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "WorksMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "WorksPostListMutation" }
+              }
             }
           }
         ]

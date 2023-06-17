@@ -197,6 +197,7 @@ export default defineConfig({
             create: false,
             delete: false,
           },
+          global: true,
         },
       },
       {
@@ -246,9 +247,10 @@ export default defineConfig({
           },
         ],
         ui: {
-          router: () => {
-            // navigate to the home page
-            return "/";
+          router: ({ document }) => {
+            if (document._sys.filename === "home") {
+              return "/";
+            }
           },
           allowedActions: {
             create: false,
@@ -260,13 +262,8 @@ export default defineConfig({
         name: "works",
         label: "Works",
         path: "content/works",
+        format: "mdx",
         fields: [
-          {
-            type: "number",
-            name: "index",
-            label: "Index",
-            required: true,
-          },
           {
             type: "string",
             name: "title",
@@ -275,40 +272,81 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "string",
-            name: "description",
-            label: "Description",
-            required: true,
-          },
-          {
             type: "object",
-            name: "skills",
-            label: "Skills",
+            name: "postList",
+            label: "Post List",
             list: true,
             fields: [
               {
                 type: "string",
-                name: "name",
-                label: "Name",
+                name: "url",
+                label: "URL/Path",
+              },
+              {
+                type: "number",
+                name: "index",
+                label: "Index",
                 required: true,
+              },
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+                required: true,
+              },
+              {
+                type: "object",
+                name: "skills",
+                label: "Skills",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "name",
+                    label: "Name",
+                    required: true,
+                  },
+                ],
+                ui: {
+                  itemProps: (item) => {
+                    return { label: item?.name };
+                  },
+                },
+              },
+              {
+                type: "image",
+                name: "image",
+                label: "Image",
+                required: true,
+              },
+              {
+                type: "boolean",
+                name: "comingSoon",
+                label: "Coming soon",
               },
             ],
             ui: {
               itemProps: (item) => {
-                return { label: item?.name };
+                return { label: item?.title };
               },
             },
           },
-          {
-            type: "image",
-            name: "image",
-            label: "Image",
-            required: true,
-          },
         ],
         ui: {
-          router: () => {
-            return "/works";
+          router: ({ document }) => {
+            if (document._sys.filename === "works") {
+              return "/works";
+            }
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
           },
         },
       },

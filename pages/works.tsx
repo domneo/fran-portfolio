@@ -1,321 +1,179 @@
+import classNames from "classnames";
 import Layout from "components/Layout";
+import { Heading } from "components/common/Heading";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "styles/Works.module.scss";
 import client from "tina/__generated__/client";
-import { GlobalQuery } from "tina/__generated__/types";
+import { GlobalQuery, WorksQuery } from "tina/__generated__/types";
 import { useTina } from "tinacms/dist/react";
 import { v4 as uuidv4 } from "uuid";
 
-const data = [
-  {
-    id: uuidv4(),
-    number: (
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M70.9877 141.21H73.9877C77.4877 141.21 79.7877 139.91 80.8877 137.31C81.9877 134.61 82.5377 128.01 82.5377 117.51V58.8599C82.5377 54.0599 81.7377 51.2599 80.1377 50.4599C78.6377 49.5599 75.6377 49.8599 71.1377 51.3599C70.6377 51.5599 70.2877 51.4099 70.0877 50.9099C69.8877 50.3099 70.0877 49.9599 70.6877 49.8599C74.9877 48.5599 79.2377 46.8599 83.4377 44.7599C87.7377 42.5599 91.4877 40.1599 94.6877 37.5599C94.8877 37.3599 95.3877 37.4099 96.1877 37.7099C96.9877 37.9099 97.3877 38.2099 97.3877 38.6099V117.51C97.3877 128.01 97.9377 134.61 99.0377 137.31C100.238 139.91 102.638 141.21 106.238 141.21H109.388C109.788 141.21 109.988 141.46 109.988 141.96C109.988 142.36 109.788 142.56 109.388 142.56C108.488 142.56 107.188 142.56 105.488 142.56C103.888 142.46 101.238 142.36 97.5377 142.26C95.1377 142.16 93.5377 142.11 92.7377 142.11C91.9377 142.01 91.3377 141.96 90.9377 141.96C90.5377 141.96 89.8877 142.01 88.9877 142.11C88.0877 142.11 86.3377 142.16 83.7377 142.26C79.7377 142.36 76.8377 142.46 75.0377 142.56C73.3377 142.56 71.9877 142.56 70.9877 142.56C70.5877 142.56 70.3877 142.36 70.3877 141.96C70.3877 141.46 70.5877 141.21 70.9877 141.21Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    // link: "/works/fortress",
-    title: "Fortress: A Design System",
-    description:
-      "A full fledged design system from the ground up that utilises component properties for max efficiency. Presently working on the end-to-end process of implementing the system. I think it's quite solid lah.",
-    concepts: [
-      "Design System Creation & Maintenance",
-      "Wireframing",
-      "Prototyping",
-      "End-to-end",
-    ],
-    image: "/images/fortress-hero.jpg",
-    comingSoon: true,
-  },
-  {
-    id: uuidv4(),
-    number: (
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M101.539 143.1C93.2395 143 87.3895 142.95 83.9895 142.95C80.5895 142.95 78.1895 142.95 76.7895 142.95C74.3895 142.95 71.5895 142.95 68.3895 142.95C65.1895 143.05 60.8395 143.15 55.3395 143.25C53.6395 143.35 52.4895 143.4 51.8895 143.4C51.3895 143.4 51.0395 143.4 50.8395 143.4C50.7395 142.1 50.6895 140.8 50.6895 139.5C50.6895 138.1 50.7895 137.3 50.9895 137.1C57.5895 131.7 63.2895 126.95 68.0895 122.85C72.8895 118.65 77.4895 114.5 81.8895 110.4C92.4895 100.5 99.6895 92.1 103.489 85.2C107.389 78.3 109.339 70.7 109.339 62.4C109.339 54.5 107.489 48.5 103.789 44.4C100.189 40.2 94.9395 38.1 88.0395 38.1C81.7395 38.1 76.5395 39.2 72.4395 41.4C68.4395 43.6 65.1895 47.1 62.6895 51.9C60.7895 55.9 59.3895 60.65 58.4895 66.15C57.5895 71.65 57.1895 78.25 57.2895 85.95C57.2895 86.55 57.0395 86.85 56.5395 86.85C56.0395 86.85 55.7895 86.55 55.7895 85.95C55.7895 81.95 55.5895 77.55 55.1895 72.75C54.8895 67.95 54.3395 61.65 53.5395 53.85C53.2395 51.25 53.0395 49.5 52.9395 48.6C52.8395 47.7 52.7895 47.05 52.7895 46.65C52.7895 45.65 52.9395 44.9 53.2395 44.4C53.5395 43.9 54.0395 43.6 54.7395 43.5C65.8395 40.3 73.5395 38.35 77.8395 37.65C82.2395 36.95 86.6395 36.6 91.0395 36.6C101.839 36.6 110.239 38.8 116.239 43.2C122.339 47.5 125.389 53.5 125.389 61.2C125.389 65 124.189 68.95 121.789 73.05C119.489 77.05 115.539 81.8 109.939 87.3C108.239 89 106.289 90.85 104.089 92.85C101.989 94.75 96.2395 99.9 86.8395 108.3C79.9395 114.5 74.9395 119.05 71.8395 121.95C68.7395 124.85 65.8895 127.6 63.2895 130.2C76.0895 130.2 85.6895 130.2 92.0895 130.2C98.4895 130.1 103.439 130 106.939 129.9C112.839 129.8 117.339 128.3 120.439 125.4C123.639 122.5 125.589 118.05 126.289 112.05L127.489 103.95C127.589 103.45 127.939 103.2 128.539 103.2C129.139 103.2 129.389 103.5 129.289 104.1L127.639 115.05C126.339 124.25 125.339 131 124.639 135.3C123.939 139.6 123.439 142 123.139 142.5C122.839 142.8 122.139 143 121.039 143.1C120.039 143.2 118.489 143.25 116.389 143.25C115.789 143.25 114.539 143.25 112.639 143.25C110.739 143.25 107.039 143.2 101.539 143.1Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    // link: "/works/info-hierarchy",
-    title: "Information Hierarchy: What's in a Product Detail Page?",
-    description:
-      "Finding a balance between business needs and visitors' wants of what information types and its content, and how can they be represented on an e-commerce site.",
-    concepts: [
-      "Modified-Delphi + Open Card Sorting Research",
-      "Competitive Analysis",
-      "Sketches",
-      "Wireframes",
-      "Prototyping",
-      "Scalability",
-    ],
-    image: "/images/info-hierarchy-hero.jpg",
-    comingSoon: true,
-  },
-  {
-    id: uuidv4(),
-    number: (
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M85.275 144.3C81.375 144.3 76.725 143.85 71.325 142.95C65.925 142.15 61.075 141.1 56.775 139.8C55.875 139.5 55.475 139.15 55.575 138.75C55.675 138.35 56.075 138.2 56.775 138.3C59.775 139.1 62.775 139.7 65.775 140.1C68.875 140.5 71.825 140.7 74.625 140.7C86.125 140.7 94.825 138.15 100.725 133.05C106.725 127.85 109.725 120.35 109.725 110.55C109.725 104.15 107.775 98.65 103.875 94.05C99.975 89.45 95.475 87.15 90.375 87.15C88.375 87.15 86.375 87.65 84.375 88.65C82.375 89.65 79.825 91.65 76.725 94.65C74.925 96.25 73.625 97.3 72.825 97.8C72.125 98.3 71.475 98.55 70.875 98.55C69.575 98.55 68.775 97.9 68.475 96.6C68.175 95.2 68.325 93.6 68.925 91.8C80.025 89 88.625 84.7 94.725 78.9C100.825 73.1 103.875 66.25 103.875 58.35C103.875 51.75 102.225 46.6 98.925 42.9C95.625 39.2 90.925 37.35 84.825 37.35C81.125 37.35 77.675 38.15 74.475 39.75C71.375 41.2499 68.625 43.5 66.225 46.5C63.425 50.1 61.275 54.55 59.775 59.85C58.275 65.15 57.525 71.0999 57.525 77.7C57.525 78.4 57.275 78.75 56.775 78.75C56.375 78.75 56.175 78.4 56.175 77.7C56.175 73.5 56.075 69.3 55.875 65.1C55.675 60.7999 55.275 55.7999 54.675 50.1C54.575 48.5 54.475 47.45 54.375 46.95C54.375 46.45 54.375 46.05 54.375 45.75C54.375 44.85 54.525 44.15 54.825 43.65C55.125 43.15 55.525 42.85 56.025 42.7499C62.225 40.55 68.375 38.85 74.475 37.65C80.575 36.35 85.825 35.7 90.225 35.7C99.225 35.7 106.375 37.5 111.675 41.1C116.975 44.7 119.675 49.55 119.775 55.65C119.875 60.15 117.525 64.65 112.725 69.15C108.025 73.65 99.225 79.45 86.325 86.55C88.925 85.65 91.175 85.05 93.075 84.75C95.075 84.35 97.025 84.15 98.925 84.15C107.025 84.15 113.475 86.55 118.275 91.35C123.175 96.05 125.625 102.4 125.625 110.4C125.625 120.4 121.925 128.55 114.525 134.85C107.225 141.15 97.475 144.3 85.275 144.3Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    // link: "/works/modular-cms",
-    title: "Modular CMS: So you wanna self-author content babes?",
-    description:
-      "Designing versatile components that enable content creation teams to build the microsites they want, after we sit down for some workshops.",
-    concepts: [
-      "User interviews & Research",
-      "Usability Tests",
-      "Wireframing",
-      "Design System",
-      "Prototyping",
-    ],
-    image: "/images/modular-cms-hero.jpg",
-    comingSoon: true,
-  },
-  {
-    id: uuidv4(),
-    number: (
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M85.8049 138.951C86.5049 138.051 87.0049 136.651 87.3049 134.751C87.6049 132.851 87.7549 129.501 87.7549 124.701V111.651H59.2549C56.9549 111.651 54.8549 111.701 52.9549 111.801C51.0549 111.901 49.3549 112.001 47.8549 112.101C46.3549 112.201 45.7049 111.601 45.9049 110.301C46.1049 108.901 47.2049 107.001 49.2049 104.601C57.8049 93.9011 65.2049 84.2011 71.4049 75.5011C77.7049 66.7011 85.4549 55.2011 94.6549 41.0011C95.6549 39.7011 96.4549 38.8011 97.0549 38.3011C97.7549 37.8011 98.5549 37.4511 99.4549 37.2511C103.155 36.3511 105.705 36.5511 107.105 37.8511C108.605 39.1511 108.305 41.2511 106.205 44.1511C105.905 44.7511 105.355 45.6511 104.555 46.8511C103.855 47.9511 103.355 48.8511 103.055 49.5511C102.555 50.5511 102.155 51.5511 101.855 52.5511C101.655 53.4511 101.555 54.4511 101.555 55.5511V101.751H110.705C117.005 101.651 121.805 100.201 125.105 97.4011C128.505 94.6011 130.705 90.2011 131.705 84.2011L132.605 78.6511C132.705 78.1511 133.005 77.9511 133.505 78.0511C134.005 78.1511 134.205 78.4511 134.105 78.9511L132.905 86.6011C131.605 94.5011 130.555 100.501 129.755 104.601C129.055 108.601 128.655 110.701 128.555 110.901C128.355 111.101 127.505 111.301 126.005 111.501C124.505 111.601 122.555 111.651 120.155 111.651H101.555V124.251C101.555 129.151 101.655 132.501 101.855 134.301C102.055 136.101 102.405 137.451 102.905 138.351C103.505 139.751 104.555 140.701 106.055 141.201C107.655 141.601 110.905 141.851 115.805 141.951C116.305 141.951 116.555 142.201 116.555 142.701C116.555 143.101 116.305 143.301 115.805 143.301C114.905 143.301 113.505 143.301 111.605 143.301C109.805 143.301 106.755 143.251 102.455 143.151C99.6549 143.051 97.7549 143.001 96.7549 143.001C95.8549 143.001 95.2049 143.001 94.8049 143.001C94.5049 143.001 93.8049 143.001 92.7049 143.001C91.7049 143.001 89.7049 143.051 86.7049 143.151C82.0049 143.151 78.6049 143.201 76.5049 143.301C74.5049 143.301 73.0549 143.301 72.1549 143.301C71.7549 143.301 71.5549 143.101 71.5549 142.701C71.5549 142.201 71.7549 141.951 72.1549 141.951C77.1549 141.851 80.4549 141.601 82.0549 141.201C83.7549 140.801 85.0049 140.051 85.8049 138.951ZM73.6549 78.0511C68.6549 83.9511 64.7549 88.5511 61.9549 91.8511C59.1549 95.1511 56.4049 98.4511 53.7049 101.751H87.7549V61.5511C85.9549 63.6511 84.1049 65.8511 82.2049 68.1511C80.3049 70.4511 77.4549 73.7511 73.6549 78.0511Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    link: "/works/symplicured",
-    title: "Symplicured: Symptoms, checked.",
-    description:
-      "Revitalising the traditional online health symptom checker experience and diagnosis process",
-    concepts: [
-      "User interviews & Research",
-      "Competitive Analysis",
-      "Usability Tests",
-      "Sketches",
-      "Design System",
-      "Prototyping",
-    ],
-    image: "/images/symplicured-hero.jpg",
-  },
-  {
-    id: uuidv4(),
-    number: (
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M77.1632 139.755C87.1292 139.755 94.9309 137.087 100.568 131.752C106.206 126.316 109.024 119.118 109.024 110.159C109.024 102.609 106.608 96.4176 101.776 91.5856C96.9442 86.6529 90.7029 84.1866 83.0522 84.1866C79.4282 84.1866 75.9049 84.9416 72.4822 86.4516C69.0595 87.9616 64.4792 90.9816 58.7412 95.5116C58.3385 95.7129 57.6842 95.6626 56.7782 95.3606C55.8722 94.9579 55.4192 94.5552 55.4192 94.1526L55.1172 45.8326C55.1172 45.0272 56.8285 43.3159 60.2512 40.6986C63.7745 37.9806 65.9892 36.6216 66.8952 36.6216C67.3985 36.6216 68.2039 36.6216 69.3112 36.6216C70.4185 36.6216 72.3815 36.6719 75.2002 36.7726C79.8309 36.7726 83.3039 36.8229 85.6192 36.9236C87.9345 36.9236 89.8975 36.9236 91.5082 36.9236H115.366C117.883 36.9236 119.594 36.9739 120.5 37.0746C121.406 37.1753 121.859 37.3766 121.859 37.6786C121.859 37.9806 121.809 38.5846 121.708 39.4906C121.608 40.2959 121.356 41.9066 120.953 44.3226C120.148 49.9599 119.594 54.2382 119.292 57.1576C118.99 60.0769 118.789 62.4929 118.688 64.4056L118.084 73.0126C118.084 73.5159 117.833 73.8179 117.329 73.9186C116.927 73.9186 116.725 73.6669 116.725 73.1636L117.329 64.4056C117.732 58.0636 116.776 53.8859 114.46 51.8726C112.145 49.7586 107.363 48.7016 100.115 48.7016H69.0092L65.9892 89.0186C71.2239 85.2939 75.8545 82.6262 79.8812 81.0156C83.9079 79.4049 87.8339 78.5996 91.6592 78.5996C101.927 78.5996 110.031 81.3679 115.97 86.9046C121.91 92.3406 124.879 99.7396 124.879 109.102C124.879 119.168 121.155 127.423 113.705 133.866C106.357 140.208 96.6925 143.379 84.7132 143.379C81.2905 143.379 77.1632 142.926 72.3312 142.02C67.5999 141.214 62.9189 140.157 58.2882 138.849C57.3822 138.547 56.9795 138.194 57.0802 137.792C57.1809 137.389 57.5835 137.238 58.2882 137.339C61.2075 138.043 64.3282 138.647 67.6502 139.151C71.0729 139.553 74.2439 139.755 77.1632 139.755Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    link: "/works/muji",
-    title: "MUJI: e-commerce > e-catalogue",
-    description:
-      "Moving from an e-catalogue into an e-commerce site and streamlining the overall navigation experience with a revamped information architecture",
-    concepts: [
-      "User interviews & Research",
-      "Competitive Analysis",
-      "Usability Tests",
-      "Sketches",
-      "Design System",
-      "Prototyping",
-    ],
-    image: "/images/muji-hero.jpg",
-  },
-  {
-    id: uuidv4(),
-    number: (
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M87.9602 143.85C77.6922 143.85 69.1859 139.975 62.4412 132.223C55.6966 124.472 52.3242 114.355 52.3242 101.872C52.3242 88.8862 57.3576 76.0512 67.4242 63.3672C77.4909 50.6832 90.2756 41.6232 105.778 36.1872C106.181 36.0865 106.483 36.1872 106.684 36.4892C106.886 36.7912 106.785 37.0428 106.382 37.2442C94.3022 41.9755 84.9402 49.7772 78.2962 60.6492C71.7529 71.4205 68.4812 83.9032 68.4812 98.0972C68.4812 108.869 71.1992 118.18 76.6352 126.032C82.0712 133.783 88.5139 137.659 95.9632 137.659C98.4799 137.659 100.745 137.458 102.758 137.055C104.872 136.653 106.835 135.998 108.647 135.092C110.459 131.972 111.718 128.951 112.422 126.032C113.228 123.012 113.63 119.388 113.63 115.16C113.63 105.698 111.365 98.1475 106.835 92.5102C102.305 86.7722 96.4162 83.9032 89.1682 83.9032C86.9536 83.9032 84.4369 84.4568 81.6182 85.5642C78.9002 86.5708 76.6856 87.8795 74.9742 89.4902C74.5716 89.6915 74.2696 89.6915 74.0682 89.4902C73.8669 89.1882 73.8669 88.9365 74.0682 88.7352C77.5916 85.4132 81.6182 82.6448 86.1482 80.4302C90.7789 78.2155 94.7552 77.1082 98.0772 77.1082C106.936 77.1082 114.083 79.7758 119.519 85.1112C124.955 90.3458 127.673 97.4428 127.673 106.402C127.673 110.932 126.616 115.362 124.502 119.69C122.388 123.918 118.815 128.599 113.781 133.733C108.345 137.156 103.463 139.723 99.1342 141.434C94.9062 143.045 91.1816 143.85 87.9602 143.85Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    link: "/works/kickstarter",
-    title: "Kickstarter: Levelling up the Campaign",
-    description:
-      "Enhancing the project backing experience with new info-centric features dreamt up by backers for backers",
-    concepts: [
-      "User interviews & Research",
-      "Usability Tests",
-      "Wireframing",
-      "Design System",
-      "Prototyping",
-    ],
-    image: "/images/ks-hero.jpg",
-  },
-  {
-    id: uuidv4(),
-    number: (
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M91.8384 141.869C88.4157 141.869 86.1004 141.869 84.8924 141.869C83.6844 141.768 82.879 141.718 82.4764 141.718C82.1744 141.718 81.52 141.718 80.5134 141.718C79.6074 141.718 77.7954 141.768 75.0774 141.869C70.95 141.969 68.0307 142.02 66.3194 142.02C64.608 142.12 63.3497 142.171 62.5444 142.171C61.9404 142.171 61.6384 141.919 61.6384 141.416C61.739 140.912 62.0914 140.661 62.6954 140.661H66.6214C70.7487 140.761 74.7754 138.446 78.7014 133.715C82.728 128.883 87.107 121.182 91.8384 110.612L102.408 87.5086C106.334 79.0526 109.455 72.1569 111.77 66.8216C114.086 61.3856 116.099 56.5536 117.81 52.3256H77.7954C69.2387 52.3256 63.853 53.1813 61.6384 54.8926C59.4237 56.6039 58.1654 60.6809 57.8634 67.1236L57.1084 80.5626C57.1084 81.3679 56.8064 81.7706 56.2024 81.7706C55.5984 81.6699 55.3467 81.2169 55.4474 80.4116L56.6554 63.4996C56.756 61.6876 56.8567 59.4729 56.9574 56.8556C57.058 54.2383 57.1587 50.4633 57.2594 45.5306C57.2594 43.0139 57.2594 41.3529 57.2594 40.5476C57.36 39.6416 57.4104 39.0376 57.4104 38.7356C57.511 38.5343 58.0144 38.3833 58.9204 38.2826C59.8264 38.1819 61.3867 38.1316 63.6014 38.1316H83.8354C85.144 38.1316 87.6104 38.1316 91.2344 38.1316C94.8584 38.0309 101.049 37.9806 109.807 37.9806C114.941 37.8799 118.314 37.8296 119.924 37.8296C121.535 37.8296 122.542 37.8296 122.944 37.8296C123.548 37.8296 124.001 39.5913 124.303 43.1146C124.706 46.6379 124.656 48.7016 124.152 49.3056C120.327 56.0503 116.753 62.5936 113.431 68.9356C110.109 75.2776 106.938 81.7203 103.918 88.2636L93.4994 111.367C91.788 114.991 90.4794 118.514 89.5734 121.937C88.768 125.359 88.3654 128.53 88.3654 131.45C88.3654 134.47 89.221 136.785 90.9324 138.396C92.6437 140.006 95.1604 140.812 98.4824 140.812C98.9857 140.812 99.489 140.812 99.9924 140.812C100.596 140.711 101.301 140.61 102.106 140.51C102.408 140.409 102.61 140.359 102.71 140.359C102.811 140.359 102.912 140.359 103.012 140.359C103.314 140.359 103.566 140.459 103.767 140.661C103.969 140.761 104.069 140.963 104.069 141.265C104.069 141.667 103.918 141.919 103.616 142.02C103.314 142.12 102.811 142.171 102.106 142.171C101.603 142.171 100.647 142.12 99.2374 142.02C97.9287 142.02 95.4624 141.969 91.8384 141.869Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    link: "/works/compawnion",
-    title: "Compawnion: adoption streamlined",
-    description:
-      "Making information easily accessible while reducing the administrative side of pet adoption in Singapore (🐣 My debut UIUX project!)",
-    concepts: [
-      "User interviews & Research",
-      "Usability Tests",
-      "Sketches",
-      "Wireframing",
-      "Prototyping",
-    ],
-    image: "/images/compawnion-hero.jpg",
-  },
-];
-
 export const getStaticProps: GetStaticProps = async () => {
   let global;
+  let works;
 
   try {
-    global = await client.queries.global({ relativePath: `content.mdx` });
+    global = await client.queries.global({ relativePath: `global.mdx` });
+    works = await client.queries.works({ relativePath: `works.mdx` });
   } catch {
     // swallow errors related to document creation
   }
 
   return {
-    props: { global },
+    props: { global, works },
   };
 };
 
+interface WorksImageProps {
+  image: string;
+  title: string;
+  comingSoon?: boolean | null;
+  number?: number;
+  imageClass: string;
+  isVisible?: boolean | null;
+}
+const WorksImage = ({
+  image,
+  title,
+  comingSoon,
+  number,
+  imageClass,
+  isVisible,
+}: WorksImageProps) => (
+  <div
+    className={classNames(imageClass, {
+      [styles.isVisible]: isVisible,
+    })}
+  >
+    <Image
+      src={image}
+      alt={title}
+      fill
+      sizes={"(min-width: 992px) 80vw, 180vw"}
+      style={{
+        objectFit: "cover",
+        objectPosition: "center",
+      }}
+      priority
+    />
+    {comingSoon && (
+      <div className={styles.comingSoon}>
+        <p className="w-100 mb-4 h2 text-white text-center">
+          Case study coming soon
+        </p>
+      </div>
+    )}
+    {number && (
+      <div className={styles.numberOverlay}>
+        <div className={`${styles.number} h1 medium text-white`}>{number}</div>
+      </div>
+    )}
+  </div>
+);
+
 export default function Works({
   global,
+  works,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { data: globalData } = useTina<GlobalQuery>(global);
+  const { data: worksData } = useTina<WorksQuery>(works);
+  const { title, postList } = worksData.works;
   const [focusedItem, setFocusedItem] = useState(0);
 
   return (
     <Layout data={globalData} showQuickActions={false}>
-      <div className="container">
-        <div className="row align-items-stretch justify-content-center">
-          <div className="col-lg-7 px-5 py-5 my-5 d-flex flex-column justify-content-center">
-            {data &&
-              data.length > 0 &&
-              data.map((item, index) => (
-                <Link
-                  key={item.id}
-                  href={item.link ?? ""}
-                  className={`${styles.link} d-flex align-items-center flex-column flex-md-row mb-5`}
-                  style={{
-                    cursor: item.link ? "pointer" : "help",
-                  }}
-                  onClick={(event) => {
-                    if (!item.link) event.preventDefault();
-                  }}
-                  onMouseEnter={() => setFocusedItem(index + 1)}
-                  onMouseLeave={() => setFocusedItem(0)}
-                  onFocus={() => setFocusedItem(index + 1)}
-                  onBlur={() => setFocusedItem(0)}
-                >
-                  <div className="flex-shrink-0">{item.number}</div>
-                  <div>
-                    <h5 className="text-platinum mb-2">{item.title}</h5>
-                    <p className="mb-2">
-                      <small>{item.description}</small>
-                    </p>
-                    <p className={`caption mb-0 ${styles.caption}`}>
-                      {item.concepts.map((concept, index) => (
-                        <span key={concept} className="d-inline-block">
-                          {index !== 0 && <span className="mx-1">•</span>}
-                          {concept}
-                        </span>
-                      ))}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+      <div className="container-xxl">
+        <div className={`${styles.header} row justify-content-center`}>
+          <div className="col-max-10">
+            <Heading level={1}>{title}</Heading>
           </div>
-          <div className="col-lg-5 px-5">
-            <div className={styles.imagesContainer}>
-              {data &&
-                data.length > 0 &&
-                data.map((item, index) => {
-                  const isVisible = focusedItem === index + 1;
-                  return (
-                    <div
-                      key={item.id}
-                      className={`${styles.image} ${isVisible ? "" : "d-none"}`}
-                    >
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        sizes={"(min-width: 992px) 80vw, 180vw"}
-                        style={{ objectFit: "cover", objectPosition: "center" }}
-                        priority
-                      />
-                      {item.comingSoon && (
+        </div>
+        <div className={`${styles.body} row justify-content-center`}>
+          <div className="col-lg-7 col-max-6">
+            <div className={styles.carousel}>
+              {postList &&
+                postList.length > 0 &&
+                postList.map((post, index) => {
+                  if (post) {
+                    return (
+                      <Link
+                        key={uuidv4()}
+                        href={post.url ?? ""}
+                        className={styles.link}
+                        style={{ cursor: post.url ? "pointer" : "help" }}
+                        onClick={(event) => {
+                          if (!post.url) event.preventDefault();
+                        }}
+                        onMouseEnter={() => setFocusedItem(index + 1)}
+                        onMouseLeave={() => setFocusedItem(0)}
+                        onFocus={() => setFocusedItem(index + 1)}
+                        onBlur={() => setFocusedItem(0)}
+                      >
+                        <div className={styles.sliderImages}>
+                          <WorksImage
+                            image={post.image}
+                            title={post.title}
+                            comingSoon={post.comingSoon}
+                            number={post.index}
+                            imageClass={styles.sliderImage}
+                          />
+                        </div>
                         <div
-                          className="position-absolute h-100 w-100 d-flex align-items-end"
-                          style={{
-                            zIndex: 1,
-                            background:
-                              "linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 42.5%, rgba(17, 17, 17, 0) 56.69%, #111111 100%)",
-                          }}
+                          className={`${styles.number} h1 medium d-none d-lg-flex`}
                         >
-                          <p className="w-100 mb-4 display-5 text-center">
-                            Case study coming soon
+                          {post.index}
+                        </div>
+                        <div>
+                          <p className="semibold allcaps mb-2">{post.title}</p>
+                          <p className="caption light mb-3">
+                            {post.description}
+                          </p>
+                          <p className="caption light mb-0">
+                            {post.skills?.map((skill, index) => {
+                              if (skill) {
+                                return (
+                                  <span
+                                    key={skill.name}
+                                    className="d-inline-block"
+                                  >
+                                    {index !== 0 && (
+                                      <span className="mx-1">•</span>
+                                    )}
+                                    {skill.name}
+                                  </span>
+                                );
+                              }
+                              return null;
+                            })}
                           </p>
                         </div>
-                      )}
-                    </div>
-                  );
+                      </Link>
+                    );
+                  }
+                  return null;
+                })}
+            </div>
+          </div>
+          <div className="col-lg-5 col-max-4">
+            <div className={styles.stickyImages}>
+              {postList &&
+                postList.length > 0 &&
+                postList.map((post, index) => {
+                  if (post) {
+                    return (
+                      <WorksImage
+                        key={uuidv4()}
+                        image={post.image}
+                        title={post.title}
+                        comingSoon={post.comingSoon}
+                        imageClass={styles.stickyImage}
+                        isVisible={focusedItem === index + 1}
+                      />
+                    );
+                  }
                 })}
             </div>
           </div>

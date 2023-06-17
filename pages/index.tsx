@@ -20,12 +20,12 @@ const components = {
   ),
 };
 export const getStaticProps: GetStaticProps = async () => {
-  let home;
   let global;
+  let home;
 
   try {
-    home = await client.queries.home({ relativePath: `content.mdx` });
-    global = await client.queries.global({ relativePath: `content.mdx` });
+    global = await client.queries.global({ relativePath: `global.mdx` });
+    home = await client.queries.home({ relativePath: `home.mdx` });
   } catch {
     // swallow errors related to document creation
   }
@@ -36,8 +36,8 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Home({
-  home,
   global,
+  home,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { data: homeData } = useTina<HomeQuery>(home);
   const { data: globalData } = useTina<GlobalQuery>(global);
