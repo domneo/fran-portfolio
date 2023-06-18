@@ -232,16 +232,49 @@ li {
 }
 
 .spacer-sm {
-  padding-bottom: 2rem;
+  height: 1rem;
+  @include media("md") {
+    height: 1.5rem;
+  }
+  @include media("xl") {
+    height: 2rem;
+  }
 }
 .spacer-md {
-  padding-bottom: 4rem;
+  height: 3rem;
+  @include media("md") {
+    height: 3.5rem;
+  }
+  @include media("xl") {
+    height: 4rem;
+  }
 }
 .spacer-lg {
-  padding-bottom: 6rem;
+  height: 4rem;
+  @include media("md") {
+    height: 5rem;
+  }
+  @include media("xl") {
+    height: 6rem;
+  }
 }
 .spacer-xl {
-  padding-bottom: 8rem;
+  height: 6rem;
+  @include media("md") {
+    height: 7rem;
+  }
+  @include media("xl") {
+    height: 8rem;
+  }
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: 1px;
+  margin: 0 auto;
+  background: var(--timberwolf-beiger);
 }
 
 // Single container class with breakpoint max-widths

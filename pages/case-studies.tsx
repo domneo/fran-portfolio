@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import Layout from "components/Layout";
-import { Heading } from "components/common/Heading";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,7 +62,7 @@ const CaseStudiesImage = ({
     />
     {comingSoon && (
       <div className={styles.comingSoon}>
-        <p className="w-100 mb-4 h2 text-white text-center">
+        <p className="mb-4 text-center text-white w-100 h2">
           Case study coming soon
         </p>
       </div>
@@ -90,7 +89,7 @@ export default function CaseStudies({
       <div className="container-xxl">
         <div className={`${styles.header} row justify-content-center`}>
           <div className="col-max-10">
-            <Heading level={1}>{title}</Heading>
+            <h1>{title}</h1>
           </div>
         </div>
         <div className={`${styles.body} row justify-content-center`}>
@@ -129,11 +128,11 @@ export default function CaseStudies({
                           {post.index}
                         </div>
                         <div>
-                          <p className="semibold allcaps mb-2">{post.title}</p>
-                          <p className="caption light mb-3">
+                          <p className="mb-2 semibold allcaps">{post.title}</p>
+                          <p className="mb-3 caption light">
                             {post.description}
                           </p>
-                          <p className="caption light mb-0">
+                          <p className="mb-0 caption light">
                             {post.skills?.map((skill, index) => {
                               if (skill) {
                                 return (

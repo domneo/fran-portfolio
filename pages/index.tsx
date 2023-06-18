@@ -1,5 +1,4 @@
 import Layout from "components/Layout";
-import { Heading } from "components/common/Heading";
 import { type GetStaticProps, type InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import reactStringReplace from "react-string-replace";
@@ -73,7 +72,7 @@ export default function Home({
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-10">
-              <Heading level={1}>{replacedHeader}</Heading>
+              <h1>{replacedHeader}</h1>
             </div>
           </div>
         </div>

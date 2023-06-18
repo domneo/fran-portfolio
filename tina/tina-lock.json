@@ -274,6 +274,7 @@
         "name": "works_posts",
         "label": "Works Posts",
         "path": "content/works_posts",
+        "format": "mdx",
         "fields": [
           {
             "type": "string",
@@ -287,15 +288,20 @@
             "type": "string",
             "name": "subtitle",
             "label": "Subtitle",
-            "required": true,
             "namespace": ["works_posts", "subtitle"]
           },
           {
             "type": "string",
             "name": "summary",
             "label": "Summary",
-            "required": true,
             "namespace": ["works_posts", "summary"]
+          },
+          {
+            "type": "rich-text",
+            "name": "background",
+            "label": "Background",
+            "namespace": ["works_posts", "background"],
+            "parser": { "type": "mdx" }
           },
           {
             "type": "object",
@@ -314,14 +320,14 @@
                     "namespace": ["works_posts", "sections", "section", "title"]
                   },
                   {
-                    "type": "string",
-                    "name": "heading",
-                    "label": "Heading",
+                    "type": "boolean",
+                    "name": "showSectionTitle",
+                    "label": "Show section title",
                     "namespace": [
                       "works_posts",
                       "sections",
                       "section",
-                      "heading"
+                      "showSectionTitle"
                     ]
                   },
                   {
@@ -330,6 +336,85 @@
                     "name": "blocks",
                     "label": "Content",
                     "templates": [
+                      {
+                        "name": "spacer",
+                        "label": "Spacer",
+                        "fields": [
+                          {
+                            "type": "string",
+                            "name": "size",
+                            "label": "Size",
+                            "required": true,
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "spacer",
+                              "size"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "spacer"
+                        ]
+                      },
+                      {
+                        "name": "divider",
+                        "label": "Divider",
+                        "fields": [
+                          {
+                            "type": "string",
+                            "name": "label",
+                            "label": "This is a null field because I must put something",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "divider",
+                              "label"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "divider"
+                        ]
+                      },
+                      {
+                        "name": "oneColumn",
+                        "label": "One Column Content",
+                        "fields": [
+                          {
+                            "type": "rich-text",
+                            "name": "content",
+                            "label": "Content",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "oneColumn",
+                              "content"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "oneColumn"
+                        ]
+                      },
                       {
                         "name": "twoColumn",
                         "label": "Two Column Content",
@@ -430,7 +515,7 @@
                     ]
                   }
                 ],
-                "ui": {},
+                "ui": { "defaultItem": { "showSectionTitle": true } },
                 "namespace": ["works_posts", "sections", "section"]
               }
             ],
@@ -529,6 +614,7 @@
         "name": "caseStudies_posts",
         "label": "Case Studies Posts",
         "path": "content/caseStudies_posts",
+        "format": "mdx",
         "fields": [
           {
             "type": "string",
@@ -574,14 +660,14 @@
                     ]
                   },
                   {
-                    "type": "string",
-                    "name": "heading",
-                    "label": "Heading",
+                    "type": "boolean",
+                    "name": "showSectionTitle",
+                    "label": "Show section title",
                     "namespace": [
                       "caseStudies_posts",
                       "sections",
                       "section",
-                      "heading"
+                      "showSectionTitle"
                     ]
                   },
                   {
@@ -590,6 +676,85 @@
                     "name": "blocks",
                     "label": "Content",
                     "templates": [
+                      {
+                        "name": "spacer",
+                        "label": "Spacer",
+                        "fields": [
+                          {
+                            "type": "string",
+                            "name": "size",
+                            "label": "Size",
+                            "required": true,
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "spacer",
+                              "size"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "spacer"
+                        ]
+                      },
+                      {
+                        "name": "divider",
+                        "label": "Divider",
+                        "fields": [
+                          {
+                            "type": "string",
+                            "name": "label",
+                            "label": "This is a null field because I must put something",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "divider",
+                              "label"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "divider"
+                        ]
+                      },
+                      {
+                        "name": "oneColumn",
+                        "label": "One Column Content",
+                        "fields": [
+                          {
+                            "type": "rich-text",
+                            "name": "content",
+                            "label": "Content",
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "oneColumn",
+                              "content"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "oneColumn"
+                        ]
+                      },
                       {
                         "name": "twoColumn",
                         "label": "Two Column Content",
@@ -690,8 +855,27 @@
                     ]
                   }
                 ],
-                "ui": {},
+                "ui": { "defaultItem": { "showSectionTitle": true } },
                 "namespace": ["caseStudies_posts", "sections", "section"]
+              },
+              {
+                "name": "spacer",
+                "label": "Spacer",
+                "fields": [
+                  {
+                    "type": "string",
+                    "name": "size",
+                    "label": "Size",
+                    "required": true,
+                    "namespace": [
+                      "caseStudies_posts",
+                      "sections",
+                      "spacer",
+                      "size"
+                    ]
+                  }
+                ],
+                "namespace": ["caseStudies_posts", "sections", "spacer"]
               }
             ],
             "namespace": ["caseStudies_posts", "sections"]
@@ -765,6 +949,9 @@
       "type": "Works_postsSectionsSectionBlocks",
       "resolveType": "unionData",
       "typeMap": {
+        "spacer": "CaseStudies_postsSectionsSectionBlocksSpacer",
+        "divider": "CaseStudies_postsSectionsSectionBlocksDivider",
+        "oneColumn": "CaseStudies_postsSectionsSectionBlocksOneColumn",
         "twoColumn": "CaseStudies_postsSectionsSectionBlocksTwoColumn",
         "threeColumn": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
       }
@@ -802,6 +989,9 @@
       "type": "CaseStudies_postsSectionsSectionBlocks",
       "resolveType": "unionData",
       "typeMap": {
+        "spacer": "CaseStudies_postsSectionsSectionBlocksSpacer",
+        "divider": "CaseStudies_postsSectionsSectionBlocksDivider",
+        "oneColumn": "CaseStudies_postsSectionsSectionBlocksOneColumn",
         "twoColumn": "CaseStudies_postsSectionsSectionBlocksTwoColumn",
         "threeColumn": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
       }
@@ -809,7 +999,10 @@
     "CaseStudies_postsSections": {
       "type": "CaseStudies_postsSections",
       "resolveType": "unionData",
-      "typeMap": { "section": "CaseStudies_postsSectionsSection" }
+      "typeMap": {
+        "section": "CaseStudies_postsSectionsSection",
+        "spacer": "CaseStudies_postsSectionsSpacer"
+      }
     },
     "CaseStudies_posts": {
       "type": "CaseStudies_posts",
@@ -3350,6 +3543,69 @@
         "directives": [],
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksSpacer"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksDivider"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksOneColumn"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
         },
         "fields": [
@@ -3420,6 +3676,27 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksSpacer"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksDivider"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksOneColumn"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
               "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
             }
           },
@@ -3449,11 +3726,11 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "heading" },
+            "name": { "kind": "Name", "value": "showSectionTitle" },
             "arguments": [],
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
+              "name": { "kind": "Name", "value": "Boolean" }
             }
           },
           {
@@ -3513,11 +3790,8 @@
             "name": { "kind": "Name", "value": "subtitle" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -3525,11 +3799,17 @@
             "name": { "kind": "Name", "value": "summary" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "background" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
             }
           },
           {
@@ -3578,6 +3858,57 @@
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "JSON" }
               }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksSpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksDividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksOneColumnFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
             }
           }
         ]
@@ -3649,6 +3980,39 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksSpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksDividerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "oneColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "twoColumn" },
             "type": {
               "kind": "NamedType",
@@ -3685,10 +4049,10 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "heading" },
+            "name": { "kind": "Name", "value": "showSectionTitle" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
+              "name": { "kind": "Name", "value": "BooleanFilter" }
             }
           },
           {
@@ -3747,6 +4111,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "background" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
             }
           },
           {
@@ -4214,6 +4586,27 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksSpacer"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksDivider"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksOneColumn"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
               "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
             }
           },
@@ -4243,11 +4636,11 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "heading" },
+            "name": { "kind": "Name", "value": "showSectionTitle" },
             "arguments": [],
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
+              "name": { "kind": "Name", "value": "Boolean" }
             }
           },
           {
@@ -4268,6 +4661,26 @@
         ]
       },
       {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudies_postsSectionsSpacer" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
         "kind": "UnionTypeDefinition",
         "name": { "kind": "Name", "value": "CaseStudies_postsSections" },
         "directives": [],
@@ -4277,6 +4690,13 @@
             "name": {
               "kind": "Name",
               "value": "CaseStudies_postsSectionsSection"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSpacer"
             }
           }
         ]
@@ -4388,6 +4808,39 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksSpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksDividerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "oneColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "twoColumn" },
             "type": {
               "kind": "NamedType",
@@ -4427,10 +4880,10 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "heading" },
+            "name": { "kind": "Name", "value": "showSectionTitle" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
+              "name": { "kind": "Name", "value": "BooleanFilter" }
             }
           },
           {
@@ -4448,6 +4901,23 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "CaseStudies_postsSectionsFilter" },
         "fields": [
           {
@@ -4458,6 +4928,17 @@
               "name": {
                 "kind": "Name",
                 "value": "CaseStudies_postsSectionsSectionFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSpacerFilter"
               }
             }
           }
@@ -5605,6 +6086,57 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksSpacerMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksDividerMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnMutation"
         },
         "fields": [
@@ -5668,6 +6200,39 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksSpacerMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksDividerMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "oneColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "twoColumn" },
             "type": {
               "kind": "NamedType",
@@ -5707,10 +6272,10 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "heading" },
+            "name": { "kind": "Name", "value": "showSectionTitle" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
+              "name": { "kind": "Name", "value": "Boolean" }
             }
           },
           {
@@ -5772,6 +6337,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "background" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
             }
           },
           {
@@ -5912,6 +6485,39 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksSpacerMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksDividerMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "oneColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "twoColumn" },
             "type": {
               "kind": "NamedType",
@@ -5951,10 +6557,10 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "heading" },
+            "name": { "kind": "Name", "value": "showSectionTitle" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
+              "name": { "kind": "Name", "value": "Boolean" }
             }
           },
           {
@@ -5977,6 +6583,23 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSpacerMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsMutation"
         },
         "fields": [
@@ -5988,6 +6611,17 @@
               "name": {
                 "kind": "Name",
                 "value": "CaseStudies_postsSectionsSectionMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSpacerMutation"
               }
             }
           }
