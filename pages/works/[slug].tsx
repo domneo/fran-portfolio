@@ -1,6 +1,9 @@
 import Layout from "components/Layout";
+import { Divider } from "components/common/Divider";
 import { Spacer } from "components/common/Spacer";
-import { Divider } from "components/works/Divider";
+import { ThreeColumn111 } from "components/common/ThreeColumn111";
+import { TwoColumn11 } from "components/common/TwoColumn11";
+import { TwoColumn12 } from "components/common/TwoColumn12";
 import { Section } from "components/works/Section";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import styles from "styles/WorksPost.module.scss";
@@ -81,6 +84,11 @@ export default function WorksPost({
                     showSectionTitle={showSectionTitle}
                   >
                     {blocks?.map((block) => {
+                      let blockComponent;
+                      const richTextComponents = {
+                        spacer: Spacer,
+                        divider: Divider,
+                      };
                       switch (block?.__typename) {
                         case "CaseStudies_postsSectionsSectionBlocksSpacer":
                           const size = block.size.toLowerCase() as
@@ -88,18 +96,43 @@ export default function WorksPost({
                             | "md"
                             | "lg"
                             | "xl";
-                          return <Spacer size={size} />;
+                          blockComponent = <Spacer size={size} />;
+                          break;
                         case "CaseStudies_postsSectionsSectionBlocksDivider":
-                          return <Divider />;
+                          blockComponent = <Divider />;
+                          break;
                         case "CaseStudies_postsSectionsSectionBlocksOneColumn":
-                          return (
-                            <div key={uuidv4()}>
-                              <TinaMarkdown content={block.content} />
-                            </div>
+                          blockComponent = (
+                            <TinaMarkdown
+                              content={block.content}
+                              components={richTextComponents}
+                            />
                           );
+                          break;
+                        case "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1":
+                          blockComponent = (
+                            <TwoColumn11 col1={block.col1} col2={block.col2} />
+                          );
+                          break;
+                        case "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2":
+                          blockComponent = (
+                            <TwoColumn12 col1={block.col1} col2={block.col2} />
+                          );
+                          break;
+                        case "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1":
+                          blockComponent = (
+                            <ThreeColumn111
+                              col1={block.col1}
+                              col2={block.col2}
+                              col3={block.col3}
+                            />
+                          );
+                          break;
                         default:
-                          return null;
+                          blockComponent = null;
+                          break;
                       }
+                      return <div key={uuidv4()}>{blockComponent}</div>;
                     })}
                   </Section>
                 );

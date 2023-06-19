@@ -397,6 +397,69 @@
                             "type": "rich-text",
                             "name": "content",
                             "label": "Content",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "oneColumn",
+                                      "content",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "oneColumn",
+                                  "content",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "oneColumn",
+                                      "content",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "oneColumn",
+                                  "content",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
@@ -416,19 +479,82 @@
                         ]
                       },
                       {
-                        "name": "twoColumn",
-                        "label": "Two Column Content",
+                        "name": "twoColumn_1_1",
+                        "label": "Two Column Content (1-1)",
                         "fields": [
                           {
                             "type": "rich-text",
                             "name": "col1",
                             "label": "Column 1",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col1",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col1",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col1",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col1",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "twoColumn",
+                              "twoColumn_1_1",
                               "col1"
                             ]
                           },
@@ -436,12 +562,75 @@
                             "type": "rich-text",
                             "name": "col2",
                             "label": "Column 2",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col2",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col2",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col2",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col2",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "twoColumn",
+                              "twoColumn_1_1",
                               "col2"
                             ]
                           }
@@ -451,23 +640,86 @@
                           "sections",
                           "section",
                           "blocks",
-                          "twoColumn"
+                          "twoColumn_1_1"
                         ]
                       },
                       {
-                        "name": "threeColumn",
-                        "label": "Three Column Content",
+                        "name": "twoColumn_1_2",
+                        "label": "Two Column Content (1-2)",
                         "fields": [
                           {
                             "type": "rich-text",
                             "name": "col1",
                             "label": "Column 1",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col1",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col1",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col1",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col1",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "threeColumn",
+                              "twoColumn_1_2",
                               "col1"
                             ]
                           },
@@ -475,12 +727,240 @@
                             "type": "rich-text",
                             "name": "col2",
                             "label": "Column 2",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col2",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col2",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col2",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col2",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "threeColumn",
+                              "twoColumn_1_2",
+                              "col2"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "twoColumn_1_2"
+                        ]
+                      },
+                      {
+                        "name": "threeColumn_1_1_1",
+                        "label": "Three Column Content (1-1-1)",
+                        "fields": [
+                          {
+                            "type": "rich-text",
+                            "name": "col1",
+                            "label": "Column 1",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col1",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col1",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col1",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col1",
+                                  "divider"
+                                ]
+                              }
+                            ],
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "threeColumn_1_1_1",
+                              "col1"
+                            ]
+                          },
+                          {
+                            "type": "rich-text",
+                            "name": "col2",
+                            "label": "Column 2",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col2",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col2",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col2",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col2",
+                                  "divider"
+                                ]
+                              }
+                            ],
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "threeColumn_1_1_1",
                               "col2"
                             ]
                           },
@@ -488,12 +968,75 @@
                             "type": "rich-text",
                             "name": "col3",
                             "label": "Column 3",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col3",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col3",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col3",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col3",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "threeColumn",
+                              "threeColumn_1_1_1",
                               "col3"
                             ]
                           }
@@ -503,7 +1046,7 @@
                           "sections",
                           "section",
                           "blocks",
-                          "threeColumn"
+                          "threeColumn_1_1_1"
                         ]
                       }
                     ],
@@ -737,6 +1280,69 @@
                             "type": "rich-text",
                             "name": "content",
                             "label": "Content",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "oneColumn",
+                                      "content",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "oneColumn",
+                                  "content",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "oneColumn",
+                                      "content",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "oneColumn",
+                                  "content",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
@@ -756,19 +1362,82 @@
                         ]
                       },
                       {
-                        "name": "twoColumn",
-                        "label": "Two Column Content",
+                        "name": "twoColumn_1_1",
+                        "label": "Two Column Content (1-1)",
                         "fields": [
                           {
                             "type": "rich-text",
                             "name": "col1",
                             "label": "Column 1",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col1",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col1",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col1",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col1",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "twoColumn",
+                              "twoColumn_1_1",
                               "col1"
                             ]
                           },
@@ -776,12 +1445,75 @@
                             "type": "rich-text",
                             "name": "col2",
                             "label": "Column 2",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col2",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col2",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_1",
+                                      "col2",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_1",
+                                  "col2",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "twoColumn",
+                              "twoColumn_1_1",
                               "col2"
                             ]
                           }
@@ -791,23 +1523,86 @@
                           "sections",
                           "section",
                           "blocks",
-                          "twoColumn"
+                          "twoColumn_1_1"
                         ]
                       },
                       {
-                        "name": "threeColumn",
-                        "label": "Three Column Content",
+                        "name": "twoColumn_1_2",
+                        "label": "Two Column Content (1-2)",
                         "fields": [
                           {
                             "type": "rich-text",
                             "name": "col1",
                             "label": "Column 1",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col1",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col1",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col1",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col1",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "threeColumn",
+                              "twoColumn_1_2",
                               "col1"
                             ]
                           },
@@ -815,12 +1610,240 @@
                             "type": "rich-text",
                             "name": "col2",
                             "label": "Column 2",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col2",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col2",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "twoColumn_1_2",
+                                      "col2",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "twoColumn_1_2",
+                                  "col2",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "threeColumn",
+                              "twoColumn_1_2",
+                              "col2"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "twoColumn_1_2"
+                        ]
+                      },
+                      {
+                        "name": "threeColumn_1_1_1",
+                        "label": "Three Column Content (1-1-1)",
+                        "fields": [
+                          {
+                            "type": "rich-text",
+                            "name": "col1",
+                            "label": "Column 1",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col1",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col1",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col1",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col1",
+                                  "divider"
+                                ]
+                              }
+                            ],
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "threeColumn_1_1_1",
+                              "col1"
+                            ]
+                          },
+                          {
+                            "type": "rich-text",
+                            "name": "col2",
+                            "label": "Column 2",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col2",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col2",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col2",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col2",
+                                  "divider"
+                                ]
+                              }
+                            ],
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "threeColumn_1_1_1",
                               "col2"
                             ]
                           },
@@ -828,12 +1851,75 @@
                             "type": "rich-text",
                             "name": "col3",
                             "label": "Column 3",
+                            "templates": [
+                              {
+                                "name": "spacer",
+                                "label": "Spacer",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "size",
+                                    "label": "Size",
+                                    "required": true,
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col3",
+                                      "spacer",
+                                      "size"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col3",
+                                  "spacer"
+                                ]
+                              },
+                              {
+                                "name": "divider",
+                                "label": "Divider",
+                                "fields": [
+                                  {
+                                    "type": "string",
+                                    "name": "label",
+                                    "label": "This is a null field because I must put something",
+                                    "namespace": [
+                                      "caseStudies_posts",
+                                      "sections",
+                                      "section",
+                                      "blocks",
+                                      "threeColumn_1_1_1",
+                                      "col3",
+                                      "divider",
+                                      "label"
+                                    ]
+                                  }
+                                ],
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "threeColumn_1_1_1",
+                                  "col3",
+                                  "divider"
+                                ]
+                              }
+                            ],
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
                               "section",
                               "blocks",
-                              "threeColumn",
+                              "threeColumn_1_1_1",
                               "col3"
                             ]
                           }
@@ -843,7 +1929,7 @@
                           "sections",
                           "section",
                           "blocks",
-                          "threeColumn"
+                          "threeColumn_1_1_1"
                         ]
                       }
                     ],
@@ -952,8 +2038,9 @@
         "spacer": "CaseStudies_postsSectionsSectionBlocksSpacer",
         "divider": "CaseStudies_postsSectionsSectionBlocksDivider",
         "oneColumn": "CaseStudies_postsSectionsSectionBlocksOneColumn",
-        "twoColumn": "CaseStudies_postsSectionsSectionBlocksTwoColumn",
-        "threeColumn": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
+        "twoColumn_1_1": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1",
+        "twoColumn_1_2": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2",
+        "threeColumn_1_1_1": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1"
       }
     },
     "Works_postsSections": {
@@ -992,8 +2079,9 @@
         "spacer": "CaseStudies_postsSectionsSectionBlocksSpacer",
         "divider": "CaseStudies_postsSectionsSectionBlocksDivider",
         "oneColumn": "CaseStudies_postsSectionsSectionBlocksOneColumn",
-        "twoColumn": "CaseStudies_postsSectionsSectionBlocksTwoColumn",
-        "threeColumn": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
+        "twoColumn_1_1": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1",
+        "twoColumn_1_2": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2",
+        "threeColumn_1_1_1": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1"
       }
     },
     "CaseStudies_postsSections": {
@@ -3606,7 +4694,7 @@
         "directives": [],
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1"
         },
         "fields": [
           {
@@ -3635,7 +4723,36 @@
         "directives": [],
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1"
         },
         "fields": [
           {
@@ -3697,14 +4814,21 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
+              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1"
             }
           },
           {
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
+              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1"
             }
           }
         ]
@@ -3900,6 +5024,71 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksOneColumnContentSpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksOneColumnContentDividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksOneColumnContentFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnContentSpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnContentDividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksOneColumnFilter"
         },
         "fields": [
@@ -3908,7 +5097,10 @@
             "name": { "kind": "Name", "value": "content" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnContentFilter"
+              }
             }
           }
         ]
@@ -3917,23 +5109,15 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnFilter"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col1SpacerFilter"
         },
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "col1" },
+            "name": { "kind": "Name", "value": "size" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "col2" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           }
         ]
@@ -3942,7 +5126,120 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnFilter"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col1DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col1SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col1DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col2SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col2DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col2SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col2DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Filter"
         },
         "fields": [
           {
@@ -3950,7 +5247,10 @@
             "name": { "kind": "Name", "value": "col1" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col1Filter"
+              }
             }
           },
           {
@@ -3958,7 +5258,397 @@
             "name": { "kind": "Name", "value": "col2" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Col2Filter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col1SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col1DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col1SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col1DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col2SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col2DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col2SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col2DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col1Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Col2Filter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col1SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col1DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col1SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col1DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col2SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col2DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col2SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col2DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col3SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col3DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col3Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col3SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col3DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col1Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col2Filter"
+              }
             }
           },
           {
@@ -3966,7 +5656,10 @@
             "name": { "kind": "Name", "value": "col3" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Col3Filter"
+              }
             }
           }
         ]
@@ -4013,23 +5706,34 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "twoColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_1" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnFilter"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Filter"
               }
             }
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "threeColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_2" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnFilter"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "threeColumn_1_1_1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Filter"
               }
             }
           }
@@ -4607,14 +6311,21 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn"
+              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1"
             }
           },
           {
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn"
+              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1"
             }
           }
         ]
@@ -4841,23 +6552,34 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "twoColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_1" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnFilter"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Filter"
               }
             }
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "threeColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_2" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnFilter"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "threeColumn_1_1_1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Filter"
               }
             }
           }
@@ -6137,7 +7859,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnMutation"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
         },
         "fields": [
           {
@@ -6162,7 +7884,32 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnMutation"
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
         },
         "fields": [
           {
@@ -6233,23 +7980,34 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "twoColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_1" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnMutation"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
               }
             }
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "threeColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_2" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnMutation"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "threeColumn_1_1_1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
               }
             }
           }
@@ -6518,23 +8276,34 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "twoColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_1" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumnMutation"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
               }
             }
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "threeColumn" },
+            "name": { "kind": "Name", "value": "twoColumn_1_2" },
             "type": {
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumnMutation"
+                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "threeColumn_1_1_1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
               }
             }
           }

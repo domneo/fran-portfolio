@@ -3,54 +3,6 @@ import { Collection, Template, defineConfig } from "tinacms";
 //
 // TEMPLATES
 //
-const oneColumnBlock: Template = {
-  name: "oneColumn",
-  label: "One Column Content",
-  fields: [
-    {
-      type: "rich-text",
-      name: "content",
-      label: "Content",
-    },
-  ],
-};
-const twoColumnBlock: Template = {
-  name: "twoColumn",
-  label: "Two Column Content",
-  fields: [
-    {
-      type: "rich-text",
-      name: "col1",
-      label: "Column 1",
-    },
-    {
-      type: "rich-text",
-      name: "col2",
-      label: "Column 2",
-    },
-  ],
-};
-const threeColumnBlock: Template = {
-  name: "threeColumn",
-  label: "Three Column Content",
-  fields: [
-    {
-      type: "rich-text",
-      name: "col1",
-      label: "Column 1",
-    },
-    {
-      type: "rich-text",
-      name: "col2",
-      label: "Column 2",
-    },
-    {
-      type: "rich-text",
-      name: "col3",
-      label: "Column 3",
-    },
-  ],
-};
 const spacer: Template = {
   name: "spacer",
   label: "Spacer",
@@ -71,6 +23,78 @@ const divider: Template = {
       type: "string",
       name: "label",
       label: "This is a null field because I must put something",
+    },
+  ],
+};
+const oneColumnBlock: Template = {
+  name: "oneColumn",
+  label: "One Column Content",
+  fields: [
+    {
+      type: "rich-text",
+      name: "content",
+      label: "Content",
+      templates: [spacer, divider],
+    },
+  ],
+};
+const twoColumnBlock_1_1: Template = {
+  name: "twoColumn_1_1",
+  label: "Two Column Content (1-1)",
+  fields: [
+    {
+      type: "rich-text",
+      name: "col1",
+      label: "Column 1",
+      templates: [spacer, divider],
+    },
+    {
+      type: "rich-text",
+      name: "col2",
+      label: "Column 2",
+      templates: [spacer, divider],
+    },
+  ],
+};
+const twoColumnBlock_1_2: Template = {
+  name: "twoColumn_1_2",
+  label: "Two Column Content (1-2)",
+  fields: [
+    {
+      type: "rich-text",
+      name: "col1",
+      label: "Column 1",
+      templates: [spacer, divider],
+    },
+    {
+      type: "rich-text",
+      name: "col2",
+      label: "Column 2",
+      templates: [spacer, divider],
+    },
+  ],
+};
+const threeColumnBlock_1_1_1: Template = {
+  name: "threeColumn_1_1_1",
+  label: "Three Column Content (1-1-1)",
+  fields: [
+    {
+      type: "rich-text",
+      name: "col1",
+      label: "Column 1",
+      templates: [spacer, divider],
+    },
+    {
+      type: "rich-text",
+      name: "col2",
+      label: "Column 2",
+      templates: [spacer, divider],
+    },
+    {
+      type: "rich-text",
+      name: "col3",
+      label: "Column 3",
+      templates: [spacer, divider],
     },
   ],
 };
@@ -97,8 +121,9 @@ const section: Template = {
         spacer,
         divider,
         oneColumnBlock,
-        twoColumnBlock,
-        threeColumnBlock,
+        twoColumnBlock_1_1,
+        twoColumnBlock_1_2,
+        threeColumnBlock_1_1_1,
       ],
     },
   ],

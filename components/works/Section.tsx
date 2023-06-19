@@ -17,8 +17,8 @@ export const Section = ({
       {showSectionTitle && (
         <div className={styles.title}>
           <div className="row">
-            <div className="col-lg-10 d-flex align-items-center">
-              <div className="flex-shrink-0 d-flex align-items-center">
+            <div className="col-xxl-10 d-flex align-items-center">
+              <div className="flex-md-shrink-0 d-flex align-items-center">
                 <svg
                   width="11"
                   height="20"
