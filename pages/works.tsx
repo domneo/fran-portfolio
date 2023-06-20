@@ -37,13 +37,11 @@ export default function Works({
   return (
     <Layout data={globalData} showQuickActions={false}>
       <div className="container-xxl">
-        <div className={`${styles.header} row justify-content-center`}>
-          <div className="col-max-10">
-            <h1>{title}</h1>
-          </div>
-        </div>
-        <div className={`${styles.body} row justify-content-center`}>
-          <div className="col-lg-7 col-max-6">
+        <div className="row justify-content-center">
+          <div className={`${styles.body} col-lg-7 col-max-6`}>
+            <div className={styles.header}>
+              <h1>{title}</h1>
+            </div>
             <div className={styles.carousel}>
               {postList &&
                 postList.length > 0 &&
@@ -78,7 +76,7 @@ export default function Works({
                           {post.index}
                         </div>
                         <div>
-                          <p className="mb-2 semibold allcaps">{post.title}</p>
+                          <h3 className="mb-2">{post.title}</h3>
                           <p className="mb-3 caption light">
                             {post.description}
                           </p>

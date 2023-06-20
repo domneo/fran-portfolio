@@ -36,9 +36,7 @@ export const WorksImage = ({
     />
     {comingSoon && (
       <div className={styles.comingSoon}>
-        <p className="w-100 mb-4 h2 text-white text-center">
-          Case study coming soon
-        </p>
+        <p className="mb-4 text-center text-white w-100 h2">Coming soon</p>
       </div>
     )}
     {number && (

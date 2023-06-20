@@ -1,7 +1,6 @@
-import classNames from "classnames";
 import Layout from "components/Layout";
+import { WorksImage } from "components/works/WorksImage";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "styles/Works.module.scss";
@@ -28,53 +27,6 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-interface CaseStudiesImageProps {
-  image: string;
-  title: string;
-  comingSoon?: boolean | null;
-  number?: number;
-  imageClass: string;
-  isVisible?: boolean | null;
-}
-const CaseStudiesImage = ({
-  image,
-  title,
-  comingSoon,
-  number,
-  imageClass,
-  isVisible,
-}: CaseStudiesImageProps) => (
-  <div
-    className={classNames(imageClass, {
-      [styles.isVisible]: isVisible,
-    })}
-  >
-    <Image
-      src={image}
-      alt={title}
-      fill
-      sizes={"(min-width: 992px) 80vw, 180vw"}
-      style={{
-        objectFit: "cover",
-        objectPosition: "center",
-      }}
-      priority
-    />
-    {comingSoon && (
-      <div className={styles.comingSoon}>
-        <p className="mb-4 text-center text-white w-100 h2">
-          Case study coming soon
-        </p>
-      </div>
-    )}
-    {number && (
-      <div className={styles.numberOverlay}>
-        <div className={`${styles.number} h1 medium text-white`}>{number}</div>
-      </div>
-    )}
-  </div>
-);
-
 export default function CaseStudies({
   global,
   caseStudies,
@@ -87,13 +39,11 @@ export default function CaseStudies({
   return (
     <Layout data={globalData} showQuickActions={false}>
       <div className="container-xxl">
-        <div className={`${styles.header} row justify-content-center`}>
-          <div className="col-max-10">
-            <h1>{title}</h1>
-          </div>
-        </div>
-        <div className={`${styles.body} row justify-content-center`}>
-          <div className="col-lg-7 col-max-6">
+        <div className="row justify-content-center">
+          <div className={`${styles.body} col-lg-7 col-max-6`}>
+            <div className={styles.header}>
+              <h1>{title}</h1>
+            </div>
             <div className={styles.carousel}>
               {postList &&
                 postList.length > 0 &&
@@ -114,7 +64,7 @@ export default function CaseStudies({
                         onBlur={() => setFocusedItem(0)}
                       >
                         <div className={styles.sliderImages}>
-                          <CaseStudiesImage
+                          <WorksImage
                             image={post.image}
                             title={post.title}
                             comingSoon={post.comingSoon}
@@ -128,7 +78,7 @@ export default function CaseStudies({
                           {post.index}
                         </div>
                         <div>
-                          <p className="mb-2 semibold allcaps">{post.title}</p>
+                          <h3 className="mb-2">{post.title}</h3>
                           <p className="mb-3 caption light">
                             {post.description}
                           </p>
@@ -165,7 +115,7 @@ export default function CaseStudies({
                 postList.map((post, index) => {
                   if (post) {
                     return (
-                      <CaseStudiesImage
+                      <WorksImage
                         key={uuidv4()}
                         image={post.image}
                         title={post.title}

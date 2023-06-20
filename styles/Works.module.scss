@@ -1,12 +1,19 @@
 @import "mixins";
 
-.header,
 .body {
-  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  @include media("sm") {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.header {
   margin-bottom: 0.5rem;
 
   @include media("sm") {
-    margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
