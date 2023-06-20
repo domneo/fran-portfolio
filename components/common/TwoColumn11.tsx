@@ -12,11 +12,11 @@ interface TwoColumn11Props {
   col2: any;
 }
 export const TwoColumn11 = ({ col1, col2 }: TwoColumn11Props) => (
-  <div className="row">
-    <div className="col-md">
+  <div className="gap-4 gap-md-0 row">
+    <div className="col-md pe-lg-5">
       <TinaMarkdown content={col1} components={richTextComponents} />
     </div>
-    <div className="col-md">
+    <div className="col-md ps-lg-5">
       <TinaMarkdown content={col2} components={richTextComponents} />
     </div>
   </div>

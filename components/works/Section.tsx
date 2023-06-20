@@ -14,7 +14,7 @@ export const Section = ({
 }: SectionProps) => {
   return (
     <section>
-      <div className="spacer-lg" />
+      {showSectionTitle && <div className="spacer-lg" />}
       {showSectionTitle && (
         <div className={styles.title}>
           <div className="row">
@@ -32,7 +32,7 @@ export const Section = ({
           </div>
         </div>
       )}
-      <div className="spacer-md" />
+      {showSectionTitle && children && <div className="spacer-md" />}
       {children}
     </section>
   );
