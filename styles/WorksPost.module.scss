@@ -1,0 +1,10 @@
+@import "mixins";
+
+.header {
+  margin-top: 2rem;
+  gap: 1rem;
+
+  @include media("sm") {
+    gap: 2rem;
+  }
+}

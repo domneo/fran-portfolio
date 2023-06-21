@@ -1,14 +1,18 @@
 @import "../mixins";
 
-.header {
+.title {
   position: sticky;
-  top: 80px;
+  top: 5rem;
   z-index: 1;
+
+  @include media("lg") {
+    margin-left: -2rem;
+  }
 }
 
 .line {
-  width: 100%;
+  flex-grow: 1;
   height: 1px;
   margin-left: 1.5rem;
-  background: var(--bone);
+  background: var(--black);
 }

@@ -1,46 +1,41 @@
 import Head from "next/head";
-
 import styles from "styles/Layout.module.scss";
-
+import { GlobalQuery } from "tina/__generated__/types";
 import { Footer } from "./layout/Footer";
 import { Header } from "./layout/Header";
 import { QuickActions } from "./layout/QuickActions";
-import { UnderConstruction } from "./layout/UnderConstruction";
 
 interface LayoutProps {
-  showHeaderMenu?: boolean;
-  showFooterMenu?: boolean;
+  data: GlobalQuery;
+  showContactLinks?: boolean;
   showQuickActions?: boolean;
-  centraliseFooter?: boolean;
   children: React.ReactNode;
   [index: string]: any;
 }
 
 const Layout = ({
-  showHeaderMenu = true,
-  showFooterMenu = true,
+  data,
+  showContactLinks,
   showQuickActions = true,
-  centraliseFooter = false,
   children,
   ...props
 }: LayoutProps) => {
+  const { siteTitle, siteDescription, menu, contactLinks, footerCredits } =
+    data.global;
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>fran | UIUX Designer</title>
-        <meta
-          name="description"
-          content="Former educator and producer who enjoys problem solving, learning about people and creating experiences to meet their needs. Meticulous and driven in creating intentional and user-centric designs and interfaces for seamless experiences."
-        />
+        <title>{siteTitle}</title>
+        <meta name="description" content={siteDescription} />
         <link rel="icon" href="/images/favicon.svg" />
       </Head>
-      <Header showHeaderMenu={showHeaderMenu} />
-      <main {...props}>
-        <UnderConstruction>{children}</UnderConstruction>
-      </main>
+      <Header menu={menu} footerCredits={footerCredits} />
+      <main {...props}>{children}</main>
       <Footer
-        showFooterMenu={showFooterMenu}
-        centraliseFooter={centraliseFooter}
+        contactLinks={contactLinks}
+        footerCredits={footerCredits}
+        showContactLinks={showContactLinks}
       />
       {showQuickActions && <QuickActions />}
     </div>

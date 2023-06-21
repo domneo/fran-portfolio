@@ -5,33 +5,35 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "styles/Works.module.scss";
 import client from "tina/__generated__/client";
-import { GlobalQuery, WorksQuery } from "tina/__generated__/types";
+import { CaseStudiesQuery, GlobalQuery } from "tina/__generated__/types";
 import { useTina } from "tinacms/dist/react";
 import { v4 as uuidv4 } from "uuid";
 
 export const getStaticProps: GetStaticProps = async () => {
   let global;
-  let works;
+  let caseStudies;
 
   try {
     global = await client.queries.global({ relativePath: `global.mdx` });
-    works = await client.queries.works({ relativePath: `works.mdx` });
+    caseStudies = await client.queries.caseStudies({
+      relativePath: `caseStudies.mdx`,
+    });
   } catch {
     // swallow errors related to document creation
   }
 
   return {
-    props: { global, works },
+    props: { global, caseStudies },
   };
 };
 
-export default function Works({
+export default function CaseStudies({
   global,
-  works,
+  caseStudies,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { data: globalData } = useTina<GlobalQuery>(global);
-  const { data: worksData } = useTina<WorksQuery>(works);
-  const { title, postList } = worksData.works;
+  const { data: caseStudiesData } = useTina<CaseStudiesQuery>(caseStudies);
+  const { title, postList } = caseStudiesData.caseStudies;
   const [focusedItem, setFocusedItem] = useState(0);
 
   return (

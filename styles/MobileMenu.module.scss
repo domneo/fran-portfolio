@@ -1,9 +1,6 @@
 @import "mixins";
 
 .menuButton {
-  position: fixed;
-  top: 0;
-  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,13 +9,19 @@
   width: 3.5rem;
   height: 3.5rem;
   margin: 0;
-  padding: 1rem;
+  margin-right: -0.5rem;
+  padding: 22px;
+  cursor: pointer;
   z-index: 999;
+
+  &.menuOpen {
+    padding: 1rem;
+  }
 
   .menuButton_line {
     width: 100%;
-    height: 2px;
-    background: var(--platinum);
+    height: 1px;
+    background: var(--black);
     margin-bottom: 6px;
     transition: 0.3s all;
 
@@ -30,27 +33,17 @@
 
 .menuOpen {
   .menuButton_line {
+    background: var(--white);
     margin-bottom: 0;
-    margin-top: -2px;
+    margin-top: -1px;
     transition: 0.3s all;
   }
-}
-
-.blob {
-  position: fixed;
-  inset: -10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes fade {
 }
 
 .drawer {
   position: fixed;
   inset: 0;
-  background: var(--black);
+  background: var(--trueblack);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,6 +51,10 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.3s opacity;
+
+  @include media("sm") {
+    display: none;
+  }
 }
 
 .drawerOpen {
@@ -66,10 +63,31 @@
   transition: 0.3s opacity;
 }
 
+.blob {
+  position: fixed;
+  inset: -13rem -10rem -7rem -10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  padding: 0.875rem 1rem;
+}
+
+.menuItemGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
 .menuItem {
   display: flex;
   justify-content: center;
-  margin-bottom: 3.5rem;
+  color: var(--white);
 
   &:last-child {
     margin-bottom: 0;
