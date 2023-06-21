@@ -4,7 +4,6 @@ import { GlobalQuery } from "tina/__generated__/types";
 import { Footer } from "./layout/Footer";
 import { Header } from "./layout/Header";
 import { QuickActions } from "./layout/QuickActions";
-import { UnderConstruction } from "./layout/UnderConstruction";
 
 interface LayoutProps {
   data: GlobalQuery;
@@ -32,9 +31,7 @@ const Layout = ({
         <link rel="icon" href="/images/favicon.svg" />
       </Head>
       <Header menu={menu} footerCredits={footerCredits} />
-      <main {...props}>
-        <UnderConstruction>{children}</UnderConstruction>
-      </main>
+      <main {...props}>{children}</main>
       <Footer
         contactLinks={contactLinks}
         footerCredits={footerCredits}

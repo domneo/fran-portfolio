@@ -43,7 +43,7 @@ export const Stars = ({ resetColor = "black", children }: StarsProps) => {
       setDColor(_resetColor);
       setEColor(_resetColor);
     }
-  }, [isAnimating, cycleIndex, colorCycleMatrix]);
+  }, [_resetColor, isAnimating, cycleIndex, colorCycleMatrix]);
 
   const router = useRouter();
 
