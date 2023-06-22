@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "tinacms dev -c \"NODE_OPTIONS='--inspect' next dev\"",
+    "build": "tinacms build && next build",
+    "start": "tinacms build && next start",
     "lint": "next lint",
     "prepare": "husky install",
     "prettier": "prettier --write . --ignore-path .gitignore",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@georgedoescode/spline": "^1.0.1",
+    "@tinacms/cli": "^1.5.17",
     "bootstrap": "^5.2.3",
     "classnames": "^2.3.2",
     "gsap": "^3.11.5",
@@ -22,10 +23,12 @@
     "react-dom": "18.2.0",
     "react-modal": "^3.16.1",
     "react-slick": "^0.29.0",
+    "react-string-replace": "^1.1.0",
     "react-zoom-pan-pinch": "^3.0.7",
     "simplex-noise": "^4.0.1",
     "slick-carousel": "^1.8.1",
     "string-remove-widows": "^4.0.14",
+    "tinacms": "^1.5.8",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
