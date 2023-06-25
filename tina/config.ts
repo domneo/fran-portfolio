@@ -28,6 +28,44 @@ const generateDivider = (): Template => ({
     },
   ],
 });
+const generateImageSlider = (): Template => ({
+  name: "imageSlider",
+  label: "Image Slider",
+  fields: [
+    {
+      type: "object",
+      list: true,
+      name: "slides",
+      label: "Slides",
+      fields: [
+        {
+          type: "image",
+          name: "image",
+          label: "Image",
+          required: true,
+        },
+        {
+          type: "string",
+          name: "title",
+          label: "Title",
+          description:
+            "A simple description of the image. Serves as fallback for accessibility.",
+        },
+        {
+          type: "string",
+          name: "caption",
+          label: "Caption",
+          description: "Image caption visible on the page.",
+        },
+      ],
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.title };
+        },
+      },
+    },
+  ],
+});
 const generateOneColumnBlock = (): Template => ({
   name: "oneColumn",
   label: "One Column Content",
@@ -142,6 +180,7 @@ const generateSection = (): Template => ({
       templates: [
         generateSpacer(),
         generateDivider(),
+        generateImageSlider(),
         generateOneColumnBlock(),
         generateTwoColumnBlock_1_1(),
         generateTwoColumnBlock_1_2(),

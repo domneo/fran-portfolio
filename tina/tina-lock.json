@@ -422,6 +422,81 @@
                         ]
                       },
                       {
+                        "name": "imageSlider",
+                        "label": "Image Slider",
+                        "fields": [
+                          {
+                            "type": "object",
+                            "list": true,
+                            "name": "slides",
+                            "label": "Slides",
+                            "fields": [
+                              {
+                                "type": "image",
+                                "name": "image",
+                                "label": "Image",
+                                "required": true,
+                                "namespace": [
+                                  "works_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "image"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "title",
+                                "label": "Title",
+                                "description": "A simple description of the image. Serves as fallback for accessibility.",
+                                "namespace": [
+                                  "works_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "title"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "caption",
+                                "label": "Caption",
+                                "description": "Image caption visible on the page.",
+                                "namespace": [
+                                  "works_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "caption"
+                                ]
+                              }
+                            ],
+                            "ui": {},
+                            "namespace": [
+                              "works_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "imageSlider",
+                              "slides"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "works_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "imageSlider"
+                        ]
+                      },
+                      {
                         "name": "oneColumn",
                         "label": "One Column Content",
                         "fields": [
@@ -1345,6 +1420,81 @@
                         ]
                       },
                       {
+                        "name": "imageSlider",
+                        "label": "Image Slider",
+                        "fields": [
+                          {
+                            "type": "object",
+                            "list": true,
+                            "name": "slides",
+                            "label": "Slides",
+                            "fields": [
+                              {
+                                "type": "image",
+                                "name": "image",
+                                "label": "Image",
+                                "required": true,
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "image"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "title",
+                                "label": "Title",
+                                "description": "A simple description of the image. Serves as fallback for accessibility.",
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "title"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "caption",
+                                "label": "Caption",
+                                "description": "Image caption visible on the page.",
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "caption"
+                                ]
+                              }
+                            ],
+                            "ui": {},
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "imageSlider",
+                              "slides"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "imageSlider"
+                        ]
+                      },
+                      {
                         "name": "oneColumn",
                         "label": "One Column Content",
                         "fields": [
@@ -2098,6 +2248,7 @@
       "typeMap": {
         "spacer": "Works_postsSectionsSectionBlocksSpacer",
         "divider": "Works_postsSectionsSectionBlocksDivider",
+        "imageSlider": "Works_postsSectionsSectionBlocksImageSlider",
         "oneColumn": "Works_postsSectionsSectionBlocksOneColumn",
         "twoColumn_1_1": "Works_postsSectionsSectionBlocksTwoColumn_1_1",
         "twoColumn_1_2": "Works_postsSectionsSectionBlocksTwoColumn_1_2",
@@ -2139,6 +2290,7 @@
       "typeMap": {
         "spacer": "CaseStudies_postsSectionsSectionBlocksSpacer",
         "divider": "CaseStudies_postsSectionsSectionBlocksDivider",
+        "imageSlider": "CaseStudies_postsSectionsSectionBlocksImageSlider",
         "oneColumn": "CaseStudies_postsSectionsSectionBlocksOneColumn",
         "twoColumn_1_1": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1",
         "twoColumn_1_2": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2",
@@ -4732,6 +4884,73 @@
         "directives": [],
         "name": {
           "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderSlides"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSlider"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Works_postsSectionsSectionBlocksImageSliderSlides"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
           "value": "Works_postsSectionsSectionBlocksOneColumn"
         },
         "fields": [
@@ -4859,6 +5078,13 @@
             "name": {
               "kind": "Name",
               "value": "Works_postsSectionsSectionBlocksDivider"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksImageSlider"
             }
           },
           {
@@ -5095,6 +5321,59 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderSlidesFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksImageSliderSlidesFilter"
+              }
             }
           }
         ]
@@ -5774,6 +6053,17 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksImageSliderFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "oneColumn" },
             "type": {
               "kind": "NamedType",
@@ -6422,6 +6712,73 @@
         "directives": [],
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlides"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSlider"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlides"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksOneColumn"
         },
         "fields": [
@@ -6552,6 +6909,13 @@
             "name": {
               "kind": "Name",
               "value": "CaseStudies_postsSectionsSectionBlocksDivider"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksImageSlider"
             }
           },
           {
@@ -6791,6 +7155,59 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesFilter"
+              }
             }
           }
         ]
@@ -7465,6 +7882,17 @@
               "name": {
                 "kind": "Name",
                 "value": "CaseStudies_postsSectionsSectionBlocksDividerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksImageSliderFilter"
               }
             }
           },
@@ -8767,6 +9195,62 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderSlidesMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Works_postsSectionsSectionBlocksImageSliderSlidesMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "Works_postsSectionsSectionBlocksOneColumnMutation"
         },
         "fields": [
@@ -8889,6 +9373,17 @@
               "name": {
                 "kind": "Name",
                 "value": "Works_postsSectionsSectionBlocksDividerMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksImageSliderMutation"
               }
             }
           },
@@ -9213,6 +9708,62 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
         },
         "fields": [
@@ -9335,6 +9886,17 @@
               "name": {
                 "kind": "Name",
                 "value": "CaseStudies_postsSectionsSectionBlocksDividerMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksImageSliderMutation"
               }
             }
           },
