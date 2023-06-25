@@ -3,7 +3,7 @@ import { Collection, Template, defineConfig } from "tinacms";
 //
 // TEMPLATES
 //
-const spacer: Template = {
+const generateSpacer = (): Template => ({
   name: "spacer",
   label: "Spacer",
   fields: [
@@ -14,8 +14,8 @@ const spacer: Template = {
       required: true,
     },
   ],
-};
-const divider: Template = {
+});
+const generateDivider = (): Template => ({
   name: "divider",
   label: "Divider",
   fields: [
@@ -25,8 +25,8 @@ const divider: Template = {
       label: "This is a null field because I must put something",
     },
   ],
-};
-const oneColumnBlock: Template = {
+});
+const generateOneColumnBlock = (): Template => ({
   name: "oneColumn",
   label: "One Column Content",
   fields: [
@@ -34,11 +34,11 @@ const oneColumnBlock: Template = {
       type: "rich-text",
       name: "content",
       label: "Content",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
   ],
-};
-const twoColumnBlock_1_1: Template = {
+});
+const generateTwoColumnBlock_1_1 = (): Template => ({
   name: "twoColumn_1_1",
   label: "Two Column Content (1-1)",
   fields: [
@@ -46,17 +46,17 @@ const twoColumnBlock_1_1: Template = {
       type: "rich-text",
       name: "col1",
       label: "Column 1",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
     {
       type: "rich-text",
       name: "col2",
       label: "Column 2",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
   ],
-};
-const twoColumnBlock_1_2: Template = {
+});
+const generateTwoColumnBlock_1_2 = (): Template => ({
   name: "twoColumn_1_2",
   label: "Two Column Content (1-2)",
   fields: [
@@ -64,17 +64,17 @@ const twoColumnBlock_1_2: Template = {
       type: "rich-text",
       name: "col1",
       label: "Column 1",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
     {
       type: "rich-text",
       name: "col2",
       label: "Column 2",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
   ],
-};
-const threeColumnBlock_1_1_1: Template = {
+});
+const generateThreeColumnBlock_1_1_1 = (): Template => ({
   name: "threeColumn_1_1_1",
   label: "Three Column Content (1-1-1)",
   fields: [
@@ -82,23 +82,23 @@ const threeColumnBlock_1_1_1: Template = {
       type: "rich-text",
       name: "col1",
       label: "Column 1",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
     {
       type: "rich-text",
       name: "col2",
       label: "Column 2",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
     {
       type: "rich-text",
       name: "col3",
       label: "Column 3",
-      templates: [spacer, divider],
+      templates: [generateSpacer(), generateDivider()],
     },
   ],
-};
-const section: Template = {
+});
+const generateSection = (): Template => ({
   name: "section",
   label: "Section",
   fields: [
@@ -118,12 +118,12 @@ const section: Template = {
       name: "blocks",
       label: "Content",
       templates: [
-        spacer,
-        divider,
-        oneColumnBlock,
-        twoColumnBlock_1_1,
-        twoColumnBlock_1_2,
-        threeColumnBlock_1_1_1,
+        generateSpacer(),
+        generateDivider(),
+        generateOneColumnBlock(),
+        generateTwoColumnBlock_1_1(),
+        generateTwoColumnBlock_1_2(),
+        generateThreeColumnBlock_1_1_1(),
       ],
     },
   ],
@@ -135,7 +135,7 @@ const section: Template = {
       return { label: item?.title };
     },
   },
-};
+});
 
 //
 // COLLECTIONS
@@ -437,7 +437,7 @@ const worksPostsCollection: Collection = {
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [section],
+      templates: [generateSection()],
     },
   ],
   ui: {
@@ -572,7 +572,7 @@ const caseStudiesPostsCollection: Collection = {
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [section],
+      templates: [generateSection()],
     },
   ],
   ui: {
