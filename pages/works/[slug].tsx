@@ -90,7 +90,7 @@ export default function WorksPost({
                         divider: Divider,
                       };
                       switch (block?.__typename) {
-                        case "CaseStudies_postsSectionsSectionBlocksSpacer":
+                        case "Works_postsSectionsSectionBlocksSpacer":
                           const size = block.size.toLowerCase() as
                             | "sm"
                             | "md"
@@ -98,10 +98,10 @@ export default function WorksPost({
                             | "xl";
                           blockComponent = <Spacer size={size} />;
                           break;
-                        case "CaseStudies_postsSectionsSectionBlocksDivider":
+                        case "Works_postsSectionsSectionBlocksDivider":
                           blockComponent = <Divider />;
                           break;
-                        case "CaseStudies_postsSectionsSectionBlocksOneColumn":
+                        case "Works_postsSectionsSectionBlocksOneColumn":
                           blockComponent = (
                             <TinaMarkdown
                               content={block.content}
@@ -109,17 +109,17 @@ export default function WorksPost({
                             />
                           );
                           break;
-                        case "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1":
+                        case "Works_postsSectionsSectionBlocksTwoColumn_1_1":
                           blockComponent = (
                             <TwoColumn11 col1={block.col1} col2={block.col2} />
                           );
                           break;
-                        case "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2":
+                        case "Works_postsSectionsSectionBlocksTwoColumn_1_2":
                           blockComponent = (
                             <TwoColumn12 col1={block.col1} col2={block.col2} />
                           );
                           break;
-                        case "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1":
+                        case "Works_postsSectionsSectionBlocksThreeColumn_1_1_1":
                           blockComponent = (
                             <ThreeColumn111
                               col1={block.col1}
