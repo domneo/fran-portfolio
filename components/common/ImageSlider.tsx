@@ -77,6 +77,7 @@ export class ImageSlider extends Component<ImageSliderProps> {
             if (slide) {
               return (
                 <div key={window.crypto.randomUUID()} className={styles.slide}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={slide.image}
                     alt={slide.title || ""}

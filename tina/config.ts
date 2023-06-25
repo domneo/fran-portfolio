@@ -147,7 +147,7 @@ const generateSection = (): Template => ({
       label: "Anchor ID",
       description: "ID for anchor links",
       ui: {
-        validate: (value) => {
+        validate: (value: string) => {
           if (!value?.match(/^[a-zA-Z0-9_]*$/)) {
             return "Only alphanumeric characters and underscores allowed.";
           }
