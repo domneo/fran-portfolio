@@ -346,7 +346,7 @@
                             "label": "Size",
                             "required": true,
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -356,7 +356,7 @@
                           }
                         ],
                         "namespace": [
-                          "caseStudies_posts",
+                          "works_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -372,7 +372,7 @@
                             "name": "label",
                             "label": "This is a null field because I must put something",
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -382,7 +382,7 @@
                           }
                         ],
                         "namespace": [
-                          "caseStudies_posts",
+                          "works_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -408,7 +408,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -420,7 +420,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -438,7 +438,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -450,7 +450,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -461,7 +461,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -471,7 +471,7 @@
                           }
                         ],
                         "namespace": [
-                          "caseStudies_posts",
+                          "works_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -497,7 +497,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -509,7 +509,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -527,7 +527,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -539,7 +539,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -550,7 +550,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -573,7 +573,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -585,7 +585,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -603,7 +603,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -615,7 +615,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -626,7 +626,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -636,7 +636,7 @@
                           }
                         ],
                         "namespace": [
-                          "caseStudies_posts",
+                          "works_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -662,7 +662,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -674,7 +674,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -692,7 +692,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -704,7 +704,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -715,7 +715,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -738,7 +738,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -750,7 +750,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -768,7 +768,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -780,7 +780,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -791,7 +791,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -801,7 +801,7 @@
                           }
                         ],
                         "namespace": [
-                          "caseStudies_posts",
+                          "works_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -827,7 +827,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -839,7 +839,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -857,7 +857,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -869,7 +869,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -880,7 +880,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -903,7 +903,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -915,7 +915,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -933,7 +933,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -945,7 +945,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -956,7 +956,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -979,7 +979,7 @@
                                     "label": "Size",
                                     "required": true,
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -991,7 +991,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -1009,7 +1009,7 @@
                                     "name": "label",
                                     "label": "This is a null field because I must put something",
                                     "namespace": [
-                                      "caseStudies_posts",
+                                      "works_posts",
                                       "sections",
                                       "section",
                                       "blocks",
@@ -1021,7 +1021,7 @@
                                   }
                                 ],
                                 "namespace": [
-                                  "caseStudies_posts",
+                                  "works_posts",
                                   "sections",
                                   "section",
                                   "blocks",
@@ -1032,7 +1032,7 @@
                               }
                             ],
                             "namespace": [
-                              "caseStudies_posts",
+                              "works_posts",
                               "sections",
                               "section",
                               "blocks",
@@ -1042,7 +1042,7 @@
                           }
                         ],
                         "namespace": [
-                          "caseStudies_posts",
+                          "works_posts",
                           "sections",
                           "section",
                           "blocks",
@@ -1171,15 +1171,20 @@
             "type": "string",
             "name": "subtitle",
             "label": "Subtitle",
-            "required": true,
             "namespace": ["caseStudies_posts", "subtitle"]
           },
           {
             "type": "string",
             "name": "summary",
             "label": "Summary",
-            "required": true,
             "namespace": ["caseStudies_posts", "summary"]
+          },
+          {
+            "type": "rich-text",
+            "name": "background",
+            "label": "Background",
+            "namespace": ["caseStudies_posts", "background"],
+            "parser": { "type": "mdx" }
           },
           {
             "type": "object",
@@ -1943,25 +1948,6 @@
                 ],
                 "ui": { "defaultItem": { "showSectionTitle": true } },
                 "namespace": ["caseStudies_posts", "sections", "section"]
-              },
-              {
-                "name": "spacer",
-                "label": "Spacer",
-                "fields": [
-                  {
-                    "type": "string",
-                    "name": "size",
-                    "label": "Size",
-                    "required": true,
-                    "namespace": [
-                      "caseStudies_posts",
-                      "sections",
-                      "spacer",
-                      "size"
-                    ]
-                  }
-                ],
-                "namespace": ["caseStudies_posts", "sections", "spacer"]
               }
             ],
             "namespace": ["caseStudies_posts", "sections"]
@@ -2035,12 +2021,12 @@
       "type": "Works_postsSectionsSectionBlocks",
       "resolveType": "unionData",
       "typeMap": {
-        "spacer": "CaseStudies_postsSectionsSectionBlocksSpacer",
-        "divider": "CaseStudies_postsSectionsSectionBlocksDivider",
-        "oneColumn": "CaseStudies_postsSectionsSectionBlocksOneColumn",
-        "twoColumn_1_1": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1",
-        "twoColumn_1_2": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2",
-        "threeColumn_1_1_1": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1"
+        "spacer": "Works_postsSectionsSectionBlocksSpacer",
+        "divider": "Works_postsSectionsSectionBlocksDivider",
+        "oneColumn": "Works_postsSectionsSectionBlocksOneColumn",
+        "twoColumn_1_1": "Works_postsSectionsSectionBlocksTwoColumn_1_1",
+        "twoColumn_1_2": "Works_postsSectionsSectionBlocksTwoColumn_1_2",
+        "threeColumn_1_1_1": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1"
       }
     },
     "Works_postsSections": {
@@ -2087,10 +2073,7 @@
     "CaseStudies_postsSections": {
       "type": "CaseStudies_postsSections",
       "resolveType": "unionData",
-      "typeMap": {
-        "section": "CaseStudies_postsSectionsSection",
-        "spacer": "CaseStudies_postsSectionsSpacer"
-      }
+      "typeMap": { "section": "CaseStudies_postsSectionsSection" }
     },
     "CaseStudies_posts": {
       "type": "CaseStudies_posts",
@@ -4631,6 +4614,1659 @@
         "directives": [],
         "name": {
           "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksSpacer"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksDivider"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksOneColumn"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "col3" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "UnionTypeDefinition",
+        "name": { "kind": "Name", "value": "Works_postsSectionsSectionBlocks" },
+        "directives": [],
+        "types": [
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksSpacer"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksDivider"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksOneColumn"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Works_postsSectionsSection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "showSectionTitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "blocks" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Works_postsSectionsSectionBlocks"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "UnionTypeDefinition",
+        "name": { "kind": "Name", "value": "Works_postsSections" },
+        "directives": [],
+        "types": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Works_postsSectionsSection" }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Works_posts" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "subtitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "summary" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "background" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "sections" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Works_postsSections" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksSpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksDividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksOneColumnContentSpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksOneColumnContentDividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksOneColumnContentFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksOneColumnContentSpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksOneColumnContentDividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksOneColumnFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksOneColumnContentFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col1SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col1DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col1SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col1DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col2SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col2DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col2SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col2DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col1Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Col2Filter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col1SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col1DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col1SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col1DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col2SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col2DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col2SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col2DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col1Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Col2Filter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col1SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col1DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col1SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col1DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col2SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col2DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col2Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col2SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col2DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col3SpacerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col3DividerFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col3Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col3SpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col3DividerFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Filter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col1Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col2Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col3" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Col3Filter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "spacer" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksSpacerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "divider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksDividerFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "oneColumn" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksOneColumnFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "twoColumn_1_1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "twoColumn_1_2" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Filter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "threeColumn_1_1_1" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Filter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "Works_postsSectionsSectionFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "showSectionTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BooleanFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "blocks" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "Works_postsSectionsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "section" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "Works_postsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "subtitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "summary" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "background" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "sections" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Works_postsSectionsFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Works_postsConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Works_posts" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Works_postsConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Works_postsConnectionEdges"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesPostListSkills" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesPostList" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "index" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "skills" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudiesPostListSkills" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudies" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "CaseStudiesPostList" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesPostListSkillsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesPostListFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "url" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "index" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "NumberFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "skills" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudiesPostListSkillsFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "comingSoon" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BooleanFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "CaseStudiesFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "postList" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudiesPostListFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "CaseStudies" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "CaseStudiesConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudiesConnectionEdges"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksSpacer"
         },
         "fields": [
@@ -4786,7 +6422,10 @@
       },
       {
         "kind": "UnionTypeDefinition",
-        "name": { "kind": "Name", "value": "Works_postsSectionsSectionBlocks" },
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocks"
+        },
         "directives": [],
         "types": [
           {
@@ -4837,7 +6476,7 @@
         "kind": "ObjectTypeDefinition",
         "interfaces": [],
         "directives": [],
-        "name": { "kind": "Name", "value": "Works_postsSectionsSection" },
+        "name": { "kind": "Name", "value": "CaseStudies_postsSectionsSection" },
         "fields": [
           {
             "kind": "FieldDefinition",
@@ -4867,7 +6506,7 @@
                 "kind": "NamedType",
                 "name": {
                   "kind": "Name",
-                  "value": "Works_postsSectionsSectionBlocks"
+                  "value": "CaseStudies_postsSectionsSectionBlocks"
                 }
               }
             }
@@ -4876,12 +6515,15 @@
       },
       {
         "kind": "UnionTypeDefinition",
-        "name": { "kind": "Name", "value": "Works_postsSections" },
+        "name": { "kind": "Name", "value": "CaseStudies_postsSections" },
         "directives": [],
         "types": [
           {
             "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Works_postsSectionsSection" }
+            "name": {
+              "kind": "Name",
+              "value": "CaseStudies_postsSectionsSection"
+            }
           }
         ]
       },
@@ -4895,7 +6537,7 @@
           }
         ],
         "directives": [],
-        "name": { "kind": "Name", "value": "Works_posts" },
+        "name": { "kind": "Name", "value": "CaseStudies_posts" },
         "fields": [
           {
             "kind": "FieldDefinition",
@@ -4944,7 +6586,7 @@
               "kind": "ListType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Works_postsSections" }
+                "name": { "kind": "Name", "value": "CaseStudies_postsSections" }
               }
             }
           },
@@ -5668,852 +7310,6 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "Works_postsSectionsSectionBlocksFilter"
-        },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "spacer" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksSpacerFilter"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "divider" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksDividerFilter"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "oneColumn" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnFilter"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "twoColumn_1_1" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Filter"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "twoColumn_1_2" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Filter"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "threeColumn_1_1_1" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Filter"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "Works_postsSectionsSectionFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "showSectionTitle" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "BooleanFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "blocks" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "Works_postsSectionsSectionBlocksFilter"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "Works_postsSectionsFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "section" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "Works_postsSectionsSectionFilter"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "Works_postsFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "summary" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "background" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "sections" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Works_postsSectionsFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "Works_postsConnectionEdges" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "cursor" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "node" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Works_posts" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Connection" }
-          }
-        ],
-        "directives": [],
-        "name": { "kind": "Name", "value": "Works_postsConnection" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "pageInfo" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageInfo" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "totalCount" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Float" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "edges" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": {
-                  "kind": "Name",
-                  "value": "Works_postsConnectionEdges"
-                }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudiesPostListSkills" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "name" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudiesPostList" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "url" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "index" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Float" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "description" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "skills" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "CaseStudiesPostListSkills" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "image" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "comingSoon" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Boolean" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [
-          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Document" }
-          }
-        ],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudies" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "postList" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "CaseStudiesPostList" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "id" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "ID" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "_sys" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "SystemInfo" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "_values" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "CaseStudiesPostListSkillsFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "name" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "CaseStudiesPostListFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "url" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "index" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "NumberFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "description" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "skills" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudiesPostListSkillsFilter"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "image" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "ImageFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "comingSoon" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "BooleanFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "CaseStudiesFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "postList" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "CaseStudiesPostListFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudiesConnectionEdges" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "cursor" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "node" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "CaseStudies" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Connection" }
-          }
-        ],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudiesConnection" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "pageInfo" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageInfo" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "totalCount" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Float" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "edges" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": {
-                  "kind": "Name",
-                  "value": "CaseStudiesConnectionEdges"
-                }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "UnionTypeDefinition",
-        "name": {
-          "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocks"
-        },
-        "directives": [],
-        "types": [
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksSpacer"
-            }
-          },
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksDivider"
-            }
-          },
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksOneColumn"
-            }
-          },
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1"
-            }
-          },
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2"
-            }
-          },
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudies_postsSectionsSection" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "showSectionTitle" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Boolean" }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "blocks" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": {
-                  "kind": "Name",
-                  "value": "CaseStudies_postsSectionsSectionBlocks"
-                }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudies_postsSectionsSpacer" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "size" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "UnionTypeDefinition",
-        "name": { "kind": "Name", "value": "CaseStudies_postsSections" },
-        "directives": [],
-        "types": [
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSection"
-            }
-          },
-          {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "CaseStudies_postsSectionsSpacer"
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [
-          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Document" }
-          }
-        ],
-        "directives": [],
-        "name": { "kind": "Name", "value": "CaseStudies_posts" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "summary" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "sections" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "CaseStudies_postsSections" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "id" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "ID" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "_sys" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "SystemInfo" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "_values" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": {
-          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksFilter"
         },
         "fields": [
@@ -6623,23 +7419,6 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": {
-          "kind": "Name",
-          "value": "CaseStudies_postsSectionsSpacerFilter"
-        },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "size" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "CaseStudies_postsSectionsFilter" },
         "fields": [
           {
@@ -6650,17 +7429,6 @@
               "name": {
                 "kind": "Name",
                 "value": "CaseStudies_postsSectionsSectionFilter"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "spacer" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSpacerFilter"
               }
             }
           }
@@ -6692,6 +7460,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "background" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
             }
           },
           {
@@ -7808,7 +8584,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksSpacerMutation"
+          "value": "Works_postsSectionsSectionBlocksSpacerMutation"
         },
         "fields": [
           {
@@ -7825,7 +8601,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksDividerMutation"
+          "value": "Works_postsSectionsSectionBlocksDividerMutation"
         },
         "fields": [
           {
@@ -7842,7 +8618,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
+          "value": "Works_postsSectionsSectionBlocksOneColumnMutation"
         },
         "fields": [
           {
@@ -7859,7 +8635,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
         },
         "fields": [
           {
@@ -7884,7 +8660,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
+          "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
         },
         "fields": [
           {
@@ -7909,7 +8685,7 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
+          "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
         },
         "fields": [
           {
@@ -7952,7 +8728,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksSpacerMutation"
+                "value": "Works_postsSectionsSectionBlocksSpacerMutation"
               }
             }
           },
@@ -7963,7 +8739,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksDividerMutation"
+                "value": "Works_postsSectionsSectionBlocksDividerMutation"
               }
             }
           },
@@ -7974,7 +8750,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
+                "value": "Works_postsSectionsSectionBlocksOneColumnMutation"
               }
             }
           },
@@ -7985,7 +8761,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
               }
             }
           },
@@ -7996,7 +8772,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
+                "value": "Works_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
               }
             }
           },
@@ -8007,7 +8783,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
+                "value": "Works_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
               }
             }
           }
@@ -8238,6 +9014,140 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksSpacerMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "size" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksDividerMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "label" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1Mutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2Mutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1Mutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col1" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col2" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "col3" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksMutation"
         },
         "fields": [
@@ -8352,23 +9262,6 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
-          "value": "CaseStudies_postsSectionsSpacerMutation"
-        },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "size" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": {
-          "kind": "Name",
           "value": "CaseStudies_postsSectionsMutation"
         },
         "fields": [
@@ -8380,17 +9273,6 @@
               "name": {
                 "kind": "Name",
                 "value": "CaseStudies_postsSectionsSectionMutation"
-              }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "spacer" },
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "CaseStudies_postsSectionsSpacerMutation"
               }
             }
           }
@@ -8422,6 +9304,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "background" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
             }
           },
           {
