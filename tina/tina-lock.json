@@ -312,6 +312,12 @@
             "parser": { "type": "mdx" }
           },
           {
+            "type": "string",
+            "name": "anchorLinksTitle",
+            "label": "Anchor Links Title",
+            "namespace": ["works_posts", "anchorLinksTitle"]
+          },
+          {
             "type": "object",
             "list": true,
             "name": "sections",
@@ -321,6 +327,19 @@
                 "name": "section",
                 "label": "Section",
                 "fields": [
+                  {
+                    "type": "string",
+                    "name": "anchorId",
+                    "label": "Anchor ID",
+                    "description": "ID for anchor links",
+                    "ui": {},
+                    "namespace": [
+                      "works_posts",
+                      "sections",
+                      "section",
+                      "anchorId"
+                    ]
+                  },
                   {
                     "type": "string",
                     "name": "title",
@@ -356,7 +375,7 @@
                             "type": "string",
                             "name": "size",
                             "label": "Size",
-                            "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                            "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                             "required": true,
                             "namespace": [
                               "works_posts",
@@ -419,7 +438,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -509,7 +528,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -586,7 +605,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -676,7 +695,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -753,7 +772,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -843,7 +862,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -920,7 +939,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -997,7 +1016,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "works_posts",
@@ -1211,6 +1230,12 @@
             "parser": { "type": "mdx" }
           },
           {
+            "type": "string",
+            "name": "anchorLinksTitle",
+            "label": "Anchor Links Title",
+            "namespace": ["caseStudies_posts", "anchorLinksTitle"]
+          },
+          {
             "type": "object",
             "list": true,
             "name": "sections",
@@ -1220,6 +1245,19 @@
                 "name": "section",
                 "label": "Section",
                 "fields": [
+                  {
+                    "type": "string",
+                    "name": "anchorId",
+                    "label": "Anchor ID",
+                    "description": "ID for anchor links",
+                    "ui": {},
+                    "namespace": [
+                      "caseStudies_posts",
+                      "sections",
+                      "section",
+                      "anchorId"
+                    ]
+                  },
                   {
                     "type": "string",
                     "name": "title",
@@ -1260,7 +1298,7 @@
                             "type": "string",
                             "name": "size",
                             "label": "Size",
-                            "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                            "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                             "required": true,
                             "namespace": [
                               "caseStudies_posts",
@@ -1323,7 +1361,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -1413,7 +1451,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -1490,7 +1528,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -1580,7 +1618,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -1657,7 +1695,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -1747,7 +1785,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -1824,7 +1862,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -1901,7 +1939,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "description": "Allowed values: \"sm\"|\"md\"|\"lg\"|\"xl\". Defaults to \"md\"",
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
@@ -4861,6 +4899,15 @@
         "fields": [
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "title" },
             "arguments": [],
             "type": {
@@ -4957,6 +5004,15 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -5768,6 +5824,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
@@ -5846,6 +5910,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -6520,6 +6592,15 @@
         "fields": [
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "title" },
             "arguments": [],
             "type": {
@@ -6619,6 +6700,15 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -7433,6 +7523,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
@@ -7511,6 +7609,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -8841,6 +8947,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
@@ -8922,6 +9036,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -9271,6 +9393,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
@@ -9355,6 +9485,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {

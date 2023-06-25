@@ -49,38 +49,58 @@ export default function CaseStudiesPost({
   const { data: globalData } = useTina<GlobalQuery>(global);
   const { data: caseStudiesPostData } =
     useTina<CaseStudies_PostsQuery>(caseStudiesPost);
-  const { title, subtitle, summary, background, sections } =
+  const { title, subtitle, summary, background, anchorLinksTitle, sections } =
     caseStudiesPostData.caseStudies_posts;
 
   return (
     <Layout data={globalData} showQuickActions={false}>
       <div className="container-xxl">
-        <div
-          className={`${styles.header} row justify-content-center justify-content-xxl-start`}
-        >
-          <div className="col-lg-10 col-xxl-12">
+        <div className={`${styles.header} row justify-content-center`}>
+          <div className="col-lg-10">
             <h3 className="semibold allcaps">{subtitle}</h3>
             <h1>{title}</h1>
           </div>
-          <div className="col-11 offset-1 col-sm-10 offset-sm-2 col-lg-7 offset-lg-3 col-xl-6 offset-xl-4 col-xxl-5 offset-xxl-6">
+          <div className="col-11 offset-1 col-sm-10 offset-sm-2 col-lg-7 offset-lg-3 col-xl-6 offset-xl-4">
             <p>{summary}</p>
           </div>
         </div>
         <div className="spacer-xl" />
         <div className="row justify-content-center">
-          <div className={`${styles.background} col-lg-8`}>
+          <div className="col-lg-8">
             <TinaMarkdown content={background} />
           </div>
         </div>
         <Divider />
+        <div className="row justify-content-center">
+          <div className="col-md-4 col-lg-3">
+            <h2>{anchorLinksTitle}</h2>
+          </div>
+          <div className="col-md-8 col-lg-5">
+            {sections?.map((section) => {
+              if (section?.__typename === "CaseStudies_postsSectionsSection") {
+                const { anchorId, title, showSectionTitle } = section;
+                if (showSectionTitle) {
+                  return (
+                    <p key={uuidv4()}>
+                      <a href={`#${anchorId || ""}`} title={title}>
+                        {title}
+                      </a>
+                    </p>
+                  );
+                }
+              }
+            })}
+          </div>
+        </div>
         <div className={`${styles.body} row justify-content-center`}>
           <div className="col-lg-10">
             {sections?.map((section) => {
               if (section?.__typename === "CaseStudies_postsSectionsSection") {
-                const { showSectionTitle, title, blocks } = section;
+                const { showSectionTitle, title, anchorId, blocks } = section;
                 return (
                   <Section
                     key={uuidv4()}
+                    anchorId={anchorId}
                     title={title}
                     showSectionTitle={showSectionTitle}
                   >

@@ -11,7 +11,8 @@ const generateSpacer = (): Template => ({
       type: "string",
       name: "size",
       label: "Size",
-      description: 'Allowed values: "sm"|"md"|"lg"|"xl". Defaults to "md"',
+      description:
+        'Allowed values: "sm" | "md" | "lg" | "xl". Defaults to "md"',
       required: true,
     },
   ],
@@ -103,6 +104,19 @@ const generateSection = (): Template => ({
   name: "section",
   label: "Section",
   fields: [
+    {
+      type: "string",
+      name: "anchorId",
+      label: "Anchor ID",
+      description: "ID for anchor links",
+      ui: {
+        validate: (value) => {
+          if (!value?.match(/^[a-zA-Z0-9_]*$/)) {
+            return "Only alphanumeric characters and underscores allowed.";
+          }
+        },
+      },
+    },
     {
       type: "string",
       name: "title",
@@ -455,6 +469,11 @@ const worksPostsCollection: Collection = {
       label: "Background",
     },
     {
+      type: "string",
+      name: "anchorLinksTitle",
+      label: "Anchor Links Title",
+    },
+    {
       type: "object",
       list: true,
       name: "sections",
@@ -592,6 +611,11 @@ const caseStudiesPostsCollection: Collection = {
       type: "rich-text",
       name: "background",
       label: "Background",
+    },
+    {
+      type: "string",
+      name: "anchorLinksTitle",
+      label: "Anchor Links Title",
     },
     {
       type: "object",
