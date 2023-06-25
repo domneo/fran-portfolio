@@ -556,20 +556,23 @@ const caseStudiesPostsCollection: Collection = {
       type: "string",
       name: "subtitle",
       label: "Subtitle",
-      required: true,
     },
     {
       type: "string",
       name: "summary",
       label: "Summary",
-      required: true,
+    },
+    {
+      type: "rich-text",
+      name: "background",
+      label: "Background",
     },
     {
       type: "object",
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [section, spacer],
+      templates: [section],
     },
   ],
   ui: {
