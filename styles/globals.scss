@@ -74,6 +74,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: 0.03em;
 }
 
 h1,
@@ -88,6 +89,7 @@ h2,
   @extend %heading;
   @include font-size(26px);
   font-family: "Ogg", sans-serif;
+  font-weight: 500;
 }
 
 h3,
@@ -99,8 +101,8 @@ h3,
   text-transform: uppercase;
 }
 
-h3,
-.h3 {
+h4,
+.h4 {
   @extend %heading;
   @include font-size(16px);
   font-family: "Inter", sans-serif;
@@ -399,33 +401,8 @@ li {
   justify-content: center;
 }
 
-.slick-slider {
-  &:not(.slick-vertical) {
-    .slick-track {
-      display: flex !important;
-      align-items: stretch !important;
-    }
-    .slick-slide {
-      height: auto;
-
-      & > div {
-        height: 100%;
-      }
-    }
-  }
-}
-
-.center-vertically {
-  .slick-slider {
-    &:not(.slick-vertical) {
-      .slick-slide {
-        & > div {
-          display: flex;
-          align-items: center;
-        }
-      }
-    }
-  }
+.slick-list {
+  transition: 0.3s height;
 }
 
 .ReactModal__Overlay {

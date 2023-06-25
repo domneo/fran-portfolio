@@ -2,18 +2,20 @@ import { Stars } from "components/common/Stars";
 import styles from "styles/works/Section.module.scss";
 
 interface SectionProps {
+  anchorId?: string | null;
   title?: string | null;
   showSectionTitle?: boolean | null;
   children?: React.ReactNode;
 }
 
 export const Section = ({
+  anchorId,
   title,
   showSectionTitle,
   children,
 }: SectionProps) => {
   return (
-    <section>
+    <section id={anchorId || ""}>
       {showSectionTitle && <div className="spacer-lg" />}
       {showSectionTitle && (
         <div className={styles.title}>

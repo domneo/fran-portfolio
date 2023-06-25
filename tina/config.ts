@@ -11,8 +11,8 @@ const generateSpacer = (): Template => ({
       type: "string",
       name: "size",
       label: "Size",
-      description: 'Allowed values: "sm"|"md"|"lg"|"xl". Defaults to "md"',
-      required: true,
+      description:
+        'Allowed values: "sm" | "md" | "lg" | "xl". Defaults to "md"',
     },
   ],
 });
@@ -24,6 +24,44 @@ const generateDivider = (): Template => ({
       type: "string",
       name: "label",
       label: "This is a null field because I must put something",
+    },
+  ],
+});
+const generateImageSlider = (): Template => ({
+  name: "imageSlider",
+  label: "Image Slider",
+  fields: [
+    {
+      type: "object",
+      list: true,
+      name: "slides",
+      label: "Slides",
+      fields: [
+        {
+          type: "image",
+          name: "image",
+          label: "Image",
+          required: true,
+        },
+        {
+          type: "string",
+          name: "title",
+          label: "Title",
+          description:
+            "A simple description of the image. Serves as fallback for accessibility.",
+        },
+        {
+          type: "string",
+          name: "caption",
+          label: "Caption",
+          description: "Image caption visible on the page.",
+        },
+      ],
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.title };
+        },
+      },
     },
   ],
 });
@@ -105,6 +143,19 @@ const generateSection = (): Template => ({
   fields: [
     {
       type: "string",
+      name: "anchorId",
+      label: "Anchor ID",
+      description: "ID for anchor links",
+      ui: {
+        validate: (value: string) => {
+          if (!value?.match(/^[a-zA-Z0-9_]*$/)) {
+            return "Only alphanumeric characters and underscores allowed.";
+          }
+        },
+      },
+    },
+    {
+      type: "string",
       name: "title",
       label: "Title",
       description:
@@ -128,6 +179,7 @@ const generateSection = (): Template => ({
       templates: [
         generateSpacer(),
         generateDivider(),
+        generateImageSlider(),
         generateOneColumnBlock(),
         generateTwoColumnBlock_1_1(),
         generateTwoColumnBlock_1_2(),
@@ -455,6 +507,11 @@ const worksPostsCollection: Collection = {
       label: "Background",
     },
     {
+      type: "string",
+      name: "anchorLinksTitle",
+      label: "Anchor Links Title",
+    },
+    {
       type: "object",
       list: true,
       name: "sections",
@@ -592,6 +649,11 @@ const caseStudiesPostsCollection: Collection = {
       type: "rich-text",
       name: "background",
       label: "Background",
+    },
+    {
+      type: "string",
+      name: "anchorLinksTitle",
+      label: "Anchor Links Title",
     },
     {
       type: "object",
