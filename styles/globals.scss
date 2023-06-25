@@ -401,33 +401,8 @@ li {
   justify-content: center;
 }
 
-.slick-slider {
-  &:not(.slick-vertical) {
-    .slick-track {
-      display: flex !important;
-      align-items: stretch !important;
-    }
-    .slick-slide {
-      height: auto;
-
-      & > div {
-        height: 100%;
-      }
-    }
-  }
-}
-
-.center-vertically {
-  .slick-slider {
-    &:not(.slick-vertical) {
-      .slick-slide {
-        & > div {
-          display: flex;
-          align-items: center;
-        }
-      }
-    }
-  }
+.slick-list {
+  transition: 0.3s height;
 }
 
 .ReactModal__Overlay {

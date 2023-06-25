@@ -1,5 +1,6 @@
 import Layout from "components/Layout";
 import { Divider } from "components/common/Divider";
+import { ImageSlider } from "components/common/ImageSlider";
 import { Spacer } from "components/common/Spacer";
 import { ThreeColumn111 } from "components/common/ThreeColumn111";
 import { TwoColumn11 } from "components/common/TwoColumn11";
@@ -111,15 +112,24 @@ export default function WorksPost({
                       };
                       switch (block?.__typename) {
                         case "Works_postsSectionsSectionBlocksSpacer":
-                          const size = block.size.toLowerCase() as
-                            | "sm"
-                            | "md"
-                            | "lg"
-                            | "xl";
-                          blockComponent = <Spacer size={size} />;
+                          if (block.size) {
+                            const size = block.size.toLowerCase() as
+                              | "sm"
+                              | "md"
+                              | "lg"
+                              | "xl";
+                            blockComponent = <Spacer size={size} />;
+                          }
                           break;
                         case "Works_postsSectionsSectionBlocksDivider":
                           blockComponent = <Divider />;
+                          break;
+                        case "Works_postsSectionsSectionBlocksImageSlider":
+                          if (block.slides) {
+                            blockComponent = (
+                              <ImageSlider slides={block.slides} />
+                            );
+                          }
                           break;
                         case "Works_postsSectionsSectionBlocksOneColumn":
                           blockComponent = (

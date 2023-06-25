@@ -13,7 +13,6 @@ const generateSpacer = (): Template => ({
       label: "Size",
       description:
         'Allowed values: "sm" | "md" | "lg" | "xl". Defaults to "md"',
-      required: true,
     },
   ],
 });

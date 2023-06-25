@@ -376,7 +376,6 @@
                             "name": "size",
                             "label": "Size",
                             "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                            "required": true,
                             "namespace": [
                               "works_posts",
                               "sections",
@@ -514,7 +513,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -604,7 +602,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -681,7 +678,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -771,7 +767,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -848,7 +843,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -938,7 +932,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -1015,7 +1008,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -1092,7 +1084,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -1374,7 +1365,6 @@
                             "name": "size",
                             "label": "Size",
                             "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                            "required": true,
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
@@ -1512,7 +1502,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1602,7 +1591,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1679,7 +1667,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1769,7 +1756,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1846,7 +1832,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1936,7 +1921,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -2013,7 +1997,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -2090,7 +2073,6 @@
                                     "name": "size",
                                     "label": "Size",
                                     "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
-                                    "required": true,
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -4849,11 +4831,8 @@
             "name": { "kind": "Name", "value": "size" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           }
         ]
@@ -6677,11 +6656,8 @@
             "name": { "kind": "Name", "value": "size" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           }
         ]
