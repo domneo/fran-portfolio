@@ -11,6 +11,7 @@ const generateSpacer = (): Template => ({
       type: "string",
       name: "size",
       label: "Size",
+      description: 'Allowed values: "sm"|"md"|"lg"|"xl". Defaults to "md"',
       required: true,
     },
   ],
@@ -106,17 +107,24 @@ const generateSection = (): Template => ({
       type: "string",
       name: "title",
       label: "Title",
+      description:
+        "Sticky section title appearing at the start of each section. Also serves as a label/name to help you identify each section in the list of sections.",
+      required: true,
     },
     {
       type: "boolean",
       name: "showSectionTitle",
       label: "Show section title",
+      description:
+        "You may choose to hide the section title if you require a section without the sticky title.",
     },
     {
       type: "object",
       list: true,
       name: "blocks",
       label: "Content",
+      description:
+        "Build the post content using a variety of one, two, or three column blocks, spacers, and dividers.",
       templates: [
         generateSpacer(),
         generateDivider(),
@@ -150,12 +158,16 @@ const globalCollection: Collection = {
       type: "string",
       name: "siteTitle",
       label: "Site Title",
+      description:
+        "The title for your site. Appears in browser tabs and as the title in search engine results.",
       required: true,
     },
     {
       type: "string",
       name: "siteDescription",
       label: "Site Description",
+      description:
+        "A short description for your site. Appears in search engine results. Recommended to be 160 characters or less.",
       required: true,
     },
     {
@@ -174,6 +186,8 @@ const globalCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "boolean",
@@ -203,6 +217,8 @@ const globalCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "boolean",
@@ -232,6 +248,8 @@ const globalCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "boolean",
@@ -335,11 +353,14 @@ const worksCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "number",
           name: "index",
           label: "Index",
+          description: "The post number.",
           required: true,
         },
         {
@@ -426,6 +447,7 @@ const worksPostsCollection: Collection = {
       type: "string",
       name: "summary",
       label: "Summary",
+      description: '"Role"',
     },
     {
       type: "rich-text",
@@ -470,11 +492,14 @@ const caseStudiesCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "number",
           name: "index",
           label: "Index",
+          description: "The post number.",
           required: true,
         },
         {
@@ -561,6 +586,7 @@ const caseStudiesPostsCollection: Collection = {
       type: "string",
       name: "summary",
       label: "Summary",
+      description: '"Role"',
     },
     {
       type: "rich-text",
