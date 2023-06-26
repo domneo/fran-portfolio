@@ -21,7 +21,7 @@
   .menuButton_line {
     width: 100%;
     height: 1px;
-    background: var(--black);
+    background: var(--bodyColor);
     margin-bottom: 6px;
     transition: 0.3s all;
 
@@ -33,7 +33,6 @@
 
 .menuOpen {
   .menuButton_line {
-    background: var(--white);
     margin-bottom: 0;
     margin-top: -1px;
     transition: 0.3s all;
@@ -43,7 +42,7 @@
 .drawer {
   position: fixed;
   inset: 0;
-  background: var(--trueblack);
+  background: var(--mobileMenuBgColor);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,9 +86,14 @@
 .menuItem {
   display: flex;
   justify-content: center;
-  color: var(--white);
+  color: var(--mobileMenuColor);
 
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.link,
+.footer {
+  color: var(--mobileMenuColor);
 }

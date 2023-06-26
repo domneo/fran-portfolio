@@ -55,14 +55,14 @@ export const MobileMenu = ({ menu, footerCredits }: MobileMenuProps) => {
           <Blob lineCount={1} strokeWidth={0.4} />
         </div>
         <div className={styles.logo}>
-          <BarrelLink text="FRAN" color="white" link="/" />
+          <BarrelLink className={styles.link} text="FRAN" link="/" />
         </div>
         <div className={styles.menuItemGroup}>
           {menu?.map((menuItem) => (
             <div key={window.crypto.randomUUID()} className={styles.menuItem}>
               <BarrelLink
+                className={styles.link}
                 text={menuItem?.name.toUpperCase() || ""}
-                color={"white"}
                 link={menuItem?.url || ""}
                 target={menuItem?.openInNewWindow ? "_blank" : "_self"}
               />

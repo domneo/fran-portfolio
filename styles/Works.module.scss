@@ -53,14 +53,14 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
-  color: var(--black);
+  color: var(--bodyColor);
   text-align: center;
   text-decoration: none;
   transition: 0.3s color;
 
   &:hover,
   &:focus {
-    color: var(--rosetaupe);
+    color: var(--linkHoverColor);
     text-decoration: none;
     transition: 0.3s color;
   }
