@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { BarrelLink } from "components/common/BarrelLink";
 import { Stars } from "components/common/Stars";
 import styles from "styles/Footer.module.scss";
@@ -21,16 +22,16 @@ export const Footer = ({
   inverse,
 }: FooterProps) => (
   <div className={styles.footer}>
-    <div className={styles.stars}>
-      <Stars resetColor={inverse ? "white" : "black"} />
+    <div className={classNames(styles.stars, { [styles.inverse]: inverse })}>
+      <Stars />
     </div>
     {showContactLinks && (
       <div className={styles.contactLinks}>
         {contactLinks?.map((link) => (
           <div key={window.crypto.randomUUID()} className={styles.menuItem}>
             <BarrelLink
+              className={classNames({ [styles.link]: inverse })}
               text={link?.name.toUpperCase() || ""}
-              color={inverse ? "white" : "black"}
               link={link?.url || ""}
               target={link?.openInNewWindow ? "_blank" : "_self"}
             />
@@ -40,22 +41,25 @@ export const Footer = ({
     )}
     {showContactLinks && (
       <div className={styles.divider}>
-        <BarrelLink text={"-"} color={inverse ? "white" : "black"} />
+        <BarrelLink
+          className={classNames({ [styles.link]: inverse })}
+          text={"-"}
+        />
       </div>
     )}
     <div className={styles.footerCredits}>
       {footerCredits?.map((credit) => (
         <BarrelLink
+          className={classNames({ [styles.link]: inverse })}
           key={window.crypto.randomUUID()}
           text={credit?.name.toUpperCase() || ""}
-          color={inverse ? "white" : "black"}
           link={credit?.url || ""}
           target={credit?.openInNewWindow ? "_blank" : "_self"}
         />
       ))}
       <BarrelLink
+        className={classNames({ [styles.link]: inverse })}
         text={`©${new Date().getFullYear()}`}
-        color={inverse ? "white" : "black"}
       />
     </div>
   </div>

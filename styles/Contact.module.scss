@@ -1,31 +1,86 @@
 @import "mixins";
 
-.arrow {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.header {
-  position: relative;
-  z-index: 1;
+.titleWrapper {
+  width: 100%;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
-  margin-top: 15vh;
+  margin-top: -5vh;
+
+  @include media("sm") {
+    margin-top: 0;
+  }
+
+  @include media("md") {
+    margin-top: -20vh;
+  }
 }
 
-.links {
+.title {
+  flex-shrink: 0;
+  margin-left: -4vw;
+  font-family: "Ogg", sans-serif;
+  font-size: 9vw;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+
+  @include media("md") {
+    margin-left: -3vw;
+    font-size: 7.5vw;
+  }
+
+  @include media("lg") {
+    margin-left: -2vw;
+    font-size: 6vw;
+  }
+
+  @include media("xl") {
+    margin-left: -1vw;
+    font-size: 4.5vw;
+  }
+}
+
+.body {
   display: flex;
-  gap: 4rem;
-  margin-top: 6rem;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include media("md") {
+    margin-top: -3rem;
+  }
+
+  @include media("lg") {
+    margin-top: -8rem;
+  }
+
+  @include media("xxl") {
+    margin-top: -10rem;
+  }
 }
 
-.yesthisisdog {
-  width: 268px;
-  height: 198px;
-  margin-top: 6rem;
-  margin-bottom: 120px;
+.contactLinks {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  column-gap: 2.25rem;
+  row-gap: 1rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.meToGroup {
+  width: 75%;
+  padding: 0 1rem;
+  text-align: right;
+
+  & :global(.slick-slide) {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.5s opacity, 0.5s transform;
+
+    &:global(.slick-current) {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 }

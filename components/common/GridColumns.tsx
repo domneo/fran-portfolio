@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import { Children } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 type ColSizes = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | "auto";
 type GutterSizes = 0 | 1 | 2 | 3 | 4 | 5;
@@ -66,7 +65,7 @@ export const GridColumns = ({
       {childrenArr &&
         childrenArr.length > 0 &&
         childrenArr.map((child) => (
-          <div key={uuidv4()} className={colClass}>
+          <div key={window.crypto.randomUUID()} className={colClass}>
             {child}
           </div>
         ))}

@@ -2,11 +2,10 @@ import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 
 interface StarsProps {
-  resetColor?: string;
   children?: React.ReactNode;
 }
-export const Stars = ({ resetColor = "black", children }: StarsProps) => {
-  const _resetColor = `var(--${resetColor})`;
+export const Stars = ({ children }: StarsProps) => {
+  const resetColor = "var(--starsResetColor)";
   const colorCycleMatrix = useMemo(
     () => [
       ["#8c97ad", "#eded82", "#333333", "#e6d3d3", "#a0b8a8"],
@@ -20,11 +19,11 @@ export const Stars = ({ resetColor = "black", children }: StarsProps) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [cycleIndex, setCycleIndex] = useState(0);
 
-  const [aColor, setAColor] = useState(_resetColor);
-  const [bColor, setBColor] = useState(_resetColor);
-  const [cColor, setCColor] = useState(_resetColor);
-  const [dColor, setDColor] = useState(_resetColor);
-  const [eColor, setEColor] = useState(_resetColor);
+  const [aColor, setAColor] = useState(resetColor);
+  const [bColor, setBColor] = useState(resetColor);
+  const [cColor, setCColor] = useState(resetColor);
+  const [dColor, setDColor] = useState(resetColor);
+  const [eColor, setEColor] = useState(resetColor);
 
   useEffect(() => {
     if (isAnimating) {
@@ -37,13 +36,13 @@ export const Stars = ({ resetColor = "black", children }: StarsProps) => {
         setCycleIndex(cycleIndex < 4 ? cycleIndex + 1 : 0);
       }, 120);
     } else {
-      setAColor(_resetColor);
-      setBColor(_resetColor);
-      setCColor(_resetColor);
-      setDColor(_resetColor);
-      setEColor(_resetColor);
+      setAColor(resetColor);
+      setBColor(resetColor);
+      setCColor(resetColor);
+      setDColor(resetColor);
+      setEColor(resetColor);
     }
-  }, [_resetColor, isAnimating, cycleIndex, colorCycleMatrix]);
+  }, [resetColor, isAnimating, cycleIndex, colorCycleMatrix]);
 
   const router = useRouter();
 

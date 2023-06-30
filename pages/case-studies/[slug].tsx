@@ -12,7 +12,6 @@ import client from "tina/__generated__/client";
 import { GlobalQuery, CaseStudies_PostsQuery } from "tina/__generated__/types";
 import { useTina } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import { v4 as uuidv4 } from "uuid";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const caseStudiesPosts = await client.queries.caseStudies_postsConnection();
@@ -82,7 +81,7 @@ export default function CaseStudiesPost({
                 const { anchorId, title, showSectionTitle } = section;
                 if (showSectionTitle) {
                   return (
-                    <p key={uuidv4()}>
+                    <p key={window.crypto.randomUUID()}>
                       <a href={`#${anchorId || ""}`} title={title}>
                         {title}
                       </a>
@@ -100,7 +99,7 @@ export default function CaseStudiesPost({
                 const { showSectionTitle, title, anchorId, blocks } = section;
                 return (
                   <Section
-                    key={uuidv4()}
+                    key={window.crypto.randomUUID()}
                     anchorId={anchorId}
                     title={title}
                     showSectionTitle={showSectionTitle}
@@ -163,7 +162,11 @@ export default function CaseStudiesPost({
                           blockComponent = null;
                           break;
                       }
-                      return <div key={uuidv4()}>{blockComponent}</div>;
+                      return (
+                        <div key={window.crypto.randomUUID()}>
+                          {blockComponent}
+                        </div>
+                      );
                     })}
                   </Section>
                 );

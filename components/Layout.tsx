@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Head from "next/head";
 import styles from "styles/Layout.module.scss";
 import { GlobalQuery } from "tina/__generated__/types";
@@ -7,6 +8,7 @@ import { QuickActions } from "./layout/QuickActions";
 
 interface LayoutProps {
   data: GlobalQuery;
+  darkMode?: boolean;
   showContactLinks?: boolean;
   showQuickActions?: boolean;
   children: React.ReactNode;
@@ -15,7 +17,8 @@ interface LayoutProps {
 
 const Layout = ({
   data,
-  showContactLinks,
+  darkMode,
+  showContactLinks = true,
   showQuickActions = true,
   children,
   ...props
@@ -24,7 +27,11 @@ const Layout = ({
     data.global;
 
   return (
-    <div className={styles.container}>
+    <div
+      className={classNames(styles.container, {
+        [styles.darkMode]: darkMode,
+      })}
+    >
       <Head>
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />

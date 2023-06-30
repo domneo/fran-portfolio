@@ -1,8 +1,22 @@
 @import "mixins";
 
 .container {
+  --bodyBgColor: var(--white);
+  --bodyColor: var(--black);
+  --linkHoverColor: var(--rosetaupe);
+  --mobileMenuBgColor: var(--trueblack);
+  --mobileMenuColor: var(--white);
+  --starsResetColor: var(--black);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--bodyBgColor);
+  color: var(--bodyColor);
+
+  &.darkMode {
+    --bodyBgColor: var(--trueblack);
+    --bodyColor: var(--white);
+    --starsResetColor: var(--white);
+  }
 }

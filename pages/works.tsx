@@ -7,7 +7,6 @@ import styles from "styles/Works.module.scss";
 import client from "tina/__generated__/client";
 import { GlobalQuery, WorksQuery } from "tina/__generated__/types";
 import { useTina } from "tinacms/dist/react";
-import { v4 as uuidv4 } from "uuid";
 
 export const getStaticProps: GetStaticProps = async () => {
   let global;
@@ -49,7 +48,7 @@ export default function Works({
                   if (post) {
                     return (
                       <Link
-                        key={uuidv4()}
+                        key={window.crypto.randomUUID()}
                         href={post.url ?? ""}
                         className={styles.link}
                         style={{ cursor: post.url ? "pointer" : "help" }}
@@ -114,7 +113,7 @@ export default function Works({
                   if (post) {
                     return (
                       <WorksImage
-                        key={uuidv4()}
+                        key={window.crypto.randomUUID()}
                         image={post.image}
                         title={post.title}
                         comingSoon={post.comingSoon}

@@ -52,9 +52,6 @@ dependencies:
   tinacms:
     specifier: ^1.5.8
     version: 1.5.8(@babel/core@7.22.5)(@types/react@18.2.6)(react-dom@18.2.0)(react-is@17.0.2)(react@18.2.0)(scheduler@0.23.0)
-  uuid:
-    specifier: ^9.0.0
-    version: 9.0.0
 
 devDependencies:
   "@trivago/prettier-plugin-sort-imports":
@@ -19592,14 +19589,6 @@ packages:
         integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==,
       }
     engines: { node: ">= 0.4.0" }
-    dev: false
-
-  /uuid@9.0.0:
-    resolution:
-      {
-        integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==,
-      }
-    hasBin: true
     dev: false
 
   /uvu@0.5.6:

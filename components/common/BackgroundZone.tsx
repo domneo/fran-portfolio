@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 interface BackgroundZoneProps {
   children: React.ReactNode;
@@ -25,8 +24,8 @@ export const BackgroundZone = ({
 
   // Change the active state when scrolling into the viewport
   useEffect(() => {
-    const refreshTriggerId = `refreshTrigger-${uuidv4()}`;
-    const mainTriggerId = `mainTrigger-${uuidv4()}`;
+    const refreshTriggerId = `refreshTrigger-${window.crypto.randomUUID()}`;
+    const mainTriggerId = `mainTrigger-${window.crypto.randomUUID()}`;
 
     ScrollTrigger.create({
       // markers: true,
