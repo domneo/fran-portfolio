@@ -1,17 +1,16 @@
+import removeWidows from "hooks/useRemoveWidows";
 import { Component } from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { v4 as uuidv4 } from "uuid";
+import styles from "styles/Contact.module.scss";
 
-import removeWidows from "hooks/useRemoveWidows";
-
-interface MeToProps {
+interface MeToSliderProps {
   lines: Array<string>;
 }
 
-export class MeTo extends Component<MeToProps> {
-  constructor(props: MeToProps) {
+export class MeToSlider extends Component<MeToSliderProps> {
+  constructor(props: MeToSliderProps) {
     super(props);
   }
 
@@ -20,29 +19,29 @@ export class MeTo extends Component<MeToProps> {
       accessibility: false,
       arrows: false,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       draggable: false,
       infinite: true,
       pauseOnHover: false,
       slidesToShow: 1,
       slidesToScroll: 1,
+      speed: 0,
       touchMove: false,
-      vertical: true,
+      // vertical: true,
     };
 
     const { lines } = this.props;
 
     return (
-      <>
-        <div className="h3 me-3 flex-shrink-0">
-          <div>me to</div>
-        </div>
+      <div className={styles.meToGroup}>
         <Slider {...settings}>
           {lines.map((line) => (
-            <h3 key={uuidv4()}>{removeWidows(line)}</h3>
+            <div key={window.crypto.randomUUID()} style={{ height: "60px" }}>
+              <p className="fw-light">{removeWidows(line)}</p>
+            </div>
           ))}
         </Slider>
-      </>
+      </div>
     );
   }
 }
