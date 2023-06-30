@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import Link from "next/link";
 import styles from "styles/BarrelLink.module.scss";
-import { v4 as uuidv4 } from "uuid";
 import { Span } from "./Span";
 
 interface BarrelLinkProps {
@@ -32,7 +31,7 @@ export const BarrelLink = ({
     >
       {charArr.map((char, i) => (
         <div
-          key={uuidv4()}
+          key={window.crypto.randomUUID()}
           className={styles.charGroup}
           style={{ animationDelay: `${0.05 * i}s` }}
         >

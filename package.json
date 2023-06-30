@@ -28,8 +28,7 @@
     "simplex-noise": "^4.0.1",
     "slick-carousel": "^1.8.1",
     "string-remove-widows": "^4.0.14",
-    "tinacms": "^1.5.8",
-    "uuid": "^9.0.0"
+    "tinacms": "^1.5.8"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
