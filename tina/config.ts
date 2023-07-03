@@ -11,7 +11,8 @@ const generateSpacer = (): Template => ({
       type: "string",
       name: "size",
       label: "Size",
-      required: true,
+      description:
+        'Allowed values: "sm" | "md" | "lg" | "xl". Defaults to "md"',
     },
   ],
 });
@@ -23,6 +24,44 @@ const generateDivider = (): Template => ({
       type: "string",
       name: "label",
       label: "This is a null field because I must put something",
+    },
+  ],
+});
+const generateImageSlider = (): Template => ({
+  name: "imageSlider",
+  label: "Image Slider",
+  fields: [
+    {
+      type: "object",
+      list: true,
+      name: "slides",
+      label: "Slides",
+      fields: [
+        {
+          type: "image",
+          name: "image",
+          label: "Image",
+          required: true,
+        },
+        {
+          type: "string",
+          name: "title",
+          label: "Title",
+          description:
+            "A simple description of the image. Serves as fallback for accessibility.",
+        },
+        {
+          type: "string",
+          name: "caption",
+          label: "Caption",
+          description: "Image caption visible on the page.",
+        },
+      ],
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.title };
+        },
+      },
     },
   ],
 });
@@ -104,22 +143,43 @@ const generateSection = (): Template => ({
   fields: [
     {
       type: "string",
+      name: "anchorId",
+      label: "Anchor ID",
+      description: "ID for anchor links",
+      ui: {
+        validate: (value: string) => {
+          if (!value?.match(/^[a-zA-Z0-9_]*$/)) {
+            return "Only alphanumeric characters and underscores allowed.";
+          }
+        },
+      },
+    },
+    {
+      type: "string",
       name: "title",
       label: "Title",
+      description:
+        "Sticky section title appearing at the start of each section. Also serves as a label/name to help you identify each section in the list of sections.",
+      required: true,
     },
     {
       type: "boolean",
       name: "showSectionTitle",
       label: "Show section title",
+      description:
+        "You may choose to hide the section title if you require a section without the sticky title.",
     },
     {
       type: "object",
       list: true,
       name: "blocks",
       label: "Content",
+      description:
+        "Build the post content using a variety of one, two, or three column blocks, spacers, and dividers.",
       templates: [
         generateSpacer(),
         generateDivider(),
+        generateImageSlider(),
         generateOneColumnBlock(),
         generateTwoColumnBlock_1_1(),
         generateTwoColumnBlock_1_2(),
@@ -150,12 +210,16 @@ const globalCollection: Collection = {
       type: "string",
       name: "siteTitle",
       label: "Site Title",
+      description:
+        "The title for your site. Appears in browser tabs and as the title in search engine results.",
       required: true,
     },
     {
       type: "string",
       name: "siteDescription",
       label: "Site Description",
+      description:
+        "A short description for your site. Appears in search engine results. Recommended to be 160 characters or less.",
       required: true,
     },
     {
@@ -174,6 +238,8 @@ const globalCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "boolean",
@@ -203,6 +269,8 @@ const globalCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "boolean",
@@ -232,6 +300,8 @@ const globalCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "boolean",
@@ -335,11 +405,14 @@ const worksCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "number",
           name: "index",
           label: "Index",
+          description: "The post number.",
           required: true,
         },
         {
@@ -426,11 +499,17 @@ const worksPostsCollection: Collection = {
       type: "string",
       name: "summary",
       label: "Summary",
+      description: '"Role"',
     },
     {
       type: "rich-text",
       name: "background",
       label: "Background",
+    },
+    {
+      type: "string",
+      name: "anchorLinksTitle",
+      label: "Anchor Links Title",
     },
     {
       type: "object",
@@ -470,11 +549,14 @@ const caseStudiesCollection: Collection = {
           type: "string",
           name: "url",
           label: "URL/Path",
+          description:
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
         },
         {
           type: "number",
           name: "index",
           label: "Index",
+          description: "The post number.",
           required: true,
         },
         {
@@ -561,11 +643,17 @@ const caseStudiesPostsCollection: Collection = {
       type: "string",
       name: "summary",
       label: "Summary",
+      description: '"Role"',
     },
     {
       type: "rich-text",
       name: "background",
       label: "Background",
+    },
+    {
+      type: "string",
+      name: "anchorLinksTitle",
+      label: "Anchor Links Title",
     },
     {
       type: "object",
@@ -590,6 +678,7 @@ export default defineConfig({
   branch,
   clientId: process.env.TINA_CLIENT_ID || "", // Get this from tina.io
   token: process.env.TINA_TOKEN || "", // Get this from tina.io
+  localContentPath: "../../fran-portfolio-content",
 
   build: {
     outputFolder: "admin",

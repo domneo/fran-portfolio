@@ -1,10 +1,10 @@
 {
   "schema": {
     "version": {
-      "fullVersion": "1.4.15",
+      "fullVersion": "1.4.18",
       "major": "1",
       "minor": "4",
-      "patch": "15"
+      "patch": "18"
     },
     "meta": { "flags": ["experimentalData"] },
     "collections": [
@@ -18,15 +18,19 @@
             "type": "string",
             "name": "siteTitle",
             "label": "Site Title",
+            "description": "The title for your site. Appears in browser tabs and as the title in search engine results.",
             "required": true,
-            "namespace": ["global", "siteTitle"]
+            "namespace": ["global", "siteTitle"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "siteDescription",
             "label": "Site Description",
+            "description": "A short description for your site. Appears in search engine results. Recommended to be 160 characters or less.",
             "required": true,
-            "namespace": ["global", "siteDescription"]
+            "namespace": ["global", "siteDescription"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -39,23 +43,28 @@
                 "name": "name",
                 "label": "Name",
                 "required": true,
-                "namespace": ["global", "menu", "name"]
+                "namespace": ["global", "menu", "name"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
-                "namespace": ["global", "menu", "url"]
+                "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
+                "namespace": ["global", "menu", "url"],
+                "searchable": true
               },
               {
                 "type": "boolean",
                 "name": "openInNewWindow",
                 "label": "Open in new window",
-                "namespace": ["global", "menu", "openInNewWindow"]
+                "namespace": ["global", "menu", "openInNewWindow"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["global", "menu"]
+            "namespace": ["global", "menu"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -68,23 +77,28 @@
                 "name": "name",
                 "label": "Name",
                 "required": true,
-                "namespace": ["global", "contactLinks", "name"]
+                "namespace": ["global", "contactLinks", "name"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
-                "namespace": ["global", "contactLinks", "url"]
+                "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
+                "namespace": ["global", "contactLinks", "url"],
+                "searchable": true
               },
               {
                 "type": "boolean",
                 "name": "openInNewWindow",
                 "label": "Open in new window",
-                "namespace": ["global", "contactLinks", "openInNewWindow"]
+                "namespace": ["global", "contactLinks", "openInNewWindow"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["global", "contactLinks"]
+            "namespace": ["global", "contactLinks"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -97,23 +111,28 @@
                 "name": "name",
                 "label": "Name",
                 "required": true,
-                "namespace": ["global", "footerCredits", "name"]
+                "namespace": ["global", "footerCredits", "name"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
-                "namespace": ["global", "footerCredits", "url"]
+                "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
+                "namespace": ["global", "footerCredits", "url"],
+                "searchable": true
               },
               {
                 "type": "boolean",
                 "name": "openInNewWindow",
                 "label": "Open in new window",
-                "namespace": ["global", "footerCredits", "openInNewWindow"]
+                "namespace": ["global", "footerCredits", "openInNewWindow"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["global", "footerCredits"]
+            "namespace": ["global", "footerCredits"],
+            "searchable": true
           }
         ],
         "ui": {
@@ -134,7 +153,8 @@
             "label": "Header",
             "isTitle": true,
             "required": true,
-            "namespace": ["home", "header"]
+            "namespace": ["home", "header"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -146,7 +166,8 @@
                 "name": "image",
                 "label": "Image",
                 "required": true,
-                "namespace": ["home", "about", "image"]
+                "namespace": ["home", "about", "image"],
+                "searchable": false
               },
               {
                 "type": "rich-text",
@@ -169,6 +190,7 @@
                           "ParagraphLight",
                           "content"
                         ],
+                        "searchable": true,
                         "parser": { "type": "mdx" }
                       }
                     ],
@@ -176,10 +198,12 @@
                   }
                 ],
                 "namespace": ["home", "about", "body"],
+                "searchable": true,
                 "parser": { "type": "mdx" }
               }
             ],
-            "namespace": ["home", "about"]
+            "namespace": ["home", "about"],
+            "searchable": true
           }
         ],
         "ui": { "allowedActions": { "create": false, "delete": false } },
@@ -197,7 +221,8 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["works", "title"]
+            "namespace": ["works", "title"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -209,28 +234,34 @@
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
-                "namespace": ["works", "postList", "url"]
+                "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
+                "namespace": ["works", "postList", "url"],
+                "searchable": true
               },
               {
                 "type": "number",
                 "name": "index",
                 "label": "Index",
+                "description": "The post number.",
                 "required": true,
-                "namespace": ["works", "postList", "index"]
+                "namespace": ["works", "postList", "index"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "title",
                 "label": "Title",
                 "required": true,
-                "namespace": ["works", "postList", "title"]
+                "namespace": ["works", "postList", "title"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "description",
                 "label": "Description",
                 "required": true,
-                "namespace": ["works", "postList", "description"]
+                "namespace": ["works", "postList", "description"],
+                "searchable": true
               },
               {
                 "type": "object",
@@ -243,28 +274,33 @@
                     "name": "name",
                     "label": "Name",
                     "required": true,
-                    "namespace": ["works", "postList", "skills", "name"]
+                    "namespace": ["works", "postList", "skills", "name"],
+                    "searchable": true
                   }
                 ],
                 "ui": {},
-                "namespace": ["works", "postList", "skills"]
+                "namespace": ["works", "postList", "skills"],
+                "searchable": true
               },
               {
                 "type": "image",
                 "name": "image",
                 "label": "Image",
                 "required": true,
-                "namespace": ["works", "postList", "image"]
+                "namespace": ["works", "postList", "image"],
+                "searchable": false
               },
               {
                 "type": "boolean",
                 "name": "comingSoon",
                 "label": "Coming soon",
-                "namespace": ["works", "postList", "comingSoon"]
+                "namespace": ["works", "postList", "comingSoon"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["works", "postList"]
+            "namespace": ["works", "postList"],
+            "searchable": true
           }
         ],
         "ui": { "allowedActions": { "create": false, "delete": false } },
@@ -282,26 +318,38 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["works_posts", "title"]
+            "namespace": ["works_posts", "title"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "subtitle",
             "label": "Subtitle",
-            "namespace": ["works_posts", "subtitle"]
+            "namespace": ["works_posts", "subtitle"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "summary",
             "label": "Summary",
-            "namespace": ["works_posts", "summary"]
+            "description": "\"Role\"",
+            "namespace": ["works_posts", "summary"],
+            "searchable": true
           },
           {
             "type": "rich-text",
             "name": "background",
             "label": "Background",
             "namespace": ["works_posts", "background"],
+            "searchable": true,
             "parser": { "type": "mdx" }
+          },
+          {
+            "type": "string",
+            "name": "anchorLinksTitle",
+            "label": "Anchor Links Title",
+            "namespace": ["works_posts", "anchorLinksTitle"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -315,26 +363,51 @@
                 "fields": [
                   {
                     "type": "string",
+                    "name": "anchorId",
+                    "label": "Anchor ID",
+                    "description": "ID for anchor links",
+                    "ui": {},
+                    "namespace": [
+                      "works_posts",
+                      "sections",
+                      "section",
+                      "anchorId"
+                    ],
+                    "searchable": true
+                  },
+                  {
+                    "type": "string",
                     "name": "title",
                     "label": "Title",
-                    "namespace": ["works_posts", "sections", "section", "title"]
+                    "description": "Sticky section title appearing at the start of each section. Also serves as a label/name to help you identify each section in the list of sections.",
+                    "required": true,
+                    "namespace": [
+                      "works_posts",
+                      "sections",
+                      "section",
+                      "title"
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "boolean",
                     "name": "showSectionTitle",
                     "label": "Show section title",
+                    "description": "You may choose to hide the section title if you require a section without the sticky title.",
                     "namespace": [
                       "works_posts",
                       "sections",
                       "section",
                       "showSectionTitle"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "object",
                     "list": true,
                     "name": "blocks",
                     "label": "Content",
+                    "description": "Build the post content using a variety of one, two, or three column blocks, spacers, and dividers.",
                     "templates": [
                       {
                         "name": "spacer",
@@ -344,7 +417,7 @@
                             "type": "string",
                             "name": "size",
                             "label": "Size",
-                            "required": true,
+                            "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                             "namespace": [
                               "works_posts",
                               "sections",
@@ -390,6 +463,81 @@
                         ]
                       },
                       {
+                        "name": "imageSlider",
+                        "label": "Image Slider",
+                        "fields": [
+                          {
+                            "type": "object",
+                            "list": true,
+                            "name": "slides",
+                            "label": "Slides",
+                            "fields": [
+                              {
+                                "type": "image",
+                                "name": "image",
+                                "label": "Image",
+                                "required": true,
+                                "namespace": [
+                                  "works_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "image"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "title",
+                                "label": "Title",
+                                "description": "A simple description of the image. Serves as fallback for accessibility.",
+                                "namespace": [
+                                  "works_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "title"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "caption",
+                                "label": "Caption",
+                                "description": "Image caption visible on the page.",
+                                "namespace": [
+                                  "works_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "caption"
+                                ]
+                              }
+                            ],
+                            "ui": {},
+                            "namespace": [
+                              "works_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "imageSlider",
+                              "slides"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "works_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "imageSlider"
+                        ]
+                      },
+                      {
                         "name": "oneColumn",
                         "label": "One Column Content",
                         "fields": [
@@ -406,7 +554,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -495,7 +643,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -571,7 +719,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -660,7 +808,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -736,7 +884,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -825,7 +973,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -901,7 +1049,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -977,7 +1125,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "works_posts",
                                       "sections",
@@ -1055,14 +1203,16 @@
                       "sections",
                       "section",
                       "blocks"
-                    ]
+                    ],
+                    "searchable": true
                   }
                 ],
                 "ui": { "defaultItem": { "showSectionTitle": true } },
                 "namespace": ["works_posts", "sections", "section"]
               }
             ],
-            "namespace": ["works_posts", "sections"]
+            "namespace": ["works_posts", "sections"],
+            "searchable": true
           }
         ],
         "ui": {},
@@ -1080,7 +1230,8 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["caseStudies", "title"]
+            "namespace": ["caseStudies", "title"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -1092,28 +1243,34 @@
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
-                "namespace": ["caseStudies", "postList", "url"]
+                "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
+                "namespace": ["caseStudies", "postList", "url"],
+                "searchable": true
               },
               {
                 "type": "number",
                 "name": "index",
                 "label": "Index",
+                "description": "The post number.",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "index"]
+                "namespace": ["caseStudies", "postList", "index"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "title",
                 "label": "Title",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "title"]
+                "namespace": ["caseStudies", "postList", "title"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "description",
                 "label": "Description",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "description"]
+                "namespace": ["caseStudies", "postList", "description"],
+                "searchable": true
               },
               {
                 "type": "object",
@@ -1126,28 +1283,33 @@
                     "name": "name",
                     "label": "Name",
                     "required": true,
-                    "namespace": ["caseStudies", "postList", "skills", "name"]
+                    "namespace": ["caseStudies", "postList", "skills", "name"],
+                    "searchable": true
                   }
                 ],
                 "ui": {},
-                "namespace": ["caseStudies", "postList", "skills"]
+                "namespace": ["caseStudies", "postList", "skills"],
+                "searchable": true
               },
               {
                 "type": "image",
                 "name": "image",
                 "label": "Image",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "image"]
+                "namespace": ["caseStudies", "postList", "image"],
+                "searchable": false
               },
               {
                 "type": "boolean",
                 "name": "comingSoon",
                 "label": "Coming soon",
-                "namespace": ["caseStudies", "postList", "comingSoon"]
+                "namespace": ["caseStudies", "postList", "comingSoon"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["caseStudies", "postList"]
+            "namespace": ["caseStudies", "postList"],
+            "searchable": true
           }
         ],
         "ui": { "allowedActions": { "create": false, "delete": false } },
@@ -1165,26 +1327,38 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["caseStudies_posts", "title"]
+            "namespace": ["caseStudies_posts", "title"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "subtitle",
             "label": "Subtitle",
-            "namespace": ["caseStudies_posts", "subtitle"]
+            "namespace": ["caseStudies_posts", "subtitle"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "summary",
             "label": "Summary",
-            "namespace": ["caseStudies_posts", "summary"]
+            "description": "\"Role\"",
+            "namespace": ["caseStudies_posts", "summary"],
+            "searchable": true
           },
           {
             "type": "rich-text",
             "name": "background",
             "label": "Background",
             "namespace": ["caseStudies_posts", "background"],
+            "searchable": true,
             "parser": { "type": "mdx" }
+          },
+          {
+            "type": "string",
+            "name": "anchorLinksTitle",
+            "label": "Anchor Links Title",
+            "namespace": ["caseStudies_posts", "anchorLinksTitle"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -1198,31 +1372,51 @@
                 "fields": [
                   {
                     "type": "string",
+                    "name": "anchorId",
+                    "label": "Anchor ID",
+                    "description": "ID for anchor links",
+                    "ui": {},
+                    "namespace": [
+                      "caseStudies_posts",
+                      "sections",
+                      "section",
+                      "anchorId"
+                    ],
+                    "searchable": true
+                  },
+                  {
+                    "type": "string",
                     "name": "title",
                     "label": "Title",
+                    "description": "Sticky section title appearing at the start of each section. Also serves as a label/name to help you identify each section in the list of sections.",
+                    "required": true,
                     "namespace": [
                       "caseStudies_posts",
                       "sections",
                       "section",
                       "title"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "boolean",
                     "name": "showSectionTitle",
                     "label": "Show section title",
+                    "description": "You may choose to hide the section title if you require a section without the sticky title.",
                     "namespace": [
                       "caseStudies_posts",
                       "sections",
                       "section",
                       "showSectionTitle"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "object",
                     "list": true,
                     "name": "blocks",
                     "label": "Content",
+                    "description": "Build the post content using a variety of one, two, or three column blocks, spacers, and dividers.",
                     "templates": [
                       {
                         "name": "spacer",
@@ -1232,7 +1426,7 @@
                             "type": "string",
                             "name": "size",
                             "label": "Size",
-                            "required": true,
+                            "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                             "namespace": [
                               "caseStudies_posts",
                               "sections",
@@ -1278,6 +1472,81 @@
                         ]
                       },
                       {
+                        "name": "imageSlider",
+                        "label": "Image Slider",
+                        "fields": [
+                          {
+                            "type": "object",
+                            "list": true,
+                            "name": "slides",
+                            "label": "Slides",
+                            "fields": [
+                              {
+                                "type": "image",
+                                "name": "image",
+                                "label": "Image",
+                                "required": true,
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "image"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "title",
+                                "label": "Title",
+                                "description": "A simple description of the image. Serves as fallback for accessibility.",
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "title"
+                                ]
+                              },
+                              {
+                                "type": "string",
+                                "name": "caption",
+                                "label": "Caption",
+                                "description": "Image caption visible on the page.",
+                                "namespace": [
+                                  "caseStudies_posts",
+                                  "sections",
+                                  "section",
+                                  "blocks",
+                                  "imageSlider",
+                                  "slides",
+                                  "caption"
+                                ]
+                              }
+                            ],
+                            "ui": {},
+                            "namespace": [
+                              "caseStudies_posts",
+                              "sections",
+                              "section",
+                              "blocks",
+                              "imageSlider",
+                              "slides"
+                            ]
+                          }
+                        ],
+                        "namespace": [
+                          "caseStudies_posts",
+                          "sections",
+                          "section",
+                          "blocks",
+                          "imageSlider"
+                        ]
+                      },
+                      {
                         "name": "oneColumn",
                         "label": "One Column Content",
                         "fields": [
@@ -1294,7 +1563,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1383,7 +1652,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1459,7 +1728,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1548,7 +1817,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1624,7 +1893,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1713,7 +1982,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1789,7 +2058,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1865,7 +2134,7 @@
                                     "type": "string",
                                     "name": "size",
                                     "label": "Size",
-                                    "required": true,
+                                    "description": "Allowed values: \"sm\" | \"md\" | \"lg\" | \"xl\". Defaults to \"md\"",
                                     "namespace": [
                                       "caseStudies_posts",
                                       "sections",
@@ -1943,14 +2212,16 @@
                       "sections",
                       "section",
                       "blocks"
-                    ]
+                    ],
+                    "searchable": true
                   }
                 ],
                 "ui": { "defaultItem": { "showSectionTitle": true } },
                 "namespace": ["caseStudies_posts", "sections", "section"]
               }
             ],
-            "namespace": ["caseStudies_posts", "sections"]
+            "namespace": ["caseStudies_posts", "sections"],
+            "searchable": true
           }
         ],
         "ui": {},
@@ -2023,6 +2294,7 @@
       "typeMap": {
         "spacer": "Works_postsSectionsSectionBlocksSpacer",
         "divider": "Works_postsSectionsSectionBlocksDivider",
+        "imageSlider": "Works_postsSectionsSectionBlocksImageSlider",
         "oneColumn": "Works_postsSectionsSectionBlocksOneColumn",
         "twoColumn_1_1": "Works_postsSectionsSectionBlocksTwoColumn_1_1",
         "twoColumn_1_2": "Works_postsSectionsSectionBlocksTwoColumn_1_2",
@@ -2064,6 +2336,7 @@
       "typeMap": {
         "spacer": "CaseStudies_postsSectionsSectionBlocksSpacer",
         "divider": "CaseStudies_postsSectionsSectionBlocksDivider",
+        "imageSlider": "CaseStudies_postsSectionsSectionBlocksImageSlider",
         "oneColumn": "CaseStudies_postsSectionsSectionBlocksOneColumn",
         "twoColumn_1_1": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1",
         "twoColumn_1_2": "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2",
@@ -4622,11 +4895,8 @@
             "name": { "kind": "Name", "value": "size" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           }
         ]
@@ -4647,6 +4917,73 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderSlides"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSlider"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Works_postsSectionsSectionBlocksImageSliderSlides"
+                }
+              }
             }
           }
         ]
@@ -4790,6 +5127,13 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
+              "value": "Works_postsSectionsSectionBlocksImageSlider"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
               "value": "Works_postsSectionsSectionBlocksOneColumn"
             }
           },
@@ -4824,11 +5168,23 @@
         "fields": [
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
+            "name": { "kind": "Name", "value": "anchorId" },
             "arguments": [],
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
             }
           },
           {
@@ -4921,6 +5277,15 @@
           },
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "sections" },
             "arguments": [],
             "type": {
@@ -4999,6 +5364,59 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderSlidesFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksImageSliderSlidesFilter"
+              }
             }
           }
         ]
@@ -5678,6 +6096,17 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksImageSliderFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "oneColumn" },
             "type": {
               "kind": "NamedType",
@@ -5726,6 +6155,14 @@
         "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "Works_postsSectionsSectionFilter" },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
@@ -5806,6 +6243,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -6275,11 +6720,8 @@
             "name": { "kind": "Name", "value": "size" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           }
         ]
@@ -6300,6 +6742,73 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlides"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSlider"
+        },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlides"
+                }
+              }
             }
           }
         ]
@@ -6446,6 +6955,13 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
+              "value": "CaseStudies_postsSectionsSectionBlocksImageSlider"
+            }
+          },
+          {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
               "value": "CaseStudies_postsSectionsSectionBlocksOneColumn"
             }
           },
@@ -6480,11 +6996,23 @@
         "fields": [
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
+            "name": { "kind": "Name", "value": "anchorId" },
             "arguments": [],
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
             }
           },
           {
@@ -6580,6 +7108,15 @@
           },
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "sections" },
             "arguments": [],
             "type": {
@@ -6658,6 +7195,59 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesFilter"
+              }
             }
           }
         ]
@@ -7337,6 +7927,17 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksImageSliderFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "oneColumn" },
             "type": {
               "kind": "NamedType",
@@ -7388,6 +7989,14 @@
           "value": "CaseStudies_postsSectionsSectionFilter"
         },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
@@ -7468,6 +8077,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -8618,6 +9235,62 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderSlidesMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "Works_postsSectionsSectionBlocksImageSliderMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Works_postsSectionsSectionBlocksImageSliderSlidesMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "Works_postsSectionsSectionBlocksOneColumnMutation"
         },
         "fields": [
@@ -8745,6 +9418,17 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Works_postsSectionsSectionBlocksImageSliderMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "oneColumn" },
             "type": {
               "kind": "NamedType",
@@ -8796,6 +9480,14 @@
           "value": "Works_postsSectionsSectionMutation"
         },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
@@ -8879,6 +9571,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -9048,6 +9748,62 @@
         "kind": "InputObjectTypeDefinition",
         "name": {
           "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "image" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "caption" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "CaseStudies_postsSectionsSectionBlocksImageSliderMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "slides" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "CaseStudies_postsSectionsSectionBlocksImageSliderSlidesMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
           "value": "CaseStudies_postsSectionsSectionBlocksOneColumnMutation"
         },
         "fields": [
@@ -9175,6 +9931,17 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "imageSlider" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "CaseStudies_postsSectionsSectionBlocksImageSliderMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "oneColumn" },
             "type": {
               "kind": "NamedType",
@@ -9226,6 +9993,14 @@
           "value": "CaseStudies_postsSectionsSectionMutation"
         },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorId" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
@@ -9312,6 +10087,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "anchorLinksTitle" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
