@@ -1,10 +1,10 @@
 {
   "schema": {
     "version": {
-      "fullVersion": "1.4.15",
+      "fullVersion": "1.4.18",
       "major": "1",
       "minor": "4",
-      "patch": "15"
+      "patch": "18"
     },
     "meta": { "flags": ["experimentalData"] },
     "collections": [
@@ -20,7 +20,8 @@
             "label": "Site Title",
             "description": "The title for your site. Appears in browser tabs and as the title in search engine results.",
             "required": true,
-            "namespace": ["global", "siteTitle"]
+            "namespace": ["global", "siteTitle"],
+            "searchable": true
           },
           {
             "type": "string",
@@ -28,7 +29,8 @@
             "label": "Site Description",
             "description": "A short description for your site. Appears in search engine results. Recommended to be 160 characters or less.",
             "required": true,
-            "namespace": ["global", "siteDescription"]
+            "namespace": ["global", "siteDescription"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -41,24 +43,28 @@
                 "name": "name",
                 "label": "Name",
                 "required": true,
-                "namespace": ["global", "menu", "name"]
+                "namespace": ["global", "menu", "name"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
                 "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
-                "namespace": ["global", "menu", "url"]
+                "namespace": ["global", "menu", "url"],
+                "searchable": true
               },
               {
                 "type": "boolean",
                 "name": "openInNewWindow",
                 "label": "Open in new window",
-                "namespace": ["global", "menu", "openInNewWindow"]
+                "namespace": ["global", "menu", "openInNewWindow"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["global", "menu"]
+            "namespace": ["global", "menu"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -71,24 +77,28 @@
                 "name": "name",
                 "label": "Name",
                 "required": true,
-                "namespace": ["global", "contactLinks", "name"]
+                "namespace": ["global", "contactLinks", "name"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
                 "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
-                "namespace": ["global", "contactLinks", "url"]
+                "namespace": ["global", "contactLinks", "url"],
+                "searchable": true
               },
               {
                 "type": "boolean",
                 "name": "openInNewWindow",
                 "label": "Open in new window",
-                "namespace": ["global", "contactLinks", "openInNewWindow"]
+                "namespace": ["global", "contactLinks", "openInNewWindow"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["global", "contactLinks"]
+            "namespace": ["global", "contactLinks"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -101,24 +111,28 @@
                 "name": "name",
                 "label": "Name",
                 "required": true,
-                "namespace": ["global", "footerCredits", "name"]
+                "namespace": ["global", "footerCredits", "name"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "url",
                 "label": "URL/Path",
                 "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
-                "namespace": ["global", "footerCredits", "url"]
+                "namespace": ["global", "footerCredits", "url"],
+                "searchable": true
               },
               {
                 "type": "boolean",
                 "name": "openInNewWindow",
                 "label": "Open in new window",
-                "namespace": ["global", "footerCredits", "openInNewWindow"]
+                "namespace": ["global", "footerCredits", "openInNewWindow"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["global", "footerCredits"]
+            "namespace": ["global", "footerCredits"],
+            "searchable": true
           }
         ],
         "ui": {
@@ -139,7 +153,8 @@
             "label": "Header",
             "isTitle": true,
             "required": true,
-            "namespace": ["home", "header"]
+            "namespace": ["home", "header"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -151,7 +166,8 @@
                 "name": "image",
                 "label": "Image",
                 "required": true,
-                "namespace": ["home", "about", "image"]
+                "namespace": ["home", "about", "image"],
+                "searchable": false
               },
               {
                 "type": "rich-text",
@@ -174,6 +190,7 @@
                           "ParagraphLight",
                           "content"
                         ],
+                        "searchable": true,
                         "parser": { "type": "mdx" }
                       }
                     ],
@@ -181,10 +198,12 @@
                   }
                 ],
                 "namespace": ["home", "about", "body"],
+                "searchable": true,
                 "parser": { "type": "mdx" }
               }
             ],
-            "namespace": ["home", "about"]
+            "namespace": ["home", "about"],
+            "searchable": true
           }
         ],
         "ui": { "allowedActions": { "create": false, "delete": false } },
@@ -202,7 +221,8 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["works", "title"]
+            "namespace": ["works", "title"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -215,7 +235,8 @@
                 "name": "url",
                 "label": "URL/Path",
                 "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
-                "namespace": ["works", "postList", "url"]
+                "namespace": ["works", "postList", "url"],
+                "searchable": true
               },
               {
                 "type": "number",
@@ -223,21 +244,24 @@
                 "label": "Index",
                 "description": "The post number.",
                 "required": true,
-                "namespace": ["works", "postList", "index"]
+                "namespace": ["works", "postList", "index"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "title",
                 "label": "Title",
                 "required": true,
-                "namespace": ["works", "postList", "title"]
+                "namespace": ["works", "postList", "title"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "description",
                 "label": "Description",
                 "required": true,
-                "namespace": ["works", "postList", "description"]
+                "namespace": ["works", "postList", "description"],
+                "searchable": true
               },
               {
                 "type": "object",
@@ -250,28 +274,33 @@
                     "name": "name",
                     "label": "Name",
                     "required": true,
-                    "namespace": ["works", "postList", "skills", "name"]
+                    "namespace": ["works", "postList", "skills", "name"],
+                    "searchable": true
                   }
                 ],
                 "ui": {},
-                "namespace": ["works", "postList", "skills"]
+                "namespace": ["works", "postList", "skills"],
+                "searchable": true
               },
               {
                 "type": "image",
                 "name": "image",
                 "label": "Image",
                 "required": true,
-                "namespace": ["works", "postList", "image"]
+                "namespace": ["works", "postList", "image"],
+                "searchable": false
               },
               {
                 "type": "boolean",
                 "name": "comingSoon",
                 "label": "Coming soon",
-                "namespace": ["works", "postList", "comingSoon"]
+                "namespace": ["works", "postList", "comingSoon"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["works", "postList"]
+            "namespace": ["works", "postList"],
+            "searchable": true
           }
         ],
         "ui": { "allowedActions": { "create": false, "delete": false } },
@@ -289,33 +318,38 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["works_posts", "title"]
+            "namespace": ["works_posts", "title"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "subtitle",
             "label": "Subtitle",
-            "namespace": ["works_posts", "subtitle"]
+            "namespace": ["works_posts", "subtitle"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "summary",
             "label": "Summary",
             "description": "\"Role\"",
-            "namespace": ["works_posts", "summary"]
+            "namespace": ["works_posts", "summary"],
+            "searchable": true
           },
           {
             "type": "rich-text",
             "name": "background",
             "label": "Background",
             "namespace": ["works_posts", "background"],
+            "searchable": true,
             "parser": { "type": "mdx" }
           },
           {
             "type": "string",
             "name": "anchorLinksTitle",
             "label": "Anchor Links Title",
-            "namespace": ["works_posts", "anchorLinksTitle"]
+            "namespace": ["works_posts", "anchorLinksTitle"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -338,7 +372,8 @@
                       "sections",
                       "section",
                       "anchorId"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "string",
@@ -346,7 +381,13 @@
                     "label": "Title",
                     "description": "Sticky section title appearing at the start of each section. Also serves as a label/name to help you identify each section in the list of sections.",
                     "required": true,
-                    "namespace": ["works_posts", "sections", "section", "title"]
+                    "namespace": [
+                      "works_posts",
+                      "sections",
+                      "section",
+                      "title"
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "boolean",
@@ -358,7 +399,8 @@
                       "sections",
                       "section",
                       "showSectionTitle"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "object",
@@ -1161,14 +1203,16 @@
                       "sections",
                       "section",
                       "blocks"
-                    ]
+                    ],
+                    "searchable": true
                   }
                 ],
                 "ui": { "defaultItem": { "showSectionTitle": true } },
                 "namespace": ["works_posts", "sections", "section"]
               }
             ],
-            "namespace": ["works_posts", "sections"]
+            "namespace": ["works_posts", "sections"],
+            "searchable": true
           }
         ],
         "ui": {},
@@ -1186,7 +1230,8 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["caseStudies", "title"]
+            "namespace": ["caseStudies", "title"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -1199,7 +1244,8 @@
                 "name": "url",
                 "label": "URL/Path",
                 "description": "Either a full URL for external links, or the path to a page in your site (e.g. \"/works/fortress\").",
-                "namespace": ["caseStudies", "postList", "url"]
+                "namespace": ["caseStudies", "postList", "url"],
+                "searchable": true
               },
               {
                 "type": "number",
@@ -1207,21 +1253,24 @@
                 "label": "Index",
                 "description": "The post number.",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "index"]
+                "namespace": ["caseStudies", "postList", "index"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "title",
                 "label": "Title",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "title"]
+                "namespace": ["caseStudies", "postList", "title"],
+                "searchable": true
               },
               {
                 "type": "string",
                 "name": "description",
                 "label": "Description",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "description"]
+                "namespace": ["caseStudies", "postList", "description"],
+                "searchable": true
               },
               {
                 "type": "object",
@@ -1234,28 +1283,33 @@
                     "name": "name",
                     "label": "Name",
                     "required": true,
-                    "namespace": ["caseStudies", "postList", "skills", "name"]
+                    "namespace": ["caseStudies", "postList", "skills", "name"],
+                    "searchable": true
                   }
                 ],
                 "ui": {},
-                "namespace": ["caseStudies", "postList", "skills"]
+                "namespace": ["caseStudies", "postList", "skills"],
+                "searchable": true
               },
               {
                 "type": "image",
                 "name": "image",
                 "label": "Image",
                 "required": true,
-                "namespace": ["caseStudies", "postList", "image"]
+                "namespace": ["caseStudies", "postList", "image"],
+                "searchable": false
               },
               {
                 "type": "boolean",
                 "name": "comingSoon",
                 "label": "Coming soon",
-                "namespace": ["caseStudies", "postList", "comingSoon"]
+                "namespace": ["caseStudies", "postList", "comingSoon"],
+                "searchable": true
               }
             ],
             "ui": {},
-            "namespace": ["caseStudies", "postList"]
+            "namespace": ["caseStudies", "postList"],
+            "searchable": true
           }
         ],
         "ui": { "allowedActions": { "create": false, "delete": false } },
@@ -1273,33 +1327,38 @@
             "label": "Title",
             "isTitle": true,
             "required": true,
-            "namespace": ["caseStudies_posts", "title"]
+            "namespace": ["caseStudies_posts", "title"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "subtitle",
             "label": "Subtitle",
-            "namespace": ["caseStudies_posts", "subtitle"]
+            "namespace": ["caseStudies_posts", "subtitle"],
+            "searchable": true
           },
           {
             "type": "string",
             "name": "summary",
             "label": "Summary",
             "description": "\"Role\"",
-            "namespace": ["caseStudies_posts", "summary"]
+            "namespace": ["caseStudies_posts", "summary"],
+            "searchable": true
           },
           {
             "type": "rich-text",
             "name": "background",
             "label": "Background",
             "namespace": ["caseStudies_posts", "background"],
+            "searchable": true,
             "parser": { "type": "mdx" }
           },
           {
             "type": "string",
             "name": "anchorLinksTitle",
             "label": "Anchor Links Title",
-            "namespace": ["caseStudies_posts", "anchorLinksTitle"]
+            "namespace": ["caseStudies_posts", "anchorLinksTitle"],
+            "searchable": true
           },
           {
             "type": "object",
@@ -1322,7 +1381,8 @@
                       "sections",
                       "section",
                       "anchorId"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "string",
@@ -1335,7 +1395,8 @@
                       "sections",
                       "section",
                       "title"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "boolean",
@@ -1347,7 +1408,8 @@
                       "sections",
                       "section",
                       "showSectionTitle"
-                    ]
+                    ],
+                    "searchable": true
                   },
                   {
                     "type": "object",
@@ -2150,14 +2212,16 @@
                       "sections",
                       "section",
                       "blocks"
-                    ]
+                    ],
+                    "searchable": true
                   }
                 ],
                 "ui": { "defaultItem": { "showSectionTitle": true } },
                 "namespace": ["caseStudies_posts", "sections", "section"]
               }
             ],
-            "namespace": ["caseStudies_posts", "sections"]
+            "namespace": ["caseStudies_posts", "sections"],
+            "searchable": true
           }
         ],
         "ui": {},
