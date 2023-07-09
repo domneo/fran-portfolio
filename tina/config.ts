@@ -79,7 +79,7 @@ const generateOneColumnBlock = (): Template => ({
 });
 const generateTwoColumnBlock_1_1 = (): Template => ({
   name: "twoColumn_1_1",
-  label: "Two Column Content (1-1)",
+  label: "Two Column Content (1:1)",
   fields: [
     {
       type: "rich-text",
@@ -97,7 +97,7 @@ const generateTwoColumnBlock_1_1 = (): Template => ({
 });
 const generateTwoColumnBlock_1_2 = (): Template => ({
   name: "twoColumn_1_2",
-  label: "Two Column Content (1-2)",
+  label: "Two Column Content (1:2)",
   fields: [
     {
       type: "rich-text",
@@ -115,7 +115,7 @@ const generateTwoColumnBlock_1_2 = (): Template => ({
 });
 const generateThreeColumnBlock_1_1_1 = (): Template => ({
   name: "threeColumn_1_1_1",
-  label: "Three Column Content (1-1-1)",
+  label: "Three Column Content (1:1:1)",
   fields: [
     {
       type: "rich-text",
