@@ -8,8 +8,8 @@
     "start": "tinacms build && next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "prettier": "prettier --write . --ignore-path .gitignore",
-    "pretty-quick": "pretty-quick --staged --ignore-path .gitignore"
+    "prettier": "prettier --write . --ignore-path .prettierignore",
+    "pretty-quick": "pretty-quick --staged --ignore-path .prettierignore"
   },
   "dependencies": {
     "@georgedoescode/spline": "^1.0.1",
