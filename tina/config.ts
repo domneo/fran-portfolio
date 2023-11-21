@@ -145,7 +145,8 @@ const generateSection = (): Template => ({
       type: "string",
       name: "anchorId",
       label: "Anchor ID",
-      description: "ID for anchor links",
+      description:
+        "ID for anchor links. Leave blank if you don't want the section to be included in the section links.",
       ui: {
         validate: (value: string) => {
           if (!value?.match(/^[a-zA-Z0-9_]*$/)) {
@@ -190,6 +191,27 @@ const generateSection = (): Template => ({
   ui: {
     defaultItem: {
       showSectionTitle: true,
+    },
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
+});
+const generateSectionLinks = (): Template => ({
+  name: "section_links",
+  label: "Section Links",
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+      description: "",
+      required: true,
+    },
+  ],
+  ui: {
+    defaultItem: {
+      title: "Process",
     },
     itemProps: (item) => {
       return { label: item?.title };
@@ -496,27 +518,16 @@ const worksPostsCollection: Collection = {
       label: "Subtitle",
     },
     {
-      type: "string",
-      name: "summary",
-      label: "Summary",
-      description: '"Role"',
-    },
-    {
       type: "rich-text",
-      name: "background",
-      label: "Background",
-    },
-    {
-      type: "string",
-      name: "anchorLinksTitle",
-      label: "Anchor Links Title",
+      name: "overview",
+      label: "Overview",
     },
     {
       type: "object",
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [generateSection()],
+      templates: [generateSection(), generateSectionLinks()],
     },
   ],
   ui: {
