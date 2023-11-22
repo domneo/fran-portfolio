@@ -8,3 +8,19 @@
     gap: 2rem;
   }
 }
+
+.arrowLink {
+  display: flex;
+  align-items: center;
+}
+
+.nextArrow,
+.prevArrow {
+  width: 48px;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.nextArrow {
+  transform: rotate(180deg);
+}
