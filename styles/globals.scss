@@ -189,13 +189,14 @@ small,
 
 a,
 .link {
-  color: var(--rosetaupe);
+  color: var(--black);
   text-decoration: none;
   border-radius: 0.25rem;
   transition: 0.3s font-weight;
 
   &:hover,
   &:focus {
+    color: var(--rosetaupe);
     text-decoration: underline;
   }
 }

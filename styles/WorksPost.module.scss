@@ -12,6 +12,11 @@
 .arrowLink {
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 .nextArrow,
