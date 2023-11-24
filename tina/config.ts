@@ -27,6 +27,31 @@ const generateDivider = (): Template => ({
     },
   ],
 });
+const generateImageWithCaption = (): Template => ({
+  name: "imageWithCaption",
+  label: "Image With Caption",
+  fields: [
+    {
+      type: "image",
+      name: "image",
+      label: "Image",
+      required: true,
+    },
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+      description:
+        "A simple description of the image. Serves as fallback for accessibility.",
+    },
+    {
+      type: "string",
+      name: "caption",
+      label: "Caption",
+      description: "Image caption visible on the page.",
+    },
+  ],
+});
 const generateImageSlider = (): Template => ({
   name: "imageSlider",
   label: "Image Slider",
@@ -180,6 +205,7 @@ const generateSection = (): Template => ({
       templates: [
         generateSpacer(),
         generateDivider(),
+        generateImageWithCaption(),
         generateImageSlider(),
         generateOneColumnBlock(),
         generateTwoColumnBlock_1_1(),

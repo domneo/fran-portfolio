@@ -1,6 +1,7 @@
 import Layout from "components/Layout";
 import { Divider } from "components/common/Divider";
 import { ImageSlider } from "components/common/ImageSlider";
+import { ImageWithCaption } from "components/common/ImageWithCaption";
 import { Spacer } from "components/common/Spacer";
 import { ThreeColumn111 } from "components/common/ThreeColumn111";
 import { TwoColumn11 } from "components/common/TwoColumn11";
@@ -218,10 +219,21 @@ export default function WorksPost({
                           case "Works_postsSectionsSectionBlocksDivider":
                             blockComponent = <Divider />;
                             break;
+                          case "Works_postsSectionsSectionBlocksImageWithCaption":
+                            if (block.image) {
+                              blockComponent = (
+                                <ImageWithCaption
+                                  image={block.image}
+                                  title={block.title}
+                                  caption={block.caption}
+                                />
+                              );
+                            }
+                            break;
                           case "Works_postsSectionsSectionBlocksImageSlider":
                             if (block.slides) {
                               blockComponent = (
-                                <ImageSlider slides={block.slides} />
+                                <ImageSlider images={block.slides} />
                               );
                             }
                             break;

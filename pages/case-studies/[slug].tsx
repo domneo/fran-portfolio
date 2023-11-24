@@ -127,7 +127,7 @@ export default function CaseStudiesPost({
                         case "CaseStudies_postsSectionsSectionBlocksImageSlider":
                           if (block.slides) {
                             blockComponent = (
-                              <ImageSlider slides={block.slides} />
+                              <ImageSlider images={block.slides} />
                             );
                           }
                           break;
