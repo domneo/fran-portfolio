@@ -5,8 +5,8 @@ dependencies:
     specifier: ^1.0.1
     version: 1.0.1
   "@tinacms/cli":
-    specifier: ^1.5.30
-    version: 1.5.30(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.3)
+    specifier: ^1.5.36
+    version: 1.5.36(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.3)
   bootstrap:
     specifier: ^5.3.2
     version: 5.3.2(@popperjs/core@2.11.8)
@@ -50,8 +50,8 @@ dependencies:
     specifier: ^4.0.17
     version: 4.0.17
   tinacms:
-    specifier: ^1.5.21
-    version: 1.5.21(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.5.26
+    version: 1.5.26(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   "@trivago/prettier-plugin-sort-imports":
@@ -1431,7 +1431,6 @@ packages:
       {
         integrity: sha512-qIH2cmG/oHGrVdApbqDf6/YR+B2A4NdkBjKLeq369OMVkqMFsC5oPSP1xpiyL1cAn+PbNEZHxwOVMYD/C76c6g==,
       }
-    deprecated: "Broken ESM package exports. See issue #4126, #4127, #4128"
     dependencies:
       "@formatjs/intl-localematcher": 0.3.0
       tslib: 2.5.2
@@ -1442,7 +1441,6 @@ packages:
       {
         integrity: sha512-w7IzF6Okx2tQXRVlT/cXI4dfS0bvKHhWE5Kn7ajqDVYH4nksUFOMU21Yd4zDENxZ8mFb7IBu7bOopnB2VxZQeA==,
       }
-    deprecated: "Broken ESM package exports. See issue #4126, #4127, #4128"
     dependencies:
       tslib: 2.5.2
     dev: false
@@ -1452,7 +1450,6 @@ packages:
       {
         integrity: sha512-8AwKRkVIZzVlvZwio1TcLVvUbJw0up1joa8//JIxKVeflqKiZwfzCGAelZt/4hHCEQf9NECose//nODnmBEkNQ==,
       }
-    deprecated: "Broken ESM package exports. See issue #4126, #4127, #4128"
     dependencies:
       "@formatjs/ecma402-abstract": 1.16.0
       "@formatjs/icu-skeleton-parser": 1.5.0
@@ -1464,7 +1461,6 @@ packages:
       {
         integrity: sha512-R/wOg/hxh3JWNB4LHYfNtIe8PC39mkzplh6gtrqCY33EqYeUFEGOYTWJrkXNcoRXlZWQtfrH6REch5r57tAyMQ==,
       }
-    deprecated: "Broken ESM package exports. See issue #4126, #4127, #4128"
     dependencies:
       "@formatjs/ecma402-abstract": 1.16.0
       tslib: 2.5.2
@@ -4400,10 +4396,10 @@ packages:
       tailwindcss: 3.3.2
     dev: false
 
-  /@tinacms/app@1.2.28(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(yup@0.32.11):
+  /@tinacms/app@1.2.33(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(yup@0.32.11):
     resolution:
       {
-        integrity: sha512-+Tl7ScdP0RVpwD66+Iy9KQXo65A8p7ktDre5Bjk8op0POUO5jePWpB1p4btxzf9QxvUw2o33n95N2R1CqzZ/Xg==,
+        integrity: sha512-KnO3mMU3NaZwhNS33Iy79A0nic9Z4yRjpZqyenDhYDQ38JW2/KtHxnjxuk6LxItJc2BA1vPbp5YmgIJvYXlCyg==,
       }
     dependencies:
       "@codemirror/language": 6.0.0
@@ -4411,9 +4407,9 @@ packages:
       "@headlessui/react": 1.6.6(react-dom@17.0.2)(react@17.0.2)
       "@heroicons/react": 1.0.6(react@17.0.2)
       "@monaco-editor/react": 4.4.5(monaco-editor@0.31.0)(react-dom@17.0.2)(react@17.0.2)
-      "@tinacms/mdx": 1.3.19(react@17.0.2)(yup@0.32.11)
+      "@tinacms/mdx": 1.3.22(react@17.0.2)(yup@0.32.11)
       "@xstate/react": 3.0.0(@types/react@18.2.28)(react@17.0.2)
-      final-form: 4.20.7
+      final-form: 4.20.10
       graphiql: 3.0.0-alpha.1(@codemirror/language@6.0.0)(@types/node@20.8.6)(@types/react@18.2.28)(graphql@15.8.0)(react-dom@17.0.2)(react@17.0.2)
       graphql: 15.8.0
       monaco-editor: 0.31.0
@@ -4422,7 +4418,7 @@ packages:
       react-dom: 17.0.2(react@17.0.2)
       react-router-dom: 6.3.0(react-dom@17.0.2)(react@17.0.2)
       tailwindcss: 3.3.2
-      tinacms: 1.5.21(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@17.0.2)(react@17.0.2)
+      tinacms: 1.5.26(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@17.0.2)(react@17.0.2)
       typescript: 4.9.5
       zod: 3.21.4
     transitivePeerDependencies:
@@ -4449,10 +4445,10 @@ packages:
       - yup
     dev: false
 
-  /@tinacms/cli@1.5.30(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.3):
+  /@tinacms/cli@1.5.36(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.3):
     resolution:
       {
-        integrity: sha512-Z+stSXI8UgFK9k/YKK7Pc2Zi5ekq5g+UFRI7y2LjKULgp/57pquvNO44x84XhgwkCWftQwqjzM9jrmI93XZ7ow==,
+        integrity: sha512-zk1qwNM66x4pnAmIDsE7KnvsxHvAcADGDRLhftNTRCKVC0LSRZhePhL6hlgjFNBCGruXptvCiKalza2mdpkSaA==,
       }
     hasBin: true
     dependencies:
@@ -4470,12 +4466,12 @@ packages:
       "@tailwindcss/aspect-ratio": 0.4.2(tailwindcss@3.3.2)
       "@tailwindcss/line-clamp": 0.3.1(tailwindcss@3.3.2)
       "@tailwindcss/typography": 0.5.9(tailwindcss@3.3.2)
-      "@tinacms/app": 1.2.28(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(yup@0.32.11)
-      "@tinacms/datalayer": 1.2.26(react@18.2.0)
-      "@tinacms/graphql": 1.4.26(react@18.2.0)
+      "@tinacms/app": 1.2.33(@babel/core@7.22.5)(@types/node@20.8.6)(@types/react@18.2.28)(yup@0.32.11)
+      "@tinacms/datalayer": 1.2.30(react@18.2.0)
+      "@tinacms/graphql": 1.4.30(react@18.2.0)
       "@tinacms/metrics": 1.0.2(fs-extra@9.1.0)
-      "@tinacms/schema-tools": 1.4.12(react@18.2.0)(yup@0.32.11)
-      "@tinacms/search": 1.0.11(encoding@0.1.13)(react@18.2.0)(yup@0.32.11)
+      "@tinacms/schema-tools": 1.4.14(react@18.2.0)(yup@0.32.11)
+      "@tinacms/search": 1.0.15(encoding@0.1.13)(react@18.2.0)(yup@0.32.11)
       "@vitejs/plugin-react": 3.1.0(vite@4.4.11)
       ajv: 6.12.6
       altair-express-middleware: 4.0.6
@@ -4488,6 +4484,7 @@ packages:
       cli-spinner: 0.2.10
       clipanion: 3.2.1(typanion@3.13.0)
       cors: 2.8.5
+      crypto-js: 4.1.1
       dotenv: 16.1.4
       esbuild: 0.18.11
       express: 4.18.2
@@ -4507,15 +4504,16 @@ packages:
       multer: 1.4.5-lts.1
       node-fetch: 2.6.11(encoding@0.1.13)
       normalize-path: 3.0.0
-      postcss: 8.4.24
+      postcss: 8.4.31
       prettier: 2.8.8
       progress: 2.0.3
       prompts: 2.4.2
       readable-stream: 4.4.0
       rollup-plugin-visualizer: 5.9.2
       tailwindcss: 3.3.2
-      tinacms: 1.5.21(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+      tinacms: 1.5.26(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
       typanion: 3.13.0
+      typescript: 4.3.5
       url-pattern: 1.0.3
       vite: 4.4.11(@types/node@20.8.6)(sass@1.69.3)
       yarn: 1.22.19
@@ -4555,27 +4553,27 @@ packages:
       - xstate
     dev: false
 
-  /@tinacms/datalayer@1.2.26(react@18.2.0):
+  /@tinacms/datalayer@1.2.30(react@18.2.0):
     resolution:
       {
-        integrity: sha512-PqWUT+4uFtKlBtDvEsBiDSsjw1BN1dL1lYgPzEam2KZj6YsMvV1GJnbTXVCj7uoIPAEJYW/j1FqEOiMp/rN93Q==,
+        integrity: sha512-Z6QM2fEL0of7WQc0iIq+MPtUgtwI/esjVk/ot5IElSJF8p8ZbTrmDib+BbeH+ChlYK5o5/WFwDML2H/y8GF8Mw==,
       }
     dependencies:
-      "@tinacms/graphql": 1.4.26(react@18.2.0)
+      "@tinacms/graphql": 1.4.30(react@18.2.0)
     transitivePeerDependencies:
       - react
       - supports-color
     dev: false
 
-  /@tinacms/graphql@1.4.26(react@17.0.2):
+  /@tinacms/graphql@1.4.30(react@17.0.2):
     resolution:
       {
-        integrity: sha512-s/adTfRVSfTdq6ZLW/2qPLcv/zzPRJl9X4KPZRnn4nW6XmVo+4huzKAYr4UsVi68iO5fw2xW2bVn7Md4zIsz2g==,
+        integrity: sha512-LaPAULHZHVhWKiTdUJHgtcPCpEzjHgYVGg4/rspA7VWPJtY6fukpGG8+VrDFQnfLTB9h2L5RoUKoFqiULLFpQg==,
       }
     dependencies:
       "@iarna/toml": 2.2.5
-      "@tinacms/mdx": 1.3.19(react@17.0.2)(yup@0.32.11)
-      "@tinacms/schema-tools": 1.4.12(react@17.0.2)(yup@0.32.11)
+      "@tinacms/mdx": 1.3.22(react@17.0.2)(yup@0.32.11)
+      "@tinacms/schema-tools": 1.4.14(react@17.0.2)(yup@0.32.11)
       abstract-level: 1.0.3
       body-parser: 1.20.2
       cors: 2.8.5
@@ -4597,21 +4595,22 @@ packages:
       micromatch: 4.0.5
       normalize-path: 3.0.0
       readable-stream: 4.4.0
+      scmp: 2.1.0
       yup: 0.32.11
     transitivePeerDependencies:
       - react
       - supports-color
     dev: false
 
-  /@tinacms/graphql@1.4.26(react@18.2.0):
+  /@tinacms/graphql@1.4.30(react@18.2.0):
     resolution:
       {
-        integrity: sha512-s/adTfRVSfTdq6ZLW/2qPLcv/zzPRJl9X4KPZRnn4nW6XmVo+4huzKAYr4UsVi68iO5fw2xW2bVn7Md4zIsz2g==,
+        integrity: sha512-LaPAULHZHVhWKiTdUJHgtcPCpEzjHgYVGg4/rspA7VWPJtY6fukpGG8+VrDFQnfLTB9h2L5RoUKoFqiULLFpQg==,
       }
     dependencies:
       "@iarna/toml": 2.2.5
-      "@tinacms/mdx": 1.3.19(react@18.2.0)(yup@0.32.11)
-      "@tinacms/schema-tools": 1.4.12(react@18.2.0)(yup@0.32.11)
+      "@tinacms/mdx": 1.3.22(react@18.2.0)(yup@0.32.11)
+      "@tinacms/schema-tools": 1.4.14(react@18.2.0)(yup@0.32.11)
       abstract-level: 1.0.3
       body-parser: 1.20.2
       cors: 2.8.5
@@ -4633,19 +4632,20 @@ packages:
       micromatch: 4.0.5
       normalize-path: 3.0.0
       readable-stream: 4.4.0
+      scmp: 2.1.0
       yup: 0.32.11
     transitivePeerDependencies:
       - react
       - supports-color
     dev: false
 
-  /@tinacms/mdx@1.3.19(react@17.0.2)(yup@0.32.11):
+  /@tinacms/mdx@1.3.22(react@17.0.2)(yup@0.32.11):
     resolution:
       {
-        integrity: sha512-+JzFLebLwrL6V80HGJcX6v24XF46l7gUu2b2s9S9fvIW+UrU/HFsGWuY19mgm0ybwR8FTu3OWjYFSSjvV9fbyg==,
+        integrity: sha512-0M7yCDyTuVBEzdIM+aO7x6Qm8GsI9w1cF/2BbIooplPehPbCu5nY0DRyGCfW4hwxbxU4J+53IUS5xaDrgcnOcA==,
       }
     dependencies:
-      "@tinacms/schema-tools": 1.4.12(react@17.0.2)(yup@0.32.11)
+      "@tinacms/schema-tools": 1.4.14(react@17.0.2)(yup@0.32.11)
       acorn: 8.8.2
       ccount: 2.0.1
       estree-util-is-identifier-name: 2.1.0
@@ -4653,9 +4653,11 @@ packages:
       mdast-util-compact: 4.1.1
       mdast-util-directive: 2.2.4
       mdast-util-from-markdown: 1.3.0
+      mdast-util-gfm: 2.0.2
       mdast-util-mdx: 2.0.1
       mdast-util-mdx-jsx: 2.1.2
       mdast-util-to-markdown: 1.5.0
+      micromark-extension-gfm: 2.0.3
       micromark-factory-mdx-expression: 1.0.7
       micromark-factory-space: 1.0.0
       micromark-factory-whitespace: 1.0.0
@@ -4665,6 +4667,7 @@ packages:
       parse-entities: 4.0.1
       prettier: 2.8.8
       remark: 14.0.2
+      remark-gfm: 2.0.0
       remark-mdx: 2.3.0
       stringify-entities: 4.0.3
       unist-util-source: 4.0.2
@@ -4678,13 +4681,13 @@ packages:
       - yup
     dev: false
 
-  /@tinacms/mdx@1.3.19(react@18.2.0)(yup@0.32.11):
+  /@tinacms/mdx@1.3.22(react@18.2.0)(yup@0.32.11):
     resolution:
       {
-        integrity: sha512-+JzFLebLwrL6V80HGJcX6v24XF46l7gUu2b2s9S9fvIW+UrU/HFsGWuY19mgm0ybwR8FTu3OWjYFSSjvV9fbyg==,
+        integrity: sha512-0M7yCDyTuVBEzdIM+aO7x6Qm8GsI9w1cF/2BbIooplPehPbCu5nY0DRyGCfW4hwxbxU4J+53IUS5xaDrgcnOcA==,
       }
     dependencies:
-      "@tinacms/schema-tools": 1.4.12(react@18.2.0)(yup@0.32.11)
+      "@tinacms/schema-tools": 1.4.14(react@18.2.0)(yup@0.32.11)
       acorn: 8.8.2
       ccount: 2.0.1
       estree-util-is-identifier-name: 2.1.0
@@ -4692,9 +4695,11 @@ packages:
       mdast-util-compact: 4.1.1
       mdast-util-directive: 2.2.4
       mdast-util-from-markdown: 1.3.0
+      mdast-util-gfm: 2.0.2
       mdast-util-mdx: 2.0.1
       mdast-util-mdx-jsx: 2.1.2
       mdast-util-to-markdown: 1.5.0
+      micromark-extension-gfm: 2.0.3
       micromark-factory-mdx-expression: 1.0.7
       micromark-factory-space: 1.0.0
       micromark-factory-whitespace: 1.0.0
@@ -4704,6 +4709,7 @@ packages:
       parse-entities: 4.0.1
       prettier: 2.8.8
       remark: 14.0.2
+      remark-gfm: 2.0.0
       remark-mdx: 2.3.0
       stringify-entities: 4.0.3
       unist-util-source: 4.0.2
@@ -4731,10 +4737,10 @@ packages:
       - encoding
     dev: false
 
-  /@tinacms/schema-tools@1.4.12(react@17.0.2)(yup@0.32.11):
+  /@tinacms/schema-tools@1.4.14(react@17.0.2)(yup@0.32.11):
     resolution:
       {
-        integrity: sha512-S7C8T8XfxTkD38gzPm7n1UviMi2569F/Gt8az9y0CwQneUg6iqjd3DV0fpyBcXOXFHLY+AHCLg3B9Bk+jhA/yQ==,
+        integrity: sha512-wzEByPYXeGJDgB1IO6xe+xeqyquARvFgj50QmVDPJihLlrp0DwNMEFWafEaoIFRR17aLahgQZKzKgKdlED5XDA==,
       }
     peerDependencies:
       react: ">=16.14.0"
@@ -4747,10 +4753,10 @@ packages:
       zod: 3.21.4
     dev: false
 
-  /@tinacms/schema-tools@1.4.12(react@18.2.0)(yup@0.32.11):
+  /@tinacms/schema-tools@1.4.14(react@18.2.0)(yup@0.32.11):
     resolution:
       {
-        integrity: sha512-S7C8T8XfxTkD38gzPm7n1UviMi2569F/Gt8az9y0CwQneUg6iqjd3DV0fpyBcXOXFHLY+AHCLg3B9Bk+jhA/yQ==,
+        integrity: sha512-wzEByPYXeGJDgB1IO6xe+xeqyquARvFgj50QmVDPJihLlrp0DwNMEFWafEaoIFRR17aLahgQZKzKgKdlED5XDA==,
       }
     peerDependencies:
       react: ">=16.14.0"
@@ -4763,14 +4769,14 @@ packages:
       zod: 3.21.4
     dev: false
 
-  /@tinacms/search@1.0.11(encoding@0.1.13)(react@17.0.2)(yup@0.32.11):
+  /@tinacms/search@1.0.15(encoding@0.1.13)(react@17.0.2)(yup@0.32.11):
     resolution:
       {
-        integrity: sha512-qWwK+VTNglHoh/u5yG+VjmGRQVK06JrNXlc2I8bKgCeBEztRi0RE0Jgi/10/EgXWLoKbbRFG1B+0lxYz4T0jcw==,
+        integrity: sha512-9uPSkT6EvvRyCwTh3KUgvo7FAPOSpCR39cNxoV//sVfvMuuyLBLAdEvFkYO3FrWxaGnUxoKxlIL6E+aeLT4f0Q==,
       }
     dependencies:
-      "@tinacms/graphql": 1.4.26(react@17.0.2)
-      "@tinacms/schema-tools": 1.4.12(react@17.0.2)(yup@0.32.11)
+      "@tinacms/graphql": 1.4.30(react@17.0.2)
+      "@tinacms/schema-tools": 1.4.14(react@17.0.2)(yup@0.32.11)
       abstract-level: 1.0.3
       memory-level: 1.0.0
       module-error: 1.0.2
@@ -4785,14 +4791,14 @@ packages:
       - yup
     dev: false
 
-  /@tinacms/search@1.0.11(encoding@0.1.13)(react@18.2.0)(yup@0.32.11):
+  /@tinacms/search@1.0.15(encoding@0.1.13)(react@18.2.0)(yup@0.32.11):
     resolution:
       {
-        integrity: sha512-qWwK+VTNglHoh/u5yG+VjmGRQVK06JrNXlc2I8bKgCeBEztRi0RE0Jgi/10/EgXWLoKbbRFG1B+0lxYz4T0jcw==,
+        integrity: sha512-9uPSkT6EvvRyCwTh3KUgvo7FAPOSpCR39cNxoV//sVfvMuuyLBLAdEvFkYO3FrWxaGnUxoKxlIL6E+aeLT4f0Q==,
       }
     dependencies:
-      "@tinacms/graphql": 1.4.26(react@18.2.0)
-      "@tinacms/schema-tools": 1.4.12(react@18.2.0)(yup@0.32.11)
+      "@tinacms/graphql": 1.4.30(react@18.2.0)
+      "@tinacms/schema-tools": 1.4.14(react@18.2.0)(yup@0.32.11)
       abstract-level: 1.0.3
       memory-level: 1.0.0
       module-error: 1.0.2
@@ -10665,6 +10671,14 @@ packages:
     engines: { node: ">=10" }
     dev: true
 
+  /escape-string-regexp@5.0.0:
+    resolution:
+      {
+        integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==,
+      }
+    engines: { node: ">=12" }
+    dev: false
+
   /eslint-config-next@13.5.4(eslint@8.51.0)(typescript@5.2.2):
     resolution:
       {
@@ -11336,7 +11350,7 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
 
-  /final-form-arrays@3.1.0(final-form@4.20.4):
+  /final-form-arrays@3.1.0(final-form@4.20.10):
     resolution:
       {
         integrity: sha512-TWBvun+AopgBLw9zfTFHBllnKMVNEwCEyDawphPuBGGqNsuhGzhT7yewHys64KFFwzIs6KEteGLpKOwvTQEscQ==,
@@ -11344,10 +11358,10 @@ packages:
     peerDependencies:
       final-form: ^4.20.8
     dependencies:
-      final-form: 4.20.4
+      final-form: 4.20.10
     dev: false
 
-  /final-form-set-field-data@1.0.2(final-form@4.20.4):
+  /final-form-set-field-data@1.0.2(final-form@4.20.10):
     resolution:
       {
         integrity: sha512-gAnENimyQ5GW3OEGca5pbwm4lYshW2orzfBlPUYqzcm7ZxkQrVO8FqCAgEcCM+Rq9U1OU0q+D+UkqETvvDY6jw==,
@@ -11355,23 +11369,15 @@ packages:
     peerDependencies:
       final-form: ">=1.2.0"
     dependencies:
-      final-form: 4.20.4
+      final-form: 4.20.10
     dev: false
 
-  /final-form@4.20.4:
+  /final-form@4.20.10:
     resolution:
       {
-        integrity: sha512-hyoOVVilPLpkTvgi+FSJkFZrh0Yhy4BhE6lk/NiBwrF4aRV8/ykKEyXYvQH/pfUbRkOosvpESYouFb+FscsLrw==,
+        integrity: sha512-TL48Pi1oNHeMOHrKv1bCJUrWZDcD3DIG6AGYVNOnyZPr7Bd/pStN0pL+lfzF5BNoj/FclaoiaLenk4XUIFVYng==,
       }
-    dependencies:
-      "@babel/runtime": 7.21.5
-    dev: false
-
-  /final-form@4.20.7:
-    resolution:
-      {
-        integrity: sha512-ii3X9wNfyBYFnDPunYN5jh1/HAvtOZ9aJI/TVk0MB86hZuOeYkb+W5L3icgwW9WWNztZR6MDU3En6eoZTUoFPg==,
-      }
+    engines: { node: ">=8" }
     dependencies:
       "@babel/runtime": 7.21.5
     dev: false
@@ -13491,6 +13497,13 @@ packages:
       uc.micro: 1.0.6
     dev: false
 
+  /markdown-table@3.0.3:
+    resolution:
+      {
+        integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==,
+      }
+    dev: false
+
   /material-colors@1.2.6:
     resolution:
       {
@@ -13523,6 +13536,18 @@ packages:
       unist-util-visit-parents: 5.1.3
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /mdast-util-find-and-replace@2.2.2:
+    resolution:
+      {
+        integrity: sha512-MTtdFRz/eMDHXzeK6W3dO7mXUlF82Gom4y0oOgvHhh/HXZAGvIQDUvQ0SuUx+j2tv44b8xTHOm8K/9OoRFnXKw==,
+      }
+    dependencies:
+      "@types/mdast": 3.0.11
+      escape-string-regexp: 5.0.0
+      unist-util-is: 5.2.1
+      unist-util-visit-parents: 5.1.3
     dev: false
 
   /mdast-util-from-markdown@0.8.5:
@@ -13580,6 +13605,94 @@ packages:
       micromark-util-types: 1.1.0
       unist-util-stringify-position: 3.0.3
       uvu: 0.5.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /mdast-util-gfm-autolink-literal@1.0.3:
+    resolution:
+      {
+        integrity: sha512-My8KJ57FYEy2W2LyNom4n3E7hKTuQk/0SES0u16tjA9Z3oFkF4RrC/hPAPgjlSpezsOvI8ObcXcElo92wn5IGA==,
+      }
+    dependencies:
+      "@types/mdast": 3.0.11
+      ccount: 2.0.1
+      mdast-util-find-and-replace: 2.2.2
+      micromark-util-character: 1.2.0
+    dev: false
+
+  /mdast-util-gfm-footnote@1.0.2:
+    resolution:
+      {
+        integrity: sha512-56D19KOGbE00uKVj3sgIykpwKL179QsVFwx/DCW0u/0+URsryacI4MAdNJl0dh+u2PSsD9FtxPFbHCzJ78qJFQ==,
+      }
+    dependencies:
+      "@types/mdast": 3.0.11
+      mdast-util-to-markdown: 1.5.0
+      micromark-util-normalize-identifier: 1.1.0
+    dev: false
+
+  /mdast-util-gfm-strikethrough@1.0.3:
+    resolution:
+      {
+        integrity: sha512-DAPhYzTYrRcXdMjUtUjKvW9z/FNAMTdU0ORyMcbmkwYNbKocDpdk+PX1L1dQgOID/+vVs1uBQ7ElrBQfZ0cuiQ==,
+      }
+    dependencies:
+      "@types/mdast": 3.0.11
+      mdast-util-to-markdown: 1.5.0
+    dev: false
+
+  /mdast-util-gfm-table@1.0.7:
+    resolution:
+      {
+        integrity: sha512-jjcpmNnQvrmN5Vx7y7lEc2iIOEytYv7rTvu+MeyAsSHTASGCCRA79Igg2uKssgOs1i1po8s3plW0sTu1wkkLGg==,
+      }
+    dependencies:
+      "@types/mdast": 3.0.11
+      markdown-table: 3.0.3
+      mdast-util-from-markdown: 1.3.1
+      mdast-util-to-markdown: 1.5.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /mdast-util-gfm-task-list-item@1.0.2:
+    resolution:
+      {
+        integrity: sha512-PFTA1gzfp1B1UaiJVyhJZA1rm0+Tzn690frc/L8vNX1Jop4STZgOE6bxUhnzdVSB+vm2GU1tIsuQcA9bxTQpMQ==,
+      }
+    dependencies:
+      "@types/mdast": 3.0.11
+      mdast-util-to-markdown: 1.5.0
+    dev: false
+
+  /mdast-util-gfm@1.0.0:
+    resolution:
+      {
+        integrity: sha512-JY4qImsTqivQ0Gl3qvdaizCpomFaNrHnjEhNjNNKeNEA5jZHAJDYu1+yO4V9jn4/ti8GrKdAScaT4F71knoxsA==,
+      }
+    dependencies:
+      mdast-util-gfm-autolink-literal: 1.0.3
+      mdast-util-gfm-strikethrough: 1.0.3
+      mdast-util-gfm-table: 1.0.7
+      mdast-util-gfm-task-list-item: 1.0.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /mdast-util-gfm@2.0.2:
+    resolution:
+      {
+        integrity: sha512-qvZ608nBppZ4icQlhQQIAdc6S3Ffj9RGmzwUKUWuEICFnd1LVkN3EktF7ZHAgfcEdvZB5owU9tQgt99e2TlLjg==,
+      }
+    dependencies:
+      mdast-util-from-markdown: 1.3.1
+      mdast-util-gfm-autolink-literal: 1.0.3
+      mdast-util-gfm-footnote: 1.0.2
+      mdast-util-gfm-strikethrough: 1.0.3
+      mdast-util-gfm-table: 1.0.7
+      mdast-util-gfm-task-list-item: 1.0.2
+      mdast-util-to-markdown: 1.5.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -13793,6 +13906,114 @@ packages:
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
       uvu: 0.5.6
+    dev: false
+
+  /micromark-extension-gfm-autolink-literal@1.0.5:
+    resolution:
+      {
+        integrity: sha512-z3wJSLrDf8kRDOh2qBtoTRD53vJ+CWIyo7uyZuxf/JAbNJjiHsOpG1y5wxk8drtv3ETAHutCu6N3thkOOgueWg==,
+      }
+    dependencies:
+      micromark-util-character: 1.2.0
+      micromark-util-sanitize-uri: 1.2.0
+      micromark-util-symbol: 1.1.0
+      micromark-util-types: 1.1.0
+    dev: false
+
+  /micromark-extension-gfm-footnote@1.1.2:
+    resolution:
+      {
+        integrity: sha512-Yxn7z7SxgyGWRNa4wzf8AhYYWNrwl5q1Z8ii+CSTTIqVkmGZF1CElX2JI8g5yGoM3GAman9/PVCUFUSJ0kB/8Q==,
+      }
+    dependencies:
+      micromark-core-commonmark: 1.1.0
+      micromark-factory-space: 1.1.0
+      micromark-util-character: 1.2.0
+      micromark-util-normalize-identifier: 1.1.0
+      micromark-util-sanitize-uri: 1.2.0
+      micromark-util-symbol: 1.1.0
+      micromark-util-types: 1.1.0
+      uvu: 0.5.6
+    dev: false
+
+  /micromark-extension-gfm-strikethrough@1.0.7:
+    resolution:
+      {
+        integrity: sha512-sX0FawVE1o3abGk3vRjOH50L5TTLr3b5XMqnP9YDRb34M0v5OoZhG+OHFz1OffZ9dlwgpTBKaT4XW/AsUVnSDw==,
+      }
+    dependencies:
+      micromark-util-chunked: 1.1.0
+      micromark-util-classify-character: 1.1.0
+      micromark-util-resolve-all: 1.1.0
+      micromark-util-symbol: 1.1.0
+      micromark-util-types: 1.1.0
+      uvu: 0.5.6
+    dev: false
+
+  /micromark-extension-gfm-table@1.0.7:
+    resolution:
+      {
+        integrity: sha512-3ZORTHtcSnMQEKtAOsBQ9/oHp9096pI/UvdPtN7ehKvrmZZ2+bbWhi0ln+I9drmwXMt5boocn6OlwQzNXeVeqw==,
+      }
+    dependencies:
+      micromark-factory-space: 1.1.0
+      micromark-util-character: 1.2.0
+      micromark-util-symbol: 1.1.0
+      micromark-util-types: 1.1.0
+      uvu: 0.5.6
+    dev: false
+
+  /micromark-extension-gfm-tagfilter@1.0.2:
+    resolution:
+      {
+        integrity: sha512-5XWB9GbAUSHTn8VPU8/1DBXMuKYT5uOgEjJb8gN3mW0PNW5OPHpSdojoqf+iq1xo7vWzw/P8bAHY0n6ijpXF7g==,
+      }
+    dependencies:
+      micromark-util-types: 1.1.0
+    dev: false
+
+  /micromark-extension-gfm-task-list-item@1.0.5:
+    resolution:
+      {
+        integrity: sha512-RMFXl2uQ0pNQy6Lun2YBYT9g9INXtWJULgbt01D/x8/6yJ2qpKyzdZD3pi6UIkzF++Da49xAelVKUeUMqd5eIQ==,
+      }
+    dependencies:
+      micromark-factory-space: 1.1.0
+      micromark-util-character: 1.2.0
+      micromark-util-symbol: 1.1.0
+      micromark-util-types: 1.1.0
+      uvu: 0.5.6
+    dev: false
+
+  /micromark-extension-gfm@1.0.0:
+    resolution:
+      {
+        integrity: sha512-OjqbQPL1Vec/4l5hnC8WnMNmWwgrT9JvzR2udqIGrGKecZsdwY9GAWZ5482CuD12SXuHNj8aS8epni6ip0Pwog==,
+      }
+    dependencies:
+      micromark-extension-gfm-autolink-literal: 1.0.5
+      micromark-extension-gfm-strikethrough: 1.0.7
+      micromark-extension-gfm-table: 1.0.7
+      micromark-extension-gfm-tagfilter: 1.0.2
+      micromark-extension-gfm-task-list-item: 1.0.5
+      micromark-util-combine-extensions: 1.1.0
+      micromark-util-types: 1.1.0
+    dev: false
+
+  /micromark-extension-gfm@2.0.3:
+    resolution:
+      {
+        integrity: sha512-vb9OoHqrhCmbRidQv/2+Bc6pkP0FrtlhurxZofvOEy5o8RtuuvTq+RQ1Vw5ZDNrVraQZu3HixESqbG+0iKk/MQ==,
+      }
+    dependencies:
+      micromark-extension-gfm-autolink-literal: 1.0.5
+      micromark-extension-gfm-footnote: 1.1.2
+      micromark-extension-gfm-strikethrough: 1.0.7
+      micromark-extension-gfm-table: 1.0.7
+      micromark-extension-gfm-tagfilter: 1.0.2
+      micromark-extension-gfm-task-list-item: 1.0.5
+      micromark-util-combine-extensions: 1.1.0
+      micromark-util-types: 1.1.0
     dev: false
 
   /micromark-extension-mdx-expression@1.0.8:
@@ -15182,18 +15403,6 @@ packages:
       }
     dev: false
 
-  /postcss@8.4.24:
-    resolution:
-      {
-        integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==,
-      }
-    engines: { node: ^10 || ^12 || >=14 }
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: false
-
   /postcss@8.4.31:
     resolution:
       {
@@ -15701,7 +15910,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-final-form@6.5.9(final-form@4.20.4)(react@17.0.2):
+  /react-final-form@6.5.9(final-form@4.20.10)(react@17.0.2):
     resolution:
       {
         integrity: sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA==,
@@ -15711,11 +15920,11 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       "@babel/runtime": 7.21.5
-      final-form: 4.20.4
+      final-form: 4.20.10
       react: 17.0.2
     dev: false
 
-  /react-final-form@6.5.9(final-form@4.20.4)(react@18.2.0):
+  /react-final-form@6.5.9(final-form@4.20.10)(react@18.2.0):
     resolution:
       {
         integrity: sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA==,
@@ -15725,7 +15934,7 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       "@babel/runtime": 7.21.5
-      final-form: 4.20.4
+      final-form: 4.20.10
       react: 18.2.0
     dev: false
 
@@ -16365,6 +16574,20 @@ packages:
       - encoding
     dev: false
 
+  /remark-gfm@2.0.0:
+    resolution:
+      {
+        integrity: sha512-waIv4Tjcd2CTUDxKRYzuPyIHw1FoX4H2GjXAzXV9PxQWb+dU4fJivd/FZ+nxyzPARrqTjMIkwIwPoWNbpBhjcQ==,
+      }
+    dependencies:
+      "@types/mdast": 3.0.11
+      mdast-util-gfm: 1.0.0
+      micromark-extension-gfm: 1.0.0
+      unified: 10.1.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /remark-mdx@2.3.0:
     resolution:
       {
@@ -16677,6 +16900,13 @@ packages:
       }
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /scmp@2.1.0:
+    resolution:
+      {
+        integrity: sha512-o/mRQGk9Rcer/jEEw/yw4mwo3EU/NvYvp577/Btqrym9Qy5/MdWGBqipbALgd2lrdWTJ5/gqDusxfnQBxOxT2Q==,
+      }
     dev: false
 
   /scriptjs@2.5.9:
@@ -17645,10 +17875,10 @@ packages:
       any-promise: 1.3.0
     dev: false
 
-  /tinacms@1.5.21(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@17.0.2)(react@17.0.2):
+  /tinacms@1.5.26(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@17.0.2)(react@17.0.2):
     resolution:
       {
-        integrity: sha512-7JwraKth7nLaGi2c824G9VVF0dD8JeGv8WbkrJoNy2UnupzfjPSdXWLb9didDlM9evtFuD6pfVfsA7olYGGy/A==,
+        integrity: sha512-0EkoRMSPXMXmuOW4XQIU7sV+CYrWHvh1Jr0M6QZzVamLlkBTBo3uVnrPwBMfhO2kgucxm6utsRGENd1rbwmwow==,
       }
     peerDependencies:
       react: ">=16.14.0"
@@ -17666,8 +17896,9 @@ packages:
       "@react-types/combobox": 3.6.2(react@17.0.2)
       "@react-types/shared": 3.18.1(react@17.0.2)
       "@sambego/storybook-styles": 1.0.0
-      "@tinacms/schema-tools": 1.4.12(react@17.0.2)(yup@0.32.11)
-      "@tinacms/search": 1.0.11(encoding@0.1.13)(react@17.0.2)(yup@0.32.11)
+      "@tinacms/mdx": 1.3.22(react@17.0.2)(yup@0.32.11)
+      "@tinacms/schema-tools": 1.4.14(react@17.0.2)(yup@0.32.11)
+      "@tinacms/search": 1.0.15(encoding@0.1.13)(react@17.0.2)(yup@0.32.11)
       "@tinacms/sharedctx": 1.0.2(react-dom@17.0.2)(react@17.0.2)
       "@udecode/plate-headless": 21.5.0(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@17.0.2)(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0)(slate-hyperscript@0.77.0)(slate-react@0.97.2)(slate@0.94.1)
       atob: 2.1.2
@@ -17676,9 +17907,9 @@ packages:
       date-fns: 2.30.0
       encoding: 0.1.13
       fetch-ponyfill: 7.1.0(encoding@0.1.13)
-      final-form: 4.20.4
-      final-form-arrays: 3.1.0(final-form@4.20.4)
-      final-form-set-field-data: 1.0.2(final-form@4.20.4)
+      final-form: 4.20.10
+      final-form-arrays: 3.1.0(final-form@4.20.10)
+      final-form-set-field-data: 1.0.2(final-form@4.20.10)
       graphql: 15.8.0
       graphql-tag: 2.12.6(graphql@15.8.0)
       is-hotkey: 0.2.0
@@ -17695,7 +17926,7 @@ packages:
       react-datetime: 2.16.3(moment@2.29.4)(react-dom@17.0.2)(react@17.0.2)
       react-dom: 17.0.2(react@17.0.2)
       react-dropzone: 14.2.3(react@17.0.2)
-      react-final-form: 6.5.9(final-form@4.20.4)(react@17.0.2)
+      react-final-form: 6.5.9(final-form@4.20.10)(react@17.0.2)
       react-icons: 4.9.0(react@17.0.2)
       react-onclickoutside: 6.13.0(react-dom@17.0.2)(react@17.0.2)
       react-router-dom: 6.3.0(react-dom@17.0.2)(react@17.0.2)
@@ -17726,10 +17957,10 @@ packages:
       - supports-color
     dev: false
 
-  /tinacms@1.5.21(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
+  /tinacms@1.5.26(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
     resolution:
       {
-        integrity: sha512-7JwraKth7nLaGi2c824G9VVF0dD8JeGv8WbkrJoNy2UnupzfjPSdXWLb9didDlM9evtFuD6pfVfsA7olYGGy/A==,
+        integrity: sha512-0EkoRMSPXMXmuOW4XQIU7sV+CYrWHvh1Jr0M6QZzVamLlkBTBo3uVnrPwBMfhO2kgucxm6utsRGENd1rbwmwow==,
       }
     peerDependencies:
       react: ">=16.14.0"
@@ -17747,8 +17978,9 @@ packages:
       "@react-types/combobox": 3.6.2(react@18.2.0)
       "@react-types/shared": 3.18.1(react@18.2.0)
       "@sambego/storybook-styles": 1.0.0
-      "@tinacms/schema-tools": 1.4.12(react@18.2.0)(yup@0.32.11)
-      "@tinacms/search": 1.0.11(encoding@0.1.13)(react@18.2.0)(yup@0.32.11)
+      "@tinacms/mdx": 1.3.22(react@18.2.0)(yup@0.32.11)
+      "@tinacms/schema-tools": 1.4.14(react@18.2.0)(yup@0.32.11)
+      "@tinacms/search": 1.0.15(encoding@0.1.13)(react@18.2.0)(yup@0.32.11)
       "@tinacms/sharedctx": 1.0.2(react-dom@18.2.0)(react@18.2.0)
       "@udecode/plate-headless": 21.5.0(@babel/core@7.22.5)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.19.0)(slate-history@0.93.0)(slate-hyperscript@0.77.0)(slate-react@0.97.2)(slate@0.94.1)
       atob: 2.1.2
@@ -17757,9 +17989,9 @@ packages:
       date-fns: 2.30.0
       encoding: 0.1.13
       fetch-ponyfill: 7.1.0(encoding@0.1.13)
-      final-form: 4.20.4
-      final-form-arrays: 3.1.0(final-form@4.20.4)
-      final-form-set-field-data: 1.0.2(final-form@4.20.4)
+      final-form: 4.20.10
+      final-form-arrays: 3.1.0(final-form@4.20.10)
+      final-form-set-field-data: 1.0.2(final-form@4.20.10)
       graphql: 15.8.0
       graphql-tag: 2.12.6(graphql@15.8.0)
       is-hotkey: 0.2.0
@@ -17776,7 +18008,7 @@ packages:
       react-datetime: 2.16.3(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
       react-dropzone: 14.2.3(react@18.2.0)
-      react-final-form: 6.5.9(final-form@4.20.4)(react@18.2.0)
+      react-final-form: 6.5.9(final-form@4.20.10)(react@18.2.0)
       react-icons: 4.9.0(react@18.2.0)
       react-onclickoutside: 6.13.0(react-dom@18.2.0)(react@18.2.0)
       react-router-dom: 6.3.0(react-dom@18.2.0)(react@18.2.0)
@@ -18077,6 +18309,15 @@ packages:
       {
         integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==,
       }
+    dev: false
+
+  /typescript@4.3.5:
+    resolution:
+      {
+        integrity: sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==,
+      }
+    engines: { node: ">=4.2.0" }
+    hasBin: true
     dev: false
 
   /typescript@4.9.5:
