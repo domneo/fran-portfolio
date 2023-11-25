@@ -27,6 +27,10 @@
   align-items: center;
   justify-content: center;
   padding: 0.875rem 1rem;
+
+  @include media("sm") {
+    padding: 1.25rem 1.5rem;
+  }
 }
 
 .stars {
@@ -39,6 +43,10 @@
   justify-content: center;
   padding: 1.125rem 0;
 
+  @include media("sm") {
+    padding: 1.5rem 0rem;
+  }
+
   @include media("xl") {
     display: flex;
   }
@@ -49,4 +57,8 @@
   justify-content: flex-end;
   gap: 2rem;
   padding: 0.875rem 1rem;
+
+  @include media("sm") {
+    padding: 1.25rem 1.5rem;
+  }
 }

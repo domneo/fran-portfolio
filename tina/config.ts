@@ -27,6 +27,31 @@ const generateDivider = (): Template => ({
     },
   ],
 });
+const generateImageWithCaption = (): Template => ({
+  name: "imageWithCaption",
+  label: "Image With Caption",
+  fields: [
+    {
+      type: "image",
+      name: "image",
+      label: "Image",
+      required: true,
+    },
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+      description:
+        "A simple description of the image. Serves as fallback for accessibility.",
+    },
+    {
+      type: "string",
+      name: "caption",
+      label: "Caption",
+      description: "Image caption visible on the page.",
+    },
+  ],
+});
 const generateImageSlider = (): Template => ({
   name: "imageSlider",
   label: "Image Slider",
@@ -79,7 +104,7 @@ const generateOneColumnBlock = (): Template => ({
 });
 const generateTwoColumnBlock_1_1 = (): Template => ({
   name: "twoColumn_1_1",
-  label: "Two Column Content (1-1)",
+  label: "Two Column Content (1:1)",
   fields: [
     {
       type: "rich-text",
@@ -97,7 +122,7 @@ const generateTwoColumnBlock_1_1 = (): Template => ({
 });
 const generateTwoColumnBlock_1_2 = (): Template => ({
   name: "twoColumn_1_2",
-  label: "Two Column Content (1-2)",
+  label: "Two Column Content (1:2)",
   fields: [
     {
       type: "rich-text",
@@ -115,7 +140,7 @@ const generateTwoColumnBlock_1_2 = (): Template => ({
 });
 const generateThreeColumnBlock_1_1_1 = (): Template => ({
   name: "threeColumn_1_1_1",
-  label: "Three Column Content (1-1-1)",
+  label: "Three Column Content (1:1:1)",
   fields: [
     {
       type: "rich-text",
@@ -145,7 +170,8 @@ const generateSection = (): Template => ({
       type: "string",
       name: "anchorId",
       label: "Anchor ID",
-      description: "ID for anchor links",
+      description:
+        "ID for anchor links. Leave blank if you don't want the section to be included in the section links.",
       ui: {
         validate: (value: string) => {
           if (!value?.match(/^[a-zA-Z0-9_]*$/)) {
@@ -179,6 +205,7 @@ const generateSection = (): Template => ({
       templates: [
         generateSpacer(),
         generateDivider(),
+        generateImageWithCaption(),
         generateImageSlider(),
         generateOneColumnBlock(),
         generateTwoColumnBlock_1_1(),
@@ -190,6 +217,27 @@ const generateSection = (): Template => ({
   ui: {
     defaultItem: {
       showSectionTitle: true,
+    },
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
+});
+const generateSectionLinks = (): Template => ({
+  name: "section_links",
+  label: "Section Links",
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+      description: "",
+      required: true,
+    },
+  ],
+  ui: {
+    defaultItem: {
+      title: "Process",
     },
     itemProps: (item) => {
       return { label: item?.title };
@@ -496,27 +544,16 @@ const worksPostsCollection: Collection = {
       label: "Subtitle",
     },
     {
-      type: "string",
-      name: "summary",
-      label: "Summary",
-      description: '"Role"',
-    },
-    {
       type: "rich-text",
-      name: "background",
-      label: "Background",
-    },
-    {
-      type: "string",
-      name: "anchorLinksTitle",
-      label: "Anchor Links Title",
+      name: "overview",
+      label: "Overview",
     },
     {
       type: "object",
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [generateSection()],
+      templates: [generateSection(), generateSectionLinks()],
     },
   ],
   ui: {
