@@ -1,0 +1,29 @@
+@import "mixins";
+
+.container {
+  margin: 0 -1rem;
+}
+
+.slide {
+  position: relative;
+  padding: 0 1rem;
+}
+
+%customArrow {
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  margin: 0;
+  padding: 8px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.prevArrow {
+  @extend %customArrow;
+}
+
+.nextArrow {
+  @extend %customArrow;
+  transform: rotate(180deg);
+}

@@ -1,67 +1,66 @@
-import Link from "next/link";
-
-import styles from "styles/Footer.module.scss";
-
+import classNames from "classnames";
 import { BarrelLink } from "components/common/BarrelLink";
 import { Stars } from "components/common/Stars";
+import styles from "styles/Footer.module.scss";
+import {
+  GlobalContactLinks,
+  GlobalFooterCredits,
+  Maybe,
+} from "tina/__generated__/types";
 
 interface FooterProps {
-  showFooterMenu: boolean;
-  centraliseFooter: boolean;
+  contactLinks?: Maybe<Array<Maybe<GlobalContactLinks>>>;
+  footerCredits?: Maybe<Array<Maybe<GlobalFooterCredits>>>;
+  showContactLinks?: boolean;
+  inverse?: boolean;
 }
 
-export const Footer = ({ showFooterMenu, centraliseFooter }: FooterProps) => (
-  <footer
-    className={`${styles.nav} ${centraliseFooter ? styles.centralised : ""}`}
-  >
-    <div className={styles.footerStars}>
-      <div className={styles.stars}>
-        <Stars />
+export const Footer = ({
+  contactLinks,
+  footerCredits,
+  showContactLinks = true,
+  inverse,
+}: FooterProps) => (
+  <div className={styles.footer}>
+    <div className={classNames(styles.stars, { [styles.inverse]: inverse })}>
+      <Stars />
+    </div>
+    {showContactLinks && (
+      <div className={styles.contactLinks}>
+        {contactLinks?.map((link) => (
+          <div key={window.crypto.randomUUID()} className={styles.menuItem}>
+            <BarrelLink
+              className={classNames({ [styles.link]: inverse })}
+              text={link?.name.toUpperCase() || ""}
+              link={link?.url || ""}
+              target={link?.openInNewWindow ? "_blank" : "_self"}
+            />
+          </div>
+        ))}
       </div>
-    </div>
-    <div
-      className={`${styles.footerMenuLeft} ${
-        showFooterMenu ? "d-flex" : "d-none"
-      }`}
-    >
-      <nav className={styles.menu}>
+    )}
+    {showContactLinks && (
+      <div className={styles.divider}>
         <BarrelLink
-          text="RESUME"
-          link={process.env.NEXT_PUBLIC_RESUME || ""}
-          target="_blank"
+          className={classNames({ [styles.link]: inverse })}
+          text={"-"}
         />
+      </div>
+    )}
+    <div className={styles.footerCredits}>
+      {footerCredits?.map((credit) => (
         <BarrelLink
-          text="EMAIL"
-          link={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
-          target="_blank"
+          className={classNames({ [styles.link]: inverse })}
+          key={window.crypto.randomUUID()}
+          text={credit?.name.toUpperCase() || ""}
+          link={credit?.url || ""}
+          target={credit?.openInNewWindow ? "_blank" : "_self"}
         />
-        <BarrelLink
-          text="LINKEDIN"
-          link={process.env.NEXT_PUBLIC_LINKEDIN || ""}
-          target="_blank"
-        />
-      </nav>
+      ))}
+      <BarrelLink
+        className={classNames({ [styles.link]: inverse })}
+        text={`©${new Date().getFullYear()}`}
+      />
     </div>
-    <div className={styles.footerMenuRight}>
-      <nav
-        className={`${styles.menu} ${
-          centraliseFooter ? styles.centralised : ""
-        }`}
-      >
-        <span className="caption">DESIGNED BY ME!</span>
-        <span className="caption">
-          BUILT BY{" "}
-          <Link
-            href="https://www.domneo.dev"
-            className="caption"
-            target="_blank"
-          >
-            DOMN
-          </Link>
-        </span>
-
-        <span className="caption">©2022</span>
-      </nav>
-    </div>
-  </footer>
+  </div>
 );

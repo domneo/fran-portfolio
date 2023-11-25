@@ -1,13 +1,21 @@
 import classNames from "classnames";
+import { BarrelLink } from "components/common/BarrelLink";
+import Blob from "components/common/Blob";
+import { StarBlob } from "components/common/StarBlob";
 import { useEffect, useState } from "react";
-
 import styles from "styles/MobileMenu.module.scss";
+import {
+  GlobalFooterCredits,
+  GlobalMenu,
+  Maybe,
+} from "tina/__generated__/types";
+import { Footer } from "./Footer";
 
-import { BarrelLink } from "../common/BarrelLink";
-import Blob from "../common/Blob";
-import { Stars } from "../common/Stars";
-
-export const MobileMenu = () => {
+interface MobileMenuProps {
+  menu?: Maybe<Array<Maybe<GlobalMenu>>>;
+  footerCredits?: Maybe<Array<Maybe<GlobalFooterCredits>>>;
+}
+export const MobileMenu = ({ menu, footerCredits }: MobileMenuProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const buttonClass = classNames("d-sm-none", styles.menuButton, {
     [styles.menuOpen]: isMenuOpen,
@@ -28,9 +36,17 @@ export const MobileMenu = () => {
         className={buttonClass}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <div className={styles.menuButton_line} />
-        <div className={styles.menuButton_line} />
-        <div className={styles.menuButton_line} />
+        {isMenuOpen && (
+          <div className={styles.menuButton_starBlob}>
+            <StarBlob />
+          </div>
+        )}
+        {!isMenuOpen && (
+          <>
+            <div className={styles.menuButton_line} />
+            <div className={styles.menuButton_line} />
+          </>
+        )}
       </button>
       <div
         className={`${styles.drawer} ${isMenuOpen ? styles.drawerOpen : ""}`}
@@ -38,21 +54,26 @@ export const MobileMenu = () => {
         <div className={styles.blob}>
           <Blob lineCount={1} strokeWidth={0.4} />
         </div>
-        <div></div>
-        <div className="w-100">
-          <div className={styles.menuItem}>
-            <BarrelLink text="WORKS" link="/works" />
-          </div>
-          <div className={styles.menuItem}>
-            <BarrelLink text="ABOUT" link="/about" />
-          </div>
-          <div className={styles.menuItem}>
-            <BarrelLink text="CONTACT" link="/contact" />
-          </div>
+        <div className={styles.logo}>
+          <BarrelLink className={styles.link} text="FRAN" link="/" />
         </div>
-        <div className="py-3">
-          <Stars />
+        <div className={styles.menuItemGroup}>
+          {menu?.map((menuItem) => (
+            <div key={window.crypto.randomUUID()} className={styles.menuItem}>
+              <BarrelLink
+                className={styles.link}
+                text={menuItem?.name.toUpperCase() || ""}
+                link={menuItem?.url || ""}
+                target={menuItem?.openInNewWindow ? "_blank" : "_self"}
+              />
+            </div>
+          ))}
         </div>
+        <Footer
+          footerCredits={footerCredits}
+          showContactLinks={false}
+          inverse
+        />
       </div>
     </>
   );

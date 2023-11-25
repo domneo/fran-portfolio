@@ -22,10 +22,10 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12;
-$grid-gutter-width: 1.5rem;
+$grid-gutter-width: 2rem;
 $grid-row-columns: 6;
 
-$grid-spacer: 1.5rem;
+$grid-spacer: 2rem;
 $gutters: (
   0: 0,
   1: $grid-spacer * 0.25,

@@ -1,0 +1,31 @@
+@import "mixins";
+
+.header {
+  margin-top: 2rem;
+  gap: 1rem;
+
+  @include media("sm") {
+    gap: 2rem;
+  }
+}
+
+.arrowLink {
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.nextArrow,
+.prevArrow {
+  width: 48px;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.nextArrow {
+  transform: rotate(180deg);
+}

@@ -4,6 +4,9 @@ const nextConfig = {
   env: {
     PASSWORD_PROTECT: true,
   },
+  images: {
+    domains: ["assets.tina.io"],
+  },
   transpilePackages: ["@georgedoescode/spline"],
 };
 

@@ -1,22 +1,37 @@
+import classNames from "classnames";
 import Link from "next/link";
-import { v4 as uuidv4 } from "uuid";
-
 import styles from "styles/BarrelLink.module.scss";
+import { Span } from "./Span";
 
 interface BarrelLinkProps {
+  className?: string;
   text: string;
-  link: string;
+  link?: string;
   target?: string;
 }
-
-export const BarrelLink = ({ text, link, target }: BarrelLinkProps) => {
+export const BarrelLink = ({
+  className,
+  text,
+  link,
+  target,
+}: BarrelLinkProps) => {
   const charArr = text.split("");
 
+  const LinkComponent = link ? Link : Span;
+
   return (
-    <Link href={link} target={target || ""} className={styles.link}>
+    <LinkComponent
+      href={link || ""}
+      target={target || ""}
+      className={classNames(
+        styles.link,
+        { [styles.noAnimate]: !link },
+        className
+      )}
+    >
       {charArr.map((char, i) => (
         <div
-          key={uuidv4()}
+          key={window.crypto.randomUUID()}
           className={styles.charGroup}
           style={{ animationDelay: `${0.05 * i}s` }}
         >
@@ -24,6 +39,6 @@ export const BarrelLink = ({ text, link, target }: BarrelLinkProps) => {
           <span>{char}</span>
         </div>
       ))}
-    </Link>
+    </LinkComponent>
   );
 };

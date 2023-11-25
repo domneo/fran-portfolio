@@ -1,5 +1,15 @@
 @import "mixins";
 
+.spacer {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: -0.5rem;
+
+  @include media("sm") {
+    display: none;
+  }
+}
+
 .nav {
   position: sticky;
   top: 0;
@@ -9,22 +19,46 @@
   align-items: center;
   justify-content: space-between;
   z-index: 900;
+  padding: 0 0.5rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1rem;
 
   @include media("sm") {
-    padding: 1.5rem 2.5rem;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.125rem 0;
+
+  @include media("sm") {
+    padding: 1.5rem 0rem;
+  }
+
+  @include media("xl") {
+    display: flex;
   }
 }
 
 .menu {
   align-items: center;
   justify-content: flex-end;
-  gap: 3rem;
-  padding: 1.5rem 2.5rem;
+  gap: 2rem;
+  padding: 0.875rem 1rem;
+
+  @include media("sm") {
+    padding: 1.25rem 1.5rem;
+  }
 }
