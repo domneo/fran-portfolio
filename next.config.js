@@ -2,10 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    PASSWORD_PROTECT: true,
+    PASSWORD_PROTECT: "true",
   },
   images: {
-    domains: ["assets.tina.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.tina.io",
+      },
+    ],
   },
   transpilePackages: ["@georgedoescode/spline"],
 };
