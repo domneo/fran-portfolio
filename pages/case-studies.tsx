@@ -39,7 +39,9 @@ export default function CaseStudies({
     <Layout data={globalData} showQuickActions={false}>
       <div className="container-xxl">
         <div className="row justify-content-center">
-          <div className={`${styles.body} col-lg-7 col-max-6`}>
+          <div
+            className={`${styles.body} d-flex flex-column justify-content-center col-lg-7 col-max-6`}
+          >
             <div className={styles.header}>
               <h1>{title}</h1>
             </div>
@@ -107,7 +109,7 @@ export default function CaseStudies({
                 })}
             </div>
           </div>
-          <div className="col-lg-5 col-max-4">
+          <div className={`${styles.images} col-lg-5 col-max-4`}>
             <div className={styles.stickyImages}>
               {postList &&
                 postList.length > 0 &&
