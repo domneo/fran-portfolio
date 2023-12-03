@@ -174,7 +174,7 @@ const generateSection = (): Template => ({
         "ID for anchor links. Leave blank if you don't want the section to be included in the section links.",
       ui: {
         validate: (value: string) => {
-          if (!value?.match(/^[a-zA-Z0-9_]*$/)) {
+          if (value && !value?.match(/^[a-zA-Z0-9_]*$/)) {
             return "Only alphanumeric characters and underscores allowed.";
           }
         },
