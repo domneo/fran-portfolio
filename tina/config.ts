@@ -677,27 +677,16 @@ const caseStudiesPostsCollection: Collection = {
       label: "Subtitle",
     },
     {
-      type: "string",
-      name: "summary",
-      label: "Summary",
-      description: '"Role"',
-    },
-    {
       type: "rich-text",
-      name: "background",
-      label: "Background",
-    },
-    {
-      type: "string",
-      name: "anchorLinksTitle",
-      label: "Anchor Links Title",
+      name: "overview",
+      label: "Overview",
     },
     {
       type: "object",
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [generateSection()],
+      templates: [generateSection(), generateSectionLinks()],
     },
   ],
   ui: {
