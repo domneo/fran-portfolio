@@ -30,13 +30,6 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-padding-left: 1rem;
-  -webkit-overflow-scrolling: touch;
-
-  @include media("lg") {
-    display: block;
-    margin: 0;
-    overflow: auto;
-  }
 }
 
 .carousel::-webkit-scrollbar {
@@ -95,14 +88,16 @@
   }
 }
 
-.numberOverlay {
-  background: rgba(51, 51, 51, 0.3);
-  position: absolute;
-  display: flex;
-  align-items: flex-end;
+.sliderImages {
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 1rem;
+}
+
+.sliderImage {
+  position: relative;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
 .number {
@@ -132,22 +127,6 @@
   @include media("xl") {
     padding-left: 2rem;
   }
-}
-
-.sliderImages {
-  width: 100%;
-  height: 50vh;
-  margin-bottom: 1rem;
-
-  @include media("lg") {
-    display: none;
-  }
-}
-
-.sliderImage {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .stickyImages {
