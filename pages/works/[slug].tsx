@@ -144,12 +144,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     nextPost = await client.request({
       query,
       variables: {
+        first: 1,
         after: currentPost.data.works_postsConnection.edges[0].cursor,
       },
     });
     prevPost = await client.request({
       query,
       variables: {
+        last: 1,
         before: currentPost.data.works_postsConnection.edges[0].cursor,
       },
     });
