@@ -35,7 +35,7 @@ const Layout = ({
       <Head>
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
-        <link rel="icon" href="/images/favicon.svg" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <Header menu={menu} footerCredits={footerCredits} />
       <main {...props}>{children}</main>
