@@ -1,9 +1,14 @@
 @import "mixins";
 
-.titleWrapper {
-  width: 100%;
-  overflow: hidden;
+.container {
   display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  overflow: hidden;
+  max-width: 1190px;
+  height: 100%;
   margin-top: -5vh;
 
   @include media("sm") {
@@ -13,6 +18,16 @@
   @include media("md") {
     margin-top: -20vh;
   }
+
+  @include media("xl") {
+    overflow: visible;
+    margin-top: -10vh;
+  }
+}
+
+.titleWrapper {
+  width: 100%;
+  display: flex;
 }
 
 .title {
@@ -20,7 +35,7 @@
   margin-left: -4vw;
   font-family: "Ogg", sans-serif;
   font-size: 9vw;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.03em;
 
@@ -35,8 +50,8 @@
   }
 
   @include media("xl") {
-    margin-left: -1vw;
-    font-size: 4.5vw;
+    margin-left: 0;
+    font-size: 60px;
   }
 }
 
