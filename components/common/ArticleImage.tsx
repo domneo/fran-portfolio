@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
 
 import styles from "styles/ArticleImage.module.scss";
@@ -13,6 +13,15 @@ export interface ArticleImageProps {
 }
 export const ArticleImage = (props: ArticleImageProps) => {
   const [isZoomedIn, setIsZoomedIn] = useState(false);
+
+  useEffect(() => {
+    const bodyClass = document.body.classList;
+    if (isZoomedIn) {
+      bodyClass.add("scroll-lock");
+    } else {
+      bodyClass.remove("scroll-lock");
+    }
+  }, [isZoomedIn]);
 
   return (
     <>
