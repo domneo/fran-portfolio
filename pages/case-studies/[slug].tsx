@@ -87,12 +87,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             ... on CaseStudies_postsSectionsSectionBlocksDivider {
               label
             }
+            ... on CaseStudies_postsSectionsSectionBlocksImageWithCaption {
+              image
+              title
+              caption
+              enableZoom
+            }
             ... on CaseStudies_postsSectionsSectionBlocksImageSlider {
               slides {
                 __typename
                 image
                 title
                 caption
+                enableZoom
               }
             }
             ... on CaseStudies_postsSectionsSectionBlocksOneColumn {
@@ -232,6 +239,7 @@ export default function CaseStudiesPost({
                                   image={block.image}
                                   title={block.title}
                                   caption={block.caption}
+                                  enableZoom={block.enableZoom}
                                 />
                               );
                             }

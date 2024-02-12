@@ -50,6 +50,12 @@ const generateImageWithCaption = (): Template => ({
       label: "Caption",
       description: "Image caption visible on the page.",
     },
+    {
+      type: "boolean",
+      name: "enableZoom",
+      label: "Enable Zoom",
+      description: "Enabling zoom will show a zoom button for the image.",
+    },
   ],
 });
 const generateImageSlider = (): Template => ({
@@ -80,6 +86,12 @@ const generateImageSlider = (): Template => ({
           name: "caption",
           label: "Caption",
           description: "Image caption visible on the page.",
+        },
+        {
+          type: "boolean",
+          name: "enableZoom",
+          label: "Enable Zoom",
+          description: "Enabling zoom will show a zoom button for the image.",
         },
       ],
       ui: {
