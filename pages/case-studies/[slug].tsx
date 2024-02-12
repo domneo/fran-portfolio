@@ -1,4 +1,5 @@
 import Layout from "components/Layout";
+import { AnchorLink } from "components/common/AnchorLink";
 import { Divider } from "components/common/Divider";
 import { ImageSlider } from "components/common/ImageSlider";
 import { ImageWithCaption } from "components/common/ImageWithCaption";
@@ -314,12 +315,12 @@ export default function CaseStudiesPost({
                             ) {
                               return (
                                 <p key={window.crypto.randomUUID()}>
-                                  <a
-                                    href={`#${section.anchorId || ""}`}
-                                    title={section.title || ""}
+                                  <AnchorLink
+                                    anchorId={`#${section.anchorId || ""}`}
+                                    title={section.title}
                                   >
                                     {section.title}
-                                  </a>
+                                  </AnchorLink>
                                 </p>
                               );
                             }
