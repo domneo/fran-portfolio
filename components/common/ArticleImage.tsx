@@ -1,17 +1,17 @@
 import { useState } from "react";
 import Modal from "react-modal";
 
-import styles from "styles/ImageWithCaption.module.scss";
+import styles from "styles/ArticleImage.module.scss";
 import { ZoomButton } from "./ZoomButton";
 import { CloseButton } from "./CloseButton";
 
-export interface ImageWithCaptionProps {
+export interface ArticleImageProps {
   image: string;
   title?: string | null;
   caption?: string | null;
   enableZoom?: boolean | null;
 }
-export const ImageWithCaption = (props: ImageWithCaptionProps) => {
+export const ArticleImage = (props: ArticleImageProps) => {
   const [isZoomedIn, setIsZoomedIn] = useState(false);
 
   return (

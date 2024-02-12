@@ -2,7 +2,7 @@ import Layout from "components/Layout";
 import { AnchorLink } from "components/common/AnchorLink";
 import { Divider } from "components/common/Divider";
 import { ImageSlider } from "components/common/ImageSlider";
-import { ImageWithCaption } from "components/common/ImageWithCaption";
+import { ArticleImage } from "components/common/ArticleImage";
 import { Spacer } from "components/common/Spacer";
 import { ThreeColumn111 } from "components/common/ThreeColumn111";
 import { TwoColumn11 } from "components/common/TwoColumn11";
@@ -232,7 +232,7 @@ export default function WorksPost({
                           case "Works_postsSectionsSectionBlocksImageWithCaption":
                             if (block.image) {
                               blockComponent = (
-                                <ImageWithCaption
+                                <ArticleImage
                                   image={block.image}
                                   title={block.title}
                                   caption={block.caption}

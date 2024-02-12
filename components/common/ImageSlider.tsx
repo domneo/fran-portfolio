@@ -4,7 +4,7 @@ import Slider, { CustomArrowProps, Settings } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import styles from "styles/ImageSlider.module.scss";
-import { ImageWithCaption, ImageWithCaptionProps } from "./ImageWithCaption";
+import { ArticleImage, ArticleImageProps } from "./ArticleImage";
 
 const CustomArrow = ({ className, onClick }: CustomArrowProps) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -29,7 +29,7 @@ const NextArrow = ({ onClick }: CustomArrowProps) => {
 };
 
 interface ImageSliderProps {
-  images?: (ImageWithCaptionProps | null)[];
+  images?: (ArticleImageProps | null)[];
 }
 export class ImageSlider extends Component<ImageSliderProps> {
   constructor(props: ImageSliderProps) {
@@ -72,7 +72,7 @@ export class ImageSlider extends Component<ImageSliderProps> {
             if (image) {
               return (
                 <div key={window.crypto.randomUUID()} className={styles.slide}>
-                  <ImageWithCaption {...image} />
+                  <ArticleImage {...image} />
                 </div>
               );
             }
