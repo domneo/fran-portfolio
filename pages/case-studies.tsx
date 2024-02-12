@@ -66,7 +66,7 @@ export default function CaseStudies({
   };
 
   return (
-    <Layout data={globalData} showQuickActions={false}>
+    <Layout data={globalData} showFloatingActions={false}>
       <div className="container-xxl">
         <div className="row justify-content-center">
           <div

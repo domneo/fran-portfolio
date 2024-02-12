@@ -24,13 +24,13 @@ const ArrowButton = ({ target = "top" }: ArrowButtonProps) => {
         color: "var(--white)",
         background: "var(--black)",
         border: "none",
-        borderTopLeftRadius: "42px",
-        borderBottomLeftRadius: "42px",
+        borderTopLeftRadius: "24px",
+        borderBottomLeftRadius: "24px",
         borderTopRightRadius: "0",
         borderBottomRightRadius: "0",
-        paddingLeft: "2.25rem",
-        paddingRight: "1.5rem",
-        height: "80px",
+        paddingLeft: "20px",
+        paddingRight: "13px",
+        height: "48px",
         cursor: "pointer",
         transform: transformTargetMap[target],
       }}
@@ -43,7 +43,7 @@ const ArrowButton = ({ target = "top" }: ArrowButtonProps) => {
   );
 };
 
-export const QuickActions = () => (
+export const FloatingActions = () => (
   <div
     className="d-flex align-items-end"
     style={{ position: "fixed", bottom: "5.5rem", right: "2.5rem" }}

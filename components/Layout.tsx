@@ -4,13 +4,13 @@ import styles from "styles/Layout.module.scss";
 import { GlobalQuery } from "tina/__generated__/types";
 import { Footer } from "./layout/Footer";
 import { Header } from "./layout/Header";
-import { QuickActions } from "./layout/QuickActions";
+import { FloatingActions } from "./layout/FloatingActions";
 
 interface LayoutProps {
   data: GlobalQuery;
   darkMode?: boolean;
   showContactLinks?: boolean;
-  showQuickActions?: boolean;
+  showFloatingActions?: boolean;
   children: React.ReactNode;
   [index: string]: any;
 }
@@ -19,7 +19,7 @@ const Layout = ({
   data,
   darkMode,
   showContactLinks = true,
-  showQuickActions = true,
+  showFloatingActions = true,
   children,
   ...props
 }: LayoutProps) => {
@@ -44,7 +44,7 @@ const Layout = ({
         footerCredits={footerCredits}
         showContactLinks={showContactLinks}
       />
-      {showQuickActions && <QuickActions />}
+      {showFloatingActions && <FloatingActions />}
     </div>
   );
 };

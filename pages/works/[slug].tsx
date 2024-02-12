@@ -185,7 +185,7 @@ export default function WorksPost({
   const { title, subtitle, overview, sections } = worksPostData.works_posts;
 
   return (
-    <Layout data={globalData} showQuickActions={false}>
+    <Layout data={globalData} showFloatingActions={true}>
       <div className="container-xxl">
         <div className={`${styles.header} row justify-content-center`}>
           <div className="col-lg-10">

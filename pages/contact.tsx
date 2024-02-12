@@ -34,7 +34,7 @@ export default function Contact({
     <Layout
       data={globalData}
       darkMode={darkMode}
-      showQuickActions={false}
+      showFloatingActions={false}
       showContactLinks={false}
     >
       <div className={styles.container}>

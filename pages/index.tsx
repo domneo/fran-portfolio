@@ -67,7 +67,7 @@ export default function Home({
   );
 
   return (
-    <Layout data={globalData} showQuickActions={false}>
+    <Layout data={globalData} showFloatingActions={false}>
       <section className={styles.section}>
         <div className="container">
           <div className="row justify-content-center">
