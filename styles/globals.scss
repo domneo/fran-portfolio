@@ -17,7 +17,8 @@
 
 @font-face {
   font-family: "Ogg";
-  src: url("/fonts/OggRegular.woff2") format("woff2"),
+  src:
+    url("/fonts/OggRegular.woff2") format("woff2"),
     url("/fonts/OggRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -26,7 +27,8 @@
 
 @font-face {
   font-family: "Ogg";
-  src: url("/fonts/OggMedium.woff2") format("woff2"),
+  src:
+    url("/fonts/OggMedium.woff2") format("woff2"),
     url("/fonts/OggMedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -35,7 +37,8 @@
 
 @font-face {
   font-family: "Ogg";
-  src: url("/fonts/OggBold.woff2") format("woff2"),
+  src:
+    url("/fonts/OggBold.woff2") format("woff2"),
     url("/fonts/OggBold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -189,14 +192,14 @@ small,
 
 a,
 .link {
-  color: var(--black);
-  text-decoration: none;
+  color: var(--rosetaupe);
+  text-decoration: underline;
   border-radius: 0.25rem;
   transition: 0.3s font-weight;
 
   &:hover,
   &:focus {
-    color: var(--rosetaupe);
+    color: var(--wenge);
     text-decoration: underline;
   }
 }
