@@ -28,7 +28,7 @@ export default function Contact({
   const { data: globalData } = useTina<GlobalQuery>(global);
   const contactLinks = globalData.global.contactLinks;
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <Layout
