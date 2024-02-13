@@ -5,6 +5,8 @@ import styles from "styles/ArticleImage.module.scss";
 import { ZoomButton } from "./ZoomButton";
 import { CloseButton } from "./CloseButton";
 
+Modal.setAppElement("#__next");
+
 export interface ArticleImageProps {
   image: string;
   title?: string | null;
