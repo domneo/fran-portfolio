@@ -223,6 +223,11 @@ p,
 
 li {
   margin-bottom: 0.5rem;
+
+  & > ol,
+  & > ul {
+    margin-top: 0.5rem;
+  }
 }
 
 .bg-trueblack {
