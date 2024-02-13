@@ -59,11 +59,11 @@ export default function Home({
       <Link
         key={window.crypto.randomUUID()}
         href={"/contact"}
-        className="text-wenge"
+        className={styles.kopi}
       >
         {match}
       </Link>
-    )
+    ),
   );
 
   return (

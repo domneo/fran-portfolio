@@ -48,8 +48,7 @@ export default function Contact({
               <div>
                 CONTACT{" "}
                 <button
-                  className="bg-transparent border-0 p-0 m-0 rounded-4 text-wenge"
-                  style={{ cursor: "pointer" }}
+                  className={styles.contactButton}
                   onClick={() => setDarkMode(!darkMode)}
                 >
                   CONTACT

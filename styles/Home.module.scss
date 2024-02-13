@@ -34,6 +34,15 @@
   background-color: var(--black);
 }
 
+.kopi {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 .aboutBody {
   padding-top: 2rem;
 }
