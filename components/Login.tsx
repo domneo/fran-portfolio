@@ -21,7 +21,7 @@ export const LoginComponent = ({ apiUrl }: LoginComponentProps) => {
 
     try {
       const form = document.querySelector(
-        "#password-form form"
+        "#password-form form",
       ) as HTMLFormElement;
 
       const formData = new FormData(form);
@@ -90,17 +90,6 @@ export const LoginComponent = ({ apiUrl }: LoginComponentProps) => {
               box-sizing: border-box;
             }
 
-            .link {
-              font-style: normal;
-              text-decoration: none;
-              color: #f4f0f0;
-              transition: color 0.2s ease-out;
-            }
-
-            .link:hover, .link:focus {
-              color: #eaeae7;
-            }
-
             #password-form {
               padding: 40px;
             }
@@ -112,12 +101,12 @@ export const LoginComponent = ({ apiUrl }: LoginComponentProps) => {
             }
 
             #password-form .invalid {
-              border-color: #c49797 !important;
+              border-color: var(--wenge) !important;
               animation: shake .4s linear;
             }
 
             #password-form .error {
-              color: #c49797;
+              color: var(--wenge);
               margin-top: 12px;
               font-size: 18px;
             }
@@ -161,6 +150,18 @@ export const LoginComponent = ({ apiUrl }: LoginComponentProps) => {
             onSubmit={onSubmit}
             style={{ display: "flex", flexDirection: "column", width: "100%" }}
           >
+            <p style={{ color: "var(--white)" }}>
+              Password can be found on the top section of my resume. Otherwise,
+              please reach out to me via{" "}
+              <a
+                href="https://www.linkedin.com/in/francine-lim/"
+                target="_blank"
+                title="LinkedIn"
+              >
+                LinkedIn
+              </a>
+              !
+            </p>
             <input
               className={error ? "invalid" : ""}
               name="password"
@@ -171,10 +172,10 @@ export const LoginComponent = ({ apiUrl }: LoginComponentProps) => {
               style={{
                 background: "transparent",
                 border: "none",
-                borderBottom: "2px solid #f4f0f0",
+                borderBottom: "2px solid var(--white)",
                 padding: "0 16px",
                 fontSize: "20px",
-                color: "#f4f0f0",
+                color: "var(--white)",
                 height: "48px",
               }}
             />
@@ -191,10 +192,10 @@ export const LoginComponent = ({ apiUrl }: LoginComponentProps) => {
                 appearance: "none",
                 background: "transparent",
                 borderRadius: "52px",
-                border: "2px solid #f4f0f0",
+                border: "2px solid var(--white)",
                 padding: "12px 32px",
                 fontSize: "20px",
-                color: "#f4f0f0",
+                color: "var(--white)",
                 marginTop: "32px",
                 cursor: "pointer",
                 textAlign: "center",
