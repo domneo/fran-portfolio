@@ -1,15 +1,15 @@
-@import "../mixins";
+@use "../mixins";
 
 .title {
   position: sticky;
   top: 3rem;
   z-index: 1;
 
-  @include media("sm") {
+  @include mixins.media("sm") {
     top: 4rem;
   }
 
-  @include media("lg") {
+  @include mixins.media("lg") {
     top: 5rem;
     margin-left: -2rem;
   }

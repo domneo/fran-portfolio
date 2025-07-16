@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 .menuButton {
   display: flex;
@@ -51,7 +51,7 @@
   pointer-events: none;
   transition: 0.3s opacity;
 
-  @include media("sm") {
+  @include mixins.media("sm") {
     display: none;
   }
 }

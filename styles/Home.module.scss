@@ -1,29 +1,29 @@
-@import "mixins";
+@use "mixins";
 
 .section {
   margin: 2rem auto;
 }
-@include media("sm") {
+@include mixins.media("sm") {
   .section {
     margin: 3rem auto;
   }
 }
-@include media("md") {
+@include mixins.media("md") {
   .section {
     margin: 4rem auto;
   }
 }
-@include media("lg") {
+@include mixins.media("lg") {
   .section {
     margin: 5rem auto;
   }
 }
-@include media("xl") {
+@include mixins.media("xl") {
   .section {
     margin: 6rem auto;
   }
 }
-@include media("xxl") {
+@include mixins.media("xxl") {
   .section {
     margin: 7rem auto;
   }
@@ -46,23 +46,23 @@
 .aboutBody {
   padding-top: 2rem;
 }
-@include media("md") {
+@include mixins.media("md") {
   .aboutBody {
     padding-top: 3rem;
   }
 }
-@include media("lg") {
+@include mixins.media("lg") {
   .aboutBody {
     padding-top: 0rem;
     padding-left: 3rem;
   }
 }
-@include media("xl") {
+@include mixins.media("xl") {
   .aboutBody {
     padding-left: 4rem;
   }
 }
-@include media("xxl") {
+@include mixins.media("xxl") {
   .aboutBody {
     padding-left: 5rem;
   }

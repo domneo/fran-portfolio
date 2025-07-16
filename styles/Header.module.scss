@@ -1,11 +1,11 @@
-@import "mixins";
+@use "mixins";
 
 .spacer {
   width: 3.5rem;
   height: 3.5rem;
   margin-left: -0.5rem;
 
-  @include media("sm") {
+  @include mixins.media("sm") {
     display: none;
   }
 }
@@ -28,7 +28,7 @@
   justify-content: center;
   padding: 0.875rem 1rem;
 
-  @include media("sm") {
+  @include mixins.media("sm") {
     padding: 1.25rem 1.5rem;
   }
 }
@@ -43,11 +43,11 @@
   justify-content: center;
   padding: 1.125rem 0;
 
-  @include media("sm") {
+  @include mixins.media("sm") {
     padding: 1.5rem 0rem;
   }
 
-  @include media("xl") {
+  @include mixins.media("xl") {
     display: flex;
   }
 }
@@ -58,7 +58,7 @@
   gap: 2rem;
   padding: 0.875rem 1rem;
 
-  @include media("sm") {
+  @include mixins.media("sm") {
     padding: 1.25rem 1.5rem;
   }
 }

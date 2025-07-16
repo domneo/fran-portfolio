@@ -1,5 +1,9 @@
-@import "variables";
-@import "rfs";
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "variables";
+@use "rfs";
 
 /// Mixin to manage responsive breakpoints
 /// @author Kitty Giraudel
@@ -7,9 +11,9 @@
 /// @require $breakpoints
 @mixin media($breakpoint) {
   // If the key exists in the map
-  @if map-has-key($grid-breakpoints, $breakpoint) {
+  @if map.has-key(variables.$grid-breakpoints, $breakpoint) {
     // Prints a media query based on the value
-    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+    @media (min-width: map.get(variables.$grid-breakpoints, $breakpoint)) {
       @content;
     }
   }
@@ -17,7 +21,7 @@
   // If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($grid-breakpoints)}.";
+        + "Available breakpoints are: #{map.keys(variables.$grid-breakpoints)}.";
   }
 }
 
@@ -39,16 +43,16 @@
 //    md
 @function breakpoint-next(
   $name,
-  $breakpoints: $grid-breakpoints,
-  $breakpoint-names: map-keys($breakpoints)
+  $breakpoints: variables.$grid-breakpoints,
+  $breakpoint-names: map.keys($breakpoints)
 ) {
-  $n: index($breakpoint-names, $name);
+  $n: list.index($breakpoint-names, $name);
   @if not $n {
     @error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
   }
   @return if(
-    $n < length($breakpoint-names),
-    nth($breakpoint-names, $n + 1),
+    $n < list.length($breakpoint-names),
+    list.nth($breakpoint-names, $n + 1),
     null
   );
 }
@@ -57,8 +61,8 @@
 //
 //    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    576px
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
+@function breakpoint-min($name, $breakpoints: variables.$grid-breakpoints) {
+  $min: map.get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
@@ -71,8 +75,8 @@
 //
 //    >> breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    767.98px
-@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $max: map-get($breakpoints, $name);
+@function breakpoint-max($name, $breakpoints: variables.$grid-breakpoints) {
+  $max: map.get($breakpoints, $name);
   @return if($max and $max > 0, $max - 0.02, null);
 }
 
@@ -83,13 +87,13 @@
 //    ""  (Returns a blank string)
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    "-sm"
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+@function breakpoint-infix($name, $breakpoints: variables.$grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+@mixin media-breakpoint-up($name, $breakpoints: variables.$grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
@@ -102,7 +106,7 @@
 
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 // Makes the @content apply to the given breakpoint and narrower.
-@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+@mixin media-breakpoint-down($name, $breakpoints: variables.$grid-breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
   @if $max {
     @media (max-width: $max) {
@@ -118,7 +122,7 @@
 @mixin media-breakpoint-between(
   $lower,
   $upper,
-  $breakpoints: $grid-breakpoints
+  $breakpoints: variables.$grid-breakpoints
 ) {
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
@@ -141,7 +145,7 @@
 // Media between the breakpoint's minimum and maximum widths.
 // No minimum for the smallest breakpoint, and no maximum for the largest one.
 // Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
-@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+@mixin media-breakpoint-only($name, $breakpoints: variables.$grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   $next: breakpoint-next($name, $breakpoints);
   $max: breakpoint-max($next);
@@ -173,7 +177,7 @@
 //
 // Generate semantic grid columns with these mixins.
 
-@mixin make-row($gutter: $grid-gutter-width) {
+@mixin make-row($gutter: variables.$grid-gutter-width) {
   --gutter-x: #{$gutter};
   --gutter-y: 0;
   display: flex;
@@ -190,10 +194,11 @@
   ); // stylelint-disable-line function-disallowed-list
 }
 
-@mixin make-col-ready($gutter: $grid-gutter-width) {
+@mixin make-col-ready($gutter: variables.$grid-gutter-width) {
   // Add box sizing if only the grid is loaded
   box-sizing: if(
-    variable-exists(include-column-box-sizing) and $include-column-box-sizing,
+    meta.variable-exists(include-column-box-sizing) and
+      $include-column-box-sizing,
     border-box,
     null
   );
@@ -212,10 +217,10 @@
   margin-top: var(--gutter-y);
 }
 
-@mixin make-col($size: false, $columns: $grid-columns) {
+@mixin make-col($size: false, $columns: variables.$grid-columns) {
   @if $size {
     flex: 0 0 auto;
-    width: percentage(divide($size, $columns));
+    width: math.percentage(rfs.divide($size, $columns));
   } @else {
     flex: 1 1 0;
     max-width: 100%;
@@ -227,9 +232,9 @@
   width: auto;
 }
 
-@mixin make-col-offset($size, $columns: $grid-columns) {
-  $num: divide($size, $columns);
-  margin-left: if($num == 0, 0, percentage($num));
+@mixin make-col-offset($size, $columns: variables.$grid-columns) {
+  $num: rfs.divide($size, $columns);
+  margin-left: if($num == 0, 0, math.percentage($num));
 }
 
 // Row columns
@@ -240,7 +245,7 @@
 @mixin row-cols($count) {
   > * {
     flex: 0 0 auto;
-    width: divide(100%, $count);
+    width: rfs.divide(100%, $count);
   }
 }
 
@@ -250,11 +255,11 @@
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns(
-  $columns: $grid-columns,
-  $gutter: $grid-gutter-width,
-  $breakpoints: $grid-breakpoints
+  $columns: variables.$grid-columns,
+  $gutter: variables.$grid-gutter-width,
+  $breakpoints: variables.$grid-breakpoints
 ) {
-  @each $breakpoint in map-keys($breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
@@ -267,8 +272,8 @@
         @include make-col-auto();
       }
 
-      @if $grid-row-columns > 0 {
-        @for $i from 1 through $grid-row-columns {
+      @if variables.$grid-row-columns > 0 {
+        @for $i from 1 through variables.$grid-row-columns {
           .row-cols#{$infix}-#{$i} {
             @include row-cols($i);
           }
@@ -300,7 +305,7 @@
       // Gutters
       //
       // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
-      @each $key, $value in $gutters {
+      @each $key, $value in variables.$gutters {
         .g#{$infix}-#{$key},
         .gx#{$infix}-#{$key} {
           --gutter-x: #{$value};
@@ -315,8 +320,11 @@
   }
 }
 
-@mixin make-cssgrid($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
-  @each $breakpoint in map-keys($breakpoints) {
+@mixin make-cssgrid(
+  $columns: variables.$grid-columns,
+  $breakpoints: variables.$grid-breakpoints
+) {
+  @each $breakpoint in map.keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {

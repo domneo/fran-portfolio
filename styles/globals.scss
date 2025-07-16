@@ -1,5 +1,7 @@
-@import "mixins";
-@import "reset";
+@use "mixins";
+@use "reset";
+@use "rfs";
+@use "variables";
 
 :root {
   --trueblack: #000000;
@@ -59,7 +61,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  @include font-size(16px);
+  @include rfs.font-size(16px);
   font-weight: 400;
   line-height: 1.75;
   background-color: var(--white);
@@ -83,14 +85,14 @@ body {
 h1,
 .h1 {
   @extend %heading;
-  @include font-size(60px);
+  @include rfs.font-size(60px);
   font-family: "Ogg", sans-serif;
 }
 
 h2,
 .h2 {
   @extend %heading;
-  @include font-size(26px);
+  @include rfs.font-size(26px);
   font-family: "Ogg", sans-serif;
   font-weight: 500;
 }
@@ -98,7 +100,7 @@ h2,
 h3,
 .h3 {
   @extend %heading;
-  @include font-size(16px);
+  @include rfs.font-size(16px);
   font-family: "Inter", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -107,7 +109,7 @@ h3,
 h4,
 .h4 {
   @extend %heading;
-  @include font-size(16px);
+  @include rfs.font-size(16px);
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
@@ -139,7 +141,7 @@ p,
 .paragraph {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  @include font-size(16px);
+  @include rfs.font-size(16px);
 
   &:last-child {
     margin-bottom: 0;
@@ -174,16 +176,16 @@ strong,
 }
 
 .caption {
-  @include font-size(14px);
+  @include rfs.font-size(14px);
 }
 
 .caption-all * {
-  @include font-size(14px);
+  @include rfs.font-size(14px);
 }
 
 small,
 .small {
-  @include font-size(12px);
+  @include rfs.font-size(12px);
 }
 
 .allcaps {
@@ -291,37 +293,37 @@ li {
 
 .spacer-sm {
   height: 1rem;
-  @include media("md") {
+  @include mixins.media("md") {
     height: 1.5rem;
   }
-  @include media("xl") {
+  @include mixins.media("xl") {
     height: 2rem;
   }
 }
 .spacer-md {
   height: 3rem;
-  @include media("md") {
+  @include mixins.media("md") {
     height: 3.5rem;
   }
-  @include media("xl") {
+  @include mixins.media("xl") {
     height: 4rem;
   }
 }
 .spacer-lg {
   height: 4rem;
-  @include media("md") {
+  @include mixins.media("md") {
     height: 5rem;
   }
-  @include media("xl") {
+  @include mixins.media("xl") {
     height: 6rem;
   }
 }
 .spacer-xl {
   height: 6rem;
-  @include media("md") {
+  @include mixins.media("md") {
     height: 7rem;
   }
-  @include media("xl") {
+  @include mixins.media("xl") {
     height: 8rem;
   }
 }
@@ -339,16 +341,19 @@ li {
 .container,
 // 100% wide container at all breakpoints
 .container-fluid {
-  @include make-container();
+  @include mixins.make-container();
 }
 
 // Responsive containers that are 100% wide until a breakpoint
-@each $breakpoint, $container-max-width in $container-max-widths {
+@each $breakpoint, $container-max-width in variables.$container-max-widths {
   .container-#{$breakpoint} {
     @extend .container-fluid;
   }
 
-  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+  @include mixins.media-breakpoint-up(
+    $breakpoint,
+    variables.$grid-breakpoints
+  ) {
     %responsive-container-#{$breakpoint} {
       max-width: $container-max-width;
     }
@@ -356,9 +361,9 @@ li {
     // Extend each breakpoint which is smaller or equal to the current breakpoint
     $extend-breakpoint: true;
 
-    @each $name, $width in $grid-breakpoints {
+    @each $name, $width in variables.$grid-breakpoints {
       @if ($extend-breakpoint) {
-        .container#{breakpoint-infix($name, $grid-breakpoints)} {
+        .container#{mixins.breakpoint-infix($name, variables.$grid-breakpoints)} {
           @extend %responsive-container-#{$breakpoint};
         }
 
@@ -376,27 +381,30 @@ li {
 // Rows contain your columns.
 
 .row {
-  @include make-row();
+  @include mixins.make-row();
 
   > * {
-    @include make-col-ready();
+    @include mixins.make-col-ready();
   }
 }
 
 .grid {
   display: grid;
   grid-template-rows: repeat(var(--rows, 1), 1fr);
-  grid-template-columns: repeat(var(--columns, #{$grid-columns}), 1fr);
-  gap: var(--gap, #{$grid-gutter-width});
+  grid-template-columns: repeat(
+    var(--columns, #{variables.$grid-columns}),
+    1fr
+  );
+  gap: var(--gap, #{variables.$grid-gutter-width});
 
-  @include make-cssgrid();
+  @include mixins.make-cssgrid();
 }
 
 // Columns
 //
 // Common styles for small and large grid columns
 
-@include make-grid-columns();
+@include mixins.make-grid-columns();
 
 .contact-cta {
   color: var(--white);
