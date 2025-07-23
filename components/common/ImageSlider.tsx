@@ -67,8 +67,13 @@ export class ImageSlider extends Component<ImageSliderProps> {
 
     return (
       <div className={styles.container}>
-        <Slider ref={(c) => (this.slider = c)} {...settings}>
-          {images?.map((image) => {
+        <Slider
+          ref={(c) => {
+            this.slider = c;
+          }}
+          {...settings}
+        >
+          {images?.map((image, idx) => {
             if (image) {
               return (
                 <div key={window.crypto.randomUUID()} className={styles.slide}>
