@@ -139,30 +139,39 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     caseStudiesPost = await client.queries.caseStudies_posts({
       relativePath: `${params?.slug}.mdx`,
     });
-    currentPost = await client.request({
-      query,
-      variables: {
-        filter: {
-          title: {
-            eq: caseStudiesPost.data.caseStudies_posts.title,
+    currentPost = await client.request(
+      {
+        query,
+        variables: {
+          filter: {
+            title: {
+              eq: caseStudiesPost.data.caseStudies_posts.title,
+            },
           },
         },
       },
-    });
-    nextPost = await client.request({
-      query,
-      variables: {
-        first: 1,
-        after: currentPost.data.caseStudies_postsConnection.edges[0].cursor,
+      {},
+    );
+    nextPost = await client.request(
+      {
+        query,
+        variables: {
+          first: 1,
+          after: currentPost.data.caseStudies_postsConnection.edges[0].cursor,
+        },
       },
-    });
-    prevPost = await client.request({
-      query,
-      variables: {
-        last: 1,
-        before: currentPost.data.caseStudies_postsConnection.edges[0].cursor,
+      {},
+    );
+    prevPost = await client.request(
+      {
+        query,
+        variables: {
+          last: 1,
+          before: currentPost.data.caseStudies_postsConnection.edges[0].cursor,
+        },
       },
-    });
+      {},
+    );
   } catch {
     // swallow errors related to document creation
   }
