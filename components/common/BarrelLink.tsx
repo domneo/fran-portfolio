@@ -8,12 +8,14 @@ interface BarrelLinkProps {
   text: string;
   link?: string;
   target?: string;
+  onClick?: () => void;
 }
 export const BarrelLink = ({
   className,
   text,
   link,
   target,
+  onClick,
 }: BarrelLinkProps) => {
   const charArr = text.split("");
 
@@ -26,8 +28,9 @@ export const BarrelLink = ({
       className={classNames(
         styles.link,
         { [styles.noAnimate]: !link },
-        className
+        className,
       )}
+      onClick={onClick}
     >
       {charArr.map((char, i) => (
         <div

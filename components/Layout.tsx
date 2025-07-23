@@ -37,13 +37,9 @@ const Layout = ({
         <meta name="description" content={siteDescription} />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Header menu={menu} footerCredits={footerCredits} />
+      <Header menu={menu} contactLinks={contactLinks} />
       <main {...props}>{children}</main>
-      <Footer
-        contactLinks={contactLinks}
-        footerCredits={footerCredits}
-        showContactLinks={showContactLinks}
-      />
+      <Footer footerCredits={footerCredits} />
       {showFloatingActions && <FloatingActions />}
     </div>
   );

@@ -1,73 +1,10 @@
 @use "mixins";
 
-.link {
-  color: var(--mobileMenuColor);
-}
-
 .footer {
-  margin-top: 2rem;
-  padding: 1rem;
-  z-index: 1;
-
-  @include mixins.media("xl") {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 1fr;
-    gap: 2rem 2rem;
-    grid-auto-flow: row;
-    grid-template-areas: "contactLinks stars footerCredits";
-    padding: 1rem 1.5rem;
-  }
-}
-
-.stars {
-  grid-area: stars;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 3rem;
-
-  @include mixins.media("xl") {
-    padding-bottom: 0;
-  }
-
-  &.inverse {
-    --starsResetColor: var(--mobileMenuColor);
-  }
-}
-
-.contactLinks {
-  grid-area: contactLinks;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 2rem;
-  margin-bottom: 2rem;
-
-  @include mixins.media("sm") {
-    flex-direction: row;
-  }
-
-  @include mixins.media("xl") {
-    justify-content: flex-start;
-    margin-bottom: 0;
-  }
-}
-
-.divider {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-
-  @include mixins.media("xl") {
-    display: none;
-  }
+  padding: 12px 16px;
 }
 
 .footerCredits {
-  grid-area: footerCredits;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,9 +14,5 @@
   @include mixins.media("sm") {
     flex-direction: row;
     gap: 2rem;
-  }
-
-  @include mixins.media("xl") {
-    justify-content: flex-end;
   }
 }

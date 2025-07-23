@@ -1,25 +1,21 @@
 import classNames from "classnames";
 import { BarrelLink } from "components/common/BarrelLink";
 import Blob from "components/common/Blob";
-import { StarBlob } from "components/common/StarBlob";
+import { Stars } from "components/common/Stars";
 import { useEffect, useState } from "react";
 import styles from "styles/MobileMenu.module.scss";
 import {
-  GlobalFooterCredits,
+  GlobalContactLinks,
   GlobalMenu,
   Maybe,
 } from "tina/__generated__/types";
-import { Footer } from "./Footer";
 
 interface MobileMenuProps {
   menu?: Maybe<Array<Maybe<GlobalMenu>>>;
-  footerCredits?: Maybe<Array<Maybe<GlobalFooterCredits>>>;
+  contactLinks?: Maybe<Array<Maybe<GlobalContactLinks>>>;
 }
-export const MobileMenu = ({ menu, footerCredits }: MobileMenuProps) => {
+export const MobileMenu = ({ menu, contactLinks }: MobileMenuProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const buttonClass = classNames("d-sm-none", styles.menuButton, {
-    [styles.menuOpen]: isMenuOpen,
-  });
 
   useEffect(() => {
     const bodyClass = document.body.classList;
@@ -33,26 +29,17 @@ export const MobileMenu = ({ menu, footerCredits }: MobileMenuProps) => {
   return (
     <>
       <button
-        className={buttonClass}
+        className={classNames("d-sm-none", styles.menuButton)}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        {isMenuOpen && (
-          <div className={styles.menuButton_starBlob}>
-            <StarBlob />
-          </div>
-        )}
-        {!isMenuOpen && (
-          <>
-            <div className={styles.menuButton_line} />
-            <div className={styles.menuButton_line} />
-          </>
-        )}
+        <div className={styles.menuButton_line} />
+        <div className={styles.menuButton_line} />
       </button>
       <div
         className={`${styles.drawer} ${isMenuOpen ? styles.drawerOpen : ""}`}
       >
         <div className={styles.blob}>
-          <Blob lineCount={1} strokeWidth={0.4} />
+          <Blob lineCount={1} strokeWidth={0.4} color="var(--bodyColor)" />
         </div>
         <div className={styles.logo}>
           <BarrelLink className={styles.link} text="FRAN" link="/" />
@@ -65,15 +52,25 @@ export const MobileMenu = ({ menu, footerCredits }: MobileMenuProps) => {
                 text={menuItem?.name.toUpperCase() || ""}
                 link={menuItem?.url || ""}
                 target={menuItem?.openInNewWindow ? "_blank" : "_self"}
+                onClick={() => setIsMenuOpen(false)}
+              />
+            </div>
+          ))}
+          {contactLinks?.map((contact) => (
+            <div key={window.crypto.randomUUID()} className={styles.menuItem}>
+              <BarrelLink
+                className={styles.link}
+                text={contact?.name.toUpperCase() || ""}
+                link={contact?.url || ""}
+                target={contact?.openInNewWindow ? "_blank" : "_self"}
+                onClick={() => setIsMenuOpen(false)}
               />
             </div>
           ))}
         </div>
-        <Footer
-          footerCredits={footerCredits}
-          showContactLinks={false}
-          inverse
-        />
+        <div className={classNames(styles.stars)}>
+          <Stars />
+        </div>
       </div>
     </>
   );
