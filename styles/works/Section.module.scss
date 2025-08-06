@@ -11,19 +11,13 @@
 
   @include mixins.media("lg") {
     top: 5rem;
-    margin-left: -2rem;
   }
 }
 
-.lineStart,
 .lineEnd {
   flex-grow: 1;
   height: 1px;
   background: var(--bodyColor);
-}
-
-.lineStart {
-  margin-right: 1rem;
 }
 
 .lineEnd {

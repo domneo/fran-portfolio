@@ -8,7 +8,7 @@ import { CloseButton } from "./CloseButton";
 Modal.setAppElement("#__next");
 
 export interface ArticleImageProps {
-  image: string;
+  image?: string | null;
   title?: string | null;
   caption?: string | null;
   enableZoom?: boolean | null;
@@ -30,7 +30,7 @@ export const ArticleImage = (props: ArticleImageProps) => {
       <div className={styles.imageContainer}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={props.image}
+          src={props.image || ""}
           alt={props.title || ""}
           sizes={"160vw"}
           className={styles.image}
@@ -63,7 +63,7 @@ export const ArticleImage = (props: ArticleImageProps) => {
             <CloseButton onClick={() => setIsZoomedIn(false)} />
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={props.image} alt={props.title || ""} />
+          <img src={props.image || ""} alt={props.title || ""} />
           {props.caption && (
             <p className="position-sticky bottom-0 px-4 mb-0 bg-white">
               <small>{props.caption}</small>

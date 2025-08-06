@@ -11,8 +11,7 @@ const generateSpacer = (): Template => ({
       type: "string",
       name: "size",
       label: "Size",
-      description:
-        'Allowed values: "sm" | "md" | "lg" | "xl". Defaults to "md"',
+      description: 'Allowed values: "sm" | "md" | "lg" | "xl"',
     },
   ],
 });
@@ -35,7 +34,6 @@ const generateImageWithCaption = (): Template => ({
       type: "image",
       name: "image",
       label: "Image",
-      required: true,
     },
     {
       type: "string",
@@ -72,7 +70,6 @@ const generateImageSlider = (): Template => ({
           type: "image",
           name: "image",
           label: "Image",
-          required: true,
         },
         {
           type: "string",
@@ -99,6 +96,68 @@ const generateImageSlider = (): Template => ({
           return { label: item?.title };
         },
       },
+    },
+  ],
+});
+const generateRichTextContent = (): Template => ({
+  name: "richTextContent",
+  label: "Rich text content",
+  fields: [
+    {
+      type: "rich-text",
+      name: "content",
+      label: "Content",
+      templates: [generateSpacer()],
+    },
+  ],
+});
+const generateImpactItem = (): Template => ({
+  name: "impactItem",
+  label: "Impact Item",
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+    },
+    {
+      type: "string",
+      name: "description",
+      label: "Description",
+    },
+  ],
+});
+const generateImpact = (): Template => ({
+  name: "impact",
+  label: "Impact",
+  fields: [
+    {
+      type: "object",
+      list: true,
+      name: "items",
+      label: "Items",
+      templates: [generateImpactItem()],
+    },
+  ],
+});
+const generateHeader = (): Template => ({
+  name: "header",
+  label: "Header",
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+    },
+    {
+      type: "string",
+      name: "subtitle",
+      label: "Subtitle",
+    },
+    {
+      type: "rich-text",
+      name: "overview",
+      label: "Overview",
     },
   ],
 });
@@ -198,7 +257,6 @@ const generateSection = (): Template => ({
       label: "Title",
       description:
         "Sticky section title appearing at the start of each section. Also serves as a label/name to help you identify each section in the list of sections.",
-      required: true,
     },
     {
       type: "boolean",
@@ -217,8 +275,11 @@ const generateSection = (): Template => ({
       templates: [
         generateSpacer(),
         generateDivider(),
+        generateImpact(),
+        generateRichTextContent(),
         generateImageWithCaption(),
         generateImageSlider(),
+
         generateOneColumnBlock(),
         generateTwoColumnBlock_1_1(),
         generateTwoColumnBlock_1_2(),
@@ -229,27 +290,6 @@ const generateSection = (): Template => ({
   ui: {
     defaultItem: {
       showSectionTitle: true,
-    },
-    itemProps: (item) => {
-      return { label: item?.title };
-    },
-  },
-});
-const generateSectionLinks = (): Template => ({
-  name: "section_links",
-  label: "Section Links",
-  fields: [
-    {
-      type: "string",
-      name: "title",
-      label: "Title",
-      description: "",
-      required: true,
-    },
-  ],
-  ui: {
-    defaultItem: {
-      title: "Process",
     },
     itemProps: (item) => {
       return { label: item?.title };
@@ -272,7 +312,6 @@ const globalCollection: Collection = {
       label: "Site Title",
       description:
         "The title for your site. Appears in browser tabs and as the title in search engine results.",
-      required: true,
     },
     {
       type: "string",
@@ -280,7 +319,6 @@ const globalCollection: Collection = {
       label: "Site Description",
       description:
         "A short description for your site. Appears in search engine results. Recommended to be 160 characters or less.",
-      required: true,
     },
     {
       type: "object",
@@ -292,7 +330,6 @@ const globalCollection: Collection = {
           type: "string",
           name: "name",
           label: "Name",
-          required: true,
         },
         {
           type: "string",
@@ -323,7 +360,6 @@ const globalCollection: Collection = {
           type: "string",
           name: "name",
           label: "Name",
-          required: true,
         },
         {
           type: "string",
@@ -354,7 +390,6 @@ const globalCollection: Collection = {
           type: "string",
           name: "name",
           label: "Name",
-          required: true,
         },
         {
           type: "string",
@@ -406,13 +441,11 @@ const homeCollection: Collection = {
           type: "image",
           name: "image",
           label: "Image",
-          required: true,
         },
         {
           type: "rich-text",
           name: "body",
           label: "Body",
-          required: true,
           templates: [
             {
               name: "ParagraphLight",
@@ -473,19 +506,16 @@ const worksCollection: Collection = {
           name: "index",
           label: "Index",
           description: "The post number.",
-          required: true,
         },
         {
           type: "string",
           name: "title",
           label: "Title",
-          required: true,
         },
         {
           type: "string",
           name: "description",
           label: "Description",
-          required: true,
         },
         {
           type: "object",
@@ -497,7 +527,6 @@ const worksCollection: Collection = {
               type: "string",
               name: "name",
               label: "Name",
-              required: true,
             },
           ],
           ui: {
@@ -510,7 +539,6 @@ const worksCollection: Collection = {
           type: "image",
           name: "image",
           label: "Image",
-          required: true,
         },
         {
           type: "boolean",
@@ -551,21 +579,16 @@ const worksPostsCollection: Collection = {
       required: true,
     },
     {
-      type: "string",
-      name: "subtitle",
-      label: "Subtitle",
-    },
-    {
-      type: "rich-text",
-      name: "overview",
-      label: "Overview",
-    },
-    {
       type: "object",
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [generateSection(), generateSectionLinks()],
+      templates: [
+        generateSection(),
+        generateImpact(),
+        generateHeader(),
+        generateSpacer(),
+      ],
     },
   ],
   ui: {
@@ -606,19 +629,16 @@ const caseStudiesCollection: Collection = {
           name: "index",
           label: "Index",
           description: "The post number.",
-          required: true,
         },
         {
           type: "string",
           name: "title",
           label: "Title",
-          required: true,
         },
         {
           type: "string",
           name: "description",
           label: "Description",
-          required: true,
         },
         {
           type: "object",
@@ -630,7 +650,6 @@ const caseStudiesCollection: Collection = {
               type: "string",
               name: "name",
               label: "Name",
-              required: true,
             },
           ],
           ui: {
@@ -643,7 +662,6 @@ const caseStudiesCollection: Collection = {
           type: "image",
           name: "image",
           label: "Image",
-          required: true,
         },
         {
           type: "boolean",
@@ -684,21 +702,16 @@ const caseStudiesPostsCollection: Collection = {
       required: true,
     },
     {
-      type: "string",
-      name: "subtitle",
-      label: "Subtitle",
-    },
-    {
-      type: "rich-text",
-      name: "overview",
-      label: "Overview",
-    },
-    {
       type: "object",
       list: true,
       name: "sections",
       label: "Sections",
-      templates: [generateSection(), generateSectionLinks()],
+      templates: [
+        generateSection(),
+        generateImpact(),
+        generateHeader(),
+        generateSpacer(),
+      ],
     },
   ],
   ui: {

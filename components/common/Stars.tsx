@@ -14,7 +14,7 @@ export const Stars = ({ children }: StarsProps) => {
       ["#333333", "#e6d3d3", "#a0b8a8", "#8c97ad", "#eded82"],
       ["#eded82", "#a0b8a8", "#8c97ad", "#333333", "#e6d3d3"],
     ],
-    []
+    [],
   );
   const [isAnimating, setIsAnimating] = useState(false);
   const [cycleIndex, setCycleIndex] = useState(0);
@@ -65,10 +65,13 @@ export const Stars = ({ children }: StarsProps) => {
 
   return (
     <div
-      className="d-flex align-items-center justify-content-center"
+      className="d-flex align-items-center justify-content-center gap-3"
       onMouseEnter={() => setIsAnimating(true)}
       onMouseLeave={() => setIsAnimating(false)}
     >
+      {children && (
+        <div className="d-none d-md-block text-center">{children}</div>
+      )}
       <svg
         width="11"
         height="20"
@@ -82,7 +85,6 @@ export const Stars = ({ children }: StarsProps) => {
           fill={aColor}
         />
       </svg>
-      <div className="mx-3 text-center">{children}</div>
       <svg
         width="89"
         height="20"

@@ -85,7 +85,7 @@ body {
 h1,
 .h1 {
   @extend %heading;
-  @include rfs.font-size(60px);
+  @include rfs.font-size(48px);
   font-family: "Ogg", sans-serif;
 }
 

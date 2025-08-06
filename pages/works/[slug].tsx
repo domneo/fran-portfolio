@@ -1,16 +1,13 @@
 import Layout from "components/Layout";
-import { AnchorLink } from "components/common/AnchorLink";
+import { Header } from "components/common/Header";
 import { Divider } from "components/common/Divider";
 import { ImageSlider } from "components/common/ImageSlider";
+import { Impact, ImpactItem } from "components/common/Impact";
 import { ArticleImage } from "components/common/ArticleImage";
 import { Spacer } from "components/common/Spacer";
-import { ThreeColumn111 } from "components/common/ThreeColumn111";
-import { TwoColumn11 } from "components/common/TwoColumn11";
-import { TwoColumn12 } from "components/common/TwoColumn12";
 import { NextPrevPost } from "components/works/NextPrevPost";
 import { Section } from "components/works/Section";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
-import styles from "styles/WorksPost.module.scss";
 import client from "tina/__generated__/client";
 import {
   GlobalQuery,
@@ -72,8 +69,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     fragment Works_postsParts on Works_posts {
       __typename
       title
-      subtitle
-      overview
       sections {
         __typename
         ... on Works_postsSectionsSection {
@@ -120,9 +115,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               col3
             }
           }
-        }
-        ... on Works_postsSectionsSection_links {
-          title
         }
       }
     }
@@ -191,172 +183,126 @@ export default function WorksPost({
   const { data: worksPostData } = useTina<Works_PostsQuery>(worksPost);
   const { data: nextPostData } = useTina<Works_PostsConnectionQuery>(nextPost);
   const { data: prevPostData } = useTina<Works_PostsConnectionQuery>(prevPost);
-  const { title, subtitle, overview, sections } = worksPostData.works_posts;
+  const { sections } = worksPostData.works_posts;
 
   return (
     <Layout data={globalData} showFloatingActions={true}>
       <div className="container-xxl">
-        <div className={`${styles.header} row justify-content-center`}>
-          <div className="col-lg-10">
-            <h3 className="semibold allcaps">{subtitle}</h3>
-            <h1>{title}</h1>
-          </div>
-          <div className="caption-all col-12 col-sm-10 offset-sm-2 col-lg-7 offset-lg-3 col-xxl-6 offset-xxl-4">
-            <TinaMarkdown content={overview} />
-          </div>
-        </div>
-        <div className="spacer-lg" />
-        <div className={`row justify-content-center`}>
-          <div className="col-lg-10 col-xl-8">
-            {sections?.map((section) => {
-              switch (section?.__typename) {
-                case "Works_postsSectionsSection":
-                  return (
-                    <Section
-                      key={window.crypto.randomUUID()}
-                      anchorId={section.anchorId}
-                      title={section.title}
-                      showSectionTitle={section.showSectionTitle}
-                    >
-                      {section.blocks?.map((block) => {
-                        let blockComponent;
-                        const richTextComponents = {
-                          spacer: Spacer,
-                          divider: Divider,
-                        };
-                        switch (block?.__typename) {
-                          case "Works_postsSectionsSectionBlocksSpacer":
-                            if (block.size) {
-                              const size = block.size.toLowerCase() as
-                                | "sm"
-                                | "md"
-                                | "lg"
-                                | "xl";
-                              blockComponent = <Spacer size={size} />;
-                            }
-                            break;
-                          case "Works_postsSectionsSectionBlocksDivider":
-                            blockComponent = <Divider />;
-                            break;
-                          case "Works_postsSectionsSectionBlocksImageWithCaption":
-                            if (block.image) {
-                              blockComponent = (
-                                <ArticleImage
-                                  image={block.image}
-                                  title={block.title}
-                                  caption={block.caption}
-                                  enableZoom={block.enableZoom}
-                                />
-                              );
-                            }
-                            break;
-                          case "Works_postsSectionsSectionBlocksImageSlider":
-                            if (block.slides) {
-                              blockComponent = (
-                                <ImageSlider images={block.slides} />
-                              );
-                            }
-                            break;
-                          case "Works_postsSectionsSectionBlocksOneColumn":
-                            blockComponent = (
-                              <TinaMarkdown
-                                content={block.content}
-                                components={richTextComponents}
-                              />
-                            );
-                            break;
-                          case "Works_postsSectionsSectionBlocksTwoColumn_1_1":
-                            blockComponent = (
-                              <TwoColumn11
-                                col1={block.col1}
-                                col2={block.col2}
-                              />
-                            );
-                            break;
-                          case "Works_postsSectionsSectionBlocksTwoColumn_1_2":
-                            blockComponent = (
-                              <TwoColumn12
-                                col1={block.col1}
-                                col2={block.col2}
-                              />
-                            );
-                            break;
-                          case "Works_postsSectionsSectionBlocksThreeColumn_1_1_1":
-                            blockComponent = (
-                              <ThreeColumn111
-                                col1={block.col1}
-                                col2={block.col2}
-                                col3={block.col3}
-                              />
-                            );
-                            break;
-                          default:
-                            blockComponent = null;
-                            break;
-                        }
-                        return (
-                          <div key={window.crypto.randomUUID()}>
-                            {blockComponent}
-                          </div>
-                        );
-                      })}
-                    </Section>
-                  );
-                case "Works_postsSectionsSection_links":
-                  return (
-                    <Section
-                      key={window.crypto.randomUUID()}
-                      title={section.title}
-                      showSectionTitle
-                      centerTitle
-                    >
-                      <div className="row justify-content-center">
-                        <div className="col-md-8 col-lg-6">
-                          {sections?.map((section) => {
-                            if (
-                              section?.__typename ===
-                                "Works_postsSectionsSection" &&
-                              section.anchorId
-                            ) {
-                              return (
-                                <p key={window.crypto.randomUUID()}>
-                                  <AnchorLink
-                                    anchorId={`#${section.anchorId || ""}`}
-                                    title={section.title}
-                                  >
-                                    {section.title}
-                                  </AnchorLink>
-                                </p>
-                              );
-                            }
-                          })}
-                        </div>
-                      </div>
-                    </Section>
-                  );
-                default:
-                  return null;
+        <div className="spacer-lg"></div>
+        {sections?.map((section) => {
+          switch (section?.__typename) {
+            case "Works_postsSectionsHeader":
+              return (
+                <Header
+                  key={window.crypto.randomUUID()}
+                  title={section.title || ""}
+                  subtitle={section.subtitle || ""}
+                  overview={section.overview || ""}
+                />
+              );
+            case "Works_postsSectionsSpacer":
+              if (section.size) {
+                const size = section.size.toLowerCase() as
+                  | "sm"
+                  | "md"
+                  | "lg"
+                  | "xl";
+                return <Spacer key={window.crypto.randomUUID()} size={size} />;
               }
-            })}
-            <div className="spacer-md" />
-            <NextPrevPost
-              nextPost={{
-                title:
-                  nextPostData.works_postsConnection.edges?.[0]?.node?.title ||
-                  "Next post",
-                url: nextPostData.works_postsConnection.edges?.[0]?.node?._sys
-                  .filename,
-              }}
-              prevPost={{
-                title:
-                  prevPostData.works_postsConnection.edges?.[0]?.node?.title ||
-                  "Previous post",
-                url: prevPostData.works_postsConnection.edges?.[0]?.node?._sys
-                  .filename,
-              }}
-            />
-          </div>
-        </div>
+              break;
+            case "Works_postsSectionsImpact":
+              return <Impact items={section.items}></Impact>;
+            case "Works_postsSectionsSection":
+              return (
+                <Section
+                  key={window.crypto.randomUUID()}
+                  anchorId={section.anchorId}
+                  title={section.title}
+                  showSectionTitle={section.showSectionTitle}
+                >
+                  {section.blocks?.map((block) => {
+                    let blockComponent;
+                    const richTextComponents = {
+                      spacer: Spacer,
+                      divider: Divider,
+                    };
+                    switch (block?.__typename) {
+                      case "Works_postsSectionsSectionBlocksSpacer":
+                        if (block.size) {
+                          const size = block.size.toLowerCase() as
+                            | "sm"
+                            | "md"
+                            | "lg"
+                            | "xl";
+                          blockComponent = <Spacer size={size} />;
+                        }
+                        break;
+                      case "Works_postsSectionsSectionBlocksDivider":
+                        blockComponent = <Divider />;
+                        break;
+                      case "Works_postsSectionsSectionBlocksRichTextContent":
+                        blockComponent = (
+                          <TinaMarkdown
+                            content={block.content}
+                            components={richTextComponents}
+                          />
+                        );
+                        break;
+                      case "Works_postsSectionsSectionBlocksImageWithCaption":
+                        if (block.image) {
+                          blockComponent = (
+                            <ArticleImage
+                              image={block.image}
+                              title={block.title}
+                              caption={block.caption}
+                              enableZoom={block.enableZoom}
+                            />
+                          );
+                        }
+                        break;
+                      case "Works_postsSectionsSectionBlocksImageSlider":
+                        if (block.slides) {
+                          blockComponent = (
+                            <ImageSlider images={block.slides} />
+                          );
+                        }
+                        break;
+                      case "Works_postsSectionsSectionBlocksImpact":
+                        blockComponent = <Impact items={block.items}></Impact>;
+                        break;
+                      default:
+                        blockComponent = null;
+                        break;
+                    }
+                    return (
+                      <div key={window.crypto.randomUUID()}>
+                        {blockComponent}
+                      </div>
+                    );
+                  })}
+                </Section>
+              );
+            default:
+              return null;
+          }
+        })}
+        <div className="spacer-md" />
+        <NextPrevPost
+          nextPost={{
+            title:
+              nextPostData.works_postsConnection.edges?.[0]?.node?.title ||
+              "Next post",
+            url: nextPostData.works_postsConnection.edges?.[0]?.node?._sys
+              .filename,
+          }}
+          prevPost={{
+            title:
+              prevPostData.works_postsConnection.edges?.[0]?.node?.title ||
+              "Previous post",
+            url: prevPostData.works_postsConnection.edges?.[0]?.node?._sys
+              .filename,
+          }}
+        />
         <div className="spacer-xl" />
       </div>
     </Layout>

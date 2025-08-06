@@ -46,7 +46,7 @@
     padding: 1.5rem 0rem;
   }
 
-  @include mixins.media("xl") {
+  @include mixins.media("lg") {
     display: flex;
   }
 }

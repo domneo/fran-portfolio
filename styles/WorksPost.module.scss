@@ -1,14 +1,5 @@
 @use "mixins";
 
-.header {
-  margin-top: 2rem;
-  gap: 1rem;
-
-  @include mixins.media("sm") {
-    gap: 2rem;
-  }
-}
-
 .arrowLink {
   display: flex;
   align-items: center;
