@@ -49,7 +49,7 @@ export const MobileMenu = ({ menu, contactLinks }: MobileMenuProps) => {
             <div key={window.crypto.randomUUID()} className={styles.menuItem}>
               <BarrelLink
                 className={styles.link}
-                text={menuItem?.name.toUpperCase() || ""}
+                text={menuItem?.name?.toUpperCase() || ""}
                 link={menuItem?.url || ""}
                 target={menuItem?.openInNewWindow ? "_blank" : "_self"}
                 onClick={() => setIsMenuOpen(false)}
@@ -60,7 +60,7 @@ export const MobileMenu = ({ menu, contactLinks }: MobileMenuProps) => {
             <div key={window.crypto.randomUUID()} className={styles.menuItem}>
               <BarrelLink
                 className={styles.link}
-                text={contact?.name.toUpperCase() || ""}
+                text={contact?.name?.toUpperCase() || ""}
                 link={contact?.url || ""}
                 target={contact?.openInNewWindow ? "_blank" : "_self"}
                 onClick={() => setIsMenuOpen(false)}

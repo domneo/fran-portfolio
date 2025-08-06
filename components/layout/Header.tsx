@@ -24,7 +24,7 @@ export const Header = ({ menu, contactLinks }: HeaderProps) => (
       {contactLinks?.map((contact) => (
         <BarrelLink
           key={window.crypto.randomUUID()}
-          text={contact?.name.toUpperCase() || ""}
+          text={contact?.name?.toUpperCase() || ""}
           link={contact?.url || ""}
           target={contact?.openInNewWindow ? "_blank" : "_self"}
         />

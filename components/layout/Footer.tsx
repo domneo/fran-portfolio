@@ -13,7 +13,7 @@ export const Footer = ({ footerCredits }: FooterProps) => (
       {footerCredits?.map((credit) => (
         <BarrelLink
           key={window.crypto.randomUUID()}
-          text={credit?.name.toUpperCase() || ""}
+          text={credit?.name?.toUpperCase() || ""}
           link={credit?.url || ""}
           target={credit?.openInNewWindow ? "_blank" : "_self"}
         />

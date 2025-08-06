@@ -34,7 +34,7 @@ const Layout = ({
     >
       <Head>
         <title>{siteTitle}</title>
-        <meta name="description" content={siteDescription} />
+        <meta name="description" content={siteDescription || ""} />
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Header menu={menu} contactLinks={contactLinks} />

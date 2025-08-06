@@ -60,11 +60,11 @@ export default function Home({
   const { title: csTitle, postList: csPostList } = caseStudiesData.caseStudies;
 
   interface Skill {
-    name?: string;
+    name?: string | null;
   }
   interface Post {
-    title?: string;
-    description?: string;
+    title?: string | null;
+    description?: string | null;
     skills?: Array<Skill | null> | null;
   }
   const renderPostList = (post: Post) => {
@@ -96,7 +96,7 @@ export default function Home({
           <div className="row flex-column flex-lg-row align-items-end gap-4">
             <div className="align-self-start align-self-lg-end d-flex justify-content-end col-6 col-sm-5 offset-sm-1 col-md-4 col-lg-4 offset-lg-0 col-xxl-3 offset-xxl-1 col-max-2 ps-3 pe-0">
               <video
-                src={about?.image}
+                src={about?.image || ""}
                 autoPlay
                 muted
                 loop
