@@ -19,7 +19,7 @@
     "bootstrap": "^5.3.7",
     "classnames": "^2.5.1",
     "gsap": "^3.13.0",
-    "next": "15.4.1",
+    "next": "^15.5.14",
     "next-password-protect": "^1.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
