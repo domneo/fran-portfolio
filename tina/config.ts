@@ -174,6 +174,17 @@ const generateThreeColumnBlock_1_1_1 = (): Template => ({
     },
   ],
 });
+const generateBanner = (): Template => ({
+  name: "banner",
+  label: "Banner",
+  fields: [
+    {
+      type: "rich-text",
+      name: "content",
+      label: "Content",
+    },
+  ],
+});
 const generateSection = (): Template => ({
   name: "section",
   label: "Section",
@@ -217,6 +228,7 @@ const generateSection = (): Template => ({
       templates: [
         generateSpacer(),
         generateDivider(),
+        generateBanner(),
         generateImageWithCaption(),
         generateImageSlider(),
         generateOneColumnBlock(),
@@ -561,6 +573,11 @@ const worksPostsCollection: Collection = {
       label: "Overview",
     },
     {
+      type: "rich-text",
+      name: "disclaimer",
+      label: "Disclaimer",
+    },
+    {
       type: "object",
       list: true,
       name: "tabs",
@@ -711,6 +728,11 @@ const caseStudiesPostsCollection: Collection = {
       type: "rich-text",
       name: "overview",
       label: "Overview",
+    },
+    {
+      type: "rich-text",
+      name: "disclaimer",
+      label: "Disclaimer",
     },
     {
       type: "object",

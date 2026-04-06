@@ -3,6 +3,7 @@ import { AnchorLink } from "components/common/AnchorLink";
 import { Divider } from "components/common/Divider";
 import { ImageSlider } from "components/common/ImageSlider";
 import { ArticleImage } from "components/common/ArticleImage";
+import { Banner } from "components/common/Banner";
 import { Spacer } from "components/common/Spacer";
 import { ThreeColumn111 } from "components/common/ThreeColumn111";
 import { TwoColumn11 } from "components/common/TwoColumn11";
@@ -106,6 +107,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                   enableZoom
                 }
               }
+              ... on CaseStudies_postsTabsSectionsSectionBlocksBanner {
+                content
+              }
               ... on CaseStudies_postsTabsSectionsSectionBlocksOneColumn {
                 content
               }
@@ -198,7 +202,7 @@ export default function CaseStudiesPost({
     useTina<CaseStudies_PostsConnectionQuery>(nextPost);
   const { data: prevPostData } =
     useTina<CaseStudies_PostsConnectionQuery>(prevPost);
-  const { title, subtitle, overview, tabs } =
+  const { title, subtitle, overview, disclaimer, tabs } =
     caseStudiesPostData.caseStudies_posts;
 
   const richTextComponents = {
@@ -235,6 +239,8 @@ export default function CaseStudiesPost({
           return <ImageSlider images={block.slides} />;
         }
         return null;
+      case "Banner":
+        return <Banner content={block.content} />;
       case "OneColumn":
         return (
           <TinaMarkdown
@@ -319,6 +325,12 @@ export default function CaseStudiesPost({
           <div className="caption-all col-12 col-sm-10 offset-sm-2 col-lg-7 offset-lg-3 col-xxl-6 offset-xxl-4">
             <TinaMarkdown content={overview} />
           </div>
+          {disclaimer?.children?.length > 0 && (
+            <div className="col-12 col-sm-10 col-lg-8 col-xl-7">
+              <div className="spacer-sm" />
+              <Banner content={disclaimer} />
+            </div>
+          )}
         </div>
         <div className="spacer-lg" />
         <div className={`row justify-content-center`}>

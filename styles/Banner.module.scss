@@ -1,0 +1,23 @@
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 0.5rem;
+  border: 1px solid var(--rosetaupe);
+  border-left-width: 0.5rem;
+  color: var(--black);
+}
+
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--rosetaupe);
+}
+
+.content {
+  p {
+    font-size: 14px;
+  }
+}
