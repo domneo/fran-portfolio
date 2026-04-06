@@ -202,7 +202,6 @@ export default function WorksPost({
     divider: Divider,
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function renderBlock(block: any) {
     if (!block) return null;
     const type = block.__typename?.split("Blocks").pop();
@@ -256,7 +255,6 @@ export default function WorksPost({
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function renderSections(sections: any[] | null | undefined) {
     return sections?.map((section, i) => {
       switch (section?.__typename) {
