@@ -32,9 +32,9 @@ export const getStaticProps: GetStaticProps = async () => {
   try {
     global = await client.queries.global({ relativePath: `global.mdx` });
     home = await client.queries.home({ relativePath: `home.mdx` });
-    works = await client.queries.works({ relativePath: `works.mdx` });
+    works = await client.queries.works({ relativePath: `castlery.mdx` });
     caseStudies = await client.queries.caseStudies({
-      relativePath: `caseStudies.mdx`,
+      relativePath: `st-dsta.mdx`,
     });
   } catch {
     // swallow errors related to document creation
@@ -116,10 +116,10 @@ export default function Home({
         <div className="container">
           <div className="row">
             <div className="col-md-10 col-lg-7 col-xxl-5 offset-xxl-1">
-              <h2 className={styles.sectionTitle}>{wTitle}</h2>
-              {wPostList &&
-                wPostList.length > 0 &&
-                wPostList.map((post) => {
+              <h2 className={styles.sectionTitle}>{csTitle}</h2>
+              {csPostList &&
+                csPostList.length > 0 &&
+                csPostList.map((post) => {
                   if (post) {
                     return (
                       <Link
@@ -145,10 +145,10 @@ export default function Home({
         <div className="container">
           <div className="row">
             <div className="col-md-10 offset-md-2 col-lg-7 offset-lg-5 col-xxl-5 offset-xxl-6">
-              <h2 className={styles.sectionTitle}>{csTitle}</h2>
-              {csPostList &&
-                csPostList.length > 0 &&
-                csPostList.map((post) => {
+              <h2 className={styles.sectionTitle}>{wTitle}</h2>
+              {wPostList &&
+                wPostList.length > 0 &&
+                wPostList.map((post) => {
                   if (post) {
                     return (
                       <Link

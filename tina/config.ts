@@ -299,7 +299,7 @@ const globalCollection: Collection = {
           name: "url",
           label: "URL/Path",
           description:
-            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/castlery/fortress").',
         },
         {
           type: "boolean",
@@ -330,7 +330,7 @@ const globalCollection: Collection = {
           name: "url",
           label: "URL/Path",
           description:
-            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/castlery/fortress").',
         },
         {
           type: "boolean",
@@ -361,7 +361,7 @@ const globalCollection: Collection = {
           name: "url",
           label: "URL/Path",
           description:
-            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/castlery/fortress").',
         },
         {
           type: "boolean",
@@ -444,8 +444,8 @@ const homeCollection: Collection = {
 };
 const worksCollection: Collection = {
   name: "works",
-  label: "Works",
-  path: "content/works",
+  label: "Castlery",
+  path: "content/castlery",
   format: "mdx",
   fields: [
     {
@@ -466,7 +466,7 @@ const worksCollection: Collection = {
           name: "url",
           label: "URL/Path",
           description:
-            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/castlery/fortress").',
         },
         {
           type: "number",
@@ -527,8 +527,8 @@ const worksCollection: Collection = {
   ],
   ui: {
     router: ({ document }) => {
-      if (document._sys.filename === "works") {
-        return "/works";
+      if (document._sys.filename === "castlery") {
+        return "/castlery";
       }
     },
     allowedActions: {
@@ -539,8 +539,8 @@ const worksCollection: Collection = {
 };
 const worksPostsCollection: Collection = {
   name: "works_posts",
-  label: "Works Posts",
-  path: "content/works_posts",
+  label: "Castlery Posts",
+  path: "content/castlery_posts",
   format: "mdx",
   fields: [
     {
@@ -590,14 +590,14 @@ const worksPostsCollection: Collection = {
   ui: {
     router: ({ document }) => {
       // navigate to the post that was clicked
-      return `/works/${document._sys.filename}`;
+      return `/castlery/${document._sys.filename}`;
     },
   },
 };
 const caseStudiesCollection: Collection = {
   name: "caseStudies",
-  label: "Case Studies",
-  path: "content/caseStudies",
+  label: "ST - DSTA",
+  path: "content/st-dsta",
   format: "mdx",
   fields: [
     {
@@ -618,7 +618,7 @@ const caseStudiesCollection: Collection = {
           name: "url",
           label: "URL/Path",
           description:
-            'Either a full URL for external links, or the path to a page in your site (e.g. "/works/fortress").',
+            'Either a full URL for external links, or the path to a page in your site (e.g. "/castlery/fortress").',
         },
         {
           type: "number",
@@ -679,8 +679,8 @@ const caseStudiesCollection: Collection = {
   ],
   ui: {
     router: ({ document }) => {
-      if (document._sys.filename === "caseStudies") {
-        return "/case-studies";
+      if (document._sys.filename === "st-dsta") {
+        return "/st-dsta";
       }
     },
     allowedActions: {
@@ -691,8 +691,8 @@ const caseStudiesCollection: Collection = {
 };
 const caseStudiesPostsCollection: Collection = {
   name: "caseStudies_posts",
-  label: "Case Studies Posts",
-  path: "content/caseStudies_posts",
+  label: "ST - DSTA Posts",
+  path: "content/st-dsta_posts",
   format: "mdx",
   fields: [
     {
@@ -723,7 +723,7 @@ const caseStudiesPostsCollection: Collection = {
   ui: {
     router: ({ document }) => {
       // navigate to the post that was clicked
-      return `/case-studies/${document._sys.filename}`;
+      return `/st-dsta/${document._sys.filename}`;
     },
   },
 };
