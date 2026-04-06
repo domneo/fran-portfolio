@@ -9,6 +9,7 @@ import { TwoColumn11 } from "components/common/TwoColumn11";
 import { TwoColumn12 } from "components/common/TwoColumn12";
 import { NextPrevPost } from "components/works/NextPrevPost";
 import { Section } from "components/works/Section";
+import { Tabs } from "components/works/Tabs";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import styles from "styles/WorksPost.module.scss";
 import client from "tina/__generated__/client";
@@ -74,55 +75,58 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       title
       subtitle
       overview
-      sections {
-        __typename
-        ... on CaseStudies_postsSectionsSection {
-          anchorId
-          title
-          showSectionTitle
-          blocks {
-            __typename
-            ... on CaseStudies_postsSectionsSectionBlocksSpacer {
-              size
-            }
-            ... on CaseStudies_postsSectionsSectionBlocksDivider {
-              label
-            }
-            ... on CaseStudies_postsSectionsSectionBlocksImageWithCaption {
-              image
-              title
-              caption
-              enableZoom
-            }
-            ... on CaseStudies_postsSectionsSectionBlocksImageSlider {
-              slides {
-                __typename
+      tabs {
+        label
+        sections {
+          __typename
+          ... on CaseStudies_postsTabsSectionsSection {
+            anchorId
+            title
+            showSectionTitle
+            blocks {
+              __typename
+              ... on CaseStudies_postsTabsSectionsSectionBlocksSpacer {
+                size
+              }
+              ... on CaseStudies_postsTabsSectionsSectionBlocksDivider {
+                label
+              }
+              ... on CaseStudies_postsTabsSectionsSectionBlocksImageWithCaption {
                 image
                 title
                 caption
                 enableZoom
               }
-            }
-            ... on CaseStudies_postsSectionsSectionBlocksOneColumn {
-              content
-            }
-            ... on CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1 {
-              col1
-              col2
-            }
-            ... on CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2 {
-              col1
-              col2
-            }
-            ... on CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1 {
-              col1
-              col2
-              col3
+              ... on CaseStudies_postsTabsSectionsSectionBlocksImageSlider {
+                slides {
+                  __typename
+                  image
+                  title
+                  caption
+                  enableZoom
+                }
+              }
+              ... on CaseStudies_postsTabsSectionsSectionBlocksOneColumn {
+                content
+              }
+              ... on CaseStudies_postsTabsSectionsSectionBlocksTwoColumn_1_1 {
+                col1
+                col2
+              }
+              ... on CaseStudies_postsTabsSectionsSectionBlocksTwoColumn_1_2 {
+                col1
+                col2
+              }
+              ... on CaseStudies_postsTabsSectionsSectionBlocksThreeColumn_1_1_1 {
+                col1
+                col2
+                col3
+              }
             }
           }
-        }
-        ... on CaseStudies_postsSectionsSection_links {
-          title
+          ... on CaseStudies_postsTabsSectionsSection_links {
+            title
+          }
         }
       }
     }
@@ -194,8 +198,115 @@ export default function CaseStudiesPost({
     useTina<CaseStudies_PostsConnectionQuery>(nextPost);
   const { data: prevPostData } =
     useTina<CaseStudies_PostsConnectionQuery>(prevPost);
-  const { title, subtitle, overview, sections } =
+  const { title, subtitle, overview, tabs } =
     caseStudiesPostData.caseStudies_posts;
+
+  const richTextComponents = {
+    spacer: Spacer,
+    divider: Divider,
+  };
+
+  function renderBlock(block: any) {
+    if (!block) return null;
+    const type = block.__typename?.split("Blocks").pop();
+    switch (type) {
+      case "Spacer":
+        if (block.size) {
+          const size = block.size.toLowerCase() as "sm" | "md" | "lg" | "xl";
+          return <Spacer size={size} />;
+        }
+        return null;
+      case "Divider":
+        return <Divider />;
+      case "ImageWithCaption":
+        if (block.image) {
+          return (
+            <ArticleImage
+              image={block.image}
+              title={block.title}
+              caption={block.caption}
+              enableZoom={block.enableZoom}
+            />
+          );
+        }
+        return null;
+      case "ImageSlider":
+        if (block.slides) {
+          return <ImageSlider images={block.slides} />;
+        }
+        return null;
+      case "OneColumn":
+        return (
+          <TinaMarkdown
+            content={block.content}
+            components={richTextComponents}
+          />
+        );
+      case "TwoColumn_1_1":
+        return <TwoColumn11 col1={block.col1} col2={block.col2} />;
+      case "TwoColumn_1_2":
+        return <TwoColumn12 col1={block.col1} col2={block.col2} />;
+      case "ThreeColumn_1_1_1":
+        return (
+          <ThreeColumn111
+            col1={block.col1}
+            col2={block.col2}
+            col3={block.col3}
+          />
+        );
+      default:
+        return null;
+    }
+  }
+
+  function renderSections(sections: any[] | null | undefined) {
+    return sections?.map((section, i) => {
+      switch (section?.__typename) {
+        case "CaseStudies_postsTabsSectionsSection":
+          return (
+            <Section
+              key={i}
+              anchorId={section.anchorId}
+              title={section.title}
+              showSectionTitle={section.showSectionTitle}
+            >
+              {section.blocks?.map((block: any, j: number) => (
+                <div key={j}>{renderBlock(block)}</div>
+              ))}
+            </Section>
+          );
+        case "CaseStudies_postsTabsSectionsSection_links":
+          return (
+            <Section key={i} title={section.title} showSectionTitle centerTitle>
+              <div className="row justify-content-center">
+                <div className="col-md-8 col-lg-6">
+                  {sections?.map((s, k) => {
+                    if (
+                      s?.__typename ===
+                        "CaseStudies_postsTabsSectionsSection" &&
+                      s.anchorId
+                    ) {
+                      return (
+                        <p key={k}>
+                          <AnchorLink
+                            anchorId={`#${s.anchorId || ""}`}
+                            title={s.title}
+                          >
+                            {s.title}
+                          </AnchorLink>
+                        </p>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            </Section>
+          );
+        default:
+          return null;
+      }
+    });
+  }
 
   return (
     <Layout data={globalData} showFloatingActions={true}>
@@ -212,136 +323,14 @@ export default function CaseStudiesPost({
         <div className="spacer-lg" />
         <div className={`row justify-content-center`}>
           <div className="col-lg-10 col-xl-8">
-            {sections?.map((section) => {
-              switch (section?.__typename) {
-                case "CaseStudies_postsSectionsSection":
-                  return (
-                    <Section
-                      key={window.crypto.randomUUID()}
-                      anchorId={section.anchorId}
-                      title={section.title}
-                      showSectionTitle={section.showSectionTitle}
-                    >
-                      {section.blocks?.map((block) => {
-                        let blockComponent;
-                        const richTextComponents = {
-                          spacer: Spacer,
-                          divider: Divider,
-                        };
-                        switch (block?.__typename) {
-                          case "CaseStudies_postsSectionsSectionBlocksSpacer":
-                            if (block.size) {
-                              const size = block.size.toLowerCase() as
-                                | "sm"
-                                | "md"
-                                | "lg"
-                                | "xl";
-                              blockComponent = <Spacer size={size} />;
-                            }
-                            break;
-                          case "CaseStudies_postsSectionsSectionBlocksDivider":
-                            blockComponent = <Divider />;
-                            break;
-                          case "CaseStudies_postsSectionsSectionBlocksImageWithCaption":
-                            if (block.image) {
-                              blockComponent = (
-                                <ArticleImage
-                                  image={block.image}
-                                  title={block.title}
-                                  caption={block.caption}
-                                  enableZoom={block.enableZoom}
-                                />
-                              );
-                            }
-                            break;
-                          case "CaseStudies_postsSectionsSectionBlocksImageSlider":
-                            if (block.slides) {
-                              blockComponent = (
-                                <ImageSlider images={block.slides} />
-                              );
-                            }
-                            break;
-                          case "CaseStudies_postsSectionsSectionBlocksOneColumn":
-                            blockComponent = (
-                              <TinaMarkdown
-                                content={block.content}
-                                components={richTextComponents}
-                              />
-                            );
-                            break;
-                          case "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_1":
-                            blockComponent = (
-                              <TwoColumn11
-                                col1={block.col1}
-                                col2={block.col2}
-                              />
-                            );
-                            break;
-                          case "CaseStudies_postsSectionsSectionBlocksTwoColumn_1_2":
-                            blockComponent = (
-                              <TwoColumn12
-                                col1={block.col1}
-                                col2={block.col2}
-                              />
-                            );
-                            break;
-                          case "CaseStudies_postsSectionsSectionBlocksThreeColumn_1_1_1":
-                            blockComponent = (
-                              <ThreeColumn111
-                                col1={block.col1}
-                                col2={block.col2}
-                                col3={block.col3}
-                              />
-                            );
-                            break;
-                          default:
-                            blockComponent = null;
-                            break;
-                        }
-                        return (
-                          <div key={window.crypto.randomUUID()}>
-                            {blockComponent}
-                          </div>
-                        );
-                      })}
-                    </Section>
-                  );
-                case "CaseStudies_postsSectionsSection_links":
-                  return (
-                    <Section
-                      key={window.crypto.randomUUID()}
-                      title={section.title}
-                      showSectionTitle
-                      centerTitle
-                    >
-                      <div className="row justify-content-center">
-                        <div className="col-md-8 col-lg-6">
-                          {sections?.map((section) => {
-                            if (
-                              section?.__typename ===
-                                "CaseStudies_postsSectionsSection" &&
-                              section.anchorId
-                            ) {
-                              return (
-                                <p key={window.crypto.randomUUID()}>
-                                  <AnchorLink
-                                    anchorId={`#${section.anchorId || ""}`}
-                                    title={section.title}
-                                  >
-                                    {section.title}
-                                  </AnchorLink>
-                                </p>
-                              );
-                            }
-                          })}
-                        </div>
-                      </div>
-                    </Section>
-                  );
-                default:
-                  return null;
-              }
-            })}
+            <Tabs
+              tabs={(tabs ?? [])
+                .filter((tab): tab is NonNullable<typeof tab> => tab != null)
+                .map((tab) => ({
+                  label: tab.label,
+                  children: renderSections(tab.sections),
+                }))}
+            />
             <div className="spacer-md" />
             <NextPrevPost
               nextPost={{

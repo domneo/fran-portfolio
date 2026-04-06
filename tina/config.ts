@@ -715,9 +715,28 @@ const caseStudiesPostsCollection: Collection = {
     {
       type: "object",
       list: true,
-      name: "sections",
-      label: "Sections",
-      templates: [generateSection(), generateSectionLinks()],
+      name: "tabs",
+      label: "Tabs",
+      fields: [
+        {
+          type: "string",
+          name: "label",
+          label: "Label",
+          required: true,
+        },
+        {
+          type: "object",
+          list: true,
+          name: "sections",
+          label: "Sections",
+          templates: [generateSection(), generateSectionLinks()],
+        },
+      ],
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.label };
+        },
+      },
     },
   ],
   ui: {
