@@ -93,16 +93,22 @@ tabs:
                  * i.e. CRUD (create, read, update, delete) + Approval actions
             _template: oneColumn
         _template: section
-      - anchorId: user_journey
-        title: User Journey Map
+      - anchorId: creating_logic
+        title: O4. Creating Logic & Access Controls
         showSectionTitle: true
         blocks:
-          - slides:
-              - image: /symplicured/symplicured - journey map 1.png
-                title: user journey map 1
-              - image: /symplicured/symplicured - journey map 2.png
-                title: user journey map 2
-            _template: imageSlider
+          - content: |
+              Once both research pieces were complete, we started working on the access control logic.
+
+              Here, our goal was to strip away the complexity of manual permission-setting, which often leads to user error and security gaps. We worked closely with a small user group to determine the rights for each archetype, for each module. This was then carefully documented for the developers to hardcode the archetypes with the specific rights.
+
+              While this seems like a rigid way to control rights, this was intentionally done to overcome an inherent problem of Access Control - the ‘Bootstrap Paradox’. It is a chicken-and-egg problem:
+
+              * If there is no **Super Admin** defined, the System cannot propagate a chain of command
+              * If modules have no roles with **owner-type rights**, the System itself cannot run as the modules would be unusable
+
+              Our solution was a foundational/master logic within the backend that ensures the System is operational from the moment of deployment.
+            _template: oneColumn
         _template: section
       - anchorId: problem_space
         title: 'Credibility: The Problem Space '
