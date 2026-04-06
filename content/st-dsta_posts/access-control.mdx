@@ -110,16 +110,21 @@ tabs:
               Our solution was a foundational/master logic within the backend that ensures the System is operational from the moment of deployment.
             _template: oneColumn
         _template: section
-      - anchorId: problem_space
-        title: 'Credibility: The Problem Space '
+      - anchorId: user_testing
+        title: O5. User Testing the Design
         showSectionTitle: true
         blocks:
           - content: |
-              After speaking to users and performing usability tests on the website, we uncovered a problem space that wasn't initially identified by the client or the team - user perceptions of how credible the website and service was.
+              Access Controls is divided into 2 areas.
+
+              **1. Role Management**
+
+              This is a centralised dashboard in the form of a table that serves as the source of truth. Here, Super Admins can quickly verify which modules are active for each role and see a "Read-Only" summary of the hardcoded rights, maintaining clarity without allowing for accidental logic breaks.
+
+              **2. Organizational Chart**
+
+              This is a dynamic Org Chart where roles and permissions are localized into ‘Nodes’. Each node represents a specific role. When users log into the System, they are connected to a role by an external security system. Access Controls determines the module and archetype-specific permissions required for that user within the chain of command. This turns a complex backend database task into a simple, visual "drag-and-drop" exercise.
             _template: oneColumn
-          - image: /symplicured/symplicured - problem space.png
-            title: Identified problem space
-            _template: imageWithCaption
         _template: section
       - anchorId: problem_reframe
         title: Problem Statement & Reframing
