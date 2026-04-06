@@ -57,19 +57,26 @@ tabs:
             _template: oneColumn
         _template: section
       - anchorId: bottom_line
-        title: 'Strategy: Focusing On The Bottom Line'
+        title: O2. Research - Understanding User Roles & Permissions
         showSectionTitle: true
         blocks:
           - content: |
-              Due to constraints on time and large target user base, a strategic decision was made to focus our efforts on users who face the most difficulty - caregivers. This identified persona is an individual who uses the symptom checkers on behalf of their dependents who may not be able to express themselves. So there is an added difficulty when reporting their dependent's medical issues as a 3rd party to a symptom checker.
+              To begin, we first engaged users of a higher level of command to obtain their chain of command.
+
+              This was important as it allowed us to:
+
+              * Match user group to module
+              * Identify archetypes and device-access within each module
+              * Eventually map out the default and master configuration so that the System can be used upon deployment
+
+              From the research, we identified three primary archetypes within each module:
+
+              * **Super Admin**: Needs overall visibility and ‘master controls’
+              * **Manager**: Needs overall visibility and control within their domain
+              * End User: Needs a straightforward and "noise-free" experience where only relevant tools are visible
+
+              Depending on the module, the different archetypes have different devices to access the system - desktop or mobile. Additionally, we found out that the chain of command could be changed depending on the type of operations the users will undertake.
             _template: oneColumn
-          - size: sm
-            _template: spacer
-          - image: /symplicured/bottom line.png
-            title: caregiver situation
-            _template: imageWithCaption
-          - size: sm
-            _template: spacer
           - content: |
               By empowering caregivers who use symptom checkers on behalf of their dependents with an easier and better experience, we would also inevitably enhance the experience for all digital patients.
             _template: oneColumn
