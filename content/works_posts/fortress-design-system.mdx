@@ -1,0 +1,224 @@
+---
+summary: Created and defined Castlery's Fortress Design System - a cross-platform atomic design system. Further established guides for use and workflows with the tech team for staggered site-wide implementation to ensure that business functionalities are not affected.
+background: |
+  ## Background
+
+  latform and lacked a central UI kit. This lead to inconsistent shopping experiences for our users and slow speed to market for features. At the time, I was managing the mobile team and was frustrated by the wasted design effort due to silos and lack of a UI kit. We knew our customers shop across features, devices, and platforms and we believe experiences should be intuitive, on-brand, and cohesive wherever customers choose us.
+anchorLinksTitle: Key Takeaways
+title: Constructing Fortress
+subtitle: 'CASTLERY: design system'
+overview: |
+  Created and defined Castlery's Fortress Design System - a cross-platform atomic design system. Currently implementing Fortress purposefully through staggered and non-intrusive site-wide implementation. This involved establishing guides for use and workflows, and aligning with overall business requirements to ensure that core business functionalities are not affected.
+tabs:
+  - label: Overview
+    sections:
+      - anchorId: ''
+        title: Overview
+        showSectionTitle: false
+        blocks:
+          - col1: |
+              #### TEAM
+            col2: |
+              UX Designer (Me) ⋆ Senior Frontend Engineer
+            _template: twoColumn_1_2
+          - size: sm
+            _template: spacer
+          - col1: |
+              #### TOOLS
+            col2: |
+              Figma ⋆ Figjam ⋆ Chromatic ⋆ Storybook
+            _template: twoColumn_1_2
+          - size: sm
+            _template: spacer
+          - col1: |
+              #### PROCESS
+            col2: |
+              UI Audit ⋆ Competitive Analysis ⋆ Design System & Component Definition ⋆ Stakeholder Discussions ⋆ Implementation
+            _template: twoColumn_1_2
+          - size: sm
+            _template: spacer
+          - col1: |
+              #### OUTCOME
+            col2: |
+              * Cohesive end-to-end experiences across the shopping journey for 5 user groups
+                * Consumers (Young Families, Multi-generational Families, New Homeowners, Pet Owners), Sales staff
+
+              <!---->
+
+              * Optimised UI components for more intentional and intuitive interactions
+                * E.g. Revamped primary and global navigation bars to improve  accessibility, reduce visual load, increase clickthrough, etc.
+
+              <!---->
+
+              * Design System evangelism and stakeholders’ buy in
+                * Product and business stakeholders awareness of what a design system is and how it impacts development
+                * Gained support and design and engineering effort for implementing a design system
+
+              <!---->
+
+              * Expanded DS beyond the e-Commerce website
+                * Point-of-sale (POS) system
+                * Inventory management system
+            _template: twoColumn_1_2
+          - size: sm
+            _template: spacer
+          - col1: |
+              #### IN NUMBERS
+            col2: |
+              * 3 Countries, multi-device
+                * Singapore, Australia, United States
+                * Desktop, Mobile, POS system for all showrooms
+
+              <!---->
+
+              * Popups sitewide reduced by 50% with better UI alternatives
+
+              <!---->
+
+              * Overall frontend and UX teams’ visual design work reduced by at least 25%
+
+              <!---->
+
+              * Overall frontend developer efficiency improved by 25%
+                * i.e. Work that takes 2 days now takes 1.5 days to complete
+
+              <!---->
+
+              * Further implementation in 2 more countries - Canada, United Kingdom
+            _template: twoColumn_1_2
+        _template: section
+  - label: Process
+    sections:
+      - anchorId: ''
+        title: Background
+        showSectionTitle: true
+        blocks:
+          - content: |
+              Historically, the features and components on Castlery's eCommerce site have been created and maintained on an on-demand basis without a UX team - the creative team designs visuals, and the frontend developers determine the requirements and hard-code these features. This led to inconsistent shopping experiences and UI, low web accessibility awareness, a "popup hell", and long time to market for features and improvements. This was the situation I faced, as part of a newly hired 2-person UX team.
+
+              On one hand, we believed that shopping experiences should be consistent, intuitive, and on-brand regardless of our customers' device type. On the other, we wanted our developers to have a more efficient and effective way of developing and maintaining the eCommerce site across 3 markets. So, together with a senior frontend developer, we created the first design system for Castlery - the Fortress Design System, from the ground up.
+            _template: oneColumn
+        _template: section
+      - title: Process
+        _template: section_links
+      - anchorId: Fortress
+        title: 'O1. Fortress: Starting From Zero'
+        showSectionTitle: true
+        blocks:
+          - content: |
+              With no design system or any existing documentation of site elements and visuals, I began by conducting an internal audit of all existing elements and components before categorizing them into their respective component types and variants. I found:
+
+              * Dozens of buttons styles, incorrectly applied font weights, and single-use icons everywhere
+              * Many areas failing accessibility standards
+              * Different component types either serving the same purpose or used incorrectly
+              * Missing components
+                * For example, toasts and popovers did not exist; all feedback indicators were popups
+            _template: oneColumn
+          - size: sm
+            _template: spacer
+          - content: |
+              Next, I started working on the foundational elements before moving onto streamlining and building actual components for the site. I cross referenced the brand guidebook with an existing CSS style sheet from the front end developers, then narrowed down colour use, identified utility colours, established naming conventions, set up tokens and variables, etc. It was an iterative and time consuming process to:
+
+              1. Recreate and/or streamline the components before reviewing it with the front end developers
+              2. Piece the components into key high fidelity screens and/or prototypes (wherever needed) in mobile and desktop views to communicate and review the design and functionality with key stakeholders who were not versed in UI creation
+            _template: oneColumn
+          - size: sm
+            _template: spacer
+          - image: /fortress 1.png
+            title: fortress foundations
+            _template: imageWithCaption
+          - size: sm
+            _template: spacer
+          - content: |
+              As the component library was slowly built up, the components were used in mid-fidelity screens for design review sessions with the creative team for visual/aesthetic alignment. It was an interesting experience as we shared our know-hows and I could share the benefits of text and colour accessibility with them. Eventually, the Fortress Design System was built up into a Foundation library, that contained layout specifications, pre-atoms, tokens, etc., and a component library.
+            _template: oneColumn
+          - size: sm
+            _template: spacer
+          - image: /fortress 2.png
+            title: fortress components 1
+            _template: imageWithCaption
+          - image: /fortress 3.png
+            title: fortress components 2
+            _template: imageWithCaption
+          - size: sm
+            _template: spacer
+          - content: |
+              Where required, the component library utilised Figma's Dev Mode features, and included:
+
+              * Specific and unique UI component names, and tech and design requirements to avoid miscommunication between designers and developers
+                * This needed to be clear so that the components would work as they were supposed to without error
+              * Brief notes and specifications: For developers and designers to understand more about the components and functions
+              * State changes: Recommended defaults and the subsequent changes in appearance.
+              * Breakpoints: Any size indication and breakpoints for developers.
+            _template: oneColumn
+        _template: section
+      - anchorId: structure_scalability
+        title: 'O2. Structure, Scalability'
+        showSectionTitle: true
+        blocks:
+          - content: |
+              The Fortress Design System was intentionally divided into its Foundational and Component libraries to futureproof the design system. This structure ensures that Fortress can be scaled up and expanded for future implementations into other systems that Castlery uses, namely the POS system and the management platform. These platforms have different interfaces, users, and user needs that differ from the general e-Commerce website.
+
+              The foundation library is set up with tokens and variables, from which the eCommerce component library mainly draws from. As the design system scales up, future component libraries serving the POS and management system will also be able to draw from the same foundational library, ensuring atomic consistency across all platforms. (More information about the component library is in the section above.)
+            _template: oneColumn
+        _template: section
+      - anchorId: adoption_implementation
+        title: 'O3. Collaboration: Opportunity For Adoption & Implementation'
+        showSectionTitle: true
+        blocks:
+          - content: |
+              The main constraint we faced when implementing Fortress was the inability to push for a sitewide UI overhaul as it would be disruptive to the day-to-day business. As such, we had to figure out how to implement Fortress in phases.
+
+              Together with the main front-end developer for Fortress and the different project managers, we were able to integrate the development of Fortress components with their own projects. This process was made easier as both the main UX designer (myself) and the main senior front-end developer were already involved in the same projects with the PMs.
+
+              Together with the main front-end developer for Fortress and the different project managers, we were able to integrate the development of Fortress components with their own projects. This process was made easier as both the main UX designer (myself) and the main senior front-end developer were already involved in the same projects with the PMs.
+            _template: oneColumn
+        _template: section
+      - anchorId: business_value
+        title: 'O4. Talking Business: Value of Design'
+        showSectionTitle: true
+        blocks:
+          - content: |
+              It was difficult to advocate for UX in a company that mainly sees UX as UI. Teams typically do not involve UX in their user flows, system flows, or service blueprint education until they need an interface done.
+
+              Without a senior or lead UX designer to learn from and shadow, one of the hardest things I had to learn and perform on my own (as the UX designer responsible for Fortress) was communicating the value of design and translating this into impact for business stakeholders' buy in.
+
+              As such, I had to find a way to show how a largely UI project like Fortress can provide tangible impact to the company. I spoke about design systems at product monthlies, called out Fortress updates, and showed demos of what the completed pages would look like with Fortress.
+
+              Ultimately, I came up with a roadmap for Fortress that involved not just construction, but also implementation, rollout in phases, and even the migration of hard-coded pages into [modular CMS pages](https://frn-cne.vercel.app/works/3-storyblok). This was particularly tricky given that I had limited visibility on other initiatives, but I managed to sort it out by working with the Product Head to identify any overlaps.
+            _template: oneColumn
+        _template: section
+      - anchorId: pos_system
+        title: O5. 2024 Update
+        showSectionTitle: true
+        blocks:
+          - content: |
+              #### Q4 2023 update
+
+              I'm happy to report that Fortress has since been adopted into the Point-of-Sale (POS) refactoring initiative. This adoption into the POS system aligns with predictions made at Fortress' conception, marking a strategic milestone and huge win in implementation.
+
+              The 2-person UX team worked closely with the frontend developers as well as the sales staff to not just adopt the Fortress UI, but also optimise existing user interactions and the overall interface of the POS system. The POS system revamp and refactoring was successfully completed in Q1 2024 :-D
+            _template: oneColumn
+          - size: md
+            _template: spacer
+          - slides:
+              - image: /pos 1.png
+                title: before & after - landing
+                enableZoom: true
+              - image: /pos 2.png
+                title: before & after - pre-checkout to checkout
+                enableZoom: true
+              - image: /pos 3.png
+                title: before & after - checkout
+                enableZoom: true
+              - image: /pos 4.png
+                title: before & after - disposal
+                enableZoom: true
+              - image: /pos 5.png
+                title: before & after - payment
+                enableZoom: true
+            _template: imageSlider
+        _template: section
+---
+
+
