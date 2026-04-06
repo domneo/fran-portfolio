@@ -1,0 +1,42 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.tablist {
+  display: flex;
+  border-bottom: 1px solid var(--black);
+}
+
+.tab {
+  --tab-border-width: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem calc(0.75rem - var(--tab-border-width));
+  background: transparent;
+  border: none;
+  border-bottom: var(--tab-border-width) solid transparent;
+  cursor: pointer;
+  color: var(--black);
+
+  &:hover {
+    color: var(--black);
+    border-bottom-color: var(--rosetaupe);
+  }
+
+  &.active {
+    border-bottom-color: var(--black);
+    font-weight: 600;
+  }
+}
+
+.activeIcon {
+  opacity: 0;
+}
+
+.activeIconVisible {
+  opacity: 1;
+}
