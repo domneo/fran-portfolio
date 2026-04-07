@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Layout from "components/Layout";
+import { WireframeCastlery } from "components/common/WireframeCastlery";
 import { type GetStaticProps, type InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import styles from "styles/Home.module.scss";
@@ -111,7 +112,15 @@ export default function Home({
           </div>
         </div>
       </section>
-      <div className="spacer-lg"></div>
+      <div className="spacer-xl"></div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <WireframeCastlery />
+          </div>
+        </div>
+      </div>
+      <div className="spacer-xl"></div>
       <section className={classNames([styles.works, styles.section])}>
         <div className="container">
           <div className="row">
