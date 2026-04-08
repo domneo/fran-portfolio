@@ -32,7 +32,7 @@ export const WireframeCastlery = () => {
   return (
     <div className={styles.container}>
       <p className={styles.title}>{title}</p>
-      <div className={styles.layout}>
+      <div className={styles.castleryLayout}>
         <svg
           width="100%"
           height="100%"
@@ -484,7 +484,7 @@ export const WireframeCastlery = () => {
             text="Room Builder"
             href="/castlery/room-designer"
             align="right"
-            style={{ bottom: "14%", left: "-4%" }}
+            style={{ bottom: "14%", left: "-4%", paddingLeft: "4%" }}
           />
         </div>
       </div>

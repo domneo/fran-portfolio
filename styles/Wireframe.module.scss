@@ -30,8 +30,10 @@
   }
 }
 
-.layout {
+.castleryLayout,
+.stdstaLayout {
   --wireframe-color: var(--black);
+  --wireframe-stroke: var(--black);
   width: 100%;
   position: relative;
   display: flex;
@@ -81,10 +83,22 @@
 }
 
 .linkAnchor {
+  border-bottom: 1px solid var(--black);
+  transition: 0.3s border-color;
+
+  &:hover,
+  &:focus {
+    border-color: var(--rosetaupe);
+  }
+
   @media (min-width: 768px) {
     position: absolute;
     left: 0px;
     right: 0px;
+  }
+
+  @media (min-width: 1800px) {
+    border-bottom-width: 1.5px;
   }
 
   &.align-left {
@@ -103,18 +117,14 @@
 .link {
   display: block;
   padding-bottom: 4px;
-  border-bottom: 1px solid var(--black);
   border-radius: 0px;
   color: var(--black);
   font-size: 14px;
   text-decoration: none;
-  transition:
-    0.3s color,
-    0.3s border-color;
+  transition: 0.3s color;
 
   &:hover,
   &:focus {
-    border-color: var(--rosetaupe);
     color: var(--rosetaupe);
     font-weight: 600;
     text-decoration: none;
@@ -123,14 +133,10 @@
   @media (min-width: 768px) {
     font-size: 16px;
   }
-
-  @media (min-width: 1800px) {
-    border-bottom-width: 1.5px;
-  }
 }
 
-.layout:has(.link-fortress-design-system:hover),
-.layout:has(.link-fortress-design-system:focus) {
+.castleryLayout:has(.link-fortress-design-system a:hover),
+.castleryLayout:has(.link-fortress-design-system a:focus) {
   :global(g#nav),
   :global(g#content > rect),
   :global(g#image > rect),
@@ -146,8 +152,8 @@
   }
 }
 
-.layout:has(.link-responsive-design:hover),
-.layout:has(.link-responsive-design:focus) {
+.castleryLayout:has(.link-responsive-design a:hover),
+.castleryLayout:has(.link-responsive-design a:focus) {
   :global(g#content > rect),
   :global(g#image > rect),
   :global(g#cta > rect) {
@@ -155,8 +161,8 @@
   }
 }
 
-.layout:has(.link-self-authored-content:hover),
-.layout:has(.link-self-authored-content:focus) {
+.castleryLayout:has(.link-self-authored-content a:hover),
+.castleryLayout:has(.link-self-authored-content a:focus) {
   :global(g#content > rect),
   :global(g#product),
   :global(g#model),
@@ -167,9 +173,101 @@
   }
 }
 
-.layout:has(.link-room-designer:hover),
-.layout:has(.link-room-designer:focus) {
+.castleryLayout:has(.link-room-designer a:hover),
+.castleryLayout:has(.link-room-designer a:focus) {
   :global(g[id="room builder"]) {
     --wireframe-color: var(--rosetaupe);
+  }
+}
+
+.stdstaLayout:has(.link-integrated-map a:hover),
+.stdstaLayout:has(.link-integrated-map a:focus) {
+  :global(g[id="map icon"] > rect),
+  :global(g[id="map icon_2"] > rect),
+  :global(g#item_5),
+  :global(g#item_6),
+  :global(g#item_7),
+  :global(g#item_8),
+  :global(g#item_9),
+  :global(g#item_15),
+  :global(g#item_16),
+  :global(g#menu) {
+    --wireframe-fill: var(--rosetaupe);
+    --wireframe-stroke: var(--rosetaupe);
+  }
+  :global(g#map path#map_2),
+  :global(g#visibility),
+  :global(g#add),
+  :global(g#remove),
+  :global(g#straighten),
+  :global(g#explore),
+  :global(g#home),
+  :global(g#search),
+  :global(g#item_10),
+  :global(g#item_11),
+  :global(g#item_12),
+  :global(g#item_13),
+  :global(g#item_14),
+  :global(g#item_17),
+  :global(g#stacks) {
+    --wireframe-color: var(--white);
+  }
+  :global(g#content > rect),
+  :global(g#fmd_bad),
+  :global(g#fmd_bad_3),
+  :global(g#fmd_bad_5) {
+    --wireframe-color: var(--rosetaupe);
+  }
+}
+
+.stdstaLayout:has(.link-project-design-system a:hover),
+.stdstaLayout:has(.link-project-design-system a:focus) {
+  :global(g[id="map icon"] > rect),
+  :global(g[id="map icon_2"] > rect),
+  :global(g[id="settings icon"] > rect),
+  :global(g#item_5),
+  :global(g#item_6),
+  :global(g#item_7),
+  :global(g#item_8),
+  :global(g#item_9),
+  :global(g#item_15),
+  :global(g#item_16),
+  :global(g#menu) {
+    --wireframe-stroke: var(--rosetaupe);
+  }
+  :global(g[id="primary nav"] > rect),
+  :global(g#content > rect),
+  :global(g#map path#map_2),
+  :global(g#settings),
+  :global(g#visibility),
+  :global(g#add),
+  :global(g#remove),
+  :global(g#straighten),
+  :global(g#explore),
+  :global(g#home),
+  :global(g#search),
+  :global(g#item),
+  :global(g#item_2),
+  :global(g#item_3),
+  :global(g#item_4),
+  :global(g#item_10),
+  :global(g#item_11),
+  :global(g#item_12),
+  :global(g#item_13),
+  :global(g#item_14),
+  :global(g#item_17),
+  :global(g#stacks) {
+    --wireframe-color: var(--rosetaupe);
+  }
+}
+
+.stdstaLayout:has(.link-access-control a:hover),
+.stdstaLayout:has(.link-access-control a:focus) {
+  :global(g[id="settings icon"] > rect) {
+    --wireframe-fill: var(--rosetaupe);
+    --wireframe-stroke: var(--rosetaupe);
+  }
+  :global(g#settings) {
+    --wireframe-color: var(--white);
   }
 }
