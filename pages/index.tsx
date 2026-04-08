@@ -92,7 +92,18 @@ export default function Home({
 
   return (
     <Layout data={globalData} showFloatingActions={false}>
-      <div className="spacer-lg d-none d-sm-block"></div>
+      <style jsx global>
+        {`
+          html {
+            @media (min-width: 992px) {
+              --header-height: 68px;
+              --footer-height: 52px;
+              scroll-snap-type: block mandatory;
+              scroll-padding: var(--header-height);
+            }
+          }
+        `}
+      </style>
       <section className={classNames([styles.about, styles.section])}>
         <div className="container">
           <div className="row flex-column flex-lg-row align-items-end gap-4">
@@ -112,82 +123,30 @@ export default function Home({
             </div>
           </div>
         </div>
+        <div className="spacer-lg"></div>
       </section>
-      <div className="spacer-xl"></div>
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <WireframeCastlery />
-          </div>
-        </div>
-      </div>
-      <div className="spacer-xl"></div>
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <WireframeSTDSTA />
-          </div>
-        </div>
-      </div>
-      <div className="spacer-xl"></div>
-      <section className={classNames([styles.works, styles.section])}>
+      <section className={classNames([styles.stdsta, styles.section])}>
+        <div className="spacer-lg"></div>
         <div className="container">
           <div className="row">
-            <div className="col-md-10 col-lg-7 col-xxl-5 offset-xxl-1">
-              <h2 className={styles.sectionTitle}>{csTitle}</h2>
-              {csPostList &&
-                csPostList.length > 0 &&
-                csPostList.map((post) => {
-                  if (post) {
-                    return (
-                      <Link
-                        key={crypto.randomUUID()}
-                        href={post.url ?? ""}
-                        className={styles.link}
-                        onClick={(event) => {
-                          if (!post.url) event.preventDefault();
-                        }}
-                      >
-                        {renderPostList(post)}
-                      </Link>
-                    );
-                  }
-                  return null;
-                })}
+            <div className="col-12">
+              <WireframeSTDSTA />
             </div>
           </div>
         </div>
+        <div className="spacer-xl"></div>
       </section>
-      <div className="spacer-lg"></div>
-      <section className={classNames([styles.caseStudies, styles.section])}>
+      <section className={classNames([styles.castlery, styles.section])}>
+        <div className="spacer-lg"></div>
         <div className="container">
           <div className="row">
-            <div className="col-md-10 offset-md-2 col-lg-7 offset-lg-5 col-xxl-5 offset-xxl-6">
-              <h2 className={styles.sectionTitle}>{wTitle}</h2>
-              {wPostList &&
-                wPostList.length > 0 &&
-                wPostList.map((post) => {
-                  if (post) {
-                    return (
-                      <Link
-                        key={crypto.randomUUID()}
-                        href={post.url ?? ""}
-                        className={styles.link}
-                        onClick={(event) => {
-                          if (!post.url) event.preventDefault();
-                        }}
-                      >
-                        {renderPostList(post)}
-                      </Link>
-                    );
-                  }
-                  return null;
-                })}
+            <div className="col-12">
+              <WireframeCastlery />
             </div>
           </div>
         </div>
+        <div className="spacer-lg"></div>
       </section>
-      <div className="spacer-lg"></div>
     </Layout>
   );
 }
