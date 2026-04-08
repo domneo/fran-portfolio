@@ -481,13 +481,6 @@ const worksCollection: Collection = {
             'Either a full URL for external links, or the path to a page in your site (e.g. "/castlery/fortress").',
         },
         {
-          type: "number",
-          name: "index",
-          label: "Index",
-          description: "The post number.",
-          required: true,
-        },
-        {
           type: "string",
           name: "title",
           label: "Title",
@@ -517,12 +510,6 @@ const worksCollection: Collection = {
               return { label: item?.name };
             },
           },
-        },
-        {
-          type: "image",
-          name: "image",
-          label: "Image",
-          required: true,
         },
         {
           type: "boolean",
@@ -638,13 +625,6 @@ const caseStudiesCollection: Collection = {
             'Either a full URL for external links, or the path to a page in your site (e.g. "/castlery/fortress").',
         },
         {
-          type: "number",
-          name: "index",
-          label: "Index",
-          description: "The post number.",
-          required: true,
-        },
-        {
           type: "string",
           name: "title",
           label: "Title",
@@ -674,12 +654,6 @@ const caseStudiesCollection: Collection = {
               return { label: item?.name };
             },
           },
-        },
-        {
-          type: "image",
-          name: "image",
-          label: "Image",
-          required: true,
         },
         {
           type: "boolean",
