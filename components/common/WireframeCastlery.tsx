@@ -472,6 +472,17 @@ export const WireframeCastlery = () => {
           />
         </div>
         <div className={styles.right}>
+          <style jsx global>
+            {`
+              .${styles.right} {
+                --link-room-designer-padding-left: 0;
+
+                @media (min-width: 768px) {
+                  --link-room-designer-padding-left: 4%;
+                }
+              }
+            `}
+          </style>
           <WireframeLink
             id="self-authored-content"
             text="Modular CMS"
@@ -484,7 +495,11 @@ export const WireframeCastlery = () => {
             text="Room Builder"
             href="/castlery/room-designer"
             align="right"
-            style={{ bottom: "14%", left: "-4%", paddingLeft: "4%" }}
+            style={{
+              bottom: "14%",
+              left: "-4%",
+              paddingLeft: "var(--link-room-designer-padding-left)",
+            }}
           />
         </div>
       </div>

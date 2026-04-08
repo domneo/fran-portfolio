@@ -655,12 +655,27 @@ export const WireframeSTDSTA = () => {
           />
         </div>
         <div className={styles.right}>
+          <style jsx global>
+            {`
+              .${styles.right} {
+                --link-access-control-padding-left: 0;
+
+                @media (min-width: 768px) {
+                  --link-access-control-padding-left: 4%;
+                }
+              }
+            `}
+          </style>
           <WireframeLink
             id="access-control"
             text="Org Building & Access Control"
             href="/st-dsta/access-control"
             align="right"
-            style={{ bottom: "95%", left: "-4%", paddingLeft: "4%" }}
+            style={{
+              bottom: "95%",
+              left: "-4%",
+              paddingLeft: "var(--link-access-control-padding-left)",
+            }}
           />
         </div>
       </div>
