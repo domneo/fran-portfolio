@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Layout from "components/Layout";
+import { Banner } from "components/common/Banner";
 import { WireframeCastlery } from "components/common/WireframeCastlery";
 import { WireframeSTDSTA } from "components/common/WireframeSTDSTA";
 import { type GetStaticProps, type InferGetStaticPropsType } from "next";
@@ -104,10 +105,11 @@ export default function Home({
           }
         `}
       </style>
+      <div className="spacer-sm d-lg-none"></div>
       <section className={classNames([styles.about, styles.section])}>
         <div className="container">
-          <div className="row flex-column flex-lg-row align-items-end gap-4">
-            <div className="align-self-start align-self-lg-end d-flex justify-content-end col-6 col-sm-5 offset-sm-1 col-md-4 col-lg-4 offset-lg-0 col-xxl-3 offset-xxl-1 col-max-2 ps-3 pe-0">
+          <div className="row flex-column flex-lg-row align-items-center justify-content-lg-center gap-4">
+            <div className="align-self-start align-self-lg-center d-flex justify-content-end col-6 col-sm-5 offset-sm-1 col-md-4 col-lg-4 offset-lg-0 col-xxl-3 ps-3 pe-0">
               <video
                 src={about?.image}
                 autoPlay
@@ -116,28 +118,47 @@ export default function Home({
                 className={styles.image}
               />
             </div>
-            <div className="col-8 col-lg-7 col-xxl-6 offset-xxl-1 ps-0 ps-lg-3 pe-3">
+            <div className="col-8 col-lg-7 col-xxl-6 ps-0 ps-lg-3 pe-3">
               <div className={styles.body2}>
                 <TinaMarkdown content={about?.body} components={components} />
               </div>
             </div>
           </div>
         </div>
-        <div className="spacer-lg"></div>
       </section>
+      <div className="spacer-xl"></div>
       <section className={classNames([styles.stdsta, styles.section])}>
-        <div className="spacer-lg"></div>
         <div className="container">
           <div className="row">
             <div className="col-12">
               <WireframeSTDSTA />
             </div>
           </div>
+          <div className="spacer-sm"></div>
+          <div className="row justify-content-center">
+            <div className="col-12 col-md-10 col-xl-8">
+              <Banner
+                content={{
+                  type: "root",
+                  children: [
+                    {
+                      type: "p",
+                      children: [
+                        {
+                          type: "text",
+                          text: "The projects here consists of high-classification and confidential materials, which cannot be shared in public. To give you an idea of the nature of the project: I am unable to bring any unauthorized devices into my work environment.",
+                        },
+                      ],
+                    },
+                  ],
+                }}
+              />
+            </div>
+          </div>
         </div>
-        <div className="spacer-xl"></div>
       </section>
+      <div className="spacer-xl"></div>
       <section className={classNames([styles.castlery, styles.section])}>
-        <div className="spacer-lg"></div>
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -145,8 +166,8 @@ export default function Home({
             </div>
           </div>
         </div>
-        <div className="spacer-lg"></div>
       </section>
+      <div className="spacer-lg d-lg-none"></div>
     </Layout>
   );
 }

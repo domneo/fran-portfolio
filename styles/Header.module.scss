@@ -11,6 +11,8 @@
 }
 
 .nav {
+  --bodyBgColor: var(--black);
+  --bodyColor: var(--white);
   position: sticky;
   top: 0;
   left: 0;
@@ -18,6 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--bodyBgColor);
   z-index: 900;
 }
 
@@ -25,14 +28,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.875rem 1rem;
+  padding: 1rem;
 
   @include mixins.media("sm") {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem;
   }
 }
 
 .stars {
+  --starsResetColor: var(--white);
   position: absolute;
   top: 0;
   left: 0;
@@ -40,10 +44,10 @@
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 1.125rem 0;
+  padding: 1rem 0;
 
   @include mixins.media("sm") {
-    padding: 1.5rem 0rem;
+    padding: 1 0rem;
   }
 
   @include mixins.media("xl") {
@@ -55,9 +59,9 @@
   align-items: center;
   justify-content: flex-end;
   gap: 2rem;
-  padding: 0.875rem 1rem;
+  padding: 1rem;
 
   @include mixins.media("sm") {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem;
   }
 }

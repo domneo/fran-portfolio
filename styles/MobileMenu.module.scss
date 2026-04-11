@@ -37,7 +37,7 @@
 .drawer {
   position: fixed;
   inset: 0;
-  background: var(--white);
+  background: var(--trueblack);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,6 +90,7 @@
 }
 
 .stars {
+  --starsResetColor: var(--white);
   grid-area: stars;
   display: flex;
   justify-content: center;

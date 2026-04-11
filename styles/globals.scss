@@ -64,8 +64,9 @@ body {
   @include rfs.font-size(16px);
   font-weight: 400;
   line-height: 1.75;
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0 3rem;
   transition: 0.8s background-color;
 
   &.scroll-lock {
