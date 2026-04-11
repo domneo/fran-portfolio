@@ -1,11 +1,32 @@
 @use "mixins";
 
 .header {
-  margin-top: 2rem;
+  margin-top: 3rem;
   gap: 1rem;
 
   @include mixins.media("sm") {
+    margin-top: 4rem;
     gap: 2rem;
+  }
+  @include mixins.media("lg") {
+    margin-top: 5rem;
+  }
+  @include mixins.media("xxl") {
+    margin-top: 6rem;
+    gap: 3rem;
+  }
+}
+
+.blockWrapper {
+  width: 100%;
+  max-width: 918px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  &.TwoColumn_1_1,
+  &.TwoColumn_1_2,
+  &.ThreeColumn_1_1_1 {
+    max-width: none;
   }
 }
 

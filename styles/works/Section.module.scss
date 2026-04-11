@@ -2,16 +2,12 @@
 
 .title {
   position: sticky;
-  top: 3rem;
+  top: 5rem;
+  padding: 0 1.5rem;
   z-index: 1;
 
-  @include mixins.media("sm") {
-    top: 4rem;
-  }
-
   @include mixins.media("lg") {
-    top: 5rem;
-    margin-left: -2rem;
+    top: 6rem;
   }
 }
 

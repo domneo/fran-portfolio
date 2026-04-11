@@ -207,9 +207,8 @@ export default function WorksPost({
     divider: Divider,
   };
 
-  function renderBlock(block: any) {
+  function renderBlock(block: any, type: any) {
     if (!block) return null;
-    const type = block.__typename?.split("Blocks").pop();
     switch (type) {
       case "Spacer":
         if (block.size) {
@@ -273,9 +272,17 @@ export default function WorksPost({
               title={section.title}
               showSectionTitle={section.showSectionTitle}
             >
-              {section.blocks?.map((block: any, j: number) => (
-                <div key={j}>{renderBlock(block)}</div>
-              ))}
+              {section.blocks?.map((block: any, j: number) => {
+                const type = block.__typename?.split("Blocks").pop();
+                return (
+                  <div
+                    key={j}
+                    className={`${styles.blockWrapper} ${styles[type]}`}
+                  >
+                    {renderBlock(block, type)}
+                  </div>
+                );
+              })}
             </Section>
           );
         case "Works_postsTabsSectionsSection_links":
@@ -318,19 +325,18 @@ export default function WorksPost({
             <h3 className="semibold allcaps">{subtitle}</h3>
             <h1>{title}</h1>
           </div>
-          <div className="caption-all col-12 col-sm-10 offset-sm-2 col-lg-7 offset-lg-3 col-xxl-6 offset-xxl-4">
+          <div className="caption-all col-12 col-sm-10 col-lg-8 col-xl-7">
             <TinaMarkdown content={overview} />
           </div>
           {disclaimer?.children?.length > 0 && (
             <div className="col-12 col-sm-10 col-lg-8 col-xl-7">
-              <div className="spacer-sm" />
               <Banner content={disclaimer} />
             </div>
           )}
         </div>
-        <div className="spacer-lg" />
+        <div className="spacer-md" />
         <div className={`row justify-content-center`}>
-          <div className="col-lg-10 col-xl-8">
+          <div className="col-lg-10">
             <Tabs
               tabs={(tabs ?? [])
                 .filter((tab): tab is NonNullable<typeof tab> => tab != null)
@@ -339,7 +345,7 @@ export default function WorksPost({
                   children: renderSections(tab.sections),
                 }))}
             />
-            <div className="spacer-md" />
+            <div className="spacer-xl" />
             <NextPrevPost
               nextPost={{
                 title:

@@ -17,7 +17,7 @@ export const Section = ({
   children,
 }: SectionProps) => {
   return (
-    <section id={anchorId || ""}>
+    <section id={anchorId || ""} className={styles.section}>
       {showSectionTitle && <div className="spacer-md" />}
       {showSectionTitle && (
         <div className={styles.title}>
@@ -25,9 +25,7 @@ export const Section = ({
             {centerTitle && <div className={styles.lineStart} />}
             <div className="d-flex align-items-center">
               <Stars>
-                <p className="mb-0 semibold allcaps d-none d-md-block">
-                  {title}
-                </p>
+                <p className="mb-0 semibold d-none d-md-block">{title}</p>
               </Stars>
             </div>
             <div className={styles.lineEnd} />
@@ -41,7 +39,7 @@ export const Section = ({
           </p>
         </div>
       )}
-      {showSectionTitle && children && <div className="spacer-sm" />}
+      {showSectionTitle && children && <div className="spacer-md" />}
       {children}
     </section>
   );
