@@ -59,7 +59,7 @@ export const WireframeSTDSTA = () => {
                     height="20.2075"
                     fill="var(--wireframe-fill)"
                     stroke="var(--wireframe-stroke)"
-                    stroke-width="1.18868"
+                    strokeWidth="1.18868"
                   />
                   <g id="map">
                     <mask
@@ -96,7 +96,7 @@ export const WireframeSTDSTA = () => {
                     width="20.2075"
                     height="20.2075"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.18868"
+                    strokeWidth="1.18868"
                   />
                 </g>
                 <g id="item_2">
@@ -106,7 +106,7 @@ export const WireframeSTDSTA = () => {
                     width="20.2075"
                     height="20.2075"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.18868"
+                    strokeWidth="1.18868"
                   />
                 </g>
                 <g id="item_3">
@@ -116,7 +116,7 @@ export const WireframeSTDSTA = () => {
                     width="20.2075"
                     height="20.2075"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.18868"
+                    strokeWidth="1.18868"
                   />
                 </g>
                 <g id="item_4">
@@ -126,7 +126,7 @@ export const WireframeSTDSTA = () => {
                     width="20.2075"
                     height="20.2075"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.18868"
+                    strokeWidth="1.18868"
                   />
                 </g>
               </g>
@@ -138,7 +138,7 @@ export const WireframeSTDSTA = () => {
                   height="19.8333"
                   fill="var(--wireframe-fill)"
                   stroke="var(--wireframe-stroke)"
-                  stroke-width="1.16667"
+                  strokeWidth="1.16667"
                 />
                 <g id="settings">
                   <mask
@@ -186,7 +186,7 @@ export const WireframeSTDSTA = () => {
                     height="49.5"
                     fill="var(--wireframe-fill)"
                     stroke="var(--wireframe-stroke)"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <g id="add">
                     <mask
@@ -251,7 +251,7 @@ export const WireframeSTDSTA = () => {
                     height="25.5"
                     fill="var(--wireframe-fill"
                     stroke="var(--wireframe-stroke)"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <g id="straighten">
                     <mask
@@ -289,7 +289,7 @@ export const WireframeSTDSTA = () => {
                     height="25.5"
                     fill="var(--wireframe-fill"
                     stroke="var(--wireframe-stroke)"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <g id="explore">
                     <mask
@@ -327,7 +327,7 @@ export const WireframeSTDSTA = () => {
                     height="25.5"
                     fill="var(--wireframe-fill"
                     stroke="var(--wireframe-stroke)"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <g id="home">
                     <mask
@@ -365,7 +365,7 @@ export const WireframeSTDSTA = () => {
                     height="25.5"
                     fill="var(--wireframe-fill"
                     stroke="var(--wireframe-stroke)"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <g id="search">
                     <mask
@@ -404,7 +404,7 @@ export const WireframeSTDSTA = () => {
                   height="21.25"
                   fill="var(--wireframe-fill)"
                   stroke="var(--wireframe-stroke)"
-                  stroke-width="1.25"
+                  strokeWidth="1.25"
                 />
                 <g id="visibility">
                   <mask
@@ -442,7 +442,7 @@ export const WireframeSTDSTA = () => {
                   height="21.25"
                   fill="var(--wireframe-fill)"
                   stroke="var(--wireframe-stroke)"
-                  stroke-width="1.25"
+                  strokeWidth="1.25"
                 />
                 <g id="item_10">
                   <rect
@@ -459,7 +459,7 @@ export const WireframeSTDSTA = () => {
                     width="38.75"
                     height="13.75"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.25"
+                    strokeWidth="1.25"
                   />
                 </g>
                 <g id="item_12">
@@ -469,7 +469,7 @@ export const WireframeSTDSTA = () => {
                     width="38.75"
                     height="13.75"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.25"
+                    strokeWidth="1.25"
                   />
                 </g>
                 <g id="item_13">
@@ -479,7 +479,7 @@ export const WireframeSTDSTA = () => {
                     width="38.75"
                     height="13.75"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.25"
+                    strokeWidth="1.25"
                   />
                 </g>
                 <g id="item_14">
@@ -489,7 +489,7 @@ export const WireframeSTDSTA = () => {
                     width="38.75"
                     height="13.75"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.25"
+                    strokeWidth="1.25"
                   />
                 </g>
               </g>
@@ -501,7 +501,7 @@ export const WireframeSTDSTA = () => {
                   height="21.25"
                   fill="var(--wireframe-fill)"
                   stroke="var(--wireframe-stroke)"
-                  stroke-width="1.25"
+                  strokeWidth="1.25"
                 />
                 <g id="stacks">
                   <mask
@@ -539,7 +539,7 @@ export const WireframeSTDSTA = () => {
                   height="25.5"
                   fill="var(--wireframe-fill"
                   stroke="var(--wireframe-stroke)"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
                 <g id="item_17">
                   <rect
@@ -548,7 +548,7 @@ export const WireframeSTDSTA = () => {
                     width="58.5"
                     height="13.5"
                     stroke="var(--wireframe-color)"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                 </g>
               </g>
