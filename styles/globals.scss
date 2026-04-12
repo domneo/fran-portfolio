@@ -77,6 +77,10 @@ body {
   &.scroll-lock {
     overflow: hidden;
   }
+
+  &:has(#password-form) {
+    padding: 0;
+  }
 }
 
 %heading {
