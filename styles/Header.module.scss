@@ -53,6 +53,10 @@
   @include mixins.media("xl") {
     display: flex;
   }
+
+  & > div {
+    height: 24px;
+  }
 }
 
 .menu {
