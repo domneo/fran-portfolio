@@ -22,11 +22,13 @@
   color: var(--black);
 
   &:hover {
-    color: var(--black);
+    color: var(--rosetaupe);
     border-bottom-color: var(--rosetaupe);
+    font-weight: 600;
   }
 
   &.active {
+    color: var(--black);
     border-bottom-color: var(--black);
     font-weight: 600;
   }
