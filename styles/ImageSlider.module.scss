@@ -1,6 +1,7 @@
 @use "mixins";
 
 .container {
+  position: relative;
   margin: 0 -1rem;
 }
 
@@ -10,20 +11,32 @@
 }
 
 %customArrow {
-  background: transparent;
+  --arrowColor: var(--white);
+  position: absolute;
+  top: calc((100% - 44px) / 2);
+  translate: 0 -50%;
+  background: #666666;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 100%;
   margin: 0;
-  padding: 8px;
-  width: 48px;
+  padding: 0.25rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: var(--black);
+  }
 }
 
 .prevArrow {
   @extend %customArrow;
+  left: 0;
 }
 
 .nextArrow {
   @extend %customArrow;
+  right: 0;
   transform: rotate(180deg);
 }

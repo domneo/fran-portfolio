@@ -42,9 +42,15 @@
 
 .nextArrow,
 .prevArrow {
+  --arrowColor: var(--black);
   width: 48px;
   padding: 8px;
   flex-shrink: 0;
+
+  &:hover,
+  &:focus {
+    --arrowColor: var(--rosetaupe);
+  }
 }
 
 .nextArrow {

@@ -13,7 +13,7 @@ export const Arrow = ({ isHovering }: ArrowProps) => {
       >
         <path
           d="M5.20728 9L1.20728 5.00569L5.20728 1"
-          stroke={isHovering ? "var(--rosetaupe)" : "var(--black)"}
+          stroke="var(--arrowColor)"
         />
       </svg>
       <svg
@@ -27,10 +27,7 @@ export const Arrow = ({ isHovering }: ArrowProps) => {
           marginLeft: isHovering ? "-6px" : "4px",
         }}
       >
-        <path
-          d="M16.7925 1.01563L0.79248 1.01563"
-          stroke={isHovering ? "var(--rosetaupe)" : "var(--black)"}
-        />
+        <path d="M16.7925 1.01563L0.79248 1.01563" stroke="var(--arrowColor)" />
       </svg>
     </div>
   );

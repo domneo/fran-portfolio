@@ -118,7 +118,7 @@ export default function Home({
                 className={styles.image}
               />
             </div>
-            <div className="col-8 col-lg-7 col-xxl-6 ps-0 ps-lg-3 pe-3">
+            <div className="col-10 offset-2 col-sm-8 col-lg-7 offset-lg-0 col-xxl-6 ps-0 ps-lg-3 pe-3">
               <div className={styles.body2}>
                 <TinaMarkdown content={about?.body} components={components} />
               </div>

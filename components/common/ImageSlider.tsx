@@ -83,11 +83,11 @@ export class ImageSlider extends Component<ImageSliderProps> {
             }
           })}
         </Slider>
-        <div className="gap-3 py-3 d-flex align-items-center justify-content-center">
-          <PrevArrow onClick={this.onPrev} />
+        <div className="gap-3 py-2 d-flex align-items-center justify-content-center">
           <div>{`${currentImage + 1} / ${pageCount}`}</div>
-          <NextArrow onClick={this.onNext} />
         </div>
+        <PrevArrow onClick={this.onPrev} />
+        <NextArrow onClick={this.onNext} />
       </div>
     );
   }
