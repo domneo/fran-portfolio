@@ -4,8 +4,12 @@
   margin: 0 auto;
 
   @media (min-width: 992px) {
-    height: calc(100vh - var(--header-height) - var(--footer-height));
-    scroll-snap-align: center;
+    height: calc(
+      100vh - var(--header-height) - var(--tracker-height) - var(
+          --footer-height
+        )
+    );
+    scroll-snap-align: start;
 
     & > :global(.container) {
       height: 100%;
@@ -66,4 +70,10 @@
 .stdsta,
 .castlery {
   scroll-snap-stop: always;
+}
+
+.sectionTracker {
+  position: sticky;
+  bottom: 1.5rem;
+  padding: 0 1.5rem;
 }

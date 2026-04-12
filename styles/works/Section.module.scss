@@ -1,14 +1,7 @@
 @use "../mixins";
 
 .title {
-  position: sticky;
-  top: 5rem;
   padding: 0 1.5rem;
-  z-index: 1;
-
-  @include mixins.media("lg") {
-    top: 6rem;
-  }
 }
 
 .lineStart,

@@ -1,0 +1,122 @@
+@use "../mixins";
+
+.tracker {
+  position: sticky;
+  z-index: 1;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+
+  &.positionTop {
+    top: 5rem;
+
+    @include mixins.media("lg") {
+      top: 6rem;
+    }
+  }
+
+  &.positionBottom {
+    bottom: 2rem;
+  }
+}
+
+.line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &.justifyBetween {
+    justify-content: space-between;
+  }
+
+  &.justifyAround {
+    justify-content: space-around;
+  }
+
+  // Connecting line behind dots
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    translate: 0 -50%;
+    height: 1px;
+    background: var(--black);
+  }
+}
+
+.button {
+  --pointColor: var(--black);
+  position: relative;
+  padding: 1rem;
+  margin: -1rem;
+  border: none;
+  border-radius: 100%;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    --pointColor: var(--rosetaupe);
+  }
+}
+
+.point {
+  position: relative;
+}
+
+.tooltipAnchor {
+  anchor-name: --tooltip-anchor;
+  position: absolute;
+  pointer-events: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 2;
+}
+.tracker.positionTop .tooltipAnchor {
+  translate: -50% 2rem;
+}
+.tracker.positionBottom .tooltipAnchor {
+  translate: -50% -3rem;
+}
+
+.tooltip {
+  position: absolute;
+  position-anchor: --tooltip-anchor;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  color: var(--black);
+  background-color: var(--white);
+  white-space: nowrap;
+
+  @media (pointer: coarse) {
+    display: none;
+  }
+}
+.tracker.positionTop .tooltip {
+  position-area: bottom center;
+}
+.tracker.positionBottom .tooltip {
+  position-area: top center;
+}
+
+.focusTooltip {
+  position: absolute;
+  translate: -50% 0;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  color: var(--black);
+  background-color: var(--white);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+}
+.tracker.positionTop .focusTooltip {
+  left: 50%;
+  top: 100%;
+}
+.tracker.positionBottom .focusTooltip {
+  left: 50%;
+  bottom: 100%;
+}

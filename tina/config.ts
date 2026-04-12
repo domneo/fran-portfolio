@@ -247,6 +247,24 @@ const generateSection = (): Template => ({
     },
   },
 });
+const generateSectionTracker = (): Template => ({
+  name: "section_tracker",
+  label: "Section Tracker",
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+      description: "",
+      required: true,
+    },
+  ],
+  ui: {
+    defaultItem: {
+      title: "Section Tracker",
+    },
+  },
+});
 const generateSectionLinks = (): Template => ({
   name: "section_links",
   label: "Section Links",
@@ -581,7 +599,11 @@ const worksPostsCollection: Collection = {
           list: true,
           name: "sections",
           label: "Sections",
-          templates: [generateSection(), generateSectionLinks()],
+          templates: [
+            generateSection(),
+            generateSectionLinks(),
+            generateSectionTracker(),
+          ],
         },
       ],
       ui: {
@@ -725,7 +747,11 @@ const caseStudiesPostsCollection: Collection = {
           list: true,
           name: "sections",
           label: "Sections",
-          templates: [generateSection(), generateSectionLinks()],
+          templates: [
+            generateSection(),
+            generateSectionLinks(),
+            generateSectionTracker(),
+          ],
         },
       ],
       ui: {

@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Layout from "components/Layout";
+import { SectionTracker } from "components/works/SectionTracker";
 import { Banner } from "components/common/Banner";
 import { WireframeCastlery } from "components/common/WireframeCastlery";
 import { WireframeSTDSTA } from "components/common/WireframeSTDSTA";
@@ -98,6 +99,7 @@ export default function Home({
           html {
             @media (min-width: 992px) {
               --header-height: 68px;
+              --tracker-height: 60px;
               --footer-height: 52px;
               scroll-snap-type: block mandatory;
               scroll-padding: var(--header-height);
@@ -106,7 +108,11 @@ export default function Home({
         `}
       </style>
       <div className="spacer-sm d-lg-none"></div>
-      <section className={classNames([styles.about, styles.section])}>
+      <section
+        id="about"
+        className={classNames([styles.about, styles.section])}
+      >
+        <div className="spacer-sm d-none d-lg-block"></div>
         <div className="container">
           <div className="row flex-column flex-lg-row align-items-center justify-content-lg-center gap-4">
             <div className="align-self-start align-self-lg-center d-flex justify-content-end col-6 col-sm-5 offset-sm-1 col-md-4 col-lg-4 offset-lg-0 col-xxl-3 ps-3 pe-0">
@@ -127,7 +133,11 @@ export default function Home({
         </div>
       </section>
       <div className="spacer-xl"></div>
-      <section className={classNames([styles.stdsta, styles.section])}>
+      <section
+        id="st-dsta"
+        className={classNames([styles.stdsta, styles.section])}
+      >
+        <div className="spacer-sm d-none d-lg-block"></div>
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -158,7 +168,10 @@ export default function Home({
         </div>
       </section>
       <div className="spacer-xl"></div>
-      <section className={classNames([styles.castlery, styles.section])}>
+      <section
+        id="castlery"
+        className={classNames([styles.castlery, styles.section])}
+      >
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -168,6 +181,17 @@ export default function Home({
         </div>
       </section>
       <div className="spacer-lg d-lg-none"></div>
+      <div className={styles.sectionTracker}>
+        <SectionTracker
+          sections={[
+            { anchorId: "about", title: "About" },
+            { anchorId: "st-dsta", title: "ST - DSTA" },
+            { anchorId: "castlery", title: "Castlery" },
+          ]}
+          position="bottom"
+        />
+      </div>
+      <div className="spacer-sm"></div>
     </Layout>
   );
 }

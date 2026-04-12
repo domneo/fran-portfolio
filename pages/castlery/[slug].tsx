@@ -10,6 +10,7 @@ import { TwoColumn11 } from "components/common/TwoColumn11";
 import { TwoColumn12 } from "components/common/TwoColumn12";
 import { NextPrevPost } from "components/works/NextPrevPost";
 import { Section } from "components/works/Section";
+import { SectionTracker } from "components/works/SectionTracker";
 import { Tabs } from "components/works/Tabs";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import styles from "styles/WorksPost.module.scss";
@@ -129,6 +130,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             }
           }
           ... on Works_postsTabsSectionsSection_links {
+            title
+          }
+          ... on Works_postsTabsSectionsSection_tracker {
             title
           }
         }
@@ -310,6 +314,27 @@ export default function WorksPost({
                 </div>
               </div>
             </Section>
+          );
+        case "Works_postsTabsSectionsSection_tracker":
+          const trackerSections = (sections ?? [])
+            .filter(
+              (section) =>
+                section?.__typename === "Works_postsTabsSectionsSection" &&
+                !!section.anchorId,
+            )
+            .map((section) => ({
+              anchorId: section.anchorId,
+              title: section?.title || "",
+            }));
+          return (
+            <>
+              <div className="spacer-md"></div>
+              <SectionTracker
+                key={i}
+                sections={trackerSections}
+                position="top"
+              />
+            </>
           );
         default:
           return null;
