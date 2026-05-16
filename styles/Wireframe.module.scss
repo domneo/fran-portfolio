@@ -271,3 +271,10 @@
     --wireframe-color: var(--white);
   }
 }
+
+.stdstaLayout:has(.link-ux-process a:hover),
+.stdstaLayout:has(.link-ux-process a:focus) {
+  :global(g[id="research"]) {
+    --wireframe-stroke: var(--rosetaupe);
+  }
+}
