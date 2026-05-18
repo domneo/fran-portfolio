@@ -177,24 +177,30 @@ tabs:
               Whenever we require additional validation rounds outside of our bi-weekly user windows, we use Guerrilla Testing. We would adapt the exact same methodologies (card sorting, A/B testing, and prototype evaluations) to run it internally with proxy users to keep design momentum moving forward without stalled timelines.
             _template: oneColumn
         _template: section
-      - anchorId: systempivot
-        title: '04. Phase 4: The System-Level Pivot (From Granular to Operational)'
+      - anchorId: moduledesign
+        title: '04. Develop & Deliver: Evidence-Based Module Design'
         showSectionTitle: true
         blocks:
           - content: |
-              Once individual modules were deployed into a test environment, we hit a roadblock. <mark style="background-color: #BFDBFE">Testing modules and features in isolation (e.g. creating an asset fault and resolving it within Inventory Management module) did not reflect real-world usability.</mark> In an airbase, tasks are not isolated; they are continuous, chaotic, and highly interdependent. Ad-hoc testing was giving us a false sense of security.
+              With the research and data from our research baseline and formative testing loops, I directly owned and designed the following 4 foundational pillars of the new system:
 
-              **Going "Live" on Ops Day**
+              [The Design System](https://frn-cne.vercel.app/st-dsta/project-design-system)
 
-              To get an accurate picture, we requested for an actual trial with the test-system (developed modules that reside in a test environment - the final product will only be handed off once the 10 years is up). The Product Managers managed to negotiate with the users to deploy our test-system during the airbase's quarterly Operations Exercise Day (Ops Day) - day with multiple simulated war-game scenarios involving all airbases, designed to test operational readiness.
+              * Established an updated and centralized UI pattern library, governance rules, and accessible component standards to ensure all individual modules built by different designers maintain a seamless, unified experience.
 
-              This allowed for a chance to see our designs come to life, understand the benefits and shortcomings of the designed capabilities, and to measure the system's usability against as-real-as-possible conditions. Could users operate the software under stress? Did the modules interact seamlessly to produce the required operational results?
+              [Access Controls Module](https://frn-cne.vercel.app/st-dsta/access-control)
 
-              **Preparation & Alignment**
+              * Translated rigid, complex military command structures into intuitive digital user permissions across modules and features
 
-              To pull off a high-fidelity system trial during an active military exercise, I collaborated closely with our UX Architect (UXA) and the designated testing Person-in-Charge (POC) to map the system's technical capabilities directly against the users’ specific war-game scenarios. This step was crucial to pinpoint exactly which module would be deployed, which user groups would interact with it at any given minute, and how data dependencies would flow between the desktop and mobile environments.
+              [Map Module](https://frn-cne.vercel.app/st-dsta/integrated-map)
 
-              Recognizing that <mark style="background-color: #BFDBFE">operational usability goes hand-in-hand with technical reliability</mark>, we decided to integrate the tech teams’ expertise into the testing process. We wanted to look past standard user friction and simultaneously capture hard system performance metrics - such as API latency, data sync speeds, and system responsiveness under high-stress, heavy-load conditions.
+              * Led an architectural shift from a search-based to a discovery-based experience, transforming the legacy map into a unified spatial sensemaking tool that consolidates map-reliant modules for power users
+
+              Inventory Management Module
+
+              * Localized inventory system for specialised users to manage, report faults, and maintain all assets at a functional group level
+
+              *(Read about my work in these modules in their respective pages (I'm still writing on the Design System and Inventory Management). The modules are written separately from the UX process as this page details the research and testing done at a system-level.)*
             _template: oneColumn
         _template: section
       - anchorId: Execution
