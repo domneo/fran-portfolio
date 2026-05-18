@@ -45,12 +45,12 @@ tabs:
                 * Synced technical performance with UX; matching real-time user behavioral timestamps with backend system logs to identify latency and performance issues at exact moments of user friction
                 * Insights provided justification and established requirements for future cross-functional modules
 
-              <!---->
+              <spacer size="sm" />
 
               * Produced scalable living documents (UX Artifacts) based on research and insights
                 * Detailed user workflows, service blueprints that map multi-device touchpoints and complex command chains
 
-              <!---->
+              <spacer size="sm" />
 
               * Established shared source of truth to align priorities and understanding between users/stakeholders, design, and tech
                 * 2-dimensional prioritization matrix that serves as an objective reference point
@@ -106,7 +106,7 @@ tabs:
 
               **Key Learning Point**
 
-              Unlike conventional UX, the personas we develop are constrained role-based personas instead of consumer-facing archetypes. Within a military setting, users are expected to perform their roles, and difference in choices are due to user expertise and situational context. They focus on operational environments, cognitive load under stress, and strict physical and security requirements. Thus, all our users do not, and cannot, fit into personas such as ‘budget bob, who is motivated by discounts’. 
+              Unlike conventional UX, the personas we develop are constrained role-based personas instead of consumer-facing archetypes. Within a military setting, users are expected to perform their roles, and difference in choices are due to user expertise and situational context. They focus on operational environments, cognitive load under stress, and strict physical and security requirements. Thus, all our users do not, and cannot, fit into personas such as ‘budget bob, who is motivated by discounts’.
 
               For example:
 
@@ -129,16 +129,14 @@ tabs:
         showSectionTitle: true
         blocks:
           - content: |
-              With the roadmap set, the team began designing the modules.
-
-              In my role as a UX designer, I took direct ownership of the foundational pillars of the system:
+              With the roadmap set, the team began designing the modules. As a UX designer, I took direct ownership and designed the system's foundational pillars:
 
               1. The Design System
               2. Access Rights
               3. Integrated Map
               4. Inventory Management
 
-              The modules are written separately from the UX process as this page details the research and testing done at a system-level.
+              *(These modules are written separately as this page details the research and testing done at a system-level.)*
 
               Testing in a military environment comes with a strict constraint: We are only granted access to users once every two weeks. To maximize these bi-weekly windows, we utilized targeted usability testing methods:
 
@@ -146,7 +144,9 @@ tabs:
 
               **A/B Testing**: Used to resolve contentious design patterns within the team or with stakeholders before committing to code
 
-              **Wireframe-Prototype Testin**g: Executed at a granular level to answer functional questions, such as: “Is it intuitive for a ground trooper to create an 'Issue' on mobile?” or “Does our new 'Access Controls' concept intuitively reflect their real-world chain of command?”
+              **Wireframe-Prototype Testing**: Executed at a granular level to answer functional questions, such as: “Is it intuitive for a ground trooper to create an 'Issue' on mobile?” or “Does our new 'Access Controls' concept intuitively reflect their real-world chain of command?”
+
+              Where we require results quicky and have no access to users, we relied on **Guerilla Testing**.
             _template: oneColumn
         _template: section
       - anchorId: systempivot
@@ -154,7 +154,7 @@ tabs:
         showSectionTitle: true
         blocks:
           - content: |
-              Once individual modules were deployed into a test environment, we hit a roadblock. **Testing modules and features in isolation (e.g. creating an asset fault and resolving it within Inventory Management module) did not reflect real-world usability**. In an airbase, tasks are not isolated; they are continuous, chaotic, and highly interdependent. Ad-hoc testing was giving us a false sense of security.
+              Once individual modules were deployed into a test environment, we hit a roadblock. <mark style="background-color: #BFDBFE">Testing modules and features in isolation (e.g. creating an asset fault and resolving it within Inventory Management module) did not reflect real-world usability.</mark> In an airbase, tasks are not isolated; they are continuous, chaotic, and highly interdependent. Ad-hoc testing was giving us a false sense of security.
 
               **Going "Live" on Ops Day**
 
@@ -166,7 +166,7 @@ tabs:
 
               To pull off a high-fidelity system trial during an active military exercise, I collaborated closely with our UX Architect (UXA) and the designated testing Point of Contact (POC) to map the system's technical capabilities directly against the users’ specific war-game scenarios. This step was crucial to pinpoint exactly which module would be deployed, which user groups would interact with it at any given minute, and how data dependencies would flow between the desktop and mobile environments.
 
-              Recognizing that **operational usability goes hand-in-hand with technical reliability**, we decided to integrate the tech teams’ expertise into the testing process. We wanted to look past standard user friction and simultaneously capture hard system performance metrics - such as API latency, data sync speeds, and system responsiveness under high-stress, heavy-load conditions.
+              Recognizing that <mark style="background-color: #BFDBFE">operational usability goes hand-in-hand with technical reliability</mark>, we decided to integrate the tech teams’ expertise into the testing process. We wanted to look past standard user friction and simultaneously capture hard system performance metrics - such as API latency, data sync speeds, and system responsiveness under high-stress, heavy-load conditions.
             _template: oneColumn
         _template: section
       - anchorId: Execution
@@ -184,13 +184,13 @@ tabs:
 
               On Ops Day, the entire project team was strategically deployed across the airbase's operational ecosystem.
 
-              We split up in groups of 3 to shadow various functional groups in real-time:
+              We split into groups of 3 to shadow various functional groups in real-time:
 
               * (Desktop) Within a high-stress command center serving alignment and providing sensemaking
               * (Desktop) Within functional group centers
               * (Mobile) On-ground monitoring ground personnel executing tasks
 
-              As the war-game scenarios played out, we captured a continuous stream of timestamped interaction data, user errors, and technical performance lags. Over the course of the exercise, this collaborative effort allowed us to harvest **over 600 unique observation data points across 40 selected users in 25 unique roles at 7 locations**, giving us an unprecedented, unvarnished look at system usability under true operational pressure.
+              As the war-game scenarios played out, we captured a continuous stream of timestamped interaction data, user errors, and technical performance lags. Over the course of the exercise, this collaborative effort allowed us to harvest <mark style="background-color: #BFDBFE">over 600 unique observation data points across 40 selected users in 25 unique roles at 7 locations</mark>, giving us an unprecedented, unvarnished look at system usability under true operational pressure.
             _template: oneColumn
         _template: section
       - anchorId: Synthesis
@@ -200,9 +200,9 @@ tabs:
           - content: |
               After the Ops Day, we had to transform our observations and data into structured, actionable insights, we digitized the fieldwork data and conducted an extensive affinity mapping session. These insights directly influenced our overarching design direction and product decisions, while simultaneously highlighting areas for technical optimization.
 
-              Additionally, the timestamped data we captured during the exercise was handed over to the engineering team. By matching our user behavioral timestamps with the system’s backend logs, the developers could cross-reference exact moments of user friction against system limitations, server spikes, and database latency. This allowed the technical team to pinpoint and implement targeted improvements on the infrastructure side.
+              Additionally, the timestamped data we captured during the exercise was handed over to the engineering team. By matching our user behavioral timestamps with the system’s backend logs, the developers could also cross-reference exact moments of user friction against system limitations, server spikes, and database latency. This allowed the technical team to pinpoint and implement targeted improvements on the infrastructure side.
 
-              To prioritize how we should execute design iterations and address technical gaps, we categorized every single insight across a two-dimensional matrix. I worked with the UXA and testing-POC designer to come up with the matrixes.
+              To prioritize how we should execute design iterations and address technical gaps, we categorized every single insight across a two-dimensional matrix. I worked with the UXA and another designer to come up with the matrixes.
             _template: oneColumn
           - image: /Matrix.png
             title: illustrated 2-dimension matrix for prioritisation
