@@ -657,9 +657,9 @@ export const WireframeSTDSTA = () => {
         <p className={styles.titleMobile}>{title}</p>
         <div className={styles.left}>
           <WireframeLink
-            id="ux-process"
+            id="ux-process-and-research"
             text="UX Process"
-            href="/st-dsta/ux-process"
+            href="/st-dsta/ux-process-and-research"
             align="left"
             style={{ bottom: "71%", right: "-45%", paddingRight: "45%" }}
           />

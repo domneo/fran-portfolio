@@ -272,8 +272,8 @@
   }
 }
 
-.stdstaLayout:has(.link-ux-process a:hover),
-.stdstaLayout:has(.link-ux-process a:focus) {
+.stdstaLayout:has(.link-ux-process-and-research a:hover),
+.stdstaLayout:has(.link-ux-process-and-research a:focus) {
   :global(g[id="research"]) {
     --wireframe-stroke: var(--rosetaupe);
   }
