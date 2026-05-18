@@ -67,22 +67,29 @@ tabs:
         showSectionTitle: true
         blocks:
           - content: |
-              The project is a decade-long transformation of a legacy defence system. This system serves mainly 4 target user groups (4 main functional groups, 1 commanding group) across multiple airbases. The existing software is outdated, failing to keep pace with modern operations.
+              This case study documents the ongoing transformation of a legacy defense system serving four major operational functional groups and a central commanding group across multiple airbases. Designed for a high-stakes environment with interconnected desktop and mobile capabilities, the existing legacy software was outdated and failing to keep pace with modern operations.
 
-              Because a defence system is an interconnected ecosystem with desktop and mobile capabilities, we had several challenges:
+              When I (and the team) joined this decade-long initiative, we faced an immediate roadblock: the legacy system had extremely little research and user findings documented. There was no baseline understanding of user behavior under stress or how information flowed between systems.
 
-              1. Designing and developing right - what was prioritized and built would truly meet the users' needs, while remaining comprehensive and logically sound, and having foundational modules established and validated first before layered, dependent features are introduced
-              2. Seamless integration - ensuring individual modules built by different designers are seamlessly integrated into a unified experience
-              3. Usability under pressure - ensuring users can effectively use the system and its various capabilities under high stakes, high pressure situations
+              **Process & Research Challenges**
+
+              * Establishing a baseline
+                * Build the project’s very first repository of user workflows, operational hand-offs, and behavioral data
+                * Translate complex military command chains, multi-device hand-offs into structured UX artifacts
+              * Shifting from Feature-Isolation to System Interoperability
+                * Moving away from traditional, siloed testing methodologies to validating how multiple complex modules actually worked together under real-world conditions
+              * Objectively justify design decisions
+                * Build a data-driven framework to supplement the project’s 10-year roadmap, ensuring design priorities were backed by empirical field data rather than subjective stakeholder opinions
 
               <spacer size="sm" />
 
-              Within this project, I have two roles to play:
+              So in order to build a comprehensive, logically sound ecosystem, we had to establish a rigorous, repeatable UX process. We adopted the UX Double Diamond framework, execution-testing it at both the module and system levels to validate foundational architectures before layering on dependent features.
 
-              1. As the **On-Project Design Lead**, I oversee the design system and UI implementation across the entire product.
-              2. As a **UX Designer**, I directly own and contribute to 4 foundational modules: Access Controls, Integrated Map, Inventory Management, and Scheduling Management
+              My Roles
 
-              To tackle this massive scope, the design team <mark style="background-color: #BFDBFE">adopted the UX Double Diamond framework, execution-tested at both the module and system levels</mark>.
+              As the On-Project Design Lead, I oversee the design system and UI implementation across the entire product.
+
+              As a UX Designer, I directly own and lead four foundational modules: Access Controls, Integrated Map, Inventory Management, and Scheduling Management
             _template: oneColumn
         _template: section
       - anchorId: phase1
