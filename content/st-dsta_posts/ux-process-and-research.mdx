@@ -203,28 +203,32 @@ tabs:
               *(Read about my work in these modules in their respective pages (I'm still writing on the Design System and Inventory Management). The modules are written separately from the UX process as this page details the research and testing done at a system-level.)*
             _template: oneColumn
         _template: section
-      - anchorId: Execution
-        title: '05. Phase 5: Execution, Data Collection'
+      - anchorId: systemvalidation
+        title: '05. Discover & Develop: System Validation via a Second Ops Day'
         showSectionTitle: true
         blocks:
           - content: |
-              **Training Non-Designers for UX Fieldwork**
+              **The Structural Roadblock: The Illusion of Isolated Testing**
 
-              Because of the massive scale of the airbase, our design team could not be everywhere at once. To bridge this gap, we onboarded and trained our developers to act as field observers.
+              Initially, we tested our new modules and features in isolation (e.g., creating and resolving a fault in the Inventory Management module). However, this did not reflect real-world usability. In an active airbase, tasks are continuous, chaotic, and highly interdependent. This focus on feature creation and testing ultimately compelled us to pivot towards a live operational testing approach that encompasses all modules.
 
-              I conducted a session on how to take objective observation notes and collect timestamped data without interfering with the ongoing military exercise. This training was crucial to ensure that the data collected by engineers remained unbiased, standardized, and focused on user friction and workflow bottlenecks rather than code-level assumptions.
+              **Going "Live" with the Test-System on a Second Ops Day**
 
-              **Ops Day: Capturing Data in the Fog of War**
+              To measure true operational usability, our Product Managers negotiated with stakeholders to deploy our new system test environment during another quarterly Ops Day exercise. I worked with our UX Architect (UXA) and another designer to map our test system's capabilities directly against the scenarios, tracking data dependencies as information flowed between mobile and desktop states.
 
-              On Ops Day, the entire project team was strategically deployed across the airbase's operational ecosystem.
+              **Increasing Fieldwork Opportunities through the Developers**
 
-              We split into groups of 3 to shadow various functional groups in real-time:
+              Because our design team could not cover the massive scale of an active airbase alone, I conducted a session on how to take objective observation notes and collect timestamped data without interfering with the ongoing military exercise. This training was crucial to ensure that the data collected remained unbiased, standardized, and focused on user friction and workflow bottlenecks rather than code-level assumptions.
+
+              **Execution & Data Collection**
+
+              On this second Ops Day, the entire project team was strategically deployed across the airbase to shadow the new system across 3 environments:
 
               * (Desktop) Within a high-stress command center serving alignment and providing sensemaking
               * (Desktop) Within functional group centers
               * (Mobile) On-ground monitoring ground personnel executing tasks
 
-              As the war-game scenarios played out, we captured a continuous stream of timestamped interaction data, user errors, bugs, and technical performance lags. Over the course of the exercise, this collaborative effort allowed us to harvest <mark style="background-color: #BFDBFE">over 600 unique observation data points across 40 selected users in 25 unique roles at 7 locations</mark>, giving us an unprecedented, unvarnished look at system usability under true operational pressure.
+              This collaborative effort harvested <mark style="background-color: #BFDBFE">over 600 unique observation data points across 40 selected users in 25 unique roles at 7 locations</mark>.
             _template: oneColumn
         _template: section
       - anchorId: Synthesis
