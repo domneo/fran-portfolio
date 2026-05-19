@@ -658,7 +658,7 @@ export const WireframeSTDSTA = () => {
         <div className={styles.left}>
           <WireframeLink
             id="ux-process-and-research"
-            text="UX Process"
+            text="UX Process & Research"
             href="/st-dsta/ux-process-and-research"
             align="left"
             style={{ bottom: "71%", right: "-45%", paddingRight: "45%" }}
