@@ -144,10 +144,28 @@ tabs:
         title: '02. Define: Synthesizing Findings from the Baseline'
         showSectionTitle: true
         blocks:
-          - image: ''
-            title: illustrated 2nd and 3rd parts of the process
-            enableZoom: true
-            _template: imageWithCaption
+          - content: |
+              Workflows, Service Blueprint
+
+              With the baseline research complete, the design team (including me!) spent a month synthesizing the observational data into detailed User Journey Maps, workflows, and a comprehensive Service Blueprint. This living document established our central source of truth, mapping out:
+
+              User Touchpoints: When a user transitions from a desktop environment (S3/Commanders doing planning and delegation) to a mobile device (Ground troopers executing tasks).
+
+              Command Chains: Mapping user reporting structure, and how information flows under normal vs. high-stress conditions
+
+              <spacer size="sm" />
+
+              **Key UX Insight: Role-Based Personas vs. Consumer Archetypes**
+
+              Unlike conventional UX, defense systems reject traditional consumer archetypes - users are bound by their functions, resulting in role-based personas being created instead of consumer-facing archetypes. Within a military setting, users are expected to perform their roles, and difference in choices are due to user expertise and situational context. They focus on operational environments, cognitive load under stress, and strict physical and security requirements. Thus, all our users do not, and cannot, fit into personas such as ‘budget bob, who is motivated by discounts’. 
+
+              For example:
+
+              * All troopers are expected to carry out their duties in executing tasks regardless of their preference
+              * All commanding officers are expected to sensemake on-ground situations and delegate troopers to de-escalate issues, based on the objectives/directives set by a base commander
+
+              As such, the system that we design will need to <mark style="background-color: #BFDBFE">help our users quickly arrive at decisions for mission success and operator survivability</mark>.
+            _template: oneColumn
         _template: section
       - anchorId: frameworks
         title: '03. Define: Prioritization and Roadmap Frameworks'
