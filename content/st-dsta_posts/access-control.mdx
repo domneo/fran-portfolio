@@ -115,6 +115,22 @@ tabs:
               Within each module, every data item was assigned an owner/gatekeeper, an executor, and a viewer, then every feature was mapped to those levels as CRUD plus approval actions.
             _template: oneColumn
         _template: section
+      - anchorId: approach
+        title: Design Approach
+        showSectionTitle: true
+        blocks:
+          - content: |
+              ### Taking complexity out of the user's hands
+
+              Manual permission-setting is where access systems go wrong - it's the source of most user error and security gaps. I worked with a small user group to fix the rights for each archetype, then had developers hardcode them.
+
+              This was a deliberately rigid approach to solve a problem that's easy to miss until the system won't boot.
+            _template: oneColumn
+          - _template: spacer
+          - _template: imageWithCaption
+          - _template: spacer
+          - _template: oneColumn
+        _template: section
       - anchorId: background
         title: O1. Background
         showSectionTitle: true
