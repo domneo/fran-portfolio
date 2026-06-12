@@ -148,128 +148,15 @@ tabs:
               That separation let me give users drag-and-drop freedom without ever exposing the logic that keeps the system alive.
             _template: oneColumn
         _template: section
-      - anchorId: background
-        title: O1. Background
+      - anchorId: solution
+        title: Solution
         showSectionTitle: true
         blocks:
           - content: |
-              Access Controls serves as the foundational backbone for a complex, new-generation System - a new project that serves an extensive range of users of varying ranks and units. This module was a technical and structural challenge as we had to address 2 key problems:
+              Access Controls resolves into two surfaces:
 
-              1. Systemic Dependency
-                 * As this module houses the logic for every other module, any UX friction would cascade across the System, potentially locking users out of vital tools.
-              2. Flexibility Gap
-                 * Balancing a "completely customizable" architecture with an intuitive user interface is notoriously difficult.
-                 * We had to move away from rigid, hard-coded hierarchies toward a fluid, scalable model that could adapt to any unit structure or command chain.
-            _template: oneColumn
-          - size: sm
-            _template: spacer
-          - image: /reporting structure - 1.png
-            title: What the final product looks like
-            caption: What the final product looks like
-            enableZoom: true
-            _template: imageWithCaption
-        _template: section
-      - anchorId: user_roles
-        title: O2. Research - Understanding User Roles & Permissions
-        showSectionTitle: true
-        blocks:
-          - content: |
-              ([Read about the full research process here](https://frn-cne.vercel.app/st-dsta/ux-process-and-research). The UX process outlined in this case study is a subset of the full process and only focuses on the Access Controls module.)
-
-              To begin, we first engaged users of a higher level of command to obtain their chain of command.
-
-              This was important as it allowed us to:
-
-              * Match user group to module
-              * Identify archetypes and device-access within each module
-              * Eventually map out the default and master configuration so that the System can be used upon deployment
-
-              From the research, we identified three primary archetypes within each module:
-
-              * **Super Admin**: Needs overall visibility and ‘master controls’
-              * **Manager**: Needs overall visibility and control within their domain
-              * **End User**: Needs a straightforward and "noise-free" experience where only relevant tools are visible
-
-              Depending on the module, the different archetypes have different devices to access the system - desktop or mobile. Additionally, we found out that the chain of command could be changed depending on the type of operations the users will undertake.
-            _template: oneColumn
-        _template: section
-      - anchorId: modules
-        title: O3. Research - Accounting for all Modules
-        showSectionTitle: true
-        blocks:
-          - content: |
-              In parallel, we mapped out the entire System architecture and potential future modules.
-
-              Within each module, we did 2 things:
-
-              1. Defined ownership levels based on 3 archetypes
-                 * Depending on feature and data created, each data item needed an owner/gatekeeper, an executor, and a viewer
-              2. Categorised module features into access requirements and mapped it to the owner/gatekeeper, executor, and viewer
-                 * i.e. CRUD (create, read, update, delete) + Approval actions
-            _template: oneColumn
-        _template: section
-      - anchorId: creating_logic
-        title: O4. Creating Logic & Access Controls
-        showSectionTitle: true
-        blocks:
-          - content: |
-              Once both research pieces were complete, we started working on the access control logic.
-
-              Here, our goal was to strip away the complexity of manual permission-setting, which often leads to user error and security gaps. We worked closely with a small user group to determine the rights for each archetype, for each module. This was then carefully documented for the developers to hardcode the archetypes with the specific rights.
-
-              While this seems like a rigid way to control rights, this was intentionally done to overcome an inherent problem of Access Control - the ‘Bootstrap Paradox’. It is a chicken-and-egg problem:
-
-              * If there is no **Super Admin** defined, the System cannot propagate a chain of command
-              * If modules have no roles with **owner-type rights**, the System itself cannot run as the modules would be unusable
-
-              Our solution was a foundational/master logic within the backend that ensures the System is operational from the moment of deployment.
-            _template: oneColumn
-        _template: section
-      - anchorId: user_testing
-        title: O5. User Testing the Design
-        showSectionTitle: true
-        blocks:
-          - content: |
-              Access Controls is divided into 2 areas.
-
-              **1. Role Management**
-
-              This is a centralised dashboard in the form of a table that serves as the source of truth. Here, Super Admins can quickly verify which modules are active for each role and see a "Read-Only" summary of the hardcoded rights, maintaining clarity without allowing for accidental logic breaks.
-
-              **2. Organizational Chart**
-
-              This is a dynamic Org Chart where roles and permissions are localized into ‘Nodes’. Each node represents a specific role. When users log into the System, they are connected to a role by an external security system. Access Controls determines the module and archetype-specific permissions required for that user within the chain of command. This turns a complex backend database task into a simple, visual "drag-and-drop" exercise.
-            _template: oneColumn
-          - size: sm
-            _template: spacer
-          - image: /reporting structure - 3.png
-            title: 'Reproduction of Role Management, complex logic is hidden in the System backend'
-            caption: 'Reproduction of Role Management, complex logic is hidden in the System backend'
-            enableZoom: true
-            _template: imageWithCaption
-          - size: sm
-            _template: spacer
-          - image: /reporting structure - 2.png
-            title: Reproduction of how the Org Charts can be created by the user
-            caption: Reproduction of how the Org Charts can be created by the user
-            enableZoom: true
-            _template: imageWithCaption
-        _template: section
-      - anchorId: next_steps
-        title: O7. In the Works - Deployment Testing
-        showSectionTitle: true
-        blocks:
-          - content: |
-              With the design UTs complete and the module implemented into the System, we’re working on these 2 milestones in parallel:
-
-              1. Compiling a ‘Teach the Instructor’ guide, and engaging our developers to facilitate training sessions
-              2. Preparing for a large scale User Testing session that coincides with the users’ mass exercise
-
-              We would be educating all users on how the System and all its constituent modules work before the actual exercise. The System will be used in place of their usual system. The UX and developer teams will be observing selected groups to gather observational field research, and quantitative and qualitative feedback.
-
-              Wish us luck :)
-
-              *(For clarification, this will be held during another Ops Day, **different** from the first one written about in my [UX process case study](https://frn-cne.vercel.app/st-dsta/ux-process-and-research).)*
+              1. Verifying the system's truth
+              2. Shaping the system's truth, turning a backend database task into something a person can reason about visually
             _template: oneColumn
         _template: section
 ---
