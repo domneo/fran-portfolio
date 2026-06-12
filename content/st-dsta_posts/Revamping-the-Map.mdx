@@ -1,0 +1,199 @@
+---
+title: Revamping the Map
+subtitle: 'ST-DSTA: INTEGRATED MAP MODULE'
+overview: |
+  Reconceptualised and designed a new Integrated Map. The existing map module is combined with other map-reliant modules in the System to move from a modular-siloed System to a map-centric System. The Integrated Map presents an architectural shift in how users interact with data.
+disclaimer: |
+  This project consists of high-classification and confidential materials, which cannot be shared in public. **Note that visuals & names have been replaced with mock data, to best present some context.**
+tabs:
+  - label: Overview
+    sections:
+      - title: Overview
+        showSectionTitle: false
+        blocks:
+          - size: md
+            _template: spacer
+          - col1: |
+              #### TEAM
+            col2: |
+              UX Designer (Me), 2 Senior Product Managers, 2 Tech Teams
+            _template: twoColumn_1_2
+          - size: md
+            _template: spacer
+          - col1: |
+              #### TOOLS
+            col2: |
+              Lunacy ⋆ Draw\.io
+            _template: twoColumn_1_2
+          - size: md
+            _template: spacer
+          - col1: |
+              #### PROCESS
+            col2: |
+              UI Audit ⋆ Competitive Analysis ⋆ Stakeholder Discussions ⋆ Internal Workshop ⋆ Design-Prototype-Test ⋆ Implementation
+            _template: twoColumn_1_2
+          - size: md
+            _template: spacer
+          - col1: |
+              #### OUTCOME & IMPACT
+            col2: |
+              Pending System deployment during user trials
+            _template: twoColumn_1_2
+        _template: section
+  - label: Process
+    sections:
+      - title: Section Tracker
+        _template: section_tracker
+      - anchorId: background
+        title: O1. Background
+        showSectionTitle: true
+        blocks:
+          - content: |
+              One recurring feedback we received from users centers on the System’s map interface. They drew parallels between their operations to strategy and management-type games, wishing that the current Map could be adapted in that form. They spoke at length about the experience they envisioned, that the current map is outdated.
+
+              [View the full research process, and how we got this feedback here.](https://frn-cne.vercel.app/st-dsta/ux-process-and-research)
+
+              Within the Project, we understood what the users wanted. The System had to shift to a map-centric workspace. However, any deviation from the broader organisation’s design system was difficult. The Project was supportive of the change, but I had to accomplish the following for change to happen:
+
+              1. Identify map-reliant modules that could be integrated into the Map
+              2. Overhaul existing map interactions to handle the integrated modules
+              3. Validate the changes against the current System
+                 * Prove our users right - a "game-inspired" map could actually reduce cognitive load and interaction costs
+            _template: oneColumn
+        _template: section
+      - anchorId: problem_space
+        title: O2. Problem Space > New Layout
+        showSectionTitle: true
+        blocks:
+          - content: |
+              The current System serves two distinct perspectives, but fails due to the problems outlined in the table.
+            _template: oneColumn
+          - size: md
+            _template: spacer
+          - image: /table.png
+            title: table explaining user problems
+            _template: imageWithCaption
+          - size: md
+            _template: spacer
+          - content: |
+              By reframing the map as the primary workspace rather than a display, we aimed to move users from a high-effort "search-based experience" to an intuitive "discovery-based experience." In this new model, users directly manipulate the map to forage for information, allowing for a more fluid and responsive operational flow.
+
+              From here, we worked on the layout. We killed the side panel, and expanded the map. We drew from the broader organisation's defined map layout and expanded it to suit our needs.
+            _template: oneColumn
+          - size: md
+            _template: spacer
+          - image: /before & after.png
+            title: Before and after of the System
+            enableZoom: true
+            _template: imageWithCaption
+          - size: md
+            _template: spacer
+          - image: /tactical map - layout.png
+            title: reconciling our new layout with the broader org's design system
+            enableZoom: true
+            _template: imageWithCaption
+        _template: section
+      - anchorId: map_elements
+        title: 'O3. Defining Map Elements, Components, & Interactions'
+        showSectionTitle: true
+        blocks:
+          - content: |
+              With the layout now in place, next was to meaningfully integrate the map-reliant modules into the map.
+
+              I started by conducting a comprehensive audit of all features and functions within the 2 modules for a joint team workshop involving the UX Team, the Developer Team, and our 2 Product Managers. This workshop was done internally as **we do not have consistent and regular access to our users**.
+
+              Our project teams came together to workshop the audited features and functions into an "ideal map". We brainstormed how to move away from side-panel dependency toward direct map manipulation. Through the workshop, we defined components, content, and required interactions. This resulted in a functional blueprint that ensured the new "discovery-based" experience was technically feasible and operationally sound.
+            _template: oneColumn
+        _template: section
+      - anchorId: map_components
+        title: 'O4. Refining Components, Defining Map Interactions'
+        showSectionTitle: true
+        blocks:
+          - content: |
+              Based on the results of the internal workshop, I identified the specific components needed to support the new map-centric logic. These components were added to our project-level Design System, with reusable elements contributed back to the organization’s broader Design System.
+
+              For each component, I defined guidelines on:
+
+              * Design specifications, variants, placement logic, behavioral rules, etc.
+                * Also established keyboard shortcuts for features and workflows
+              * Underlying UX and HCI Principles that influenced the component
+                * E.g. Cognitive load reduction, Fitts’s Law, etc.
+                * This was especially helpful for the UX Team in understanding the design intent, so that they can use the components to their full potential in their own designs
+              * Possible types of integrated content from the map-reliant modules
+                * Different types of content had to appear differently in the Integrated Map
+                * Some content had to appear contextually across the map, while others are surfaced visually as supplementary information
+            _template: oneColumn
+          - size: md
+            _template: spacer
+          - image: /interaction before after.png
+            title: Before and after of the System and Map
+            caption: Before and after of the System and Map
+            enableZoom: true
+            _template: imageWithCaption
+        _template: section
+      - anchorId: map_features
+        title: O5. Other Map Features
+        showSectionTitle: true
+        blocks:
+          - content: "There were many other features that came from the internal workshop. Some of them include:\n\n1. Advanced search feature\n   * An LLM-based search that allows users to search for any map element across all map layers\n   * Reverse geo-location element identification\n   * Proximity-based search to search within a specific area or from specific map elements\L\n2. Contextual Views\n   * A set of different views that emphasize map elements/infrastructure to help users quickly contextualise any SitPic (Shared Situational Picture) or SitRep (Situation Report)\L\n3. Keyboard shortcuts\n   * Despite the initial learning curve, it will further decrease users’ response time as they do not need to look for the function or feature on the Map Workspace.\n"
+            _template: oneColumn
+        _template: section
+      - anchorId: testing
+        title: O6. Stress Testing the Layout & Design
+        showSectionTitle: true
+        blocks:
+          - content: |
+              Once the interactions and components were documented, I stress-tested the Integrated Map to ensure it could perform all the same functions as the existing system. This was done by using workflows and scenarios from all user groups to "run" the design. This was tedious and confusing as each user group had different user roles and permissions.
+
+              As I worked through these scenarios, I identified friction points and iterated on the design to ensure the layout remained intuitive under different workflows.
+            _template: oneColumn
+        _template: section
+      - anchorId: validation
+        title: O7. Comparative Validation
+        showSectionTitle: true
+        blocks:
+          - content: |
+              When the design was ready, I prepared two paper prototypes, and recruited 6 developers who were not a part of the design workshop and map module to validate the Integrated Map.
+
+              I had 3 developers use the current Map, and the remaining 3 use the Integrated Map to perform the same set of tasks. This comparative test helped validate that the new mental model successfully reduced context-switching and improved overall operational efficiency.
+            _template: oneColumn
+          - size: md
+            _template: spacer
+          - image: /Workflows.png
+            title: comparing workflows
+            enableZoom: true
+            _template: imageWithCaption
+          - size: md
+            _template: spacer
+          - content: |
+              Participants who used the Integrated Map showed a significant reduction in:
+
+              * Time taken to complete workflows was 50% less
+                * Number of steps taken is greatly reduced
+              * Cognitive load required to process information
+
+              With the Integrated Map:
+
+              * No module switching was required for all critical workflows
+                * De-escalation, sense-making, etc.
+              * Modules were focused to different user type’s specific tasks only
+                * If the user was an ‘Asset Manager’, he worked within the Asset Module
+                * If the user was an ‘Asset Supervisor’, he worked from the Map
+              * Almost all actions could be taken from the Integrated Map itself
+            _template: oneColumn
+        _template: section
+      - anchorId: progress
+        title: O8. In the Works - Sharing & Development
+        showSectionTitle: true
+        blocks:
+          - content: |
+              With the design UTs complete and validated, the Integrated Map is on-track for development in the later part of this year.
+
+              As of now, I am:
+
+              * Writing the design requirements to assist the development and eventual UAT
+              * Working to co-present this with the developers at the next Planning stage (after 7 sprint weeks) to project stakeholders and teams
+            _template: oneColumn
+        _template: section
+---
+
