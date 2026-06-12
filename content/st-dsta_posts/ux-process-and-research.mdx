@@ -201,6 +201,26 @@ tabs:
             col3: "### \U0001F5FA  Map Module\n\nLed the shift from a search-based to a discovery-based map.\n\n[Read the case study →](https://frn-cne.vercel.app/st-dsta/integrated-map)\n"
             _template: threeColumn_1_1_1
         _template: section
+      - anchorId: validation
+        title: 'Phase 05: System Validation'
+        showSectionTitle: true
+        blocks:
+          - content: |
+              ### The illusion of isolated testing
+
+              Module-level results looked good. Put together under real operational conditions, they revealed failures isolated testing had never surfaced - so we pivoted to live, system-wide testing during a quarterly Ops Day.
+
+              <mark style="background-color: #FEF08A">Isolated testing fails not because the method is wrong, but because real tasks don't respect module boundaries.</mark>
+
+              <spacer size="sm" />
+
+              Scaling fieldwork by training the developers.
+
+              Our design team couldn't cover an active airbase alone, so we trained developers as field observers — coached to capture timestamped, unbiased notes on user friction rather than debug code.
+
+              They saw things we'd missed in six months of design observation. The dataset was richer for it.
+            _template: oneColumn
+        _template: section
       - anchorId: discoverbaseline
         title: '01. Discover: Researching and Establishing the Baseline'
         showSectionTitle: true
