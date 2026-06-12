@@ -158,6 +158,11 @@ tabs:
               1. Verifying the system's truth
               2. Shaping the system's truth, turning a backend database task into something a person can reason about visually
             _template: oneColumn
+          - content: |
+              ### Surface 01: Role Management - A source of truth that can't accidentally break
+
+              A centralised, read-only table where Super Admins verify which modules are active for each role and read a summary of the hardcoded rights. This provides total clarity, with no surface area for a misclick to rewrite the logic.
+            _template: oneColumn
         _template: section
 ---
 
