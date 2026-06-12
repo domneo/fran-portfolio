@@ -133,7 +133,9 @@ tabs:
               * No Super Admin defined → the system can't propagate a chain of command.
               * No roles with owner-type rights → the modules are unusable, so the system can't run.
 
-              **You can't use the system to set up the permissions it needs in order to be usable.** The way out was a hardcoded master logic in the backend. This provided a guaranteed baseline that makes the System operational from the moment of deployment, before anyone configures anything.
+              <mark style="background-color: #FEF08A">You can't use the system to set up the permissions it needs in order to be usable.</mark>
+
+              The way out was a hardcoded master logic in the backend. This provided a guaranteed baseline that makes the System operational from the moment of deployment, before anyone configures anything.
             _template: oneColumn
           - _template: spacer
           - _template: spacer
@@ -250,13 +252,13 @@ tabs:
 
               The rigid base layer guarantees the system boots, but I don't yet know how it manages to handle edge-case command structures the operations sometimes demand. The next Ops Day should expose this.
             _template: twoColumn_1_1
-          - _template: spacer
+          - _template: divider
           - content: |
               ### The Hardest Call
 
               The hardest decision was committing to hardcode the foundation, in a project whose whole brief was flexibility.
 
-              Making the case meant reframing it: **the rigidity was the precondition for customisation in other parts of the system**. Without a guaranteed base, there's no stable ground to customise from.
+              Making the case meant reframing it: <mark style="background-color: #FEF08A">the rigidity was the precondition for customisation in other parts of the system</mark>. Without a guaranteed base, there's no stable ground to customise from.
 
               Once stakeholders saw the base and user layers as separate problems, the trade-off stopped feeling like a compromise and started feeling like the architecture.
             _template: oneColumn
