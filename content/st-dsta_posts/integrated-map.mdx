@@ -214,6 +214,14 @@ tabs:
 
               More broadly: this was an internal validation. The Integrated Map goes to real users during UAT later this year. That's when the assumptions we couldn't test,  particularly around the two distinct user groups operating simultaneously in the same workspace, will either hold or break.
             _template: twoColumn_1_1
+          - _template: divider
+          - content: |
+              ### On getting the side panel removed
+
+              The PMs were supportive of the map-centric direction in principle, but nervous about removing the side panel outright - it was the interaction model the whole system was built around. I had to make the case not just with user feedback, but with a structural argument: that keeping the side panel in any form would force every new component to choose between two competing interaction paradigms, and that inconsistency would compound over time.
+
+              The move that unlocked alignment was the layout stress test: running every existing user workflow through both the side-panel model and the map-centric model side by side, and showing how many steps the panel version added per task. Once the PMs could see the cumulative cost across workflows rather than per-feature, the conversation shifted from "is this worth doing" to "how do we phase it".
+            _template: oneColumn
         _template: section
       - anchorId: background
         title: O1. Background
