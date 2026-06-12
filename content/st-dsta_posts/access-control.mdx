@@ -125,6 +125,13 @@ tabs:
               Manual permission-setting is where access systems go wrong - it's the source of most user error and security gaps. I worked with a small user group to fix the rights for each archetype, then had developers hardcode them.
 
               This was a deliberately rigid approach to solve a problem that's easy to miss until the system won't boot.
+
+              ### The Bootstrap Paradox
+
+              * No Super Admin defined → the system can't propagate a chain of command.
+              * No roles with owner-type rights → the modules are unusable, so the system can't run.
+
+              **You can't use the system to set up the permissions it needs in order to be usable.** The way out was a hardcoded master logic in the backend. This provided a guaranteed baseline that makes the System operational from the moment of deployment, before anyone configures anything.
             _template: oneColumn
           - _template: spacer
           - _template: imageWithCaption
