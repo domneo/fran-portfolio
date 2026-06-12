@@ -135,7 +135,17 @@ tabs:
             _template: oneColumn
           - _template: spacer
           - _template: spacer
-          - content: ''
+          - content: |
+              ### Why rigidity was chosen
+
+              Hardcoding rights goes against the instinct to keep everything configurable. However, configurability at the foundation is exactly what creates the bootstrap trap.
+
+              **The base layer and the user layer can be seen as two separate problems**:
+
+              1. The base is rigid, invisible, and guaranteed correct (i.e. source of truth)
+              2. The flexibility users need lives one level up, in the Org Chart
+
+              That separation let me give users drag-and-drop freedom without ever exposing the logic that keeps the system alive.
             _template: oneColumn
         _template: section
       - anchorId: background
