@@ -270,7 +270,15 @@ tabs:
             caption: 'From 600 raw observations to a ranked, defensible roadmap'
             enableZoom: true
             _template: imageWithCaption
-          - _template: oneColumn
+          - size: md
+            _template: spacer
+          - content: |
+              ### A 2D matrix that removed opinion from the roadmap
+
+              With the UX Architect, I built a matrix scoring every insight by user impact and tracing logic. This helped design and dev align on priorities from the same data, instead of debating severity.
+
+              <mark style="background-color: #FEF08A">Cross-referencing friction timestamps against backend logs reframed several apparent UX problems as infrastructure problems</mark>, giving engineering a precise, impact-ranked fix list.
+            _template: oneColumn
           - size: sm
             _template: spacer
           - image: /Matrix.png
@@ -278,7 +286,8 @@ tabs:
             caption: ''
             enableZoom: true
             _template: imageWithCaption
-          - _template: spacer
+          - size: sm
+            _template: spacer
           - content: |
               By analyzing our insights through this two-dimensional lens, we removed subjectivity from the product roadmap, allowing for a <mark style="background-color: #FEF08A">data-driven framework that allowed design and developer teams to align priorities and actions</mark>.
             _template: oneColumn
